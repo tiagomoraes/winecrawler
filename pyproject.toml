@@ -5,7 +5,9 @@ description = "Projeto da cadeira IF692 - Recuperação de Informação (2021.1)
 authors = ["Tiago Moraes <tiago3902@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.8"
+beautifulsoup4 = "^4.10.0"
+requests = "^2.26.0"
 
 [tool.poetry.dev-dependencies]
 
