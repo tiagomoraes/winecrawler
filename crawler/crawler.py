@@ -1,8 +1,13 @@
 from bs4 import BeautifulSoup
 import requests
-import urllib.robotparser
+import re
+# import urllib.robotparser
 import ssl
 from time import sleep
+
+# TODO
+# 1. Respect robots.txt
+# 2. Verify usable pages
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -11,8 +16,6 @@ ssl._create_default_https_context = ssl._create_unverified_context
 # rp = urllib.robotparser.RobotFileParser()
 # rp.set_url(f"{seed}/robots.txt")
 # rp.read()
-
-# print(rp.can_fetch("*", "https://vinhofacil.com.br/vinhos"))
 
 def process_url(url, root):
     if (url.startswith('/')):
@@ -23,20 +26,21 @@ def process_url(url, root):
 def check_url(url, root):
     # Don't access Disallowed routes by robots.txt
     # if (rp.can_fetch("*", url)):
+
+    # Remove long urls (avoid qp loops)
+    if (len(url) > 160):
+        return False
     
-    if (url.startswith('/')):
+    if (url.startswith('/') or
+        url.startswith(root) or 
+        url == root):
+        # Means url is usable
         return True
 
-    if (url.startswith(root)):
-        return True
-    
-    if (url == root):
-        return True
-    
     return False
 
 
-def get_page_urls(start):
+def get_page_urls(start, seed):
     urls = set()
     urls.add(start)
 
@@ -49,24 +53,74 @@ def get_page_urls(start):
         url = anchor["href"]
 
         # Check if url is usable
-        processed = process_url(url, start)
+        processed = process_url(url, seed)
 
-        if (check_url(processed, start)):
+        if (check_url(processed, seed)):
             urls.add(processed)
     
     return urls
 
-def bsf_crawl(seed):
+def bfs_crawl(seed):
     visited = set()
     edge = [seed]
     count = 0
 
-    while (len(edge) > 0 and len(visited) < 100):
+    while (len(edge) > 0 and len(visited) < 1000):
         current = edge.pop(0)
 
         if (not current in visited):
             visited.add(current)
-            new_urls = get_page_urls(current)
+            new_urls = get_page_urls(current, seed)
+            edge.extend(new_urls)
+            sleep(0.01)
+
+            count += 1
+
+            print(f"Entered {current}")
+    
+    print(f"Visited {count} pages")
+
+# ========== HEURISTIC ==========
+"""
+The baisc heuristic used here, finds all the anchors
+that have the word "vinho" on the anchor text or href
+"""
+def get_page_urls_with_heuristic(start, seed):
+    urls = set()
+    urls.add(start)
+
+    html = requests.get(start)
+    soup = BeautifulSoup(html.text, "html.parser")
+
+    all_anchors = soup.find_all('a', href=True)
+
+    for anchor in all_anchors:
+        # Only add anchors that have the word wine on it
+        if (anchor.find(text=re.compile('.*vinho.*', re.DOTALL)) or
+            anchor.find(text=re.compile('.*Vinho.*', re.DOTALL)) or
+            anchor.find(href=re.compile('.*vinho.*', re.DOTALL)) 
+        ):
+            url = anchor["href"]
+
+            # Check if url is usable
+            processed = process_url(url, seed)
+
+            if (check_url(processed, seed)):
+                urls.add(processed)
+    
+    return urls
+
+def heuristic_crawl(seed):
+    visited = set()
+    edge = [seed]
+    count = 0
+
+    while (len(edge) > 0 and len(visited) < 1000):
+        current = edge.pop(0)
+
+        if (not current in visited):
+            visited.add(current)
+            new_urls = get_page_urls_with_heuristic(current, seed)
             edge.extend(new_urls)
             sleep(0.01)
 
@@ -77,9 +131,8 @@ def bsf_crawl(seed):
     print(f"Visited {count} pages")
 
 
-
 def main():
-    bsf_crawl("https://vinhofacil.com.br")
+    heuristic_crawl("https://evino.com.br")
 
 if __name__ == "__main__":
     main()
