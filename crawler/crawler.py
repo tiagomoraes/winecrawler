@@ -155,7 +155,7 @@ def heuristic_crawl(seed):
 
 
 def main():
-    bfs_crawl('https://www.wine.com.br')
+    bfs_crawl('https://www.grandcru.com.br')
 
 if __name__ == '__main__':
     main()
