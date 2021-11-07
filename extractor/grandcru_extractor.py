@@ -12,10 +12,10 @@ def grandcru_extract(soup):
     if (name_marker):
         name = name_marker.find('span').text.replace('\n', '').strip(' ')
 
-    type = None
-    type_marker = soup.find('span', attrs={'class': 'tipo-vinho'})
-    if (type_marker):
-        type = type_marker.find('small').text
+    wine_type = None
+    wine_type_marker = soup.find('span', attrs={'class': 'tipo-vinho'})
+    if (wine_type_marker):
+        wine_type = wine_type_marker.find('small').text
 
     grape = None
     grape_marker = soup.find('span', attrs={'class': 'uva'})
@@ -44,7 +44,7 @@ def grandcru_extract(soup):
 
     return ({
         'name': name,
-        'type': type,
+        'wine_type': wine_type,
         'grape': grape,
         'country': country,
         'classification': classification,

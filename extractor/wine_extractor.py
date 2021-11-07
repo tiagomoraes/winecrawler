@@ -13,9 +13,9 @@ def wine_extract(soup):
         name = name_marker.text
 
     wine_type = None
-    type_marker = soup.find(text=re.compile('.*Tipo.*', re.DOTALL))
-    if type_marker:
-        wine_type = type_marker.parent.find_next('dd').text
+    wine_type_marker = soup.find(text=re.compile('.*Tipo.*', re.DOTALL))
+    if wine_type_marker:
+        wine_type = wine_type_marker.parent.find_next('dd').text
 
     grape = None
     grape_marker = soup.find(text=re.compile('.*Uva.*', re.DOTALL))
@@ -44,7 +44,7 @@ def wine_extract(soup):
 
     return ({
         'name': name,
-        'type': wine_type,
+        'wine_type': wine_type,
         'grape': grape,
         'country': country,
         'classification': classification,
@@ -54,7 +54,7 @@ def wine_extract(soup):
 
 
 def main():
-    html = requests.get('')
+    html = requests.get('https://www.wine.com.br/vinhos/edna-valley-central-coast-pinot-noir-2017/prod22152.html')
     soup = BeautifulSoup(html.text, 'html.parser')
 
     print(wine_extract(soup))

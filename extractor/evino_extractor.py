@@ -5,17 +5,16 @@ import ssl
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-
 def evino_extract(soup):
     name = None
     name_marker = soup.find('h2', itemprop='name')
     if (name_marker):
         name = name_marker.text
 
-    type = None
-    type_marker = soup.find('h4', text=re.compile('.*Tipo.*', re.DOTALL))
-    if (type_marker):
-        type = type_marker.parent.find_next('span', attrs={'class': 'TruncateText__content'}).text
+    wine_type = None
+    wine_type_marker = soup.find('h4', text=re.compile('.*Tipo.*', re.DOTALL))
+    if (wine_type_marker):
+        wine_type = wine_type_marker.parent.find_next('span', attrs={'class': 'TruncateText__content'}).text
 
     grape = None
     grape_marker = soup.find('h4', text=re.compile('.*Uva.*', re.DOTALL))
@@ -44,7 +43,7 @@ def evino_extract(soup):
 
     return ({
         'name': name,
-        'type': type,
+        'wine_type': wine_type,
         'grape': grape,
         'country': country,
         'classification': classification,
@@ -54,7 +53,7 @@ def evino_extract(soup):
 
 
 def main():
-    html = requests.get('')
+    html = requests.get('https://www.evino.com.br/product/alcanta-white-2020-241351.html')
     soup = BeautifulSoup(html.text, 'html.parser')
 
     print(evino_extract(soup))

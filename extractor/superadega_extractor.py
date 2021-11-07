@@ -5,7 +5,7 @@ import ssl
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-def vivavinho_extract(soup):
+def superadega_extract(soup):
     name = None
     name_marker = soup.find('div', attrs={'class': 'productName'})
     if (name_marker):
@@ -32,7 +32,7 @@ def vivavinho_extract(soup):
         classification = classification_marker.text
 
     alcohol_content = None
-    alcohol_content_marker = soup.find('td', attrs={'class': 'value-field Graduacao-alcoolica'})
+    alcohol_content_marker = soup.find('td', attrs={'class': 'value-field Teor-alcoolico'})
     if (alcohol_content_marker):
         alcohol_content = alcohol_content_marker.text
 
@@ -53,10 +53,10 @@ def vivavinho_extract(soup):
 
 
 def main():
-    html = requests.get('https://www.vivavinho.com.br/vinho-rose-italiano-wave-rosato-igt-750ml/p')
+    html = requests.get('https://www.superadega.com.br/vinho-don-melchor-cabernet-sauvignon-2017-750ml/p')
     soup = BeautifulSoup(html.text, 'html.parser')
 
-    print(vivavinho_extract(soup))
+    print(superadega_extract(soup))
 
 
 if __name__ == '__main__':

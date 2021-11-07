@@ -12,10 +12,10 @@ def vinhofacil_extract(soup):
     if (name_marker):
         name = name_marker.text
 
-    type = None
-    type_marker = soup.find('strong', text=re.compile('.*Tipo.*', re.DOTALL))
-    if (type_marker):
-        type = type_marker.parent.parent.find(text=True, recursive=False).strip(' ')
+    wine_type = None
+    wine_type_marker = soup.find('strong', text=re.compile('.*Tipo.*', re.DOTALL))
+    if (wine_type_marker):
+        wine_type = wine_type_marker.parent.parent.find(text=True, recursive=False).strip(' ')
 
     grape = None
     grape_marker = soup.find('strong', text=re.compile('.*Uva.*', re.DOTALL))
@@ -44,7 +44,7 @@ def vinhofacil_extract(soup):
 
     return ({
         'name': name,
-        'type': type,
+        'wine_type': wine_type,
         'grape': grape,
         'country': country,
         'classification': classification,
