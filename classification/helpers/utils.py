@@ -35,7 +35,7 @@ def int_to_doc_class(classes: List[int]):
 
 
 def compute_metrics(y_pred: List[int], y: List[int]):
-    mat = [[0,0], [0,0]]
+    mat = [[0, 0], [0, 0]]
     p = 0
     f = 0
     for i in range(len(y)):

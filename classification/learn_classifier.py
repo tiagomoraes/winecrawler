@@ -23,8 +23,8 @@ def classify_crawler_samples(clf: AccuracyWeightedEnsemble, folder: str):
 
 
 def main():
-    inst_dir = os.path.join(cd, 'sample_pages')
-    non_inst_dir = os.path.join(cd, 'nonsample_pages')
+    inst_dir = os.path.join(cd, 'samples/samples_pages')
+    non_inst_dir = os.path.join(cd, 'samples/nonsamples_pages')
     corpus = load_corpus(inst_dir, non_inst_dir).drop_stop_words(in_place=True)
 
     print('\nFrequent words:')
@@ -32,7 +32,6 @@ def main():
         occurrences = len(corpus.vocabulary[token].get_all_docs())
         total_docs = len(corpus.documents)
         if total_docs * .4 < occurrences:
-            pass
             print("{} = {}".format(token, occurrences))
 
     selector = MostFrequentWordsExtractor(corpus)

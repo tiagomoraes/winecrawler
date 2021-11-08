@@ -58,8 +58,7 @@ class AccuracyWeightedEnsemble:
 
         docs = np.array(docs)
         labels = np.array(doc_class_to_int([doc.is_instance for doc in docs]))
-        print(docs, labels)
-        kfold = StratifiedKFold(n_splits=2)
+        kfold = StratifiedKFold(n_splits=10)
         for clf in self.clfs:
             accs = []
             for train_index, test_index in kfold.split(docs, labels):

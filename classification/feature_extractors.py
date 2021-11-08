@@ -22,7 +22,6 @@ class FeatureExtractor(ABC):
 
 
 class MostFrequentWordsExtractor(FeatureExtractor):
-
     def __init__(self, corpus: Corpus):
         super().__init__(corpus)
 
@@ -31,7 +30,6 @@ class MostFrequentWordsExtractor(FeatureExtractor):
 
 
 class DocFrequencyDifferenceExtractor(FeatureExtractor):
-
     def __init__(self, corpus: Corpus):
         super().__init__(corpus)
 
