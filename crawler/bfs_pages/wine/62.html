@@ -1,0 +1,802 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	
+	
+
+
+
+
+
+<meta charset="UTF-8" />
+
+<!-- #cookie privacy -->
+<!-- <script type="text/javascript" src="https://cdn-prod.securiti.ai/consent/auto_blocking/7b963bf3-83ff-4513-973a-34015862a31a/7a11d093-6dea-4fd9-91c9-0b01f648de72.js"></script> -->
+<!-- #cookie privacy -->
+
+
+
+<script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={xpid:"UAEGWV5ACgIDUFNUAAA=",licenseKey:"dca4d478ee",applicationID:"21342671"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(30),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{l?l-=1:o(s||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:c.now();i("err",[t,n])}var i=t("handle"),a=t(31),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError";if(!c.disabled){var l=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(14),t(13),"addEventListener"in window&&t(7),c.xhrWrappable&&t(15),d=!0)}s.on("fn-start",function(t,e,n){d&&(l+=1)}),s.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),s.on("fn-end",function(){d&&!this.thrown&&l>0&&(l-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(){L++,C=g.hash,this[u]=y.now()}function o(){L--,g.hash!==C&&i(0,!0);var t=y.now();this[h]=~~this[h]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+g,e])}function a(t,e){t.on(e,function(){this[e]=y.now()})}var s="-start",c="-end",f="-body",u="fn"+s,d="fn"+c,p="cb"+s,l="cb"+c,h="jsTime",m="fetch",v="addEventListener",w=window,g=w.location,y=t("loader");if(w[v]&&y.xhrWrappable&&!y.disabled){var x=t(11),b=t(12),E=t(9),R=t(7),O=t(14),S=t(8),T=t(15),N=t(10),P=t("ee"),M=P.get("tracer");t(17),y.features.spa=!0;var C,L=0;P.on(u,r),b.on(p,r),N.on(p,r),P.on(d,o),b.on(l,o),N.on(l,o),P.buffer([u,d,"xhr-resolved"]),R.buffer([u]),O.buffer(["setTimeout"+c,"clearTimeout"+s,u]),T.buffer([u,"new-xhr","send-xhr"+s]),S.buffer([m+s,m+"-done",m+f+s,m+f+c]),E.buffer(["newURL"]),x.buffer([u]),b.buffer(["propagate",p,l,"executor-err","resolve"+s]),M.buffer([u,"no-"+u]),N.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(S,m+s),a(S,m+"-done"),a(N,"new-jsonp"),a(N,"jsonp-end"),a(N,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,L>1)},!0)}},{}],5:[function(t,e,n){function r(){var t=new PerformanceObserver(function(t,e){var n=t.getEntries();s(m,[n])});try{t.observe({entryTypes:["resource"]})}catch(e){}}function o(t){if(s(m,[window.performance.getEntriesByType(v)]),window.performance["c"+d])try{window.performance[l](h,o,!1)}catch(t){}else try{window.performance[l]("webkit"+h,o,!1)}catch(t){}}function i(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var a=t("ee"),s=t("handle"),c=t(14),f=t(13),u=t(6),d="learResourceTimings",p="addEventListener",l="removeEventListener",h="resourcetimingbufferfull",m="bstResource",v="resource",w="-start",g="-end",y="fn"+w,x="fn"+g,b="bstTimer",E="pushState",R=t("loader");if(!R.disabled){R.features.stn=!0,t(9),"addEventListener"in window&&t(7);var O=NREUM.o.EV;a.on(y,function(t,e){var n=t[0];n instanceof O&&(this.bstStart=R.now())}),a.on(x,function(t,e){var n=t[0];n instanceof O&&s("bst",[n,e,this.bstStart,R.now()])}),c.on(y,function(t,e,n){this.bstStart=R.now(),this.bstType=n}),c.on(x,function(t,e){s(b,[e,this.bstStart,R.now(),this.bstType])}),f.on(y,function(){this.bstStart=R.now()}),f.on(x,function(t,e){s(b,[e,this.bstStart,R.now(),"requestAnimationFrame"])}),a.on(E+w,function(t){this.time=R.now(),this.startPath=location.pathname+location.hash}),a.on(E+g,function(t){s("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),u()?(s(m,[window.performance.getEntriesByType("resource")]),r()):p in window.performance&&(window.performance["c"+d]?window.performance[p](h,o,!1):window.performance[p]("webkit"+h,o,!1)),document[p]("scroll",i,{passive:!0}),document[p]("keypress",i,!1),document[p]("click",i,!1)}}},{}],6:[function(t,e,n){e.exports=function(){return"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver}},{}],7:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],8:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=i(arguments),e={};o.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return o.emit(n+"start",[t,a],s),s.then(function(t){return o.emit(n+"end",[null,t],s),t},function(t){throw o.emit(n+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(31),a=t(30);e.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,p=s.Response,l=s.fetch,h="prototype",m="nr@context";d&&p&&l&&(a(u,function(t,e){r(d[h],e,f),r(p[h],e,f)}),r(s,"fetch",c),o.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(c+"done",[null,e],n)}else o.emit(c+"done",[t],n)}))},{}],9:[function(t,e,n){var r=t("ee").get("history"),o=t("wrap-function")(r);e.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],10:[function(t,e,n){function r(t){function e(){c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){c.emit("jsonp-error",[],p),c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=s(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),c.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function s(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var c=t("ee").get("jsonp"),f=t("wrap-function")(c);if(e.exports=c,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,l=["appendChild","insertBefore","replaceChild"];Node&&Node.prototype&&Node.prototype.appendChild?f.inPlace(Node.prototype,l,"dom-"):(f.inPlace(HTMLElement.prototype,l,"dom-"),f.inPlace(HTMLHeadElement.prototype,l,"dom-"),f.inPlace(HTMLBodyElement.prototype,l,"dom-")),c.on("dom-start",function(t){r(t[0])})}},{}],11:[function(t,e,n){var r=t("ee").get("mutation"),o=t("wrap-function")(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],12:[function(t,e,n){function r(t){var e=i.context(),n=s(t,"executor-",e,null,!1),r=new f(n);return i.context(r).getCtx=function(){return e},r}var o=t("wrap-function"),i=t("ee").get("promise"),a=t("ee").getOrSetContext,s=o(i),c=t(30),f=NREUM.o.PR;e.exports=i,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){i.emit("propagate",[null,!o],a,!1,!1),o=o||!t}}var o=!1;c(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var a=e.apply(f,arguments),s=f.resolve(a);return s}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&i.emit("propagate",[t,!0],n,!1,!1),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),c(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),o.wrapInPlace(f.prototype,"then",function(t){return function(){var e=this,n=o.argsToArray.apply(this,arguments),r=a(e);r.promise=e,n[0]=s(n[0],"cb-",r,null,!1),n[1]=s(n[1],"cb-",r,null,!1);var c=t.apply(this,n);return r.nextPromise=c,i.emit("propagate",[e,!0],c,!1,!1),c}}),i.on("executor-start",function(t){t[0]=s(t[0],"resolve-",this,null,!1),t[1]=s(t[1],"resolve-",this,null,!1)}),i.on("executor-err",function(t,e,n){t[1](n)}),i.on("cb-end",function(t,e,n){i.emit("propagate",[n,!0],this.nextPromise,!1,!1)}),i.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=i.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],13:[function(t,e,n){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],14:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],15:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):v?v(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(7);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),p=NREUM.o,l=p.XHR,h=p.MO,m=p.PR,v=p.SI,w="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new l(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(l,x),x.prototype=l.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!v&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],16:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=l.generateSpanId(),m=l.generateTraceId(),v=Date.now(),w={spanId:h,traceId:m,timestamp:v};return(t.sameOrigin||c(t)&&p())&&(w.traceContextParentHeader=o(h,m),w.traceContextStateHeader=i(h,v,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(w.newrelicHeader=a(h,m,v,n,r,f)),w}function o(t,e){return"00-"+e+"-"+t+"-01"}function i(t,e,n,r,o){var i=0,a="",s=1,c="",f="";return o+"@nr="+i+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:e,ti:n}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var o=h(n.allowed_origins[r]);if(t.hostname===o.hostname&&t.protocol===o.protocol&&t.port===o.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function p(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var l=t(27),h=t(18);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],17:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):i(this,t),n.cbTime=this.cbTime,s("xhr",[e,n,this.startTime,this.endTime,"xhr"],this))}}function o(t,e){var n=c(e),r=t.params;r.hostname=n.hostname,r.port=n.port,r.protocol=n.protocol,r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function i(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(18),f=t(16).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],p=d.length,l=t("id"),h=t(23),m=t(22),v=t(19),w=NREUM.o.REQ,g=window.XMLHttpRequest;a.features.xhr=!0,t(15),t(8),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){i(e,t)},!1),h&&(h>34||h<10)||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=m(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<p;s++)e.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("xhr-resolved",function(){this.endTime=a.now()}),u.on("addEventListener-end",function(t,e){e instanceof g&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof g&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof g&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var o=f(this.parsedOrigin);if(o&&(o.newrelicHeader||o.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var i={};for(var a in r)i[a]=r[a];i.headers=new Headers(r.headers||{}),e(i.headers,o)&&(this.dt=o),t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&e(t[0].headers,o)&&(this.dt=o)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),this.dt=e,t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},i=this.target;"string"==typeof i?n=i:"object"==typeof i&&i instanceof w?n=i.url:window.URL&&"object"==typeof i&&i instanceof URL&&(n=i.href),o(this,n);var s=(""+(i&&i instanceof w&&i.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}),u.on("fetch-done",function(t,e){this.endTime=a.now(),this.params||(this.params={}),this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime,this.endTime,"fetch"],this)})}},{}],18:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,o={};e.href=t,o.port=e.port;var i=e.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=e.hostname||n.hostname,o.pathname=e.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return o.sameOrigin=a&&(!e.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],19:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?o(t.response):"text"===n||""===n||void 0===n?o(t.responseText):void 0}var o=t(22);e.exports=r},{}],20:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(30),s=t(31),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[f.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=o(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,e])}},{}],21:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],22:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],23:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],24:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(i=Math.max((new Date).getTime(),i))-a}function o(){return i}var i=(new Date).getTime(),a=i,s=t(32);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=o},{}],25:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],26:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function o(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function i(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!v){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),v=!0,d("timing",["fi",e,n])}}function s(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,f,u,d=t("handle"),p=t("loader"),l=t(29),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(o);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(i);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var v=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(t){document.addEventListener(t,a,!1)})}l(s)}},{}],27:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){return a(16)}function i(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,o=window.crypto||window.msCrypto;o&&o.getRandomValues&&Uint8Array&&(n=o.getRandomValues(new Uint8Array(31)));for(var i=[],a=0;a<t;a++)i.push(e().toString(16));return i.join("")}e.exports={generateUuid:r,generateSpanId:o,generateTraceId:i}},{}],28:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}e.exports={agent:o,version:i,match:r}},{}],29:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[o]?"hidden":"visible")}"addEventListener"in document&&i&&document.addEventListener(i,e,!1)}e.exports=r;var o,i,a;"undefined"!=typeof document.hidden?(o="hidden",i="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",i="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",i="webkitvisibilitychange",a="webkitVisibilityState")},{}],30:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],31:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],32:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,o,i,a){if(a!==!1&&(a=!0),!l.aborted||i){t&&a&&t(n,r,o);for(var s=e(o),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var p=d[y[n]];return p&&p.push([x,n,r,s]),s}}function i(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return p[t]=p[t]||o(n)}function w(t,e){l.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:i,addEventListener:i,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:s,aborted:!1};return x}function i(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",f=t("gos"),u=t(30),d={},p={},l=e.exports=o();e.exports.getOrSetContext=i,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!S++){var t=O.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+O.offset],null,"api"),s("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function o(){"complete"===m.readyState&&i()}function i(){s("mark",["domContent",a()+O.offset],null,"api")}var a=t(24),s=t("handle"),c=t(30),f=t("ee"),u=t(28),d=t(25),p=t(21),l=p.getConfiguration("ssl")===!1?"http":"https",h=window,m=h.document,v="addEventListener",w="attachEvent",g=h.XMLHttpRequest,y=g&&g.prototype,x=!d(h.location);NREUM.o={ST:setTimeout,SI:h.setImmediate,CT:clearTimeout,XHR:g,REQ:h.Request,EV:h.Event,PR:h.Promise,MO:h.MutationObserver};var b=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1211.min.js"},R=g&&y&&y[v]&&!/CriOS/.test(navigator.userAgent),O=e.exports={offset:a.getLastTimestamp(),now:a,origin:b,features:{},xhrWrappable:R,userAgent:u,disabled:x};if(!x){t(20),t(26),m[v]?(m[v]("DOMContentLoaded",i,!1),h[v]("load",r,!1)):(m[w]("onreadystatechange",o),h[w]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var S=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var i,a,u,p;try{a=this,i=d(arguments),u="function"==typeof r?r(i,a):r||{}}catch(l){o([l,"",[i,a,c],u],t)}s(n+"start",[i,a,c],u,f);try{return p=e.apply(a,i)}catch(h){throw s(n+"err",[i,a,h],u,f),h}finally{s(n+"end",[i,a,p],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,i(e,nrWrapper,t),nrWrapper)}function r(t,e,r,o,i){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,o,c,i))}function s(n,r,i,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,i,e,a)}catch(c){o([c,n,r,i],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=p,n}function o(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function i(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(i){o([i],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function s(t,e){var n=e(t);return n[p]=t,i(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(31),p="nr@original",l=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,17,5,3,4]);</script><link href="https://img.wine.com.br/fenix/image/_big_bang/icons/favicon/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+<meta name="apple-mobile-web-app-title" content="Wine">
+<link rel="apple-touch-icon-precomposed" href="https://img.wine.com.br/fenix/image/_big_bang/icons/favicon/apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" href="https://img.wine.com.br/fenix/image/_big_bang/icons/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="apple-touch-icon-precomposed" href="https://img.wine.com.br/fenix/image/_big_bang/icons/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="apple-touch-icon-precomposed" href="https://img.wine.com.br/fenix/image/_big_bang/icons/favicon/mstile-150x150.png" sizes="150x150">
+<link rel="apple-touch-icon-precomposed" href="https://img.wine.com.br/fenix/image/_big_bang/icons/favicon/android-chrome-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="https://img.wine.com.br/fenix/image/_big_bang/icons/favicon/android-chrome-256x256.png" sizes="256x256">
+<link rel="stylesheet" href="https://www.wine.com.br/template-resources/css/reset.css" />
+<link rel="stylesheet" href="/template-resources/build/header_responsive.css" />
+<!--[if lt IE 9]>
+<script src="https://www.wine.com.br/template-resources/build/obfuscated/iehtml5.js"></script>
+<![endif]-->
+
+<script src="https://www.wine.com.br/template-resources/build/obfuscated/jquery-1.7.min.js"></script>
+<!--script src="https://www.wine.com.br/template-resources/build/obfuscated/jquery-3.4.1.min.js"></script-->
+
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i&display=swap" rel="stylesheet" crossorigin>
+
+<style>
+  .async-hide {
+    opacity: 0 !important
+  }
+  .Button {
+    height: 46px !important;
+  }
+</style>
+
+<script>
+  (function (a, s, y, n, c, h, i, d, e) {
+    s.className += ' ' + y; h.start = 1 * new Date;
+    h.end = i = function () { s.className = s.className.replace(RegExp(' ?' + y), '') };
+    (a[n] = a[n] || []).hide = h; setTimeout(function () { i(); h.end = null }, c); h.timeout = c;
+  })(window, document.documentElement, 'async-hide', 'dataLayer', 4000,
+{ 'GTM-NS39JSJ': true });</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics comment -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-5733415-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-5733415-1',{ 'optimize_id': 'GTM-NS39JSJ'});
+</script>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5D87B2D" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+      'gtm.start':
+      new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+    '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-5D87B2D');
+</script>
+<!-- End Google Tag Manager -->
+
+<script>
+  var recaptchaSiteKey = "6LdMbhoUAAAAAEZ-N7LuniyxlOhVAestWjkRwqqX";
+</script>
+
+<!-- #cookie privacy -->
+<link rel="stylesheet" type="text/css" href="https://cdn-prod.securiti.ai/consent/cookie-consent.css" />
+<script type="text/javascript" src="https://cdn-prod.securiti.ai/consent/sdk-stub.js" defer></script>
+<script>
+    (function () {
+        var _verifyAmbient = window.location.hostname;
+        var _temporalAmbient = _verifyAmbient.split('.')
+        var _domain_UUID ='';
+        var _autoBlock = '';
+        if(_temporalAmbient[0] === 'www') {
+          _domain_UUID = '7a11d093-6dea-4fd9-91c9-0b01f648de72';
+          _autoBlock = 'https://cdn-prod.securiti.ai/consent/auto_blocking/7b963bf3-83ff-4513-973a-34015862a31a/7a11d093-6dea-4fd9-91c9-0b01f648de72.js'
+        } else {
+          _domain_UUID = 'f07cfa32-f54b-4ef3-99dc-fefd3922c874';
+          _autoBlock = 'https://cdn-prod.securiti.ai/consent/auto_blocking/7b963bf3-83ff-4513-973a-34015862a31a/f07cfa32-f54b-4ef3-99dc-fefd3922c874.js';
+        }
+
+        var s = document.createElement('script');
+        s.src = 'https://cdn-prod.securiti.ai/consent/cookie-consent-sdk.js';
+        s.setAttribute('data-tenant-uuid', '7b963bf3-83ff-4513-973a-34015862a31a');
+        s.setAttribute('data-domain-uuid', _domain_UUID);
+        s.setAttribute('data-backend-url', 'https://app.securiti.ai');
+        s.defer = true;
+        var parent_node = document.head || document.body;
+        parent_node.appendChild(s);
+        s.addEventListener('load', function() { window.initCmp(); });
+
+
+        var g = document.createElement('script');
+        g.src = _autoBlock;
+        g.type = 'text/javascript';
+        var _firstNode = document.head;
+        _firstNode.appendChild(g)
+
+    })()
+  </script>
+<!-- #cookie privacy -->
+
+<script>
+  function getPrivacyUrlFromWine() {
+    var _initialUrl = window.location.hostname
+    var _temporalUrl = _initialUrl.split('.')
+    _temporalUrl[0] = 'privacidade'
+    _initialUrl = "https://" + _temporalUrl.join('.')
+    window.location = _initialUrl
+  }
+</script>
+
+	<title>App Wine</title>
+	<meta name="title" content="App Wine | Wine" />
+	<meta name="description" content="" />
+	<meta name="robots" content="index, follow">
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--Facebook cards:-->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="App Wine | Wine" />
+	<meta property="og:image" content="" />
+	<meta property="og:site_name" content="Wine" />
+	<meta property="og:url" content="https://www.wine.com.br/institucional/app/" />
+	<meta property="og:description" content="" />
+	<!--:Facebook cards-->
+
+	<!--Twitter cards:-->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@wine_vinhos">
+	<meta name="twitter:title" content="App Wine| Wine">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:image:src" content="">
+	<meta name="twitter:url" content="https://www.wine.com.br/institucional/app/">
+	<meta name="twitter:domain" content="www.wine.com.br">
+	<meta name="twitter:creator" content="@wine_vinhos">
+	<!--:Twitter cards-->
+
+	<link rel="stylesheet" type="text/css" media="screen" href="./build/css/style.css?v=3" />
+	<link rel="stylesheet" href="https://use.typekit.net/vxm5ili.css">
+</head>
+<body>
+	
+	<div class="vue-header">
+		<header-responsive></header-responsive>
+	</div>
+
+	<section id="hotsite" class="landing-page">
+
+		<section id="banner">
+			<div class="conteudo">
+				<div class="textos">
+					<h1>Baixe o app Wine</h1>
+					<p>Conheça todas as vantagens de baixar o app que garante benéficios para você, sócio!</p>
+					<div class="links">
+						<a href="https://wine.onelink.me/ZlIp/9fecedc3" target="_blank"><img class="app-store" src="https://img.wine.com.br/hotsite/institucional/app/2021/atualizacao/app-store.png" alt="Link App Store"></a>
+						<a href="https://wine.onelink.me/ZlIp/98f12033" target="_blank"><img class="g-play" src="https://img.wine.com.br/hotsite/institucional/app/2021/atualizacao/google-play.png" alt="Link Google Play"></a>
+					</div>
+				</div>
+				
+<div id="animation_container">
+<svg id="eDktVOTU0pu1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 581" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><defs><linearGradient id="eDktVOTU0pu61-fill" x1="93.572600" y1="0" x2="93.572600" y2="187.145000" spreadMethod="pad" gradientUnits="userSpaceOnUse"><stop id="eDktVOTU0pu61-fill-0" offset="0%" stop-color="rgba(196,196,196,0)"/><stop id="eDktVOTU0pu61-fill-1" offset="100%" stop-color="rgb(0,180,149)"/></linearGradient><linearGradient id="eDktVOTU0pu77-fill" x1="365.552000" y1="334.205000" x2="365.552000" y2="514.800000" spreadMethod="pad" gradientUnits="userSpaceOnUse"><stop id="eDktVOTU0pu77-fill-0" offset="0%" stop-color="rgb(252,239,217)"/><stop id="eDktVOTU0pu77-fill-1" offset="100%" stop-color="rgb(255,255,255)"/></linearGradient><linearGradient id="eDktVOTU0pu79-fill" x1="34.518700" y1="236.622000" x2="34.518700" y2="280.772000" spreadMethod="pad" gradientUnits="userSpaceOnUse"><stop id="eDktVOTU0pu79-fill-0" offset="0%" stop-color="rgb(200,26,120)"/><stop id="eDktVOTU0pu79-fill-1" offset="100%" stop-color="rgba(200,26,120,0.6)"/></linearGradient><linearGradient id="eDktVOTU0pu80-fill" x1="39.431100" y1="305.912000" x2="39.431100" y2="348.977000" spreadMethod="pad" gradientUnits="userSpaceOnUse"><stop id="eDktVOTU0pu80-fill-0" offset="0%" stop-color="rgb(200,26,120)"/><stop id="eDktVOTU0pu80-fill-1" offset="100%" stop-color="rgba(200,26,120,0.6)"/></linearGradient><linearGradient id="eDktVOTU0pu81-fill" x1="33.944600" y1="348.845000" x2="33.944600" y2="385.808000" spreadMethod="pad" gradientUnits="userSpaceOnUse"><stop id="eDktVOTU0pu81-fill-0" offset="0%" stop-color="rgb(200,26,120)"/><stop id="eDktVOTU0pu81-fill-1" offset="100%" stop-color="rgba(200,26,120,0.6)"/></linearGradient><linearGradient id="eDktVOTU0pu82-fill" x1="357.961000" y1="143.395000" x2="357.961000" y2="193.777000" spreadMethod="pad" gradientUnits="userSpaceOnUse"><stop id="eDktVOTU0pu82-fill-0" offset="0%" stop-color="rgb(200,26,120)"/><stop id="eDktVOTU0pu82-fill-1" offset="100%" stop-color="rgba(200,26,120,0.6)"/></linearGradient></defs><rect id="eDktVOTU0pu2" width="251.678000" height="554.981000" rx="0" ry="0" transform="matrix(1 0 0 1.01039964587606 64.09380000000000 9.02039696783464)" fill="rgb(255,255,255)" stroke="none" stroke-width="1"/><g id="eDktVOTU0pu3" opacity="0"><circle id="eDktVOTU0pu4" r="25.006400" transform="matrix(1 0 0 1 264.95400000000001 517.06799999999998)" fill="rgb(200,26,120)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu5" d="M270.048000,510.824000L274.682000,510.824000C275.787000,510.824000,276.682000,511.719000,276.682000,512.824000L276.682000,524.047000C276.682000,525.151000,275.787000,526.047000,274.682000,526.047000L255.721000,526.047000C254.616000,526.047000,253.721000,525.151000,253.721000,524.047000L253.721000,512.824000C253.721000,511.719000,254.616000,510.824000,255.721000,510.824000L260.355000,510.824000C260.400000,509.031000,261.867000,507.592000,263.670000,507.592000L266.732000,507.592000C268.535000,507.592000,270.003000,509.031000,270.048000,510.824000ZM255.632000,510.285000C255.632000,509.756000,256.060000,509.328000,256.588000,509.328000L257.545000,509.328000C258.073000,509.328000,258.502000,509.756000,258.502000,510.285000L255.632000,510.285000ZM265.201000,523.835000C268.207000,523.835000,270.643000,521.398000,270.643000,518.392000C270.643000,515.386000,268.207000,512.949000,265.201000,512.949000C262.195000,512.949000,259.758000,515.386000,259.758000,518.392000C259.758000,521.398000,262.195000,523.835000,265.201000,523.835000ZM274.218000,513.970000C274.218000,514.533000,273.761000,514.990000,273.198000,514.990000C272.634000,514.990000,272.177000,514.533000,272.177000,513.970000C272.177000,513.406000,272.634000,512.949000,273.198000,512.949000C273.761000,512.949000,274.218000,513.406000,274.218000,513.970000ZM265.203000,522.134000C267.270000,522.134000,268.945000,520.459000,268.945000,518.392000C268.945000,516.326000,267.270000,514.650000,265.203000,514.650000C263.137000,514.650000,261.461000,516.326000,261.461000,518.392000C261.461000,520.459000,263.137000,522.134000,265.203000,522.134000Z" clip-rule="evenodd" fill="rgb(255,255,255)" fill-rule="evenodd" stroke="none" stroke-width="1"/></g><g id="eDktVOTU0pu6" opacity="0"><path id="eDktVOTU0pu7" d="M140.725000,126.812000C149.686000,126.812000,155.188000,118.673000,155.188000,105.742000C155.188000,92.838300,149.686000,84.699200,140.725000,84.699200C131.735000,84.699200,126.205000,92.866600,126.205000,105.742000C126.205000,118.673000,131.735000,126.812000,140.725000,126.812000ZM140.725000,124.799000C133.125000,124.799000,128.474000,117.426000,128.474000,105.742000C128.474000,94.142800,133.153000,86.712700,140.725000,86.712700C148.268000,86.712700,152.948000,94.114400,152.948000,105.742000C152.948000,117.426000,148.297000,124.799000,140.725000,124.799000Z" fill="rgb(85,85,85)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu8" d="M173.423000,126.812000C182.838000,126.812000,188.510000,118.248000,188.510000,104.692000C188.510000,88.641100,179.917000,84.699200,173.593000,84.699200C165.624000,84.699200,159.811000,90.711300,159.811000,98.737000C159.811000,106.309000,165.539000,112.066000,173.395000,112.066000C179.520000,112.066000,184.880000,108.039000,186.241000,102.792000L186.298000,102.792000C186.610000,119.354000,179.946000,124.799000,173.423000,124.799000C167.751000,124.799000,163.838000,121.481000,162.958000,116.830000L160.690000,116.830000C161.626000,122.700000,166.588000,126.812000,173.423000,126.812000ZM173.621000,110.052000C166.872000,110.052000,162.051000,104.976000,162.051000,98.708600C162.051000,91.959100,167.014000,86.741100,173.621000,86.741100C180.314000,86.741100,185.391000,92.157700,185.391000,98.963800C185.391000,104.891000,180.087000,110.052000,173.621000,110.052000Z" fill="rgb(85,85,85)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu9" d="M198.124000,120.375000C199.145000,120.375000,199.995000,119.524000,199.995000,118.475000C199.995000,117.454000,199.145000,116.603000,198.124000,116.603000C197.074000,116.603000,196.224000,117.454000,196.224000,118.475000C196.224000,119.524000,197.074000,120.375000,198.124000,120.375000ZM198.124000,94.880100C199.145000,94.880100,199.995000,94.029400,199.995000,92.980100C199.995000,91.959100,199.145000,91.108400,198.124000,91.108400C197.074000,91.108400,196.224000,91.959100,196.224000,92.980100C196.224000,94.029400,197.074000,94.880100,198.124000,94.880100Z" fill="rgb(85,85,85)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu10" d="M228.213000,126.217000L230.425000,126.217000L230.425000,115.979000L236.919000,115.979000L236.919000,113.937000L230.425000,113.937000L230.425000,85.153000L227.192000,85.181300C218.968000,96.269700,212.870000,105.033000,207.142000,113.909000L207.142000,115.979000L228.213000,115.979000L228.213000,126.217000ZM209.609000,113.881000C214.771000,105.940000,220.924000,97.063800,228.156000,87.421700L228.213000,87.421700L228.213000,113.937000L209.609000,113.937000L209.609000,113.881000Z" fill="rgb(85,85,85)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu11" d="M251.722000,126.217000L253.934000,126.217000L253.934000,85.294800L251.722000,85.294800C248.887000,86.996300,243.101000,90.881500,240.492000,92.526300L240.492000,94.880100C243.243000,93.178600,249.567000,89.038200,251.666000,87.762000L251.722000,87.762000L251.722000,126.217000Z" fill="rgb(85,85,85)" stroke="none" stroke-width="1"/></g><g id="eDktVOTU0pu12" transform="matrix(0.50000000000000 0 0 0.50000000000000 132.47599029500000 258.53399658249998)" opacity="0"><circle id="eDktVOTU0pu13" r="38.526300" transform="matrix(1 0 0 1 264.95200000000000 517.06799999999998)" fill="none" stroke="rgb(0,180,149)" stroke-width="2"/><circle id="eDktVOTU0pu14" r="37.913000" transform="matrix(1 0 0 1 264.95200000000000 517.06799999999998)" opacity="0.4" fill="rgb(0,180,149)" stroke="none" stroke-width="1"/></g><g id="eDktVOTU0pu15" opacity="0"><path id="eDktVOTU0pu16" d="M121.422000,179.785000L111.660000,179.785000L111.660000,173.004000L120.916000,173.004000L120.916000,170.816000L111.660000,170.816000L111.660000,164.486000L121.422000,164.486000L121.422000,162.271000L109.199000,162.271000L109.199000,182L121.422000,182L121.422000,179.785000Z" fill="rgb(85,85,85)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu17" d="M124.061000,171.705000C124.061000,173.756000,125.359000,175,128.039000,175.643000L130.295000,176.189000C131.922000,176.586000,132.482000,177.174000,132.482000,178.199000C132.482000,179.484000,131.293000,180.305000,129.365000,180.305000C127.438000,180.305000,126.344000,179.525000,126.057000,177.898000L123.678000,177.898000C123.951000,180.564000,126.029000,182.246000,129.365000,182.246000C132.537000,182.246000,134.875000,180.496000,134.875000,178.021000C134.875000,175.984000,133.836000,174.863000,130.965000,174.166000L128.709000,173.619000C127.123000,173.236000,126.398000,172.566000,126.398000,171.582000C126.398000,170.338000,127.547000,169.477000,129.283000,169.477000C131.033000,169.477000,132.127000,170.393000,132.305000,171.883000L134.574000,171.883000C134.479000,169.367000,132.400000,167.535000,129.283000,167.535000C126.207000,167.535000,124.061000,169.271000,124.061000,171.705000Z" fill="rgb(85,85,85)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu18" d="M149.162000,172.443000C148.861000,169.887000,146.742000,167.535000,143.188000,167.535000C139.264000,167.535000,136.652000,170.406000,136.652000,174.891000C136.652000,179.471000,139.277000,182.246000,143.215000,182.246000C146.441000,182.246000,148.820000,180.250000,149.189000,177.420000L146.852000,177.420000C146.441000,179.129000,145.170000,180.154000,143.229000,180.154000C140.768000,180.154000,139.072000,178.199000,139.072000,174.891000C139.072000,171.664000,140.740000,169.627000,143.201000,169.627000C145.293000,169.627000,146.496000,170.898000,146.838000,172.443000L149.162000,172.443000Z" fill="rgb(85,85,85)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu19" d="M156.066000,180.223000C154.357000,180.223000,153.223000,179.334000,153.223000,177.980000C153.223000,176.641000,154.316000,175.793000,156.230000,175.670000L160.031000,175.438000L160.031000,176.600000C160.031000,178.650000,158.309000,180.223000,156.066000,180.223000ZM155.533000,182.246000C157.447000,182.246000,159.252000,181.180000,160.100000,179.553000L160.154000,179.553000L160.154000,182L162.410000,182L162.410000,172.170000C162.410000,169.340000,160.305000,167.535000,156.969000,167.535000C153.605000,167.535000,151.500000,169.422000,151.336000,171.883000L153.633000,171.883000C153.934000,170.488000,155.082000,169.627000,156.914000,169.627000C158.883000,169.627000,160.031000,170.666000,160.031000,172.402000L160.031000,173.592000L155.957000,173.824000C152.676000,174.016000,150.803000,175.547000,150.803000,177.980000C150.803000,180.537000,152.703000,182.246000,155.533000,182.246000Z" fill="rgb(85,85,85)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu20" d="M165.432000,182L167.811000,182L167.811000,173.633000C167.811000,171.227000,169.273000,169.641000,171.516000,169.641000C173.703000,169.641000,174.783000,170.898000,174.783000,173.195000L174.783000,182L177.162000,182L177.162000,172.771000C177.162000,169.545000,175.357000,167.535000,172.240000,167.535000C170.039000,167.535000,168.521000,168.520000,167.729000,170.051000L167.674000,170.051000L167.674000,167.781000L165.432000,167.781000L165.432000,182Z" fill="rgb(85,85,85)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu21" d="M185.898000,169.600000C188.141000,169.600000,189.631000,171.295000,189.686000,173.674000L181.961000,173.674000C182.111000,171.309000,183.670000,169.600000,185.898000,169.600000ZM189.631000,177.926000C189.234000,179.266000,187.908000,180.182000,186.104000,180.182000C183.547000,180.182000,181.947000,178.391000,181.947000,175.670000L181.947000,175.533000L192.146000,175.533000L192.146000,174.631000C192.146000,170.324000,189.781000,167.535000,185.939000,167.535000C182.016000,167.535000,179.500000,170.529000,179.500000,174.945000C179.500000,179.416000,181.975000,182.246000,186.049000,182.246000C189.152000,182.246000,191.559000,180.414000,191.969000,177.926000L189.631000,177.926000Z" fill="rgb(85,85,85)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu22" d="M199.242000,180.223000C197.533000,180.223000,196.398000,179.334000,196.398000,177.980000C196.398000,176.641000,197.492000,175.793000,199.406000,175.670000L203.207000,175.438000L203.207000,176.600000C203.207000,178.650000,201.484000,180.223000,199.242000,180.223000ZM198.709000,182.246000C200.623000,182.246000,202.428000,181.180000,203.275000,179.553000L203.330000,179.553000L203.330000,182L205.586000,182L205.586000,172.170000C205.586000,169.340000,203.480000,167.535000,200.145000,167.535000C196.781000,167.535000,194.676000,169.422000,194.512000,171.883000L196.809000,171.883000C197.109000,170.488000,198.258000,169.627000,200.090000,169.627000C202.059000,169.627000,203.207000,170.666000,203.207000,172.402000L203.207000,173.592000L199.133000,173.824000C195.852000,174.016000,193.979000,175.547000,193.979000,177.980000C193.979000,180.537000,195.879000,182.246000,198.709000,182.246000Z" fill="rgb(85,85,85)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu23" d="M208.607000,182L210.986000,182L210.986000,173.633000C210.986000,171.227000,212.449000,169.641000,214.691000,169.641000C216.879000,169.641000,217.959000,170.898000,217.959000,173.195000L217.959000,182L220.338000,182L220.338000,172.771000C220.338000,169.545000,218.533000,167.535000,215.416000,167.535000C213.215000,167.535000,211.697000,168.520000,210.904000,170.051000L210.850000,170.051000L210.850000,167.781000L208.607000,167.781000L208.607000,182Z" fill="rgb(85,85,85)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu24" d="M228.760000,182.246000C230.811000,182.246000,232.438000,181.234000,233.354000,179.594000L233.395000,179.594000L233.395000,182L235.664000,182L235.664000,162.271000L233.285000,162.271000L233.285000,170.092000L233.230000,170.092000C232.383000,168.533000,230.742000,167.535000,228.705000,167.535000C225.123000,167.535000,222.676000,170.434000,222.676000,174.891000C222.676000,179.348000,225.137000,182.246000,228.760000,182.246000ZM229.211000,169.627000C231.658000,169.627000,233.299000,171.719000,233.299000,174.891000C233.299000,178.076000,231.658000,180.154000,229.211000,180.154000C226.695000,180.154000,225.109000,178.117000,225.109000,174.891000C225.109000,171.678000,226.695000,169.627000,229.211000,169.627000Z" fill="rgb(85,85,85)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu25" d="M244.770000,182.246000C248.693000,182.246000,251.346000,179.416000,251.346000,174.891000C251.346000,170.352000,248.693000,167.535000,244.770000,167.535000C240.832000,167.535000,238.180000,170.352000,238.180000,174.891000C238.180000,179.416000,240.832000,182.246000,244.770000,182.246000ZM244.770000,180.154000C242.254000,180.154000,240.600000,178.240000,240.600000,174.891000C240.600000,171.541000,242.254000,169.627000,244.770000,169.627000C247.285000,169.627000,248.926000,171.541000,248.926000,174.891000C248.926000,178.240000,247.285000,180.154000,244.770000,180.154000Z" fill="rgb(85,85,85)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu26" d="M254.941000,182.137000C255.816000,182.137000,256.500000,181.453000,256.500000,180.578000C256.500000,179.703000,255.816000,179.020000,254.941000,179.020000C254.066000,179.020000,253.383000,179.703000,253.383000,180.578000C253.383000,181.453000,254.066000,182.137000,254.941000,182.137000Z" fill="rgb(85,85,85)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu27" d="M262.051000,182.137000C262.926000,182.137000,263.609000,181.453000,263.609000,180.578000C263.609000,179.703000,262.926000,179.020000,262.051000,179.020000C261.176000,179.020000,260.492000,179.703000,260.492000,180.578000C260.492000,181.453000,261.176000,182.137000,262.051000,182.137000Z" fill="rgb(85,85,85)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu28" d="M269.160000,182.137000C270.035000,182.137000,270.719000,181.453000,270.719000,180.578000C270.719000,179.703000,270.035000,179.020000,269.160000,179.020000C268.285000,179.020000,267.602000,179.703000,267.602000,180.578000C267.602000,181.453000,268.285000,182.137000,269.160000,182.137000Z" fill="rgb(85,85,85)" stroke="none" stroke-width="1"/></g><g id="eDktVOTU0pu29" opacity="0"><path id="eDktVOTU0pu30" d="M174.500000,265L128,265L128,311.500000L174.500000,311.500000L174.500000,265ZM166.750000,303.750000L135.750000,303.750000L135.750000,272.750000L166.750000,272.750000L166.750000,303.750000Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu31" d="M143.500000,280.500000L159,280.500000L159,296L143.500000,296L143.500000,280.500000Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu32" d="M128,389L174.500000,389L174.500000,342.500000L128,342.500000L128,389ZM135.750000,350.250000L166.750000,350.250000L166.750000,381.250000L135.750000,381.250000L135.750000,350.250000Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu33" d="M143.500000,358L159,358L159,373.500000L143.500000,373.500000L143.500000,358Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu34" d="M205.500000,265L205.500000,311.500000L252,311.500000L252,265L205.500000,265ZM244.250000,303.750000L213.250000,303.750000L213.250000,272.750000L244.250000,272.750000L244.250000,303.750000Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu35" d="M221,280.500000L236.500000,280.500000L236.500000,296L221,296L221,280.500000Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu36" d="M143.500000,319.250000L128,319.250000L128,334.750000L151.250000,334.750000L151.250000,327L143.500000,327L143.500000,319.250000Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu37" d="M182.250000,334.750000L197.750000,334.750000L197.750000,350.250000L182.250000,350.250000L182.250000,334.750000Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu38" d="M151.250000,319.250000L166.750000,319.250000L166.750000,327L151.250000,327L151.250000,319.250000Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu39" d="M197.750000,358L182.250000,358L182.250000,365.750000L190,365.750000L190,373.500000L197.750000,373.500000L197.750000,365.750000L197.750000,358Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu40" d="M174.500000,319.250000L174.500000,327L166.750000,327L166.750000,334.750000L182.250000,334.750000L182.250000,319.250000L174.500000,319.250000Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu41" d="M190,296L197.750000,296L197.750000,311.500000L190,311.500000L190,296Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu42" d="M197.750000,327L197.750000,334.750000L213.250000,334.750000L213.250000,319.250000L190,319.250000L190,327L197.750000,327Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu43" d="M182.250000,311.500000L190,311.500000L190,319.250000L182.250000,319.250000L182.250000,311.500000Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu44" d="M197.750000,373.500000L213.250000,373.500000L213.250000,389L197.750000,389L197.750000,373.500000Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu45" d="M182.250000,373.500000L190,373.500000L190,389L182.250000,389L182.250000,373.500000Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu46" d="M197.750000,350.250000L205.500000,350.250000L205.500000,358L197.750000,358L197.750000,350.250000Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu47" d="M197.750000,288.250000L197.750000,272.750000L190,272.750000L190,265L182.250000,265L182.250000,296L190,296L190,288.250000L197.750000,288.250000Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu48" d="M221,373.500000L228.750000,373.500000L228.750000,389L221,389L221,373.500000Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu49" d="M221,358L236.500000,358L236.500000,365.750000L221,365.750000L221,358Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu50" d="M213.250000,365.750000L221,365.750000L221,373.500000L213.250000,373.500000L213.250000,365.750000Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu51" d="M205.500000,358L213.250000,358L213.250000,365.750000L205.500000,365.750000L205.500000,358Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu52" d="M236.500000,342.500000L236.500000,350.250000L244.250000,350.250000L244.250000,358L252,358L252,342.500000L244.250000,342.500000L236.500000,342.500000Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu53" d="M244.250000,365.750000L236.500000,365.750000L236.500000,389L252,389L252,373.500000L244.250000,373.500000L244.250000,365.750000Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu54" d="M205.500000,342.500000L205.500000,350.250000L228.750000,350.250000L228.750000,334.750000L213.250000,334.750000L213.250000,342.500000L205.500000,342.500000Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu55" d="M221,319.250000L221,327L236.500000,327L236.500000,334.750000L252,334.750000L252,319.250000L236.500000,319.250000L221,319.250000Z" fill="rgb(68,68,68)" stroke="none" stroke-width="1"/><g id="eDktVOTU0pu56"><path id="eDktVOTU0pu57" d="M90.312500,256.517000L90.312500,237.477000C90.312500,231.954000,94.789700,227.477000,100.312000,227.477000L118.142000,227.477000" fill="none" stroke="rgb(0,180,149)" stroke-width="3" stroke-linecap="round"/><path id="eDktVOTU0pu58" d="M289.152000,256.517000L289.152000,237.477000C289.152000,231.954000,284.675000,227.477000,279.152000,227.477000L261.323000,227.477000" fill="none" stroke="rgb(0,180,149)" stroke-width="3" stroke-linecap="round"/><path id="eDktVOTU0pu59" d="M90.312500,396.876000L90.312500,415.916000C90.312500,421.439000,94.789700,425.916000,100.312000,425.916000L118.142000,425.916000" fill="none" stroke="rgb(0,180,149)" stroke-width="3" stroke-linecap="round"/><path id="eDktVOTU0pu60" d="M289.152000,396.876000L289.152000,415.916000C289.152000,421.439000,284.675000,425.916000,279.152000,425.916000L261.323000,425.916000" fill="none" stroke="rgb(0,180,149)" stroke-width="3" stroke-linecap="round"/></g></g><rect id="eDktVOTU0pu61" width="187.145000" height="187.145000" rx="8" ry="8" transform="matrix(1 0 0 0 96.35939999999999 233)" opacity="0" fill="url(#eDktVOTU0pu61-fill)" stroke="none" stroke-width="1"/><g id="eDktVOTU0pu62" opacity="0"><rect id="eDktVOTU0pu63" width="226" height="68" rx="15" ry="15" transform="matrix(1 0 0 1 76.93160000000000 45.97950000000000)" fill="rgb(245,245,245)" stroke="none" stroke-width="1"/><g id="eDktVOTU0pu64" mask="url(#eDktVOTU0pu67)"><g id="eDktVOTU0pu65"><path id="eDktVOTU0pu66" d="M105.307000,69.354500L102.557000,69.354500L102.557000,66.604500L99.806600,66.604500L99.806600,69.354500L97.056600,69.354500L97.056600,72.104500L99.806600,72.104500L99.806600,74.854500L97.056600,74.854500L94.306600,74.854500L94.306600,72.104500L94.306600,69.354500L91.556600,69.354500L88.806600,69.354500L88.806600,66.604500L88.806600,63.854500L88.806600,61.104500L88.806600,58.354500L91.556600,58.354500L94.306600,58.354500L97.056600,58.354500L99.806600,58.354500L99.806600,61.104500L99.806600,63.854500L102.557000,63.854500L102.557000,61.104500L105.307000,61.104500L105.307000,63.854500L108.057000,63.854500L108.057000,66.604500L108.057000,69.354500L108.057000,72.104500L105.307000,72.104500L105.307000,69.354500ZM91.556600,61.104500L91.556600,63.854500L91.556600,66.604500L94.306600,66.604500L97.056600,66.604500L97.056600,63.854500L97.056600,61.104500L94.306600,61.104500L91.556600,61.104500ZM105.307000,58.354500L108.057000,58.354500L108.057000,61.104500L105.307000,61.104500L105.307000,58.354500ZM99.806600,69.354500L102.557000,69.354500L102.557000,72.104500L99.806600,72.104500L99.806600,69.354500ZM88.806600,72.104500L91.556600,72.104500L91.556600,74.854500L88.806600,74.854500L88.806600,72.104500ZM91.556600,74.854500L94.306600,74.854500L94.306600,77.604500L91.556600,77.604500L91.556600,74.854500ZM105.307000,74.854500L108.057000,74.854500L108.057000,77.604500L105.307000,77.604500L105.307000,74.854500ZM99.806600,74.854500L102.557000,74.854500L102.557000,77.604500L99.806600,77.604500L99.806600,74.854500ZM92.931600,62.479500L95.681600,62.479500L95.681600,65.229500L92.931600,65.229500L92.931600,62.479500Z" clip-rule="evenodd" fill="rgb(0,0,0)" fill-rule="evenodd" stroke="none" stroke-width="1"/></g><mask id="eDktVOTU0pu67" mask-type="alpha"><path id="eDktVOTU0pu68" d="M108.932000,64.235800C108.932000,63.996800,108.932000,63.758200,108.930000,63.519200C108.929000,63.318200,108.927000,63.116800,108.921000,62.915800C108.910000,62.477500,108.884000,62.035500,108.806000,61.602200C108.727000,61.162200,108.598000,60.752800,108.394000,60.353200C108.194000,59.960200,107.933000,59.601200,107.622000,59.289500C107.310000,58.978200,106.951000,58.716800,106.558000,58.516800C106.159000,58.313500,105.749000,58.184500,105.310000,58.105500C104.876000,58.027500,104.434000,58.001800,103.996000,57.989800C103.794000,57.984500,103.593000,57.982200,103.392000,57.980800C103.153000,57.979500,102.914000,57.979500,102.675000,57.979500L95.188000,57.979500C94.949300,57.979500,94.710300,57.979500,94.471600,57.980800C94.270300,57.982200,94.069000,57.984500,93.868000,57.989800C93.429600,58.001800,92.987300,58.027500,92.554000,58.105500C92.114300,58.184500,91.705000,58.313500,91.305600,58.516800C90.912600,58.716800,90.553300,58.978200,90.242000,59.289500C89.930300,59.601200,89.669300,59.960200,89.469300,60.353200C89.265600,60.752800,89.136600,61.162200,89.057600,61.602200C88.980000,62.035500,88.954000,62.477500,88.942300,62.915800C88.937000,63.116800,88.934300,63.318200,88.933300,63.519200C88.931600,63.758200,88.931600,63.996800,88.931600,64.235800L88.931600,71.723200C88.931600,71.962200,88.931600,72.200800,88.933300,72.439800C88.934300,72.640800,88.937000,72.842200,88.942300,73.043200C88.954000,73.481500,88.980000,73.923500,89.057600,74.356800C89.136600,74.796800,89.265600,75.206500,89.469300,75.606200C89.669300,75.998800,89.930300,76.357800,90.242000,76.669200C90.553300,76.981200,90.912600,77.242200,91.305600,77.442200C91.705000,77.645500,92.114300,77.774500,92.554000,77.853500C92.987300,77.931200,93.429600,77.957500,93.868000,77.969200C94.069000,77.974500,94.270300,77.976800,94.471600,77.978200C94.710300,77.979500,94.949300,77.979500,95.188000,77.979500L102.675000,77.979500C102.914000,77.979500,103.153000,77.979500,103.392000,77.978200C103.593000,77.976800,103.794000,77.974500,103.996000,77.969200C104.434000,77.957500,104.876000,77.931200,105.310000,77.853500C105.749000,77.774500,106.159000,77.645500,106.558000,77.442200C106.951000,77.242200,107.310000,76.981200,107.622000,76.669200C107.933000,76.357800,108.194000,75.998800,108.394000,75.606200C108.598000,75.206500,108.727000,74.796800,108.806000,74.356800C108.884000,73.923500,108.910000,73.481500,108.921000,73.043200C108.927000,72.842200,108.929000,72.640800,108.930000,72.439800C108.932000,72.200800,108.932000,71.962200,108.932000,71.723200L108.932000,64.235800Z" clip-rule="evenodd" fill="rgb(255,255,255)" fill-rule="evenodd" stroke="none" stroke-width="1"/></mask></g><path id="eDktVOTU0pu69" d="M121.574000,69.216800L122.806000,69.527800C122.548000,70.539200,122.082000,71.311500,121.409000,71.844700C120.741000,72.373700,119.922000,72.638200,118.953000,72.638200C117.950000,72.638200,117.133000,72.435100,116.502000,72.028800C115.876000,71.618300,115.398000,71.025900,115.068000,70.251500C114.742000,69.477100,114.579000,68.645500,114.579000,67.756800C114.579000,66.787800,114.763000,65.943500,115.131000,65.224100C115.504000,64.500500,116.031000,63.952500,116.712000,63.580100C117.397000,63.203500,118.151000,63.015100,118.972000,63.015100C119.903000,63.015100,120.686000,63.252100,121.320000,63.726100C121.955000,64.200000,122.397000,64.866500,122.647000,65.725600L121.435000,66.011200C121.219000,65.334100,120.906000,64.841100,120.495000,64.532200C120.085000,64.223300,119.568000,64.068800,118.946000,64.068800C118.231000,64.068800,117.632000,64.240200,117.150000,64.583000C116.672000,64.925800,116.335000,65.387000,116.141000,65.966800C115.946000,66.542300,115.849000,67.136900,115.849000,67.750500C115.849000,68.541800,115.963000,69.233700,116.191000,69.826200C116.424000,70.414400,116.784000,70.854500,117.271000,71.146500C117.757000,71.438500,118.284000,71.584500,118.851000,71.584500C119.541000,71.584500,120.125000,71.385600,120.603000,70.987800C121.081000,70.590000,121.405000,69.999700,121.574000,69.216800ZM123.645000,67.947300C123.645000,66.402700,124.059000,65.194500,124.889000,64.322800C125.718000,63.446800,126.789000,63.008800,128.101000,63.008800C128.960000,63.008800,129.734000,63.214000,130.424000,63.624500C131.114000,64.035000,131.638000,64.608400,131.998000,65.344700C132.362000,66.076800,132.544000,66.908400,132.544000,67.839400C132.544000,68.783000,132.354000,69.627300,131.973000,70.372100C131.592000,71.116900,131.052000,71.681800,130.354000,72.066900C129.656000,72.447800,128.903000,72.638200,128.094000,72.638200C127.218000,72.638200,126.435000,72.426600,125.746000,72.003400C125.056000,71.580200,124.533000,71.002600,124.178000,70.270500C123.822000,69.538400,123.645000,68.764000,123.645000,67.947300ZM124.914000,67.966300C124.914000,69.087700,125.215000,69.972200,125.815000,70.619600C126.421000,71.262900,127.178000,71.584500,128.088000,71.584500C129.015000,71.584500,129.776000,71.258600,130.373000,70.606900C130.974000,69.955200,131.274000,69.030600,131.274000,67.833000C131.274000,67.075500,131.145000,66.415400,130.887000,65.852500C130.633000,65.285500,130.259000,64.847500,129.764000,64.538600C129.273000,64.225400,128.721000,64.068800,128.107000,64.068800C127.235000,64.068800,126.484000,64.369300,125.854000,64.970200C125.227000,65.566900,124.914000,66.565600,124.914000,67.966300ZM127.314000,62.602500L128.158000,60.825200L129.656000,60.825200L128.259000,62.602500L127.314000,62.602500ZM133.827000,72.479500L133.827000,63.173800L137.033000,63.173800C137.756000,63.173800,138.309000,63.218300,138.690000,63.307100C139.223000,63.429900,139.678000,63.652000,140.054000,63.973600C140.545000,64.388300,140.911000,64.919400,141.152000,65.566900C141.398000,66.210100,141.521000,66.946500,141.521000,67.775900C141.521000,68.482600,141.438000,69.108900,141.273000,69.654800C141.108000,70.200700,140.896000,70.653500,140.638000,71.013200C140.380000,71.368700,140.097000,71.650100,139.788000,71.857400C139.483000,72.060500,139.113000,72.215000,138.677000,72.320800C138.245000,72.426600,137.748000,72.479500,137.185000,72.479500L133.827000,72.479500ZM135.059000,71.381300L137.046000,71.381300C137.659000,71.381300,138.139000,71.324200,138.486000,71.210000C138.838000,71.095700,139.117000,70.934900,139.324000,70.727500C139.616000,70.435500,139.843000,70.044100,140.004000,69.553200C140.169000,69.058100,140.251000,68.459300,140.251000,67.756800C140.251000,66.783500,140.090000,66.036600,139.769000,65.516100C139.451000,64.991400,139.064000,64.640100,138.607000,64.462400C138.277000,64.335400,137.746000,64.272000,137.014000,64.272000L135.059000,64.272000L135.059000,71.381300ZM143.121000,72.479500L143.121000,63.173800L144.353000,63.173800L144.353000,72.479500L143.121000,72.479500ZM150.574000,68.829600L150.574000,67.737800L154.516000,67.731400L154.516000,71.184600C153.911000,71.667000,153.287000,72.030900,152.644000,72.276400C152.001000,72.517600,151.340000,72.638200,150.663000,72.638200C149.749000,72.638200,148.918000,72.443500,148.169000,72.054200C147.424000,71.660600,146.861000,71.093600,146.480000,70.353000C146.099000,69.612500,145.909000,68.785200,145.909000,67.871100C145.909000,66.965500,146.097000,66.121300,146.474000,65.338400C146.855000,64.551300,147.401000,63.967300,148.112000,63.586400C148.823000,63.205600,149.641000,63.015100,150.568000,63.015100C151.241000,63.015100,151.848000,63.125200,152.390000,63.345200C152.936000,63.561000,153.363000,63.863600,153.672000,64.252900C153.981000,64.642300,154.216000,65.150100,154.377000,65.776400L153.266000,66.081100C153.126000,65.607100,152.953000,65.234700,152.745000,64.963900C152.538000,64.693000,152.242000,64.477200,151.857000,64.316400C151.472000,64.151400,151.044000,64.068800,150.574000,64.068800C150.012000,64.068800,149.525000,64.155600,149.114000,64.329100C148.704000,64.498400,148.372000,64.722700,148.118000,65.002000C147.868000,65.281200,147.674000,65.588100,147.534000,65.922400C147.297000,66.497900,147.178000,67.122100,147.178000,67.794900C147.178000,68.624300,147.320000,69.318400,147.604000,69.877000C147.892000,70.435500,148.308000,70.850300,148.854000,71.121100C149.400000,71.391900,149.980000,71.527300,150.593000,71.527300C151.127000,71.527300,151.647000,71.425800,152.155000,71.222700C152.663000,71.015300,153.048000,70.795200,153.310000,70.562500L153.310000,68.829600L150.574000,68.829600ZM155.654000,67.947300C155.654000,66.402700,156.068000,65.194500,156.898000,64.322800C157.727000,63.446800,158.798000,63.008800,160.110000,63.008800C160.969000,63.008800,161.743000,63.214000,162.433000,63.624500C163.123000,64.035000,163.647000,64.608400,164.007000,65.344700C164.371000,66.076800,164.553000,66.908400,164.553000,67.839400C164.553000,68.783000,164.363000,69.627300,163.982000,70.372100C163.601000,71.116900,163.061000,71.681800,162.363000,72.066900C161.665000,72.447800,160.912000,72.638200,160.103000,72.638200C159.227000,72.638200,158.444000,72.426600,157.755000,72.003400C157.065000,71.580200,156.542000,71.002600,156.187000,70.270500C155.831000,69.538400,155.654000,68.764000,155.654000,67.947300ZM156.923000,67.966300C156.923000,69.087700,157.224000,69.972200,157.825000,70.619600C158.430000,71.262900,159.187000,71.584500,160.097000,71.584500C161.024000,71.584500,161.785000,71.258600,162.382000,70.606900C162.983000,69.955200,163.283000,69.030600,163.283000,67.833000C163.283000,67.075500,163.154000,66.415400,162.896000,65.852500C162.642000,65.285500,162.268000,64.847500,161.773000,64.538600C161.282000,64.225400,160.730000,64.068800,160.116000,64.068800C159.244000,64.068800,158.493000,64.369300,157.863000,64.970200C157.236000,65.566900,156.923000,66.565600,156.923000,67.966300ZM176.197000,71.482900C176.768000,71.876500,177.295000,72.164200,177.777000,72.346200L177.415000,73.203100C176.747000,72.961900,176.080000,72.581100,175.416000,72.060500C174.726000,72.445600,173.964000,72.638200,173.131000,72.638200C172.289000,72.638200,171.525000,72.435100,170.839000,72.028800C170.154000,71.622600,169.625000,71.051300,169.252000,70.314900C168.884000,69.578600,168.700000,68.749200,168.700000,67.826700C168.700000,66.908400,168.886000,66.072600,169.259000,65.319300C169.631000,64.566100,170.160000,63.992700,170.846000,63.599100C171.535000,63.205600,172.306000,63.008800,173.156000,63.008800C174.015000,63.008800,174.790000,63.214000,175.479000,63.624500C176.169000,64.030800,176.694000,64.602100,177.054000,65.338400C177.418000,66.070500,177.600000,66.897800,177.600000,67.820300C177.600000,68.586300,177.483000,69.276000,177.250000,69.889600C177.018000,70.499000,176.666000,71.030100,176.197000,71.482900ZM173.486000,69.908700C174.197000,70.107600,174.783000,70.403800,175.245000,70.797400C175.968000,70.137200,176.330000,69.144900,176.330000,67.820300C176.330000,67.067100,176.201000,66.409000,175.943000,65.846200C175.689000,65.283400,175.314000,64.847500,174.819000,64.538600C174.328000,64.225400,173.776000,64.068800,173.163000,64.068800C172.244000,64.068800,171.483000,64.384100,170.877000,65.014600C170.272000,65.641000,169.970000,66.578300,169.970000,67.826700C169.970000,69.036900,170.268000,69.965800,170.865000,70.613300C171.466000,71.260700,172.232000,71.584500,173.163000,71.584500C173.603000,71.584500,174.017000,71.502000,174.407000,71.336900C174.022000,71.087200,173.615000,70.909500,173.188000,70.803700L173.486000,69.908700ZM178.972000,72.479500L178.972000,63.173800L183.098000,63.173800C183.927000,63.173800,184.558000,63.258500,184.989000,63.427700C185.421000,63.592800,185.766000,63.886900,186.024000,64.310100C186.282000,64.733200,186.411000,65.200800,186.411000,65.712900C186.411000,66.373000,186.197000,66.929500,185.770000,67.382300C185.343000,67.835100,184.682000,68.122900,183.790000,68.245600C184.115000,68.402200,184.363000,68.556600,184.532000,68.709000C184.892000,69.039100,185.233000,69.451700,185.554000,69.946800L187.173000,72.479500L185.624000,72.479500L184.393000,70.543500C184.033000,69.984900,183.737000,69.557500,183.504000,69.261200C183.271000,68.965000,183.062000,68.757600,182.875000,68.639200C182.693000,68.520700,182.507000,68.438200,182.317000,68.391600C182.177000,68.362000,181.949000,68.347200,181.631000,68.347200L180.203000,68.347200L180.203000,72.479500L178.972000,72.479500ZM180.203000,67.280800L182.850000,67.280800C183.413000,67.280800,183.853000,67.223600,184.170000,67.109400C184.488000,66.990900,184.729000,66.804700,184.894000,66.550800C185.059000,66.292600,185.142000,66.013300,185.142000,65.712900C185.142000,65.272800,184.981000,64.911000,184.659000,64.627400C184.342000,64.343900,183.838000,64.202100,183.148000,64.202100L180.203000,64.202100L180.203000,67.280800Z" fill="rgb(0,0,0)" fill-opacity="0.05" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu70" style="mix-blend-mode:color-burn" d="M121.574000,69.216800L122.806000,69.527800C122.548000,70.539200,122.082000,71.311500,121.409000,71.844700C120.741000,72.373700,119.922000,72.638200,118.953000,72.638200C117.950000,72.638200,117.133000,72.435100,116.502000,72.028800C115.876000,71.618300,115.398000,71.025900,115.068000,70.251500C114.742000,69.477100,114.579000,68.645500,114.579000,67.756800C114.579000,66.787800,114.763000,65.943500,115.131000,65.224100C115.504000,64.500500,116.031000,63.952500,116.712000,63.580100C117.397000,63.203500,118.151000,63.015100,118.972000,63.015100C119.903000,63.015100,120.686000,63.252100,121.320000,63.726100C121.955000,64.200000,122.397000,64.866500,122.647000,65.725600L121.435000,66.011200C121.219000,65.334100,120.906000,64.841100,120.495000,64.532200C120.085000,64.223300,119.568000,64.068800,118.946000,64.068800C118.231000,64.068800,117.632000,64.240200,117.150000,64.583000C116.672000,64.925800,116.335000,65.387000,116.141000,65.966800C115.946000,66.542300,115.849000,67.136900,115.849000,67.750500C115.849000,68.541800,115.963000,69.233700,116.191000,69.826200C116.424000,70.414400,116.784000,70.854500,117.271000,71.146500C117.757000,71.438500,118.284000,71.584500,118.851000,71.584500C119.541000,71.584500,120.125000,71.385600,120.603000,70.987800C121.081000,70.590000,121.405000,69.999700,121.574000,69.216800ZM123.645000,67.947300C123.645000,66.402700,124.059000,65.194500,124.889000,64.322800C125.718000,63.446800,126.789000,63.008800,128.101000,63.008800C128.960000,63.008800,129.734000,63.214000,130.424000,63.624500C131.114000,64.035000,131.638000,64.608400,131.998000,65.344700C132.362000,66.076800,132.544000,66.908400,132.544000,67.839400C132.544000,68.783000,132.354000,69.627300,131.973000,70.372100C131.592000,71.116900,131.052000,71.681800,130.354000,72.066900C129.656000,72.447800,128.903000,72.638200,128.094000,72.638200C127.218000,72.638200,126.435000,72.426600,125.746000,72.003400C125.056000,71.580200,124.533000,71.002600,124.178000,70.270500C123.822000,69.538400,123.645000,68.764000,123.645000,67.947300ZM124.914000,67.966300C124.914000,69.087700,125.215000,69.972200,125.815000,70.619600C126.421000,71.262900,127.178000,71.584500,128.088000,71.584500C129.015000,71.584500,129.776000,71.258600,130.373000,70.606900C130.974000,69.955200,131.274000,69.030600,131.274000,67.833000C131.274000,67.075500,131.145000,66.415400,130.887000,65.852500C130.633000,65.285500,130.259000,64.847500,129.764000,64.538600C129.273000,64.225400,128.721000,64.068800,128.107000,64.068800C127.235000,64.068800,126.484000,64.369300,125.854000,64.970200C125.227000,65.566900,124.914000,66.565600,124.914000,67.966300ZM127.314000,62.602500L128.158000,60.825200L129.656000,60.825200L128.259000,62.602500L127.314000,62.602500ZM133.827000,72.479500L133.827000,63.173800L137.033000,63.173800C137.756000,63.173800,138.309000,63.218300,138.690000,63.307100C139.223000,63.429900,139.678000,63.652000,140.054000,63.973600C140.545000,64.388300,140.911000,64.919400,141.152000,65.566900C141.398000,66.210100,141.521000,66.946500,141.521000,67.775900C141.521000,68.482600,141.438000,69.108900,141.273000,69.654800C141.108000,70.200700,140.896000,70.653500,140.638000,71.013200C140.380000,71.368700,140.097000,71.650100,139.788000,71.857400C139.483000,72.060500,139.113000,72.215000,138.677000,72.320800C138.245000,72.426600,137.748000,72.479500,137.185000,72.479500L133.827000,72.479500ZM135.059000,71.381300L137.046000,71.381300C137.659000,71.381300,138.139000,71.324200,138.486000,71.210000C138.838000,71.095700,139.117000,70.934900,139.324000,70.727500C139.616000,70.435500,139.843000,70.044100,140.004000,69.553200C140.169000,69.058100,140.251000,68.459300,140.251000,67.756800C140.251000,66.783500,140.090000,66.036600,139.769000,65.516100C139.451000,64.991400,139.064000,64.640100,138.607000,64.462400C138.277000,64.335400,137.746000,64.272000,137.014000,64.272000L135.059000,64.272000L135.059000,71.381300ZM143.121000,72.479500L143.121000,63.173800L144.353000,63.173800L144.353000,72.479500L143.121000,72.479500ZM150.574000,68.829600L150.574000,67.737800L154.516000,67.731400L154.516000,71.184600C153.911000,71.667000,153.287000,72.030900,152.644000,72.276400C152.001000,72.517600,151.340000,72.638200,150.663000,72.638200C149.749000,72.638200,148.918000,72.443500,148.169000,72.054200C147.424000,71.660600,146.861000,71.093600,146.480000,70.353000C146.099000,69.612500,145.909000,68.785200,145.909000,67.871100C145.909000,66.965500,146.097000,66.121300,146.474000,65.338400C146.855000,64.551300,147.401000,63.967300,148.112000,63.586400C148.823000,63.205600,149.641000,63.015100,150.568000,63.015100C151.241000,63.015100,151.848000,63.125200,152.390000,63.345200C152.936000,63.561000,153.363000,63.863600,153.672000,64.252900C153.981000,64.642300,154.216000,65.150100,154.377000,65.776400L153.266000,66.081100C153.126000,65.607100,152.953000,65.234700,152.745000,64.963900C152.538000,64.693000,152.242000,64.477200,151.857000,64.316400C151.472000,64.151400,151.044000,64.068800,150.574000,64.068800C150.012000,64.068800,149.525000,64.155600,149.114000,64.329100C148.704000,64.498400,148.372000,64.722700,148.118000,65.002000C147.868000,65.281200,147.674000,65.588100,147.534000,65.922400C147.297000,66.497900,147.178000,67.122100,147.178000,67.794900C147.178000,68.624300,147.320000,69.318400,147.604000,69.877000C147.892000,70.435500,148.308000,70.850300,148.854000,71.121100C149.400000,71.391900,149.980000,71.527300,150.593000,71.527300C151.127000,71.527300,151.647000,71.425800,152.155000,71.222700C152.663000,71.015300,153.048000,70.795200,153.310000,70.562500L153.310000,68.829600L150.574000,68.829600ZM155.654000,67.947300C155.654000,66.402700,156.068000,65.194500,156.898000,64.322800C157.727000,63.446800,158.798000,63.008800,160.110000,63.008800C160.969000,63.008800,161.743000,63.214000,162.433000,63.624500C163.123000,64.035000,163.647000,64.608400,164.007000,65.344700C164.371000,66.076800,164.553000,66.908400,164.553000,67.839400C164.553000,68.783000,164.363000,69.627300,163.982000,70.372100C163.601000,71.116900,163.061000,71.681800,162.363000,72.066900C161.665000,72.447800,160.912000,72.638200,160.103000,72.638200C159.227000,72.638200,158.444000,72.426600,157.755000,72.003400C157.065000,71.580200,156.542000,71.002600,156.187000,70.270500C155.831000,69.538400,155.654000,68.764000,155.654000,67.947300ZM156.923000,67.966300C156.923000,69.087700,157.224000,69.972200,157.825000,70.619600C158.430000,71.262900,159.187000,71.584500,160.097000,71.584500C161.024000,71.584500,161.785000,71.258600,162.382000,70.606900C162.983000,69.955200,163.283000,69.030600,163.283000,67.833000C163.283000,67.075500,163.154000,66.415400,162.896000,65.852500C162.642000,65.285500,162.268000,64.847500,161.773000,64.538600C161.282000,64.225400,160.730000,64.068800,160.116000,64.068800C159.244000,64.068800,158.493000,64.369300,157.863000,64.970200C157.236000,65.566900,156.923000,66.565600,156.923000,67.966300ZM176.197000,71.482900C176.768000,71.876500,177.295000,72.164200,177.777000,72.346200L177.415000,73.203100C176.747000,72.961900,176.080000,72.581100,175.416000,72.060500C174.726000,72.445600,173.964000,72.638200,173.131000,72.638200C172.289000,72.638200,171.525000,72.435100,170.839000,72.028800C170.154000,71.622600,169.625000,71.051300,169.252000,70.314900C168.884000,69.578600,168.700000,68.749200,168.700000,67.826700C168.700000,66.908400,168.886000,66.072600,169.259000,65.319300C169.631000,64.566100,170.160000,63.992700,170.846000,63.599100C171.535000,63.205600,172.306000,63.008800,173.156000,63.008800C174.015000,63.008800,174.790000,63.214000,175.479000,63.624500C176.169000,64.030800,176.694000,64.602100,177.054000,65.338400C177.418000,66.070500,177.600000,66.897800,177.600000,67.820300C177.600000,68.586300,177.483000,69.276000,177.250000,69.889600C177.018000,70.499000,176.666000,71.030100,176.197000,71.482900ZM173.486000,69.908700C174.197000,70.107600,174.783000,70.403800,175.245000,70.797400C175.968000,70.137200,176.330000,69.144900,176.330000,67.820300C176.330000,67.067100,176.201000,66.409000,175.943000,65.846200C175.689000,65.283400,175.314000,64.847500,174.819000,64.538600C174.328000,64.225400,173.776000,64.068800,173.163000,64.068800C172.244000,64.068800,171.483000,64.384100,170.877000,65.014600C170.272000,65.641000,169.970000,66.578300,169.970000,67.826700C169.970000,69.036900,170.268000,69.965800,170.865000,70.613300C171.466000,71.260700,172.232000,71.584500,173.163000,71.584500C173.603000,71.584500,174.017000,71.502000,174.407000,71.336900C174.022000,71.087200,173.615000,70.909500,173.188000,70.803700L173.486000,69.908700ZM178.972000,72.479500L178.972000,63.173800L183.098000,63.173800C183.927000,63.173800,184.558000,63.258500,184.989000,63.427700C185.421000,63.592800,185.766000,63.886900,186.024000,64.310100C186.282000,64.733200,186.411000,65.200800,186.411000,65.712900C186.411000,66.373000,186.197000,66.929500,185.770000,67.382300C185.343000,67.835100,184.682000,68.122900,183.790000,68.245600C184.115000,68.402200,184.363000,68.556600,184.532000,68.709000C184.892000,69.039100,185.233000,69.451700,185.554000,69.946800L187.173000,72.479500L185.624000,72.479500L184.393000,70.543500C184.033000,69.984900,183.737000,69.557500,183.504000,69.261200C183.271000,68.965000,183.062000,68.757600,182.875000,68.639200C182.693000,68.520700,182.507000,68.438200,182.317000,68.391600C182.177000,68.362000,181.949000,68.347200,181.631000,68.347200L180.203000,68.347200L180.203000,72.479500L178.972000,72.479500ZM180.203000,67.280800L182.850000,67.280800C183.413000,67.280800,183.853000,67.223600,184.170000,67.109400C184.488000,66.990900,184.729000,66.804700,184.894000,66.550800C185.059000,66.292600,185.142000,66.013300,185.142000,65.712900C185.142000,65.272800,184.981000,64.911000,184.659000,64.627400C184.342000,64.343900,183.838000,64.202100,183.148000,64.202100L180.203000,64.202100L180.203000,67.280800Z" fill="rgb(63,63,63)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu71" d="M88.909700,97.979500L93.033200,87.242200L94.564000,87.242200L98.958500,97.979500L97.339800,97.979500L96.087400,94.727500L91.597700,94.727500L90.418500,97.979500L88.909700,97.979500ZM92.007800,93.570300L95.647900,93.570300L94.527300,90.596700C94.185500,89.693400,93.931600,88.951200,93.765600,88.370100C93.628900,89.058600,93.436000,89.742200,93.187000,90.420900L92.007800,93.570300ZM101.141000,97.979500L99.918000,97.979500L99.918000,87.242200L101.236000,87.242200L101.236000,91.072800C101.793000,90.374500,102.503000,90.025400,103.368000,90.025400C103.846000,90.025400,104.298000,90.123000,104.723000,90.318400C105.152000,90.508800,105.504000,90.779800,105.777000,91.131300C106.056000,91.478000,106.273000,91.897900,106.429000,92.391100C106.585000,92.884300,106.664000,93.411600,106.664000,93.973100C106.664000,95.306200,106.334000,96.336400,105.675000,97.064000C105.016000,97.791500,104.225000,98.155300,103.302000,98.155300C102.384000,98.155300,101.664000,97.772000,101.141000,97.005400L101.141000,97.979500ZM101.126000,94.031700C101.126000,94.964400,101.253000,95.638200,101.507000,96.053200C101.922000,96.731900,102.484000,97.071300,103.192000,97.071300C103.768000,97.071300,104.266000,96.822300,104.686000,96.324200C105.106000,95.821300,105.316000,95.074200,105.316000,94.083000C105.316000,93.067400,105.113000,92.317900,104.708000,91.834500C104.308000,91.351100,103.822000,91.109400,103.250000,91.109400C102.674000,91.109400,102.176000,91.360800,101.756000,91.863800C101.336000,92.361800,101.126000,93.084500,101.126000,94.031700ZM108.260000,97.979500L108.260000,90.201200L109.447000,90.201200L109.447000,91.380400C109.750000,90.828600,110.028000,90.464800,110.282000,90.289100C110.541000,90.113300,110.824000,90.025400,111.131000,90.025400C111.576000,90.025400,112.027000,90.167000,112.486000,90.450200L112.032000,91.673300C111.710000,91.482900,111.388000,91.387700,111.065000,91.387700C110.777000,91.387700,110.519000,91.475600,110.289000,91.651400C110.060000,91.822300,109.896000,92.061500,109.798000,92.369100C109.652000,92.837900,109.579000,93.350600,109.579000,93.907200L109.579000,97.979500L108.260000,97.979500ZM113.277000,88.758300L113.277000,87.242200L114.596000,87.242200L114.596000,88.758300L113.277000,88.758300ZM113.277000,97.979500L113.277000,90.201200L114.596000,90.201200L114.596000,97.979500L113.277000,97.979500ZM116.595000,97.979500L116.595000,90.201200L117.782000,90.201200L117.782000,91.380400C118.084000,90.828600,118.363000,90.464800,118.617000,90.289100C118.875000,90.113300,119.159000,90.025400,119.466000,90.025400C119.911000,90.025400,120.362000,90.167000,120.821000,90.450200L120.367000,91.673300C120.045000,91.482900,119.723000,91.387700,119.400000,91.387700C119.112000,91.387700,118.854000,91.475600,118.624000,91.651400C118.395000,91.822300,118.231000,92.061500,118.133000,92.369100C117.987000,92.837900,117.914000,93.350600,117.914000,93.907200L117.914000,97.979500L116.595000,97.979500ZM125.846000,91.043500L125.479000,89L125.479000,87.242200L126.981000,87.242200L126.981000,89L126.651000,91.043500L125.846000,91.043500ZM128.270000,91.043500L127.911000,89L127.911000,87.242200L129.413000,87.242200L129.413000,89L129.061000,91.043500L128.270000,91.043500ZM132.547000,97.979500L130.167000,90.201200L131.529000,90.201200L132.767000,94.690900L133.229000,96.360800C133.248000,96.277800,133.382000,95.743200,133.631000,94.756800L134.869000,90.201200L136.224000,90.201200L137.389000,94.712900L137.777000,96.199700L138.224000,94.698200L139.557000,90.201200L140.838000,90.201200L138.407000,97.979500L137.037000,97.979500L135.799000,93.321300L135.499000,91.995600L133.924000,97.979500L132.547000,97.979500ZM141.959000,88.758300L141.959000,87.242200L143.277000,87.242200L143.277000,88.758300L141.959000,88.758300ZM141.959000,97.979500L141.959000,90.201200L143.277000,90.201200L143.277000,97.979500L141.959000,97.979500ZM145.292000,97.979500L145.292000,90.201200L146.478000,90.201200L146.478000,91.307100C147.049000,90.452600,147.875000,90.025400,148.954000,90.025400C149.422000,90.025400,149.852000,90.110800,150.243000,90.281700C150.638000,90.447800,150.934000,90.667500,151.129000,90.940900C151.324000,91.214400,151.461000,91.539100,151.539000,91.915000C151.588000,92.159200,151.612000,92.586400,151.612000,93.196800L151.612000,97.979500L150.294000,97.979500L150.294000,93.248000C150.294000,92.710900,150.243000,92.310500,150.140000,92.046900C150.038000,91.778300,149.854000,91.565900,149.591000,91.409700C149.332000,91.248500,149.027000,91.168000,148.675000,91.168000C148.114000,91.168000,147.628000,91.346200,147.218000,91.702600C146.812000,92.059100,146.610000,92.735400,146.610000,93.731400L146.610000,97.979500L145.292000,97.979500ZM158.966000,95.474600L160.328000,95.643100C160.113000,96.439000,159.715000,97.056600,159.134000,97.496100C158.553000,97.935500,157.811000,98.155300,156.908000,98.155300C155.770000,98.155300,154.867000,97.806200,154.198000,97.107900C153.534000,96.404800,153.202000,95.420900,153.202000,94.156200C153.202000,92.847700,153.539000,91.832000,154.212000,91.109400C154.886000,90.386700,155.760000,90.025400,156.834000,90.025400C157.875000,90.025400,158.724000,90.379400,159.383000,91.087400C160.042000,91.795400,160.372000,92.791500,160.372000,94.075700C160.372000,94.153800,160.370000,94.271000,160.365000,94.427200L154.564000,94.427200C154.613000,95.281700,154.854000,95.936000,155.289000,96.390100C155.724000,96.844200,156.266000,97.071300,156.915000,97.071300C157.398000,97.071300,157.811000,96.944300,158.153000,96.690400C158.495000,96.436500,158.766000,96.031200,158.966000,95.474600ZM154.637000,93.343300L158.980000,93.343300C158.922000,92.689000,158.756000,92.198200,158.482000,91.871100C158.062000,91.363300,157.518000,91.109400,156.849000,91.109400C156.244000,91.109400,155.733000,91.312000,155.318000,91.717300C154.908000,92.122600,154.681000,92.664600,154.637000,93.343300ZM162.364000,97.979500L162.364000,96.478000L163.866000,96.478000L163.866000,97.979500L162.364000,97.979500ZM171.241000,95.130400L172.538000,95.298800C172.396000,96.192400,172.032000,96.893100,171.446000,97.400900C170.865000,97.903800,170.150000,98.155300,169.300000,98.155300C168.236000,98.155300,167.379000,97.808600,166.729000,97.115200C166.085000,96.417000,165.763000,95.418500,165.763000,94.119600C165.763000,93.279800,165.902000,92.544900,166.180000,91.915000C166.458000,91.285200,166.881000,90.814000,167.447000,90.501500C168.019000,90.184100,168.639000,90.025400,169.308000,90.025400C170.152000,90.025400,170.843000,90.240200,171.380000,90.669900C171.917000,91.094700,172.262000,91.700200,172.413000,92.486300L171.131000,92.684100C171.009000,92.161600,170.792000,91.768600,170.479000,91.504900C170.172000,91.241200,169.798000,91.109400,169.359000,91.109400C168.695000,91.109400,168.155000,91.348600,167.740000,91.827100C167.325000,92.300800,167.118000,93.052700,167.118000,94.083000C167.118000,95.127900,167.318000,95.887200,167.718000,96.360800C168.119000,96.834500,168.641000,97.071300,169.286000,97.071300C169.803000,97.071300,170.235000,96.912600,170.582000,96.595200C170.929000,96.277800,171.148000,95.789600,171.241000,95.130400ZM173.175000,94.090300C173.175000,92.649900,173.575000,91.583000,174.376000,90.889600C175.045000,90.313500,175.860000,90.025400,176.822000,90.025400C177.892000,90.025400,178.766000,90.377000,179.444000,91.080100C180.123000,91.778300,180.462000,92.745100,180.462000,93.980500C180.462000,94.981400,180.311000,95.770000,180.008000,96.346200C179.710000,96.917500,179.273000,97.361800,178.697000,97.679200C178.126000,97.996600,177.501000,98.155300,176.822000,98.155300C175.733000,98.155300,174.852000,97.806200,174.178000,97.107900C173.509000,96.409700,173.175000,95.403800,173.175000,94.090300ZM174.530000,94.090300C174.530000,95.086400,174.747000,95.833500,175.182000,96.331500C175.616000,96.824700,176.163000,97.071300,176.822000,97.071300C177.477000,97.071300,178.021000,96.822300,178.456000,96.324200C178.890000,95.826200,179.107000,95.066900,179.107000,94.046400C179.107000,93.084500,178.888000,92.356900,178.448000,91.863800C178.014000,91.365700,177.472000,91.116700,176.822000,91.116700C176.163000,91.116700,175.616000,91.363300,175.182000,91.856400C174.747000,92.349600,174.530000,93.094200,174.530000,94.090300ZM182.015000,97.979500L182.015000,90.201200L183.194000,90.201200L183.194000,91.292500C183.438000,90.911600,183.763000,90.606400,184.168000,90.377000C184.574000,90.142600,185.035000,90.025400,185.553000,90.025400C186.129000,90.025400,186.600000,90.145000,186.966000,90.384300C187.337000,90.623500,187.599000,90.958000,187.750000,91.387700C188.365000,90.479500,189.166000,90.025400,190.152000,90.025400C190.924000,90.025400,191.517000,90.240200,191.932000,90.669900C192.347000,91.094700,192.555000,91.751500,192.555000,92.640100L192.555000,97.979500L191.244000,97.979500L191.244000,93.079600C191.244000,92.552200,191.200000,92.173800,191.112000,91.944300C191.029000,91.710000,190.875000,91.522000,190.650000,91.380400C190.426000,91.238800,190.162000,91.168000,189.859000,91.168000C189.312000,91.168000,188.858000,91.351100,188.497000,91.717300C188.136000,92.078600,187.955000,92.659700,187.955000,93.460400L187.955000,97.979500L186.637000,97.979500L186.637000,92.925800C186.637000,92.339800,186.529000,91.900400,186.314000,91.607400C186.100000,91.314500,185.748000,91.168000,185.260000,91.168000C184.889000,91.168000,184.544000,91.265600,184.227000,91.460900C183.915000,91.656200,183.688000,91.941900,183.546000,92.317900C183.404000,92.693800,183.333000,93.235800,183.333000,93.943800L183.333000,97.979500L182.015000,97.979500ZM194.884000,97.979500L194.884000,96.478000L196.385000,96.478000L196.385000,97.979500L194.884000,97.979500ZM199.901000,97.979500L198.678000,97.979500L198.678000,87.242200L199.996000,87.242200L199.996000,91.072800C200.553000,90.374500,201.263000,90.025400,202.127000,90.025400C202.606000,90.025400,203.058000,90.123000,203.482000,90.318400C203.912000,90.508800,204.264000,90.779800,204.537000,91.131300C204.815000,91.478000,205.033000,91.897900,205.189000,92.391100C205.345000,92.884300,205.423000,93.411600,205.423000,93.973100C205.423000,95.306200,205.094000,96.336400,204.435000,97.064000C203.775000,97.791500,202.984000,98.155300,202.062000,98.155300C201.144000,98.155300,200.423000,97.772000,199.901000,97.005400L199.901000,97.979500ZM199.886000,94.031700C199.886000,94.964400,200.013000,95.638200,200.267000,96.053200C200.682000,96.731900,201.244000,97.071300,201.952000,97.071300C202.528000,97.071300,203.026000,96.822300,203.446000,96.324200C203.866000,95.821300,204.076000,95.074200,204.076000,94.083000C204.076000,93.067400,203.873000,92.317900,203.468000,91.834500C203.067000,91.351100,202.582000,91.109400,202.010000,91.109400C201.434000,91.109400,200.936000,91.360800,200.516000,91.863800C200.096000,92.361800,199.886000,93.084500,199.886000,94.031700ZM207.020000,97.979500L207.020000,90.201200L208.207000,90.201200L208.207000,91.380400C208.509000,90.828600,208.788000,90.464800,209.042000,90.289100C209.300000,90.113300,209.583000,90.025400,209.891000,90.025400C210.335000,90.025400,210.787000,90.167000,211.246000,90.450200L210.792000,91.673300C210.470000,91.482900,210.147000,91.387700,209.825000,91.387700C209.537000,91.387700,209.278000,91.475600,209.049000,91.651400C208.819000,91.822300,208.656000,92.061500,208.558000,92.369100C208.412000,92.837900,208.338000,93.350600,208.338000,93.907200L208.338000,97.979500L207.020000,97.979500ZM211.678000,88.663100L211.678000,87.132300L213.092000,87.132300L213.092000,88.340800C213.092000,88.995100,213.016000,89.466300,212.865000,89.754400C212.655000,90.149900,212.328000,90.447800,211.883000,90.647900L211.561000,90.127900C211.825000,90.020500,212.020000,89.852100,212.147000,89.622600C212.279000,89.388200,212.352000,89.068400,212.367000,88.663100L211.678000,88.663100ZM213.949000,88.663100L213.949000,87.132300L215.362000,87.132300L215.362000,88.340800C215.362000,88.995100,215.287000,89.466300,215.135000,89.754400C214.925000,90.149900,214.598000,90.447800,214.154000,90.647900L213.832000,90.127900C214.095000,90.020500,214.291000,89.852100,214.417000,89.622600C214.549000,89.388200,214.623000,89.068400,214.637000,88.663100L213.949000,88.663100Z" fill="rgb(0,0,0)" stroke="none" stroke-width="1"/></g><g id="eDktVOTU0pu72" transform="matrix(0.50000000000000 0 0 0.50000000000000 94.96650314249999 40.70309829750000)" opacity="0"><circle id="eDktVOTU0pu73" r="38.526300" transform="matrix(1 0 0 1 189.93299999999999 81.40620000000000)" fill="none" stroke="rgb(0,180,149)" stroke-width="2"/><circle id="eDktVOTU0pu74" r="37.913000" transform="matrix(1 0 0 1 189.93199999999999 81.40560000000001)" opacity="0.4" fill="rgb(0,180,149)" stroke="none" stroke-width="1"/></g><path id="eDktVOTU0pu75" d="M263.338000,0L116.526000,0L116.526000,0.000381L91.574200,0.000381C68.378300,0.000381,49.574200,18.804400,49.574200,42.000300L49.574200,538.795000C49.574200,561.991000,68.378300,580.795000,91.574300,580.795000L289.098000,580.795000C312.294000,580.795000,331.098000,561.991000,331.098000,538.795000L331.098000,42.000400C331.098000,18.804400,312.294000,0.000381,289.098000,0.000381L263.338000,0.000381L263.338000,0ZM118.785000,12.906100C123.490000,24.721800,135.033000,33.073000,148.526000,33.073000L231.338000,33.073000C244.831000,33.073000,256.374000,24.721800,261.079000,12.906100L283.771000,12.906100C301.444000,12.906100,315.771000,27.233000,315.771000,44.906100L315.771000,535.887000C315.771000,553.560000,301.444000,567.887000,283.771000,567.887000L96.093000,567.887000C78.419900,567.887000,64.093100,553.560000,64.093100,535.887000L64.093100,44.906200C64.093100,27.233000,78.419900,12.906100,96.093100,12.906100L118.785000,12.906100Z" transform="matrix(1 0 0 1 0 -2.14750000499976)" clip-rule="evenodd" fill="rgb(213,233,226)" fill-rule="evenodd" stroke="none" stroke-width="1"/><g id="eDktVOTU0pu76" transform="matrix(1 0 0 1 0 -0.00101837000000)"><path id="eDktVOTU0pu77" d="M348.827000,134.554000C339.804000,134.232000,333.252000,140.865000,331.104000,144.222000L331.104000,513.994000L391.121000,514.800000C387.093000,510.100000,378.473000,494.740000,376.217000,470.894000C373.398000,441.087000,393.538000,374.625000,398.774000,348.845000C402.963000,328.222000,395.418000,302.657000,391.121000,292.453000C365.745000,205.850000,367.800000,175.605000,366.994000,160.298000C366.189000,144.992000,360.105000,134.957000,348.827000,134.554000Z" fill="url(#eDktVOTU0pu77-fill)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu78" d="M24.973200,109.581000C32.707000,107.325000,44.401200,112.442000,49.503300,115.261000L49.141900,218.337000C56.660800,225.588000,71.698800,244.439000,71.698800,261.840000C71.698800,279.241000,62.300100,288.694000,57.600700,291.245000C74.115600,306.954000,79.754800,321.052000,80.560400,335.150000C81.204900,346.429000,72.772900,357.036000,68.476400,360.929000C70.409800,364.474000,70.356100,372.611000,70.087600,376.236000C70.490400,384.292000,67.026300,400.162000,49.947500,399.196000C28.599000,397.987000,6.042030,375.027000,6.042030,359.721000C6.042030,347.476000,13.292100,339.581000,16.917200,337.164000C11.278100,332.599000,0,318.877000,0,300.509000C0,282.141000,11.278100,274.327000,16.917200,272.716000C8.055530,260.632000,-6.525910,232.033000,6.041520,214.309000C18.609000,196.586000,39.205600,187.590000,47.933000,185.308000C40.279700,177.789000,22.959200,159.448000,14.903100,146.236000C4.833050,129.721000,15.305900,112.400000,24.973200,109.581000Z" fill="rgb(252,239,217)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu79" d="M37.460900,280.772000C32.949500,280.772000,26.719500,275.132000,24.168400,272.313000C23.765600,272.313000,21.993300,270.863000,18.126400,265.062000C13.292800,257.812000,17.320800,240.089000,26.182400,237.269000C35.044100,234.449000,41.891700,241.297000,49.142200,248.950000C54.942500,255.073000,52.901700,261.437000,51.156200,263.854000C48.470800,269.493000,41.972300,280.772000,37.460900,280.772000Z" fill="url(#eDktVOTU0pu79-fill)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu80" d="M27.791700,339.178000C18.446700,332.733000,20.407000,320.380000,22.555300,315.010000C27.388500,302.120000,39.876300,305.745000,44.709900,308.968000C49.543500,312.190000,57.196800,319.440000,58.002400,325.482000C58.808000,331.525000,53.974300,344.011000,48.737900,347.637000C43.501500,351.262000,39.473000,347.234000,27.791700,339.178000Z" fill="url(#eDktVOTU0pu80-fill)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu81" d="M29.405300,348.845000C35.850200,354.645000,45.517400,359.855000,49.545500,361.734000C49.545500,364.957000,48.471100,371.402000,47.934000,374.221000C46.054300,381.875000,38.830900,393.475000,24.974500,378.652000C11.118100,363.829000,22.154900,352.604000,29.405300,348.845000Z" fill="url(#eDktVOTU0pu81-fill)" stroke="none" stroke-width="1"/><path id="eDktVOTU0pu82" d="M347.620000,151.875000C349.876000,142.208000,359.302000,142.745000,363.732000,144.222000C367.922000,149.700000,368.969000,179.534000,368.969000,193.766000C357.690000,194.089000,352.722000,187.187000,351.648000,183.696000C349.366000,177.117000,345.365000,161.542000,347.620000,151.875000Z" fill="url(#eDktVOTU0pu82-fill)" stroke="none" stroke-width="1"/></g><script><![CDATA[!function(t,n){"object"==typeof exports&&"undefined"!=typeof module?module.exports=n():"function"==typeof define&&define.amd?define(n):(t="undefined"!=typeof globalThis?globalThis:t||self).__SVGATOR_PLAYER__=n()}(this,(function(){"use strict";function t(n){return(t="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(n)}function n(t,n){if(!(t instanceof n))throw new TypeError("Cannot call a class as a function")}function r(t,n){for(var r=0;r<n.length;r++){var e=n[r];e.enumerable=e.enumerable||!1,e.configurable=!0,"value"in e&&(e.writable=!0),Object.defineProperty(t,e.key,e)}}function e(t,n,e){return n&&r(t.prototype,n),e&&r(t,e),t}function i(t){return(i=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)})(t)}function o(t,n){return(o=Object.setPrototypeOf||function(t,n){return t.__proto__=n,t})(t,n)}function u(t,n){return!n||"object"!=typeof n&&"function"!=typeof n?function(t){if(void 0===t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t}(t):n}function a(t){var n=function(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],(function(){}))),!0}catch(t){return!1}}();return function(){var r,e=i(t);if(n){var o=i(this).constructor;r=Reflect.construct(e,arguments,o)}else r=e.apply(this,arguments);return u(this,r)}}function l(t,n,r){return(l="undefined"!=typeof Reflect&&Reflect.get?Reflect.get:function(t,n,r){var e=function(t,n){for(;!Object.prototype.hasOwnProperty.call(t,n)&&null!==(t=i(t)););return t}(t,n);if(e){var o=Object.getOwnPropertyDescriptor(e,n);return o.get?o.get.call(r):o.value}})(t,n,r||t)}var f=Math.abs;function s(t){return t}function c(t,n,r){var e=1-r;return 3*r*e*(t*e+n*r)+r*r*r}function h(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:0,n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0,r=arguments.length>2&&void 0!==arguments[2]?arguments[2]:1,e=arguments.length>3&&void 0!==arguments[3]?arguments[3]:1;return t<0||t>1||r<0||r>1?null:f(t-n)<=1e-5&&f(r-e)<=1e-5?s:function(i){if(i<=0)return t>0?i*n/t:0===n&&r>0?i*e/r:0;if(i>=1)return r<1?1+(i-1)*(e-1)/(r-1):1===r&&t<1?1+(i-1)*(n-1)/(t-1):1;for(var o,u=0,a=1;u<a;){var l=c(t,r,o=(u+a)/2);if(f(i-l)<1e-5)break;l<i?u=o:a=o}return c(n,e,o)}}function v(){return 1}function y(t){return 1===t?1:0}function d(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:1,n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0;if(1===t){if(0===n)return y;if(1===n)return v}var r=1/t;return function(t){return t>=1?1:(t+=n*r)-t%r}}function g(t){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:2;if(Number.isInteger(t))return t;var r=Math.pow(10,n);return Math.round(t*r)/r}var p=Math.PI/180;function m(t,n,r){return t>=.5?r:n}function b(t,n,r){return 0===t||n===r?n:t*(r-n)+n}function w(t,n,r){var e=b(t,n,r);return e<=0?0:e}function x(t,n,r){return 0===t?n:1===t?r:{x:b(t,n.x,r.x),y:b(t,n.y,r.y)}}function k(t,n,r){var e=function(t,n,r){return Math.round(b(t,n,r))}(t,n,r);return e<=0?0:e>=255?255:e}function A(t,n,r){return 0===t?n:1===t?r:{r:k(t,n.r,r.r),g:k(t,n.g,r.g),b:k(t,n.b,r.b),a:b(t,null==n.a?1:n.a,null==r.a?1:r.a)}}function _(t,n,r){if(0===t)return n;if(1===t)return r;var e=n.length;if(e!==r.length)return m(t,n,r);for(var i=[],o=0;o<e;o++)i.push(A(t,n[o],r[o]));return i}function S(t,n){for(var r=[],e=0;e<t;e++)r.push(n);return r}function O(t,n){if(--n<=0)return t;var r=(t=Object.assign([],t)).length;do{for(var e=0;e<r;e++)t.push(t[e])}while(--n>0);return t}var M,j=function(){function t(r){n(this,t),this.list=r,this.length=r.length}return e(t,[{key:"setAttribute",value:function(t,n){for(var r=this.list,e=0;e<this.length;e++)r[e].setAttribute(t,n)}},{key:"removeAttribute",value:function(t){for(var n=this.list,r=0;r<this.length;r++)n[r].removeAttribute(t)}},{key:"style",value:function(t,n){for(var r=this.list,e=0;e<this.length;e++)r[e].style[t]=n}}]),t}(),F=/-./g,P=function(t,n){return n.toUpperCase()};function B(t){return"function"==typeof t?t:m}function I(t){return t?"function"==typeof t?t:Array.isArray(t)?function(t){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:s;if(!Array.isArray(t))return n;switch(t.length){case 1:return d(t[0])||n;case 2:return d(t[0],t[1])||n;case 4:return h(t[0],t[1],t[2],t[3])||n}return n}(t,null):function(t,n){var r=arguments.length>2&&void 0!==arguments[2]?arguments[2]:s;switch(t){case"linear":return s;case"steps":return d(n.steps||1,n.jump||0)||r;case"bezier":case"cubic-bezier":return h(n.x1||0,n.y1||0,n.x2||0,n.y2||0)||r}return r}(t.type,t.value,null):null}function R(t,n,r){var e=arguments.length>3&&void 0!==arguments[3]&&arguments[3],i=n.length-1;if(t<=n[0].t)return e?[0,0,n[0].v]:n[0].v;if(t>=n[i].t)return e?[i,1,n[i].v]:n[i].v;var o,u=n[0],a=null;for(o=1;o<=i;o++){if(!(t>n[o].t)){a=n[o];break}u=n[o]}return null==a?e?[i,1,n[i].v]:n[i].v:u.t===a.t?e?[o,1,a.v]:a.v:(t=(t-u.t)/(a.t-u.t),u.e&&(t=u.e(t)),e?[o,t,r(t,u.v,a.v)]:r(t,u.v,a.v))}function q(t,n){var r=arguments.length>2&&void 0!==arguments[2]?arguments[2]:null;return t&&t.length?"function"!=typeof n?null:("function"!=typeof r&&(r=null),function(e){var i=R(e,t,n);return null!=i&&r&&(i=r(i)),i}):null}function E(t,n){return t.t-n.t}function T(n,r,e,i,o){var u,a="@"===e[0],l="#"===e[0],f=M[e],s=m;switch(a?(u=e.substr(1),e=u.replace(F,P)):l&&(e=e.substr(1)),t(f)){case"function":if(s=f(i,o,R,I,e,a,r,n),l)return s;break;case"string":s=q(i,B(f));break;case"object":if((s=q(i,B(f.i),f.f))&&"function"==typeof f.u)return f.u(r,s,e,a,n)}return s?function(t,n,r){var e=arguments.length>3&&void 0!==arguments[3]&&arguments[3];if(e)return t instanceof j?function(e){return t.style(n,r(e))}:function(e){return t.style[n]=r(e)};if(Array.isArray(n)){var i=n.length;return function(e){var o=r(e);if(null==o)for(var u=0;u<i;u++)t[u].removeAttribute(n);else for(var a=0;a<i;a++)t[a].setAttribute(n,o)}}return function(e){var i=r(e);null==i?t.removeAttribute(n):t.setAttribute(n,i)}}(r,e,s,a):null}function N(n,r,e,i){if(!i||"object"!==t(i))return null;var o=null,u=null;return Array.isArray(i)?u=function(t){if(!t||!t.length)return null;for(var n=0;n<t.length;n++)t[n].e&&(t[n].e=I(t[n].e));return t.sort(E)}(i):(u=i.keys,o=i.data||null),u?T(n,r,e,u,o):null}function C(t,n,r){if(!r)return null;var e=[];for(var i in r)if(r.hasOwnProperty(i)){var o=N(t,n,i,r[i]);o&&e.push(o)}return e.length?e:null}function z(t,n){if(!n.duration||n.duration<0)return null;var r=function(t,n){if(!n)return null;var r=[];if(Array.isArray(n))for(var e=n.length,i=0;i<e;i++){var o=n[i];if(2===o.length){var u=null;if("string"==typeof o[0])u=t.getElementById(o[0]);else if(Array.isArray(o[0])){u=[];for(var a=0;a<o[0].length;a++)if("string"==typeof o[0][a]){var l=t.getElementById(o[0][a]);l&&u.push(l)}u=u.length?1===u.length?u[0]:new j(u):null}if(u){var f=C(t,u,o[1]);f&&(r=r.concat(f))}}}else for(var s in n)if(n.hasOwnProperty(s)){var c=t.getElementById(s);if(c){var h=C(t,c,n[s]);h&&(r=r.concat(h))}}return r.length?r:null}(t,n.elements);return r?function(t,n){var r=arguments.length>2&&void 0!==arguments[2]?arguments[2]:1/0,e=arguments.length>3&&void 0!==arguments[3]?arguments[3]:1,i=arguments.length>4&&void 0!==arguments[4]&&arguments[4],o=arguments.length>5&&void 0!==arguments[5]?arguments[5]:1,u=t.length,a=e>0?n:0;i&&r%2==0&&(a=n-a);var l=null;return function(f,s){var c=f%n,h=1+(f-c)/n;s*=e,i&&h%2==0&&(s=-s);var v=!1;if(h>r)c=a,v=!0,-1===o&&(c=e>0?0:n);else if(s<0&&(c=n-c),c===l)return!1;l=c;for(var y=0;y<u;y++)t[y](c);return v}}(r,n.duration,n.iterations||1/0,n.direction||1,!!n.alternate,n.fill||1):null}var L=function(){function t(r,e){var i=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};n(this,t),this._id=0,this._running=!1,this._rollingBack=!1,this._animations=r,this.duration=e.duration,this.alternate=e.alternate,this.fill=e.fill,this.iterations=e.iterations,this.direction=i.direction||1,this.speed=i.speed||1,this.fps=i.fps||100,this.offset=i.offset||0,this.rollbackStartOffset=0}return e(t,[{key:"_rollback",value:function(){var t=this,n=1/0,r=null;this.rollbackStartOffset=this.offset,this._rollingBack||(this._rollingBack=!0,this._running=!0);this._id=window.requestAnimationFrame((function e(i){if(t._rollingBack){null==r&&(r=i);var o=i-r,u=t.rollbackStartOffset-o,a=Math.round(u*t.speed);if(a>t.duration&&n!=1/0){var l=!!t.alternate&&a/t.duration%2>1,f=a%t.duration;a=(f+=l?t.duration:0)||t.duration}var s=t.fps?1e3/t.fps:0,c=Math.max(0,a);if(c<n-s){t.offset=c,n=c;for(var h=t._animations,v=h.length,y=0;y<v;y++)h[y](c,t.direction)}var d=!1;if(t.iterations>0&&-1===t.fill){var g=t.iterations*t.duration,p=g==a;a=p?0:a,t.offset=p?0:t.offset,d=a>g}a>0&&t.offset>=a&&!d?t._id=window.requestAnimationFrame(e):t.stop()}}))}},{key:"_start",value:function(){var t=this,n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:0,r=-1/0,e=null,i={},o=function o(u){t._running=!0,null==e&&(e=u);var a=Math.round((u-e+n)*t.speed),l=t.fps?1e3/t.fps:0;if(a>r+l&&!t._rollingBack){t.offset=a,r=a;for(var f=t._animations,s=f.length,c=0,h=0;h<s;h++)i[h]?c++:(i[h]=f[h](a,t.direction),i[h]&&c++);if(c===s)return void t._stop()}t._id=window.requestAnimationFrame(o)};this._id=window.requestAnimationFrame(o)}},{key:"_stop",value:function(){this._id&&window.cancelAnimationFrame(this._id),this._running=!1,this._rollingBack=!1}},{key:"play",value:function(){!this._rollingBack&&this._running||(this._rollingBack=!1,this.rollbackStartOffset>this.duration&&(this.offset=this.rollbackStartOffset-(this.rollbackStartOffset-this.offset)%this.duration,this.rollbackStartOffset=0),this._start(this.offset))}},{key:"stop",value:function(){this._stop(),this.offset=0,this.rollbackStartOffset=0;var t=this.direction,n=this._animations;window.requestAnimationFrame((function(){for(var r=0;r<n.length;r++)n[r](0,t)}))}},{key:"reachedToEnd",value:function(){return this.iterations>0&&this.offset>=this.iterations*this.duration}},{key:"restart",value:function(){this._stop(),this.offset=0,this._start()}},{key:"pause",value:function(){this._stop()}},{key:"reverse",value:function(){this.direction=-this.direction}}],[{key:"build",value:function(n,r){return(n=function(t,n){if(M=n,!t||!t.root||!Array.isArray(t.animations))return null;for(var r=document.getElementsByTagName("svg"),e=!1,i=0;i<r.length;i++)if(r[i].id===t.root&&!r[i].svgatorAnimation){(e=r[i]).svgatorAnimation=!0;break}if(!e)return null;var o=t.animations.map((function(t){return z(e,t)})).filter((function(t){return!!t}));return o.length?{element:e,animations:o,animationSettings:t.animationSettings,options:t.options||void 0}:null}(n,r))?{el:n.element,options:n.options||{},player:new t(n.animations,n.animationSettings,n.options)}:null}}]),t}();!function(){for(var t=0,n=["ms","moz","webkit","o"],r=0;r<n.length&&!window.requestAnimationFrame;++r)window.requestAnimationFrame=window[n[r]+"RequestAnimationFrame"],window.cancelAnimationFrame=window[n[r]+"CancelAnimationFrame"]||window[n[r]+"CancelRequestAnimationFrame"];window.requestAnimationFrame||(window.requestAnimationFrame=function(n){var r=Date.now(),e=Math.max(0,16-(r-t)),i=window.setTimeout((function(){n(r+e)}),e);return t=r+e,i},window.cancelAnimationFrame=window.clearTimeout)}();var D=/\.0+$/g;function Q(t){return Number.isInteger(t)?t+"":t.toFixed(6).replace(D,"")}function U(t){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:" ";return t&&t.length?t.map(Q).join(n):""}function V(t){return t?null==t.a||t.a>=1?"rgb("+t.r+","+t.g+","+t.b+")":"rgba("+t.r+","+t.g+","+t.b+","+t.a+")":"transparent"}var $={f:null,i:function(t,n,r){return 0===t?n:1===t?r:{x:w(t,n.x,r.x),y:w(t,n.y,r.y)}},u:function(t,n){return function(r){var e=n(r);t.setAttribute("rx",Q(e.x)),t.setAttribute("ry",Q(e.y))}}},G={f:null,i:function(t,n,r){return 0===t?n:1===t?r:{width:w(t,n.width,r.width),height:w(t,n.height,r.height)}},u:function(t,n){return function(r){var e=n(r);t.setAttribute("width",Q(e.width)),t.setAttribute("height",Q(e.height))}}},H=Math.sin,Y=Math.cos,Z=Math.acos,J=Math.asin,K=Math.tan,W=Math.atan2,X=Math.PI/180,tt=180/Math.PI,nt=Math.sqrt,rt=function(){function t(){var r=arguments.length>0&&void 0!==arguments[0]?arguments[0]:1,e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0,i=arguments.length>2&&void 0!==arguments[2]?arguments[2]:0,o=arguments.length>3&&void 0!==arguments[3]?arguments[3]:1,u=arguments.length>4&&void 0!==arguments[4]?arguments[4]:0,a=arguments.length>5&&void 0!==arguments[5]?arguments[5]:0;n(this,t),this.m=[r,e,i,o,u,a],this.i=null,this.w=null,this.s=null}return e(t,[{key:"determinant",get:function(){var t=this.m;return t[0]*t[3]-t[1]*t[2]}},{key:"isIdentity",get:function(){if(null===this.i){var t=this.m;this.i=1===t[0]&&0===t[1]&&0===t[2]&&1===t[3]&&0===t[4]&&0===t[5]}return this.i}},{key:"point",value:function(t,n){var r=this.m;return{x:r[0]*t+r[2]*n+r[4],y:r[1]*t+r[3]*n+r[5]}}},{key:"translateSelf",value:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:0,n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0;if(!t&&!n)return this;var r=this.m;return r[4]+=r[0]*t+r[2]*n,r[5]+=r[1]*t+r[3]*n,this.w=this.s=this.i=null,this}},{key:"rotateSelf",value:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:0;if(t%=360){var n=H(t*=X),r=Y(t),e=this.m,i=e[0],o=e[1];e[0]=i*r+e[2]*n,e[1]=o*r+e[3]*n,e[2]=e[2]*r-i*n,e[3]=e[3]*r-o*n,this.w=this.s=this.i=null}return this}},{key:"scaleSelf",value:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:1,n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:1;if(1!==t||1!==n){var r=this.m;r[0]*=t,r[1]*=t,r[2]*=n,r[3]*=n,this.w=this.s=this.i=null}return this}},{key:"skewSelf",value:function(t,n){if(n%=360,(t%=360)||n){var r=this.m,e=r[0],i=r[1],o=r[2],u=r[3];t&&(t=K(t*X),r[2]+=e*t,r[3]+=i*t),n&&(n=K(n*X),r[0]+=o*n,r[1]+=u*n),this.w=this.s=this.i=null}return this}},{key:"resetSelf",value:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:1,n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0,r=arguments.length>2&&void 0!==arguments[2]?arguments[2]:0,e=arguments.length>3&&void 0!==arguments[3]?arguments[3]:1,i=arguments.length>4&&void 0!==arguments[4]?arguments[4]:0,o=arguments.length>5&&void 0!==arguments[5]?arguments[5]:0,u=this.m;return u[0]=t,u[1]=n,u[2]=r,u[3]=e,u[4]=i,u[5]=o,this.w=this.s=this.i=null,this}},{key:"recomposeSelf",value:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:null,n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null,r=arguments.length>2&&void 0!==arguments[2]?arguments[2]:null,e=arguments.length>3&&void 0!==arguments[3]?arguments[3]:null,i=arguments.length>4&&void 0!==arguments[4]?arguments[4]:null;return this.isIdentity||this.resetSelf(),t&&(t.x||t.y)&&this.translateSelf(t.x,t.y),n&&this.rotateSelf(n),r&&(r.x&&this.skewSelf(r.x,0),r.y&&this.skewSelf(0,r.y)),!e||1===e.x&&1===e.y||this.scaleSelf(e.x,e.y),i&&(i.x||i.y)&&this.translateSelf(i.x,i.y),this}},{key:"decompose",value:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:0,n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0,r=this.m,e=r[0]*r[0]+r[1]*r[1],i=[[r[0],r[1]],[r[2],r[3]]],o=nt(e);if(0===o)return{origin:{x:r[4],y:r[5]},translate:{x:t,y:n},scale:{x:0,y:0},skew:{x:0,y:0},rotate:0};i[0][0]/=o,i[0][1]/=o;var u=r[0]*r[3]-r[1]*r[2]<0;u&&(o=-o);var a=i[0][0]*i[1][0]+i[0][1]*i[1][1];i[1][0]-=i[0][0]*a,i[1][1]-=i[0][1]*a;var l=nt(i[1][0]*i[1][0]+i[1][1]*i[1][1]);if(0===l)return{origin:{x:r[4],y:r[5]},translate:{x:t,y:n},scale:{x:o,y:0},skew:{x:0,y:0},rotate:0};i[1][0]/=l,i[1][1]/=l,a/=l;var f=0;return i[1][1]<0?(f=Z(i[1][1])*tt,i[0][1]<0&&(f=360-f)):f=J(i[0][1])*tt,u&&(f=-f),a=W(a,nt(i[0][0]*i[0][0]+i[0][1]*i[0][1]))*tt,u&&(a=-a),{origin:{x:r[4],y:r[5]},translate:{x:t,y:n},scale:{x:o,y:l},skew:{x:a,y:0},rotate:f}}},{key:"toString",value:function(){return null===this.s&&(this.s="matrix("+this.m.map(it).join(" ")+")"),this.s}}]),t}(),et=/\.0+$/;function it(t){return Number.isInteger(t)?t:t.toFixed(14).replace(et,"")}Object.freeze({M:2,L:2,Z:0,H:1,V:1,C:6,Q:4,T:2,S:4,A:7});var ot={},ut=null;function at(n){var r=function(){if(ut)return ut;if("object"!==("undefined"==typeof document?"undefined":t(document)))return{};var n=document.createElementNS("http://www.w3.org/2000/svg","svg");return n.style.position="absolute",n.style.opacity="0.01",n.style.zIndex="-9999",n.style.left="-9999px",n.style.width="1px",n.style.height="1px",ut={svg:n}}().svg;if(!r)return function(t){return null};var e=document.createElementNS(r.namespaceURI,"path");e.setAttributeNS(null,"d",n),e.setAttributeNS(null,"fill","none"),e.setAttributeNS(null,"stroke","none"),r.appendChild(e);var i=e.getTotalLength();return function(t){var n=e.getPointAtLength(i*t);return{x:n.x,y:n.y}}}function lt(t){return ot[t]?ot[t]:ot[t]=at(t)}function ft(t,n,r,e){if(!t||!e)return!1;var i=["M",t.x,t.y];if(n&&r&&(i.push("C"),i.push(n.x),i.push(n.y),i.push(r.x),i.push(r.y)),n?!r:r){var o=n||r;i.push("Q"),i.push(o.x),i.push(o.y)}return n||r||i.push("L"),i.push(e.x),i.push(e.y),i.join(" ")}function st(t,n,r,e){var i=arguments.length>4&&void 0!==arguments[4]?arguments[4]:1,o=ft(t,n,r,e),u=lt(o);try{return u(i)}catch(t){return null}}function ct(t,n,r,e){var i=1-e;return i*i*t+2*i*e*n+e*e*r}function ht(t,n,r,e){return 2*(1-e)*(n-t)+2*e*(r-n)}function vt(t,n,r,e){var i=arguments.length>4&&void 0!==arguments[4]&&arguments[4],o=st(t,n,null,r,e);return o||(o={x:ct(t.x,n.x,r.x,e),y:ct(t.y,n.y,r.y,e)}),i&&(o.a=yt(t,n,r,e)),o}function yt(t,n,r,e){return Math.atan2(ht(t.y,n.y,r.y,e),ht(t.x,n.x,r.x,e))}function dt(t,n,r,e,i){var o=i*i;return i*o*(e-t+3*(n-r))+3*o*(t+r-2*n)+3*i*(n-t)+t}function gt(t,n,r,e,i){var o=1-i;return 3*(o*o*(n-t)+2*o*i*(r-n)+i*i*(e-r))}function pt(t,n,r,e,i){var o=arguments.length>5&&void 0!==arguments[5]&&arguments[5],u=st(t,n,r,e,i);return u||(u={x:dt(t.x,n.x,r.x,e.x,i),y:dt(t.y,n.y,r.y,e.y,i)}),o&&(u.a=mt(t,n,r,e,i)),u}function mt(t,n,r,e,i){return Math.atan2(gt(t.y,n.y,r.y,e.y,i),gt(t.x,n.x,r.x,e.x,i))}function bt(t,n,r){return t+(n-t)*r}function wt(t,n,r){var e=arguments.length>3&&void 0!==arguments[3]&&arguments[3],i={x:bt(t.x,n.x,r),y:bt(t.y,n.y,r)};return e&&(i.a=xt(t,n)),i}function xt(t,n){return Math.atan2(n.y-t.y,n.x-t.x)}function kt(t,n,r){var e=arguments.length>3&&void 0!==arguments[3]&&arguments[3];if(_t(n)){if(St(r))return vt(n,r.start,r,t,e)}else if(_t(r)){if(n.end)return vt(n,n.end,r,t,e)}else{if(n.end)return r.start?pt(n,n.end,r.start,r,t,e):vt(n,n.end,r,t,e);if(r.start)return vt(n,r.start,r,t,e)}return wt(n,r,t,e)}function At(t,n,r){var e=kt(t,n,r,!0);return e.a=function(t){var n=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return n?t+Math.PI:t}(e.a)/p,e}function _t(t){return!t.type||"corner"===t.type}function St(t){return null!=t.start&&!_t(t)}var Ot=new rt;var Mt={f:Q,i:b},jt={f:Q,i:function(t,n,r){var e=b(t,n,r);return e<=0?0:e>=1?1:e}};function Ft(t,n,r,e,i,o,u,a){return n=function(t,n,r){for(var e,i,o,u=t.length-1,a={},l=0;l<=u;l++)(e=t[l]).e&&(e.e=n(e.e)),e.v&&"g"===(i=e.v).t&&i.r&&(o=r.getElementById(i.r))&&(a[i.r]=o.querySelectorAll("stop"));return a}(t,e,a),function(e){var i,o=r(e,t,Pt);return o?"c"===o.t?V(o.v):"g"===o.t?(n[o.r]&&function(t,n){for(var r=0,e=t.length;r<e;r++)t[r].setAttribute("stop-color",V(n[r]))}(n[o.r],o.v),(i=o.r)?"url(#"+i+")":"none"):"none":"none"}}function Pt(t,n,r){if(0===t)return n;if(1===t)return r;if(n&&r){var e=n.t;if(e===r.t)switch(n.t){case"c":return{t:e,v:A(t,n.v,r.v)};case"g":if(n.r===r.r)return{t:e,v:_(t,n.v,r.v),r:n.r}}}return m(t,n,r)}var Bt={fill:Ft,"fill-opacity":jt,stroke:Ft,"stroke-opacity":jt,"stroke-width":Mt,"stroke-dashoffset":{f:Q,i:b},"stroke-dasharray":{f:function(t){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:" ";return t&&t.length>0&&(t=t.map((function(t){return Math.floor(1e4*t)/1e4}))),U(t,n)},i:function(t,n,r){var e,i,o,u=n.length,a=r.length;if(u!==a)if(0===u)n=S(u=a,0);else if(0===a)a=u,r=S(u,0);else{var l=(o=(e=u)*(i=a)/function(t,n){for(var r;n;)r=n,n=t%n,t=r;return t||1}(e,i))<0?-o:o;n=O(n,Math.floor(l/u)),r=O(r,Math.floor(l/a)),u=a=l}for(var f=[],s=0;s<u;s++)f.push(g(w(t,n[s],r[s]),6));return f}},opacity:jt,transform:function(n,r,e,i){if(!(n=function(n,r){if(!n||"object"!==t(n))return null;var e=!1;for(var i in n)n.hasOwnProperty(i)&&(n[i]&&n[i].length?(n[i].forEach((function(t){t.e&&(t.e=r(t.e))})),e=!0):delete n[i]);return e?n:null}(n,i)))return null;var o=function(t,i,o){var u=arguments.length>3&&void 0!==arguments[3]?arguments[3]:null;return n[t]?e(i,n[t],o):r&&r[t]?r[t]:u};return r&&r.a&&n.o?function(t){var r=e(t,n.o,At);return Ot.recomposeSelf(r,o("r",t,b,0)+r.a,o("k",t,x),o("s",t,x),o("t",t,x)).toString()}:function(t){return Ot.recomposeSelf(o("o",t,kt,null),o("r",t,b,0),o("k",t,x),o("s",t,x),o("t",t,x)).toString()}},r:Mt,"#size":G,"#radius":$,_:function(t,n){if(Array.isArray(t))for(var r=0;r<t.length;r++)this[t[r]]=n;else this[t]=n}};return function(t){!function(t,n){if("function"!=typeof n&&null!==n)throw new TypeError("Super expression must either be null or a function");t.prototype=Object.create(n&&n.prototype,{constructor:{value:t,writable:!0,configurable:!0}}),n&&o(t,n)}(u,t);var r=a(u);function u(){return n(this,u),r.apply(this,arguments)}return e(u,null,[{key:"build",value:function(t){var n=l(i(u),"build",this).call(this,t,Bt);n.el,n.options;var r=n.player;return function(t,n,r){t.play()}(r),r}}]),u}(L)}));
+__SVGATOR_PLAYER__.build({"root":"eDktVOTU0pu1","animations":[{"duration":10000,"direction":1,"iterations":0,"fill":1,"alternate":false,"speed":1,"elements":{"eDktVOTU0pu3":{"opacity":[{"t":600,"v":0},{"t":1100,"v":1},{"t":2900,"v":1},{"t":3400,"v":0}]},"eDktVOTU0pu6":{"opacity":[{"t":600,"v":0},{"t":1100,"v":1},{"t":2900,"v":1},{"t":3400,"v":0}]},"eDktVOTU0pu12":{"transform":{"data":{"o":{"x":264.95198059,"y":517.067993165,"type":"corner"},"t":{"x":-264.95198059,"y":-517.067993165}},"keys":{"s":[{"t":2100,"v":{"x":0.5,"y":0.5}},{"t":2500,"v":{"x":1,"y":1}},{"t":2900,"v":{"x":0,"y":0}}]}},"opacity":[{"t":2100,"v":0},{"t":2500,"v":1},{"t":2900,"v":0}]},"eDktVOTU0pu15":{"opacity":[{"t":4000,"v":0},{"t":4800,"v":1},{"t":6900,"v":1},{"t":7500,"v":0}]},"eDktVOTU0pu29":{"opacity":[{"t":4000,"v":0},{"t":4800,"v":1}]},"eDktVOTU0pu61":{"transform":{"data":{"o":{"x":189.93189999999998,"y":233,"type":"corner"},"t":{"x":-93.57249999999999,"y":0}},"keys":{"s":[{"t":5700,"v":{"x":1,"y":0}},{"t":6300,"v":{"x":1,"y":1}},{"t":6900,"v":{"x":1,"y":0}}]}},"opacity":[{"t":5500,"v":0},{"t":6300,"v":0.3}]},"eDktVOTU0pu62":{"opacity":[{"t":7700,"v":0},{"t":8100,"v":1}]},"eDktVOTU0pu72":{"transform":{"data":{"o":{"x":189.93300628499998,"y":81.406196595,"type":"corner"},"t":{"x":-189.93300628499998,"y":-81.406196595}},"keys":{"s":[{"t":8400,"v":{"x":0.5,"y":0.5}},{"t":8800,"v":{"x":1,"y":1}},{"t":9200,"v":{"x":0.5,"y":0.5}}]}},"opacity":[{"t":8100,"v":0},{"t":8400,"v":1},{"t":9200,"v":0}]}}}],"options":{"start":"load","hover":"freeze","click":"freeze","scroll":25,"font":"embed","exportedIds":"unique","svgFormat":"animated","title":"escanear-qr-code"},"animationSettings":{"duration":10000,"direction":1,"iterations":0,"fill":1,"alternate":false,"speed":1}})]]></script></svg>
+</div>
+				<div class="imagens">
+					<img class="img-oferta" src="https://img.wine.com.br/hotsite/institucional/app/2021/atualizacao/img-banner.png" alt="Oferta Cashback">
+					<img class="qr-code" src="https://img.wine.com.br/hotsite/institucional/app/2021/atualizacao/qr-code.png" alt="QR Code">
+					<p>Aponte sua câmera para baixar!</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="modulo1">
+			<div class="conteudo">
+				<p class="title">Fique ligado nas novidades do app!</p>
+				<div class="div-blocos-1">
+					<div class="bloco1">
+						<div class="textos">
+							<h1>Ofertas exclusivas</h1>
+							<p>Receba ofertas e descontos exclusivos através do app!</p>
+						</div>
+						<img src="https://img.wine.com.br/hotsite/institucional/app/2021/atualizacao/img-ofertas.png?v=1" alt="Ilustração Ofertas e Descontos">
+					</div>
+					<div class="bloco2">
+						<div class="textos">
+							<h1>Acompanhe seu pedido</h1>
+							<p>Saiba o status dos seus pedidos e receba notificações de entrega!</p>
+						</div>
+						<img src="https://img.wine.com.br/hotsite/institucional/app/2021/atualizacao/img-acomp.png?v=1" alt="Ilustração Acompanhe seu pedido">
+					</div>
+				</div>
+				<div class="div-blocos-2">
+					<div class="bloco1">
+						<div class="textos">
+							<h1>WineUP: o programa de recompensas da Wine</h1>
+							<p>Você cumpre missões e conquistas que, além de mostrar a sua evolução no mundo do vinho, ainda valem cashback.</p>
+						</div>
+						<img src="https://img.wine.com.br/hotsite/institucional/app/2021/atualizacao/app1.png" alt="Imagem APP Wine Up">
+					</div>
+					<div class="bloco2">
+						<div class="textos">
+							<h1>Desafio Wine: nosso game de perguntas e respostas</h1>
+							<p>Teste seus conhecimentos respondendo perguntas sobre o mundo do vinho e ganhe cashback!</p>
+						</div>
+						<img src="https://img.wine.com.br/hotsite/institucional/app/2021/atualizacao/app2.png" alt="Imagem APP Wine Up">
+					</div>
+					<div class="bloco3">
+						<div class="textos">
+							<h1>Wineverso: o universo do vinho na palma da mão</h1>
+							<p>Portal de conteúdo com informações exclusivas sobre vinhos, podcasts e
+								muito mais!</p>
+						</div>
+						<img src="https://img.wine.com.br/hotsite/institucional/app/2021/atualizacao/app3.png" alt="Imagem APP Wine Up">
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+
+	</section>
+
+	
+<link rel="stylesheet" href="/-resources/estaticos/css/footer.css">
+<link rel="stylesheet" href="/-resources/estaticos/css/conflitos-ep-mkt.css?v=1">
+
+<div class="Footer is-desktop">
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-xs-2">
+        <nav class="MenuList">
+          <a class="MenuList-title MenuList-title--link" href="/">LOJA</a>
+          <ul class="MenuList-list">
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/vinhos/cVINHOS-p1.html">Vinhos</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/outras-bebidas/cOUTRAS_BEBIDAS-p1.html" title="Veja também outras opções na Wine!">Outras bebidas</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="col-xs-2">
+        <nav class="MenuList">
+          <a class="MenuList-title MenuList-title--link" href="/clubewine/">CLUBE WINE</a>
+          <ul class="MenuList-list">
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/clubewine/">Como funciona</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/minha-wine/indique/">Indique Amigos</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/clubewine/essenciais/">WineBox Essenciais</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/clubewine/surpreendentes/">WineBox Surpreendentes</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/clubewine/notaveis/">WineBox Notáveis</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/clubewine/singulares/">WineBox Singulares</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/clubewine/espumantes/">WineBox Espumantes</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/clubewine/refrescantes/">WineBox Refrescantes</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="col-xs-2">
+        <nav class="MenuList">
+          <a class="MenuList-title MenuList-title--link" href="/minha-wine">MINHA CONTA</a>
+          <ul class="MenuList-list">
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/minha-wine#/dados-pessoais">Dados pessoais</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/minha-wine/pedidos">Pedidos</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/minha-wine/cartoes">Cartões</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/minha-wine/enderecos">Endereços</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/minha-wine/clubew" alt="Clube Wine">Clube Wine</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/minha-wine/listas">Favoritos</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/minha-wine/cupons">Cupons</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/minha-wine/presentes">Presentes</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/minha-wine/indique">Indique amigos</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="col-xs-2">
+        <nav class="MenuList">
+          <a class="MenuList-title MenuList-title--link" href="/institucional/">CONHEÇA TAMBÉM</a>
+          <ul class="MenuList-list">
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/institucional/" target="_blank">Institucional</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/trabalheconosco" target="_blank">Trabalhe na Wine</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="https://www.wineeventos.com.br" target="_blank">Wine Eventos</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="https://www.bodegaswine.com.br/" target="_blank">Bodegas</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="https://www.winepedia.com.br" target="_blank">Winepedia</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="https://www.teamwine.com.br" target="_blank">Team Wine</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/loja/produtor/">Lojas Oficiais</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="https://www.wine.com.br/institucional/assessoria-de-imprensa/">Assessoria de Imprensa</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/institucional/wineup/">WineUP</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/institucional/politica-de-privacidade/">Política de Privacidade</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="javascript:void" title="Preferência de Cookies" role="button" onclick="showConsentPreferencesPopup()">Preferência de Cookies</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="javascript:void" title="Exerça Seus Direitos" role="button" onclick="getPrivacyUrlFromWine()">Exerça Seus Direitos</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="col-xs-4">
+        <div class="row Footer__padding">
+          <div class="col-xs-12">
+            <h3 class="Footer__text--big">Alguma dúvida? A gente ajuda você!</h3>
+            <h4 class="Footer__text">Horários de atendimento:</h4>
+            <p class="Footer__text">De segunda a sexta-feira de 09h às 18h. Exceto feriados.</p>
+            <div class="Footer__box">
+              <a class="Footer__text--link" href="https://centraldeajuda.wine.com.br/" target="_blank">CENTRAL DE AJUDA</a>
+            </div>
+          </div>
+          <hr class="Footer__separator">
+          <div class="col-xs-12">
+            <div>
+              <a class="Footer__social-media-icon" href="http://www.facebook.com/wine.vinhos" title="Página da Wine no Facebook" target="target">
+                <img src="https://img.wine.com.br/fenix/image/_big_bang/icons/icon-facebook-pink.svg" alt="Logo do Facebook">
+              </a>
+
+              <a class="Footer__social-media-icon" href="http://twitter.com/wine_vinhos" title="Página da Wine no Twitter" target="target">
+                <img src="https://img.wine.com.br/fenix/image/_big_bang/icons/icon-twitter-pink.svg" alt="Logo do Twitter">
+              </a>
+
+              <a class="Footer__social-media-icon" href="http://www.instagram.com/winevinhos" title="Página da Wine no Instagran" target="target">
+                <img src="https://img.wine.com.br/fenix/image/_big_bang/icons/icon-instagran-pink.svg" alt="Logo do Instagran">
+              </a>
+
+              <a class="Footer__social-media-icon" href="https://www.youtube.com/user/WineVinhos" title="Página da Wine no Youtube" target="target">
+                <img src="https://img.wine.com.br/fenix/image/_big_bang/icons/icon-youtube-pink.svg" alt="Logo do Youtube">
+              </a>
+            </div>
+          </div>
+          <div class="col-xs-12 MenuList-app">
+            <h3>Baixe o app!</h3>
+            <ul class="MenuList-list">
+              <li class="MenuList-listItem">
+                <a class="MenuList-link AppStores" href="https://apps.apple.com/br/app/id1411629873" target="target">
+                  <img src="https://img.wine.com.br/fenix/image/_big_bang/buttons/button-apple-play.png" alt="Botão Apple Store" />
+                </a>
+              </li>
+              <li class="MenuList-listItem">
+                <a class="MenuList-link AppStores" href="https://play.google.com/store/apps/details?id=br.com.wine.app&referrer=utm_source%3Dbanner-topo%26utm_medium%3Dsite%26utm_campaign%3Dinstitucional" target="target">
+                  <img src="https://img.wine.com.br/fenix/image/_big_bang/buttons/button-google-play.png" alt="Botão Google Play" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="Footer__separator --is-full">
+
+  <div class="container Footer__box-bottom">
+    <div class="row">
+      <div class="col-xs-6">
+        <a class="Logo" href="https://www.wine.com.br/">
+          <img class="Logo-image" src="https://img.wine.com.br/fenix/image/_big_bang/logos/logo_w.svg">
+        </a>
+        <div class="Footer__box-text">
+          <h3>W2W E-Commerce de Vinhos S.A</h3>
+          <p>CNPJ: 09.813.204/0002-05</p>
+        </div>
+        <address class="Footer__box-text Footer__box-right">
+          <p>Rua Comendador Alcides Simão Helou, 1478</p>
+          <p>Serra - ES - CEP 29168-090</p>
+        </address>
+      </div>
+      <div class="col-xs-6">
+        <div class="Enjoy">
+          SE BEBER, NÃO DIRIJA. APRECIE COM MODERAÇÃO. A VENDA DE BEBIDAS ALCOÓLICAS É PROIBIDA PARA MENORES DE 18 ANOS.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer is-mobile">
+  <div class="container">
+    <div class="row">
+      <section class="col-xs-12 footer__info">
+        <div class="row">
+          <div class="col-xs-12 footer__info-text">
+            <p class="footer__info-text--big">Alguma dúvida? A gente ajuda você!</p>
+            <p class="footer__info-text--bold footer__info-text--gray">Horários de atendimento:</p>
+            <p class="footer__info-text--gray">De segunda a sexta-feira de 08h às 18h. Exceto feriados.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 footer__info-link">
+          <a href="https://centraldeajuda.wine.com.br" title="Central de Ajuda" target="_blank">CENTRAL DE AJUDA</a>
+        </div>
+        <div class="col-xs-12 footer__info-link">
+          <a href="https://wine.gupy.io" title="Trabalhe na Wine" target="_blank">TRABALHE NA WINE</a>
+        </div>
+        <div class="col-xs-12 footer__info-link">
+          <a href="https://www.wine.com.br/institucional/assessoria-de-imprensa/" title="Assessoria de Imprensa" target="_blank">ASSESSORIA DE IMPRENSA</a>
+        </div>
+        <div class="col-xs-12 footer__info-link">
+          <a href="https://www.wine.com.br/institucional/politica-de-privacidade/" title="Política de privacidade da Wine" target="_blank">POLÍTICA DE PRIVACIDADE</a>
+        </div>
+        <div class="col-xs-12 footer__info-link">
+          <a href="javascript:void" role="button" onclick="showConsentPreferencesPopup()" title="Preferência de Cookies">PREFERÊNCIA DE COOKIES</a>
+        </div>
+        <div class="col-xs-12 footer__info-link">
+          <a href="javascript:void" role="button" onclick="getPrivacyUrlFromWine()" title="Exerça Seus Direitos">EXERÇA SEUS DIREITOS</a>
+        </div>
+      </section>
+
+      <hr class="footer__separator">
+
+      <section class="col-xs-12 footer__social-media">
+
+        <a class="footer__social-media-icon" href="http://www.facebook.com/wine.vinhos" title="Página da Wine no Facebook" target="target">
+          <img src="https://img.wine.com.br/fenix/image/_big_bang/icons/icon-facebook-pink.svg" alt="Logo do Facebook">
+        </a>
+
+        <a class="footer__social-media-icon" href="http://twitter.com/wine_vinhos" title="Página da Wine no Twitter" target="target">
+          <img src="https://img.wine.com.br/fenix/image/_big_bang/icons/icon-twitter-pink.svg" alt="Logo do Twitter">
+        </a>
+
+        <a class="footer__social-media-icon" href="http://www.instagram.com/winevinhos" title="Página da Wine no Instagran" target="target">
+          <img src="https://img.wine.com.br/fenix/image/_big_bang/icons/icon-instagran-pink.svg" alt="Logo do Instagran">
+        </a>
+
+        <a class="footer__social-media-icon" href="https://www.youtube.com/user/WineVinhos" title="Página da Wine no Youtube" target="target">
+          <img src="https://img.wine.com.br/fenix/image/_big_bang/icons/icon-youtube-pink.svg" alt="Logo do Youtube">
+        </a>
+
+      </section>
+
+      <hr class="footer__separator">
+
+      <section class="col-xs-12 footer__apps">
+        <h4 class="footer__apps-text">Baixe o app!</h4>
+        <div class="footer__apps-area">
+          <a class="footer__apps-box" href="https://play.google.com/store/apps/details?id=br.com.wine.app&referrer=utm_source%3Dbanner-topo%26utm_medium%3Dsite%26utm_campaign%3Dinstitucional" title="Wine App na Google Play" target="_blank">
+            <img class="footer__apps-img" src="https://img.wine.com.br/fenix/image/_big_bang/buttons/button-google-play.png" alt="Botão Google Play">
+          </a>
+          <a class="footer__apps-box" href="https://apps.apple.com/br/app/id1411629873" title="Wine App na Apple Store" target="_blank">
+            <img class="footer__apps-img" src="https://img.wine.com.br/fenix/image/_big_bang/buttons/button-apple-play.png" alt="Botão Apple Store">
+          </a>
+        </div>
+      </section>
+
+      <hr class="footer__separator">
+
+      <section class="col-xs-12 footer__address">
+        <h3 class="footer__address-title">
+          <p>W2W E-Commerce de Vinhos S.A</p>
+          <p>CNPJ: 09.813.204/0002-05</p>
+        </h3>
+        <address class="footer__address-text">
+          <p>Rua Comendador Alcides Simão Helou,</p>
+          <p>1478, Serra - ES - CEP 29168-090</p>
+        </address>
+      </section>
+
+      <section class="col-xs-12 footer__alert">
+        <p>
+          SE BEBER, NÃO DIRIJA. APRECIE COM MODERAÇÃO. A VENDA DE BEBIDAS ALCOÓLICAS É PROIBIDA PARA MENORES DE 18 ANOS.
+        </p>
+      </section>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "Wine.com.br",
+        "legalName": "W2W E-Commerce de Vinhos S.A",
+        "url": "https://www.wine.com.br/",
+        "logo": "https://img.wine.com.br/fenix/image/wine-logo.svg",
+        "foundingDate": "2008",
+        "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Manoel Feu Subtil 60",
+        "addressLocality": "Vitória",
+        "addressRegion": "ES",
+        "postalCode": "29050-400",
+        "addressCountry": "BR"
+    },
+    "contactPoint": [
+    {
+        "@type": "ContactPoint",
+        "telephone": "+55-0800-602-9463",
+        "contactType": "customer service",
+        "contactOption": "TollFree",
+        "areaServed": "BR"
+    },
+    {
+        "@type": "ContactPoint",
+        "telephone": "+55-27-3202-2600",
+        "contactType": "Sales"
+    }
+    ],
+    "sameAs": [
+    "https://www.facebook.com/wine.vinhos",
+    "https://twitter.com/wine_vinhos",
+    "https://www.instagram.com/winevinhos/",
+    "https://www.youtube.com/user/WineVinhos"
+    ]
+}
+</script>
+
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "url": "https://www.wine.com.br/",
+        "name": "Wine.com.br",
+        "description": "Busca de vinhos na Wine.com.br",
+        "publisher": "Wine",
+        "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.wine.com.br/search.ep?keyWords={search_term_string}",
+        "query-input": "required name=search_term_string"
+    }
+}
+</script>
+
+<script>
+
+    function gup (sParam) {
+        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : sParameterName[1];
+            }
+        }
+    };
+
+    /* definições globais  */
+
+    var baseUrl = "",
+    customer = null,
+    shoppingCart = null,
+    customerSignature = null,
+    baseUrlResources = "/template-resources/",
+    // Global customerObject
+    customerObject = null,
+    /* Objetos Globais */
+    customerInfo = {
+        customer: null,
+        isCommentAllowed: false
+    },
+    usuarioLogadoEmail,
+    isAutocompleteEnabled = true,
+    isSearchSuggestionEnabled = true,
+    /* Funções globais  */
+    loggedCustomer = null,
+    urlStore = "wine.com.br",
+    production = "wine.com.br",
+    uat = "mysql.winevinhos.info";
+</script>
+
+<script type="text/x-jquery-tmpl" id="modalMsgDialog">
+    <p class="erroModal">
+        <span>
+            ${title}:
+        </span>
+        <span>
+            ${msg}
+        </span>
+    </p>
+</script>
+
+
+<script type="text/javascript" src="/-resources/estaticos/js/mediator.min.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/template-resources/build/obfuscated/modernizr.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/template-resources/build/obfuscated/util.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/template-resources/build/obfuscated/exceptions.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/template-resources/build/obfuscated/analytics.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/template-resources/build/obfuscated/handlebars.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/template-resources/build/obfuscated/novo/scripts.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/template-resources/build/obfuscated/moment.min.js"></script>
+
+
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/cadastroNewsletterAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/engine.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/util.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/template-resources/build/obfuscated/dwrSendData.js?"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/shoppingCartAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/customerAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/clubeAssinaturaAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/template-resources/build/obfuscated/customerService.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/template-resources/build/obfuscated/shoppingCartService.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/template-resources/build/obfuscated/dateformat.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/commentAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/productAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/productSuggestionAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/listaAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/searchSuggestionAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/replyAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/clubeAssinaturaAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/clubePrimeAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/autocompleteSearchResultAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/recommendationAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/faixaCepPrazoEntregaAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/promotionAjaxController.js"></script>
+
+
+<script src="https://www.wine.com.br/template-resources/build/obfuscated/login.js"></script>
+<script src="https://www.wine.com.br/template-resources/build/obfuscated/cart.js"></script>
+
+
+<script src="//selo.siteblindado.com/aw.js"></script>
+
+
+
+<script src="https://www.wine.com.br/template-resources/build/desktop/search.js"></script>
+
+
+<script src="/-resources/estaticos/js/scripts-footer.js"></script>
+
+<script type="text/javascript">
+    var originSearch = null;
+</script>
+
+<script src="https://www.wine.com.br/template-resources/build/commons.bundle.js"></script>
+<script src="https://www.wine.com.br/template-resources/build/header_responsive.bundle.js"></script>
+
+
+<script type="text/javascript">
+    //APPSFLYER
+    !function(t,e,n,s,a,c,i,o,p){t.AppsFlyerSdkObject=a,t.AF=t.AF||function(){
+    (t.AF.q=t.AF.q||[]).push([Date.now()].concat(Array.prototype.slice.call(arguments)))},
+    t.AF.id=t.AF.id||i,t.AF.plugins={},o=e.createElement(n),p=e.getElementsByTagName(n)[0],o.async=1,
+    o.src="https://websdk.appsflyer.com?"+(c.length>0?"st="+c.split(",").sort().join(",")+"&":"")+(i.length>0?"af_id="+i:""),
+    p.parentNode.insertBefore(o,p)}(window,document,"script",0,"AF", "pba,banners",{pba: {webAppId: "183ff3b5-3c41-473d-ad31-aa240af811bb"}, banners: {key: "87f670a0-40a7-4f2a-be22-ed32cfba4215"}});
+    AF('banners', 'showBanner')
+</script>
+
+<script type="text/javascript">
+    //AMPLITUDE
+    (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script")
+    ;r.type="text/javascript"
+    ;r.integrity="sha384-vYYnQ3LPdp/RkQjoKBTGSq0X5F73gXU3G2QopHaIfna0Ct1JRWzwrmEz115NzOta"
+    ;r.crossOrigin="anonymous";r.async=true
+    ;r.src="https://cdn.amplitude.com/libs/amplitude-5.8.0-min.gz.js"
+    ;r.onload=function(){if(!e.amplitude.runQueuedFunctions){
+    console.log("[Amplitude] Error: could not load SDK")}}
+    ;var i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)
+    ;function s(e,t){e.prototype[t]=function(){
+    this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
+    var o=function(){this._q=[];return this}
+    ;var a=["add","append","clearAll","prepend","set","setOnce","unset"]
+    ;for(var u=0;u<a.length;u++){s(o,a[u])}n.Identify=o;var c=function(){this._q=[]
+    ;return this}
+    ;var l=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"]
+    ;for(var p=0;p<l.length;p++){s(c,l[p])}n.Revenue=c
+    ;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId", "enableTracking", "setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","groupIdentify","onInit","logEventWithTimestamp","logEventWithGroups","setSessionId","resetSessionId"]
+    ;function v(e){function t(t){e[t]=function(){
+    e._q.push([t].concat(Array.prototype.slice.call(arguments,0)))}}
+    for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){
+    e=(!e||e.length===0?"$default_instance":e).toLowerCase()
+    ;if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]}
+    ;e.amplitude=n})(window,document);
+
+    amplitude.getInstance().init("0190d0ed4e5dfc4f278380e27eafea90");
+</script>
+
+<script type="text/javascript">
+    //CLEVERTAP
+    var clevertap = { event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[] };
+    clevertap.account.push({"id": "TEST-K95-WK8-R85Z"});
+    clevertap.privacy.push({optOut: false});
+    clevertap.privacy.push({useIP: false});
+    (function () {
+        var wzrk = document.createElement('script');
+        wzrk.type = 'text/javascript';
+        wzrk.async = true;
+        wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wzrk, s);
+    })();
+</script>
+
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationID":"21342671","applicationTime":116,"beacon":"bam-cell.nr-data.net","queueTime":0,"licenseKey":"dca4d478ee","transactionName":"MVBVNkMCD0cDUhYICQgafTFhTAhaEUULFRMFXFgMUA9OVRJBTQgIAlBPTFsQEQ==","agent":"","errorBeacon":"bam-cell.nr-data.net"}</script></body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript" src="./build/js/main.js?v=1"></script>
+
+	
+</body>
+</html>

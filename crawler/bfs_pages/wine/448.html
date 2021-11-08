@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/qva4gql.css">
+<link rel="icon" href="https://www.wine.com.br/wineverso/assets/img/favicon.svg" type="image/svg" />
+<link rel="stylesheet" href="https://www.wine.com.br/wineverso/assets/css/style.min.css">
+</head>
+<body>
+<header id="topo">
+<div class="header-content">
+<div class="header">
+<a href="https://www.wine.com.br/wineverso/"><img class="logo" src="https://www.wine.com.br/wineverso/assets/img/logo-header.png" alt=""></a>
+<div id="menu-header">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="content">
+<ul class="nav-menu">
+<li><a href="https://www.wine.com.br/institucional/" target="_blank">SOBRE NÓS</a></li>
+<li><a href="https://www.wine.com.br/wineverso/ondeouvir">SAIBA ONDE OUVIR</a></li>
+<li><a href="https://www.wine.com.br" target="_blank">VISITE A LOJA ON-LINE</a></li>
+<li><a href="https://www.wine.com.br/clubewine/" target="_blank">DESCUBRA O CLUBE WINE</a></li>
+</ul>
+<div class="follow-us">
+<p>SIGA-NOS</p>
+<hr>
+<ul class="social-menu">
+<li>
+<a href="https://www.facebook.com/winevinhos" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/facebook-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://www.instagram.com/winevinhos/" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/instagram-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://www.youtube.com/user/WineVinhos" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/youtube-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://open.spotify.com/show/2Zp6kP1mQAaFCzJNNOPZr0?si=H2pmYjJ3TgisXZFTjopPaw" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/spotify-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://twitter.com/wine_vinhos" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/twitter-icon.svg" alt=""></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</header>
+<script>
+		$('#menu-header').click(function() {
+			if($('.header-content').attr('class') === 'header-content active') {
+				$('.header-content').removeClass('active')
+				$('.header-content .content').removeClass('active')
+				$('body').css({
+					'overflow': 'auto',
+					'height' : 'auto',
+				})
+				$(this).toggleClass('open');
+			} else {
+				$('.header-content').addClass('active')
+				$('.header-content .content').addClass('active')
+				$('body').css({
+					'overflow': 'hidden',
+					'height' : '100vh',
+				})
+				$(this).toggleClass('open');
+			}
+		})
+
+		$(window).scroll(function() {
+			var distanceBottom = $(window).scrollTop(),
+			heightFooter = 370 + 70,
+			setaUp = $(".back-to-top");
+			if (distanceBottom >= heightFooter) {
+				setaUp.addClass("visible");
+			} else {
+				setaUp.removeClass("visible");
+			}
+		});
+	</script>
+<section id="interna">
+<div class="banner">
+<div class="texto-banner">
+<p class="data">episódio #63 <span>27.08.2021</span></p>
+<p class="title">Por trás dos rótulos da Wine: Marques de Somera e Viña Oria</p>
+<a class="playerPodcast" href="javascript:void(0)"><img src="https://www.wine.com.br/wineverso/assets/img/arrow-cta-play.svg" alt="">PLAY</a>
+
+</div>
+</div>
+</section>
+<section id="conteudo-interna">
+<div class="conteudo">
+<div class="bloco1">
+<div class="texts">
+<p>
+No episódio #63, Vitor Zorzal conversa com Cibele Siqueira e Marina Bufarah, Sommelières da Wine, para descobrir os detalhes da segunda Denominação de Origem mais antiga da Espanha, Cariñena. Entenda quais são as principais características dos rótulos produzidos por lá, as exigências para que os rótulos estejam dentro do padrão de produção, e também quais são as principais uvas desta região. Além de descobrir os segredos das linhas Marques de Somera e Viña Oria, elaboradas nesta Denominação de Origem. </p>
+</div>
+<div class="podcast">
+<div class="platforms">
+<a href="https://castbox.fm/episode/Por-tr%C3%A1s-dos-r%C3%B3tulos-da-Wine%3A-Marques-de-Somera-e-Vi%C3%B1a-Oria-id4349505-id417877627?country=br" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/castbox-podcast.png" alt=""></a>
+<a href="https://open.spotify.com/episode/4foAnlC5dDYzGeJ8YzREk8?si=P1Hevcb9QceTrcQaH-OTeg&dl_branch=1" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/spotify-podcast.png" alt=""></a>
+<a href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjc4ODc3NDU1MS9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTExMzU5NzIyNg?sa=X&ved=0CAYQuIEEahcKEwiIqMX8qNHyAhUAAAAAHQAAAAAQAQ" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/google-podcast.png" alt=""></a>
+<a href="https://podcasts.apple.com/br/podcast/por-tr%C3%A1s-dos-r%C3%B3tulos-da-wine-marques-de-somera-e-vi%C3%B1a-oria/id1501869040?i=1000533265662" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/apple-podcast.png" alt=""></a>
+</div>
+<div class="player">
+<p><iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1113597226&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe></p>
+</div>
+</div>
+</div>
+<div class="bloco2">
+<div class="menu">
+<ul>
+<li id="first-menu" class="active"><img src="https://www.wine.com.br/wineverso/assets/img/bottle-menu-interna.svg" alt="">Ver produtos listados no episódio</li>
+<li id="second-menu" class=""><img src="https://www.wine.com.br/wineverso/assets/img/play-menu-interna.svg" alt="">Ver mais episódios</li>
+</ul>
+</div>
+<div class="cards-sku">
+<div class="sku">
+<a target="_blank" href="https://www.wine.com.br/prod25006.html">
+<div class="card">
+<img src="https://www.wine.com.br/cdn-cgi/image/f=auto,h=176,q=99/assets-images/produtos/25006-01.png" alt="">
+<p class="nome">Marqués de Somera Garnacha 2019</p>
+</div>
+</a>
+<a target="_blank" href="https://www.wine.com.br/prod25006.html" class="cta">VER PRODUTO</a>
+</div>
+<div class="sku">
+<a target="_blank" href="https://www.wine.com.br/prod25007.html">
+<div class="card">
+<img src="https://www.wine.com.br/cdn-cgi/image/f=auto,h=176,q=99/assets-images/produtos/25007-01.png" alt="">
+<p class="nome">Marqués de Somera Tempranillo 2019</p>
+</div>
+</a>
+<a target="_blank" href="https://www.wine.com.br/prod25007.html" class="cta">VER PRODUTO</a>
+</div>
+<div class="sku">
+<a target="_blank" href="https://www.wine.com.br/prod25011.html">
+<div class="card">
+<img src="https://www.wine.com.br/cdn-cgi/image/f=auto,h=176,q=99/assets-images/produtos/25011-01.png" alt="">
+<p class="nome">Viña Oria D.O.P. Cariñena Garnacha 2019</p>
+</div>
+</a>
+<a target="_blank" href="https://www.wine.com.br/prod25011.html" class="cta">VER PRODUTO</a>
+</div>
+<div class="sku">
+<a target="_blank" href="https://www.wine.com.br/prod26324.html">
+<div class="card">
+<img src="https://www.wine.com.br/cdn-cgi/image/f=auto,h=176,q=99/assets-images/produtos/26324-01.png" alt="">
+<p class="nome">Viña Oria D.O.P. Cariñena Macabeo 2020</p>
+</div>
+</a>
+<a target="_blank" href="https://www.wine.com.br/prod26324.html" class="cta">VER PRODUTO</a>
+</div>
+<div class="sku">
+<a target="_blank" href="https://www.wine.com.br/prod26393.html">
+<div class="card">
+<img src="https://www.wine.com.br/cdn-cgi/image/f=auto,h=176,q=99/assets-images/produtos/26393-01.png" alt="">
+<p class="nome">Viña Oria D.O.P. Cariñena Garnacha Tempranillo Rosé 2020</p>
+</div>
+</a>
+<a target="_blank" href="https://www.wine.com.br/prod26393.html" class="cta">VER PRODUTO</a>
+</div>
+</div>
+<div class="ultimos-podcasts" style="display: none">
+<a href="https://www.wine.com.br/wineverso/podcast/por-tras-vik">
+<div class="podcast">
+<img src="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/11/618000c50ab54.jpg" alt="">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #72 01.11.2021 </p>
+<p class="titulo">
+Por trás dos rótulos da Wine: VIK </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/inovacao-enologia-brasileira">
+<div class="podcast">
+<img src="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/10/6173386ca1c22.jpg" alt="">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #71 22.10.2021 </p>
+<p class="titulo">
+Técnicas inovadoras na enologia brasileira </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/feira-de-vinhos">
+<div class="podcast">
+<img src="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/10/616e08e17682f.jpg" alt="">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #70 15.10.2021 </p>
+<p class="titulo">
+A maior feira de vinhos da América Latina </p>
+</div>
+</div>
+</div>
+</a>
+<div class="ver-mais">
+<a href="https://www.wine.com.br/wineverso/">
+<img src="https://www.wine.com.br/wineverso/assets/img/ver-mais.png" alt="">
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<div class="footer-content">
+<ul class="nav-footer">
+<li><a href="https://www.wine.com.br/institucional/">SOBRE NÓS</a></li>
+<li><a href="https://www.wine.com.br/wineverso/ondeouvir">SAIBA ONDE OUVIR</a></li>
+<li><a href="https://www.wine.com.br" target="_blank">VISITE A LOJA ON-LINE</a></li>
+<li><a href="https://www.wine.com.br/clubewine/" target="_blank">DESCUBRA O CLUBE WINE</a></li>
+</ul>
+<div class="follow-us-footer">
+<p>SIGA-NOS</p>
+<hr>
+<ul class="social-menu-footer">
+<li>
+<a href="https://www.facebook.com/winevinhos" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/facebook-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://www.instagram.com/winevinhos/" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/instagram-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://www.youtube.com/user/WineVinhos" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/youtube-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://open.spotify.com/show/2Zp6kP1mQAaFCzJNNOPZr0?si=H2pmYjJ3TgisXZFTjopPaw" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/spotify-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://twitter.com/wine_vinhos" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/twitter-icon.svg" alt=""></a>
+</li>
+</ul>
+</div>
+</div>
+<hr>
+<div class="footer-defesa">
+<img class="logo-footer" src="https://www.wine.com.br/wineverso/assets/img/logo-podcast-footer.svg" alt="">
+<div class="infos">
+<div class="cnpj">
+<span>W2W E-Commerce de Vinhos S.A</span>
+<span class="cnpj">CNPJ: 09.813.204/0002-05</span>
+</div>
+<div class="line-divisor"></div>
+<div class="endereco">
+<span>Rua Comendador Alcides Simão Helou, 1478</span>
+<span>Serra - ES - CEP 29168-090</span>
+</div>
+</div>
+<p class="defesa">
+SE BEBER, NÃO DIRIJA. APRECIE COM MODERAÇÃO. A VENDA DE BEBIDAS ALCOÓLICAS É PROIBIDA PARA MENORES DE 18 ANOS.
+</p>
+</div>
+</footer>
+<div class="back-to-top">
+<img src="https://www.wine.com.br/wineverso/assets/img/back-to-top.png" alt="">
+</div>
+<script src="https://w.soundcloud.com/player/api.js"></script>
+<script>
+	$('.back-to-top img').click(function(){
+			$('html, body').animate({
+				scrollTop: $('#topo').offset().top
+			}, 300);
+		})
+</script>
+<script>
+	$(document).ready(function() {
+		// SoundCloud
+		iframeSC = document.querySelector('iframe');
+		iframeSC.setAttribute('id', 'sc-widget');
+
+		// (function(){
+		// 	var widgetIframe = document.getElementById('sc-widget'), widget  = SC.Widget(widgetIframe);
+		// 	widget.bind(SC.Widget.Events.READY, function() {
+		// 		$('.playerPodcast').click(function() {
+		// 			widget.toggle();
+		// 		})
+		// 	});
+		// }());
+		var widgetIframe = document.getElementById('sc-widget'), widget  = SC.Widget(widgetIframe);
+		$('.playerPodcast').click(function() {
+			widget.toggle();
+		})
+		// SoundCloud
+
+		// Banner _header
+		var mobile = window.matchMedia("(max-width: 767px)").matches;
+		bannerHeader = document.querySelector('#interna');
+		var bgHeaderMobile = "url(https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/08/6128f045c81ec.jpg)";
+		var bgHeaderDesktop = "url(https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/08/6128f043ae192.jpg)";
+		if(mobile) {
+			bannerHeader.style.backgroundImage = bgHeaderMobile;
+		} else {
+			console.log(bgHeaderDesktop)
+			bannerHeader.style.backgroundImage = bgHeaderDesktop;
+		}
+		// Banner _header
+
+		// Toggle Produtos/Podcasts
+		$('.bloco2 .menu li').click(function() {
+			$('.bloco2 .menu li').removeClass('active')
+			$(this).addClass('active')
+			if($(this).attr('id') === 'first-menu'){
+				$('.ultimos-podcasts').hide()
+				$('.cards-sku').show()
+			} else {
+				$('.cards-sku').hide()
+				$('.ultimos-podcasts').show()
+			}
+		})
+		// Toggle Produtos/Podcasts
+
+	})
+</script>

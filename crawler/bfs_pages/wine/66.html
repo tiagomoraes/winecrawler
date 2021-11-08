@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/qva4gql.css">
+<link rel="icon" href="https://www.wine.com.br/wineverso/assets/img/favicon.svg" type="image/svg" />
+<link rel="stylesheet" href="https://www.wine.com.br/wineverso/assets/css/style.min.css">
+</head>
+<body>
+<header id="topo">
+<div class="header-content">
+<div class="header">
+<a href="https://www.wine.com.br/wineverso/"><img class="logo" src="https://www.wine.com.br/wineverso/assets/img/logo-header.png" alt=""></a>
+<div id="menu-header">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="content">
+<ul class="nav-menu">
+<li><a href="https://www.wine.com.br/institucional/" target="_blank">SOBRE NÓS</a></li>
+<li><a href="https://www.wine.com.br/wineverso/ondeouvir">SAIBA ONDE OUVIR</a></li>
+<li><a href="https://www.wine.com.br" target="_blank">VISITE A LOJA ON-LINE</a></li>
+<li><a href="https://www.wine.com.br/clubewine/" target="_blank">DESCUBRA O CLUBE WINE</a></li>
+</ul>
+<div class="follow-us">
+<p>SIGA-NOS</p>
+<hr>
+<ul class="social-menu">
+<li>
+<a href="https://www.facebook.com/winevinhos" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/facebook-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://www.instagram.com/winevinhos/" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/instagram-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://www.youtube.com/user/WineVinhos" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/youtube-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://open.spotify.com/show/2Zp6kP1mQAaFCzJNNOPZr0?si=H2pmYjJ3TgisXZFTjopPaw" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/spotify-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://twitter.com/wine_vinhos" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/twitter-icon.svg" alt=""></a>
+</li>
+</ul>
+</div>
+ </div>
+</div>
+</header>
+<script>
+		$('#menu-header').click(function() {
+			if($('.header-content').attr('class') === 'header-content active') {
+				$('.header-content').removeClass('active')
+				$('.header-content .content').removeClass('active')
+				$('body').css({
+					'overflow': 'auto',
+					'height' : 'auto',
+				})
+				$(this).toggleClass('open');
+			} else {
+				$('.header-content').addClass('active')
+				$('.header-content .content').addClass('active')
+				$('body').css({
+					'overflow': 'hidden',
+					'height' : '100vh',
+				})
+				$(this).toggleClass('open');
+			}
+		})
+
+		$(window).scroll(function() {
+			var distanceBottom = $(window).scrollTop(),
+			heightFooter = 370 + 70,
+			setaUp = $(".back-to-top");
+			if (distanceBottom >= heightFooter) {
+				setaUp.addClass("visible");
+			} else {
+				setaUp.removeClass("visible");
+			}
+		});
+	</script>
+<section id="hotsite">
+<div class="banner">
+<div class="conteudo">
+<div class="left">
+<img class="logo" src="https://www.wine.com.br/wineverso/assets/img/logo-podcast.svg" alt="">
+<p class="podcast-title"><b>O POD</b>CAST <span>DA WINE</span></p>
+<p class="podcast-subtitle">Chegou o Podcast da Wine, o seu novo guia pelo incrível mundo do vinho. A cada semana, um novo episódio para você desbravar este universo com a gente.</p>
+<div class="platforms">
+<a href="https://castbox.fm/channel/Wineverso-id2668986?country=br" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/castbox-podcast.png" alt=""></a>
+<a href="https://open.spotify.com/show/2Zp6kP1mQAaFCzJNNOPZr0" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/spotify-podcast.png" alt=""></a>
+<a href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjc4ODc3NDU1MS9zb3VuZHMucnNz" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/google-podcast.png" alt=""></a>
+<a href="https://podcasts.apple.com/br/podcast/wineverso/id1501869040" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/apple-podcast.png" alt=""></a>
+</div>
+</div>
+<div class="right">
+<img src="https://www.wine.com.br/wineverso/assets//img/phone-home.png" alt="">
+</div>
+</div>
+</div>
+<div class="conteudo">
+<div id="podcasts" class="categorias">
+<p>CATEGORIAS</p>
+<ul class="categoria">
+<li>
+<a href="https://www.wine.com.br/wineverso/categoria/clube-wine#podcasts" class="clube-wine">
+Clube Wine </a>
+</li>
+<li>
+<a href="https://www.wine.com.br/wineverso/categoria/curiosidades#podcasts" class="curiosidades">
+Curiosidades </a>
+</li>
+<li>
+<a href="https://www.wine.com.br/wineverso/categoria/dicas-do-sommelier#podcasts" class="dicas-do-sommelier">
+Dicas do Sommelier </a>
+</li>
+<li>
+<a href="https://www.wine.com.br/wineverso/categoria/enoturismo#podcasts" class="enoturismo">
+Enoturismo </a>
+</li>
+<li>
+<a href="https://www.wine.com.br/wineverso/categoria/glossario#podcasts" class="glossario">
+Glossário </a>
+</li>
+<li>
+<a href="https://www.wine.com.br/wineverso/categoria/harmonizacoes#podcasts" class="harmonizacoes">
+Harmonizações </a>
+</li>
+</ul>
+</div>
+<div class="podcasts">
+<a href="https://www.wine.com.br/wineverso/podcast/por-tras-vik">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/11/618000c50ab54.jpg" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #72 </p>
+<p class="titulo">
+Por trás dos rótulos da Wine: VIK </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/inovacao-enologia-brasileira">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/10/6173386ca1c22.jpg" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #71 </p>
+<p class="titulo">
+Técnicas inovadoras na enologia brasileira </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/feira-de-vinhos">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/10/616e08e17682f.jpg" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #70 </p>
+<p class="titulo">
+A maior feira de vinhos da América Latina </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/historias-com-vinho">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/10/616768983cdb9.jpg" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #69 </p>
+<p class="titulo">
+Histórias inusitadas com vinho </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/os-jogos-do-mundo-do-vinho">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/10/615b023532759.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #68 </p>
+<p class="titulo">
+Os jogos do mundo do vinho </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/uvas-brancas">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/09/614deab2c34f1.jpg" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #67 </p>
+<p class="titulo">
+Série uvas: Outras uvas brancas </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/garnacha-e-tempranillo">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/09/6149d95699199.jpg" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #66 </p>
+<p class="titulo">
+Série uvas - Garnacha e Tempranillo </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/harmonizacoes-descomplicadas">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/09/613ba5621856c.jpg" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #65 </p>
+<p class="titulo">
+Descomplicando as harmonizações </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/sauvignon-blanc-e-chardonnay">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/09/61323d192341a.jpg" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #64 </p>
+<p class="titulo">
+Série uvas - Sauvignon Blanc e Chardonnay </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/marques-de-somera-e-vina-oria">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/08/6128f044a57dd.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #63 </p>
+<p class="titulo">
+Por trás dos rótulos da Wine: Marques de Somera e Viña Oria </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/cabernet-sauvignon">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/08/611fbfff35aae.jpg" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #62 </p>
+<p class="titulo">
+Série uvas - Cabernet Sauvignon </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/contos-de-vinhos">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/08/611672f2bebb8.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #61 </p>
+<p class="titulo">
+Contos de vinhos </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/marques-de-casa-concha">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/08/610d42165acfd.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #60 </p>
+<p class="titulo">
+O segredo dos vinhos Marques de Casa Concha </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/receitas-com-vinho">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/07/6103fc388b789.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #59 </p>
+<p class="titulo">
+Receitas com vinho </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/impetu">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/07/60f1a0e017960.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #57 </p>
+<p class="titulo">
+Por trás dos rótulos da Wine: Ímpetu </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/como-harmonizar-vinho-e-churrasco">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/07/60e84bd684eb2.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="harmonizacoes">Harmonizações</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #56 </p>
+<p class="titulo">
+Vinho e churrasco: como harmonizar? </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/carreira-do-sommelier">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/07/60df213dbf299.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #55 </p>
+<p class="titulo">
+A carreira do sommelier </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/vinho-vegano-organico-biodinamico">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/06/60d5e2b89d154.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #54 </p>
+<p class="titulo">
+O que são vinhos veganos, orgânicos e biodinâmicos? </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/festa-junina-com-vinho-tem-sim-senhor">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/06/60cc9ee8c526a.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="harmonizacoes">Harmonizações</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #53 </p>
+<p class="titulo">
+Festa junina com vinho? Tem sim, senhor! </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/os-vinhos-ideais-para-o-seu-dia-dos-namorados">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/06/60c35a44ad035.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #52 </p>
+<p class="titulo">
+Os vinhos ideais para o seu Dia dos Namorados </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/conheca-vin-de-france">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/06/60ba27f2a9069.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+-
+<span class="enoturismo">Enoturismo</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #51 </p>
+<p class="titulo">
+Conheça a Denominação Vin de France </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/harmonizacao-vinho-hamburguer">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/05/60b0f11478224.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="harmonizacoes">Harmonizações</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #50 </p>
+<p class="titulo">
+Dá para harmonizar vinho com hambúrguer? </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/acucar-do-vinho">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/05/60a7ad34ea733.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #49 </p>
+<p class="titulo">
+Brut x extra dry e demi-sec: o açúcar dos vinhos </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/o-preco-do-vinho">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/05/609ebb17bb926.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #48 </p>
+<p class="titulo">
+O preço do vinho </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/producao-vinhos-uvas-brasil">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/05/609546e678e6e.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #47 </p>
+<p class="titulo">
+As uvas e a produção de vinhos de Norte a Sul do Brasil </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/como-degustar-vinho">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/04/6079e27f69727.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #46 </p>
+<p class="titulo">
+Como degustar vinhos? </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/winehunter-nova-jornada">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/04/607480f40edff.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="clube-wine">Clube Wine</span>
+-
+<span class="glossario">Glossário</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #45 </p>
+<p class="titulo">
+Winehunter: uma nova jornada </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/vinho-e-chocolate">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/04/606726d328c96.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="harmonizacoes">Harmonizações</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #44 </p>
+<p class="titulo">
+Vinho e chocolate </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/tecnologia-e-vinho">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/03/605dfffee1203.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="clube-wine">Clube Wine</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #43 </p>
+<p class="titulo">
+A tecnologia e o mundo do vinho </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/tanino-alcool-acidez">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/03/6054aba9b2987.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #42 </p>
+<p class="titulo">
+Entendendo os taninos, a acidez e o álcool dos vinhos </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/montado-finca-constancia">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/03/604be76ab68ac.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #41 </p>
+<p class="titulo">
+Por trás dos rótulos da Wine: Montado </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/amizade-e-vinho">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/03/604676014a36e.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="clube-wine">Clube Wine</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #40 </p>
+<p class="titulo">
+Amizade e vinho </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/vinho-verde">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/02/6038faf2241c8.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #39 </p>
+<p class="titulo">
+O que é Vinho Verde? </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/pontuacao-dos-vinhos">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/02/602fc02db4ac1.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #38 </p>
+<p class="titulo">
+Como funciona a pontuação dos vinhos? </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/como-ler-rotulos">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/02/60267befc6b71.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #37 </p>
+<p class="titulo">
+Como ler rótulo de vinho? </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/carnaval-em-casa">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/02/601d7cce1a00d.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #36 </p>
+<p class="titulo">
+Carnaval em casa? </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/existem-regras-para-consumir-vinho">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/01/601412879c5ac.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+ <span class="curiosidades">Curiosidades</span>
+-
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #35 </p>
+<p class="titulo">
+Existem regras para consumir vinho? </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-34">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/01/600b0ef752cfc.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #34 </p>
+<p class="titulo">
+Por trás dos rótulos da Wine: Alfacinha e Castelo dos Mouros </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-33">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/01/6005ed28b0844.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+-
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #33 </p>
+<p class="titulo">
+Vinhos e signos: existe um match perfeito? </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-32">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/01/5ff351ae898a1.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #32 </p>
+<p class="titulo">
+História do vinho: Como surgiu nossa bebida favorita? </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-31">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/12/5fe1108db2960.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+-
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #31 </p>
+<p class="titulo">
+Por trás dos rótulos da Wine: Mosaiko e Calyptra Vivendo </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-30">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/12/5fca5f4524ffe.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="clube-wine">Clube Wine</span>
+-
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #30 </p>
+<p class="titulo">
+Clubes de assinatura: o que a Wine e a Tag Livros têm em comum? </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-29">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/11/5fb7b8d58d86b.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+-
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #29 </p>
+<p class="titulo">
+Por trás dos rótulos da Wine: Root:1 </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-28">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/11/5fa5977d0fad8.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #28 </p>
+<p class="titulo">
+Espumantes e suas curiosidades </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-27">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/10/5f8084279a20b.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+-
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #27 </p>
+<p class="titulo">
+Entendendo a profissão Sommelier </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-26">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/09/5f6de54f39e5b.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #26 </p>
+<p class="titulo">
+Por trás dos rótulos da Wine: Pérez Cruz Single Vineyards e Limited Edition </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-25">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/09/5f5b7958b4d6a.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+-
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #25 </p>
+<p class="titulo">
+Entendendo as Denominações de Origem Controladas </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-24">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/08/5f49094e99525.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+-
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #24 </p>
+<p class="titulo">
+Por trás dos rótulos da Wine: It's Wine O'Clock e Paine </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-23">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/08/5f3688e856f97.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+-
+<span class="harmonizacoes">Harmonizações</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #23 </p>
+<p class="titulo">
+Vinhos e harmonizações de inverno </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-22">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/07/5f242a1ca3fdd.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+-
+<span class="enoturismo">Enoturismo</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #22 </p>
+<p class="titulo">
+Viagens, vinícolas e muitas histórias </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-21">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/07/5f1ae4dc76242.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #21 </p>
+<p class="titulo">
+Por trás dos rótulos da Wine: Altivo e Urmeneta </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-20">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/07/5f11a092790d7.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="clube-wine">Clube Wine</span>
+-
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #20 </p>
+<p class="titulo">
+Clube de vinhos customizável </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-19">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/07/5f08681275e3f.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+-
+<span class="harmonizacoes">Harmonizações</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #19 </p>
+<p class="titulo">
+Vinho e Pizza: Como harmonizar? </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-18">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/07/5eff25d0d2286.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="clube-wine">Clube Wine</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #18 </p>
+<p class="titulo">
+Vinho e festa em tempos de Pandemia </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-17">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/06/5ef5ec36b6dcb.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+-
+<span class="enoturismo">Enoturismo</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #17 </p>
+<p class="titulo">
+Os vinhos californianos </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-16">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/06/5eecb0b9caa40.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+-
+ <span class="harmonizacoes">Harmonizações</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #16 </p>
+<p class="titulo">
+Drinks com vinho: Entendendo melhor </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-15">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/06/5ee774259bd3b.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+-
+<span class="enoturismo">Enoturismo</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #15 </p>
+<p class="titulo">
+Vinho do Porto e suas curiosidades </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-14">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/06/5ee0f301c152e.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+-
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #14 </p>
+<p class="titulo">
+Os vinhos rosés e seus mistérios </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-13">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/05/5ed10dfcd3728.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="clube-wine">Clube Wine</span>
+-
+<span class="curiosidades">Curiosidades</span>
+-
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+-
+<span class="harmonizacoes">Harmonizações</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #13 </p>
+<p class="titulo">
+A evolução do paladar </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-12">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/05/5ed0152c95a2f.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #12 </p>
+<p class="titulo">
+Vinho & Prosa com Marcelo Mansfield </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-11">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/05/5ed016a6addc0.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+-
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+-
+<span class="glossario">Glossário</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #11 </p>
+<p class="titulo">
+Vinho Reserva x Reservado, qual a diferença? </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-10">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/05/5ed01fda7c9a3.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+-
+<span class="harmonizacoes">Harmonizações</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #10 </p>
+<p class="titulo">
+Harmonizando queijos e vinhos </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-9">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/05/5ed01e8eed111.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+-
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #9 </p>
+<p class="titulo">
+Como guardar e cuidar dos seus rótulos? </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-8">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/05/5ed01db28ae6f.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+-
+<span class="glossario">Glossário</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #8 </p>
+<p class="titulo">
+Conheça mais sobre os vinhos veganos </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-7">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/05/5ed01c398d52d.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+-
+<span class="glossario">Glossário</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #7 </p>
+<p class="titulo">
+Vinho seco x suave </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-6">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/05/5ed01ae4c661a.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #6 </p>
+<p class="titulo">
+Vinho, esporte e saúde </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-5">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/05/5ed018f673ac4.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+-
+<span class="glossario">Glossário</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #5 </p>
+<p class="titulo">
+Os benefícios do vinho </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-4">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/05/5ed0171170085.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+-
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #4 </p>
+<p class="titulo">
+Descubra o vinho em lata </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-3">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/05/5ed014cb87590.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="harmonizacoes">Harmonizações</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #3 </p>
+<p class="titulo">
+Harmonizações inusitadas </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-2">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/05/5ecfc5eddb257.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #2 </p>
+<p class="titulo">
+As mulheres da Wine falam sobre as mulheres do mundo do vinho </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-1">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/05/5ed010358e79d.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="clube-wine">Clube Wine</span>
+-
+<span class="curiosidades">Curiosidades</span>
+-
+<span class="enoturismo">Enoturismo</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #1 </p>
+<p class="titulo">
+Viajando pelo mundo com os 10 anos de Clube Wine </p>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="ver-mais">
+<img src="img/ver-mais.png" alt="">
+</div>
+</div>
+</section>
+<footer>
+<div class="footer-content">
+<ul class="nav-footer">
+<li><a href="https://www.wine.com.br/institucional/">SOBRE NÓS</a></li>
+<li><a href="https://www.wine.com.br/wineverso/ondeouvir">SAIBA ONDE OUVIR</a></li>
+<li><a href="https://www.wine.com.br" target="_blank">VISITE A LOJA ON-LINE</a></li>
+<li><a href="https://www.wine.com.br/clubewine/" target="_blank">DESCUBRA O CLUBE WINE</a></li>
+</ul>
+<div class="follow-us-footer">
+<p>SIGA-NOS</p>
+<hr>
+<ul class="social-menu-footer">
+<li>
+<a href="https://www.facebook.com/winevinhos" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/facebook-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://www.instagram.com/winevinhos/" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/instagram-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://www.youtube.com/user/WineVinhos" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/youtube-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://open.spotify.com/show/2Zp6kP1mQAaFCzJNNOPZr0?si=H2pmYjJ3TgisXZFTjopPaw" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/spotify-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://twitter.com/wine_vinhos" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/twitter-icon.svg" alt=""></a>
+</li>
+</ul>
+</div>
+</div>
+<hr>
+<div class="footer-defesa">
+<img class="logo-footer" src="https://www.wine.com.br/wineverso/assets/img/logo-podcast-footer.svg" alt="">
+<div class="infos">
+<div class="cnpj">
+<span>W2W E-Commerce de Vinhos S.A</span>
+<span class="cnpj">CNPJ: 09.813.204/0002-05</span>
+</div>
+<div class="line-divisor"></div>
+<div class="endereco">
+<span>Rua Comendador Alcides Simão Helou, 1478</span>
+<span>Serra - ES - CEP 29168-090</span>
+</div>
+</div>
+<p class="defesa">
+SE BEBER, NÃO DIRIJA. APRECIE COM MODERAÇÃO. A VENDA DE BEBIDAS ALCOÓLICAS É PROIBIDA PARA MENORES DE 18 ANOS.
+</p>
+</div>
+</footer>
+<div class="back-to-top">
+<img src="https://www.wine.com.br/wineverso/assets/img/back-to-top.png" alt="">
+</div>
+<script src="https://w.soundcloud.com/player/api.js"></script>
+<script>
+	$('.back-to-top img').click(function(){
+			$('html, body').animate({
+				scrollTop: $('#topo').offset().top
+			}, 300);
+		})
+</script><script src="https://www.wine.com.br/wineverso/assets/js/lazy.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+	$(function() {
+		$("img.lazy").lazyload();
+	});
+</script>
+<script>
+	var url = 	window.location.href;
+	var categoria = url.substr(0, url.indexOf('#podcasts')); 
+	var arrayOfUrl = categoria.split('/categoria/')
+	menuActive = arrayOfUrl[1];
+	$('.categoria li a.'+menuActive).addClass('active')
+
+	$('.categoria li a').click(function() {
+		$('.categoria li a').removeClass('active')
+		$(this).addClass('active')
+		if($('.categoria li a.'+menuActive)) {
+			$('.categoria li a').removeClass('active')
+			window.location.href = 'https://winecast.herokuapp.com/#podcasts'
+		}
+	})
+</script>

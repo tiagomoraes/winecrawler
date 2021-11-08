@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-15ce119d71e6a8d24c8",applicationID:"798446581"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1211.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <link as="script" href="https://www.divinho.com.br/blog/wp-content/themes/divinho/assets/js/blog.js" rel="preload">
+    <link as="script" href="https://www.divinho.com.br/blog/wp-content/themes/divinho/assets/js/runtime.js" rel="preload">
+
+
+    
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">//<![CDATA[
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+//]]>
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v14.4.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Como Abrir um Espumante em 5 Passos - DiVinho</title>
+	<meta name="description" content="Nós, da DiVinho, preparamos esse artigo ensinando como abrir uma garrafa de espumante em cinco passos!" />
+	<meta name="robots" content="index, follow" />
+	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="https://www.divinho.com.br/blog/como-abrir-espumante/" />
+	<meta property="og:locale" content="pt_BR" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Como Abrir um Espumante em 5 Passos - DiVinho" />
+	<meta property="og:description" content="Nós, da DiVinho, preparamos esse artigo ensinando como abrir uma garrafa de espumante em cinco passos!" />
+	<meta property="og:url" content="https://www.divinho.com.br/blog/como-abrir-espumante/" />
+	<meta property="og:site_name" content="Blog da DiVinho" />
+	<meta property="article:published_time" content="2021-10-29T22:37:13+00:00" />
+	<meta property="article:modified_time" content="2021-10-29T22:37:14+00:00" />
+	<meta property="og:image" content="https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Como-Abrir-Espumante.jpg" />
+	<meta property="og:image:width" content="1000" />
+	<meta property="og:image:height" content="601" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.divinho.com.br/blog/#website","url":"https://www.divinho.com.br/blog/","name":"Blog da DiVinho","description":"A sua loja para comprar vinhos!","potentialAction":[{"@type":"SearchAction","target":"https://www.divinho.com.br/blog/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"pt-BR"},{"@type":"ImageObject","@id":"https://www.divinho.com.br/blog/como-abrir-espumante/#primaryimage","inLanguage":"pt-BR","url":"https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Como-Abrir-Espumante.jpg","width":1000,"height":601,"caption":"Como Abrir Espumante"},{"@type":"WebPage","@id":"https://www.divinho.com.br/blog/como-abrir-espumante/#webpage","url":"https://www.divinho.com.br/blog/como-abrir-espumante/","name":"Como Abrir um Espumante em 5 Passos - DiVinho","isPartOf":{"@id":"https://www.divinho.com.br/blog/#website"},"primaryImageOfPage":{"@id":"https://www.divinho.com.br/blog/como-abrir-espumante/#primaryimage"},"datePublished":"2021-10-29T22:37:13+00:00","dateModified":"2021-10-29T22:37:14+00:00","author":{"@id":"https://www.divinho.com.br/blog/#/schema/person/7ca080a2755bf139d629d4b62940a4f4"},"description":"N\u00f3s, da DiVinho, preparamos esse artigo ensinando como abrir uma garrafa de espumante em cinco passos!","breadcrumb":{"@id":"https://www.divinho.com.br/blog/como-abrir-espumante/#breadcrumb"},"inLanguage":"pt-BR","potentialAction":[{"@type":"ReadAction","target":["https://www.divinho.com.br/blog/como-abrir-espumante/"]}]},{"@type":"BreadcrumbList","@id":"https://www.divinho.com.br/blog/como-abrir-espumante/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://www.divinho.com.br/blog/","url":"https://www.divinho.com.br/blog/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"https://www.divinho.com.br/blog/como-abrir-espumante/","url":"https://www.divinho.com.br/blog/como-abrir-espumante/","name":"Como Abrir um Espumante em 5 Passos"}}]},{"@type":["Person"],"@id":"https://www.divinho.com.br/blog/#/schema/person/7ca080a2755bf139d629d4b62940a4f4","name":"DiVinho","image":{"@type":"ImageObject","@id":"https://www.divinho.com.br/blog/#personlogo","inLanguage":"pt-BR","url":"https://secure.gravatar.com/avatar/78df5a8c1cfe8c16e0bdb989d6764c5d?s=96&d=mm&r=g","caption":"DiVinho"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Feed para Blog da DiVinho &raquo;" href="https://www.divinho.com.br/blog/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Blog da DiVinho &raquo;" href="https://www.divinho.com.br/blog/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Blog da DiVinho &raquo; Como Abrir um Espumante em 5 Passos" href="https://www.divinho.com.br/blog/como-abrir-espumante/feed/" />
+		<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.divinho.com.br\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.2"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.divinho.com.br/blog/wp-includes/css/dist/block-library/style.min.css?ver=5.4.2' media='all' />
+<link rel='stylesheet' id='wp-bootstrap-blocks-styles-css'  href='https://www.divinho.com.br/blog/wp-content/plugins/wp-bootstrap-blocks/build/style-index.css?ver=2.3.0' media='all' />
+<link rel='stylesheet' id='blog-css-css'  href='https://www.divinho.com.br/blog/wp-content/themes/divinho/assets/css/blog.css?ver=1.1' media='all' />
+<link rel='stylesheet' id='main-css-css'  href='https://www.divinho.com.br/blog/wp-content/themes/divinho/assets/css/main.css?ver=1.1' media='all' />
+<link rel='stylesheet' id='divinho-css-css'  href='https://www.divinho.com.br/blog/wp-content/themes/divinho/style.css?ver=1.1' media='all' />
+<link rel='stylesheet' id='addtoany-css'  href='https://www.divinho.com.br/blog/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.15' media='all' />
+<script src='https://www.divinho.com.br/blog/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script src='https://www.divinho.com.br/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script src='https://www.divinho.com.br/blog/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.1'></script>
+<script src='https://www.divinho.com.br/blog/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1.11.4'></script>
+<link rel='https://api.w.org/' href='https://www.divinho.com.br/blog/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.divinho.com.br/blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.divinho.com.br/blog/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.4.2" />
+<link rel='shortlink' href='https://www.divinho.com.br/blog/?p=25214' />
+<link rel="alternate" type="application/json+oembed" href="https://www.divinho.com.br/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.divinho.com.br%2Fblog%2Fcomo-abrir-espumante%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.divinho.com.br/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.divinho.com.br%2Fblog%2Fcomo-abrir-espumante%2F&#038;format=xml" />
+
+<script data-cfasync="false">
+window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};a2a_localize = {
+	Share: "Compartilhar",
+	Save: "Salvar",
+	Subscribe: "Inscrever",
+	Email: "Email",
+	Bookmark: "Favoritos",
+	ShowAll: "Mostrar tudo",
+	ShowLess: "Mostrar menos",
+	FindServices: "Procurar serviço(s)",
+	FindAnyServiceToAddTo: "Encontrar rapidamente qualquer serviço para",
+	PoweredBy: "Serviço fornecido por",
+	ShareViaEmail: "Share via email",
+	SubscribeViaEmail: "Subscribe via email",
+	BookmarkInYourBrowser: "Adicionar aos favoritos",
+	BookmarkInstructions: "Press Ctrl+D or \u2318+D to bookmark this page",
+	AddToYourFavorites: "Adicionar a favoritos",
+	SendFromWebOrProgram: "Send from any email address or email program",
+	EmailProgram: "Email program",
+	More: "More&#8230;",
+	ThanksForSharing: "Thanks for sharing!",
+	ThanksForFollowing: "Thanks for following!"
+};
+
+a2a_config.icon_color="transparent,#c9406d";
+(function(d,s,a,b){a=d.createElement(s);b=d.getElementsByTagName(s)[0];a.async=1;a.src="https://static.addtoany.com/menu/page.js";b.parentNode.insertBefore(a,b);})(document,"script");
+</script>
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">//<![CDATA[
+	var dataLayer_content = {"pagePostType":"post","pagePostType2":"single-post","pageCategory":["curiosidades-e-dicas","para-iniciantes"],"pagePostAuthor":"DiVinho"};
+	dataLayer.push( dataLayer_content );//]]>
+</script>
+<script data-cfasync="false">//<![CDATA[
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MM4CCWJ');//]]>
+</script>
+<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style>
+		.recentes {
+			display: flex;
+			padding: 10px;
+			border-bottom: 1px solid rgb(243, 243, 243);
+			padding-left: 2px;
+			font-family: "Roboto Condensed";
+		}
+		
+		.recentes .imagem{
+			width: 115px;
+			height: 80px;
+		}
+		.recentes .imagem img{
+			position: relative;
+			width: 100%;
+			height: auto;
+		}
+		.recentes-header{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		.recentes-titulo{
+			color: black;
+			font-weight: bold;
+			font-size: 12px;
+			text-transform: capitalize;
+			
+		}
+		.recentes-titulo a {
+			color: black;
+		}
+		.recentes-data{
+			color: rgb(198, 198, 198);
+			font-size: 12px;
+			width: max-content;
+		}	
+		.recentes  a {
+			padding: 0 8px 0 0;
+			font-family: "Roboto Condensed";
+			font-weight: 700;
+		}	
+
+		.recentes:last-child{
+			border-bottom: none;
+		}
+
+        @media screen and (max-width:1200px) {
+			.recentes {
+				flex-direction: column;
+				text-align: center
+			}
+		}
+
+		@media screen and (max-width:540px) {
+			.recentes {
+				text-align: center
+			}
+			.recentes .imagem , .recentes-data {
+				margin: 0 auto;
+			}
+		}
+		
+		
+
+		</style><link rel="icon" href="https://www.divinho.com.br/blog/wp-content/uploads/2020/07/favicon-1.ico" sizes="32x32" />
+<link rel="icon" href="https://www.divinho.com.br/blog/wp-content/uploads/2020/07/favicon-1.ico" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.divinho.com.br/blog/wp-content/uploads/2020/07/favicon-1.ico" />
+<meta name="msapplication-TileImage" content="https://www.divinho.com.br/blog/wp-content/uploads/2020/07/favicon-1.ico" />
+		<style id="wp-custom-css">
+			.wp-block-embed {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+.wp-embed-aspect-16-9::before {
+    padding-top: 56.25%;
+}
+.wp-block-embed::before {
+    display: block;
+    content: "";
+}
+.wp-block-embed .embed-responsive-item, .wp-block-embed embed, .wp-block-embed iframe, .wp-block-embed object, .wp-block-embed video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}		</style>
+		
+
+   
+</head>
+
+<body class="post-template-default single single-post postid-25214 single-format-standard">
+
+    <a class="skip-link screen-reader-text" href="#site-content">Pular para o conteúdo</a>
+
+
+
+
+    <header class="site-header site-header--blog">
+            <a class="col-12 text-center d-md-none pt-5 " href="https://www.divinho.com.br/blog">
+                <img class="d-md-inline" src="https://www.divinho.com.br/blog/wp-content/themes/divinho/assets/images/logo-blog.png" alt="" srcset="">
+            </a>
+        <nav class="navbar navbar--superior navbar-expand-sm navbar-light bg-white p-0">
+            <div class="container">
+                <div class="row align-items-center w-100 no-gutters">
+                    <div class="col-md-4 d-none d-sm-block">
+                        <a class="navbar-brand" href="https://www.divinho.com.br/">
+                            <img src="https://www.divinho.com.br/blog/wp-content/themes/divinho/assets/images/logo-small.png"
+                                alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="collapse navbar-collapse" id="navbarSearch">
+                            <div class="navbar p-0 w-100">
+                            <ul id="menu-menu-superior" class="nav navbar-nav"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-23912" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23912 nav-item"><a title="Cadastre-se" href="//www.divinho.com.br/customer/account/create/" class="nav-link">Cadastre-se</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-23913" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23913 nav-item"><a title="Entrar" href="//www.divinho.com.br/customer/account/login/" class="nav-link">Entrar</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-23914" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23914 nav-item"><a title="Wishlist" href="//www.divinho.com.br/wishlist/" class="nav-link"><i class="far fa-heart" aria-hidden="true"></i> <span class="sr-only">Wishlist</span></a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-23915" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23915 nav-item"><a title="Carrinho" href="//www.divinho.com.br/checkout/cart/" class="nav-link"><i class="fas fa-shopping-cart" aria-hidden="true"></i> <span class="sr-only">Carrinho</span></a></li>
+</ul>                                <form class="form-inline search-form mr-auto" action="https://www.divinho.com.br//catalogsearch/result/" method="get"><input type="search" class="form-control"
+                                        placeholder="Buscar no site..." aria-label="Search" name="q"> <button
+                                        class="btn btn-outline-light border-0" type="submit"><i
+                                            class="fa fa-search"></i></button></form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar--main navbar-expand-md navbar-light bg-white p-md-4">
+            <div class="d-md-none d-flex align-items-center">
+            <a class="navbar-brand" href="https://www.divinho.com.br/">
+                <img src="https://www.divinho.com.br/blog/wp-content/themes/divinho/assets/images/logo-small.png"
+                    alt="" srcset="">
+            </a>
+            <div class="ml-auto d-flex align-items-center w-100">
+                <a class="navbar-toggler" type="button" href="https://www.divinho.com.br//catalogsearch/result/"  style="border: none;">
+                    <i class="fa fa-search"></i>
+                </a>
+                <a class="navbar-toggler" type="button" href="https://www.divinho.com.br//account/login/"  style="border: none;">
+                    <i class="fa fa-user"></i>
+                </a>
+                <a class="navbar-toggler" type="button" href="https://www.divinho.com.br//checkout/cart/"  style="border: none;">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" style="border: none;">
+                    <span class="sr-only">Alternar Nav</span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            </div>
+            <div class="container">
+                <div class="row align-items-center w-100 no-gutters">
+                    <div class="col-md-4">
+                        <a class="navbar-brand" href="https://www.divinho.com.br/blog">
+                            <img class="d-none d-md-inline"
+                                src="https://www.divinho.com.br/blog/wp-content/themes/divinho/assets/images/logo-blog.png"
+                                alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="collapse navbar-collapse" id="navbarCollapse">
+                            <div class="navbar navbar--inferior">
+                                <ul id="menu-menu-principal" class="nav navbar-nav"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16183" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16183 nav-item"><a title="Home" href="/blog" class="nav-link">Home</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16182" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-16182 nav-item"><a title="Categorias" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-16182">Categorias</a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-16182" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16173" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent active menu-item-16173 nav-item"><a title="Curiosidades e Dicas" href="https://www.divinho.com.br/blog/category/curiosidades-e-dicas/" class="dropdown-item">Curiosidades e Dicas</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16174" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16174 nav-item"><a title="Entrevistas" href="https://www.divinho.com.br/blog/category/entrevistas/" class="dropdown-item">Entrevistas</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16175" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent active menu-item-16175 nav-item"><a title="Para iniciantes" href="https://www.divinho.com.br/blog/category/para-iniciantes/" class="dropdown-item">Para iniciantes</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16176" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16176 nav-item"><a title="Uvas" href="https://www.divinho.com.br/blog/category/uvas/" class="dropdown-item">Uvas</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16177" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16177 nav-item"><a title="Harmonizações" href="https://www.divinho.com.br/blog/category/harmonizacoes/" class="dropdown-item">Harmonizações</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16178" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16178 nav-item"><a title="Recomendações" href="https://www.divinho.com.br/blog/category/recomendacoes/" class="dropdown-item">Recomendações</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16181" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16181 nav-item"><a title="Serviço do vinho" href="https://www.divinho.com.br/blog/category/servico-do-vinho/" class="dropdown-item">Serviço do vinho</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16184" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16184 nav-item"><a title="Loja" href="//www.divinho.com.br" class="nav-link">Loja</a></li>
+</ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <div class="site-content" id="site-content">
+
+
+    <section class="breadcrumbs"><div class="container"><div class="row"><nav class="breadcrumb" aria-label="breadcrumb"><span><span><a href="https://www.divinho.com.br/blog/">Home</a> _ <span class="breadcrumb_last" aria-current="page">Como Abrir um Espumante em 5 Passos</span></span></span></nav></div></div></section>
+<section class="container">
+    <div class="row justify-content-between">
+        <div class="col-md-9">
+                        <div class="single-post__title position-relative">
+                <img src="https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Como-Abrir-Espumante.jpg" alt="" class="img-fluid w-100">
+                <div class="d-flex flex-column justify-content-end single-post-title">
+                    <h3>29 de outubro, 2021</h3>
+                    <h1 class="text-uppercase font-weight-bold title"> Como Abrir um Espumante em 5 Passos </h1>
+                </div>
+            </div>
+            <div class="post-content"><div class="addtoany_share_save_container addtoany_content addtoany_content_top"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://www.divinho.com.br/blog/como-abrir-espumante/" data-a2a-title="Como Abrir um Espumante em 5 Passos"><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.divinho.com.br%2Fblog%2Fcomo-abrir-espumante%2F&amp;linkname=Como%20Abrir%20um%20Espumante%20em%205%20Passos" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fwww.divinho.com.br%2Fblog%2Fcomo-abrir-espumante%2F&amp;linkname=Como%20Abrir%20um%20Espumante%20em%205%20Passos" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fwww.divinho.com.br%2Fblog%2Fcomo-abrir-espumante%2F&amp;linkname=Como%20Abrir%20um%20Espumante%20em%205%20Passos" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_whatsapp" href="https://www.addtoany.com/add_to/whatsapp?linkurl=https%3A%2F%2Fwww.divinho.com.br%2Fblog%2Fcomo-abrir-espumante%2F&amp;linkname=Como%20Abrir%20um%20Espumante%20em%205%20Passos" title="WhatsApp" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"></a></div></div>
+<p>Abrir uma garrafa de vinho nem sempre é uma tarefa fácil, quando se fala de espumantes, então, o desafio é maior ainda!</p>
+
+
+
+<p>Pensando nisso, nós, da DiVinho, preparamos esse artigo ensinando como abrir uma garrafa de espumante em cinco passos!&nbsp;</p>
+
+
+
+<h2>Como Abrir Uma Garrafa de Espumante</h2>
+
+
+
+<p>Para abrir uma garrafa de espumante, seja um Champagne, <a href="https://www.divinho.com.br/blog/qual-diferenca-entre-cava-e-champagne/">Cava</a> ou <a href="https://www.divinho.com.br/blog/qual-diferenca-entre-prosecco-e-champagne/">Prosecco</a>, os passos são os mesmos.</p>
+
+
+
+<p>Antes de qualquer coisa, verifique se a garrafa de espumante está na <a href="https://www.divinho.com.br/blog/temperatura-de-servico-vinho/">temperatura adequada</a>, entre 6°C e 8°C, pois além de a bebida estar nas suas condições ideais de consumo, também é mais seguro, já que o líquido gelado diminui a pressão interna da garrafa.</p>
+
+
+
+<p>A melhor maneira de gelar o espumante é em um balde com água e gelo, onde a garrafa também deve ser mantida após a abertura.</p>
+
+
+
+<p>Para evitar acidentes, o ideal é secar completamente a garrafa de espumante antes de abri-la, diminuindo as chances dela escorregar da mão e cair no chão.</p>
+
+
+
+<h3>1 &#8211; Retire o Lacre de Alumínio</h3>
+
+
+
+<p>O primeiro passo para abrir uma garrafa de espumante é a retirada do lacre de alumínio que envolve o gargalo.</p>
+
+
+
+<p>Retire o lacre totalmente, sem mexer muito ou rodar a garrafa, para evitar mudanças bruscas na pressão da garrafa.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-full"><img src="https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Retire-o-Lacre-de-Alumínio.jpg" alt="Retire o Lacre de Alumínio" class="wp-image-25218" srcset="https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Retire-o-Lacre-de-Alumínio.jpg 1000w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Retire-o-Lacre-de-Alumínio-300x200.jpg 300w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Retire-o-Lacre-de-Alumínio-768x511.jpg 768w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Retire-o-Lacre-de-Alumínio-364x243.jpg 364w" sizes="(max-width: 1000px) 100vw, 1000px" /><figcaption>Retire o Lacre de Alumínio</figcaption></figure></div>
+
+
+
+<h3>2 &#8211; Retire a Gaiola de Arame</h3>
+
+
+
+<p>Após retirar o lacre de alumínio, é o momento de retirar a gaiola de arame que protege a rolha.</p>
+
+
+
+<p>Um dos lados da gaiola conta com uma ponta mais comprida para facilitar a retirada.&nbsp;</p>
+
+
+
+<p>Gire a ponta da gaiola no sentido horário, por cinco ou seis vezes, de forma que a gaiola se solte, para poder retirá-la.&nbsp;</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-full"><img src="https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Retire-a-Gaiola-de-Arame.jpg" alt="Retire a Gaiola de Arame" class="wp-image-25219" srcset="https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Retire-a-Gaiola-de-Arame.jpg 1000w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Retire-a-Gaiola-de-Arame-300x200.jpg 300w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Retire-a-Gaiola-de-Arame-768x511.jpg 768w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Retire-a-Gaiola-de-Arame-364x243.jpg 364w" sizes="(max-width: 1000px) 100vw, 1000px" /><figcaption>Retire a Gaiola de Arame</figcaption></figure></div>
+
+
+
+<h3>3 &#8211; Posicione a Garrafa a 45 graus</h3>
+
+
+
+<p>Antes de iniciar a retirada da rolha, é importantíssimo posicionar a garrafa de forma segura, evitando que esteja apontada para pessoas ou objetos.</p>
+
+
+
+<p>A recomendação é inclinar a garrafa a 45 graus, com o gargalo apontado para cima.</p>
+
+
+
+<h3>4 &#8211; Retire a Rolha</h3>
+
+
+
+<p>Para dar mais firmeza no próximo passo, cubra a garrafa com um pano de prato ou toalha.</p>
+
+
+
+<p>Com uma das mãos, segure a garrafa pela base ou pelo corpo, posicionando o dedo polegar da outra mão na rolha firmemente.</p>
+
+
+
+<p>Sem deixar de segurar a rolha, gire a garrafa levemente, até sentir que a rolha está se soltando.</p>
+
+
+
+<p>Você vai ouvir um leve estalo, indicando que a rolha se soltou completamente.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-full"><img src="https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Retire-a-Rolha.jpg" alt="Retire a Rolha" class="wp-image-25220" srcset="https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Retire-a-Rolha.jpg 1000w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Retire-a-Rolha-300x200.jpg 300w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Retire-a-Rolha-768x511.jpg 768w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Retire-a-Rolha-364x243.jpg 364w" sizes="(max-width: 1000px) 100vw, 1000px" /><figcaption>Retire a Rolha</figcaption></figure></div>
+
+
+
+<h3>5 &#8211; Abra a Garrafa e Sirva o Espumante</h3>
+
+
+
+<p>Ainda com a garrafa a 45 graus, retire a rolha e sirva o espumante imediatamente, em <a href="https://www.divinho.com.br/blog/como-escolher-taca-de-vinho/">taças</a> do tipo flute, longas e estreitas.</p>
+
+
+
+<p>Para evitar que a taça transborde, sirva um dedo de espumante, espere a espuma baixar e complete a taça até dois terços.</p>
+
+
+
+<p>Pronto, agora é só apreciar sua taça de espumante!&nbsp;</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img src="https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Sirva-o-Espumante.jpg" alt="" class="wp-image-25221" srcset="https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Sirva-o-Espumante.jpg 1000w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Sirva-o-Espumante-300x200.jpg 300w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Sirva-o-Espumante-768x511.jpg 768w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Sirva-o-Espumante-364x243.jpg 364w" sizes="(max-width: 1000px) 100vw, 1000px" /><figcaption>Sirva o Espumante</figcaption></figure></div>
+
+
+
+<h2>E o Abridor de Espumantes?&nbsp;</h2>
+
+
+
+<p>Hoje, existe no mercado um acessório chamado abridor de espumantes, que auxilia no processo da retirada da rolha da garrafa.</p>
+
+
+
+<p>Geralmente confeccionados em aço inox, existem modelos de abridor de espumante do tipo hélice ou saca-rolhas</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-full"><img src="https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Abridor-de-Espumantes-Tipo-Hélice.jpg" alt="Abridor de Espumantes Tipo Hélice" class="wp-image-25222" srcset="https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Abridor-de-Espumantes-Tipo-Hélice.jpg 800w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Abridor-de-Espumantes-Tipo-Hélice-300x300.jpg 300w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Abridor-de-Espumantes-Tipo-Hélice-150x150.jpg 150w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Abridor-de-Espumantes-Tipo-Hélice-768x768.jpg 768w" sizes="(max-width: 800px) 100vw, 800px" /><figcaption>Abridor de Espumantes Tipo Hélice</figcaption></figure></div>
+
+
+
+<p>Todos têm o mesmo objetivo, retirar a rolha mais facilmente, evitando acidentes e desperdício da bebida.</p>
+
+
+
+<p>Conforme ensinamos acima, não é preciso um abridor de espumantes para retirar a rolha da garrafa, mas é um acessório que pode ser interessante, principalmente se você consome espumantes com frequência.&nbsp;</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img src="https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Abridor-de-Espumantes-Tipo-Saca-rolhas.jpg" alt="" class="wp-image-25223" srcset="https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Abridor-de-Espumantes-Tipo-Saca-rolhas.jpg 800w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Abridor-de-Espumantes-Tipo-Saca-rolhas-300x300.jpg 300w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Abridor-de-Espumantes-Tipo-Saca-rolhas-150x150.jpg 150w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Abridor-de-Espumantes-Tipo-Saca-rolhas-768x768.jpg 768w" sizes="(max-width: 800px) 100vw, 800px" /><figcaption>Abridor de Espumantes Tipo Saca-rolhas</figcaption></figure></div>
+
+
+
+<hr class="wp-block-separator"/>
+
+
+
+<p>E você, gostou dessas dicas de como abrir um espumante?</p>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://www.divinho.com.br/blog/como-abrir-espumante/" data-a2a-title="Como Abrir um Espumante em 5 Passos"><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.divinho.com.br%2Fblog%2Fcomo-abrir-espumante%2F&amp;linkname=Como%20Abrir%20um%20Espumante%20em%205%20Passos" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fwww.divinho.com.br%2Fblog%2Fcomo-abrir-espumante%2F&amp;linkname=Como%20Abrir%20um%20Espumante%20em%205%20Passos" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fwww.divinho.com.br%2Fblog%2Fcomo-abrir-espumante%2F&amp;linkname=Como%20Abrir%20um%20Espumante%20em%205%20Passos" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_whatsapp" href="https://www.addtoany.com/add_to/whatsapp?linkurl=https%3A%2F%2Fwww.divinho.com.br%2Fblog%2Fcomo-abrir-espumante%2F&amp;linkname=Como%20Abrir%20um%20Espumante%20em%205%20Passos" title="WhatsApp" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"></a></div></div></div>
+            <section class="tags-categorias py-3">
+
+                                <!-- <p class="share"><span class="mr-2">COMPARTILHE:</span> <span><a class="fab fa-instagram"
+                            href="#"></a><a class="fab fa-facebook-f" href="#"></a><a class="fab fa-whatsapp"
+                            href="#"></a></span></p> -->
+                <p class="m-0">Escrito por: <strong>DiVinho</strong></p>
+            </section>
+                    </div>
+        <div class="col-md-3">
+            <div id="sidebar-primary" class="sidebar-blog">
+    <div class="widget widget_search divinho-widget_search divinho-widget "><div class="widget-content"><h5 class="subheading heading-size-3 divinho-widget-title ">pesquisar</h5><form role="search"  method="get" class="search-form__blog" action="https://www.divinho.com.br/blog/">
+	<label for="search-form-1">
+		<span class="screen-reader-text">Pesquisar por:</span>
+		<input type="search" id="search-form-1" class="search-field form-control" placeholder="Pesquisar &hellip;" value="" name="s" />
+	</label>
+	<input type="submit" class="search-submit" value="Pesquisar" />
+</form>
+</div></div><div class="widget widget_archive divinho-widget_archive divinho-widget "><div class="widget-content"><h5 class="subheading heading-size-3 divinho-widget-title ">Arquivos</h5>		<ul>
+				<li><a href='https://www.divinho.com.br/blog/2021/10/'>outubro 2021</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2021/09/'>setembro 2021</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2021/08/'>agosto 2021</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2021/07/'>julho 2021</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2021/06/'>junho 2021</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2021/05/'>maio 2021</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2021/04/'>abril 2021</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2021/03/'>março 2021</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2021/02/'>fevereiro 2021</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2021/01/'>janeiro 2021</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2020/12/'>dezembro 2020</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2020/11/'>novembro 2020</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2020/10/'>outubro 2020</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2020/09/'>setembro 2020</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2020/08/'>agosto 2020</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2020/07/'>julho 2020</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2020/06/'>junho 2020</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2020/05/'>maio 2020</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2020/04/'>abril 2020</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2020/03/'>março 2020</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2020/02/'>fevereiro 2020</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2020/01/'>janeiro 2020</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2019/12/'>dezembro 2019</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2019/11/'>novembro 2019</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2019/10/'>outubro 2019</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2019/09/'>setembro 2019</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2019/07/'>julho 2019</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2019/05/'>maio 2019</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2019/04/'>abril 2019</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2019/03/'>março 2019</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2018/07/'>julho 2018</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2018/06/'>junho 2018</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2018/05/'>maio 2018</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2018/04/'>abril 2018</a></li>
+	<li><a href='https://www.divinho.com.br/blog/2018/02/'>fevereiro 2018</a></li>
+		</ul>
+			</div></div><div class="widget widget_categories divinho-widget_categories divinho-widget "><div class="widget-content"><h5 class="subheading heading-size-3 divinho-widget-title ">Categorias</h5>		<ul>
+				<li class="cat-item cat-item-12"><a href="https://www.divinho.com.br/blog/category/curiosidades-e-dicas/">Curiosidades e Dicas</a> <span class="post_count">104</span>
+</li>
+	<li class="cat-item cat-item-16"><a href="https://www.divinho.com.br/blog/category/entrevistas/">Entrevistas</a> <span class="post_count">55</span>
+</li>
+	<li class="cat-item cat-item-14"><a href="https://www.divinho.com.br/blog/category/harmonizacoes/">Harmonizações</a> <span class="post_count">64</span>
+</li>
+	<li class="cat-item cat-item-13"><a href="https://www.divinho.com.br/blog/category/para-iniciantes/">Para iniciantes</a> <span class="post_count">53</span>
+</li>
+	<li class="cat-item cat-item-22"><a href="https://www.divinho.com.br/blog/category/receitas/">Receitas</a> <span class="post_count">31</span>
+</li>
+	<li class="cat-item cat-item-15"><a href="https://www.divinho.com.br/blog/category/recomendacoes/">Recomendações</a> <span class="post_count">80</span>
+</li>
+	<li class="cat-item cat-item-10"><a href="https://www.divinho.com.br/blog/category/servico-do-vinho/">Serviço do vinho</a> <span class="post_count">4</span>
+</li>
+	<li class="cat-item cat-item-11"><a href="https://www.divinho.com.br/blog/category/uvas/">Uvas</a> <span class="post_count">20</span>
+</li>
+		</ul>
+			</div></div><div class="widget widget_divinho_recent_entries divinho-widget_divinho_recent_entries divinho-widget "><div class="widget-content"><h5 class="subheading heading-size-3 divinho-widget-title ">POSTS RECENTES</h5><ul>
+        
+				<li class="recentes"><a href="https://www.divinho.com.br/blog/como-abrir-espumante/"  aria-current="page">
+					<div class="imagem">
+						
+							<img width="1000" height="601" src="https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Como-Abrir-Espumante.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Como Abrir Espumante" srcset="https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Como-Abrir-Espumante.jpg 1000w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Como-Abrir-Espumante-300x180.jpg 300w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Como-Abrir-Espumante-768x462.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" />						
+					</div></a>
+					<div class="recentes-header">
+						                        <div class="recentes-data">29 de outubro, 2021</div>
+                        						<div class="recentes-titulo"><a href="https://www.divinho.com.br/blog/como-abrir-espumante/">Como Abrir um Espumante em 5 Passos</a></div>
+					</div>
+				</li>
+
+        
+				<li class="recentes"><a href="https://www.divinho.com.br/blog/drinks-com-vinho/" >
+					<div class="imagem">
+						
+							<img width="1000" height="667" src="https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Drinks-com-Vinho.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Drinks com Vinho" srcset="https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Drinks-com-Vinho.jpg 1000w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Drinks-com-Vinho-300x200.jpg 300w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Drinks-com-Vinho-768x512.jpg 768w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Drinks-com-Vinho-364x243.jpg 364w" sizes="(max-width: 1000px) 100vw, 1000px" />						
+					</div></a>
+					<div class="recentes-header">
+						                        <div class="recentes-data">28 de outubro, 2021</div>
+                        						<div class="recentes-titulo"><a href="https://www.divinho.com.br/blog/drinks-com-vinho/">Aprenda a Preparar 9 Drinks com Vinho!</a></div>
+					</div>
+				</li>
+
+    </ul>
+</div></div></div>        </div>
+    </div>
+</section>
+
+
+
+
+
+<div class="posts-relacionados w-100 m-0 mt-2">
+    <div class="container">
+        <h2 class="text-uppercase relacionados-titulo ">Matérias relacionadas</h2>
+        <div class="row post-home m-0">
+            <div class="col-md-8">
+                <div class="row">
+                    		
+		<div class="col-md-6 pl-0 pr-4">
+			  
+
+<article id="25196" class="post-25196 post type-post status-publish format-standard has-post-thumbnail hentry category-curiosidades-e-dicas category-receitas">
+    <h4 class="category text-uppercase my-3"><span class="roxa"><a href="https://www.divinho.com.br/blog/category/curiosidades-e-dicas/" title="Curiosidades e Dicas">Curiosidades e Dicas</a></span> /
+        28 de outubro, 2021</h4>
+    <h2 class="title text-uppercase mb-4"><a href="https://www.divinho.com.br/blog/drinks-com-vinho/">Aprenda a Preparar 9 Drinks com Vinho!</a></h2>
+    <div class="post-image">
+        <a href="https://www.divinho.com.br/blog/drinks-com-vinho/"><img width="364" height="243" src="https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Drinks-com-Vinho-364x243.jpg" class="img-fluid wp-post-image" alt="Drinks com Vinho" title="Aprenda a Preparar 9 Drinks com Vinho!" srcset="https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Drinks-com-Vinho-364x243.jpg 364w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Drinks-com-Vinho-300x200.jpg 300w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Drinks-com-Vinho-768x512.jpg 768w, https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Drinks-com-Vinho.jpg 1000w" sizes="(max-width: 364px) 100vw, 364px" /><a>
+    </div>
+    <p class="description my-4">
+        Uma taça de vinho sempre cai bem, mas você já pensou em preparar drinks com a bebida? Não importa se você é amante de vinho tinto, vinho branco ou espumante, existe um drink com vinho ideal para o seu paladar....    </p>
+    <a href="https://www.divinho.com.br/blog/drinks-com-vinho/" role="button" class="btn btn-link my-3">LER MATÉRIA</a>
+</article>		</div>
+	
+			
+		<div class="col-md-6 pl-0 pr-4">
+			  
+
+<article id="25186" class="post-25186 post type-post status-publish format-standard has-post-thumbnail hentry category-curiosidades-e-dicas category-harmonizacoes category-recomendacoes">
+    <h4 class="category text-uppercase my-3"><span class="roxa"><a href="https://www.divinho.com.br/blog/category/curiosidades-e-dicas/" title="Curiosidades e Dicas">Curiosidades e Dicas</a></span> /
+        27 de outubro, 2021</h4>
+    <h2 class="title text-uppercase mb-4"><a href="https://www.divinho.com.br/blog/vinho-late-harvest/">Vinho Late Harvest &#8211; Tudo o que Você Precisa Saber!</a></h2>
+    <div class="post-image">
+        <a href="https://www.divinho.com.br/blog/vinho-late-harvest/"><img width="364" height="243" src="https://www.divinho.com.br/blog/wp-content/uploads/2021/10/Vinho-Late-Harvest-364x243.jpg" class="img-fluid wp-post-image" alt="Vinho Late Harvest" title="Vinho Late Harvest &#8211; Tudo o que Você Precisa Saber!" /><a>
+    </div>
+    <p class="description my-4">
+        Vinho Late Harvest, apostamos que você já viu esse termo em uma carta de vinhos, mas sabe o que ele realmente significa? Descubra, nesse artigo da DiVinho, tudo o que você precisa saber sobre os Vinhos Late Harvest!&nbsp; O que...    </p>
+    <a href="https://www.divinho.com.br/blog/vinho-late-harvest/" role="button" class="btn btn-link my-3">LER MATÉRIA</a>
+</article>		</div>
+	
+	                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div><!-- #site-content -->
+
+
+
+<div class="news-letter">
+    <div class="container">
+        <div class="row no-gutters align-items-center">
+            <div class="col-md-2">
+                <div class="text-left">
+                    <img src="https://www.divinho.com.br/blog/wp-content/themes/divinho/assets/images/news-letter.png"></div>
+            </div>
+            <div class="col-md-5 d-flex justify-content-center">
+                <div class="news-letter__content ">
+                    <div class="news-letter__title ">Quer receber nossas promoções?</div>
+                    <p>Preencha seu e-mail e receba as novidades,<br>promoções e descontos especiais da
+                        <strong>DiVinho</strong></p>
+                </div>
+            </div>
+            <div class="col-md-5 align-self-end ">
+                <div class="news-letter__form ">
+                    <form action="# " method="post " novalidate="novalidate ">
+                        <div class="input-group align-items-center ">
+                            <span class="wpcf7-form-control-wrap your-email "><input type="email" name="your-email"
+                                    value=" " size="40 " aria-required="true " aria-invalid="false "
+                                    placeholder="Preencha com o seu e-mail "></span>
+                            <span class="input-group-btn ">
+                                <button class="btn btn-outline-light " type="submit ">CADASTRAR</button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <footer class="site-footer">
+        <div class="site-footer__contato">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3"><img src="https://www.divinho.com.br/blog/wp-content/themes/divinho/assets/images/logo.png"
+                            class="py-2 py-md-3"></div>
+                    <div class="col-md-3">
+                        <p class="email"><a href="mailto:contato@divinho.com.br">contato@divinho.com.br</a></p>
+                        <p class="tel"><a
+                                href="https://wa.me/5511943491044?text=Ol%C3%A1%20gostaria%20de%20fazer%20um%20pedido.">(11)
+                                94349-1044</a></p>
+                        <p class="tel"><a href="tel:551127294004">(11) 2729-4004</a></p>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="endereco">R. Teodoro Sampaio, 2550 - 6 Pinheiros São paulo - SP,<br>CEP:
+                            04652-200</div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="redes-sociais">
+                            <div class="title">DiVinho nas redes</div>
+                            <ul>
+                                <li><a href="https://www.facebook.com/vinhodivinho/"><i
+                                            class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li><a href="https://www.instagram.com/divinhovinhos/"><i
+                                            class="fab fa-instagram"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--             <div class="site-footer__links">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h4>INSTITUCIONAL</h4>
+                            <ul>
+                                <li><a href="#!">Very long link 1</a></li>
+                                <li><a href="#!">Very long link 2</a></li>
+                                <li><a href="#!">Very long link 3</a></li>
+                                <li><a href="#!">Very long link 4</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h4>COMPRE COM A GENTE</h4>
+                            <ul>
+                                <li><a href="#!">Link 1</a></li>
+                                <li><a href="#!">Link 2</a></li>
+                                <li><a href="#!">Link 3</a></li>
+                                <li><a href="#!">Link 4</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h4>SUA CONTA</h4>
+                            <ul>
+                                <li><a href="#!">Link 1</a></li>
+                                <li><a href="#!">Link 2</a></li>
+                                <li><a href="#!">Link 3</a></li>
+                                <li><a href="#!">Link 4</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h4>Vinhos</h4>
+                            <ul>
+                                <li><a href="#!">Link 1</a></li>
+                                <li><a href="#!">Link 2</a></li>
+                                <li><a href="#!">Link 3</a></li>
+                                <li><a href="#!">Link 4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        
+<!-- Footer Links -->
+
+
+
+<div class="site-footer__links">
+
+    <div class="container">
+
+        <div class="row">
+          
+            
+            <div class="col-md-3">
+                <div id="nav_menu-2" class="footer-collapse footer__text"><h4 class="footer__title footer__title-1 footer-collapse">Institucional</h4><div class="menu-footer-1-container"><ul id="menu-footer-1" class="menu"><li id="menu-item-22035" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22035"><a href="https://www.divinho.com.br/sobre-a-divinho">Sobre a DiVinho</a></li>
+<li id="menu-item-22036" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22036"><a href="https://www.divinho.com.br/politica-de-privacidade">Política de Privacidade</a></li>
+</ul></div></div>            </div>
+            
+            <div class="col-md-3">
+                <div id="nav_menu-3" class="footer-collapse footer__text"><h4 class="footer__title footer__title-2 footer-collapse">COMPRE COM A GENTE</h4><div class="menu-footer-2-container"><ul id="menu-footer-2" class="menu"><li id="menu-item-22037" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22037"><a href="https://www.divinho.com.br/entregas">Entregas</a></li>
+<li id="menu-item-22038" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22038"><a href="https://www.divinho.com.br/pagamentos">Pagamentos</a></li>
+<li id="menu-item-22039" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22039"><a href="https://www.divinho.com.br/trocas-e-devolucoes">Trocas e Devoluções</a></li>
+<li id="menu-item-22040" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22040"><a href="https://www.divinho.com.br/customer/account/">Minha conta</a></li>
+<li id="menu-item-22041" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22041"><a href="https://www.divinho.com.br/e-confiavel-comprar-na-divinho">É Confiável comprar na Divinho</a></li>
+</ul></div></div>            </div>
+            
+            <div class="col-md-3">
+                <div id="nav_menu-4" class="footer-collapse footer__text"><h4 class="footer__title footer__title-3 footer-collapse">SUA CONTA</h4><div class="menu-footer-3-container"><ul id="menu-footer-3" class="menu"><li id="menu-item-22042" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22042"><a href="https://www.divinho.com.br/customer/account/login/">Entre</a></li>
+<li id="menu-item-22043" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22043"><a href="https://www.divinho.com.br/customer/account/login/">Cadastre-se</a></li>
+<li id="menu-item-22044" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22044"><a href="https://www.divinho.com.br/checkout/cart/">Carrinho de compras</a></li>
+<li id="menu-item-22045" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22045"><a href="https://www.divinho.com.br/wishlist">Lista de desejos</a></li>
+<li id="menu-item-22046" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22046"><a href="https://www.divinho.com.br/sales/order/history/">Meus pedidos</a></li>
+<li id="menu-item-22047" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22047"><a href="https://www.divinho.com.br/customer/account/">Atualizar informações</a></li>
+</ul></div></div>            </div>
+            
+            <div class="col-md-3">
+                <div id="nav_menu-5" class="footer-collapse footer__text"><h4 class="footer__title footer__title-4 footer-collapse">Vinhos</h4><div class="menu-footer-4-container"><ul id="menu-footer-4" class="menu"><li id="menu-item-22048" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22048"><a href="https://www.divinho.com.br/recomendac-o.html">Recomendados</a></li>
+<li id="menu-item-22049" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22049"><a href="https://www.divinho.com.br/pontuacao.html">Pontuados</a></li>
+<li id="menu-item-22050" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22050"><a href="https://www.divinho.com.br/vinhos.html">Tipo de vinho</a></li>
+<li id="menu-item-22051" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22051"><a href="https://www.divinho.com.br/pais.html">Por país</a></li>
+<li id="menu-item-22052" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22052"><a href="https://www.divinho.com.br/promocao-de-vinhos.html">Promoção</a></li>
+</ul></div></div>            </div>
+            
+        </div>
+
+        <!--.row-->
+
+    </div>
+
+</div>
+
+<!-- / Footer Links -->
+        <div class="container">
+            <div class="row no-gutters align-items-center justify-content-center ">
+                <div class="payment-methods ">
+                    <div class="bg-methods "></div>
+                    <div class="bg-methods "></div>
+                    <div class="bg-methods "></div>
+                    <div class="bg-methods "></div>
+                    <div class="bg-methods "></div>
+                    <div class="bg-methods "></div>
+                    <div class="bg-methods "></div>
+                    <div class="methods__text ">
+                        Parcele suas compras em até 3X sem juros
+                    </div>
+                </div>
+            </div>
+            <div class="warning ">
+                SE BEBER NÃO DIRIJA. APRECIE COM MODERAÇÃO. A VENDA DE BEBIDAS ALCOÓLICAS É PROIBIDA PARA MENORES DE 18
+                ANOS
+            </div>
+        </div>
+
+
+
+
+
+    </footer>
+
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MM4CCWJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><script src='https://www.divinho.com.br/blog/wp-includes/js/comment-reply.min.js?ver=5.4.2'></script>
+<script src='https://www.divinho.com.br/blog/wp-content/themes/divinho/assets/js/runtime.js?ver=1.1'></script>
+<script src='https://www.divinho.com.br/blog/wp-content/themes/divinho/assets/js/main.js?ver=1.1'></script>
+<script src='https://www.divinho.com.br/blog/wp-content/themes/divinho/assets/js/blog.js?ver=1.1'></script>
+<script src='https://www.divinho.com.br/blog/wp-includes/js/wp-embed.min.js?ver=5.4.2'></script>
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-15ce119d71e6a8d24c8","applicationID":"798446581","transactionName":"blMGbUdSWRFQBhBcC1cZJVpBWlgMHhYNWwNVUw==","queueTime":0,"applicationTime":155,"atts":"QhQFGw9ISh8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+    </html>

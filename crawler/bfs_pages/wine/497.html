@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/qva4gql.css">
+<link rel="icon" href="https://www.wine.com.br/wineverso/assets/img/favicon.svg" type="image/svg" />
+<link rel="stylesheet" href="https://www.wine.com.br/wineverso/assets/css/style.min.css">
+</head>
+<body>
+<header id="topo">
+<div class="header-content">
+<div class="header">
+<a href="https://www.wine.com.br/wineverso/"><img class="logo" src="https://www.wine.com.br/wineverso/assets/img/logo-header.png" alt=""></a>
+<div id="menu-header">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="content">
+<ul class="nav-menu">
+<li><a href="https://www.wine.com.br/institucional/" target="_blank">SOBRE NÓS</a></li>
+<li><a href="https://www.wine.com.br/wineverso/ondeouvir">SAIBA ONDE OUVIR</a></li>
+<li><a href="https://www.wine.com.br" target="_blank">VISITE A LOJA ON-LINE</a></li>
+<li><a href="https://www.wine.com.br/clubewine/" target="_blank">DESCUBRA O CLUBE WINE</a></li>
+</ul>
+<div class="follow-us">
+<p>SIGA-NOS</p>
+<hr>
+<ul class="social-menu">
+<li>
+<a href="https://www.facebook.com/winevinhos" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/facebook-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://www.instagram.com/winevinhos/" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/instagram-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://www.youtube.com/user/WineVinhos" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/youtube-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://open.spotify.com/show/2Zp6kP1mQAaFCzJNNOPZr0?si=H2pmYjJ3TgisXZFTjopPaw" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/spotify-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://twitter.com/wine_vinhos" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/twitter-icon.svg" alt=""></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</header>
+<script>
+		$('#menu-header').click(function() {
+			if($('.header-content').attr('class') === 'header-content active') {
+				$('.header-content').removeClass('active')
+				$('.header-content .content').removeClass('active')
+				$('body').css({
+					'overflow': 'auto',
+					'height' : 'auto',
+				})
+				$(this).toggleClass('open');
+			} else {
+				$('.header-content').addClass('active')
+				$('.header-content .content').addClass('active')
+				$('body').css({
+					'overflow': 'hidden',
+					'height' : '100vh',
+				})
+				$(this).toggleClass('open');
+			}
+		})
+
+		$(window).scroll(function() {
+			var distanceBottom = $(window).scrollTop(),
+			heightFooter = 370 + 70,
+			setaUp = $(".back-to-top");
+			if (distanceBottom >= heightFooter) {
+				setaUp.addClass("visible");
+			} else {
+				setaUp.removeClass("visible");
+			}
+		});
+	</script>
+<section id="interna">
+<div class="banner">
+<div class="texto-banner">
+<p class="data">episódio #49 <span>21.05.2021</span></p>
+<p class="title">Brut x extra dry e demi-sec: o açúcar dos vinhos</p>
+<a class="playerPodcast" href="javascript:void(0)"><img src="https://www.wine.com.br/wineverso/assets/img/arrow-cta-play.svg" alt="">PLAY</a>
+
+</div>
+</div>
+</section>
+<section id="conteudo-interna">
+<div class="conteudo">
+<div class="bloco1">
+<div class="texts">
+<p>
+Você sabe a diferença entre vinho suave e vinho de mesa? E a quantidade necessária de açúcar em cada rótulo para que sejam feitas as classificações entre seco, meio seco e suave? Desta vez, Vitor Zorzal, Paula Daidone e Cibele Siqueira conversam sobre o açúcar no vinho e as nomenclaturas. Será que a classificação pode variar de um país para o outro? E de onde vem essas regras? Para entender essas e outras várias questões, aperte o play e fique por dentro de tudo com a gente! </p>
+</div>
+<div class="podcast">
+<div class="platforms">
+<a href="https://castbox.fm/episode/Brut%2C-extra-dry-e-demi-sec%3A-O-a%C3%A7%C3%BAcar-dos-vinhos-id2668986-id384435968?country=br" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/castbox-podcast.png" alt=""></a>
+<a href="https://open.spotify.com/episode/3qnOmRwH4EVDaSISqM9HOw?si=tO4PPxc1Q4ijvtDjEFQWVg" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/spotify-podcast.png" alt=""></a>
+<a href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjc4ODc3NDU1MS9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTA1MjYwMzI0OA?sa=X&ved=0CAYQuIEEahcKEwjwib2a59rwAhUAAAAAHQAAAAAQAQ" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/google-podcast.png" alt=""></a>
+<a href="https://podcasts.apple.com/br/podcast/brut-extra-dry-e-demi-sec-o-a%C3%A7%C3%BAcar-dos-vinhos/id1501869040?i=1000522609291" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/apple-podcast.png" alt=""></a>
+</div>
+<div class="player">
+<p><iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1052603248&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe></p>
+</div>
+</div>
+</div>
+<div class="bloco2">
+<div class="menu">
+<ul>
+<li id="second-menu" class="active"><img src="https://www.wine.com.br/wineverso/assets/img/play-menu-interna.svg" alt="">Ver mais episódios</li>
+</ul>
+</div>
+<div class="ultimos-podcasts" style="display: nonedisplay: flex">
+<a href="https://www.wine.com.br/wineverso/podcast/por-tras-vik">
+<div class="podcast">
+<img src="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/11/618000c50ab54.jpg" alt="">
+<div class="categorias-podcast">
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #72 01.11.2021 </p>
+<p class="titulo">
+Por trás dos rótulos da Wine: VIK </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/inovacao-enologia-brasileira">
+<div class="podcast">
+<img src="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/10/6173386ca1c22.jpg" alt="">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #71 22.10.2021 </p>
+<p class="titulo">
+Técnicas inovadoras na enologia brasileira </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/feira-de-vinhos">
+<div class="podcast">
+<img src="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/10/616e08e17682f.jpg" alt="">
+<div class="categorias-podcast">
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #70 15.10.2021 </p>
+<p class="titulo">
+A maior feira de vinhos da América Latina </p>
+</div>
+</div>
+</div>
+</a>
+<div class="ver-mais">
+<a href="https://www.wine.com.br/wineverso/">
+<img src="https://www.wine.com.br/wineverso/assets/img/ver-mais.png" alt="">
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<div class="footer-content">
+<ul class="nav-footer">
+<li><a href="https://www.wine.com.br/institucional/">SOBRE NÓS</a></li>
+<li><a href="https://www.wine.com.br/wineverso/ondeouvir">SAIBA ONDE OUVIR</a></li>
+<li><a href="https://www.wine.com.br" target="_blank">VISITE A LOJA ON-LINE</a></li>
+<li><a href="https://www.wine.com.br/clubewine/" target="_blank">DESCUBRA O CLUBE WINE</a></li>
+</ul>
+<div class="follow-us-footer">
+<p>SIGA-NOS</p>
+<hr>
+<ul class="social-menu-footer">
+<li>
+<a href="https://www.facebook.com/winevinhos" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/facebook-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://www.instagram.com/winevinhos/" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/instagram-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://www.youtube.com/user/WineVinhos" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/youtube-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://open.spotify.com/show/2Zp6kP1mQAaFCzJNNOPZr0?si=H2pmYjJ3TgisXZFTjopPaw" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/spotify-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://twitter.com/wine_vinhos" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/twitter-icon.svg" alt=""></a>
+</li>
+</ul>
+</div>
+</div>
+<hr>
+<div class="footer-defesa">
+<img class="logo-footer" src="https://www.wine.com.br/wineverso/assets/img/logo-podcast-footer.svg" alt="">
+<div class="infos">
+<div class="cnpj">
+<span>W2W E-Commerce de Vinhos S.A</span>
+<span class="cnpj">CNPJ: 09.813.204/0002-05</span>
+</div>
+<div class="line-divisor"></div>
+<div class="endereco">
+<span>Rua Comendador Alcides Simão Helou, 1478</span>
+<span>Serra - ES - CEP 29168-090</span>
+</div>
+</div>
+<p class="defesa">
+SE BEBER, NÃO DIRIJA. APRECIE COM MODERAÇÃO. A VENDA DE BEBIDAS ALCOÓLICAS É PROIBIDA PARA MENORES DE 18 ANOS.
+</p>
+</div>
+</footer>
+<div class="back-to-top">
+<img src="https://www.wine.com.br/wineverso/assets/img/back-to-top.png" alt="">
+</div>
+<script src="https://w.soundcloud.com/player/api.js"></script>
+<script>
+	$('.back-to-top img').click(function(){
+			$('html, body').animate({
+				scrollTop: $('#topo').offset().top
+			}, 300);
+		})
+</script>
+<script>
+	$(document).ready(function() {
+		// SoundCloud
+		iframeSC = document.querySelector('iframe');
+		iframeSC.setAttribute('id', 'sc-widget');
+
+		// (function(){
+		// 	var widgetIframe = document.getElementById('sc-widget'), widget  = SC.Widget(widgetIframe);
+		// 	widget.bind(SC.Widget.Events.READY, function() {
+		// 		$('.playerPodcast').click(function() {
+		// 			widget.toggle();
+		// 		})
+		// 	});
+		// }());
+		var widgetIframe = document.getElementById('sc-widget'), widget  = SC.Widget(widgetIframe);
+		$('.playerPodcast').click(function() {
+			widget.toggle();
+		})
+		// SoundCloud
+
+		// Banner _header
+		var mobile = window.matchMedia("(max-width: 767px)").matches;
+		bannerHeader = document.querySelector('#interna');
+		var bgHeaderMobile = "url(https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/05/60a7ad33b55a7.jpg)";
+		var bgHeaderDesktop = "url(https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/05/60a7ad3244472.jpg)";
+		if(mobile) {
+			bannerHeader.style.backgroundImage = bgHeaderMobile;
+		} else {
+			console.log(bgHeaderDesktop)
+			bannerHeader.style.backgroundImage = bgHeaderDesktop;
+		}
+		// Banner _header
+
+		// Toggle Produtos/Podcasts
+		$('.bloco2 .menu li').click(function() {
+			$('.bloco2 .menu li').removeClass('active')
+			$(this).addClass('active')
+			if($(this).attr('id') === 'first-menu'){
+				$('.ultimos-podcasts').hide()
+				$('.cards-sku').show()
+			} else {
+				$('.cards-sku').hide()
+				$('.ultimos-podcasts').show()
+			}
+		})
+		// Toggle Produtos/Podcasts
+
+	})
+</script>

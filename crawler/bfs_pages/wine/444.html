@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/qva4gql.css">
+<link rel="icon" href="https://www.wine.com.br/wineverso/assets/img/favicon.svg" type="image/svg" />
+<link rel="stylesheet" href="https://www.wine.com.br/wineverso/assets/css/style.min.css">
+</head>
+<body>
+<header id="topo">
+<div class="header-content">
+<div class="header">
+<a href="https://www.wine.com.br/wineverso/"><img class="logo" src="https://www.wine.com.br/wineverso/assets/img/logo-header.png" alt=""></a>
+<div id="menu-header">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="content">
+<ul class="nav-menu">
+<li><a href="https://www.wine.com.br/institucional/" target="_blank">SOBRE NÓS</a></li>
+<li><a href="https://www.wine.com.br/wineverso/ondeouvir">SAIBA ONDE OUVIR</a></li>
+<li><a href="https://www.wine.com.br" target="_blank">VISITE A LOJA ON-LINE</a></li>
+<li><a href="https://www.wine.com.br/clubewine/" target="_blank">DESCUBRA O CLUBE WINE</a></li>
+</ul>
+<div class="follow-us">
+<p>SIGA-NOS</p>
+<hr>
+<ul class="social-menu">
+<li>
+<a href="https://www.facebook.com/winevinhos" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/facebook-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://www.instagram.com/winevinhos/" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/instagram-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://www.youtube.com/user/WineVinhos" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/youtube-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://open.spotify.com/show/2Zp6kP1mQAaFCzJNNOPZr0?si=H2pmYjJ3TgisXZFTjopPaw" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/spotify-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://twitter.com/wine_vinhos" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/twitter-icon.svg" alt=""></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</header>
+<script>
+		$('#menu-header').click(function() {
+			if($('.header-content').attr('class') === 'header-content active') {
+				$('.header-content').removeClass('active')
+				$('.header-content .content').removeClass('active')
+				$('body').css({
+					'overflow': 'auto',
+					'height' : 'auto',
+				})
+				$(this).toggleClass('open');
+			} else {
+				$('.header-content').addClass('active')
+				$('.header-content .content').addClass('active')
+				$('body').css({
+					'overflow': 'hidden',
+					'height' : '100vh',
+				})
+				$(this).toggleClass('open');
+			}
+		})
+
+		$(window).scroll(function() {
+			var distanceBottom = $(window).scrollTop(),
+			heightFooter = 370 + 70,
+			setaUp = $(".back-to-top");
+			if (distanceBottom >= heightFooter) {
+				setaUp.addClass("visible");
+			} else {
+				setaUp.removeClass("visible");
+			}
+		});
+	</script>
+<section id="hotsite">
+<div class="banner">
+<div class="conteudo">
+<div class="left">
+<img class="logo" src="https://www.wine.com.br/wineverso/assets/img/logo-podcast.svg" alt="">
+<p class="podcast-title"><b>O POD</b>CAST <span>DA WINE</span></p>
+<p class="podcast-subtitle">Chegou o Podcast da Wine, o seu novo guia pelo incrível mundo do vinho. A cada semana, um novo episódio para você desbravar este universo com a gente.</p>
+<div class="platforms">
+<a href="https://castbox.fm/channel/Wineverso-id2668986?country=br" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/castbox-podcast.png" alt=""></a>
+<a href="https://open.spotify.com/show/2Zp6kP1mQAaFCzJNNOPZr0" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/spotify-podcast.png" alt=""></a>
+<a href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjc4ODc3NDU1MS9zb3VuZHMucnNz" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/google-podcast.png" alt=""></a>
+<a href="https://podcasts.apple.com/br/podcast/wineverso/id1501869040" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/apple-podcast.png" alt=""></a>
+</div>
+</div>
+<div class="right">
+<img src="https://www.wine.com.br/wineverso/assets//img/phone-home.png" alt="">
+</div>
+</div>
+</div>
+<div class="conteudo">
+<div id="podcasts" class="categorias">
+<p>CATEGORIAS</p>
+<ul class="categoria">
+<li>
+<a href="https://www.wine.com.br/wineverso/categoria/clube-wine#podcasts" class="clube-wine">
+Clube Wine </a>
+</li>
+<li>
+<a href="https://www.wine.com.br/wineverso/categoria/curiosidades#podcasts" class="curiosidades">
+Curiosidades </a>
+</li>
+<li>
+<a href="https://www.wine.com.br/wineverso/categoria/dicas-do-sommelier#podcasts" class="dicas-do-sommelier">
+Dicas do Sommelier </a>
+</li>
+<li>
+<a href="https://www.wine.com.br/wineverso/categoria/enoturismo#podcasts" class="enoturismo">
+Enoturismo </a>
+</li>
+<li>
+<a href="https://www.wine.com.br/wineverso/categoria/glossario#podcasts" class="glossario">
+Glossário </a>
+</li>
+<li>
+<a href="https://www.wine.com.br/wineverso/categoria/harmonizacoes#podcasts" class="harmonizacoes">
+Harmonizações </a>
+</li>
+</ul>
+</div>
+<div class="podcasts">
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-13">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/05/5ed10dfcd3728.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="clube-wine">Clube Wine</span>
+-
+<span class="curiosidades">Curiosidades</span>
+-
+<span class="dicas-do-sommelier">Dicas do Sommelier</span>
+-
+<span class="harmonizacoes">Harmonizações</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #13 </p>
+<p class="titulo">
+A evolução do paladar </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/tecnologia-e-vinho">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/03/605dfffee1203.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="clube-wine">Clube Wine</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #43 </p>
+<p class="titulo">
+A tecnologia e o mundo do vinho </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/amizade-e-vinho">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/03/604676014a36e.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="clube-wine">Clube Wine</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #40 </p>
+<p class="titulo">
+Amizade e vinho </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-20">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/07/5f11a092790d7.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="clube-wine">Clube Wine</span>
+-
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #20 </p>
+<p class="titulo">
+Clube de vinhos customizável </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-30">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/12/5fca5f4524ffe.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="clube-wine">Clube Wine</span>
+-
+<span class="curiosidades">Curiosidades</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #30 </p>
+<p class="titulo">
+Clubes de assinatura: o que a Wine e a Tag Livros têm em comum? </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-1">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/05/5ed010358e79d.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="clube-wine">Clube Wine</span>
+-
+<span class="curiosidades">Curiosidades</span>
+-
+<span class="enoturismo">Enoturismo</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #1 </p>
+<p class="titulo">
+Viajando pelo mundo com os 10 anos de Clube Wine </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/episodio-18">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2020/07/5eff25d0d2286.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="clube-wine">Clube Wine</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #18 </p>
+<p class="titulo">
+Vinho e festa em tempos de Pandemia </p>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.wine.com.br/wineverso/podcast/winehunter-nova-jornada">
+<div class="podcast">
+<img data-original="https://www.wine.com.br/wineverso/cms/wp-content/uploads/2021/04/607480f40edff.png" width="480" height="410" alt="" class="lazy">
+<div class="categorias-podcast">
+<span class="clube-wine">Clube Wine</span>
+-
+<span class="glossario">Glossário</span>
+</div>
+<hr>
+<div class="title-place">
+<div class="title-content">
+<p class="data">
+episódio #45 </p>
+<p class="titulo">
+Winehunter: uma nova jornada </p>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="ver-mais">
+<img src="img/ver-mais.png" alt="">
+</div>
+</div>
+</section>
+<footer>
+<div class="footer-content">
+<ul class="nav-footer">
+<li><a href="https://www.wine.com.br/institucional/">SOBRE NÓS</a></li>
+<li><a href="https://www.wine.com.br/wineverso/ondeouvir">SAIBA ONDE OUVIR</a></li>
+<li><a href="https://www.wine.com.br" target="_blank">VISITE A LOJA ON-LINE</a></li>
+<li><a href="https://www.wine.com.br/clubewine/" target="_blank">DESCUBRA O CLUBE WINE</a></li>
+</ul>
+<div class="follow-us-footer">
+<p>SIGA-NOS</p>
+<hr>
+<ul class="social-menu-footer">
+<li>
+<a href="https://www.facebook.com/winevinhos" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/facebook-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://www.instagram.com/winevinhos/" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/instagram-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://www.youtube.com/user/WineVinhos" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/youtube-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://open.spotify.com/show/2Zp6kP1mQAaFCzJNNOPZr0?si=H2pmYjJ3TgisXZFTjopPaw" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/spotify-icon.svg" alt=""></a>
+</li>
+<li>
+<a href="https://twitter.com/wine_vinhos" target="_blank"><img src="https://www.wine.com.br/wineverso/assets/img/twitter-icon.svg" alt=""></a>
+</li>
+</ul>
+</div>
+</div>
+<hr>
+<div class="footer-defesa">
+<img class="logo-footer" src="https://www.wine.com.br/wineverso/assets/img/logo-podcast-footer.svg" alt="">
+<div class="infos">
+<div class="cnpj">
+<span>W2W E-Commerce de Vinhos S.A</span>
+<span class="cnpj">CNPJ: 09.813.204/0002-05</span>
+</div>
+<div class="line-divisor"></div>
+<div class="endereco">
+<span>Rua Comendador Alcides Simão Helou, 1478</span>
+<span>Serra - ES - CEP 29168-090</span>
+</div>
+</div>
+<p class="defesa">
+SE BEBER, NÃO DIRIJA. APRECIE COM MODERAÇÃO. A VENDA DE BEBIDAS ALCOÓLICAS É PROIBIDA PARA MENORES DE 18 ANOS.
+</p>
+</div>
+</footer>
+<div class="back-to-top">
+<img src="https://www.wine.com.br/wineverso/assets/img/back-to-top.png" alt="">
+</div>
+<script src="https://w.soundcloud.com/player/api.js"></script>
+<script>
+	$('.back-to-top img').click(function(){
+			$('html, body').animate({
+				scrollTop: $('#topo').offset().top
+			}, 300);
+		})
+</script><script src="https://www.wine.com.br/wineverso/assets/js/lazy.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+	$(function() {
+		$("img.lazy").lazyload();
+	});
+</script>
+<script>
+	var url = 	window.location.href;
+	var categoria = url.substr(0, url.indexOf('#podcasts')); 
+	var arrayOfUrl = categoria.split('/categoria/')
+	menuActive = arrayOfUrl[1];
+	$('.categoria li a.'+menuActive).addClass('active')
+
+	$('.categoria li a').click(function() {
+		$('.categoria li a').removeClass('active')
+		$(this).addClass('active')
+		if($('.categoria li a.'+menuActive)) {
+			$('.categoria li a').removeClass('active')
+			window.location.href = 'https://winecast.herokuapp.com/#podcasts'
+		}
+	})
+</script>
