@@ -20,8 +20,6 @@ seeds=[('divinho', 'https://www.divinho.com.br'),
 ('vivavinho', 'https://www.vivavinho.com.br'),
 ('wine', 'https://www.wine.com.br')]
 
-# seeds=[('superadega', 'https://www.superadega.com.br')]
-
 def process_url(url, root):
     if (url.startswith('/')):
         return f'{root}{url}'

@@ -1,0 +1,804 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <!--HEADER:-->
+
+  <!--Default Header:-->
+  
+
+
+
+
+
+<meta charset="UTF-8" />
+
+<!-- #cookie privacy -->
+<!-- <script type="text/javascript" src="https://cdn-prod.securiti.ai/consent/auto_blocking/7b963bf3-83ff-4513-973a-34015862a31a/7a11d093-6dea-4fd9-91c9-0b01f648de72.js"></script> -->
+<!-- #cookie privacy -->
+
+
+
+<script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={xpid:"UAEGWV5ACgIDUFNUAAA=",licenseKey:"dca4d478ee",applicationID:"21342671"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(30),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{l?l-=1:o(s||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:c.now();i("err",[t,n])}var i=t("handle"),a=t(31),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError";if(!c.disabled){var l=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(14),t(13),"addEventListener"in window&&t(7),c.xhrWrappable&&t(15),d=!0)}s.on("fn-start",function(t,e,n){d&&(l+=1)}),s.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),s.on("fn-end",function(){d&&!this.thrown&&l>0&&(l-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(){L++,C=g.hash,this[u]=y.now()}function o(){L--,g.hash!==C&&i(0,!0);var t=y.now();this[h]=~~this[h]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+g,e])}function a(t,e){t.on(e,function(){this[e]=y.now()})}var s="-start",c="-end",f="-body",u="fn"+s,d="fn"+c,p="cb"+s,l="cb"+c,h="jsTime",m="fetch",v="addEventListener",w=window,g=w.location,y=t("loader");if(w[v]&&y.xhrWrappable&&!y.disabled){var x=t(11),b=t(12),E=t(9),R=t(7),O=t(14),S=t(8),T=t(15),N=t(10),P=t("ee"),M=P.get("tracer");t(17),y.features.spa=!0;var C,L=0;P.on(u,r),b.on(p,r),N.on(p,r),P.on(d,o),b.on(l,o),N.on(l,o),P.buffer([u,d,"xhr-resolved"]),R.buffer([u]),O.buffer(["setTimeout"+c,"clearTimeout"+s,u]),T.buffer([u,"new-xhr","send-xhr"+s]),S.buffer([m+s,m+"-done",m+f+s,m+f+c]),E.buffer(["newURL"]),x.buffer([u]),b.buffer(["propagate",p,l,"executor-err","resolve"+s]),M.buffer([u,"no-"+u]),N.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(S,m+s),a(S,m+"-done"),a(N,"new-jsonp"),a(N,"jsonp-end"),a(N,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,L>1)},!0)}},{}],5:[function(t,e,n){function r(){var t=new PerformanceObserver(function(t,e){var n=t.getEntries();s(m,[n])});try{t.observe({entryTypes:["resource"]})}catch(e){}}function o(t){if(s(m,[window.performance.getEntriesByType(v)]),window.performance["c"+d])try{window.performance[l](h,o,!1)}catch(t){}else try{window.performance[l]("webkit"+h,o,!1)}catch(t){}}function i(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var a=t("ee"),s=t("handle"),c=t(14),f=t(13),u=t(6),d="learResourceTimings",p="addEventListener",l="removeEventListener",h="resourcetimingbufferfull",m="bstResource",v="resource",w="-start",g="-end",y="fn"+w,x="fn"+g,b="bstTimer",E="pushState",R=t("loader");if(!R.disabled){R.features.stn=!0,t(9),"addEventListener"in window&&t(7);var O=NREUM.o.EV;a.on(y,function(t,e){var n=t[0];n instanceof O&&(this.bstStart=R.now())}),a.on(x,function(t,e){var n=t[0];n instanceof O&&s("bst",[n,e,this.bstStart,R.now()])}),c.on(y,function(t,e,n){this.bstStart=R.now(),this.bstType=n}),c.on(x,function(t,e){s(b,[e,this.bstStart,R.now(),this.bstType])}),f.on(y,function(){this.bstStart=R.now()}),f.on(x,function(t,e){s(b,[e,this.bstStart,R.now(),"requestAnimationFrame"])}),a.on(E+w,function(t){this.time=R.now(),this.startPath=location.pathname+location.hash}),a.on(E+g,function(t){s("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),u()?(s(m,[window.performance.getEntriesByType("resource")]),r()):p in window.performance&&(window.performance["c"+d]?window.performance[p](h,o,!1):window.performance[p]("webkit"+h,o,!1)),document[p]("scroll",i,{passive:!0}),document[p]("keypress",i,!1),document[p]("click",i,!1)}}},{}],6:[function(t,e,n){e.exports=function(){return"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver}},{}],7:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],8:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=i(arguments),e={};o.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return o.emit(n+"start",[t,a],s),s.then(function(t){return o.emit(n+"end",[null,t],s),t},function(t){throw o.emit(n+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(31),a=t(30);e.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,p=s.Response,l=s.fetch,h="prototype",m="nr@context";d&&p&&l&&(a(u,function(t,e){r(d[h],e,f),r(p[h],e,f)}),r(s,"fetch",c),o.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(c+"done",[null,e],n)}else o.emit(c+"done",[t],n)}))},{}],9:[function(t,e,n){var r=t("ee").get("history"),o=t("wrap-function")(r);e.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],10:[function(t,e,n){function r(t){function e(){c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){c.emit("jsonp-error",[],p),c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=s(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),c.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function s(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var c=t("ee").get("jsonp"),f=t("wrap-function")(c);if(e.exports=c,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,l=["appendChild","insertBefore","replaceChild"];Node&&Node.prototype&&Node.prototype.appendChild?f.inPlace(Node.prototype,l,"dom-"):(f.inPlace(HTMLElement.prototype,l,"dom-"),f.inPlace(HTMLHeadElement.prototype,l,"dom-"),f.inPlace(HTMLBodyElement.prototype,l,"dom-")),c.on("dom-start",function(t){r(t[0])})}},{}],11:[function(t,e,n){var r=t("ee").get("mutation"),o=t("wrap-function")(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],12:[function(t,e,n){function r(t){var e=i.context(),n=s(t,"executor-",e,null,!1),r=new f(n);return i.context(r).getCtx=function(){return e},r}var o=t("wrap-function"),i=t("ee").get("promise"),a=t("ee").getOrSetContext,s=o(i),c=t(30),f=NREUM.o.PR;e.exports=i,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){i.emit("propagate",[null,!o],a,!1,!1),o=o||!t}}var o=!1;c(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var a=e.apply(f,arguments),s=f.resolve(a);return s}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&i.emit("propagate",[t,!0],n,!1,!1),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),c(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),o.wrapInPlace(f.prototype,"then",function(t){return function(){var e=this,n=o.argsToArray.apply(this,arguments),r=a(e);r.promise=e,n[0]=s(n[0],"cb-",r,null,!1),n[1]=s(n[1],"cb-",r,null,!1);var c=t.apply(this,n);return r.nextPromise=c,i.emit("propagate",[e,!0],c,!1,!1),c}}),i.on("executor-start",function(t){t[0]=s(t[0],"resolve-",this,null,!1),t[1]=s(t[1],"resolve-",this,null,!1)}),i.on("executor-err",function(t,e,n){t[1](n)}),i.on("cb-end",function(t,e,n){i.emit("propagate",[n,!0],this.nextPromise,!1,!1)}),i.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=i.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],13:[function(t,e,n){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],14:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],15:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):v?v(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(7);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),p=NREUM.o,l=p.XHR,h=p.MO,m=p.PR,v=p.SI,w="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new l(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(l,x),x.prototype=l.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!v&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],16:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=l.generateSpanId(),m=l.generateTraceId(),v=Date.now(),w={spanId:h,traceId:m,timestamp:v};return(t.sameOrigin||c(t)&&p())&&(w.traceContextParentHeader=o(h,m),w.traceContextStateHeader=i(h,v,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(w.newrelicHeader=a(h,m,v,n,r,f)),w}function o(t,e){return"00-"+e+"-"+t+"-01"}function i(t,e,n,r,o){var i=0,a="",s=1,c="",f="";return o+"@nr="+i+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:e,ti:n}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var o=h(n.allowed_origins[r]);if(t.hostname===o.hostname&&t.protocol===o.protocol&&t.port===o.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function p(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var l=t(27),h=t(18);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],17:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):i(this,t),n.cbTime=this.cbTime,s("xhr",[e,n,this.startTime,this.endTime,"xhr"],this))}}function o(t,e){var n=c(e),r=t.params;r.hostname=n.hostname,r.port=n.port,r.protocol=n.protocol,r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function i(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(18),f=t(16).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],p=d.length,l=t("id"),h=t(23),m=t(22),v=t(19),w=NREUM.o.REQ,g=window.XMLHttpRequest;a.features.xhr=!0,t(15),t(8),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){i(e,t)},!1),h&&(h>34||h<10)||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=m(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<p;s++)e.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("xhr-resolved",function(){this.endTime=a.now()}),u.on("addEventListener-end",function(t,e){e instanceof g&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof g&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof g&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var o=f(this.parsedOrigin);if(o&&(o.newrelicHeader||o.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var i={};for(var a in r)i[a]=r[a];i.headers=new Headers(r.headers||{}),e(i.headers,o)&&(this.dt=o),t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&e(t[0].headers,o)&&(this.dt=o)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),this.dt=e,t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},i=this.target;"string"==typeof i?n=i:"object"==typeof i&&i instanceof w?n=i.url:window.URL&&"object"==typeof i&&i instanceof URL&&(n=i.href),o(this,n);var s=(""+(i&&i instanceof w&&i.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}),u.on("fetch-done",function(t,e){this.endTime=a.now(),this.params||(this.params={}),this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime,this.endTime,"fetch"],this)})}},{}],18:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,o={};e.href=t,o.port=e.port;var i=e.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=e.hostname||n.hostname,o.pathname=e.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return o.sameOrigin=a&&(!e.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],19:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?o(t.response):"text"===n||""===n||void 0===n?o(t.responseText):void 0}var o=t(22);e.exports=r},{}],20:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(30),s=t(31),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[f.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=o(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,e])}},{}],21:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],22:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],23:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],24:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(i=Math.max((new Date).getTime(),i))-a}function o(){return i}var i=(new Date).getTime(),a=i,s=t(32);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=o},{}],25:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],26:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function o(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function i(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!v){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),v=!0,d("timing",["fi",e,n])}}function s(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,f,u,d=t("handle"),p=t("loader"),l=t(29),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(o);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(i);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var v=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(t){document.addEventListener(t,a,!1)})}l(s)}},{}],27:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){return a(16)}function i(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,o=window.crypto||window.msCrypto;o&&o.getRandomValues&&Uint8Array&&(n=o.getRandomValues(new Uint8Array(31)));for(var i=[],a=0;a<t;a++)i.push(e().toString(16));return i.join("")}e.exports={generateUuid:r,generateSpanId:o,generateTraceId:i}},{}],28:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}e.exports={agent:o,version:i,match:r}},{}],29:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[o]?"hidden":"visible")}"addEventListener"in document&&i&&document.addEventListener(i,e,!1)}e.exports=r;var o,i,a;"undefined"!=typeof document.hidden?(o="hidden",i="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",i="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",i="webkitvisibilitychange",a="webkitVisibilityState")},{}],30:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],31:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],32:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,o,i,a){if(a!==!1&&(a=!0),!l.aborted||i){t&&a&&t(n,r,o);for(var s=e(o),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var p=d[y[n]];return p&&p.push([x,n,r,s]),s}}function i(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return p[t]=p[t]||o(n)}function w(t,e){l.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:i,addEventListener:i,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:s,aborted:!1};return x}function i(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",f=t("gos"),u=t(30),d={},p={},l=e.exports=o();e.exports.getOrSetContext=i,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!S++){var t=O.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+O.offset],null,"api"),s("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function o(){"complete"===m.readyState&&i()}function i(){s("mark",["domContent",a()+O.offset],null,"api")}var a=t(24),s=t("handle"),c=t(30),f=t("ee"),u=t(28),d=t(25),p=t(21),l=p.getConfiguration("ssl")===!1?"http":"https",h=window,m=h.document,v="addEventListener",w="attachEvent",g=h.XMLHttpRequest,y=g&&g.prototype,x=!d(h.location);NREUM.o={ST:setTimeout,SI:h.setImmediate,CT:clearTimeout,XHR:g,REQ:h.Request,EV:h.Event,PR:h.Promise,MO:h.MutationObserver};var b=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1211.min.js"},R=g&&y&&y[v]&&!/CriOS/.test(navigator.userAgent),O=e.exports={offset:a.getLastTimestamp(),now:a,origin:b,features:{},xhrWrappable:R,userAgent:u,disabled:x};if(!x){t(20),t(26),m[v]?(m[v]("DOMContentLoaded",i,!1),h[v]("load",r,!1)):(m[w]("onreadystatechange",o),h[w]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var S=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var i,a,u,p;try{a=this,i=d(arguments),u="function"==typeof r?r(i,a):r||{}}catch(l){o([l,"",[i,a,c],u],t)}s(n+"start",[i,a,c],u,f);try{return p=e.apply(a,i)}catch(h){throw s(n+"err",[i,a,h],u,f),h}finally{s(n+"end",[i,a,p],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,i(e,nrWrapper,t),nrWrapper)}function r(t,e,r,o,i){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,o,c,i))}function s(n,r,i,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,i,e,a)}catch(c){o([c,n,r,i],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=p,n}function o(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function i(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(i){o([i],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function s(t,e){var n=e(t);return n[p]=t,i(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(31),p="nr@original",l=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,17,5,3,4]);</script><link href="https://img.wine.com.br/fenix/image/_big_bang/icons/favicon/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+<meta name="apple-mobile-web-app-title" content="Wine">
+<link rel="apple-touch-icon-precomposed" href="https://img.wine.com.br/fenix/image/_big_bang/icons/favicon/apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" href="https://img.wine.com.br/fenix/image/_big_bang/icons/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="apple-touch-icon-precomposed" href="https://img.wine.com.br/fenix/image/_big_bang/icons/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="apple-touch-icon-precomposed" href="https://img.wine.com.br/fenix/image/_big_bang/icons/favicon/mstile-150x150.png" sizes="150x150">
+<link rel="apple-touch-icon-precomposed" href="https://img.wine.com.br/fenix/image/_big_bang/icons/favicon/android-chrome-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="https://img.wine.com.br/fenix/image/_big_bang/icons/favicon/android-chrome-256x256.png" sizes="256x256">
+<link rel="stylesheet" href="https://www.wine.com.br/template-resources/css/reset.css" />
+<link rel="stylesheet" href="/template-resources/build/header_responsive.css" />
+<!--[if lt IE 9]>
+<script src="https://www.wine.com.br/template-resources/build/obfuscated/iehtml5.js"></script>
+<![endif]-->
+
+<script src="https://www.wine.com.br/template-resources/build/obfuscated/jquery-1.7.min.js"></script>
+<!--script src="https://www.wine.com.br/template-resources/build/obfuscated/jquery-3.4.1.min.js"></script-->
+
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i&display=swap" rel="stylesheet" crossorigin>
+
+<style>
+  .async-hide {
+    opacity: 0 !important
+  }
+  .Button {
+    height: 46px !important;
+  }
+</style>
+
+<script>
+  (function (a, s, y, n, c, h, i, d, e) {
+    s.className += ' ' + y; h.start = 1 * new Date;
+    h.end = i = function () { s.className = s.className.replace(RegExp(' ?' + y), '') };
+    (a[n] = a[n] || []).hide = h; setTimeout(function () { i(); h.end = null }, c); h.timeout = c;
+  })(window, document.documentElement, 'async-hide', 'dataLayer', 4000,
+{ 'GTM-NS39JSJ': true });</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics comment -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-5733415-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-5733415-1',{ 'optimize_id': 'GTM-NS39JSJ'});
+</script>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5D87B2D" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+      'gtm.start':
+      new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+    '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-5D87B2D');
+</script>
+<!-- End Google Tag Manager -->
+
+<script>
+  var recaptchaSiteKey = "6LdMbhoUAAAAAEZ-N7LuniyxlOhVAestWjkRwqqX";
+</script>
+
+<!-- #cookie privacy -->
+<link rel="stylesheet" type="text/css" href="https://cdn-prod.securiti.ai/consent/cookie-consent.css" />
+<script type="text/javascript" src="https://cdn-prod.securiti.ai/consent/sdk-stub.js" defer></script>
+<script>
+    (function () {
+        var _verifyAmbient = window.location.hostname;
+        var _temporalAmbient = _verifyAmbient.split('.')
+        var _domain_UUID ='';
+        var _autoBlock = '';
+        if(_temporalAmbient[0] === 'www') {
+          _domain_UUID = '7a11d093-6dea-4fd9-91c9-0b01f648de72';
+          _autoBlock = 'https://cdn-prod.securiti.ai/consent/auto_blocking/7b963bf3-83ff-4513-973a-34015862a31a/7a11d093-6dea-4fd9-91c9-0b01f648de72.js'
+        } else {
+          _domain_UUID = 'f07cfa32-f54b-4ef3-99dc-fefd3922c874';
+          _autoBlock = 'https://cdn-prod.securiti.ai/consent/auto_blocking/7b963bf3-83ff-4513-973a-34015862a31a/f07cfa32-f54b-4ef3-99dc-fefd3922c874.js';
+        }
+
+        var s = document.createElement('script');
+        s.src = 'https://cdn-prod.securiti.ai/consent/cookie-consent-sdk.js';
+        s.setAttribute('data-tenant-uuid', '7b963bf3-83ff-4513-973a-34015862a31a');
+        s.setAttribute('data-domain-uuid', _domain_UUID);
+        s.setAttribute('data-backend-url', 'https://app.securiti.ai');
+        s.defer = true;
+        var parent_node = document.head || document.body;
+        parent_node.appendChild(s);
+        s.addEventListener('load', function() { window.initCmp(); });
+
+
+        var g = document.createElement('script');
+        g.src = _autoBlock;
+        g.type = 'text/javascript';
+        var _firstNode = document.head;
+        _firstNode.appendChild(g)
+
+    })()
+  </script>
+<!-- #cookie privacy -->
+
+<script>
+  function getPrivacyUrlFromWine() {
+    var _initialUrl = window.location.hostname
+    var _temporalUrl = _initialUrl.split('.')
+    _temporalUrl[0] = 'privacidade'
+    _initialUrl = "https://" + _temporalUrl.join('.')
+    window.location = _initialUrl
+  }
+</script>
+  <!--:Default Header-->
+
+  <title>Lojas Oficiais: vinícolas e produtores de vinho exclusivos | Wine</title>
+  <meta name="title" content="Lojas Oficiais: vinícolas e produtores de vinho exclusivos | Wine" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Descubra a história por trás dos principais rótulos da Wine, conheça as características das regiões vitivinícolas e aprenda a harmonizar cada um dos vinhos!" />
+  <meta name="keywords" content="vinhos, wine.com.br">
+
+  <!--Facebook:-->
+  <meta property="og:title" content="Conhece nossos produtores exclusivos? 🍷 | Wine" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.wine.com.br/loja/produtor/" />
+  <meta property="og:description" content="Confira as lojas oficiais e descubra a história de rótulos queridinhos, as principais regiões vitivinícolas do mundo e harmonizações incríveis! Acesse." />
+  <meta property="og:image" content="/loja/produtor/build/img/capa-lojas-oficiais.jpg" />
+  <!--:Facebook-->
+
+  <!--Twitter cards:-->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@wine_vinhos" />
+  <meta name="twitter:title" content="Conhece nossos produtores exclusivos? 🍷 | Wine" />
+  <meta name="twitter:description" content="Confira as lojas oficiais e descubra a história de rótulos queridinhos, as principais regiões vitivinícolas do mundo e harmonizações incríveis! Acesse." />
+  <meta name="twitter:creator" content="@wine_vinhos" />
+  <meta name="twitter:image:src" content="/loja/produtor/build/img/capa-lojas-oficiais.jpg" />
+  <meta name="twitter:domain" content="wine.com.br" />
+  <!--:Twitter cards-->
+
+  <!--Styles:-->
+  <link rel="stylesheet" href="/-resources/plugins/slick/1.8.0/slick.css">
+  <link rel="stylesheet" href="/-resources/plugins/slick/1.8.0/slick-theme.css">
+  <link rel="stylesheet" href="./build/css/home-style.css" />
+  <!--:Styles-->
+
+  <!--:HEADER-->
+
+</head>
+
+<body>
+  <div class="vue-header">
+    <header-responsive></header-responsive>
+  </div>
+
+  <!--HOTSITE: -->
+  <section id="hotsite" class="is-home">
+
+    <section class="topo">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1 style="display:none">Lojas <strong>oficiais</strong></h1>
+            <a href="https://www.wine.com.br/loja/produtor/" target="_blank">
+              <img class="img-responsive center-block" src="/loja/produtor/build/img/lojas-oficiais-logo.png" alt="Logotipo das lojas oficiais" class="centralizar-bloco">
+            </a>
+          </div>
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+            <p class="subtitulo-sessao centralizar visible-xs">Mais que uma bebida, para eles, o vinho é uma grande paixão. Conheça produtores exclusivos das melhores regiões vitivinícolas do mundo.</p>
+            <p class="subtitulo-sessao centralizar hidden-xs">Mais que uma bebida, para eles, o vinho é uma grande paixão. <br />Conheça produtores exclusivos das melhores regiões vitivinícolas do mundo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lojas">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2 class="titulo-sessao">Em destaque</h2>
+          </div>
+        </div>
+      </div>
+      <div class="container container-box-destaque">
+        <div class="box-destaque-wrapper row">
+        </div>
+        <div class="box-destaque-wrapper mobile row">
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 box-ordenar">
+            <p>
+              <span class="title">Ordenar por</span>
+              <span class="nav">
+                <span><a href="javascript:void(0)" class="cta inverso pais sort" data-sort="paisLoja">País</a></span>
+                <span><a href="javascript:void(0)" class="cta inverso alfabetica sort" data-sort="tituloLoja">Ordem Alfabética</a> </span>
+              </span>
+            </p>
+            <hr>
+          </div>
+        </div>
+        <div>
+          <div class="box-wrapper row">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footerBottons">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <a class="BackArrow" href="javascript:void(0);">Voltar ao topo</a>
+            <!-- <a class="BackArrow hidden-xs" href="javascript:void(0);">Voltar ao topo</a>
+              <a class="MoreArrow visible-xs" href="javascript:void(0);">Ver mais</a> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </section>
+  <!--:HOTSITE -->
+
+  
+<link rel="stylesheet" href="/-resources/estaticos/css/footer.css">
+<link rel="stylesheet" href="/-resources/estaticos/css/conflitos-ep-mkt.css?v=1">
+
+<div class="Footer is-desktop">
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-xs-2">
+        <nav class="MenuList">
+          <a class="MenuList-title MenuList-title--link" href="/">LOJA</a>
+          <ul class="MenuList-list">
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/vinhos/cVINHOS-p1.html">Vinhos</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/outras-bebidas/cOUTRAS_BEBIDAS-p1.html" title="Veja também outras opções na Wine!">Outras bebidas</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="col-xs-2">
+        <nav class="MenuList">
+          <a class="MenuList-title MenuList-title--link" href="/clubewine/">CLUBE WINE</a>
+          <ul class="MenuList-list">
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/clubewine/">Como funciona</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/minha-wine/indique/">Indique Amigos</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/clubewine/essenciais/">WineBox Essenciais</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/clubewine/surpreendentes/">WineBox Surpreendentes</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/clubewine/notaveis/">WineBox Notáveis</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/clubewine/singulares/">WineBox Singulares</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/clubewine/espumantes/">WineBox Espumantes</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/clubewine/refrescantes/">WineBox Refrescantes</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="col-xs-2">
+        <nav class="MenuList">
+          <a class="MenuList-title MenuList-title--link" href="/minha-wine">MINHA CONTA</a>
+          <ul class="MenuList-list">
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/minha-wine#/dados-pessoais">Dados pessoais</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/minha-wine/pedidos">Pedidos</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/minha-wine/cartoes">Cartões</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/minha-wine/enderecos">Endereços</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/minha-wine/clubew" alt="Clube Wine">Clube Wine</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/minha-wine/listas">Favoritos</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/minha-wine/cupons">Cupons</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/minha-wine/presentes">Presentes</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/minha-wine/indique">Indique amigos</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="col-xs-2">
+        <nav class="MenuList">
+          <a class="MenuList-title MenuList-title--link" href="/institucional/">CONHEÇA TAMBÉM</a>
+          <ul class="MenuList-list">
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/institucional/" target="_blank">Institucional</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/trabalheconosco" target="_blank">Trabalhe na Wine</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="https://www.wineeventos.com.br" target="_blank">Wine Eventos</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="https://www.bodegaswine.com.br/" target="_blank">Bodegas</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="https://www.winepedia.com.br" target="_blank">Winepedia</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="https://www.teamwine.com.br" target="_blank">Team Wine</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/loja/produtor/">Lojas Oficiais</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="https://www.wine.com.br/institucional/assessoria-de-imprensa/">Assessoria de Imprensa</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/institucional/wineup/">WineUP</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="/institucional/politica-de-privacidade/">Política de Privacidade</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="javascript:void" title="Preferência de Cookies" role="button" onclick="showConsentPreferencesPopup()">Preferência de Cookies</a>
+            </li>
+            <li class="MenuList-listItem">
+              <a class="MenuList-link" href="javascript:void" title="Exerça Seus Direitos" role="button" onclick="getPrivacyUrlFromWine()">Exerça Seus Direitos</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="col-xs-4">
+        <div class="row Footer__padding">
+          <div class="col-xs-12">
+            <h3 class="Footer__text--big">Alguma dúvida? A gente ajuda você!</h3>
+            <h4 class="Footer__text">Horários de atendimento:</h4>
+            <p class="Footer__text">De segunda a sexta-feira de 09h às 18h. Exceto feriados.</p>
+            <div class="Footer__box">
+              <a class="Footer__text--link" href="https://centraldeajuda.wine.com.br/" target="_blank">CENTRAL DE AJUDA</a>
+            </div>
+          </div>
+          <hr class="Footer__separator">
+          <div class="col-xs-12">
+            <div>
+              <a class="Footer__social-media-icon" href="http://www.facebook.com/wine.vinhos" title="Página da Wine no Facebook" target="target">
+                <img src="https://img.wine.com.br/fenix/image/_big_bang/icons/icon-facebook-pink.svg" alt="Logo do Facebook">
+              </a>
+
+              <a class="Footer__social-media-icon" href="http://twitter.com/wine_vinhos" title="Página da Wine no Twitter" target="target">
+                <img src="https://img.wine.com.br/fenix/image/_big_bang/icons/icon-twitter-pink.svg" alt="Logo do Twitter">
+              </a>
+
+              <a class="Footer__social-media-icon" href="http://www.instagram.com/winevinhos" title="Página da Wine no Instagran" target="target">
+                <img src="https://img.wine.com.br/fenix/image/_big_bang/icons/icon-instagran-pink.svg" alt="Logo do Instagran">
+              </a>
+
+              <a class="Footer__social-media-icon" href="https://www.youtube.com/user/WineVinhos" title="Página da Wine no Youtube" target="target">
+                <img src="https://img.wine.com.br/fenix/image/_big_bang/icons/icon-youtube-pink.svg" alt="Logo do Youtube">
+              </a>
+            </div>
+          </div>
+          <div class="col-xs-12 MenuList-app">
+            <h3>Baixe o app!</h3>
+            <ul class="MenuList-list">
+              <li class="MenuList-listItem">
+                <a class="MenuList-link AppStores" href="https://apps.apple.com/br/app/id1411629873" target="target">
+                  <img src="https://img.wine.com.br/fenix/image/_big_bang/buttons/button-apple-play.png" alt="Botão Apple Store" />
+                </a>
+              </li>
+              <li class="MenuList-listItem">
+                <a class="MenuList-link AppStores" href="https://play.google.com/store/apps/details?id=br.com.wine.app&referrer=utm_source%3Dbanner-topo%26utm_medium%3Dsite%26utm_campaign%3Dinstitucional" target="target">
+                  <img src="https://img.wine.com.br/fenix/image/_big_bang/buttons/button-google-play.png" alt="Botão Google Play" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="Footer__separator --is-full">
+
+  <div class="container Footer__box-bottom">
+    <div class="row">
+      <div class="col-xs-6">
+        <a class="Logo" href="https://www.wine.com.br/">
+          <img class="Logo-image" src="https://img.wine.com.br/fenix/image/_big_bang/logos/logo_w.svg">
+        </a>
+        <div class="Footer__box-text">
+          <h3>W2W E-Commerce de Vinhos S.A</h3>
+          <p>CNPJ: 09.813.204/0002-05</p>
+        </div>
+        <address class="Footer__box-text Footer__box-right">
+          <p>Rua Comendador Alcides Simão Helou, 1478</p>
+          <p>Serra - ES - CEP 29168-090</p>
+        </address>
+      </div>
+      <div class="col-xs-6">
+        <div class="Enjoy">
+          SE BEBER, NÃO DIRIJA. APRECIE COM MODERAÇÃO. A VENDA DE BEBIDAS ALCOÓLICAS É PROIBIDA PARA MENORES DE 18 ANOS.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer is-mobile">
+  <div class="container">
+    <div class="row">
+      <section class="col-xs-12 footer__info">
+        <div class="row">
+          <div class="col-xs-12 footer__info-text">
+            <p class="footer__info-text--big">Alguma dúvida? A gente ajuda você!</p>
+            <p class="footer__info-text--bold footer__info-text--gray">Horários de atendimento:</p>
+            <p class="footer__info-text--gray">De segunda a sexta-feira de 08h às 18h. Exceto feriados.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 footer__info-link">
+          <a href="https://centraldeajuda.wine.com.br" title="Central de Ajuda" target="_blank">CENTRAL DE AJUDA</a>
+        </div>
+        <div class="col-xs-12 footer__info-link">
+          <a href="https://wine.gupy.io" title="Trabalhe na Wine" target="_blank">TRABALHE NA WINE</a>
+        </div>
+        <div class="col-xs-12 footer__info-link">
+          <a href="https://www.wine.com.br/institucional/assessoria-de-imprensa/" title="Assessoria de Imprensa" target="_blank">ASSESSORIA DE IMPRENSA</a>
+        </div>
+        <div class="col-xs-12 footer__info-link">
+          <a href="https://www.wine.com.br/institucional/politica-de-privacidade/" title="Política de privacidade da Wine" target="_blank">POLÍTICA DE PRIVACIDADE</a>
+        </div>
+        <div class="col-xs-12 footer__info-link">
+          <a href="javascript:void" role="button" onclick="showConsentPreferencesPopup()" title="Preferência de Cookies">PREFERÊNCIA DE COOKIES</a>
+        </div>
+        <div class="col-xs-12 footer__info-link">
+          <a href="javascript:void" role="button" onclick="getPrivacyUrlFromWine()" title="Exerça Seus Direitos">EXERÇA SEUS DIREITOS</a>
+        </div>
+      </section>
+
+      <hr class="footer__separator">
+
+      <section class="col-xs-12 footer__social-media">
+
+        <a class="footer__social-media-icon" href="http://www.facebook.com/wine.vinhos" title="Página da Wine no Facebook" target="target">
+          <img src="https://img.wine.com.br/fenix/image/_big_bang/icons/icon-facebook-pink.svg" alt="Logo do Facebook">
+        </a>
+
+        <a class="footer__social-media-icon" href="http://twitter.com/wine_vinhos" title="Página da Wine no Twitter" target="target">
+          <img src="https://img.wine.com.br/fenix/image/_big_bang/icons/icon-twitter-pink.svg" alt="Logo do Twitter">
+        </a>
+
+        <a class="footer__social-media-icon" href="http://www.instagram.com/winevinhos" title="Página da Wine no Instagran" target="target">
+          <img src="https://img.wine.com.br/fenix/image/_big_bang/icons/icon-instagran-pink.svg" alt="Logo do Instagran">
+        </a>
+
+        <a class="footer__social-media-icon" href="https://www.youtube.com/user/WineVinhos" title="Página da Wine no Youtube" target="target">
+          <img src="https://img.wine.com.br/fenix/image/_big_bang/icons/icon-youtube-pink.svg" alt="Logo do Youtube">
+        </a>
+
+      </section>
+
+      <hr class="footer__separator">
+
+      <section class="col-xs-12 footer__apps">
+        <h4 class="footer__apps-text">Baixe o app!</h4>
+        <div class="footer__apps-area">
+          <a class="footer__apps-box" href="https://play.google.com/store/apps/details?id=br.com.wine.app&referrer=utm_source%3Dbanner-topo%26utm_medium%3Dsite%26utm_campaign%3Dinstitucional" title="Wine App na Google Play" target="_blank">
+            <img class="footer__apps-img" src="https://img.wine.com.br/fenix/image/_big_bang/buttons/button-google-play.png" alt="Botão Google Play">
+          </a>
+          <a class="footer__apps-box" href="https://apps.apple.com/br/app/id1411629873" title="Wine App na Apple Store" target="_blank">
+            <img class="footer__apps-img" src="https://img.wine.com.br/fenix/image/_big_bang/buttons/button-apple-play.png" alt="Botão Apple Store">
+          </a>
+        </div>
+      </section>
+
+      <hr class="footer__separator">
+
+      <section class="col-xs-12 footer__address">
+        <h3 class="footer__address-title">
+          <p>W2W E-Commerce de Vinhos S.A</p>
+          <p>CNPJ: 09.813.204/0002-05</p>
+        </h3>
+        <address class="footer__address-text">
+          <p>Rua Comendador Alcides Simão Helou,</p>
+          <p>1478, Serra - ES - CEP 29168-090</p>
+        </address>
+      </section>
+
+      <section class="col-xs-12 footer__alert">
+        <p>
+          SE BEBER, NÃO DIRIJA. APRECIE COM MODERAÇÃO. A VENDA DE BEBIDAS ALCOÓLICAS É PROIBIDA PARA MENORES DE 18 ANOS.
+        </p>
+      </section>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "Wine.com.br",
+        "legalName": "W2W E-Commerce de Vinhos S.A",
+        "url": "https://www.wine.com.br/",
+        "logo": "https://img.wine.com.br/fenix/image/wine-logo.svg",
+        "foundingDate": "2008",
+        "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Manoel Feu Subtil 60",
+        "addressLocality": "Vitória",
+        "addressRegion": "ES",
+        "postalCode": "29050-400",
+        "addressCountry": "BR"
+    },
+    "contactPoint": [
+    {
+        "@type": "ContactPoint",
+        "telephone": "+55-0800-602-9463",
+        "contactType": "customer service",
+        "contactOption": "TollFree",
+        "areaServed": "BR"
+    },
+    {
+        "@type": "ContactPoint",
+        "telephone": "+55-27-3202-2600",
+        "contactType": "Sales"
+    }
+    ],
+    "sameAs": [
+    "https://www.facebook.com/wine.vinhos",
+    "https://twitter.com/wine_vinhos",
+    "https://www.instagram.com/winevinhos/",
+    "https://www.youtube.com/user/WineVinhos"
+    ]
+}
+</script>
+
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "url": "https://www.wine.com.br/",
+        "name": "Wine.com.br",
+        "description": "Busca de vinhos na Wine.com.br",
+        "publisher": "Wine",
+        "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.wine.com.br/search.ep?keyWords={search_term_string}",
+        "query-input": "required name=search_term_string"
+    }
+}
+</script>
+
+<script>
+
+    function gup (sParam) {
+        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : sParameterName[1];
+            }
+        }
+    };
+
+    /* definições globais  */
+
+    var baseUrl = "",
+    customer = null,
+    shoppingCart = null,
+    customerSignature = null,
+    baseUrlResources = "/template-resources/",
+    // Global customerObject
+    customerObject = null,
+    /* Objetos Globais */
+    customerInfo = {
+        customer: null,
+        isCommentAllowed: false
+    },
+    usuarioLogadoEmail,
+    isAutocompleteEnabled = true,
+    isSearchSuggestionEnabled = true,
+    /* Funções globais  */
+    loggedCustomer = null,
+    urlStore = "wine.com.br",
+    production = "wine.com.br",
+    uat = "mysql.winevinhos.info";
+</script>
+
+<script type="text/x-jquery-tmpl" id="modalMsgDialog">
+    <p class="erroModal">
+        <span>
+            ${title}:
+        </span>
+        <span>
+            ${msg}
+        </span>
+    </p>
+</script>
+
+
+<script type="text/javascript" src="/-resources/estaticos/js/mediator.min.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/template-resources/build/obfuscated/modernizr.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/template-resources/build/obfuscated/util.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/template-resources/build/obfuscated/exceptions.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/template-resources/build/obfuscated/analytics.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/template-resources/build/obfuscated/handlebars.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/template-resources/build/obfuscated/novo/scripts.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/template-resources/build/obfuscated/moment.min.js"></script>
+
+
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/cadastroNewsletterAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/engine.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/util.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/template-resources/build/obfuscated/dwrSendData.js?"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/shoppingCartAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/customerAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/clubeAssinaturaAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/template-resources/build/obfuscated/customerService.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/template-resources/build/obfuscated/shoppingCartService.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/template-resources/build/obfuscated/dateformat.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/commentAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/productAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/productSuggestionAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/listaAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/searchSuggestionAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/replyAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/clubeAssinaturaAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/clubePrimeAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/autocompleteSearchResultAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/recommendationAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/faixaCepPrazoEntregaAjaxController.js"></script>
+<script type="text/javascript" src="https://www.wine.com.br/dwr/interface/promotionAjaxController.js"></script>
+
+
+<script src="https://www.wine.com.br/template-resources/build/obfuscated/login.js"></script>
+<script src="https://www.wine.com.br/template-resources/build/obfuscated/cart.js"></script>
+
+
+<script src="//selo.siteblindado.com/aw.js"></script>
+
+
+
+<script src="https://www.wine.com.br/template-resources/build/desktop/search.js"></script>
+
+
+<script src="/-resources/estaticos/js/scripts-footer.js"></script>
+
+<script type="text/javascript">
+    var originSearch = null;
+</script>
+
+<script src="https://www.wine.com.br/template-resources/build/commons.bundle.js"></script>
+<script src="https://www.wine.com.br/template-resources/build/header_responsive.bundle.js"></script>
+
+
+<script type="text/javascript">
+    //APPSFLYER
+    !function(t,e,n,s,a,c,i,o,p){t.AppsFlyerSdkObject=a,t.AF=t.AF||function(){
+    (t.AF.q=t.AF.q||[]).push([Date.now()].concat(Array.prototype.slice.call(arguments)))},
+    t.AF.id=t.AF.id||i,t.AF.plugins={},o=e.createElement(n),p=e.getElementsByTagName(n)[0],o.async=1,
+    o.src="https://websdk.appsflyer.com?"+(c.length>0?"st="+c.split(",").sort().join(",")+"&":"")+(i.length>0?"af_id="+i:""),
+    p.parentNode.insertBefore(o,p)}(window,document,"script",0,"AF", "pba,banners",{pba: {webAppId: "183ff3b5-3c41-473d-ad31-aa240af811bb"}, banners: {key: "87f670a0-40a7-4f2a-be22-ed32cfba4215"}});
+    AF('banners', 'showBanner')
+</script>
+
+<script type="text/javascript">
+    //AMPLITUDE
+    (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script")
+    ;r.type="text/javascript"
+    ;r.integrity="sha384-vYYnQ3LPdp/RkQjoKBTGSq0X5F73gXU3G2QopHaIfna0Ct1JRWzwrmEz115NzOta"
+    ;r.crossOrigin="anonymous";r.async=true
+    ;r.src="https://cdn.amplitude.com/libs/amplitude-5.8.0-min.gz.js"
+    ;r.onload=function(){if(!e.amplitude.runQueuedFunctions){
+    console.log("[Amplitude] Error: could not load SDK")}}
+    ;var i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)
+    ;function s(e,t){e.prototype[t]=function(){
+    this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
+    var o=function(){this._q=[];return this}
+    ;var a=["add","append","clearAll","prepend","set","setOnce","unset"]
+    ;for(var u=0;u<a.length;u++){s(o,a[u])}n.Identify=o;var c=function(){this._q=[]
+    ;return this}
+    ;var l=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"]
+    ;for(var p=0;p<l.length;p++){s(c,l[p])}n.Revenue=c
+    ;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId", "enableTracking", "setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","groupIdentify","onInit","logEventWithTimestamp","logEventWithGroups","setSessionId","resetSessionId"]
+    ;function v(e){function t(t){e[t]=function(){
+    e._q.push([t].concat(Array.prototype.slice.call(arguments,0)))}}
+    for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){
+    e=(!e||e.length===0?"$default_instance":e).toLowerCase()
+    ;if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]}
+    ;e.amplitude=n})(window,document);
+
+    amplitude.getInstance().init("0190d0ed4e5dfc4f278380e27eafea90");
+</script>
+
+<script type="text/javascript">
+    //CLEVERTAP
+    var clevertap = { event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[] };
+    clevertap.account.push({"id": "TEST-K95-WK8-R85Z"});
+    clevertap.privacy.push({optOut: false});
+    clevertap.privacy.push({useIP: false});
+    (function () {
+        var wzrk = document.createElement('script');
+        wzrk.type = 'text/javascript';
+        wzrk.async = true;
+        wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wzrk, s);
+    })();
+</script>
+
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationID":"21342671","applicationTime":111,"beacon":"bam-cell.nr-data.net","queueTime":0,"licenseKey":"dca4d478ee","transactionName":"MVBVNkMCD0cDUhYICQgafTFhTA1bCFBNERQJUUIWXhFOXQxVBxlIDEZH","agent":"","errorBeacon":"bam-cell.nr-data.net"}</script></body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Scripts -->
+  <script src="/-resources/plugins/slick/1.8.0/slick.min.js"></script>
+  <script src="./build/js/lojas-oficiais.js"></script>
+  <script src="./build/js/scripts.js"></script>
+  <!-- Scripts -->
+
+</html>
