@@ -20,6 +20,7 @@ def classify_crawler_samples(clf: DocumentClassifier, folder: str):
         non_insts = [res[0] for res in results if res[1] == DocumentClass.NON_INSTANCE]
         overall_positive += len(insts)
         overall_total += (len(insts) + len(non_insts))
+        print(len(insts), insts)
         print(f'positive / total = {len(insts)} / {(len(insts) + len(non_insts))} = {len(insts) / (len(insts) + len(non_insts))}')
 
     print(f'positive / total = {overall_positive} / {overall_total} = {overall_positive / overall_total}')
