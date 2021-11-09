@@ -60,7 +60,6 @@ class Corpus:
             return_corpus = Corpus(self.documents)
 
         for stop_word in nltk_stopwords.words('portuguese'):
-            print(stop_word)
             try:
                 del return_corpus.vocabulary[stop_word]
             except KeyError:

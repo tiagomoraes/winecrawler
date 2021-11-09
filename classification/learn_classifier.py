@@ -23,31 +23,31 @@ def classify_crawler_samples(clf: DocumentClassifier, folder: str):
 def main():
     inst_dir = os.path.join(cd, 'samples/samples_pages')
     non_inst_dir = os.path.join(cd, 'samples/nonsamples_pages')
-    corpus = load_corpus(inst_dir, non_inst_dir).drop_stop_words()
+    corpus = load_corpus(inst_dir, non_inst_dir)
 
-    print('\nFrequent words:')
-    for token in corpus.vocabulary:
-        occurrences = corpus.vocabulary[token].get_all_docs()
-        frequencies = corpus.vocabulary[token].get_total_freq()
-        total_docs = len(corpus.documents)
-        if total_docs * .4 < len(occurrences):
-            print("{} = {}, {}".format(token, occurrences, frequencies))
+    # print('\nFrequent words:')
+    # for token in corpus.vocabulary:
+    #     occurrences = corpus.vocabulary[token].get_all_docs()
+    #     frequencies = corpus.vocabulary[token].get_total_freq()
+    #     total_docs = len(corpus.documents)
+    #     if total_docs * .4 < len(occurrences):
+    #         print("{} = {}, {}, {}".format(token, occurrences, len(occurrences), frequencies))
 
     most_frequent_words_selector = MostFrequentWordsExtractor(corpus)
     doc_frequency_diff_selector = DocFrequencyDifferenceExtractor(corpus)
     plain_frequency_diff_selector = PlainFrequencyDifferenceExtractor(corpus)
     mixed_frequency_diff_selector = MixedFrequencyDifferenceExtractor(corpus)
 
-    n_features = 50
-    print('')
-    print("MostFrequentWordsExtractor: {}".format(most_frequent_words_selector.get_feature_words(n_features)))
-    print()
-    print("DocFrequencyDifferenceExtractor: {}".format(doc_frequency_diff_selector.get_feature_words(n_features)))
-    print()
-    print("PlainFrequencyDifferenceExtractor: {}".format(plain_frequency_diff_selector.get_feature_words(n_features)))
-    print()
-    print("MixedFrequencyDifferenceExtractor: {}".format(mixed_frequency_diff_selector.get_feature_words(n_features)))
-    print()
+    # n_features = 50
+    # print('')
+    # print("MostFrequentWordsExtractor: {}".format(most_frequent_words_selector.get_feature_words(n_features)))
+    # print()
+    # print("DocFrequencyDifferenceExtractor: {}".format(doc_frequency_diff_selector.get_feature_words(n_features)))
+    # print()
+    # print("PlainFrequencyDifferenceExtractor: {}".format(plain_frequency_diff_selector.get_feature_words(n_features)))
+    # print()
+    # print("MixedFrequencyDifferenceExtractor: {}".format(mixed_frequency_diff_selector.get_feature_words(n_features)))
+    # print()
 
     for i, s in enumerate([doc_frequency_diff_selector]):
         print('*************************')
