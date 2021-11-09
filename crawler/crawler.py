@@ -210,8 +210,8 @@ def heuristic_crawl(seed):
 
 
 def main():
-    pool = Pool(10)
-    pool.map(heuristic_crawl, seeds)
+    pool = Pool(1)
+    pool.map(bfs_crawl, seeds)
     pool.close()
     pool.join()
 
