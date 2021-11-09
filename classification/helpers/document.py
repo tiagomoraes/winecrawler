@@ -23,7 +23,7 @@ class Document:
     def __build_doc_vocabulary(self):
         parser = BeautifulSoup(self.raw_doc, 'html.parser')
 
-        clean_up_tags = ['scripts', 'style']
+        clean_up_tags = ['scripts', 'style', 'meta']
 
         # Remove tags from document
         for clean_up_tag in clean_up_tags:

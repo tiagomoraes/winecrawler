@@ -60,6 +60,7 @@ class Corpus:
             return_corpus = Corpus(self.documents)
 
         for stop_word in nltk_stopwords.words('portuguese'):
+            print(stop_word)
             try:
                 del return_corpus.vocabulary[stop_word]
             except KeyError:
@@ -72,6 +73,7 @@ class Corpus:
         if stats is None:
             self.vocabulary[word] = CorpusTokenStats()
         return self.vocabulary[word]
+
 
 if __name__ == '__main__':
     doc_1 = Document.load_from_url('https://www.vivavinho.com.br/vinho-rose-italiano-wave-rosato-igt-750ml/p', DocumentClass.INSTANCE)
