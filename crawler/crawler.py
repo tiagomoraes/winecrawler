@@ -9,16 +9,18 @@ from time import sleep
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-seeds=[('divinho', 'https://www.divinho.com.br'), 
-('divvino', 'https://www.divvino.com.br'), 
-('evino', 'https://www.evino.com.br'),
-('grandcru', 'https://www.grandcru.com.br'),
-('mistral', 'https://www.mistral.com.br'),
-('superadega', 'https://www.superadega.com.br'),
-('viavini', 'https://www.viavini.com.br'),
-('vinhofacil', 'https://www.vinhofacil.com.br'),
-('vivavinho', 'https://www.vivavinho.com.br'),
-('wine', 'https://www.wine.com.br')]
+# seeds=[('divinho', 'https://www.divinho.com.br'), 
+# ('divvino', 'https://www.divvino.com.br'), 
+# ('evino', 'https://www.evino.com.br'),
+# ('grandcru', 'https://www.grandcru.com.br'),
+# ('mistral', 'https://www.mistral.com.br'),
+# ('superadega', 'https://www.superadega.com.br'),
+# ('viavini', 'https://www.viavini.com.br'),
+# ('adegamais', 'https://adegamais.com.br'),
+# ('vivavinho', 'https://www.vivavinho.com.br'),
+# ('wine', 'https://www.wine.com.br')]
+
+seeds = [('adegamais', 'https://adegamais.com.br')]
 
 def process_url(url, root):
     if (url.startswith('/')):

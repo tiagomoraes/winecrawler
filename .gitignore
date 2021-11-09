@@ -153,3 +153,6 @@ sheets_token.pickle
 
 # Scripts
 /scripts
+
+# DS_Store
+.DS_Store
