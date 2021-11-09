@@ -12,8 +12,6 @@ def classify_crawler_samples(clf: DocumentClassifier, folder: str):
     overall_positive = 0
     overall_total = 0
     for site_root in os.listdir(folder):
-        positive = 0
-        total = 0
         root_folder = os.path.join(folder, site_root)
         print(f' Calculating for {root_folder}')
         docs = load_documents(root_folder)
@@ -24,7 +22,7 @@ def classify_crawler_samples(clf: DocumentClassifier, folder: str):
         overall_total += (len(insts) + len(non_insts))
         print(f'positive / total = {len(insts)} / {(len(insts) + len(non_insts))} = {len(insts) / (len(insts) + len(non_insts))}')
 
-    print(f'positive / total = {positive} / {total} = {positive / total}')
+    print(f'positive / total = {overall_positive} / {overall_total} = {overall_positive / overall_total}')
 
 
 def main():
@@ -64,23 +62,23 @@ def main():
         dc = DocumentClassifier(s)
 
         print('\nNAIVE_BAYES:')
-        dc.train(corpus.documents, ClassifierType.NAIVE_BAYES, train_size=.7, verbose=True)
+        dc.train(corpus.documents, ClassifierType.NAIVE_BAYES, train_size=.7, verbose=False)
         classify_crawler_samples(dc, './../crawler/bfs_pages')
 
         print('\nDECISION_TREE:')
-        dc.train(corpus.documents, ClassifierType.DECISION_TREE, train_size=.7, verbose=True)
+        dc.train(corpus.documents, ClassifierType.DECISION_TREE, train_size=.7, verbose=False)
         classify_crawler_samples(dc, './../crawler/bfs_pages')
 
         print('\nSVM:')
-        dc.train(corpus.documents, ClassifierType.SVM, train_size=.7, verbose=True)
+        dc.train(corpus.documents, ClassifierType.SVM, train_size=.7, verbose=False)
         classify_crawler_samples(dc, './../crawler/bfs_pages')
 
         print('\nLOGISTIC_REGRESSION:')
-        dc.train(corpus.documents, ClassifierType.LOGISTIC_REGRESSION, train_size=.7, verbose=True)
+        dc.train(corpus.documents, ClassifierType.LOGISTIC_REGRESSION, train_size=.7, verbose=False)
         classify_crawler_samples(dc, './../crawler/bfs_pages')
 
         print('\nMULTILAYER_PERCEPTRON:')
-        dc.train(corpus.documents, ClassifierType.MULTILAYER_PERCEPTRON, train_size=.7, verbose=True)
+        dc.train(corpus.documents, ClassifierType.MULTILAYER_PERCEPTRON, train_size=.7, verbose=False)
         classify_crawler_samples(dc, './../crawler/bfs_pages')
 
 
