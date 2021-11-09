@@ -1,0 +1,488 @@
+MostFrequentWordsExtractor: ['vinho', 'mai', 'r$', 'ver', 'comprar', 'tinto', 'sauvignon', 'cabernet', 'espum', 'todo', 'branco', 'malbec', 'wine', 'saiba', 'pinot', 'paí', 'uva', '750ml', 'chardonnay', 'tipo', 'ponto', 'catena', 'grand', 'política', 'vineyard', 'produto', 'rosé', 'noir', 'reserva', 'del', 'kit', 'blanc', 'chile', 'zapata', 'syrah', 'visualização', 'rápida', 'itália', 'espanha', 'di', 'loja', 'ano', 'pontuado', 'privacidad', 'carrinho', 'frança', 'preço', 'brasil', 'fruta', 'sul']
+
+DocFrequencyDifferenceExtractor: ['teor', 'alcoólico', 'temperatura', 'harmonização', 'mese', 'relacionado', 'ordenar', 'serviço', 'barrica', 'filtrar', 'guarda', 'fruta', 'carvalho', 'aroma', 'ficha', 'prazo', '750ml', 'final', 'visual', 'exclusivo', 'técnica', 'safra', 'boca', 'est', 'disponibilidad', 'volum', 'nota', 'vermelho', 'classificação', 'melhor', 'tanino', 'produto', 'vinícola', 'nariz', 'francê', 'encontrado', 'carn', 'vermelha', 'olfativo', 'a-z', 'região', 'frete', 'toqu', '18°c', 'baixa', 'desconto', 'seco', 'queijo', 'estoqu', 'juro']
+
+PlainFrequencyDifferenceExtractor: ['comprar', 'vinho', 'r$', 'visualização', 'rápida', 'quantidad', 'tinto', 'mai', 'vistamar', 'artigo', 'ver', 'wishlist', 'sauvignon', 'cabernet', 'adicionar', 'espum', 'kit', 'assin', 'branco', 'carrinho', 'yith_wcwl_add_to_wishlist', 'carmen', 'chile', 'niepoort', 'preço', '750ml', 'rosé', 'esporão', 'chardonnay', 'limpar', 'produto', 'reserva', 'vinícola', 'rose', 'est', 'taça', 'melhor', 'região', 'obrigatório', 'esgotado', 'la', 'campo', 'ordenar', 'frança', 'harmonização', 'safra', 'barrica', 'brisa', 'spiegelau', '---']
+
+MixedFrequencyDifferenceExtractor: ['comprar', 'visualização', 'teor', 'harmonização', 'artigo', '750ml', 'mese', 'ordenar', 'temperatura', 'barrica', 'vinho', 'kit', 'ver', 'alcoólico', 'quantidad', 'est', 'produto', 'filtrar', 'vinícola', 'guarda', 'melhor', 'ficha', 'carvalho', 'safra', 'limpar', 'região', 'exclusivo', 'relacionado', 'serviço', 'tinto', 'técnica', 'esgotado', 'rápida', 'seco', 'preço', 'cabernet', 'final', 'branco', 'classificação', 'resultado', 'adicionar', 'espum', 'desconto', 'comentário', 'sauvignon', 'la', 'mai', 'vinhedo', 'fresco', 'carmen']
+
+*************************
+
+Most Frequent Words
+
+NAIVE_BAYES:
+Metrics:
+Confusion matrix:
+[9, 3]
+[22, 27]
+Accuracy: 0.5901639344262295
+Precision: 0.5510204081632653
+Recall: 0.9
+F1-Measure: 0.6835443037974683
+Training took: 0.200358
+
+DECISION_TREE:
+Metrics:
+Confusion matrix:
+[25, 4]
+[6, 26]
+Accuracy: 0.8360655737704918
+Precision: 0.8125
+Recall: 0.8666666666666667
+F1-Measure: 0.8387096774193549
+Training took: 0.223341
+
+SVM:
+Metrics:
+Confusion matrix:
+[15, 9]
+[16, 21]
+Accuracy: 0.5901639344262295,
+Precision: 0.5675675675675675,
+Recall: 0.7,
+F1-Measure: 0.626865671641791,
+Training took: 0.210193,
+
+LOGISTIC_REGRESSION:
+Metrics:
+Confusion matrix:
+[21, 6]
+[10, 24]
+Accuracy: 0.7377049180327869,
+Precision: 0.7058823529411765,
+Recall: 0.8,
+F1-Measure: 0.7500000000000001,
+Training took: 0.261649,
+
+MULTILAYER_PERCEPTRON:
+Metrics:
+Confusion matrix:
+[20, 2]
+[11, 28]
+Accuracy: 0.7868852459016393,
+Precision: 0.717948717948718,
+Recall: 0.9333333333333333,
+F1-Measure: 0.8115942028985509,
+Training took: 2.189233,
+*************************
+
+Doc Frequency Diff
+
+NAIVE_BAYES:
+Metrics:
+Confusion matrix:
+[24, 1]
+[7, 29]
+Accuracy: 0.8688524590163934
+Precision: 0.8055555555555556
+Recall: 0.9666666666666667
+F1-Measure: 0.8787878787878789
+Training took: 0.452479
+
+DECISION_TREE:
+Metrics:
+Confusion matrix:
+[27, 3]
+[4, 27]
+Accuracy: 0.8852459016393442,
+Precision: 0.8709677419354839,
+Recall: 0.9,
+F1-Measure: 0.8852459016393444,
+Training took: 0.525822,
+
+SVM:
+Metrics:
+Confusion matrix:
+[30, 9]
+[1, 21]
+Accuracy: 0.8360655737704918,
+Precision: 0.9545454545454546,
+Recall: 0.7,
+F1-Measure: 0.8076923076923077,
+Training took: 0.496865,
+
+LOGISTIC_REGRESSION:
+Metrics:
+Confusion matrix:
+[27, 1]
+[4, 29]
+Accuracy: 0.9180327868852459,
+Precision: 0.8787878787878788,
+Recall: 0.9666666666666667,
+F1-Measure: 0.9206349206349207,
+Training took: 0.445906,
+
+MULTILAYER_PERCEPTRON:
+Metrics:
+Confusion matrix:
+[27, 1]
+[4, 29]
+Accuracy: 0.9180327868852459,
+Precision: 0.8787878787878788,
+Recall: 0.9666666666666667,
+F1-Measure: 0.9206349206349207,
+Training took: 2.412335,
+*************************
+
+Plain Frequency Diff
+
+NAIVE_BAYES:
+Metrics:
+Confusion matrix:
+[23, 1]
+[8, 29]
+Accuracy: 0.8524590163934426,
+Precision: 0.7837837837837838,
+Recall: 0.9666666666666667,
+F1-Measure: 0.8656716417910447,
+Training took: 0.533508,
+
+DECISION_TREE:
+Metrics:
+Confusion matrix:
+[26, 2]
+[5, 28]
+Accuracy: 0.8852459016393442,
+Precision: 0.8484848484848485,
+Recall: 0.9333333333333333,
+F1-Measure: 0.888888888888889,
+Training took: 0.42303,
+
+SVM:
+Metrics:
+Confusion matrix:
+[21, 5]
+[10, 25]
+Accuracy: 0.7540983606557377,
+Precision: 0.7142857142857143,
+Recall: 0.8333333333333334,
+F1-Measure: 0.7692307692307692,
+Training took: 0.395384,
+
+LOGISTIC_REGRESSION:
+Metrics:
+Confusion matrix:
+[26, 2]
+[5, 28]
+Accuracy: 0.8852459016393442,
+Precision: 0.8484848484848485,
+Recall: 0.9333333333333333,
+F1-Measure: 0.888888888888889,
+Training took: 0.401929,
+
+MULTILAYER_PERCEPTRON:
+Metrics:
+Confusion matrix:
+[23, 0]
+[8, 30]
+Accuracy: 0.8688524590163934,
+Precision: 0.7894736842105263,
+Recall: 1.0,
+F1-Measure: 0.8823529411764706,
+Training took: 1.937562,
+*************************
+
+Mixed Frequency Diff
+
+NAIVE_BAYES:
+Metrics:
+Confusion matrix:
+[23, 1]
+[8, 29]
+Accuracy: 0.8524590163934426
+Precision: 0.7837837837837838
+Recall: 0.9666666666666667
+F1-Measure: 0.8656716417910447
+Training took: 0.829031
+
+DECISION_TREE:
+Metrics:
+Confusion matrix:
+[28, 2]
+[3, 28]
+Accuracy: 0.9180327868852459,
+Precision: 0.9032258064516129,
+Recall: 0.9333333333333333,
+F1-Measure: 0.9180327868852459,
+Training took: 0.773576,
+
+SVM:
+Metrics:
+Confusion matrix:
+[30, 10]
+[1, 20]
+Accuracy: 0.819672131147541,
+Precision: 0.9523809523809523,
+Recall: 0.6666666666666666,
+F1-Measure: 0.7843137254901961,
+Training took: 0.775635,
+
+LOGISTIC_REGRESSION:
+Metrics:
+Confusion matrix:
+[25, 1]
+[6, 29]
+Accuracy: 0.8852459016393442,
+Precision: 0.8285714285714286,
+Recall: 0.9666666666666667,
+F1-Measure: 0.8923076923076922,
+Training took: 0.766476,
+
+MULTILAYER_PERCEPTRON:
+Metrics:
+Confusion matrix:
+[28, 2]
+[3, 28]
+Accuracy: 0.9180327868852459,
+Precision: 0.9032258064516129,
+Recall: 0.9333333333333333,
+F1-Measure: 0.9180327868852459,
+Training took: 2.834526,
+
+Process finished with exit code 0
+
+_____________________________________________________________________________________________________________________________________
+
+
+MostFrequentWordsExtractor: ['de', 'vinho', 'mai', 'do', 'r$', 'ver', 'comprar', 'tinto', 'com', 'sauvignon', 'cabernet', 'para', 'por', 'espum', 'todo', 'da', 'branco', 'malbec', 'em', 'até', 'wine', 'saiba', 'um', 'pinot', 'paí', 'que', 'uva', '750ml', 'não', 'seu', 'chardonnay', 'tipo', 'ao', 'como', 'os', 'ponto', 'na', 'catena', 'grand', 'política', 'vineyard', 'no', 'produto', 'rosé', 'noir', 'reserva', 'del', 'kit', 'blanc', 'chile']
+
+DocFrequencyDifferenceExtractor: ['teor', 'alcoólico', 'temperatura', 'harmonização', 'mese', 'relacionado', 'ordenar', 'serviço', 'barrica', 'filtrar', 'guarda', 'fruta', 'carvalho', 'aroma', 'ficha', 'prazo', '750ml', 'final', 'visual', 'exclusivo', 'técnica', 'safra', 'boca', 'est', 'disponibilidad', 'volum', 'nota', 'vermelho', 'classificação', 'melhor', 'tanino', 'produto', 'vinícola', 'nariz', 'francê', 'encontrado', 'carn', 'vermelha', 'olfativo', 'a-z', 'região', 'frete', 'toqu', '18°c', 'baixa', 'desconto', 'seco', 'queijo', 'estoqu', 'juro']
+
+PlainFrequencyDifferenceExtractor: ['comprar', 'de', 'vinho', 'r$', 'visualização', 'rápida', 'quantidad', 'por', 'tinto', 'mai', 'vistamar', 'do', 'artigo', 'ver', 'até', 'wishlist', 'ao', 'sauvignon', 'cabernet', 'adicionar', 'espum', 'os', 'kit', 'assin', 'branco', 'carrinho', 'yith_wcwl_add_to_wishlist', 'que', 'para', 'não', 'carmen', 'ou', 'chile', 'niepoort', 'preço', '750ml', 'rosé', 'esporão', 'chardonnay', 'limpar', 'são', 'produto', 'você', 'reserva', 'vinícola', 'as', 'rose', 'est', 'taça', 'melhor']
+
+MixedFrequencyDifferenceExtractor: ['comprar', 'visualização', 'teor', 'harmonização', 'artigo', 'por', 'até', '750ml', 'mese', 'ordenar', 'temperatura', 'barrica', 'vinho', 'kit', 'ver', 'alcoólico', 'de', 'quantidad', 'est', 'produto', 'filtrar', 'vinícola', 'guarda', 'melhor', 'ficha', 'carvalho', 'safra', 'limpar', 'região', 'exclusivo', 'relacionado', 'serviço', 'tinto', 'técnica', 'esgotado', 'rápida', 'seco', 'preço', 'cabernet', 'final', 'branco', 'classificação', 'resultado', 'adicionar', 'são', 'espum', 'ou', 'desconto', 'sem', 'comentário']
+
+*************************
+
+Most Frequent Words
+
+NAIVE_BAYES:
+Metrics:
+Confusion matrix:
+[9, 2]
+[22, 28]
+Accuracy: 0.6065573770491803,
+Precision: 0.56,
+Recall: 0.9333333333333333,
+F1-Measure: 0.7000000000000001,
+Training took: 0.175127,
+
+DECISION_TREE:
+Metrics:
+Confusion matrix:
+[21, 6]
+[10, 24]
+Accuracy: 0.7377049180327869,
+Precision: 0.7058823529411765,
+Recall: 0.8,
+F1-Measure: 0.7500000000000001,
+Training took: 0.193823,
+
+SVM:
+Metrics:
+Confusion matrix:
+[16, 3]
+[15, 27]
+Accuracy: 0.7049180327868853,
+Precision: 0.6428571428571429,
+Recall: 0.9,
+F1-Measure: 0.75,
+Training took: 0.171704,
+
+LOGISTIC_REGRESSION:
+Metrics:
+Confusion matrix:
+[24, 10]
+[7, 20]
+Accuracy: 0.7213114754098361,
+Precision: 0.7407407407407407,
+Recall: 0.6666666666666666,
+F1-Measure: 0.7017543859649122,
+Training took: 0.19425,
+
+MULTILAYER_PERCEPTRON:
+Metrics:
+Confusion matrix:
+[22, 2]
+[9, 28]
+Accuracy: 0.819672131147541,
+Precision: 0.7567567567567568,
+Recall: 0.9333333333333333,
+F1-Measure: 0.835820895522388,
+Training took: 0.961627,
+*************************
+
+Doc Frequency Diff
+
+NAIVE_BAYES:
+Metrics:
+Confusion matrix:
+[24, 1]
+[7, 29]
+Accuracy: 0.8688524590163934,
+Precision: 0.8055555555555556,
+Recall: 0.9666666666666667,
+F1-Measure: 0.8787878787878789,
+Training took: 0.384467,
+
+DECISION_TREE:
+Metrics:
+Confusion matrix:
+[28, 2]
+[3, 28]
+Accuracy: 0.9180327868852459,
+Precision: 0.9032258064516129,
+Recall: 0.9333333333333333,
+F1-Measure: 0.9180327868852459,
+Training took: 0.327213,
+
+SVM:
+Metrics:
+Confusion matrix:
+[30, 9]
+[1, 21]
+Accuracy: 0.8360655737704918,
+Precision: 0.9545454545454546,
+Recall: 0.7,
+F1-Measure: 0.8076923076923077,
+Training took: 0.339314,
+
+LOGISTIC_REGRESSION:
+Metrics:
+Confusion matrix:
+[27, 1]
+[4, 29]
+Accuracy: 0.9180327868852459,
+Precision: 0.8787878787878788,
+Recall: 0.9666666666666667,
+F1-Measure: 0.9206349206349207,
+Training took: 0.333979,
+
+MULTILAYER_PERCEPTRON:
+Metrics:
+Confusion matrix:
+[28, 2]
+[3, 28]
+Accuracy: 0.9180327868852459,
+Precision: 0.9032258064516129,
+Recall: 0.9333333333333333,
+F1-Measure: 0.9180327868852459,
+Training took: 0.825137,
+*************************
+
+Plain Frequency Diff
+
+NAIVE_BAYES:
+Metrics:
+Confusion matrix:
+[16, 1]
+[15, 29]
+Accuracy: 0.7377049180327869,
+Precision: 0.6590909090909091,
+Recall: 0.9666666666666667,
+F1-Measure: 0.7837837837837838,
+Training took: 0.42628,
+
+DECISION_TREE:
+Metrics:
+Confusion matrix:
+[22, 7]
+[9, 23]
+Accuracy: 0.7377049180327869,
+Precision: 0.71875,
+Recall: 0.7666666666666667,
+F1-Measure: 0.7419354838709677,
+Training took: 0.338326,
+
+SVM:
+Metrics:
+Confusion matrix:
+[17, 5]
+[14, 25]
+Accuracy: 0.6885245901639344,
+Precision: 0.6410256410256411,
+Recall: 0.8333333333333334,
+F1-Measure: 0.7246376811594204,
+Training took: 0.33102,
+
+LOGISTIC_REGRESSION:
+Metrics:
+Confusion matrix:
+[26, 3]
+[5, 27]
+Accuracy: 0.8688524590163934,
+Precision: 0.84375,
+Recall: 0.9,
+F1-Measure: 0.870967741935484,
+Training took: 0.338523,
+
+MULTILAYER_PERCEPTRON:
+Metrics:
+Confusion matrix:
+[24, 1]
+[7, 29]
+Accuracy: 0.8688524590163934,
+Precision: 0.8055555555555556,
+Recall: 0.9666666666666667,
+F1-Measure: 0.8787878787878789,
+Training took: 1.124622,
+*************************
+
+Mixed Frequency Diff
+
+NAIVE_BAYES:
+Metrics:
+Confusion matrix:
+[23, 1]
+[8, 29]
+Accuracy: 0.8524590163934426,
+Precision: 0.7837837837837838,
+Recall: 0.9666666666666667,
+F1-Measure: 0.8656716417910447,
+Training took: 0.703819,
+
+DECISION_TREE:
+Metrics:
+Confusion matrix:
+[29, 4]
+[2, 26]
+Accuracy: 0.9016393442622951,
+Precision: 0.9285714285714286,
+Recall: 0.8666666666666667,
+F1-Measure: 0.896551724137931,
+Training took: 0.639591,
+
+SVM:
+Metrics:
+Confusion matrix:
+[30, 9]
+[1, 21]
+Accuracy: 0.8360655737704918,
+Precision: 0.9545454545454546,
+Recall: 0.7,
+F1-Measure: 0.8076923076923077,
+Training took: 0.6349,
+
+LOGISTIC_REGRESSION:
+Metrics:
+Confusion matrix:
+[27, 1]
+[4, 29]
+Accuracy: 0.9180327868852459,
+Precision: 0.8787878787878788,
+Recall: 0.9666666666666667,
+F1-Measure: 0.9206349206349207,
+Training took: 0.639141,
+
+MULTILAYER_PERCEPTRON:
+Metrics:
+Confusion matrix:
+[29, 1]
+[2, 29]
+Accuracy: 0.9508196721311475,
+Precision: 0.9354838709677419,
+Recall: 0.9666666666666667,
+F1-Measure: 0.9508196721311476,
+Training took: 1.525286,
+
+Process finished with exit code 0
