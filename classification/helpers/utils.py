@@ -1,3 +1,4 @@
+from enum import Enum
 from typing import List
 
 from sklearn.preprocessing import StandardScaler
@@ -30,8 +31,8 @@ def doc_class_to_int(classes: List[DocumentClass]):
     return [1 if _cls == DocumentClass.INSTANCE else 0 for _cls in classes]
 
 
-def int_to_doc_class(classes: List[int]):
-    return [DocumentClass.INSTANCE if _cls == 1 else DocumentClass.NON_INSTANCE for _cls in classes]
+def int_to_doc_class_with_doc_index(classes: List[int]):
+    return [(i, DocumentClass.INSTANCE if _cls == 1 else DocumentClass.NON_INSTANCE) for i, _cls in enumerate(classes)]
 
 
 def compute_metrics(y_pred: List[int], y: List[int]):
@@ -53,6 +54,14 @@ def compute_metrics(y_pred: List[int], y: List[int]):
     recall = float(tp)/float(p)
     f1m = 2*prec*recall/(prec+recall)
     return (mat, acc, prec, recall, f1m)
+
+
+class ClassifierType(str, Enum):
+    NAIVE_BAYES = 'naive_bayes'
+    DECISION_TREE = 'decision_tree'
+    SVM = 'svm'
+    LOGISTIC_REGRESSION = 'logistic_regression'
+    MULTILAYER_PERCEPTRON = 'multilayer_perceptron'
 
 
 def print_metrics(y_pred: List[int], y: List[int]):

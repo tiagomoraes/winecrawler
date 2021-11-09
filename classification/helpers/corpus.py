@@ -74,7 +74,6 @@ class Corpus:
         return self.vocabulary[word]
 
 if __name__ == '__main__':
-
     doc_1 = Document.load_from_url('https://www.vivavinho.com.br/vinho-rose-italiano-wave-rosato-igt-750ml/p', DocumentClass.INSTANCE)
     doc_2 = Document.load_from_url('https://www.vivavinho.com.br/vinho-branco-italiano-wave-bianco-igt-750ml/p', DocumentClass.INSTANCE)
     doc_3 = Document.load_from_url('https://www.vivavinho.com.br/vinho-rose-portugues-5-elementos-750ml/p', DocumentClass.INSTANCE)

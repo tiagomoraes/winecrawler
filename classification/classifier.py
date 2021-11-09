@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from datetime import datetime as dt
-from typing import List
+from typing import List, Tuple
 
 from sklearn.model_selection import StratifiedKFold
 from sklearn.utils import shuffle
@@ -90,7 +90,7 @@ class AccuracyWeightedEnsemble:
 
         self.trained = True
 
-    def predict(self, docs: List['Document']) -> List['DocumentClass']:
+    def predict(self, docs: List['Document']) -> List[Tuple[int, 'DocumentClass']]:
         if not self.trained:
             raise AssertionError("Ensemble not trained yet. Call train before predict.")
         res = []
@@ -114,7 +114,7 @@ class AccuracyWeightedEnsemble:
         out = []
         for i in range(len(docs)):
             label = 1 if tp1[i] > tp0[i] else 0
-            out.append(label)
+            out.append((i, label))
 
         return out
 
@@ -126,4 +126,4 @@ class AccuracyWeightedEnsemble:
         result = self.predict(docs)
 
         self.trained = temp
-        return result
+        return [doc[1] for doc in result]
