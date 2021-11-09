@@ -9,21 +9,28 @@ from classification.mlp import DocumentClassifier
 
 
 def classify_crawler_samples(clf: DocumentClassifier, folder: str):
+    overall_positive = 0
+    overall_total = 0
     for site_root in os.listdir(folder):
+        positive = 0
+        total = 0
         root_folder = os.path.join(folder, site_root)
+        print(f' Calculating for {root_folder}')
         docs = load_documents(root_folder)
-        print(root_folder + ':')
         results = clf.predict(docs)
         insts = [res[0] for res in results if res[1] == DocumentClass.INSTANCE]
         non_insts = [res[0] for res in results if res[1] == DocumentClass.NON_INSTANCE]
-        print(len(insts), insts)
-        print(len(non_insts), non_insts)
+        overall_positive += len(insts)
+        overall_total += (len(insts) + len(non_insts))
+        print(f'positive / total = {len(insts)} / {(len(insts) + len(non_insts))} = {len(insts) / (len(insts) + len(non_insts))}')
+
+    print(f'positive / total = {positive} / {total} = {positive / total}')
 
 
 def main():
     inst_dir = os.path.join(cd, 'samples/samples_pages')
     non_inst_dir = os.path.join(cd, 'samples/nonsamples_pages')
-    corpus = load_corpus(inst_dir, non_inst_dir)
+    corpus = load_corpus(inst_dir, non_inst_dir).drop_stop_words()
 
     # print('\nFrequent words:')
     # for token in corpus.vocabulary:
