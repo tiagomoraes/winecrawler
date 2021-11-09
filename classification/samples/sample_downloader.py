@@ -1,12 +1,10 @@
-import os
-import sys
 import re
 from os import mkdir, path
 from concurrent.futures import ThreadPoolExecutor
 
 import requests
 
-IN_FILES = ['/home/borba/Workplace/college/winecrawler/classification/samples/samples_urls.txt', '/home/borba/Workplace/college/winecrawler/classification/samples/nonsamples_urls']
+IN_FILES = ['/samples/samples_urls', '/samples/nonsamples_urls']
 OUT_DIRS = ['../samples/samples_pages', '../samples/nonsamples_pages']
 
 
@@ -59,11 +57,4 @@ def download(concurrency: int):
 
 
 if __name__ == '__main__':
-    # num_args = len(sys.argv) - 1
-    # if num_args != 1:
-    #     print('Wrong number of command-line arguments. Expected 1 (concurrency number), received {}'.format(num_args), file=sys.stderr)
-    #     sys.exit(1)
-    #
-    # concurrency = int(sys.argv[1])
-    print(os.getcwd())
     download(4)
