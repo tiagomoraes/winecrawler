@@ -5,42 +5,42 @@ from extractor import extract
 ssl._create_default_https_context = ssl._create_unverified_context
 
 
-def vinhofacil_extract(soup):
+def adegamais_extract(soup):
     try:
         name = None
-        name_marker = soup.find('h1', attrs={'class': 'h1 mb-1'})
+        name_marker = soup.find('h1', attrs={'class': 'product-title'})
         if (name_marker):
             name = name_marker.text
 
         wine_type = None
         wine_type_marker = soup.find('strong', text=re.compile('.*Tipo.*', re.DOTALL))
         if (wine_type_marker):
-            wine_type = wine_type_marker.parent.parent.find(text=True, recursive=False).strip(' ')
+            wine_type = wine_type_marker.find_next('p').text.strip(' ')
 
         grape = None
         grape_marker = soup.find('strong', text=re.compile('.*Uva.*', re.DOTALL))
         if (grape_marker):
-            grape = grape_marker.parent.parent.find(text=True, recursive=False).strip(' ')
+            grape = grape_marker.find_next('p').text.strip(' ')
 
         country = None
         country_marker = soup.find('strong', text=re.compile('.*País.*', re.DOTALL))
         if (country_marker):
-            country = country_marker.parent.parent.find(text=True, recursive=False).strip(' ')
+            country = country_marker.find_next('p').text.strip(' ')
 
         classification = None
         classification_marker = soup.find('strong', text=re.compile('.*Classificação.*', re.DOTALL))
         if (classification_marker):
-            classification = classification_marker.parent.parent.find(text=True, recursive=False).strip(' ')
+            classification = classification_marker.find_next('p').text.strip(' ')
 
         alcohol_content = None
-        alcohol_content_marker = soup.find('strong', text=re.compile('.*Teor.*', re.DOTALL))
+        alcohol_content_marker = soup.find('strong', text=re.compile('.*Teor Alcoólico.*', re.DOTALL))
         if (alcohol_content_marker):
-            alcohol_content = alcohol_content_marker.parent.parent.find(text=True, recursive=False).strip(' ')
+            alcohol_content = alcohol_content_marker.find_next('p').text.strip(' ')
 
         year = None
         year_marker = soup.find('strong', text=re.compile('.*Safra.*', re.DOTALL))
         if (year_marker):
-            year = year_marker.parent.parent.find(text=True, recursive=False).strip(' ')
+            year = year_marker.find_next('p').text.strip(' ')
 
         return ({
             'name': name,
@@ -64,7 +64,7 @@ def vinhofacil_extract(soup):
 
 
 def main():
-    extract('vinhofacil', vinhofacil_extract)
+    extract('adegamais', 'specific', adegamais_extract)
 
 
 if __name__ == '__main__':

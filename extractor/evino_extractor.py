@@ -63,7 +63,7 @@ def evino_extract(soup):
 
 
 def main():
-    extract('evino', evino_extract)
+    extract('evino', 'specific', evino_extract)
 
 
 if __name__ == '__main__':

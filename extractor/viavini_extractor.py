@@ -68,7 +68,7 @@ def viavini_extract(big_soup):
 
 
 def main():
-    extract('viavini', viavini_extract)
+    extract('viavini', 'specific', viavini_extract)
 
 
 if __name__ == '__main__':

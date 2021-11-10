@@ -63,7 +63,7 @@ def vivavinho_extract(soup):
 
 
 def main():
-    extract('vivavinho', vivavinho_extract)
+    extract('vivavinho', 'specific', vivavinho_extract)
 
 
 if __name__ == '__main__':

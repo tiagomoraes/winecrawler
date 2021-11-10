@@ -65,7 +65,7 @@ def wine_extract(soup):
 
 
 def main():
-    extract('wine', wine_extract)
+    extract('wine', 'specific', wine_extract)
 
 
 if __name__ == '__main__':

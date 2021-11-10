@@ -66,7 +66,7 @@ def divvino_extract(soup):
 
 
 def main():
-    extract('divvino', divvino_extract)
+    extract('divvino', 'specific', divvino_extract)
 
 
 if __name__ == '__main__':

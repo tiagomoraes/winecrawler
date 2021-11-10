@@ -63,7 +63,7 @@ def superadega_extract(soup):
 
 
 def main():
-    extract('superadega', superadega_extract)
+    extract('superadega', 'specific', superadega_extract)
 
 
 if __name__ == '__main__':

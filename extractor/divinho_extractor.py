@@ -63,7 +63,7 @@ def divinho_extract(soup):
 
 
 def main():
-    extract('divinho', divinho_extract)
+    extract('divinho', 'specific', divinho_extract)
 
 
 if __name__ == '__main__':

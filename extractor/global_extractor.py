@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import re
 import ssl
+from extractor import extract
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -87,9 +88,10 @@ def global_extract(big_soup):
         })
 
 def main():
-    domains = ['divinho', 'divvino', 'evino', 'grandcru', 'mistral', 'superadega', 'viavini', 'vinhofacil', 'vivavinho', 'wine']
+    # 'divinho', 'divvino', 'evino', 'grandcru', 'mistral', 'superadega', 'viavini',
+    domains = ['adegamais', 'vivavinho', 'wine']
     for domain in domains:
-        extract(domain, global_extract)
+        extract(domain, 'global', global_extract)
 
 
 if __name__ == '__main__':

@@ -64,7 +64,7 @@ def mistral_extract(soup):
 
 
 def main():
-    extract('mistral', mistral_extract)
+    extract('mistral', 'specific', mistral_extract)
 
 
 if __name__ == '__main__':

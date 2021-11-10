@@ -64,7 +64,7 @@ def grandcru_extract(soup):
 
 
 def main():
-    extract('grandcru', grandcru_extract)
+    extract('grandcru', 'specific', grandcru_extract)
 
 
 if __name__ == '__main__':
