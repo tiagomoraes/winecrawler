@@ -43,9 +43,7 @@ class DocumentClassifier(Classifier):
             classifier_type.DECISION_TREE: DecisionTreeClassifier(),
             classifier_type.SVM: SVC(),
             classifier_type.LOGISTIC_REGRESSION: LogisticRegression(),
-            classifier_type.MULTILAYER_PERCEPTRON: MLPClassifier(
-                hidden_layer_sizes=(len(self.features), len(self.features)), activation='relu', solver='adam',
-                max_iter=1000)
+            classifier_type.MULTILAYER_PERCEPTRON: MLPClassifier()
         }
         clf = classifiers[classifier_type]
         # parameters = {'solver': ('adam', 'lbfgs', 'sgd'), 'activation': ('relu', 'identity', 'tanh', 'logistic'), 'learning_rate_init': (0.001, 0.005, 0.01)}
