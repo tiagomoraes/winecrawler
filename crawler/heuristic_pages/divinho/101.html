@@ -9,13 +9,14 @@
     };
 </script>
         <meta charset="utf-8"/><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-15ce119d71e6a8d24c8",applicationID:"798446581"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1211.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
-<meta name="title" content="Vinho Memoro Piccini - DiVinho"/>
-<meta name="description" content="Compre Vinho Memoro Piccini com o melhor preço do mercado. Pagamento em até 3x s/ juros e entregas para todo Brasil."/>
-<meta name="keywords" content="Vinho Memoro Piccini"/>
+<meta name="title" content="Vinho Coppo Barbera d&#039;Asti Camp du Rouss 2017 - DiVinho"/>
+<meta name="description" content="Compre Vinho Coppo Barbera d&#039;Asti Camp du Rouss 2017 com o melhor preço do mercado. Pagamento em até 3x s/ juros e entregas para todo Brasil.
+"/>
+<meta name="keywords" content="Vinho Tinto Coppo Barbera d&#039;Asti Camp du Rouss 2014"/>
 <meta name="robots" content="INDEX,FOLLOW"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta name="format-detection" content="telephone=no"/>
-<title>Vinho Memoro Piccini - DiVinho</title>
+<title>Vinho Coppo Barbera d&#039;Asti Camp du Rouss 2017 - DiVinho</title>
 <link  rel="stylesheet" type="text/css"  media="all" href="https://static.divinho.com.br/static/version1636382917/_cache/merged/5d41a869337cd62abea0146ce00be5f9.min.css" />
 <script  type="text/javascript"  src="https://static.divinho.com.br/static/version1636382917/_cache/merged/38cbaaf652093663e521d41aea6fcd0d.min.js"></script>
 <link  rel="icon" type="image/x-icon" href="https://images.divinho.com.br/favicon/default/favicon.ico" />
@@ -23,23 +24,23 @@
 <!-- Product Structured Data by Mageplaza SEO--><script type="application/ld+json">{
     "@context": "http:\/\/schema.org\/",
     "@type": "Product",
-    "name": "Vinho Memoro Piccini",
-    "description": "O Vinho Memoro Piccini \u00e9 uma cria\u00e7\u00e3o da Tenute Piccini, uma das mais prestigiadas vin\u00edcolas da da It\u00e1lia. Produzido com um corte das uvas Primitivo da Puglia, Montepulciano de Abruzzo, Nero D'Avola da Sic\u00edlia e Merlot de V\u00eaneto. Faz parte da classifica\u00e7\u00e3o Vino d'It\u00e1lia, n\u00e3o sendo safrado. De colora\u00e7\u00e3o rubi profunda, no nariz revela um bouquet arom\u00e1tico intenso, onde destacam-se aromas de frutas negras, como cereja e figo, notas de caf\u00e9, al\u00e9m de um toque tostado, advindo do est\u00e1gio em carvalho da uva Montepulciano. Um Vinho Tinto frutado, com \u00f3tima concentra\u00e7\u00e3o e estrutura. Em boca, conta com taninos refinados e um final longo e persistente.\u00a0",
-    "sku": "309",
-    "url": "https:\/\/www.divinho.com.br\/vinho-memoro-piccini",
-    "image": "https:\/\/www.divinho.com.br\/pub\/media\/catalog\/product\/v\/i\/vinho_memoro_piccini.png",
+    "name": "Vinho Coppo Barbera d'Asti Camp du Rouss 2017",
+    "description": "O Vinho Coppo Barbera d'Asti Camp du Rouss \u00e9 um dos r\u00f3tulos de maior sucesso da Coppo, e n\u00e3o \u00e9 \u00e0 toa, j\u00e1 que nasce dos mesmos vinhedos que originam o Pomorosso, o vinho \u00edcone da vin\u00edcola! Produzido com a uva Barbera, oriunda de vinhedos localizados na Denomina\u00e7\u00e3o de Origem Controlada e Garantida (D.O.C.G.) de Barbera d'Asti, dentro da regi\u00e3o vitivin\u00edcola do Piemonte, na It\u00e1lia. De colora\u00e7\u00e3o rubi intensa, revela, no nariz, aromas de frutas vermelhas maduras, como ameixa, al\u00e9m de notas de especiarias. Um Vinho Tinto refinado, com boa estrutura e um final longo. \r\n\u00a0",
+    "sku": "6542",
+    "url": "https:\/\/www.divinho.com.br\/vinho-coppo-barbera-dasti-camp-du-rouss",
+    "image": "https:\/\/www.divinho.com.br\/pub\/media\/catalog\/product\/c\/o\/coppo_barbera_d_asti_camp_du_rouss.png",
     "offers": {
         "@type": "Offer",
         "priceCurrency": "BRL",
-        "price": 153.14,
-        "itemOffered": 76,
+        "price": 341.97,
+        "itemOffered": 100,
         "availability": "http:\/\/schema.org\/InStock",
-        "url": "https:\/\/www.divinho.com.br\/vinho-memoro-piccini"
+        "url": "https:\/\/www.divinho.com.br\/vinho-coppo-barbera-dasti-camp-du-rouss"
     },
-    "gtin8": "Vinho Memoro Piccini",
+    "gtin8": "Vinho Coppo Barbera d'Asti Camp du Rouss 2017",
     "brand": {
         "@type": "Thing",
-        "name": "Tenute Piccini"
+        "name": "Coppo"
     }
 }</script>            <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -55,7 +56,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         };
 
         window.dataLayer = window.dataLayer || [];
-                var dlObjects = [{"google_tag_params":{"ecomm_pagetype":"product","ecomm_prodid":"931","ecomm_totalvalue":"153.14","ecomm_category":"Pa\u00edses\/It\u00e1lia"},"ecommerce":{"detail":{"products":[{"name":"Vinho Memoro Piccini","id":"931","price":"153.14","brand":"Tenute Piccini","category":"Pa\u00edses\/It\u00e1lia"}]},"currencyCode":"BRL","impressions":[{"name":"Vinho Piccini Rosso di Montalcino 2017","id":"695","price":"387.64","brand":"Tenute Piccini","category":"Pa\u00edses\/It\u00e1lia","list":"Related Products From Vinho Memoro Piccini","position":1},{"name":"Vinho Piccini Brunello di Montalcino 2014","id":"696","price":"724.00","brand":"Tenute Piccini","category":"Pa\u00edses\/It\u00e1lia","list":"Related Products From Vinho Memoro Piccini","position":2},{"name":"Vinho Piccini Vito Chardonnay 2018","id":"763","price":"96.48","brand":"Tenute Piccini","category":"Pa\u00edses\/It\u00e1lia","list":"Related Products From Vinho Memoro Piccini","position":3},{"name":"Vinho Memoro Piccini Branco","id":"783","price":"153.14","brand":"Tenute Piccini","category":"Pa\u00edses\/It\u00e1lia","list":"Related Products From Vinho Memoro Piccini","position":4}]},"event":"impression","eventCategory":"Ecommerce","eventAction":"Impression","eventLabel":"product Vinho Memoro Piccini Branco"}];
+                var dlObjects = [{"google_tag_params":{"ecomm_pagetype":"product","ecomm_prodid":"467","ecomm_totalvalue":"341.97","ecomm_category":"Vinhos\/Vinho Tinto"},"ecommerce":{"detail":{"products":[{"name":"Vinho Coppo Barbera d'Asti Camp du Rouss 2017","id":"467","price":"341.97","brand":"Coppo","category":"Vinhos\/Vinho Tinto"}]},"currencyCode":"BRL","impressions":[{"name":"Espumante Coppo Moscato d'Asti Moncalvina 2019","id":"465","price":"273.46","brand":"Coppo","category":"Pa\u00edses\/It\u00e1lia","list":"Related Products From Vinho Coppo Barbera d'Asti Camp du Rouss 2017","position":1},{"name":"Vinho Coppo Barbera d\u2019Asti Cascina Gavelli 2018","id":"466","price":"444.73","brand":"Coppo","category":"Vinhos\/Vinho Tinto","list":"Related Products From Vinho Coppo Barbera d'Asti Camp du Rouss 2017","position":2},{"name":"Vinho Coppo Barbera d\u2019Asti L\u2019Avvocata 2017","id":"943","price":"239.21","brand":"Coppo","category":"Vinhos\/Vinho Tinto","list":"Related Products From Vinho Coppo Barbera d'Asti Camp du Rouss 2017","position":3},{"name":"Vinho Renato Ratti Barbera D'Asti Battaglione 2018","id":"585","price":"449.00","brand":"Renato Ratti","category":"Pa\u00edses\/It\u00e1lia","list":"Related Products From Vinho Coppo Barbera d'Asti Camp du Rouss 2017","position":4}]},"event":"impression","eventCategory":"Ecommerce","eventAction":"Impression","eventLabel":"product Vinho Renato Ratti Barbera D'Asti Battaglione 2018"}];
         for (var i in dlObjects) {
             window.dataLayer.push(dlObjects[i]);
         }
@@ -76,28 +77,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="text/javascript" src="https://chimpstatic.com/mcjs-connected/js/users/1255cf89de1ff1692e3832377/54a041db81224b7f42e4ef954.js" defer></script>
 
 <!-- This site is optimized with the Yoast SEO for Magento plugin 2.0.0 - https://yoast.com/magento/plugins/seo/ -->
-    <link rel="canonical" href="https://www.divinho.com.br/vinho-memoro-piccini" />
+    <link rel="canonical" href="https://www.divinho.com.br/vinho-coppo-barbera-dasti-camp-du-rouss" />
 
     <!-- YoastSEO OpenGraph -->
-    <meta property="og:url" content="https://www.divinho.com.br/vinho-memoro-piccini"/>
+    <meta property="og:url" content="https://www.divinho.com.br/vinho-coppo-barbera-dasti-camp-du-rouss"/>
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:type" content="product"/>
     <meta property="og:site_name" content="F R MOREIRA COMÉRCIO E DISTRIBUIÇÃO DE ALIMENTOS E BEBIDAS" />
-    <meta property="og:title" content="Vinho Memoro Piccini - DiVinho"/>
-    <meta property="og:description" content="Compre Vinho Memoro Piccini com o melhor preço do mercado. Pagamento em até 3x s/ juros e entregas para todo Brasil."/>
-            <meta property="og:image" content="https://images.divinho.com.br/catalog/product/cache/b7d320e39333d0f7a197a4ddb51399f4/v/i/vinho_memoro_piccini.png"/>
+    <meta property="og:title" content="Vinho Coppo Barbera d'Asti Camp du Rouss 2017 - DiVinho"/>
+    <meta property="og:description" content="Compre Vinho Coppo Barbera d'Asti Camp du Rouss 2017 com o melhor preço do mercado. Pagamento em até 3x s/ juros e entregas para todo Brasil.
+"/>
+            <meta property="og:image" content="https://images.divinho.com.br/catalog/product/cache/b7d320e39333d0f7a197a4ddb51399f4/c/o/coppo_barbera_d_asti_camp_du_rouss.png"/>
                         
     <!-- YoastSEO Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-            <meta name="twitter:title" content="Vinho Memoro Piccini - DiVinho"/>
-    <meta name="twitter:description" content="Compre Vinho Memoro Piccini com o melhor preço do mercado. Pagamento em até 3x s/ juros e entregas para todo Brasil."/>
-            <meta name="twitter:image" content="https://images.divinho.com.br/catalog/product/cache/b7d320e39333d0f7a197a4ddb51399f4/v/i/vinho_memoro_piccini.png"/>
+            <meta name="twitter:title" content="Vinho Coppo Barbera d'Asti Camp du Rouss 2017 - DiVinho"/>
+    <meta name="twitter:description" content="Compre Vinho Coppo Barbera d'Asti Camp du Rouss 2017 com o melhor preço do mercado. Pagamento em até 3x s/ juros e entregas para todo Brasil.
+"/>
+            <meta name="twitter:image" content="https://images.divinho.com.br/catalog/product/cache/b7d320e39333d0f7a197a4ddb51399f4/c/o/coppo_barbera_d_asti_camp_du_rouss.png"/>
     
 
     </head>
     <body data-container="body"
           data-mage-init='{"loaderAjax": {}, "loader": { "icon": "https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/loader-2.gif"}}'
-        class="catalog-product-view product-vinho-memoro-piccini page-layout-1column">
+        class="catalog-product-view product-vinho-coppo-barbera-dasti-camp-du-rouss page-layout-1column">
         <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MM4CCWJ"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -230,7 +233,7 @@ require([
 
 </script>
 <li class="nav-item authorization-link" data-label="ou">
-    <a class="nav-link" href="https://www.divinho.com.br/customer/account/login/referer/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbWVtb3JvLXBpY2Npbmk%2C/">
+    <a class="nav-link" href="https://www.divinho.com.br/customer/account/login/referer/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tY29wcG8tYmFyYmVyYS1kYXN0aS1jYW1wLWR1LXJvdXNz/">
         Entrar    </a>
 </li>
 
@@ -277,7 +280,7 @@ require([
             </div>
                     </div>
         <script>
-        window.checkout = {"shoppingCartUrl":"https:\/\/www.divinho.com.br\/checkout\/cart\/","checkoutUrl":"https:\/\/www.divinho.com.br\/checkout\/","updateItemQtyUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/www.divinho.com.br\/","minicartMaxItemsVisible":5,"websiteId":"1","maxItemsToDisplay":10,"storeId":"1","customerLoginUrl":"https:\/\/www.divinho.com.br\/customer\/account\/login\/referer\/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbWVtb3JvLXBpY2Npbmk%2C\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.divinho.com.br\/captcha\/refresh\/","isRequired":false,"timestamp":1636430933}}};
+        window.checkout = {"shoppingCartUrl":"https:\/\/www.divinho.com.br\/checkout\/cart\/","checkoutUrl":"https:\/\/www.divinho.com.br\/checkout\/","updateItemQtyUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/www.divinho.com.br\/","minicartMaxItemsVisible":5,"websiteId":"1","maxItemsToDisplay":10,"storeId":"1","customerLoginUrl":"https:\/\/www.divinho.com.br\/customer\/account\/login\/referer\/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tY29wcG8tYmFyYmVyYS1kYXN0aS1jYW1wLWR1LXJvdXNz\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.divinho.com.br\/captcha\/refresh\/","isRequired":false,"timestamp":1636510628}}};
     </script>
     <script type="text/x-magento-init">
     {
@@ -291,9 +294,9 @@ require([
 </div>
 
 <div class="collapse d-lg-block" id="navbarSearch">
-        <form id="search-form6189f4554ce4a" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
+        <form id="search-form618b2ba42f835" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
                 <input data-mage-init='{"quickSearch":{
-                                        "formSelector":"#search-form6189f4554ce4a",
+                                        "formSelector":"#search-form618b2ba42f835",
                                         "url":"https://www.divinho.com.br/search/ajax/suggest/",
                                         "destinationSelector":"#search_autocomplete",
                                         "responseFieldElements":"ul li",
@@ -368,9 +371,9 @@ require([
 
 </div></div><div class="col-lg position-static col-nav"><div class="d-lg-none">
 <div class="collapse d-lg-block" id="navbarSearch">
-        <form id="search-form6189f4554e77e" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
+        <form id="search-form618b2ba430ccc" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
                 <input data-mage-init='{"quickSearch":{
-                                        "formSelector":"#search-form6189f4554e77e",
+                                        "formSelector":"#search-form618b2ba430ccc",
                                         "url":"https://www.divinho.com.br/search/ajax/suggest/",
                                         "destinationSelector":"#search_autocomplete",
                                         "responseFieldElements":"ul li",
@@ -412,11 +415,11 @@ require([
                                                                     <div class="mx-megamenu__sidebar mx-megamenu__sidebar--left">
                                         <div class="widget widget-categories-list block" data-collapse="1">
     <div class="megamenu__links">
-                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#vinhos6189f247cdd14" aria-expanded="true" aria-controls="vinhos6189f247cdd14">
+                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#vinhos618b0a68a8e72" aria-expanded="true" aria-controls="vinhos618b0a68a8e72">
             <i class="icon icon-vinhos"></i>
             <span>Tipo</span>
         </div>
-                <div id="vinhos6189f247cdd14" class="block-content catalog-category collapse-sm collapse">
+                <div id="vinhos618b0a68a8e72" class="block-content catalog-category collapse-sm collapse">
             <ul>
                                 <li class="category-item">
                     <a href="https://www.divinho.com.br/vinhos/tinto">
@@ -484,11 +487,11 @@ require([
 </div>
 <div class="widget widget-list-range">
     <div class="megamenu__links">
-        <div class="megamenu__title collapsed" data-toggle="collapse" data-target="#price-range6189f247d2432" aria-expanded="true" aria-controls="price-range6189f247d2432">
+        <div class="megamenu__title collapsed" data-toggle="collapse" data-target="#price-range618b0a68bd448" aria-expanded="true" aria-controls="price-range618b0a68bd448">
             <i class="icon icon icon-dollar-tag"></i>
             <span>Valor</span>
         </div>
-        <ul id="price-range6189f247d2432" class="block-content collapse-sm collapse">
+        <ul id="price-range618b0a68bd448" class="block-content collapse-sm collapse">
             <li><a href="https://www.divinho.com.br/vinhos?price=-59.9">Até R$59,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=59.9-99.9">R$59,90 a R$99,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=99.9-149.9">R$99,90 a R$149,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=149.9-249.9">R$149,90 a R$249,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=249.91-500">R$249,91 a R$500,00</a></li><li><a href="https://www.divinho.com.br/vinhos?price=500-">Acima de R$500,00</a></li>        </ul>
     </div>
 </div>
@@ -506,12 +509,12 @@ require([
     class="widget widget-list_mode widget-list_mode--uva">
     <div class="megamenu__links">
         <div class="block-title megamenu__title collapsed"
-            data-toggle="collapse" data-target="#uva6189f247b8902" aria-expanded="true"
-            aria-controls="uva6189f247b8902">
+            data-toggle="collapse" data-target="#uva618b0a682f5fe" aria-expanded="true"
+            aria-controls="uva618b0a682f5fe">
             <i class="icon icon-uva"></i>
             <span>Uvas</span>
         </div>
-        <div id="uva6189f247b8902"
+        <div id="uva618b0a682f5fe"
             class="block-content catalog-category collapse-sm collapse">
             <ul>
                 
@@ -561,11 +564,11 @@ require([
 </div>
  <div class="widget widget-categories-list block" data-collapse="1">
     <div class="megamenu__links">
-                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#pais6189f247c33b5" aria-expanded="true" aria-controls="pais6189f247c33b5">
+                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#pais618b0a68878c3" aria-expanded="true" aria-controls="pais618b0a68878c3">
             <i class="icon icon-pais"></i>
             <span>Pa&iacute;ses</span>
         </div>
-                <div id="pais6189f247c33b5" class="block-content catalog-category collapse-sm collapse">
+                <div id="pais618b0a68878c3" class="block-content catalog-category collapse-sm collapse">
             <ul>
                                 <li class="category-item">
                     <a href="https://www.divinho.com.br/pais/austria">
@@ -3562,11 +3565,11 @@ require([
                             </div>
                 <div class="megamenu__product-image">
             <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">
-                <img src="https://images.divinho.com.br/catalog/product/cache/fa01b5f6b2a94beaaa3488ed5c6cafe6/c/a/casanova_di_neri_rosso_di_montalcino.png" alt="Vinho Casanova di Neri Rosso di Montalcino 2019" title="Vinho Casanova di Neri Rosso di Montalcino 2019">
+                <img src="https://images.divinho.com.br/catalog/product/cache/fa01b5f6b2a94beaaa3488ed5c6cafe6/c/a/casanova_di_neri_rosso_di_montalcino.png" alt="Vinho Casanova di Neri Rosso di Montalcino 2018" title="Vinho Casanova di Neri Rosso di Montalcino 2018">
             </a>
         </div>
         <div class="megamenu__product-name text-center mt-2">
-            <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">Vinho Casanova di Neri Rosso di Montalcino 2019</a>
+            <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">Vinho Casanova di Neri Rosso di Montalcino 2018</a>
             <div class="text-primary price">
                 R$366,00            </div>
         </div>
@@ -3876,12 +3879,12 @@ require([
     class="widget widget-list_mode widget-list_mode--criticos">
     <div class="megamenu__links">
         <div class="block-title megamenu__title"
-             data-target="#criticos6189f249ba2f8" aria-expanded="true"
-            aria-controls="criticos6189f249ba2f8">
+             data-target="#criticos618b0a6f8879c" aria-expanded="true"
+            aria-controls="criticos618b0a6f8879c">
             <i class="icon icon-criticos"></i>
             <span>Críticos</span>
         </div>
-        <div id="criticos6189f249ba2f8"
+        <div id="criticos618b0a6f8879c"
             class="block-content catalog-category">
             <ul>
                                 <li>
@@ -4183,12 +4186,12 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     class="widget widget-list_mode widget-list_mode--vinicolas">
     <div class="megamenu__links">
         <div class="block-title megamenu__title"
-             data-target="#vinicolas6189f249cb53f" aria-expanded="true"
-            aria-controls="vinicolas6189f249cb53f">
+             data-target="#vinicolas618b0a6fd10d5" aria-expanded="true"
+            aria-controls="vinicolas618b0a6fd10d5">
             <i class="icon icon-vinicolas"></i>
             <span>Vinícolas</span>
         </div>
-        <div id="vinicolas6189f249cb53f"
+        <div id="vinicolas618b0a6fd10d5"
             class="block-content catalog-category">
             <ul>
                 
@@ -4300,20 +4303,20 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 <script type="text/x-magento-init">
     {
         ".breadcrumbs": {
-            "breadcrumbs": {"categoryUrlSuffix":"","useCategoryPathInUrl":0,"product":"Vinho Memoro Piccini"}        }
+            "breadcrumbs": {"categoryUrlSuffix":"","useCategoryPathInUrl":0,"product":"Vinho Coppo Barbera d&#039;Asti Camp du Rouss 2017"}        }
     }
 </script><div class="redes-sociais align-self-end ml-auto mr-4 mb-3 d-none d-md-block">
     <!-- WhatsApp -->
     <ul>
         <li>
             <a target="_blank"
-                href="https://api.whatsapp.com/send?text=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-memoro-piccini">
+                href="https://api.whatsapp.com/send?text=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-coppo-barbera-dasti-camp-du-rouss">
                 <i class="fab fa-whatsapp"></i>
             </a>
         </li>
         <li>
             <!-- Facebook -->
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-memoro-piccini&t=Vinho+Memoro+Piccini"
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-coppo-barbera-dasti-camp-du-rouss&t=Vinho+Coppo+Barbera+d%27Asti+Camp+du+Rouss+2017"
                 onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false'
                 title="Share on facebook">
                 <i class="fab fa-facebook"></i>
@@ -4322,7 +4325,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         </li>
         <!-- TWITTER -->
         <li>
-            <a href="http://twitter.com/home/?status=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-memoro-piccini(Vinho+Memoro+Piccini)"
+            <a href="http://twitter.com/home/?status=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-coppo-barbera-dasti-camp-du-rouss(Vinho+Coppo+Barbera+d%27Asti+Camp+du+Rouss+2017)"
                 onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false'
                 title="Share on Twitter">
                 <i class="fab fa-twitter"></i>
@@ -4330,7 +4333,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         </li>
         <li>
             <!-- Pinterest -->
-            <a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-memoro-piccini&media= &description=Vinho+Memoro+Piccini"
+            <a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-coppo-barbera-dasti-camp-du-rouss&media= &description=Vinho+Coppo+Barbera+d%27Asti+Camp+du+Rouss+2017"
                 onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false'
                 title="Pin it">
                 <i class="fab fa-pinterest"></i>
@@ -4370,7 +4373,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 </script>
 </div></nav><a id="contentarea" tabindex="-1"></a>
 <div class="container"><div class="page messages"><div data-placeholder="messages"></div>
-</div><div class="columns"><div class="column main"><input name="form_key" type="hidden" value="a8Gr12ZUbCQexdn5" /><script type="text/x-magento-init">
+</div><div class="columns"><div class="column main"><input name="form_key" type="hidden" value="57ZDw3X5vnuJBvhC" /><script type="text/x-magento-init">
     {
         "*": {
             "Magento_Customer/js/section-config": {
@@ -4414,7 +4417,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 <script type="text/x-magento-init">
     {
         "body": {
-            "pageCache": {"url":"https:\/\/www.divinho.com.br\/page_cache\/block\/render\/id\/931\/","handles":["default","catalog_product_view","catalog_product_view_type_simple","catalog_product_view_id_931","catalog_product_view_sku_309","gabrielqs_themesettings_footer_1","gabrielqs_themesettings_header_1","gabrielqs_themesettings_customization","mpseo_remove_schema"],"originalRequest":{"route":"catalog","controller":"product","action":"view","uri":"\/vinho-memoro-piccini"},"versionCookieName":"private_content_version"}        }
+            "pageCache": {"url":"https:\/\/www.divinho.com.br\/page_cache\/block\/render\/id\/467\/","handles":["default","catalog_product_view","catalog_product_view_type_simple","catalog_product_view_id_467","catalog_product_view_sku_6542","gabrielqs_themesettings_footer_1","gabrielqs_themesettings_header_1","gabrielqs_themesettings_customization","mpseo_remove_schema"],"originalRequest":{"route":"catalog","controller":"product","action":"view","uri":"\/vinho-coppo-barbera-dasti-camp-du-rouss"},"versionCookieName":"private_content_version"}        }
     }
 </script>
 
@@ -4425,29 +4428,19 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 <div class="single-product__photo">
     <img
         alt="main product photo"
-        src="https://images.divinho.com.br/catalog/product/cache/b7d320e39333d0f7a197a4ddb51399f4/v/i/vinho_memoro_piccini.png"
+        src="https://images.divinho.com.br/catalog/product/cache/b7d320e39333d0f7a197a4ddb51399f4/c/o/coppo_barbera_d_asti_camp_du_rouss.png"
     />
 </div>
 
 </div><div class="col-8 col-lg-9 p-md-0 pl-0"><div class="row no-gutters align-items-center"><div class="col-lg"><div class="page-title-wrapper">
     <h1 class="page-title&#x20;product"
                 >
-        <span class="base" data-ui-id="page-title-wrapper" itemprop="name">Vinho Memoro Piccini</span>    </h1>
+        <span class="base" data-ui-id="page-title-wrapper" itemprop="name">Vinho Coppo Barbera d&#039;Asti Camp du Rouss 2017</span>    </h1>
     </div>
 </div><div class="col-lg-5 d-flex align-items-center justify-content-around flex-lg-nowrap flex-wrap-reverse">
 
 
 
-        <div class="product__pontuacao">
-                                            <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Decanter">De</div>
-                    <div class="pontos">95</div>
-                </div>
-                                            <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Luca Maroni">LM</div>
-                    <div class="pontos">95</div>
-                </div>
-                    </div>
 
     <div class="text-lg-center d-flex d-lg-block align-items-center mb-3 mb-lg-0">
         <div class="product__bandeira">
@@ -4456,7 +4449,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 data-placement="right" title="" data-original-title="Tinto"></div>
                     </div>
         <div class="text-center ml-3 d-block d-md-none">
-            <a href="#" data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":931,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbWVtb3JvLXBpY2Npbmk,"}}' class="action towishlist wishlist" data-action="add-to-wishlist">
+            <a href="#" data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":467,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tY29wcG8tYmFyYmVyYS1kYXN0aS1jYW1wLWR1LXJvdXNz"}}' class="action towishlist wishlist" data-action="add-to-wishlist">
             <i class="far fa-heart mr-2"></i>  
                 <span>
                     Lista de Desejos                </span>
@@ -4486,24 +4479,10 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 
 <div class="product-attribute overview">
             <span class="value" itemprop="description">
-            <p>O <strong>Vinho Memoro Piccini </strong>é uma criação da <strong>Tenute Piccini</strong>, uma das mais prestigiadas vinícolas da da <strong>Itália</strong>. Produzido com um corte das uvas <strong>Primitivo</strong> da <strong>Puglia</strong>, <strong>Montepulciano</strong> de <strong>Abruzzo</strong>, <strong>Nero D'Avola </strong>da <strong>Sicília</strong> e <strong>Merlot</strong> de <strong>Vêneto</strong>. Faz parte da classificação <strong>Vino d'Itália</strong>, não sendo safrado. De coloração rubi profunda, no nariz revela um bouquet aromático intenso, onde destacam-se aromas de frutas negras, como cereja e figo, notas de café, além de um toque tostado, advindo do estágio em carvalho da uva Montepulciano. Um <strong>Vinho Tinto</strong> frutado, com ótima concentração e estrutura. Em boca, conta com taninos refinados e um final longo e persistente. </p>        </span>
+            <p class="yiv1726515695MsoNormal"><span style="font-weight: 400;">O</span><strong> Vinho Coppo Barbera d'Asti Camp du Rouss </strong><span style="font-weight: 400;">é um dos rótulos de maior sucesso da </span><strong>Coppo</strong><span style="font-weight: 400;">, e não é à toa, já que nasce dos mesmos vinhedos que originam o </span><strong>Pomorosso</strong><span style="font-weight: 400;">, o vinho ícone da vinícola! Produzido com a uva </span><strong>Barbera</strong><span style="font-weight: 400;">, oriunda de vinhedos localizados na Denominação de Origem Controlada e Garantida (D.O.C.G.) de </span><strong>Barbera d'Asti</strong><span style="font-weight: 400;">, dentro da região vitivinícola do </span><strong>Piemonte</strong><span style="font-weight: 400;">, na </span><strong>Itália</strong><span style="font-weight: 400;">. De coloração rubi intensa, revela, no nariz, aromas de frutas vermelhas maduras, como ameixa, além de notas de especiarias. Um </span><strong>Vinho Tinto </strong><span style="font-weight: 400;">refinado, com boa estrutura e um final longo. </span></p>        </span>
 </div>
 <div class="product__attributes additional-attributes-wrapper table-wrapper">
     <ul class="attributes data additional-attribute" id="product-attribute-specs-table">
-                        <li class="attribute avaliacoes">
-            <div class="attribute__item">
-                <div class="label">Avaliações</div>
-                <div class="data" data-code="opt2flow_avaliacoes"
-                    data-th="Avalia&#xE7;&#xF5;es">
-                                                    <a href="https://www.divinho.com.br/criticos/decanter/">
-                                                                                         <span>95 pontos Decanter</span>
-                                                                                        </a>
-                                                                                                                <a href="https://www.divinho.com.br/criticos/luca-maroni/">
-                                                                                         <span>95 pontos Luca Maroni</span>
-                                                                                        </a>
-                                                                                                </div>
-            </div>
-        </li>
                         <li class="attribute pais">
             <div class="attribute__item">
                 <div class="label">País</div>
@@ -4520,8 +4499,8 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 <div class="label">Região</div>
                 <div class="data" data-code="regi_o"
                     data-th="Regi&#xE3;o">
-                                                    <a href="https://www.divinho.com.br/pais/italia/puglia">
-                                                                                         <span>Puglia</span>
+                                                    <a href="https://www.divinho.com.br/pais/italia/piemonte">
+                                                                                         <span>Piemonte</span>
                                                                                         </a>
                                                                                                 </div>
             </div>
@@ -4531,28 +4510,19 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 <div class="label">Produtor</div>
                 <div class="data" data-code="manufacturer"
                     data-th="Produtor">
-                                                    <a href="https://www.divinho.com.br/vinicolas/tenute-piccini/">
-                                                                                         <span>Tenute Piccini</span>
+                                                    <a href="https://www.divinho.com.br/vinicolas/coppo/">
+                                                                                         <span>Coppo</span>
                                                                                         </a>
                                                                                                 </div>
             </div>
         </li>
-                        <li class="attribute uvas">
+                        <li class="attribute uva">
             <div class="attribute__item">
-                <div class="label">Uvas</div>
+                <div class="label">Uva</div>
                 <div class="data" data-code="uva"
-                    data-th="Uvas">
-                                                    <a href="https://www.divinho.com.br/uva/merlot/">
-                                                                                         <span>Merlot</span>
-                                                                                        </a>
-                                                                                                                <a href="https://www.divinho.com.br/uva/montepulciano/">
-                                                                                         <span>Montepulciano</span>
-                                                                                        </a>
-                                                                                                                <a href="https://www.divinho.com.br/uva/nero-d-avola/">
-                                                                                         <span>Nero d&#039;Avola</span>
-                                                                                        </a>
-                                                                                                                <a href="https://www.divinho.com.br/uva/primitivo/">
-                                                                                         <span>Primitivo</span>
+                    data-th="Uva">
+                                                    <a href="https://www.divinho.com.br/uva/barbera/">
+                                                                                         <span>Barbera</span>
                                                                                         </a>
                                                                                                 </div>
             </div>
@@ -4590,7 +4560,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 <div class="label">Temperatura de serviço</div>
                 <div class="data" data-code="temperatura_de_servico"
                     data-th="Temperatura&#x20;de&#x20;servi&#xE7;o">
-                                                                                 <span>16 a 18ºC</span>
+                                                                                 <span>18 a 20°C</span>
                                                                                                                             </div>
             </div>
         </li>
@@ -4599,9 +4569,8 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 <div class="label">Harmonização</div>
                 <div class="data" data-code="harmonizacao"
                     data-th="Harmoniza&#xE7;&#xE3;o">
-                                                                                 <i class="icon-carnes-vermelhas" data-toggle="tooltip" data-placement="top" title="Carnes&#x20;vermelhas"></i>
-                                                                                                                                                                         <i class="icon-carnes-de-caca" data-toggle="tooltip" data-placement="top" title="Carnes&#x20;de&#x20;ca&#xE7;a"></i>
-                                                                                                                                                                         <i class="icon-pizza" data-toggle="tooltip" data-placement="top" title="Pizza"></i>
+                                                                                 <i class="icon-aves" data-toggle="tooltip" data-placement="top" title="Aves"></i>
+                                                                                                                                                                         <i class="icon-massas" data-toggle="tooltip" data-placement="top" title="Massas"></i>
                                                                                                                             </div>
             </div>
         </li>
@@ -4610,7 +4579,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     <div class="d-none d-md-block">
         <a href="#"
            class="wishlist action towishlist btn btn-xl btn-outline-primary py-3 "
-           data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":931,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbWVtb3JvLXBpY2Npbmk,"}}'
+           data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":467,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tY29wcG8tYmFyYmVyYS1kYXN0aS1jYW1wLWR1LXJvdXNz"}}'
            data-action="add-to-wishlist">
             <i class="far fa-heart mr-3" aria-hidden="true"></i>
             <span>Lista de Desejos</span>
@@ -4622,33 +4591,33 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             "addToWishlist": {"productType":"simple"}        }
     }
 </script>
-</div></div><div class="col-lg-3 p-md-0"><div class="single-product__actions"><div class="product-info-main"><div class="product-info-price"><div class="d-flex align-items-center justify-content-between"><div class="price-box price-final_price" data-role="priceBox" data-product-id="931" data-price-box="product-id-931">
+</div></div><div class="col-lg-3 p-md-0"><div class="single-product__actions"><div class="product-info-main"><div class="product-info-price"><div class="d-flex align-items-center justify-content-between"><div class="price-box price-final_price" data-role="priceBox" data-product-id="467" data-price-box="product-id-467">
    <div class="price__regular"><br></div>
     <div class="price__sale">
         
 
 <span class="price-container price-final_price&#x20;tax&#x20;weee"
         >
-        <span  id="product-price-931"                data-price-amount="153.14"
+        <span  id="product-price-467"                data-price-amount="341.97"
         data-price-type="finalPrice"
         class="price-wrapper "
-    ><span class="price">R$153,14</span></span>
+    ><span class="price">R$341,97</span></span>
         </span>
     </div>
 
 </div></div>                <div class="installment">
-            Em até <span>3x de R$51,05 s/ juros</span>        </div>
+            Em até <span>3x de R$113,99 s/ juros</span>        </div>
     </div>
 
 <div class="product-add-form">
-    <form data-product-sku="309"
-          action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbWVtb3JvLXBpY2Npbmk%2C/product/931/" method="post"
+    <form data-product-sku="6542"
+          action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tY29wcG8tYmFyYmVyYS1kYXN0aS1jYW1wLWR1LXJvdXNz/product/467/" method="post"
           id="product_addtocart_form">
-        <input type="hidden" name="product" value="931" />
+        <input type="hidden" name="product" value="467" />
         <input type="hidden" name="selected_configurable_option" value="" />
         <input type="hidden" name="related_product" id="related-products-field" value="" />
-        <input type="hidden" name="item"  value="931" />
-        <input name="form_key" type="hidden" value="a8Gr12ZUbCQexdn5" />                            <div class="box-tocart">
+        <input type="hidden" name="item"  value="467" />
+        <input name="form_key" type="hidden" value="57ZDw3X5vnuJBvhC" />                            <div class="box-tocart">
     <div class="fieldset">
                 <div class="form-row align-items-center mt-2">
             <div class="form-group col-3">
@@ -4725,13 +4694,13 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         'priceBox'
     ], function($){
         var dataPriceBoxSelector = '[data-role=priceBox]',
-            dataProductIdSelector = '[data-product-id=931]',
+            dataProductIdSelector = '[data-product-id=467]',
             priceBoxes = $(dataPriceBoxSelector + dataProductIdSelector);
 
         priceBoxes = priceBoxes.filter(function(index, elem){
             return !$(elem).find('.price-from').length;
         });
-        priceBoxes.priceBox({'priceConfig': {"productId":"931","priceFormat":{"pattern":"R$%s","precision":2,"requiredPrecision":2,"decimalSymbol":",","groupSymbol":".","groupLength":3,"integerRequired":false}}});
+        priceBoxes.priceBox({'priceConfig': {"productId":"467","priceFormat":{"pattern":"R$%s","precision":2,"requiredPrecision":2,"decimalSymbol":",","groupSymbol":".","groupLength":3,"integerRequired":false}}});
     });
 </script>
 <div class="opt2flow-shipping-estimate"><div class="cart-after__title text-uppercase">
@@ -4745,7 +4714,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             <button name="btn-estimate-shipping" id="btn-estimate-shipping" type="button" title="ok" class="action btn btn-primary tocart">ok</button>
         </div>
     </div>
-    <input type="hidden" name="opt2flow_product_id" id="opt2flow_product_id" value="931">
+    <input type="hidden" name="opt2flow_product_id" id="opt2flow_product_id" value="467">
 </div>
 <div id="shipping-estimate-results"></div>
 <script>
@@ -4761,7 +4730,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         });
 </script>
 </div></div><div class="alert price alert-secondary small font-weight-bold p-2 my-3 price">
-    <a href="https://www.divinho.com.br/productalert/add/price/product_id/931/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbWVtb3JvLXBpY2Npbmk%2C/"
+    <a href="https://www.divinho.com.br/productalert/add/price/product_id/467/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tY29wcG8tYmFyYmVyYS1kYXN0aS1jYW1wLWR1LXJvdXNz/"
        title="Receber&#x20;notifica&#xE7;&#xF5;es&#x20;de&#x20;baixa&#x20;de&#x20;pre&#xE7;o" class="action alert-product">
         <i class="fas fa-exclamation-circle mr-1"></i>
         Receber notificações de baixa de preço    </a>
@@ -4773,24 +4742,24 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             <h2 class="attribute__header">
                 Vinificação            </h2>
             <div class="attribute__content">
-                <p>O Memoro Piccini é produzido com um corte das uvas Primitivo (40%), oriunda da região vitivinícola da Puglia, Montepulciano (30%), oriunda da região vitivinícola de Abruzzo, Nero D'Avola (20%), oriunda da região vitivinícola da Sicília, e Merlot (10%), oriunda da região vitivinícola de Vêneto, na Itália. A uva Primitivo é parcialmente passificada. A fermentação do vinho é realizada em tanques de aço inox. A uva Montepulciano estagia em barris de carvalho por um período de vinte e quatro meses.</p>            </div>
+                <p><span style="font-weight: 400;">Coppo Barbera d'Asti Camp du Rouss 2017 é produzido com a uva Barbera, oriunda de vinhedos localizados na Denominação de Origem Controlada e Garantida (D.O.C.G.) de Barbera d'Asti, dentro da região vitivinícola do Piemonte, na Itália. As uvas são colhidas e selecionadas manualmente. O vinho envelhece em barris de carvalho francês durante um período de doze meses. </span></p>            </div>
         </div>
                 <div class="attribute-item" data-attribute="sobre_a_vinicola">
             <h2 class="attribute__header">
                 Sobre a vinícola            </h2>
             <div class="attribute__content">
-                Estabelecida há quatro gerações no coração da Toscana, Tenute Piccini elabora vinhos tintos e vinhos brancos de muita tipicidade, combinando as mais modernas técnicas de vinificação com a tradição das práticas regionais. Esta receita garantiu um enorme sucesso, fazendo com que Piccini se tornasse o segundo maior produtor da região da Toscana, atrás apenas da família Antinori. Toda sua gama de vinhos apresenta uma ótima relação entre qualidade e preço. A vinícola Tenute Piccini foi fundada em 1882 apenas com sete hectares de vinhedos. Desde então, não para de crescer, tornando-se um dos maiores produtores de Chianti. A família possui outras quatro propriedades, das quais três encontram-se na Toscana: Villa al Cortile, em Montalcino, Fattoria di Valiano, em Chianti, e Tenuta Moraia, em Maremma. Já Regio Cantina, a mais nova propriedade da família, está localizada em Basilicata, no sul da Itália. Tenute Piccini é, hoje, responsável por cerca de 10% de todos os vinhos Chianti e distribui seus rótulos para mais de setenta países.            </div>
+                Localizada na cidade de Canelli, no Piemonte, Coppo é uma das mais antigas vinícolas familiares da Itália. Sua cave data do século XVIII e ocupa 5 mil metros quadrados escavados a 40 metros de profundidade. Sua importância é tanta que foi reconhecida como patrimônio histórico da humanidade pela Unesco. A maior parte da produção da Coppo é de vinhos espumantes Barbera Metodo Classico, Chardonnay e Moscato d’Asti, mas em suas famosas “catedrais subterrâneas” também são elaborados excelentes DOCG do Piemonte como os Gavi e Barolo. Desde 1800, a vinícola produz seus vinhos Gavi com a casta Cortese e é a única autorizada a produzir vinhos Barolo DOCG fora da região estabelecida pelo Ministério da Agricultura Italiano. Na década de 1980, foi pioneira ao iniciar uma nova era para os vinhos Barbera, até então considerados exemplares tintos inferiores aos Nebbiolo. A Coppo mudou essa imagem ao utilizar frutos cuidadosamente amadurecidos e envelhecer os vinhos em barricas, criando um resultado final complexo e aromático. Atualmente, Coppo produz mais quatro vinhos varietais de Barbera: o Cascina Gavelli, o L'Avvocata e o Camp du Rouss, além do Riserva della Famiglia.            </div>
         </div>
         </div><div class="d-md-none product-info__mobile"><hr class="border-primary my-4">
 <div class="product-add-form">
-    <form data-product-sku="309"
-          action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbWVtb3JvLXBpY2Npbmk%2C/product/931/" method="post"
+    <form data-product-sku="6542"
+          action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tY29wcG8tYmFyYmVyYS1kYXN0aS1jYW1wLWR1LXJvdXNz/product/467/" method="post"
           id="product_addtocart_form">
-        <input type="hidden" name="product" value="931" />
+        <input type="hidden" name="product" value="467" />
         <input type="hidden" name="selected_configurable_option" value="" />
         <input type="hidden" name="related_product" id="related-products-field" value="" />
-        <input type="hidden" name="item"  value="931" />
-        <input name="form_key" type="hidden" value="a8Gr12ZUbCQexdn5" />                            <div class="box-tocart">
+        <input type="hidden" name="item"  value="467" />
+        <input name="form_key" type="hidden" value="57ZDw3X5vnuJBvhC" />                            <div class="box-tocart">
     <div class="fieldset">
                 <div class="form-row align-items-center mt-2">
             <div class="form-group col-3">
@@ -4857,13 +4826,13 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         'priceBox'
     ], function($){
         var dataPriceBoxSelector = '[data-role=priceBox]',
-            dataProductIdSelector = '[data-product-id=931]',
+            dataProductIdSelector = '[data-product-id=467]',
             priceBoxes = $(dataPriceBoxSelector + dataProductIdSelector);
 
         priceBoxes = priceBoxes.filter(function(index, elem){
             return !$(elem).find('.price-from').length;
         });
-        priceBoxes.priceBox({'priceConfig': {"productId":"931","priceFormat":{"pattern":"R$%s","precision":2,"requiredPrecision":2,"decimalSymbol":",","groupSymbol":".","groupLength":3,"integerRequired":false}}});
+        priceBoxes.priceBox({'priceConfig': {"productId":"467","priceFormat":{"pattern":"R$%s","precision":2,"requiredPrecision":2,"decimalSymbol":",","groupSymbol":".","groupLength":3,"integerRequired":false}}});
     });
 </script>
 </div></div></div></div><script type="text/x-magento-init">
@@ -4876,7 +4845,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     {
         "*": {
                 "Magento_Catalog/js/product/view/provider": {
-                    "data": {"items":{"931":{"add_to_cart_button":{"post_data":"{\"action\":\"https:\\\/\\\/www.divinho.com.br\\\/checkout\\\/cart\\\/add\\\/uenc\\\/%25uenc%25\\\/product\\\/931\\\/\",\"data\":{\"product\":\"931\",\"uenc\":\"%uenc%\"}}","url":"https:\/\/www.divinho.com.br\/checkout\/cart\/add\/uenc\/%25uenc%25\/product\/931\/","required_options":false},"add_to_compare_button":{"post_data":null,"url":"{\"action\":\"https:\\\/\\\/www.divinho.com.br\\\/catalog\\\/product_compare\\\/add\\\/\",\"data\":{\"product\":\"931\",\"uenc\":\"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbWVtb3JvLXBpY2Npbmk,\"}}","required_options":null},"price_info":{"final_price":153.14,"max_price":153.14,"max_regular_price":153.14,"minimal_regular_price":153.14,"special_price":null,"minimal_price":153.14,"regular_price":153.14,"formatted_prices":{"final_price":"<span class=\"price\">R$153,14<\/span>","max_price":"<span class=\"price\">R$153,14<\/span>","minimal_price":"<span class=\"price\">R$153,14<\/span>","max_regular_price":"<span class=\"price\">R$153,14<\/span>","minimal_regular_price":null,"special_price":null,"regular_price":"<span class=\"price\">R$153,14<\/span>"},"extension_attributes":{"msrp":{"msrp_price":"<span class=\"price\">R$0,00<\/span>","is_applicable":"","is_shown_price_on_gesture":"","msrp_message":"","explanation_message":"Our price is lower than the manufacturer&#039;s &quot;minimum advertised price.&quot; As a result, we cannot show you the price in catalog or the product page. <br><br> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart."},"tax_adjustments":{"final_price":153.14,"max_price":153.14,"max_regular_price":153.14,"minimal_regular_price":153.14,"special_price":153.14,"minimal_price":153.14,"regular_price":153.14,"formatted_prices":{"final_price":"<span class=\"price\">R$153,14<\/span>","max_price":"<span class=\"price\">R$153,14<\/span>","minimal_price":"<span class=\"price\">R$153,14<\/span>","max_regular_price":"<span class=\"price\">R$153,14<\/span>","minimal_regular_price":null,"special_price":"<span class=\"price\">R$153,14<\/span>","regular_price":"<span class=\"price\">R$153,14<\/span>"}},"weee_attributes":[],"weee_adjustment":"<span class=\"price\">R$153,14<\/span>"}},"images":[{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/c0ffc0f3780617b20732f12bef036575\/v\/i\/vinho_memoro_piccini.png","code":"recently_viewed_products_grid_content_widget","height":300,"width":240,"label":"Garrafa de Vinho Memoro Piccini","resized_width":240,"resized_height":300},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/d9e3e7d2d318c89cdaa08d93d9a8221e\/v\/i\/vinho_memoro_piccini.png","code":"recently_viewed_products_list_content_widget","height":340,"width":270,"label":"Garrafa de Vinho Memoro Piccini","resized_width":270,"resized_height":340},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/fba4d41374f3b4a4b2553ba145032f1f\/v\/i\/vinho_memoro_piccini.png","code":"recently_viewed_products_images_names_widget","height":90,"width":75,"label":"Garrafa de Vinho Memoro Piccini","resized_width":75,"resized_height":90},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/c0ffc0f3780617b20732f12bef036575\/v\/i\/vinho_memoro_piccini.png","code":"recently_compared_products_grid_content_widget","height":300,"width":240,"label":"Garrafa de Vinho Memoro Piccini","resized_width":240,"resized_height":300},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/d9e3e7d2d318c89cdaa08d93d9a8221e\/v\/i\/vinho_memoro_piccini.png","code":"recently_compared_products_list_content_widget","height":340,"width":270,"label":"Garrafa de Vinho Memoro Piccini","resized_width":270,"resized_height":340},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/fba4d41374f3b4a4b2553ba145032f1f\/v\/i\/vinho_memoro_piccini.png","code":"recently_compared_products_images_names_widget","height":90,"width":75,"label":"Garrafa de Vinho Memoro Piccini","resized_width":75,"resized_height":90}],"url":"https:\/\/www.divinho.com.br\/vinho-memoro-piccini","id":931,"name":"Vinho Memoro Piccini","type":"simple","is_salable":"1","store_id":1,"currency_code":"BRL","extension_attributes":{"review_html":"<div class=\"product-reviews-summary short empty\">\n    <div class=\"reviews-actions\">\n        <a class=\"action add\" href=\"https:\/\/www.divinho.com.br\/vinho-memoro-piccini#review-form\">\n            Seja o primeiro a avaliar este produto        <\/a>\n    <\/div>\n<\/div>\n","wishlist_button":{"post_data":null,"url":"{\"action\":\"https:\\\/\\\/www.divinho.com.br\\\/wishlist\\\/index\\\/add\\\/\",\"data\":{\"product\":931,\"uenc\":\"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbWVtb3JvLXBpY2Npbmk,\"}}","required_options":null}}}},"store":"1","currency":"BRL"}            }
+                    "data": {"items":{"467":{"add_to_cart_button":{"post_data":"{\"action\":\"https:\\\/\\\/www.divinho.com.br\\\/checkout\\\/cart\\\/add\\\/uenc\\\/%25uenc%25\\\/product\\\/467\\\/\",\"data\":{\"product\":\"467\",\"uenc\":\"%uenc%\"}}","url":"https:\/\/www.divinho.com.br\/checkout\/cart\/add\/uenc\/%25uenc%25\/product\/467\/","required_options":false},"add_to_compare_button":{"post_data":null,"url":"{\"action\":\"https:\\\/\\\/www.divinho.com.br\\\/catalog\\\/product_compare\\\/add\\\/\",\"data\":{\"product\":\"467\",\"uenc\":\"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tY29wcG8tYmFyYmVyYS1kYXN0aS1jYW1wLWR1LXJvdXNz\"}}","required_options":null},"price_info":{"final_price":341.97,"max_price":341.97,"max_regular_price":341.97,"minimal_regular_price":341.97,"special_price":null,"minimal_price":341.97,"regular_price":341.97,"formatted_prices":{"final_price":"<span class=\"price\">R$341,97<\/span>","max_price":"<span class=\"price\">R$341,97<\/span>","minimal_price":"<span class=\"price\">R$341,97<\/span>","max_regular_price":"<span class=\"price\">R$341,97<\/span>","minimal_regular_price":null,"special_price":null,"regular_price":"<span class=\"price\">R$341,97<\/span>"},"extension_attributes":{"msrp":{"msrp_price":"<span class=\"price\">R$0,00<\/span>","is_applicable":"","is_shown_price_on_gesture":"","msrp_message":"","explanation_message":"Our price is lower than the manufacturer&#039;s &quot;minimum advertised price.&quot; As a result, we cannot show you the price in catalog or the product page. <br><br> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart."},"tax_adjustments":{"final_price":341.97,"max_price":341.97,"max_regular_price":341.97,"minimal_regular_price":341.97,"special_price":341.97,"minimal_price":341.97,"regular_price":341.97,"formatted_prices":{"final_price":"<span class=\"price\">R$341,97<\/span>","max_price":"<span class=\"price\">R$341,97<\/span>","minimal_price":"<span class=\"price\">R$341,97<\/span>","max_regular_price":"<span class=\"price\">R$341,97<\/span>","minimal_regular_price":null,"special_price":"<span class=\"price\">R$341,97<\/span>","regular_price":"<span class=\"price\">R$341,97<\/span>"}},"weee_attributes":[],"weee_adjustment":"<span class=\"price\">R$341,97<\/span>"}},"images":[{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/c0ffc0f3780617b20732f12bef036575\/c\/o\/coppo_barbera_d_asti_camp_du_rouss.png","code":"recently_viewed_products_grid_content_widget","height":300,"width":240,"label":"Garrafa de Vinho Coppo Barbera d'Asti Camp du Rouss 2017","resized_width":240,"resized_height":300},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/d9e3e7d2d318c89cdaa08d93d9a8221e\/c\/o\/coppo_barbera_d_asti_camp_du_rouss.png","code":"recently_viewed_products_list_content_widget","height":340,"width":270,"label":"Garrafa de Vinho Coppo Barbera d'Asti Camp du Rouss 2017","resized_width":270,"resized_height":340},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/fba4d41374f3b4a4b2553ba145032f1f\/c\/o\/coppo_barbera_d_asti_camp_du_rouss.png","code":"recently_viewed_products_images_names_widget","height":90,"width":75,"label":"Garrafa de Vinho Coppo Barbera d'Asti Camp du Rouss 2017","resized_width":75,"resized_height":90},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/c0ffc0f3780617b20732f12bef036575\/c\/o\/coppo_barbera_d_asti_camp_du_rouss.png","code":"recently_compared_products_grid_content_widget","height":300,"width":240,"label":"Garrafa de Vinho Coppo Barbera d'Asti Camp du Rouss 2017","resized_width":240,"resized_height":300},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/d9e3e7d2d318c89cdaa08d93d9a8221e\/c\/o\/coppo_barbera_d_asti_camp_du_rouss.png","code":"recently_compared_products_list_content_widget","height":340,"width":270,"label":"Garrafa de Vinho Coppo Barbera d'Asti Camp du Rouss 2017","resized_width":270,"resized_height":340},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/fba4d41374f3b4a4b2553ba145032f1f\/c\/o\/coppo_barbera_d_asti_camp_du_rouss.png","code":"recently_compared_products_images_names_widget","height":90,"width":75,"label":"Garrafa de Vinho Coppo Barbera d'Asti Camp du Rouss 2017","resized_width":75,"resized_height":90}],"url":"https:\/\/www.divinho.com.br\/vinho-coppo-barbera-dasti-camp-du-rouss","id":467,"name":"Vinho Coppo Barbera d'Asti Camp du Rouss 2017","type":"simple","is_salable":"1","store_id":1,"currency_code":"BRL","extension_attributes":{"review_html":"<div class=\"product-reviews-summary short empty\">\n    <div class=\"reviews-actions\">\n        <a class=\"action add\" href=\"https:\/\/www.divinho.com.br\/vinho-coppo-barbera-dasti-camp-du-rouss#review-form\">\n            Seja o primeiro a avaliar este produto        <\/a>\n    <\/div>\n<\/div>\n","wishlist_button":{"post_data":null,"url":"{\"action\":\"https:\\\/\\\/www.divinho.com.br\\\/wishlist\\\/index\\\/add\\\/\",\"data\":{\"product\":467,\"uenc\":\"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tY29wcG8tYmFyYmVyYS1kYXN0aS1jYW1wLWR1LXJvdXNz\"}}","required_options":null}}}},"store":"1","currency":"BRL"}            }
         }
     }
 </script>
@@ -4901,7 +4870,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                         
                                                 <div class="col-md-3 mb-2 product product-item item" style="display: none;">
                                                             <div class="box-product product-item-info related-available"
-                                    data-product-id="695">
+                                    data-product-id="465">
                                     <!-- related_products_list-->
                                     
                                     
@@ -4912,22 +4881,22 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                     
 
 
-                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Piccini Rosso di Montalcino 2017&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Memoro Piccini Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Piccini Rosso di Montalcino 2017&quot;,&quot;id&quot;:&quot;695&quot;,&quot;price&quot;:&quot;387.64&quot;,&quot;category&quot;:&quot;Pa\u00edses\/It\u00e1lia&quot;,&quot;position&quot;:0,&quot;brand&quot;:&quot;Tenute Piccini&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-piccini-rosso-di-montalcino' }});" href="https://www.divinho.com.br/vinho-piccini-rosso-di-montalcino"
+                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Espumante Coppo Moscato d&#039;Asti Moncalvina 2019&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Coppo Barbera d&#039;Asti Camp du Rouss 2017 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Espumante Coppo Moscato d&#039;Asti Moncalvina 2019&quot;,&quot;id&quot;:&quot;465&quot;,&quot;price&quot;:&quot;273.46&quot;,&quot;category&quot;:&quot;Pa\u00edses\/It\u00e1lia&quot;,&quot;position&quot;:0,&quot;brand&quot;:&quot;Coppo&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/espumante-coppo-moscato-dasti-moncalvina' }});" href="https://www.divinho.com.br/espumante-coppo-moscato-dasti-moncalvina"
                                         class="product photo product-item-photo">
                                         <div class="product__photo">
                                             
 
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho_piccini_rosso_di_montalcino_2017.png"
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/c/o/coppo_moscato_d_asti_moncalvina.png"
     width=""
     height=""
-    alt="Garrafa de Vinho Rosso di Montalcino Piccini 2017" /></span>                                        </div>
+    alt="Garrafa de Vinho frisante Coppo Moscato d&#039;Asti Moncalvina 2019" /></span>                                        </div>
                                     </a>
 
                                     <div class="product__content">
                                         <a class="product-item-link"
-                                            title="Vinho&#x20;Piccini&#x20;Rosso&#x20;di&#x20;Montalcino&#x20;2017"
-                                            href="https://www.divinho.com.br/vinho-piccini-rosso-di-montalcino">
-                                            <h4 class="product__title">Vinho Piccini Rosso di Montalcino 2017</h4>
+                                            title="Espumante&#x20;Coppo&#x20;Moscato&#x20;d&#x27;Asti&#x20;Moncalvina&#x20;2019"
+                                            href="https://www.divinho.com.br/espumante-coppo-moscato-dasti-moncalvina">
+                                            <h4 class="product__title">Espumante Coppo Moscato d&#039;Asti Moncalvina 2019</h4>
                                         </a>
 
                                         
@@ -4936,26 +4905,26 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 </div>
 
                                                                                     <form data-role="tocart-form"
-                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbWVtb3JvLXBpY2Npbmk%2C/product/695/"
+                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tY29wcG8tYmFyYmVyYS1kYXN0aS1jYW1wLWR1LXJvdXNz/product/465/"
                                                 method="post">
                                                 <input type="hidden" name="product"
-                                                    value="695">
+                                                    value="465">
                                                 <input type="hidden"
                                                     name="uenc"
-                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbWVtb3JvLXBpY2Npbmk,">
-                                                                                                <input name="form_key" type="hidden" value="a8Gr12ZUbCQexdn5" />                                                <div class="product__buy">
+                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tY29wcG8tYmFyYmVyYS1kYXN0aS1jYW1wLWR1LXJvdXNz">
+                                                                                                <input name="form_key" type="hidden" value="57ZDw3X5vnuJBvhC" />                                                <div class="product__buy">
                                                     <div class="product__price">
-                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="695" data-price-box="product-id-695">
+                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="465" data-price-box="product-id-465">
    <div class="price__regular"><br></div>
     <div class="price__sale">
         
 
 <span class="price-container price-final_price&#x20;tax&#x20;weee"
         >
-        <span  id="product-price-695"                data-price-amount="387.64"
+        <span  id="product-price-465"                data-price-amount="273.46"
         data-price-type="finalPrice"
         class="price-wrapper "
-    ><span class="price">R$387,64</span></span>
+    ><span class="price">R$273,46</span></span>
         </span>
     </div>
 
@@ -4963,7 +4932,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                     <div class="product__quantity">
                                                         <div class="custom-number">
                                                             <input type="number" name="qty"
-                                                                id="qty695"
+                                                                id="qty465"
                                                                 maxlength="12" min="1" minlenght="1" value="1"
                                                                 title="Qtd"
                                                                 class="qty"
@@ -4975,7 +4944,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                                 type="submit"><i class="fas fa-shopping-cart"></i></button>
                                                         </div>
                                                                                                                     <a href="#"
-                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":695,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbWVtb3JvLXBpY2Npbmk,"}}'
+                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":465,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tY29wcG8tYmFyYmVyYS1kYXN0aS1jYW1wLWR1LXJvdXNz"}}'
                                                                 class="action towishlist product__wishlist"
                                                                 data-action="add-to-wishlist"
                                                                 title="Adicionar&#x20;&#xE0;&#x20;lista&#x20;de&#x20;desejos">
@@ -4985,7 +4954,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                 </div>
                                                 <div class="actions-primary">
                                                                     <div class="installment">
-            Em até <span>3x de R$129,21 s/ juros</span>        </div>
+            Em até <span>3x de R$91,15 s/ juros</span>        </div>
                                                         <button type="submit"
                                                         title="Adicionar ao Carrinho"
                                                         class="action tocart primary btn btn--product">
@@ -5000,7 +4969,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                         
                                                 <div class="col-md-3 mb-2 product product-item item" style="display: none;">
                                                             <div class="box-product product-item-info related-available"
-                                    data-product-id="696">
+                                    data-product-id="466">
                                     <!-- related_products_list-->
                                     
                                     
@@ -5011,22 +4980,22 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                     
 
 
-                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Piccini Brunello di Montalcino 2014&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Memoro Piccini Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Piccini Brunello di Montalcino 2014&quot;,&quot;id&quot;:&quot;696&quot;,&quot;price&quot;:&quot;724.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/It\u00e1lia&quot;,&quot;position&quot;:1,&quot;brand&quot;:&quot;Tenute Piccini&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-piccini-brunello-di-montalcino' }});" href="https://www.divinho.com.br/vinho-piccini-brunello-di-montalcino"
+                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Coppo Barbera d\u2019Asti Cascina Gavelli 2018&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Coppo Barbera d&#039;Asti Camp du Rouss 2017 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Coppo Barbera d\u2019Asti Cascina Gavelli 2018&quot;,&quot;id&quot;:&quot;466&quot;,&quot;price&quot;:&quot;444.73&quot;,&quot;category&quot;:&quot;Vinhos\/Vinho Tinto&quot;,&quot;position&quot;:1,&quot;brand&quot;:&quot;Coppo&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-coppo-barbera-dasti-cascina-gavelli' }});" href="https://www.divinho.com.br/vinho-coppo-barbera-dasti-cascina-gavelli"
                                         class="product photo product-item-photo">
                                         <div class="product__photo">
                                             
 
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho-brunello-di-montalcino-piccini_2.png"
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/c/o/coppo_barbera_d_asti_cascina_gavelli.png"
     width=""
     height=""
-    alt="Garrafa de Vinho Brunello di Montalcino Piccini 2014" /></span>                                        </div>
+    alt="Garrafa de Vinho Coppo Barbera d’Asti Cascina Gavelli 2018" /></span>                                        </div>
                                     </a>
 
                                     <div class="product__content">
                                         <a class="product-item-link"
-                                            title="Vinho&#x20;Piccini&#x20;Brunello&#x20;di&#x20;Montalcino&#x20;2014"
-                                            href="https://www.divinho.com.br/vinho-piccini-brunello-di-montalcino">
-                                            <h4 class="product__title">Vinho Piccini Brunello di Montalcino 2014</h4>
+                                            title="Vinho&#x20;Coppo&#x20;Barbera&#x20;d&#x2019;Asti&#x20;Cascina&#x20;Gavelli&#x20;2018"
+                                            href="https://www.divinho.com.br/vinho-coppo-barbera-dasti-cascina-gavelli">
+                                            <h4 class="product__title">Vinho Coppo Barbera d’Asti Cascina Gavelli 2018</h4>
                                         </a>
 
                                         
@@ -5035,26 +5004,26 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 </div>
 
                                                                                     <form data-role="tocart-form"
-                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbWVtb3JvLXBpY2Npbmk%2C/product/696/"
+                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tY29wcG8tYmFyYmVyYS1kYXN0aS1jYW1wLWR1LXJvdXNz/product/466/"
                                                 method="post">
                                                 <input type="hidden" name="product"
-                                                    value="696">
+                                                    value="466">
                                                 <input type="hidden"
                                                     name="uenc"
-                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbWVtb3JvLXBpY2Npbmk,">
-                                                                                                <input name="form_key" type="hidden" value="a8Gr12ZUbCQexdn5" />                                                <div class="product__buy">
+                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tY29wcG8tYmFyYmVyYS1kYXN0aS1jYW1wLWR1LXJvdXNz">
+                                                                                                <input name="form_key" type="hidden" value="57ZDw3X5vnuJBvhC" />                                                <div class="product__buy">
                                                     <div class="product__price">
-                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="696" data-price-box="product-id-696">
+                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="466" data-price-box="product-id-466">
    <div class="price__regular"><br></div>
     <div class="price__sale">
         
 
 <span class="price-container price-final_price&#x20;tax&#x20;weee"
         >
-        <span  id="product-price-696"                data-price-amount="724"
+        <span  id="product-price-466"                data-price-amount="444.73"
         data-price-type="finalPrice"
         class="price-wrapper "
-    ><span class="price">R$724,00</span></span>
+    ><span class="price">R$444,73</span></span>
         </span>
     </div>
 
@@ -5062,7 +5031,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                     <div class="product__quantity">
                                                         <div class="custom-number">
                                                             <input type="number" name="qty"
-                                                                id="qty696"
+                                                                id="qty466"
                                                                 maxlength="12" min="1" minlenght="1" value="1"
                                                                 title="Qtd"
                                                                 class="qty"
@@ -5074,7 +5043,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                                 type="submit"><i class="fas fa-shopping-cart"></i></button>
                                                         </div>
                                                                                                                     <a href="#"
-                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":696,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbWVtb3JvLXBpY2Npbmk,"}}'
+                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":466,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tY29wcG8tYmFyYmVyYS1kYXN0aS1jYW1wLWR1LXJvdXNz"}}'
                                                                 class="action towishlist product__wishlist"
                                                                 data-action="add-to-wishlist"
                                                                 title="Adicionar&#x20;&#xE0;&#x20;lista&#x20;de&#x20;desejos">
@@ -5084,7 +5053,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                 </div>
                                                 <div class="actions-primary">
                                                                     <div class="installment">
-            Em até <span>3x de R$241,33 s/ juros</span>        </div>
+            Em até <span>3x de R$148,24 s/ juros</span>        </div>
                                                         <button type="submit"
                                                         title="Adicionar ao Carrinho"
                                                         class="action tocart primary btn btn--product">
@@ -5099,7 +5068,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                         
                                                 <div class="col-md-3 mb-2 product product-item item" style="display: none;">
                                                             <div class="box-product product-item-info related-available"
-                                    data-product-id="763">
+                                    data-product-id="943">
                                     <!-- related_products_list-->
                                     
                                     
@@ -5110,22 +5079,22 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                     
 
 
-                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Piccini Vito Chardonnay 2018&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Memoro Piccini Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Piccini Vito Chardonnay 2018&quot;,&quot;id&quot;:&quot;763&quot;,&quot;price&quot;:&quot;96.48&quot;,&quot;category&quot;:&quot;Pa\u00edses\/It\u00e1lia&quot;,&quot;position&quot;:2,&quot;brand&quot;:&quot;Tenute Piccini&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-piccini-vito-chardonnay-2018' }});" href="https://www.divinho.com.br/vinho-piccini-vito-chardonnay-2018"
+                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Coppo Barbera d\u2019Asti L\u2019Avvocata 2017&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Coppo Barbera d&#039;Asti Camp du Rouss 2017 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Coppo Barbera d\u2019Asti L\u2019Avvocata 2017&quot;,&quot;id&quot;:&quot;943&quot;,&quot;price&quot;:&quot;239.21&quot;,&quot;category&quot;:&quot;Vinhos\/Vinho Tinto&quot;,&quot;position&quot;:2,&quot;brand&quot;:&quot;Coppo&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-coppo-barbera-dasti-l-avvocata-2017' }});" href="https://www.divinho.com.br/vinho-coppo-barbera-dasti-l-avvocata-2017"
                                         class="product photo product-item-photo">
                                         <div class="product__photo">
                                             
 
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho-branco-piccini-vito-chardonnay-2016_3.png"
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho-tinto-coppo-barbera-d-asti-l-avvocata-2016_3.png"
     width=""
     height=""
-    alt="Garrafa de Vinho Branco Piccini Vito Chardonnay 2018" /></span>                                        </div>
+    alt="Garrafa de Vinho Tinto Coppo Barbera d’Asti L’Avvocata 2017" /></span>                                        </div>
                                     </a>
 
                                     <div class="product__content">
                                         <a class="product-item-link"
-                                            title="Vinho&#x20;Piccini&#x20;Vito&#x20;Chardonnay&#x20;2018"
-                                            href="https://www.divinho.com.br/vinho-piccini-vito-chardonnay-2018">
-                                            <h4 class="product__title">Vinho Piccini Vito Chardonnay 2018</h4>
+                                            title="Vinho&#x20;Coppo&#x20;Barbera&#x20;d&#x2019;Asti&#x20;L&#x2019;Avvocata&#x20;2017"
+                                            href="https://www.divinho.com.br/vinho-coppo-barbera-dasti-l-avvocata-2017">
+                                            <h4 class="product__title">Vinho Coppo Barbera d’Asti L’Avvocata 2017</h4>
                                         </a>
 
                                         
@@ -5134,26 +5103,26 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 </div>
 
                                                                                     <form data-role="tocart-form"
-                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbWVtb3JvLXBpY2Npbmk%2C/product/763/"
+                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tY29wcG8tYmFyYmVyYS1kYXN0aS1jYW1wLWR1LXJvdXNz/product/943/"
                                                 method="post">
                                                 <input type="hidden" name="product"
-                                                    value="763">
+                                                    value="943">
                                                 <input type="hidden"
                                                     name="uenc"
-                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbWVtb3JvLXBpY2Npbmk,">
-                                                                                                <input name="form_key" type="hidden" value="a8Gr12ZUbCQexdn5" />                                                <div class="product__buy">
+                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tY29wcG8tYmFyYmVyYS1kYXN0aS1jYW1wLWR1LXJvdXNz">
+                                                                                                <input name="form_key" type="hidden" value="57ZDw3X5vnuJBvhC" />                                                <div class="product__buy">
                                                     <div class="product__price">
-                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="763" data-price-box="product-id-763">
+                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="943" data-price-box="product-id-943">
    <div class="price__regular"><br></div>
     <div class="price__sale">
         
 
 <span class="price-container price-final_price&#x20;tax&#x20;weee"
         >
-        <span  id="product-price-763"                data-price-amount="96.48"
+        <span  id="product-price-943"                data-price-amount="239.21"
         data-price-type="finalPrice"
         class="price-wrapper "
-    ><span class="price">R$96,48</span></span>
+    ><span class="price">R$239,21</span></span>
         </span>
     </div>
 
@@ -5161,7 +5130,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                     <div class="product__quantity">
                                                         <div class="custom-number">
                                                             <input type="number" name="qty"
-                                                                id="qty763"
+                                                                id="qty943"
                                                                 maxlength="12" min="1" minlenght="1" value="1"
                                                                 title="Qtd"
                                                                 class="qty"
@@ -5173,7 +5142,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                                 type="submit"><i class="fas fa-shopping-cart"></i></button>
                                                         </div>
                                                                                                                     <a href="#"
-                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":763,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbWVtb3JvLXBpY2Npbmk,"}}'
+                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":943,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tY29wcG8tYmFyYmVyYS1kYXN0aS1jYW1wLWR1LXJvdXNz"}}'
                                                                 class="action towishlist product__wishlist"
                                                                 data-action="add-to-wishlist"
                                                                 title="Adicionar&#x20;&#xE0;&#x20;lista&#x20;de&#x20;desejos">
@@ -5183,7 +5152,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                 </div>
                                                 <div class="actions-primary">
                                                                     <div class="installment">
-            Em até <span>3x de R$32,16 s/ juros</span>        </div>
+            Em até <span>3x de R$79,74 s/ juros</span>        </div>
                                                         <button type="submit"
                                                         title="Adicionar ao Carrinho"
                                                         class="action tocart primary btn btn--product">
@@ -5198,7 +5167,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                         
                                                 <div class="col-md-3 mb-2 product product-item item" style="display: none;">
                                                             <div class="box-product product-item-info related-available"
-                                    data-product-id="783">
+                                    data-product-id="585">
                                     <!-- related_products_list-->
                                     
                                     
@@ -5208,29 +5177,23 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 
                                     
 
-        <div class="product__pontuacao">
-                                            <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Luca Maroni">LM</div>
-                    <div class="pontos">95</div>
-                </div>
-                    </div>
 
-                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Memoro Piccini Branco&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Memoro Piccini Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Memoro Piccini Branco&quot;,&quot;id&quot;:&quot;783&quot;,&quot;price&quot;:&quot;153.14&quot;,&quot;category&quot;:&quot;Pa\u00edses\/It\u00e1lia&quot;,&quot;position&quot;:3,&quot;brand&quot;:&quot;Tenute Piccini&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-memoro-piccini-branco' }});" href="https://www.divinho.com.br/vinho-memoro-piccini-branco"
+                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Renato Ratti Barbera D&#039;Asti Battaglione 2018&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Coppo Barbera d&#039;Asti Camp du Rouss 2017 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Renato Ratti Barbera D&#039;Asti Battaglione 2018&quot;,&quot;id&quot;:&quot;585&quot;,&quot;price&quot;:&quot;449.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/It\u00e1lia&quot;,&quot;position&quot;:3,&quot;brand&quot;:&quot;Renato Ratti&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-renato-ratti-barbera-dasti-battaglione' }});" href="https://www.divinho.com.br/vinho-renato-ratti-barbera-dasti-battaglione"
                                         class="product photo product-item-photo">
                                         <div class="product__photo">
                                             
 
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho-memoro-branco-piccini_2.png"
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/r/e/renato_ratti_barbera_dasti_battaglione.png"
     width=""
     height=""
-    alt="Garrafa de Vinho Memoro Branco Piccini" /></span>                                        </div>
+    alt="Garrafa de Vinho Renato Ratti Barbera D´Asti Battaglione 2018" /></span>                                        </div>
                                     </a>
 
                                     <div class="product__content">
                                         <a class="product-item-link"
-                                            title="Vinho&#x20;Memoro&#x20;Piccini&#x20;Branco"
-                                            href="https://www.divinho.com.br/vinho-memoro-piccini-branco">
-                                            <h4 class="product__title">Vinho Memoro Piccini Branco</h4>
+                                            title="Vinho&#x20;Renato&#x20;Ratti&#x20;Barbera&#x20;D&#x27;Asti&#x20;Battaglione&#x20;2018"
+                                            href="https://www.divinho.com.br/vinho-renato-ratti-barbera-dasti-battaglione">
+                                            <h4 class="product__title">Vinho Renato Ratti Barbera D&#039;Asti Battaglione 2018</h4>
                                         </a>
 
                                         
@@ -5239,26 +5202,26 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 </div>
 
                                                                                     <form data-role="tocart-form"
-                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbWVtb3JvLXBpY2Npbmk%2C/product/783/"
+                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tY29wcG8tYmFyYmVyYS1kYXN0aS1jYW1wLWR1LXJvdXNz/product/585/"
                                                 method="post">
                                                 <input type="hidden" name="product"
-                                                    value="783">
+                                                    value="585">
                                                 <input type="hidden"
                                                     name="uenc"
-                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbWVtb3JvLXBpY2Npbmk,">
-                                                                                                <input name="form_key" type="hidden" value="a8Gr12ZUbCQexdn5" />                                                <div class="product__buy">
+                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tY29wcG8tYmFyYmVyYS1kYXN0aS1jYW1wLWR1LXJvdXNz">
+                                                                                                <input name="form_key" type="hidden" value="57ZDw3X5vnuJBvhC" />                                                <div class="product__buy">
                                                     <div class="product__price">
-                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="783" data-price-box="product-id-783">
+                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="585" data-price-box="product-id-585">
    <div class="price__regular"><br></div>
     <div class="price__sale">
         
 
 <span class="price-container price-final_price&#x20;tax&#x20;weee"
         >
-        <span  id="product-price-783"                data-price-amount="153.14"
+        <span  id="product-price-585"                data-price-amount="449"
         data-price-type="finalPrice"
         class="price-wrapper "
-    ><span class="price">R$153,14</span></span>
+    ><span class="price">R$449,00</span></span>
         </span>
     </div>
 
@@ -5266,7 +5229,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                     <div class="product__quantity">
                                                         <div class="custom-number">
                                                             <input type="number" name="qty"
-                                                                id="qty783"
+                                                                id="qty585"
                                                                 maxlength="12" min="1" minlenght="1" value="1"
                                                                 title="Qtd"
                                                                 class="qty"
@@ -5278,7 +5241,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                                 type="submit"><i class="fas fa-shopping-cart"></i></button>
                                                         </div>
                                                                                                                     <a href="#"
-                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":783,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbWVtb3JvLXBpY2Npbmk,"}}'
+                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":585,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tY29wcG8tYmFyYmVyYS1kYXN0aS1jYW1wLWR1LXJvdXNz"}}'
                                                                 class="action towishlist product__wishlist"
                                                                 data-action="add-to-wishlist"
                                                                 title="Adicionar&#x20;&#xE0;&#x20;lista&#x20;de&#x20;desejos">
@@ -5288,7 +5251,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                 </div>
                                                 <div class="actions-primary">
                                                                     <div class="installment">
-            Em até <span>3x de R$51,05 s/ juros</span>        </div>
+            Em até <span>3x de R$149,67 s/ juros</span>        </div>
                                                         <button type="submit"
                                                         title="Adicionar ao Carrinho"
                                                         class="action tocart primary btn btn--product">
@@ -5513,7 +5476,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                     </div>
                 <div class="wbcom-fields">
                     <div class="wbcom-fields-contents">
-                        <input name="form_key" type="hidden" value="a8Gr12ZUbCQexdn5">
+                        <input name="form_key" type="hidden" value="57ZDw3X5vnuJBvhC">
                         <input type="text" placeholder="Nome" name="name" required style="background-color: #fff !important;">
                         <input type="email" placeholder="E-mail" name="email" required style="background-color: #fff !important;">
                         <input type="hidden" name="message" value="Olá, gostaria de fazer um pedido.">
@@ -5567,5 +5530,5 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 wpgtm.trackPromotion(wpGtmOptions);
             });
     </script>
-    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-15ce119d71e6a8d24c8","applicationID":"798446581","transactionName":"blMGbUdSWRFQBhBcC1cZJVpBWlgMHhUFUgFmVQVaXVY=","queueTime":0,"applicationTime":79,"atts":"QhQFGw9ISh8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-15ce119d71e6a8d24c8","applicationID":"798446581","transactionName":"blMGbUdSWRFQBhBcC1cZJVpBWlgMHhUFUgFmVQVaXVY=","queueTime":0,"applicationTime":123,"atts":"QhQFGw9ISh8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>

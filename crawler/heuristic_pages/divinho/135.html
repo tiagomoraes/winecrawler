@@ -1,7 +1,7 @@
 
 <!doctype html>
 <html lang=pt-br>      
-    <head >
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product: http://ogp.me/ns/product#">
         <script>
     var BASE_URL = 'https://www.divinho.com.br/';
     var require = {
@@ -9,13 +9,12 @@
     };
 </script>
         <meta charset="utf-8"/><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-15ce119d71e6a8d24c8",applicationID:"798446581"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1211.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
-<meta name="title" content="Herdade do Esporão"/>
-<meta name="description" content="Compre Vinhos Herdade do Esporão com os Melhores Preços! Seleção de rótulos em até 3x s/ juros e entregas para todo Brasil."/>
-<meta name="keywords" content="Herdade do Esporão"/>
+<meta name="title" content="Vinhos do Porto com Melhores Preços | DiVinho "/>
+<meta name="keywords" content="Vinho do Porto"/>
 <meta name="robots" content="INDEX,FOLLOW"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta name="format-detection" content="telephone=no"/>
-<title>Herdade do Esporão</title>
+<title>Vinhos do Porto com Melhores Preços | DiVinho </title>
 <link  rel="stylesheet" type="text/css"  media="all" href="https://static.divinho.com.br/static/version1636382917/_cache/merged/c3f0846f21e00493666c1bb1e46fe5c8.min.css" />
 <script  type="text/javascript"  src="https://static.divinho.com.br/static/version1636382917/_cache/merged/38cbaaf652093663e521d41aea6fcd0d.min.js"></script>
 <link  rel="icon" type="image/x-icon" href="https://images.divinho.com.br/favicon/default/favicon.ico" />
@@ -34,7 +33,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         };
 
         window.dataLayer = window.dataLayer || [];
-                var dlObjects = [{"google_tag_params":{"ecomm_pagetype":"category","ecomm_category":""},"ecommerce":{"currencyCode":"BRL","impressions":[{"name":"Vinho Espor\u00e3o Monte Velho 2019","id":"210","price":"83.90","brand":"Herdade do Espor\u00e3o","category":"","list":"","position":1},{"name":"Vinho Espor\u00e3o P\u00e9 Ros\u00e9","id":"258","price":"42.50","brand":"Herdade do Espor\u00e3o","category":"","list":"","position":2},{"name":"Vinho Espor\u00e3o P\u00e9 Branco 2020","id":"259","price":"39.90","brand":"Herdade do Espor\u00e3o","category":"","list":"","position":3},{"name":"Vinho Espor\u00e3o Reserva Branco 2020","id":"342","price":"198.00","brand":"Herdade do Espor\u00e3o","category":"","list":"","position":4},{"name":"Vinho Espor\u00e3o P\u00e9 Tinto 2020","id":"423","price":"39.90","brand":"Herdade do Espor\u00e3o","category":"","list":"","position":5},{"name":"Vinho Espor\u00e3o Reserva Tinto 2017","id":"664","price":"229.00","brand":"Herdade do Espor\u00e3o","category":"","list":"","position":6},{"name":"Vinho Alandra Tinto 2020","id":"1124","price":"43.50","brand":"Herdade do Espor\u00e3o","category":"","list":"","position":7},{"name":"Vinho Alandra Branco 2019","id":"1125","price":"43.50","brand":"Herdade do Espor\u00e3o","category":"","list":"","position":8},{"name":"Vinho Espor\u00e3o Colheita Tinto 2019","id":"1129","price":"125.90","brand":"Herdade do Espor\u00e3o","category":"","list":"","position":9},{"name":"Vinho Org\u00e2nico Espor\u00e3o Colheita Branco 2020","id":"1130","price":"125.90","brand":"Herdade do Espor\u00e3o","category":"","list":"","position":10},{"name":"Vinho Espor\u00e3o Assobio Tinto 2019","id":"1131","price":"106.00","brand":"Herdade do Espor\u00e3o","category":"","list":"","position":11}]},"event":"impression","eventCategory":"Ecommerce","eventAction":"Impression","eventLabel":"category "}];
+                var dlObjects = [{"google_tag_params":{"ecomm_pagetype":"category","ecomm_category":"Vinhos\/Vinho do Porto"},"ecommerce":{"currencyCode":"BRL","impressions":[{"name":"Vinho do Porto Caves Santa Marta Ruby","id":"1329","price":"104.00","brand":"Caves Santa Marta","category":"Vinhos\/Vinho do Porto","list":"Vinhos\/Vinho do Porto","position":1},{"name":"Vinho do Porto Taylor\u2019s Tawny 10 Anos","id":"1118","price":"458.00","brand":"Taylor\u2019s","category":"Vinhos\/Vinho do Porto","list":"Vinhos\/Vinho do Porto","position":2},{"name":"Vinho do Porto Taylor\u2019s Fine Tawny","id":"1117","price":"125.00","brand":"Taylor\u2019s","category":"Vinhos\/Vinho do Porto","list":"Vinhos\/Vinho do Porto","position":3},{"name":"Vinho do Porto Taylor\u2019s Fine Ruby","id":"1116","price":"125.00","brand":"Taylor\u2019s","category":"Vinhos\/Vinho do Porto","list":"Vinhos\/Vinho do Porto","position":4},{"name":"Vinho do Porto Warre\u2019s Vintage 2016","id":"1063","price":"980.00","brand":"Symington Family Estates","category":"Vinhos\/Vinho do Porto","list":"Vinhos\/Vinho do Porto","position":5},{"name":"Vinho do Porto Graham's LBV 2012","id":"752","price":"346.70","brand":"Symington Family Estates","category":"Vinhos\/Vinho do Porto","list":"Vinhos\/Vinho do Porto","position":6},{"name":"Vinho do Porto Graham's Fine Ruby","id":"751","price":"186.22","brand":"Symington Family Estates","category":"Vinhos\/Vinho do Porto","list":"Vinhos\/Vinho do Porto","position":7},{"name":"Vinho do Porto Dow's Fine White","id":"623","price":"182.00","brand":"Symington Family Estates","category":"Vinhos\/Vinho do Porto","list":"Vinhos\/Vinho do Porto","position":8},{"name":"Vinho do Porto Dow's Fine Tawny","id":"622","price":"182.00","brand":"Symington Family Estates","category":"Vinhos\/Vinho do Porto","list":"Vinhos\/Vinho do Porto","position":9},{"name":"Vinho do Porto Dow's 20 Anos","id":"619","price":"852.00","brand":"Symington Family Estates","category":"Vinhos\/Vinho do Porto","list":"Vinhos\/Vinho do Porto","position":10},{"name":"Vinho do Porto Dow's 30 Anos","id":"618","price":"1637.00","brand":"Symington Family Estates","category":"Vinhos\/Vinho do Porto","list":"Vinhos\/Vinho do Porto","position":11},{"name":"Vinho do Porto Dow's Vintage 2016","id":"418","price":"1998.00","brand":"Symington Family Estates","category":"Vinhos\/Vinho do Porto","list":"Vinhos\/Vinho do Porto","position":12}]},"event":"impression","eventCategory":"Ecommerce","eventAction":"Impression","eventLabel":"category Vinhos\/Vinho do Porto"}];
         for (var i in dlObjects) {
             window.dataLayer.push(dlObjects[i]);
         }
@@ -53,10 +52,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- BEGIN GTAG GLOBAL TAG -->
 <!-- END GTAG GLOBAL TAG -->
 <script type="text/javascript" src="https://chimpstatic.com/mcjs-connected/js/users/1255cf89de1ff1692e3832377/54a041db81224b7f42e4ef954.js" defer></script>
+
+<!-- This site is optimized with the Yoast SEO for Magento plugin 2.0.0 - https://yoast.com/magento/plugins/seo/ -->
+    <link rel="canonical" href="https://www.divinho.com.br/vinhos/porto" />
+
+    <!-- YoastSEO OpenGraph -->
+    <meta property="og:url" content="https://www.divinho.com.br/vinhos/porto"/>
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="product.group"/>
+    <meta property="og:site_name" content="F R MOREIRA COMÉRCIO E DISTRIBUIÇÃO DE ALIMENTOS E BEBIDAS" />
+    <meta property="og:title" content="Vinhos do Porto com Melhores Preços | DiVinho "/>
+    <meta property="og:description" content="A maior variedade de Vinhos do Porto das melhores e mais famosas marcas do mundo, como Graham’s, Dow’s e Warre’s, que fazem parte do portfólio da Symington Family Estates. Experimente a nossa seleção especial de Vinhos do Porto exclusivos.
+Principais dúvidas sobre Vinhos do Porto"/>
+            <meta property="og:image" content="https://images.divinho.com.br/catalog/category/Vinho_do_Porto_6.jpg"/>
+                        
+    <!-- YoastSEO Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Vinhos do Porto com Melhores Preços | DiVinho "/>
+    <meta name="twitter:description" content="A maior variedade de Vinhos do Porto das melhores e mais famosas marcas do mundo, como Graham’s, Dow’s e Warre’s, que fazem parte do portfólio da Symington Family Estates. Experimente a nossa seleção especial de Vinhos do Porto exclusivos.
+Principais dúvidas sobre Vinhos do Porto"/>
+            <meta name="twitter:image" content="https://images.divinho.com.br/catalog/category/Vinho_do_Porto_6.jpg"/>
+    
+
     </head>
     <body data-container="body"
           data-mage-init='{"loaderAjax": {}, "loader": { "icon": "https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/loader-2.gif"}}'
-        class="page-products page-with-filter attributepages-page-view page-layout-1column">
+        class="page-with-filter page-products categorypath-vinhos-porto category-porto page-has-faq catalog-category-view page-layout-2columns-left">
         <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MM4CCWJ"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -189,7 +210,7 @@ require([
 
 </script>
 <li class="nav-item authorization-link" data-label="ou">
-    <a class="nav-link" href="https://www.divinho.com.br/customer/account/login/referer/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaWNvbGFzL2hlcmRhZGUtZG8tZXNwb3Jhbw%2C%2C/">
+    <a class="nav-link" href="https://www.divinho.com.br/customer/account/login/referer/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv/">
         Entrar    </a>
 </li>
 
@@ -236,7 +257,7 @@ require([
             </div>
                     </div>
         <script>
-        window.checkout = {"shoppingCartUrl":"https:\/\/www.divinho.com.br\/checkout\/cart\/","checkoutUrl":"https:\/\/www.divinho.com.br\/checkout\/","updateItemQtyUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/www.divinho.com.br\/","minicartMaxItemsVisible":5,"websiteId":"1","maxItemsToDisplay":10,"storeId":"1","customerLoginUrl":"https:\/\/www.divinho.com.br\/customer\/account\/login\/referer\/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaWNvbGFzL2hlcmRhZGUtZG8tZXNwb3Jhbw%2C%2C\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.divinho.com.br\/captcha\/refresh\/","isRequired":false,"timestamp":1636430830}}};
+        window.checkout = {"shoppingCartUrl":"https:\/\/www.divinho.com.br\/checkout\/cart\/","checkoutUrl":"https:\/\/www.divinho.com.br\/checkout\/","updateItemQtyUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/www.divinho.com.br\/","minicartMaxItemsVisible":5,"websiteId":"1","maxItemsToDisplay":10,"storeId":"1","customerLoginUrl":"https:\/\/www.divinho.com.br\/customer\/account\/login\/referer\/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.divinho.com.br\/captcha\/refresh\/","isRequired":false,"timestamp":1636505104}}};
     </script>
     <script type="text/x-magento-init">
     {
@@ -250,9 +271,9 @@ require([
 </div>
 
 <div class="collapse d-lg-block" id="navbarSearch">
-        <form id="search-form6189f3eef36a0" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
+        <form id="search-form618b161035cfe" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
                 <input data-mage-init='{"quickSearch":{
-                                        "formSelector":"#search-form6189f3eef36a0",
+                                        "formSelector":"#search-form618b161035cfe",
                                         "url":"https://www.divinho.com.br/search/ajax/suggest/",
                                         "destinationSelector":"#search_autocomplete",
                                         "responseFieldElements":"ul li",
@@ -327,9 +348,9 @@ require([
 
 </div></div><div class="col-lg position-static col-nav"><div class="d-lg-none">
 <div class="collapse d-lg-block" id="navbarSearch">
-        <form id="search-form6189f3ef00795" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
+        <form id="search-form618b161038256" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
                 <input data-mage-init='{"quickSearch":{
-                                        "formSelector":"#search-form6189f3ef00795",
+                                        "formSelector":"#search-form618b161038256",
                                         "url":"https://www.divinho.com.br/search/ajax/suggest/",
                                         "destinationSelector":"#search_autocomplete",
                                         "responseFieldElements":"ul li",
@@ -371,11 +392,11 @@ require([
                                                                     <div class="mx-megamenu__sidebar mx-megamenu__sidebar--left">
                                         <div class="widget widget-categories-list block" data-collapse="1">
     <div class="megamenu__links">
-                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#vinhos6189f247cdd14" aria-expanded="true" aria-controls="vinhos6189f247cdd14">
+                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#vinhos618b0a68a8e72" aria-expanded="true" aria-controls="vinhos618b0a68a8e72">
             <i class="icon icon-vinhos"></i>
             <span>Tipo</span>
         </div>
-                <div id="vinhos6189f247cdd14" class="block-content catalog-category collapse-sm collapse">
+                <div id="vinhos618b0a68a8e72" class="block-content catalog-category collapse-sm collapse">
             <ul>
                                 <li class="category-item">
                     <a href="https://www.divinho.com.br/vinhos/tinto">
@@ -443,11 +464,11 @@ require([
 </div>
 <div class="widget widget-list-range">
     <div class="megamenu__links">
-        <div class="megamenu__title collapsed" data-toggle="collapse" data-target="#price-range6189f247d2432" aria-expanded="true" aria-controls="price-range6189f247d2432">
+        <div class="megamenu__title collapsed" data-toggle="collapse" data-target="#price-range618b0a68bd448" aria-expanded="true" aria-controls="price-range618b0a68bd448">
             <i class="icon icon icon-dollar-tag"></i>
             <span>Valor</span>
         </div>
-        <ul id="price-range6189f247d2432" class="block-content collapse-sm collapse">
+        <ul id="price-range618b0a68bd448" class="block-content collapse-sm collapse">
             <li><a href="https://www.divinho.com.br/vinhos?price=-59.9">Até R$59,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=59.9-99.9">R$59,90 a R$99,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=99.9-149.9">R$99,90 a R$149,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=149.9-249.9">R$149,90 a R$249,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=249.91-500">R$249,91 a R$500,00</a></li><li><a href="https://www.divinho.com.br/vinhos?price=500-">Acima de R$500,00</a></li>        </ul>
     </div>
 </div>
@@ -465,12 +486,12 @@ require([
     class="widget widget-list_mode widget-list_mode--uva">
     <div class="megamenu__links">
         <div class="block-title megamenu__title collapsed"
-            data-toggle="collapse" data-target="#uva6189f247b8902" aria-expanded="true"
-            aria-controls="uva6189f247b8902">
+            data-toggle="collapse" data-target="#uva618b0a682f5fe" aria-expanded="true"
+            aria-controls="uva618b0a682f5fe">
             <i class="icon icon-uva"></i>
             <span>Uvas</span>
         </div>
-        <div id="uva6189f247b8902"
+        <div id="uva618b0a682f5fe"
             class="block-content catalog-category collapse-sm collapse">
             <ul>
                 
@@ -520,11 +541,11 @@ require([
 </div>
  <div class="widget widget-categories-list block" data-collapse="1">
     <div class="megamenu__links">
-                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#pais6189f247c33b5" aria-expanded="true" aria-controls="pais6189f247c33b5">
+                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#pais618b0a68878c3" aria-expanded="true" aria-controls="pais618b0a68878c3">
             <i class="icon icon-pais"></i>
             <span>Pa&iacute;ses</span>
         </div>
-                <div id="pais6189f247c33b5" class="block-content catalog-category collapse-sm collapse">
+                <div id="pais618b0a68878c3" class="block-content catalog-category collapse-sm collapse">
             <ul>
                                 <li class="category-item">
                     <a href="https://www.divinho.com.br/pais/austria">
@@ -3521,11 +3542,11 @@ require([
                             </div>
                 <div class="megamenu__product-image">
             <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">
-                <img src="https://images.divinho.com.br/catalog/product/cache/fa01b5f6b2a94beaaa3488ed5c6cafe6/c/a/casanova_di_neri_rosso_di_montalcino.png" alt="Vinho Casanova di Neri Rosso di Montalcino 2019" title="Vinho Casanova di Neri Rosso di Montalcino 2019">
+                <img src="https://images.divinho.com.br/catalog/product/cache/fa01b5f6b2a94beaaa3488ed5c6cafe6/c/a/casanova_di_neri_rosso_di_montalcino.png" alt="Vinho Casanova di Neri Rosso di Montalcino 2018" title="Vinho Casanova di Neri Rosso di Montalcino 2018">
             </a>
         </div>
         <div class="megamenu__product-name text-center mt-2">
-            <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">Vinho Casanova di Neri Rosso di Montalcino 2019</a>
+            <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">Vinho Casanova di Neri Rosso di Montalcino 2018</a>
             <div class="text-primary price">
                 R$366,00            </div>
         </div>
@@ -3835,12 +3856,12 @@ require([
     class="widget widget-list_mode widget-list_mode--criticos">
     <div class="megamenu__links">
         <div class="block-title megamenu__title"
-             data-target="#criticos6189f249ba2f8" aria-expanded="true"
-            aria-controls="criticos6189f249ba2f8">
+             data-target="#criticos618b0a6f8879c" aria-expanded="true"
+            aria-controls="criticos618b0a6f8879c">
             <i class="icon icon-criticos"></i>
             <span>Críticos</span>
         </div>
-        <div id="criticos6189f249ba2f8"
+        <div id="criticos618b0a6f8879c"
             class="block-content catalog-category">
             <ul>
                                 <li>
@@ -4142,12 +4163,12 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     class="widget widget-list_mode widget-list_mode--vinicolas">
     <div class="megamenu__links">
         <div class="block-title megamenu__title"
-             data-target="#vinicolas6189f249cb53f" aria-expanded="true"
-            aria-controls="vinicolas6189f249cb53f">
+             data-target="#vinicolas618b0a6fd10d5" aria-expanded="true"
+            aria-controls="vinicolas618b0a6fd10d5">
             <i class="icon icon-vinicolas"></i>
             <span>Vinícolas</span>
         </div>
-        <div id="vinicolas6189f249cb53f"
+        <div id="vinicolas618b0a6fd10d5"
             class="block-content catalog-category">
             <ul>
                 
@@ -4263,25 +4284,20 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                             title="Ir para a página inicial">
                             Início                        </a>
                                             </li>
-                                        <li class="breadcrumb-item  parent_page">
-                                                <a href="https://www.divinho.com.br/vinicolas/"
-                            title="Produtor">
-                            Produtor                        </a>
+                                        <li class="breadcrumb-item  category614">
+                                                <a href="https://www.divinho.com.br/vinhos"
+                            title="">
+                            Vinhos                        </a>
                                             </li>
-                                        <li class="breadcrumb-item active current_page">
-                                                Herdade do Esporão                                            </li>
+                                        <li class="breadcrumb-item active category525">
+                                                Vinho do Porto                                            </li>
                                     </ol>
             </nav>
         </div>
     </div>
 </section>
 <main id="site-content" class="site-content pb-4"><a id="contentarea" tabindex="-1"></a>
-<div class="container"><div class="page-title-wrapper">
-    <h1 class="page-title"
-                >
-        <span class="base" data-ui-id="page-title-wrapper" >Herdade do Esporão</span>    </h1>
-    </div>
-<div class="page messages"><div data-placeholder="messages"></div>
+<div class="container"><div class="page messages"><div data-placeholder="messages"></div>
 <div data-bind="scope: 'messages'">
     <div data-bind="foreach: { data: cookieMessages, as: 'message' }" class="messages">
         <div role="alert" data-bind="attr: {
@@ -4313,12 +4329,361 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             }
     }
 </script>
-</div><div class="columns"><div class="column main">
-                <div class="toolbar toolbar-products d-sm-flex border-bottom pt-3 pb-3 mb-3 pt-md-0 align-items-end"
-         data-mage-init='{"productListToolbarForm":{"mode":"product_list_mode","direction":"product_list_dir","order":"product_list_order","limit":"product_list_limit","modeDefault":"grid","directionDefault":"asc","orderDefault":"position","limitDefault":"12","url":"https:\/\/www.divinho.com.br\/vinicolas\/herdade-do-esporao","formKey":"wigqc8tnogweelJ4","post":false}}'>
+</div><div class="custom-title-wrapper"><div class="custom-title"><div class="page-title-wrapper">
+    <h1 class="page-title page-title__pink mb-4">
+    <span>Vinho&#x20;do&#x20;Porto</span>
+            </h1>
+</div>
+
+</div></div><div class="row"><div class="hidden-xs col-sm-3"><div class="sidebar-filters border">
+    <div class="panel panel-default filter">
+        <div class="panel-heading filter-title d-none">
+            <strong>Filtrar por</strong>
+        </div>
+        <div class="panel-body filter-content">
+                                                                                    <h4 role="heading" aria-level="2" class="block-subtitle filter-subtitle mb-3">
+                        Opções de Compra                    </h4>
+                    <dl class="filter-options" id="narrow-by-list">
+                                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">Preço</dt>
+                        <dd class="filter-options-content">
+<ul class="items">
+        
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos/porto?price=99.9-149.9">
+                    <span class="price">R$99,90</span> a <span class="price">R$149,90</span>                                            <span>
+                            (3)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos/porto?price=149.9-249.9">
+                    <span class="price">R$149,90</span> a <span class="price">R$249,90</span>                                            <span>
+                            (3)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos/porto?price=249.91-500">
+                    <span class="price">R$249,90</span> a <span class="price">R$500,00</span>                                            <span>
+                            (2)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos/porto?price=500-">
+                    Acima de <span class="price">R$500,00</span>                                            <span>
+                            (4)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            </ol>
+</dd>
+                                                                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">País</dt>
+                        <dd class="filter-options-content">
+<ul class="items">
+        
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos/porto?pais=6225">
+                    Portugal                                            <span>
+                            (12)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            </ol>
+</dd>
+                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">Produtor</dt>
+                        <dd class="filter-options-content">
+<ul class="items">
+        
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos/porto?manufacturer=6017">
+                    Caves Santa Marta                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos/porto?manufacturer=6155">
+                    Symington Family Estates                                            <span>
+                            (8)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos/porto?manufacturer=6235">
+                    Taylor’s                                            <span>
+                            (3)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            </ol>
+</dd>
+                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">Uva</dt>
+                        <dd class="filter-options-content">
+<ul class="items">
+        
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos/porto?uva=5500">
+                    Códega                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos/porto?uva=5567">
+                    Malvasia Fina                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos/porto?uva=5498">
+                    Rabigato                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos/porto?uva=6102">
+                    Sousão                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos/porto?uva=5443">
+                    Tempranillo                                            <span>
+                            (9)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos/porto?uva=5450">
+                    Tinta Barroca                                            <span>
+                            (9)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos/porto?uva=5461">
+                    Tinto Cão                                            <span>
+                            (6)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos/porto?uva=5446">
+                    Touriga Franca                                            <span>
+                            (11)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos/porto?uva=5440">
+                    Touriga Nacional                                            <span>
+                            (10)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos/porto?uva=5499">
+                    Viosinho                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            </ol>
+</dd>
+                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">Tipo</dt>
+                        <dd class="filter-options-content">
+<ul class="items">
+        
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos/porto?tipo=6086">
+                    Porto                                            <span>
+                            (12)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            </ol>
+</dd>
+                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">Pontuação</dt>
+                        <dd class="filter-options-content">
+<ul class="items">
+        
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos/porto?nota=90-95">
+                    90 à 95 pontos                                            <span>
+                            (12)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos/porto?nota=96-100">
+                    96 à 100 pontos                                            <span>
+                            (12)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            </ol>
+</dd>
+                                                            </dl>
+                    </div>
+    </div>
+</div></div><div class="col-xs-12 col-sm-9"><input name="form_key" type="hidden" value="1YtrDieuetIrQZdr" /><script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Customer/js/section-config": {
+                "sections": {"stores\/store\/switch":"*","stores\/store\/switchrequest":"*","directory\/currency\/switch":"*","*":["messages"],"customer\/account\/logout":["recently_viewed_product","recently_compared_product","persistent"],"customer\/account\/loginpost":"*","customer\/account\/createpost":"*","customer\/account\/editpost":"*","customer\/ajax\/login":["checkout-data","cart","captcha"],"catalog\/product_compare\/add":["compare-products","gtm"],"catalog\/product_compare\/remove":["compare-products"],"catalog\/product_compare\/clear":["compare-products"],"sales\/guest\/reorder":["cart"],"sales\/order\/reorder":["cart"],"checkout\/cart\/add":["cart","directory-data","gtm"],"checkout\/cart\/delete":["cart","gtm"],"checkout\/cart\/updatepost":["cart"],"checkout\/cart\/updateitemoptions":["cart"],"checkout\/cart\/couponpost":["cart"],"checkout\/cart\/estimatepost":["cart"],"checkout\/cart\/estimateupdatepost":["cart"],"checkout\/onepage\/saveorder":["cart","checkout-data","last-ordered-items","checkout-fields"],"checkout\/sidebar\/removeitem":["cart","gtm"],"checkout\/sidebar\/updateitemqty":["cart"],"rest\/*\/v1\/carts\/*\/payment-information":["cart","last-ordered-items","instant-purchase","gtm"],"rest\/*\/v1\/guest-carts\/*\/payment-information":["cart","gtm"],"rest\/*\/v1\/guest-carts\/*\/selected-payment-method":["cart","checkout-data"],"rest\/*\/v1\/carts\/*\/selected-payment-method":["cart","checkout-data","instant-purchase"],"customer\/address\/*":["instant-purchase"],"customer\/account\/*":["instant-purchase"],"vault\/cards\/deleteaction":["instant-purchase"],"multishipping\/checkout\/overviewpost":["cart"],"authorizenet\/directpost_payment\/place":["cart","checkout-data"],"paypal\/express\/placeorder":["cart","checkout-data"],"paypal\/payflowexpress\/placeorder":["cart","checkout-data"],"paypal\/express\/onauthorization":["cart","checkout-data"],"persistent\/index\/unsetcookie":["persistent"],"review\/product\/post":["review"],"braintree\/paypal\/placeorder":["cart","checkout-data"],"wishlist\/index\/add":["wishlist","gtm"],"wishlist\/index\/remove":["wishlist"],"wishlist\/index\/updateitemoptions":["wishlist"],"wishlist\/index\/update":["wishlist"],"wishlist\/index\/cart":["wishlist","cart","gtm"],"wishlist\/index\/fromcart":["wishlist","cart"],"wishlist\/index\/allcart":["wishlist","cart","gtm"],"wishlist\/shared\/allcart":["wishlist","cart"],"wishlist\/shared\/cart":["cart"],"checkout\/cart\/configure":["gtm"],"rest\/*\/v1\/guest-carts\/*\/shipping-information":["gtm"],"rest\/*\/v1\/carts\/*\/shipping-information":["gtm"]},
+                "clientSideSections": ["checkout-data","cart-data","chatData"],
+                "baseUrls": ["https:\/\/www.divinho.com.br\/","http:\/\/www.divinho.com.br\/"],
+                "sectionNames": ["messages","customer","compare-products","last-ordered-items","cart","directory-data","captcha","instant-purchase","persistent","review","wishlist","chatData","gtm","recently_viewed_product","recently_compared_product","product_data_storage","paypal-billing-agreement","checkout-fields","collection-point-result","pickup-location-result"]            }
+        }
+    }
+</script>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Customer/js/customer-data": {
+                "sectionLoadUrl": "https\u003A\u002F\u002Fwww.divinho.com.br\u002Fcustomer\u002Fsection\u002Fload\u002F",
+                "expirableSectionLifetime": 60,
+                "expirableSectionNames": ["cart","persistent"],
+                "cookieLifeTime": "86400",
+                "updateSessionUrl": "https\u003A\u002F\u002Fwww.divinho.com.br\u002Fcustomer\u002Faccount\u002FupdateSession\u002F"
+            }
+        }
+    }
+</script>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Customer/js/invalidation-processor": {
+                "invalidationRules": {
+                    "website-rule": {
+                        "Magento_Customer/js/invalidation-rules/website-rule": {
+                            "scopeConfig": {
+                                "websiteId": "1"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+<script type="text/x-magento-init">
+    {
+        "body": {
+            "pageCache": {"url":"https:\/\/www.divinho.com.br\/page_cache\/block\/render\/id\/525\/","handles":["default","catalog_category_view","catalog_category_view_type_layered","catalog_category_view_type_layered_without_children","catalog_category_view_id_525","gabrielqs_themesettings_footer_1","gabrielqs_themesettings_header_1","gabrielqs_themesettings_product_list_item_1","gabrielqs_themesettings_customization","mpseo_remove_schema"],"originalRequest":{"route":"catalog","controller":"category","action":"view","uri":"\/vinhos\/porto"},"versionCookieName":"private_content_version"}        }
+    }
+</script>
+
+<div id="monkey_campaign" style="display:none;"
+     data-mage-init='{"campaigncatcher":{"checkCampaignUrl": "https://www.divinho.com.br/mailchimp/campaign/check/"}}'>
+</div>        <div class="toolbar toolbar-products d-sm-flex border-bottom pt-3 pb-3 mb-3 pt-md-0 align-items-end"
+         data-mage-init='{"productListToolbarForm":{"mode":"product_list_mode","direction":"product_list_dir","order":"product_list_order","limit":"product_list_limit","modeDefault":"grid","directionDefault":"asc","orderDefault":"position","limitDefault":"12","url":"https:\/\/www.divinho.com.br\/vinhos\/porto","formKey":"1YtrDieuetIrQZdr","post":false}}'>
 
          <div class="toolbar-amount mb-2 mb-md-0" id="toolbar-amount">
-            <span class="toolbar-number font-weight-bold">11</span> itens    </div>
+            <span class="toolbar-number font-weight-bold">12</span> itens    </div>
 
         
         
@@ -4377,7 +4742,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                         
         <div class="col-md-4 mb-3">
             <div class="product box-product"
-                data-product-id="210">
+                data-product-id="1329">
                 
                 
                 
@@ -4388,21 +4753,21 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 
 
 
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Espor\u00e3o Monte Velho 2019&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Espor\u00e3o Monte Velho 2019&quot;,&quot;id&quot;:&quot;210&quot;,&quot;price&quot;:&quot;83.90&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:0,&quot;brand&quot;:&quot;Herdade do Espor\u00e3o&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-esporao-monte-velho' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-esporao-monte-velho"
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Caves Santa Marta Ruby&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Vinho do Porto&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Caves Santa Marta Ruby&quot;,&quot;id&quot;:&quot;1329&quot;,&quot;price&quot;:&quot;104.00&quot;,&quot;category&quot;:&quot;Lan\u00e7amento&quot;,&quot;position&quot;:0,&quot;brand&quot;:&quot;Caves Santa Marta&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-caves-santa-marta-ruby' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-do-porto-caves-santa-marta-ruby"
                     tabindex="-1">
                     <div class="product__photo">
                         
 
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/m/o/monte_velho_espor_o.png"
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho_do_porto_caves_santa_marta_ruby.png"
     width=""
     height=""
-    alt="Garrafa de Vinho Monte Velho Esporão 2019" /></span>                    </div>
+    alt="Garrafa de Vinho do Porto Caves Santa Marta Ruby" /></span>                    </div>
                 </a>
                                 <div class="product__content">
                     <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Espor\u00e3o Monte Velho 2019&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Espor\u00e3o Monte Velho 2019&quot;,&quot;id&quot;:&quot;210&quot;,&quot;price&quot;:&quot;83.90&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:0,&quot;brand&quot;:&quot;Herdade do Espor\u00e3o&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-esporao-monte-velho' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/vinho-esporao-monte-velho">
-                            Vinho Esporão Monte Velho 2019                        </a>
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Caves Santa Marta Ruby&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Vinho do Porto&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Caves Santa Marta Ruby&quot;,&quot;id&quot;:&quot;1329&quot;,&quot;price&quot;:&quot;104.00&quot;,&quot;category&quot;:&quot;Lan\u00e7amento&quot;,&quot;position&quot;:0,&quot;brand&quot;:&quot;Caves Santa Marta&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-caves-santa-marta-ruby' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-do-porto-caves-santa-marta-ruby">
+                            Vinho do Porto Caves Santa Marta Ruby                        </a>
                     </h2>
 
                     
@@ -4410,26 +4775,26 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     <span>Portugal</span>
 </div>
                     
-                    <form data-role="tocart-form" data-product-sku="13753"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaWNvbGFzL2hlcmRhZGUtZG8tZXNwb3Jhby8%2C/product/210/" method="post">
+                    <form data-role="tocart-form" data-product-sku="2096"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv/product/1329/" method="post">
                         <input type="hidden" name="product"
-                            value="210">
+                            value="1329">
                                                 <input type="hidden"
                             name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YVdOdmJHRnpMMmhsY21SaFpHVXRaRzh0WlhOd2IzSmhieTglMkMvcHJvZHVjdC8yMTAv">
-                        <input name="form_key" type="hidden" value="wigqc8tnogweelJ4" />                        <div class="product__buy">
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekwzQnZjblJ2L3Byb2R1Y3QvMTMyOS8,">
+                        <input name="form_key" type="hidden" value="1YtrDieuetIrQZdr" />                        <div class="product__buy">
                             <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="210" data-price-box="product-id-210">
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1329" data-price-box="product-id-1329">
    <div class="price__regular"><br></div>
     <div class="price__sale">
         
 
 <span class="price-container price-final_price&#x20;tax&#x20;weee"
         >
-        <span  id="product-price-210"                data-price-amount="83.9"
+        <span  id="product-price-1329"                data-price-amount="104"
         data-price-type="finalPrice"
         class="price-wrapper "
-    ><span class="price">R$83,90</span></span>
+    ><span class="price">R$104,00</span></span>
         </span>
     </div>
 
@@ -4437,7 +4802,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                             <div class="product__quantity">
                                 <div class="custom-number">
                                     <input type="number" name="qty"
-                                        id="qty210" maxlength="12" min="1"
+                                        id="qty1329" maxlength="12" min="1"
                                         minlenght="1" value="1" title="Qtd"
                                         class="qty"
                                         data-validate="null" />
@@ -4447,7 +4812,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                             class="fas fa-shopping-cart"></i></button>
                                 </div>
                                 <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":210,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaWNvbGFzL2hlcmRhZGUtZG8tZXNwb3Jhby8,"}}'
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1329,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv"}}'
                                     class="action towishlist" data-action="add-to-wishlist"><i
                                         class="far fa-heart"></i></a>
                             </div>
@@ -4466,219 +4831,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                 
         <div class="col-md-4 mb-3">
             <div class="product box-product"
-                data-product-id="258">
-                
-                    <div class="product__discount">
-        <span>-15%</span>
-    </div>
-
-                
-    <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
-    </div>
-
-                
-
-
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Espor\u00e3o P\u00e9 Ros\u00e9&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Espor\u00e3o P\u00e9 Ros\u00e9&quot;,&quot;id&quot;:&quot;258&quot;,&quot;price&quot;:&quot;42.50&quot;,&quot;category&quot;:&quot;Recomenda\u00e7\u00e3o&quot;,&quot;position&quot;:1,&quot;brand&quot;:&quot;Herdade do Espor\u00e3o&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-esporao-pe-rose' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-esporao-pe-rose"
-                    tabindex="-1">
-                    <div class="product__photo">
-                        
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho_espor_o_p_ros_.png"
-    width=""
-    height=""
-    alt="Garrafa de Vinho Esporão Pé Rosé 2019" /></span>                    </div>
-                </a>
-                                <div class="product__content">
-                    <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Espor\u00e3o P\u00e9 Ros\u00e9&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Espor\u00e3o P\u00e9 Ros\u00e9&quot;,&quot;id&quot;:&quot;258&quot;,&quot;price&quot;:&quot;42.50&quot;,&quot;category&quot;:&quot;Recomenda\u00e7\u00e3o&quot;,&quot;position&quot;:1,&quot;brand&quot;:&quot;Herdade do Espor\u00e3o&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-esporao-pe-rose' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/vinho-esporao-pe-rose">
-                            Vinho Esporão Pé Rosé                        </a>
-                    </h2>
-
-                    
-<div class="product__pais">
-    <span>Portugal</span>
-</div>
-                    
-                    <form data-role="tocart-form" data-product-sku="13194"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaWNvbGFzL2hlcmRhZGUtZG8tZXNwb3Jhby8%2C/product/258/" method="post">
-                        <input type="hidden" name="product"
-                            value="258">
-                                                <input type="hidden"
-                            name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YVdOdmJHRnpMMmhsY21SaFpHVXRaRzh0WlhOd2IzSmhieTglMkMvcHJvZHVjdC8yNTgv">
-                        <input name="form_key" type="hidden" value="wigqc8tnogweelJ4" />                        <div class="product__buy">
-                            <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="258" data-price-box="product-id-258">
-    <div class="price__regular">
-        De        <span class="old-price">
-            
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="old-price-258"                data-price-amount="49.9"
-        data-price-type="oldPrice"
-        class="price-wrapper "
-    ><span class="price">R$49,90</span></span>
-        </span>
-        </span>
-        Por    </div>
-    <div class="price__sale">
-        <span class="special-price">
-            
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-258"                data-price-amount="42.5"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$42,50</span></span>
-        </span>
-        </span>
-    </div>
-
-</div>                            </div>
-                            <div class="product__quantity">
-                                <div class="custom-number">
-                                    <input type="number" name="qty"
-                                        id="qty258" maxlength="12" min="1"
-                                        minlenght="1" value="1" title="Qtd"
-                                        class="qty"
-                                        data-validate="null" />
-                                    <div class="custom-number-button custom-number-button--up">+</div>
-                                    <div class="custom-number-button custom-number-button--down">-</div>
-                                    <button class="action tocart btn btn--input" type="submit"><i
-                                            class="fas fa-shopping-cart"></i></button>
-                                </div>
-                                <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":258,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaWNvbGFzL2hlcmRhZGUtZG8tZXNwb3Jhby8,"}}'
-                                    class="action towishlist" data-action="add-to-wishlist"><i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="actions-primary">
-                                                        <button type="submit" title="Adicionar ao Carrinho"
-                                class="action tocart primary btn btn--product">
-                                <span>Adicionar ao Carrinho</span>
-                            </button>
-                        </div>
-                    </form>
-                                    </div>
-            </div>
-        </div>
-                                
-        <div class="col-md-4 mb-3">
-            <div class="product box-product"
-                data-product-id="259">
-                
-                    <div class="product__discount">
-        <span>-20%</span>
-    </div>
-
-                
-    <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
-    </div>
-
-                
-
-
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Espor\u00e3o P\u00e9 Branco 2020&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Espor\u00e3o P\u00e9 Branco 2020&quot;,&quot;id&quot;:&quot;259&quot;,&quot;price&quot;:&quot;39.90&quot;,&quot;category&quot;:&quot;Recomenda\u00e7\u00e3o&quot;,&quot;position&quot;:2,&quot;brand&quot;:&quot;Herdade do Espor\u00e3o&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-esporao-pe-branco' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-esporao-pe-branco"
-                    tabindex="-1">
-                    <div class="product__photo">
-                        
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/e/s/espor_o_p_branco.png"
-    width=""
-    height=""
-    alt="Garrafa de Vinho Esporão Pé Branco 2020" /></span>                    </div>
-                </a>
-                                <div class="product__content">
-                    <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Espor\u00e3o P\u00e9 Branco 2020&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Espor\u00e3o P\u00e9 Branco 2020&quot;,&quot;id&quot;:&quot;259&quot;,&quot;price&quot;:&quot;39.90&quot;,&quot;category&quot;:&quot;Recomenda\u00e7\u00e3o&quot;,&quot;position&quot;:2,&quot;brand&quot;:&quot;Herdade do Espor\u00e3o&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-esporao-pe-branco' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/vinho-esporao-pe-branco">
-                            Vinho Esporão Pé Branco 2020                        </a>
-                    </h2>
-
-                    
-<div class="product__pais">
-    <span>Portugal</span>
-</div>
-                    
-                    <form data-role="tocart-form" data-product-sku="13190"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaWNvbGFzL2hlcmRhZGUtZG8tZXNwb3Jhby8%2C/product/259/" method="post">
-                        <input type="hidden" name="product"
-                            value="259">
-                                                <input type="hidden"
-                            name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YVdOdmJHRnpMMmhsY21SaFpHVXRaRzh0WlhOd2IzSmhieTglMkMvcHJvZHVjdC8yNTkv">
-                        <input name="form_key" type="hidden" value="wigqc8tnogweelJ4" />                        <div class="product__buy">
-                            <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="259" data-price-box="product-id-259">
-    <div class="price__regular">
-        De        <span class="old-price">
-            
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="old-price-259"                data-price-amount="49.9"
-        data-price-type="oldPrice"
-        class="price-wrapper "
-    ><span class="price">R$49,90</span></span>
-        </span>
-        </span>
-        Por    </div>
-    <div class="price__sale">
-        <span class="special-price">
-            
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-259"                data-price-amount="39.9"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$39,90</span></span>
-        </span>
-        </span>
-    </div>
-
-</div>                            </div>
-                            <div class="product__quantity">
-                                <div class="custom-number">
-                                    <input type="number" name="qty"
-                                        id="qty259" maxlength="12" min="1"
-                                        minlenght="1" value="1" title="Qtd"
-                                        class="qty"
-                                        data-validate="null" />
-                                    <div class="custom-number-button custom-number-button--up">+</div>
-                                    <div class="custom-number-button custom-number-button--down">-</div>
-                                    <button class="action tocart btn btn--input" type="submit"><i
-                                            class="fas fa-shopping-cart"></i></button>
-                                </div>
-                                <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":259,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaWNvbGFzL2hlcmRhZGUtZG8tZXNwb3Jhby8,"}}'
-                                    class="action towishlist" data-action="add-to-wishlist"><i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="actions-primary">
-                                                        <button type="submit" title="Adicionar ao Carrinho"
-                                class="action tocart primary btn btn--product">
-                                <span>Adicionar ao Carrinho</span>
-                            </button>
-                        </div>
-                    </form>
-                                    </div>
-            </div>
-        </div>
-                                
-        <div class="col-md-4 mb-3">
-            <div class="product box-product"
-                data-product-id="342">
+                data-product-id="1118">
                 
                 
                 
@@ -4688,22 +4841,32 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 
                 
 
+        <div class="product__pontuacao">
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Spectator">WS</div>
+                    <div class="pontos">90</div>
+                </div>
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Enthusiast">WE</div>
+                    <div class="pontos">90</div>
+                </div>
+                    </div>
 
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Espor\u00e3o Reserva Branco 2020&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Espor\u00e3o Reserva Branco 2020&quot;,&quot;id&quot;:&quot;342&quot;,&quot;price&quot;:&quot;198.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:3,&quot;brand&quot;:&quot;Herdade do Espor\u00e3o&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-esporao-reserva-branco' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-esporao-reserva-branco"
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Taylor\u2019s Tawny 10 Anos&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Vinho do Porto&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Taylor\u2019s Tawny 10 Anos&quot;,&quot;id&quot;:&quot;1118&quot;,&quot;price&quot;:&quot;458.00&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:1,&quot;brand&quot;:&quot;Taylor\u2019s&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-taylor-s-tawny-10-anos' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-do-porto-taylor-s-tawny-10-anos"
                     tabindex="-1">
                     <div class="product__photo">
                         
 
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho_espor_o_reserva_branco.png"
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/p/o/porto_taylo_s_tawny_10_anos.png"
     width=""
     height=""
-    alt="Garrafa de Vinho Esporão Reserva Branco 2020" /></span>                    </div>
+    alt="Garrafa de Vinho do Porto Taylor’s Tawny 10 Anos" /></span>                    </div>
                 </a>
                                 <div class="product__content">
                     <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Espor\u00e3o Reserva Branco 2020&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Espor\u00e3o Reserva Branco 2020&quot;,&quot;id&quot;:&quot;342&quot;,&quot;price&quot;:&quot;198.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:3,&quot;brand&quot;:&quot;Herdade do Espor\u00e3o&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-esporao-reserva-branco' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/vinho-esporao-reserva-branco">
-                            Vinho Esporão Reserva Branco 2020                        </a>
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Taylor\u2019s Tawny 10 Anos&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Vinho do Porto&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Taylor\u2019s Tawny 10 Anos&quot;,&quot;id&quot;:&quot;1118&quot;,&quot;price&quot;:&quot;458.00&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:1,&quot;brand&quot;:&quot;Taylor\u2019s&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-taylor-s-tawny-10-anos' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-do-porto-taylor-s-tawny-10-anos">
+                            Vinho do Porto Taylor’s Tawny 10 Anos                        </a>
                     </h2>
 
                     
@@ -4711,26 +4874,26 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     <span>Portugal</span>
 </div>
                     
-                    <form data-role="tocart-form" data-product-sku="10038"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaWNvbGFzL2hlcmRhZGUtZG8tZXNwb3Jhby8%2C/product/342/" method="post">
+                    <form data-role="tocart-form" data-product-sku="1523"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv/product/1118/" method="post">
                         <input type="hidden" name="product"
-                            value="342">
+                            value="1118">
                                                 <input type="hidden"
                             name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YVdOdmJHRnpMMmhsY21SaFpHVXRaRzh0WlhOd2IzSmhieTglMkMvcHJvZHVjdC8zNDIv">
-                        <input name="form_key" type="hidden" value="wigqc8tnogweelJ4" />                        <div class="product__buy">
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekwzQnZjblJ2L3Byb2R1Y3QvMTExOC8,">
+                        <input name="form_key" type="hidden" value="1YtrDieuetIrQZdr" />                        <div class="product__buy">
                             <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="342" data-price-box="product-id-342">
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1118" data-price-box="product-id-1118">
    <div class="price__regular"><br></div>
     <div class="price__sale">
         
 
 <span class="price-container price-final_price&#x20;tax&#x20;weee"
         >
-        <span  id="product-price-342"                data-price-amount="198"
+        <span  id="product-price-1118"                data-price-amount="458"
         data-price-type="finalPrice"
         class="price-wrapper "
-    ><span class="price">R$198,00</span></span>
+    ><span class="price">R$458,00</span></span>
         </span>
     </div>
 
@@ -4738,7 +4901,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                             <div class="product__quantity">
                                 <div class="custom-number">
                                     <input type="number" name="qty"
-                                        id="qty342" maxlength="12" min="1"
+                                        id="qty1118" maxlength="12" min="1"
                                         minlenght="1" value="1" title="Qtd"
                                         class="qty"
                                         data-validate="null" />
@@ -4748,7 +4911,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                             class="fas fa-shopping-cart"></i></button>
                                 </div>
                                 <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":342,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaWNvbGFzL2hlcmRhZGUtZG8tZXNwb3Jhby8,"}}'
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1118,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv"}}'
                                     class="action towishlist" data-action="add-to-wishlist"><i
                                         class="far fa-heart"></i></a>
                             </div>
@@ -4767,12 +4930,9 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                 
         <div class="col-md-4 mb-3">
             <div class="product box-product"
-                data-product-id="423">
+                data-product-id="1117">
                 
-                    <div class="product__discount">
-        <span>-20%</span>
-    </div>
-
+                
                 
     <div class="product__bandeira">
         <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
@@ -4781,21 +4941,21 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 
 
 
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Espor\u00e3o P\u00e9 Tinto 2020&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Espor\u00e3o P\u00e9 Tinto 2020&quot;,&quot;id&quot;:&quot;423&quot;,&quot;price&quot;:&quot;39.90&quot;,&quot;category&quot;:&quot;Vinhos\/Vinho Tinto&quot;,&quot;position&quot;:4,&quot;brand&quot;:&quot;Herdade do Espor\u00e3o&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-esporao-pe-tinto' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-esporao-pe-tinto"
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Taylor\u2019s Fine Tawny&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Vinho do Porto&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Taylor\u2019s Fine Tawny&quot;,&quot;id&quot;:&quot;1117&quot;,&quot;price&quot;:&quot;125.00&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:2,&quot;brand&quot;:&quot;Taylor\u2019s&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-taylors-fine-tawny' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-do-porto-taylors-fine-tawny"
                     tabindex="-1">
                     <div class="product__photo">
                         
 
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/e/s/espor_o_p_tinto_2019.png"
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/p/o/porto_taylors_fine_tawny.png"
     width=""
     height=""
-    alt="Garrafa de Vinho Esporão Pé Tinto 2020" /></span>                    </div>
+    alt="Garrafa de Vinho do Porto Taylor’s Fine Tawny" /></span>                    </div>
                 </a>
                                 <div class="product__content">
                     <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Espor\u00e3o P\u00e9 Tinto 2020&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Espor\u00e3o P\u00e9 Tinto 2020&quot;,&quot;id&quot;:&quot;423&quot;,&quot;price&quot;:&quot;39.90&quot;,&quot;category&quot;:&quot;Vinhos\/Vinho Tinto&quot;,&quot;position&quot;:4,&quot;brand&quot;:&quot;Herdade do Espor\u00e3o&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-esporao-pe-tinto' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/vinho-esporao-pe-tinto">
-                            Vinho Esporão Pé Tinto 2020                        </a>
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Taylor\u2019s Fine Tawny&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Vinho do Porto&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Taylor\u2019s Fine Tawny&quot;,&quot;id&quot;:&quot;1117&quot;,&quot;price&quot;:&quot;125.00&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:2,&quot;brand&quot;:&quot;Taylor\u2019s&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-taylors-fine-tawny' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-do-porto-taylors-fine-tawny">
+                            Vinho do Porto Taylor’s Fine Tawny                        </a>
                     </h2>
 
                     
@@ -4803,40 +4963,26 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     <span>Portugal</span>
 </div>
                     
-                    <form data-role="tocart-form" data-product-sku="7463"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaWNvbGFzL2hlcmRhZGUtZG8tZXNwb3Jhby8%2C/product/423/" method="post">
+                    <form data-role="tocart-form" data-product-sku="1522"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv/product/1117/" method="post">
                         <input type="hidden" name="product"
-                            value="423">
+                            value="1117">
                                                 <input type="hidden"
                             name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YVdOdmJHRnpMMmhsY21SaFpHVXRaRzh0WlhOd2IzSmhieTglMkMvcHJvZHVjdC80MjMv">
-                        <input name="form_key" type="hidden" value="wigqc8tnogweelJ4" />                        <div class="product__buy">
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekwzQnZjblJ2L3Byb2R1Y3QvMTExNy8,">
+                        <input name="form_key" type="hidden" value="1YtrDieuetIrQZdr" />                        <div class="product__buy">
                             <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="423" data-price-box="product-id-423">
-    <div class="price__regular">
-        De        <span class="old-price">
-            
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="old-price-423"                data-price-amount="49.9"
-        data-price-type="oldPrice"
-        class="price-wrapper "
-    ><span class="price">R$49,90</span></span>
-        </span>
-        </span>
-        Por    </div>
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1117" data-price-box="product-id-1117">
+   <div class="price__regular"><br></div>
     <div class="price__sale">
-        <span class="special-price">
-            
+        
 
 <span class="price-container price-final_price&#x20;tax&#x20;weee"
         >
-        <span  id="product-price-423"                data-price-amount="39.9"
+        <span  id="product-price-1117"                data-price-amount="125"
         data-price-type="finalPrice"
         class="price-wrapper "
-    ><span class="price">R$39,90</span></span>
-        </span>
+    ><span class="price">R$125,00</span></span>
         </span>
     </div>
 
@@ -4844,7 +4990,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                             <div class="product__quantity">
                                 <div class="custom-number">
                                     <input type="number" name="qty"
-                                        id="qty423" maxlength="12" min="1"
+                                        id="qty1117" maxlength="12" min="1"
                                         minlenght="1" value="1" title="Qtd"
                                         class="qty"
                                         data-validate="null" />
@@ -4854,7 +5000,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                             class="fas fa-shopping-cart"></i></button>
                                 </div>
                                 <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":423,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaWNvbGFzL2hlcmRhZGUtZG8tZXNwb3Jhby8,"}}'
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1117,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv"}}'
                                     class="action towishlist" data-action="add-to-wishlist"><i
                                         class="far fa-heart"></i></a>
                             </div>
@@ -4873,12 +5019,559 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                 
         <div class="col-md-4 mb-3">
             <div class="product box-product"
-                data-product-id="664">
+                data-product-id="1116">
                 
-                    <div class="product__discount">
-        <span>-9%</span>
+                
+                
+    <div class="product__bandeira">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
     </div>
 
+                
+
+
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Taylor\u2019s Fine Ruby&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Vinho do Porto&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Taylor\u2019s Fine Ruby&quot;,&quot;id&quot;:&quot;1116&quot;,&quot;price&quot;:&quot;125.00&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:3,&quot;brand&quot;:&quot;Taylor\u2019s&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-taylors-fine-ruby' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-do-porto-taylors-fine-ruby"
+                    tabindex="-1">
+                    <div class="product__photo">
+                        
+
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/p/o/porto_taylors_fine_ruby.png"
+    width=""
+    height=""
+    alt="Garrafa de Vinho do Porto Taylor’s Fine Ruby" /></span>                    </div>
+                </a>
+                                <div class="product__content">
+                    <h2 class="product__title">
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Taylor\u2019s Fine Ruby&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Vinho do Porto&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Taylor\u2019s Fine Ruby&quot;,&quot;id&quot;:&quot;1116&quot;,&quot;price&quot;:&quot;125.00&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:3,&quot;brand&quot;:&quot;Taylor\u2019s&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-taylors-fine-ruby' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-do-porto-taylors-fine-ruby">
+                            Vinho do Porto Taylor’s Fine Ruby                        </a>
+                    </h2>
+
+                    
+<div class="product__pais">
+    <span>Portugal</span>
+</div>
+                    
+                    <form data-role="tocart-form" data-product-sku="1521"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv/product/1116/" method="post">
+                        <input type="hidden" name="product"
+                            value="1116">
+                                                <input type="hidden"
+                            name="uenc"
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekwzQnZjblJ2L3Byb2R1Y3QvMTExNi8,">
+                        <input name="form_key" type="hidden" value="1YtrDieuetIrQZdr" />                        <div class="product__buy">
+                            <div class="product__price">
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1116" data-price-box="product-id-1116">
+   <div class="price__regular"><br></div>
+    <div class="price__sale">
+        
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-1116"                data-price-amount="125"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$125,00</span></span>
+        </span>
+    </div>
+
+</div>                            </div>
+                            <div class="product__quantity">
+                                <div class="custom-number">
+                                    <input type="number" name="qty"
+                                        id="qty1116" maxlength="12" min="1"
+                                        minlenght="1" value="1" title="Qtd"
+                                        class="qty"
+                                        data-validate="null" />
+                                    <div class="custom-number-button custom-number-button--up">+</div>
+                                    <div class="custom-number-button custom-number-button--down">-</div>
+                                    <button class="action tocart btn btn--input" type="submit"><i
+                                            class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <a href="#" class="product__wishlist"
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1116,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv"}}'
+                                    class="action towishlist" data-action="add-to-wishlist"><i
+                                        class="far fa-heart"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="actions-primary">
+                                                        <button type="submit" title="Adicionar ao Carrinho"
+                                class="action tocart primary btn btn--product">
+                                <span>Adicionar ao Carrinho</span>
+                            </button>
+                        </div>
+                    </form>
+                                    </div>
+            </div>
+        </div>
+                                
+        <div class="col-md-4 mb-3">
+            <div class="product box-product"
+                data-product-id="1063">
+                
+                
+                
+    <div class="product__bandeira">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
+    </div>
+
+                
+
+        <div class="product__pontuacao">
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Spectator">WS</div>
+                    <div class="pontos">98</div>
+                </div>
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Enthusiast">WE</div>
+                    <div class="pontos">96</div>
+                </div>
+                    </div>
+
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Warre\u2019s Vintage 2016&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Vinho do Porto&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Warre\u2019s Vintage 2016&quot;,&quot;id&quot;:&quot;1063&quot;,&quot;price&quot;:&quot;980.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:4,&quot;brand&quot;:&quot;Symington Family Estates&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-warres-vintage-2016' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-do-porto-warres-vintage-2016"
+                    tabindex="-1">
+                    <div class="product__photo">
+                        
+
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/w/a/warres_vintage.png"
+    width=""
+    height=""
+    alt="Garrafa de Vinho do Porto Warre’s Vintage 2016" /></span>                    </div>
+                </a>
+                                <div class="product__content">
+                    <h2 class="product__title">
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Warre\u2019s Vintage 2016&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Vinho do Porto&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Warre\u2019s Vintage 2016&quot;,&quot;id&quot;:&quot;1063&quot;,&quot;price&quot;:&quot;980.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:4,&quot;brand&quot;:&quot;Symington Family Estates&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-warres-vintage-2016' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-do-porto-warres-vintage-2016">
+                            Vinho do Porto Warre’s Vintage 2016                        </a>
+                    </h2>
+
+                    
+<div class="product__pais">
+    <span>Portugal</span>
+</div>
+                    
+                    <form data-role="tocart-form" data-product-sku="20797"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv/product/1063/" method="post">
+                        <input type="hidden" name="product"
+                            value="1063">
+                                                <input type="hidden"
+                            name="uenc"
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekwzQnZjblJ2L3Byb2R1Y3QvMTA2My8,">
+                        <input name="form_key" type="hidden" value="1YtrDieuetIrQZdr" />                        <div class="product__buy">
+                            <div class="product__price">
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1063" data-price-box="product-id-1063">
+   <div class="price__regular"><br></div>
+    <div class="price__sale">
+        
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-1063"                data-price-amount="980"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$980,00</span></span>
+        </span>
+    </div>
+
+</div>                            </div>
+                            <div class="product__quantity">
+                                <div class="custom-number">
+                                    <input type="number" name="qty"
+                                        id="qty1063" maxlength="12" min="1"
+                                        minlenght="1" value="1" title="Qtd"
+                                        class="qty"
+                                        data-validate="null" />
+                                    <div class="custom-number-button custom-number-button--up">+</div>
+                                    <div class="custom-number-button custom-number-button--down">-</div>
+                                    <button class="action tocart btn btn--input" type="submit"><i
+                                            class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <a href="#" class="product__wishlist"
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1063,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv"}}'
+                                    class="action towishlist" data-action="add-to-wishlist"><i
+                                        class="far fa-heart"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="actions-primary">
+                                                        <button type="submit" title="Adicionar ao Carrinho"
+                                class="action tocart primary btn btn--product">
+                                <span>Adicionar ao Carrinho</span>
+                            </button>
+                        </div>
+                    </form>
+                                    </div>
+            </div>
+        </div>
+                                
+        <div class="col-md-4 mb-3">
+            <div class="product box-product"
+                data-product-id="752">
+                
+                
+                
+    <div class="product__bandeira">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
+    </div>
+
+                
+
+        <div class="product__pontuacao">
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Spectator">WS</div>
+                    <div class="pontos">92</div>
+                </div>
+                    </div>
+
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Graham&#039;s LBV 2012&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Vinho do Porto&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Graham&#039;s LBV 2012&quot;,&quot;id&quot;:&quot;752&quot;,&quot;price&quot;:&quot;346.70&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:5,&quot;brand&quot;:&quot;Symington Family Estates&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-grahams-lbv' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-do-porto-grahams-lbv"
+                    tabindex="-1">
+                    <div class="product__photo">
+                        
+
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/g/r/grahams_lbv_2012.png"
+    width=""
+    height=""
+    alt="Garrafa de Vinho do Porto Graham&#039;s LBV 2012" /></span>                    </div>
+                </a>
+                                <div class="product__content">
+                    <h2 class="product__title">
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Graham&#039;s LBV 2012&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Vinho do Porto&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Graham&#039;s LBV 2012&quot;,&quot;id&quot;:&quot;752&quot;,&quot;price&quot;:&quot;346.70&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:5,&quot;brand&quot;:&quot;Symington Family Estates&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-grahams-lbv' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-do-porto-grahams-lbv">
+                            Vinho do Porto Graham&#039;s LBV 2012                        </a>
+                    </h2>
+
+                    
+<div class="product__pais">
+    <span>Portugal</span>
+</div>
+                    
+                    <form data-role="tocart-form" data-product-sku="810"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv/product/752/" method="post">
+                        <input type="hidden" name="product"
+                            value="752">
+                                                <input type="hidden"
+                            name="uenc"
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekwzQnZjblJ2L3Byb2R1Y3QvNzUyLw,,">
+                        <input name="form_key" type="hidden" value="1YtrDieuetIrQZdr" />                        <div class="product__buy">
+                            <div class="product__price">
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="752" data-price-box="product-id-752">
+   <div class="price__regular"><br></div>
+    <div class="price__sale">
+        
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-752"                data-price-amount="346.7"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$346,70</span></span>
+        </span>
+    </div>
+
+</div>                            </div>
+                            <div class="product__quantity">
+                                <div class="custom-number">
+                                    <input type="number" name="qty"
+                                        id="qty752" maxlength="12" min="1"
+                                        minlenght="1" value="1" title="Qtd"
+                                        class="qty"
+                                        data-validate="null" />
+                                    <div class="custom-number-button custom-number-button--up">+</div>
+                                    <div class="custom-number-button custom-number-button--down">-</div>
+                                    <button class="action tocart btn btn--input" type="submit"><i
+                                            class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <a href="#" class="product__wishlist"
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":752,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv"}}'
+                                    class="action towishlist" data-action="add-to-wishlist"><i
+                                        class="far fa-heart"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="actions-primary">
+                                                        <button type="submit" title="Adicionar ao Carrinho"
+                                class="action tocart primary btn btn--product">
+                                <span>Adicionar ao Carrinho</span>
+                            </button>
+                        </div>
+                    </form>
+                                    </div>
+            </div>
+        </div>
+                                
+        <div class="col-md-4 mb-3">
+            <div class="product box-product"
+                data-product-id="751">
+                
+                
+                
+    <div class="product__bandeira">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
+    </div>
+
+                
+
+
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Graham&#039;s Fine Ruby&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Vinho do Porto&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Graham&#039;s Fine Ruby&quot;,&quot;id&quot;:&quot;751&quot;,&quot;price&quot;:&quot;186.22&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:6,&quot;brand&quot;:&quot;Symington Family Estates&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-grahams-fine-ruby' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-do-porto-grahams-fine-ruby"
+                    tabindex="-1">
+                    <div class="product__photo">
+                        
+
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/p/o/porto_grahams_fine_ruby.png"
+    width=""
+    height=""
+    alt="Garrafa de Vinho do Porto Graham&#039;s Fine Ruby" /></span>                    </div>
+                </a>
+                                <div class="product__content">
+                    <h2 class="product__title">
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Graham&#039;s Fine Ruby&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Vinho do Porto&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Graham&#039;s Fine Ruby&quot;,&quot;id&quot;:&quot;751&quot;,&quot;price&quot;:&quot;186.22&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:6,&quot;brand&quot;:&quot;Symington Family Estates&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-grahams-fine-ruby' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-do-porto-grahams-fine-ruby">
+                            Vinho do Porto Graham&#039;s Fine Ruby                        </a>
+                    </h2>
+
+                    
+<div class="product__pais">
+    <span>Portugal</span>
+</div>
+                    
+                    <form data-role="tocart-form" data-product-sku="811"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv/product/751/" method="post">
+                        <input type="hidden" name="product"
+                            value="751">
+                                                <input type="hidden"
+                            name="uenc"
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekwzQnZjblJ2L3Byb2R1Y3QvNzUxLw,,">
+                        <input name="form_key" type="hidden" value="1YtrDieuetIrQZdr" />                        <div class="product__buy">
+                            <div class="product__price">
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="751" data-price-box="product-id-751">
+   <div class="price__regular"><br></div>
+    <div class="price__sale">
+        
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-751"                data-price-amount="186.22"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$186,22</span></span>
+        </span>
+    </div>
+
+</div>                            </div>
+                            <div class="product__quantity">
+                                <div class="custom-number">
+                                    <input type="number" name="qty"
+                                        id="qty751" maxlength="12" min="1"
+                                        minlenght="1" value="1" title="Qtd"
+                                        class="qty"
+                                        data-validate="null" />
+                                    <div class="custom-number-button custom-number-button--up">+</div>
+                                    <div class="custom-number-button custom-number-button--down">-</div>
+                                    <button class="action tocart btn btn--input" type="submit"><i
+                                            class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <a href="#" class="product__wishlist"
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":751,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv"}}'
+                                    class="action towishlist" data-action="add-to-wishlist"><i
+                                        class="far fa-heart"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="actions-primary">
+                                                        <button type="submit" title="Adicionar ao Carrinho"
+                                class="action tocart primary btn btn--product">
+                                <span>Adicionar ao Carrinho</span>
+                            </button>
+                        </div>
+                    </form>
+                                    </div>
+            </div>
+        </div>
+                                
+        <div class="col-md-4 mb-3">
+            <div class="product box-product"
+                data-product-id="623">
+                
+                
+                
+    <div class="product__bandeira">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
+    </div>
+
+                
+
+
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Dow&#039;s Fine White&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Vinho do Porto&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Dow&#039;s Fine White&quot;,&quot;id&quot;:&quot;623&quot;,&quot;price&quot;:&quot;182.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:7,&quot;brand&quot;:&quot;Symington Family Estates&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-dows-fine-white' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-do-porto-dows-fine-white"
+                    tabindex="-1">
+                    <div class="product__photo">
+                        
+
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho-do-porto-dows-fine-white_3.png"
+    width=""
+    height=""
+    alt="Garrafa de Vinho do Porto Dow&#039;s Fine White" /></span>                    </div>
+                </a>
+                                <div class="product__content">
+                    <h2 class="product__title">
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Dow&#039;s Fine White&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Vinho do Porto&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Dow&#039;s Fine White&quot;,&quot;id&quot;:&quot;623&quot;,&quot;price&quot;:&quot;182.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:7,&quot;brand&quot;:&quot;Symington Family Estates&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-dows-fine-white' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-do-porto-dows-fine-white">
+                            Vinho do Porto Dow&#039;s Fine White                        </a>
+                    </h2>
+
+                    
+<div class="product__pais">
+    <span>Portugal</span>
+</div>
+                    
+                    <form data-role="tocart-form" data-product-sku="2711"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv/product/623/" method="post">
+                        <input type="hidden" name="product"
+                            value="623">
+                                                <input type="hidden"
+                            name="uenc"
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekwzQnZjblJ2L3Byb2R1Y3QvNjIzLw,,">
+                        <input name="form_key" type="hidden" value="1YtrDieuetIrQZdr" />                        <div class="product__buy">
+                            <div class="product__price">
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="623" data-price-box="product-id-623">
+   <div class="price__regular"><br></div>
+    <div class="price__sale">
+        
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-623"                data-price-amount="182"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$182,00</span></span>
+        </span>
+    </div>
+
+</div>                            </div>
+                            <div class="product__quantity">
+                                <div class="custom-number">
+                                    <input type="number" name="qty"
+                                        id="qty623" maxlength="12" min="1"
+                                        minlenght="1" value="1" title="Qtd"
+                                        class="qty"
+                                        data-validate="null" />
+                                    <div class="custom-number-button custom-number-button--up">+</div>
+                                    <div class="custom-number-button custom-number-button--down">-</div>
+                                    <button class="action tocart btn btn--input" type="submit"><i
+                                            class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <a href="#" class="product__wishlist"
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":623,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv"}}'
+                                    class="action towishlist" data-action="add-to-wishlist"><i
+                                        class="far fa-heart"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="actions-primary">
+                                                        <button type="submit" title="Adicionar ao Carrinho"
+                                class="action tocart primary btn btn--product">
+                                <span>Adicionar ao Carrinho</span>
+                            </button>
+                        </div>
+                    </form>
+                                    </div>
+            </div>
+        </div>
+                                
+        <div class="col-md-4 mb-3">
+            <div class="product box-product"
+                data-product-id="622">
+                
+                
+                
+    <div class="product__bandeira">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
+    </div>
+
+                
+
+
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Dow&#039;s Fine Tawny&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Vinho do Porto&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Dow&#039;s Fine Tawny&quot;,&quot;id&quot;:&quot;622&quot;,&quot;price&quot;:&quot;182.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:8,&quot;brand&quot;:&quot;Symington Family Estates&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-dows-fine-tawny' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-do-porto-dows-fine-tawny"
+                    tabindex="-1">
+                    <div class="product__photo">
+                        
+
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho-do-porto-dows-fine-tawny_3.png"
+    width=""
+    height=""
+    alt="Garrafa de Vinho do Porto Dow&#039;s Fine Tawny" /></span>                    </div>
+                </a>
+                                <div class="product__content">
+                    <h2 class="product__title">
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Dow&#039;s Fine Tawny&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Vinho do Porto&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Dow&#039;s Fine Tawny&quot;,&quot;id&quot;:&quot;622&quot;,&quot;price&quot;:&quot;182.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:8,&quot;brand&quot;:&quot;Symington Family Estates&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-dows-fine-tawny' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-do-porto-dows-fine-tawny">
+                            Vinho do Porto Dow&#039;s Fine Tawny                        </a>
+                    </h2>
+
+                    
+<div class="product__pais">
+    <span>Portugal</span>
+</div>
+                    
+                    <form data-role="tocart-form" data-product-sku="2714"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv/product/622/" method="post">
+                        <input type="hidden" name="product"
+                            value="622">
+                                                <input type="hidden"
+                            name="uenc"
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekwzQnZjblJ2L3Byb2R1Y3QvNjIyLw,,">
+                        <input name="form_key" type="hidden" value="1YtrDieuetIrQZdr" />                        <div class="product__buy">
+                            <div class="product__price">
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="622" data-price-box="product-id-622">
+   <div class="price__regular"><br></div>
+    <div class="price__sale">
+        
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-622"                data-price-amount="182"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$182,00</span></span>
+        </span>
+    </div>
+
+</div>                            </div>
+                            <div class="product__quantity">
+                                <div class="custom-number">
+                                    <input type="number" name="qty"
+                                        id="qty622" maxlength="12" min="1"
+                                        minlenght="1" value="1" title="Qtd"
+                                        class="qty"
+                                        data-validate="null" />
+                                    <div class="custom-number-button custom-number-button--up">+</div>
+                                    <div class="custom-number-button custom-number-button--down">-</div>
+                                    <button class="action tocart btn btn--input" type="submit"><i
+                                            class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <a href="#" class="product__wishlist"
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":622,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv"}}'
+                                    class="action towishlist" data-action="add-to-wishlist"><i
+                                        class="far fa-heart"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="actions-primary">
+                                                        <button type="submit" title="Adicionar ao Carrinho"
+                                class="action tocart primary btn btn--product">
+                                <span>Adicionar ao Carrinho</span>
+                            </button>
+                        </div>
+                    </form>
+                                    </div>
+            </div>
+        </div>
+                                
+        <div class="col-md-4 mb-3">
+            <div class="product box-product"
+                data-product-id="619">
+                
+                
                 
     <div class="product__bandeira">
         <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
@@ -4889,25 +5582,25 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         <div class="product__pontuacao">
                                             <div class="pontuacao">
                     <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Enthusiast">WE</div>
-                    <div class="pontos">91</div>
+                    <div class="pontos">90</div>
                 </div>
                     </div>
 
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Espor\u00e3o Reserva Tinto 2017&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Espor\u00e3o Reserva Tinto 2017&quot;,&quot;id&quot;:&quot;664&quot;,&quot;price&quot;:&quot;229.00&quot;,&quot;category&quot;:&quot;Vinhos\/Vinho Tinto&quot;,&quot;position&quot;:5,&quot;brand&quot;:&quot;Herdade do Espor\u00e3o&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-esporao-reserva-tinto' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-esporao-reserva-tinto"
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Dow&#039;s 20 Anos&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Vinho do Porto&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Dow&#039;s 20 Anos&quot;,&quot;id&quot;:&quot;619&quot;,&quot;price&quot;:&quot;852.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:9,&quot;brand&quot;:&quot;Symington Family Estates&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-dows-20-anos' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-do-porto-dows-20-anos"
                     tabindex="-1">
                     <div class="product__photo">
                         
 
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho_espor_o_reserva_tinto_2017_kit.png"
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/d/o/dows_20_anos.png"
     width=""
     height=""
-    alt="Garrafa de Vinho Esporão Reserva Tinto 2017" /></span>                    </div>
+    alt="Garrafa de Vinho do Porto Dow&#039;s 20 Anos" /></span>                    </div>
                 </a>
                                 <div class="product__content">
                     <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Espor\u00e3o Reserva Tinto 2017&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Espor\u00e3o Reserva Tinto 2017&quot;,&quot;id&quot;:&quot;664&quot;,&quot;price&quot;:&quot;229.00&quot;,&quot;category&quot;:&quot;Vinhos\/Vinho Tinto&quot;,&quot;position&quot;:5,&quot;brand&quot;:&quot;Herdade do Espor\u00e3o&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-esporao-reserva-tinto' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/vinho-esporao-reserva-tinto">
-                            Vinho Esporão Reserva Tinto 2017                        </a>
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Dow&#039;s 20 Anos&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Vinho do Porto&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Dow&#039;s 20 Anos&quot;,&quot;id&quot;:&quot;619&quot;,&quot;price&quot;:&quot;852.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:9,&quot;brand&quot;:&quot;Symington Family Estates&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-dows-20-anos' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-do-porto-dows-20-anos">
+                            Vinho do Porto Dow&#039;s 20 Anos                        </a>
                     </h2>
 
                     
@@ -4915,40 +5608,26 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     <span>Portugal</span>
 </div>
                     
-                    <form data-role="tocart-form" data-product-sku="2370"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaWNvbGFzL2hlcmRhZGUtZG8tZXNwb3Jhby8%2C/product/664/" method="post">
+                    <form data-role="tocart-form" data-product-sku="2721"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv/product/619/" method="post">
                         <input type="hidden" name="product"
-                            value="664">
+                            value="619">
                                                 <input type="hidden"
                             name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YVdOdmJHRnpMMmhsY21SaFpHVXRaRzh0WlhOd2IzSmhieTglMkMvcHJvZHVjdC82NjQv">
-                        <input name="form_key" type="hidden" value="wigqc8tnogweelJ4" />                        <div class="product__buy">
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekwzQnZjblJ2L3Byb2R1Y3QvNjE5Lw,,">
+                        <input name="form_key" type="hidden" value="1YtrDieuetIrQZdr" />                        <div class="product__buy">
                             <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="664" data-price-box="product-id-664">
-    <div class="price__regular">
-        De        <span class="old-price">
-            
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="old-price-664"                data-price-amount="253"
-        data-price-type="oldPrice"
-        class="price-wrapper "
-    ><span class="price">R$253,00</span></span>
-        </span>
-        </span>
-        Por    </div>
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="619" data-price-box="product-id-619">
+   <div class="price__regular"><br></div>
     <div class="price__sale">
-        <span class="special-price">
-            
+        
 
 <span class="price-container price-final_price&#x20;tax&#x20;weee"
         >
-        <span  id="product-price-664"                data-price-amount="229"
+        <span  id="product-price-619"                data-price-amount="852"
         data-price-type="finalPrice"
         class="price-wrapper "
-    ><span class="price">R$229,00</span></span>
-        </span>
+    ><span class="price">R$852,00</span></span>
         </span>
     </div>
 
@@ -4956,7 +5635,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                             <div class="product__quantity">
                                 <div class="custom-number">
                                     <input type="number" name="qty"
-                                        id="qty664" maxlength="12" min="1"
+                                        id="qty619" maxlength="12" min="1"
                                         minlenght="1" value="1" title="Qtd"
                                         class="qty"
                                         data-validate="null" />
@@ -4966,7 +5645,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                             class="fas fa-shopping-cart"></i></button>
                                 </div>
                                 <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":664,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaWNvbGFzL2hlcmRhZGUtZG8tZXNwb3Jhby8,"}}'
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":619,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv"}}'
                                     class="action towishlist" data-action="add-to-wishlist"><i
                                         class="far fa-heart"></i></a>
                             </div>
@@ -4985,7 +5664,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                 
         <div class="col-md-4 mb-3">
             <div class="product box-product"
-                data-product-id="1124">
+                data-product-id="618">
                 
                 
                 
@@ -4995,22 +5674,28 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 
                 
 
+        <div class="product__pontuacao">
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Enthusiast">WE</div>
+                    <div class="pontos">94</div>
+                </div>
+                    </div>
 
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Alandra Tinto 2020&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Alandra Tinto 2020&quot;,&quot;id&quot;:&quot;1124&quot;,&quot;price&quot;:&quot;43.50&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:6,&quot;brand&quot;:&quot;Herdade do Espor\u00e3o&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-alandra-tinto' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-alandra-tinto"
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Dow&#039;s 30 Anos&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Vinho do Porto&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Dow&#039;s 30 Anos&quot;,&quot;id&quot;:&quot;618&quot;,&quot;price&quot;:&quot;1637.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:10,&quot;brand&quot;:&quot;Symington Family Estates&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-dows-30-anos' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-do-porto-dows-30-anos"
                     tabindex="-1">
                     <div class="product__photo">
                         
 
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/a/l/alandra_tinto.png"
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho-do-porto-dows-30-anos_3.png"
     width=""
     height=""
-    alt="Garrafa de Vinho Alandra Tinto 2019" /></span>                    </div>
+    alt="Garrafa de Vinho do Porto Dow&#039;s 30 Anos" /></span>                    </div>
                 </a>
                                 <div class="product__content">
                     <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Alandra Tinto 2020&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Alandra Tinto 2020&quot;,&quot;id&quot;:&quot;1124&quot;,&quot;price&quot;:&quot;43.50&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:6,&quot;brand&quot;:&quot;Herdade do Espor\u00e3o&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-alandra-tinto' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/vinho-alandra-tinto">
-                            Vinho Alandra Tinto 2020                        </a>
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Dow&#039;s 30 Anos&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Vinho do Porto&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Dow&#039;s 30 Anos&quot;,&quot;id&quot;:&quot;618&quot;,&quot;price&quot;:&quot;1637.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:10,&quot;brand&quot;:&quot;Symington Family Estates&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-dows-30-anos' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-do-porto-dows-30-anos">
+                            Vinho do Porto Dow&#039;s 30 Anos                        </a>
                     </h2>
 
                     
@@ -5018,26 +5703,26 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     <span>Portugal</span>
 </div>
                     
-                    <form data-role="tocart-form" data-product-sku="1529"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaWNvbGFzL2hlcmRhZGUtZG8tZXNwb3Jhby8%2C/product/1124/" method="post">
+                    <form data-role="tocart-form" data-product-sku="2723"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv/product/618/" method="post">
                         <input type="hidden" name="product"
-                            value="1124">
+                            value="618">
                                                 <input type="hidden"
                             name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YVdOdmJHRnpMMmhsY21SaFpHVXRaRzh0WlhOd2IzSmhieTglMkMvcHJvZHVjdC8xMTI0Lw,,">
-                        <input name="form_key" type="hidden" value="wigqc8tnogweelJ4" />                        <div class="product__buy">
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekwzQnZjblJ2L3Byb2R1Y3QvNjE4Lw,,">
+                        <input name="form_key" type="hidden" value="1YtrDieuetIrQZdr" />                        <div class="product__buy">
                             <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1124" data-price-box="product-id-1124">
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="618" data-price-box="product-id-618">
    <div class="price__regular"><br></div>
     <div class="price__sale">
         
 
 <span class="price-container price-final_price&#x20;tax&#x20;weee"
         >
-        <span  id="product-price-1124"                data-price-amount="43.5"
+        <span  id="product-price-618"                data-price-amount="1637"
         data-price-type="finalPrice"
         class="price-wrapper "
-    ><span class="price">R$43,50</span></span>
+    ><span class="price">R$1.637,00</span></span>
         </span>
     </div>
 
@@ -5045,7 +5730,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                             <div class="product__quantity">
                                 <div class="custom-number">
                                     <input type="number" name="qty"
-                                        id="qty1124" maxlength="12" min="1"
+                                        id="qty618" maxlength="12" min="1"
                                         minlenght="1" value="1" title="Qtd"
                                         class="qty"
                                         data-validate="null" />
@@ -5055,7 +5740,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                             class="fas fa-shopping-cart"></i></button>
                                 </div>
                                 <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1124,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaWNvbGFzL2hlcmRhZGUtZG8tZXNwb3Jhby8,"}}'
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":618,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv"}}'
                                     class="action towishlist" data-action="add-to-wishlist"><i
                                         class="far fa-heart"></i></a>
                             </div>
@@ -5074,7 +5759,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                 
         <div class="col-md-4 mb-3">
             <div class="product box-product"
-                data-product-id="1125">
+                data-product-id="418">
                 
                 
                 
@@ -5084,22 +5769,32 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 
                 
 
+        <div class="product__pontuacao">
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Spectator">WS</div>
+                    <div class="pontos">98</div>
+                </div>
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Enthusiast">WE</div>
+                    <div class="pontos">97</div>
+                </div>
+                    </div>
 
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Alandra Branco 2019&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Alandra Branco 2019&quot;,&quot;id&quot;:&quot;1125&quot;,&quot;price&quot;:&quot;43.50&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:7,&quot;brand&quot;:&quot;Herdade do Espor\u00e3o&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-alandra-branco' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-alandra-branco"
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Dow&#039;s Vintage 2016&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Vinho do Porto&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Dow&#039;s Vintage 2016&quot;,&quot;id&quot;:&quot;418&quot;,&quot;price&quot;:&quot;1998.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:11,&quot;brand&quot;:&quot;Symington Family Estates&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-dows-vintage-2016' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-do-porto-dows-vintage-2016"
                     tabindex="-1">
                     <div class="product__photo">
                         
 
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/a/l/alandra_branco.png"
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/d/o/dows_vintage_2016_.png"
     width=""
     height=""
-    alt="Garrafa de Vinho Alandra Branco 2019" /></span>                    </div>
+    alt="Garrafa de Vinho do Porto Dow&#039;s Vintage 2016" /></span>                    </div>
                 </a>
                                 <div class="product__content">
                     <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Alandra Branco 2019&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Alandra Branco 2019&quot;,&quot;id&quot;:&quot;1125&quot;,&quot;price&quot;:&quot;43.50&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:7,&quot;brand&quot;:&quot;Herdade do Espor\u00e3o&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-alandra-branco' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/vinho-alandra-branco">
-                            Vinho Alandra Branco 2019                        </a>
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Dow&#039;s Vintage 2016&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Vinho do Porto&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Dow&#039;s Vintage 2016&quot;,&quot;id&quot;:&quot;418&quot;,&quot;price&quot;:&quot;1998.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:11,&quot;brand&quot;:&quot;Symington Family Estates&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-dows-vintage-2016' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-do-porto-dows-vintage-2016">
+                            Vinho do Porto Dow&#039;s Vintage 2016                        </a>
                     </h2>
 
                     
@@ -5107,26 +5802,26 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     <span>Portugal</span>
 </div>
                     
-                    <form data-role="tocart-form" data-product-sku="1530"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaWNvbGFzL2hlcmRhZGUtZG8tZXNwb3Jhby8%2C/product/1125/" method="post">
+                    <form data-role="tocart-form" data-product-sku="7639"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv/product/418/" method="post">
                         <input type="hidden" name="product"
-                            value="1125">
+                            value="418">
                                                 <input type="hidden"
                             name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YVdOdmJHRnpMMmhsY21SaFpHVXRaRzh0WlhOd2IzSmhieTglMkMvcHJvZHVjdC8xMTI1Lw,,">
-                        <input name="form_key" type="hidden" value="wigqc8tnogweelJ4" />                        <div class="product__buy">
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekwzQnZjblJ2L3Byb2R1Y3QvNDE4Lw,,">
+                        <input name="form_key" type="hidden" value="1YtrDieuetIrQZdr" />                        <div class="product__buy">
                             <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1125" data-price-box="product-id-1125">
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="418" data-price-box="product-id-418">
    <div class="price__regular"><br></div>
     <div class="price__sale">
         
 
 <span class="price-container price-final_price&#x20;tax&#x20;weee"
         >
-        <span  id="product-price-1125"                data-price-amount="43.5"
+        <span  id="product-price-418"                data-price-amount="1998"
         data-price-type="finalPrice"
         class="price-wrapper "
-    ><span class="price">R$43,50</span></span>
+    ><span class="price">R$1.998,00</span></span>
         </span>
     </div>
 
@@ -5134,7 +5829,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                             <div class="product__quantity">
                                 <div class="custom-number">
                                     <input type="number" name="qty"
-                                        id="qty1125" maxlength="12" min="1"
+                                        id="qty418" maxlength="12" min="1"
                                         minlenght="1" value="1" title="Qtd"
                                         class="qty"
                                         data-validate="null" />
@@ -5144,274 +5839,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                             class="fas fa-shopping-cart"></i></button>
                                 </div>
                                 <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1125,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaWNvbGFzL2hlcmRhZGUtZG8tZXNwb3Jhby8,"}}'
-                                    class="action towishlist" data-action="add-to-wishlist"><i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="actions-primary">
-                                                        <button type="submit" title="Adicionar ao Carrinho"
-                                class="action tocart primary btn btn--product">
-                                <span>Adicionar ao Carrinho</span>
-                            </button>
-                        </div>
-                    </form>
-                                    </div>
-            </div>
-        </div>
-                                
-        <div class="col-md-4 mb-3">
-            <div class="product box-product"
-                data-product-id="1129">
-                
-                
-                
-    <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
-    </div>
-
-                
-
-
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Espor\u00e3o Colheita Tinto 2019&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Espor\u00e3o Colheita Tinto 2019&quot;,&quot;id&quot;:&quot;1129&quot;,&quot;price&quot;:&quot;125.90&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:8,&quot;brand&quot;:&quot;Herdade do Espor\u00e3o&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-esporao-colheita-tinto' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-esporao-colheita-tinto"
-                    tabindex="-1">
-                    <div class="product__photo">
-                        
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/e/s/espor_o_colheita_tinto.png"
-    width=""
-    height=""
-    alt="Garrafa de Vinho Esporão Colheita Tinto 2019" /></span>                    </div>
-                </a>
-                                <div class="product__content">
-                    <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Espor\u00e3o Colheita Tinto 2019&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Espor\u00e3o Colheita Tinto 2019&quot;,&quot;id&quot;:&quot;1129&quot;,&quot;price&quot;:&quot;125.90&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:8,&quot;brand&quot;:&quot;Herdade do Espor\u00e3o&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-esporao-colheita-tinto' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/vinho-esporao-colheita-tinto">
-                            Vinho Esporão Colheita Tinto 2019                        </a>
-                    </h2>
-
-                    
-<div class="product__pais">
-    <span>Portugal</span>
-</div>
-                    
-                    <form data-role="tocart-form" data-product-sku="1539"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaWNvbGFzL2hlcmRhZGUtZG8tZXNwb3Jhby8%2C/product/1129/" method="post">
-                        <input type="hidden" name="product"
-                            value="1129">
-                                                <input type="hidden"
-                            name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YVdOdmJHRnpMMmhsY21SaFpHVXRaRzh0WlhOd2IzSmhieTglMkMvcHJvZHVjdC8xMTI5Lw,,">
-                        <input name="form_key" type="hidden" value="wigqc8tnogweelJ4" />                        <div class="product__buy">
-                            <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1129" data-price-box="product-id-1129">
-   <div class="price__regular"><br></div>
-    <div class="price__sale">
-        
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-1129"                data-price-amount="125.9"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$125,90</span></span>
-        </span>
-    </div>
-
-</div>                            </div>
-                            <div class="product__quantity">
-                                <div class="custom-number">
-                                    <input type="number" name="qty"
-                                        id="qty1129" maxlength="12" min="1"
-                                        minlenght="1" value="1" title="Qtd"
-                                        class="qty"
-                                        data-validate="null" />
-                                    <div class="custom-number-button custom-number-button--up">+</div>
-                                    <div class="custom-number-button custom-number-button--down">-</div>
-                                    <button class="action tocart btn btn--input" type="submit"><i
-                                            class="fas fa-shopping-cart"></i></button>
-                                </div>
-                                <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1129,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaWNvbGFzL2hlcmRhZGUtZG8tZXNwb3Jhby8,"}}'
-                                    class="action towishlist" data-action="add-to-wishlist"><i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="actions-primary">
-                                                        <button type="submit" title="Adicionar ao Carrinho"
-                                class="action tocart primary btn btn--product">
-                                <span>Adicionar ao Carrinho</span>
-                            </button>
-                        </div>
-                    </form>
-                                    </div>
-            </div>
-        </div>
-                                
-        <div class="col-md-4 mb-3">
-            <div class="product box-product"
-                data-product-id="1130">
-                
-                
-                
-    <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
-    </div>
-
-                
-
-
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Org\u00e2nico Espor\u00e3o Colheita Branco 2020&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Org\u00e2nico Espor\u00e3o Colheita Branco 2020&quot;,&quot;id&quot;:&quot;1130&quot;,&quot;price&quot;:&quot;125.90&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:9,&quot;brand&quot;:&quot;Herdade do Espor\u00e3o&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-organico-esporao-colheita-branco' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-organico-esporao-colheita-branco"
-                    tabindex="-1">
-                    <div class="product__photo">
-                        
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho_org_nico_espor_o_colheita_branco_2020.png"
-    width=""
-    height=""
-    alt="Garrafa de Vinho Orgânico Esporão Colheita Branco 2020" /></span>                    </div>
-                </a>
-                                <div class="product__content">
-                    <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Org\u00e2nico Espor\u00e3o Colheita Branco 2020&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Org\u00e2nico Espor\u00e3o Colheita Branco 2020&quot;,&quot;id&quot;:&quot;1130&quot;,&quot;price&quot;:&quot;125.90&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:9,&quot;brand&quot;:&quot;Herdade do Espor\u00e3o&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-organico-esporao-colheita-branco' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/vinho-organico-esporao-colheita-branco">
-                            Vinho Orgânico Esporão Colheita Branco 2020                        </a>
-                    </h2>
-
-                    
-<div class="product__pais">
-    <span>Portugal</span>
-</div>
-                    
-                    <form data-role="tocart-form" data-product-sku="1540"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaWNvbGFzL2hlcmRhZGUtZG8tZXNwb3Jhby8%2C/product/1130/" method="post">
-                        <input type="hidden" name="product"
-                            value="1130">
-                                                <input type="hidden"
-                            name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YVdOdmJHRnpMMmhsY21SaFpHVXRaRzh0WlhOd2IzSmhieTglMkMvcHJvZHVjdC8xMTMwLw,,">
-                        <input name="form_key" type="hidden" value="wigqc8tnogweelJ4" />                        <div class="product__buy">
-                            <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1130" data-price-box="product-id-1130">
-   <div class="price__regular"><br></div>
-    <div class="price__sale">
-        
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-1130"                data-price-amount="125.9"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$125,90</span></span>
-        </span>
-    </div>
-
-</div>                            </div>
-                            <div class="product__quantity">
-                                <div class="custom-number">
-                                    <input type="number" name="qty"
-                                        id="qty1130" maxlength="12" min="1"
-                                        minlenght="1" value="1" title="Qtd"
-                                        class="qty"
-                                        data-validate="null" />
-                                    <div class="custom-number-button custom-number-button--up">+</div>
-                                    <div class="custom-number-button custom-number-button--down">-</div>
-                                    <button class="action tocart btn btn--input" type="submit"><i
-                                            class="fas fa-shopping-cart"></i></button>
-                                </div>
-                                <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1130,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaWNvbGFzL2hlcmRhZGUtZG8tZXNwb3Jhby8,"}}'
-                                    class="action towishlist" data-action="add-to-wishlist"><i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="actions-primary">
-                                                        <button type="submit" title="Adicionar ao Carrinho"
-                                class="action tocart primary btn btn--product">
-                                <span>Adicionar ao Carrinho</span>
-                            </button>
-                        </div>
-                    </form>
-                                    </div>
-            </div>
-        </div>
-                                
-        <div class="col-md-4 mb-3">
-            <div class="product box-product"
-                data-product-id="1131">
-                
-                
-                
-    <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
-    </div>
-
-                
-
-
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Espor\u00e3o Assobio Tinto 2019&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Espor\u00e3o Assobio Tinto 2019&quot;,&quot;id&quot;:&quot;1131&quot;,&quot;price&quot;:&quot;106.00&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:10,&quot;brand&quot;:&quot;Herdade do Espor\u00e3o&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-esporao-assobio-tinto' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-esporao-assobio-tinto"
-                    tabindex="-1">
-                    <div class="product__photo">
-                        
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/e/s/espor_o_assobio_tinto.png"
-    width=""
-    height=""
-    alt="Garrafa de Vinho Esporão Assobio Tinto 2019" /></span>                    </div>
-                </a>
-                                <div class="product__content">
-                    <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Espor\u00e3o Assobio Tinto 2019&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Espor\u00e3o Assobio Tinto 2019&quot;,&quot;id&quot;:&quot;1131&quot;,&quot;price&quot;:&quot;106.00&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:10,&quot;brand&quot;:&quot;Herdade do Espor\u00e3o&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-esporao-assobio-tinto' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/vinho-esporao-assobio-tinto">
-                            Vinho Esporão Assobio Tinto 2019                        </a>
-                    </h2>
-
-                    
-<div class="product__pais">
-    <span>Portugal</span>
-</div>
-                    
-                    <form data-role="tocart-form" data-product-sku="1451"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaWNvbGFzL2hlcmRhZGUtZG8tZXNwb3Jhby8%2C/product/1131/" method="post">
-                        <input type="hidden" name="product"
-                            value="1131">
-                                                <input type="hidden"
-                            name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YVdOdmJHRnpMMmhsY21SaFpHVXRaRzh0WlhOd2IzSmhieTglMkMvcHJvZHVjdC8xMTMxLw,,">
-                        <input name="form_key" type="hidden" value="wigqc8tnogweelJ4" />                        <div class="product__buy">
-                            <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1131" data-price-box="product-id-1131">
-   <div class="price__regular"><br></div>
-    <div class="price__sale">
-        
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-1131"                data-price-amount="106"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$106,00</span></span>
-        </span>
-    </div>
-
-</div>                            </div>
-                            <div class="product__quantity">
-                                <div class="custom-number">
-                                    <input type="number" name="qty"
-                                        id="qty1131" maxlength="12" min="1"
-                                        minlenght="1" value="1" title="Qtd"
-                                        class="qty"
-                                        data-validate="null" />
-                                    <div class="custom-number-button custom-number-button--up">+</div>
-                                    <div class="custom-number-button custom-number-button--down">-</div>
-                                    <button class="action tocart btn btn--input" type="submit"><i
-                                            class="fas fa-shopping-cart"></i></button>
-                                </div>
-                                <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1131,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaWNvbGFzL2hlcmRhZGUtZG8tZXNwb3Jhby8,"}}'
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":418,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL3BvcnRv"}}'
                                     class="action towishlist" data-action="add-to-wishlist"><i
                                         class="far fa-heart"></i></a>
                             </div>
@@ -5451,79 +5879,116 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
   }
 }
         </script>
-    
-
-<input name="form_key" type="hidden" value="wigqc8tnogweelJ4" /><script type="text/x-magento-init">
-    {
-        "*": {
-            "Magento_Customer/js/section-config": {
-                "sections": {"stores\/store\/switch":"*","stores\/store\/switchrequest":"*","directory\/currency\/switch":"*","*":["messages"],"customer\/account\/logout":["recently_viewed_product","recently_compared_product","persistent"],"customer\/account\/loginpost":"*","customer\/account\/createpost":"*","customer\/account\/editpost":"*","customer\/ajax\/login":["checkout-data","cart","captcha"],"catalog\/product_compare\/add":["compare-products","gtm"],"catalog\/product_compare\/remove":["compare-products"],"catalog\/product_compare\/clear":["compare-products"],"sales\/guest\/reorder":["cart"],"sales\/order\/reorder":["cart"],"checkout\/cart\/add":["cart","directory-data","gtm"],"checkout\/cart\/delete":["cart","gtm"],"checkout\/cart\/updatepost":["cart"],"checkout\/cart\/updateitemoptions":["cart"],"checkout\/cart\/couponpost":["cart"],"checkout\/cart\/estimatepost":["cart"],"checkout\/cart\/estimateupdatepost":["cart"],"checkout\/onepage\/saveorder":["cart","checkout-data","last-ordered-items","checkout-fields"],"checkout\/sidebar\/removeitem":["cart","gtm"],"checkout\/sidebar\/updateitemqty":["cart"],"rest\/*\/v1\/carts\/*\/payment-information":["cart","last-ordered-items","instant-purchase","gtm"],"rest\/*\/v1\/guest-carts\/*\/payment-information":["cart","gtm"],"rest\/*\/v1\/guest-carts\/*\/selected-payment-method":["cart","checkout-data"],"rest\/*\/v1\/carts\/*\/selected-payment-method":["cart","checkout-data","instant-purchase"],"customer\/address\/*":["instant-purchase"],"customer\/account\/*":["instant-purchase"],"vault\/cards\/deleteaction":["instant-purchase"],"multishipping\/checkout\/overviewpost":["cart"],"authorizenet\/directpost_payment\/place":["cart","checkout-data"],"paypal\/express\/placeorder":["cart","checkout-data"],"paypal\/payflowexpress\/placeorder":["cart","checkout-data"],"paypal\/express\/onauthorization":["cart","checkout-data"],"persistent\/index\/unsetcookie":["persistent"],"review\/product\/post":["review"],"braintree\/paypal\/placeorder":["cart","checkout-data"],"wishlist\/index\/add":["wishlist","gtm"],"wishlist\/index\/remove":["wishlist"],"wishlist\/index\/updateitemoptions":["wishlist"],"wishlist\/index\/update":["wishlist"],"wishlist\/index\/cart":["wishlist","cart","gtm"],"wishlist\/index\/fromcart":["wishlist","cart"],"wishlist\/index\/allcart":["wishlist","cart","gtm"],"wishlist\/shared\/allcart":["wishlist","cart"],"wishlist\/shared\/cart":["cart"],"checkout\/cart\/configure":["gtm"],"rest\/*\/v1\/guest-carts\/*\/shipping-information":["gtm"],"rest\/*\/v1\/carts\/*\/shipping-information":["gtm"]},
-                "clientSideSections": ["checkout-data","cart-data","chatData"],
-                "baseUrls": ["https:\/\/www.divinho.com.br\/","http:\/\/www.divinho.com.br\/"],
-                "sectionNames": ["messages","customer","compare-products","last-ordered-items","cart","directory-data","captcha","instant-purchase","persistent","review","wishlist","chatData","gtm","recently_viewed_product","recently_compared_product","product_data_storage","paypal-billing-agreement","checkout-fields","collection-point-result","pickup-location-result"]            }
-        }
-    }
-</script>
-<script type="text/x-magento-init">
-    {
-        "*": {
-            "Magento_Customer/js/customer-data": {
-                "sectionLoadUrl": "https\u003A\u002F\u002Fwww.divinho.com.br\u002Fcustomer\u002Fsection\u002Fload\u002F",
-                "expirableSectionLifetime": 60,
-                "expirableSectionNames": ["cart","persistent"],
-                "cookieLifeTime": "86400",
-                "updateSessionUrl": "https\u003A\u002F\u002Fwww.divinho.com.br\u002Fcustomer\u002Faccount\u002FupdateSession\u002F"
-            }
-        }
-    }
-</script>
-<script type="text/x-magento-init">
-    {
-        "*": {
-            "Magento_Customer/js/invalidation-processor": {
-                "invalidationRules": {
-                    "website-rule": {
-                        "Magento_Customer/js/invalidation-rules/website-rule": {
-                            "scopeConfig": {
-                                "websiteId": "1"
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-</script>
 <script type="text/x-magento-init">
     {
         "body": {
-            "pageCache": {"url":"https:\/\/www.divinho.com.br\/page_cache\/block\/render\/id\/98\/parent_id\/1\/","handles":["default","attributepages_page_view","ATTRIBUTEPAGES_PAGE_98","attributepages_page_view_id_98","attributepages_option_page","attributepages_option_page_default","gabrielqs_themesettings_footer_1","gabrielqs_themesettings_header_1","gabrielqs_themesettings_customization","mpseo_remove_schema"],"originalRequest":{"route":"attributepages","controller":"page","action":"view","uri":"\/vinicolas\/herdade-do-esporao\/"},"versionCookieName":"private_content_version"}        }
+            "requireCookie": {"noCookieUrl":"https:\/\/www.divinho.com.br\/cookie\/index\/noCookies\/","triggers":[".action.tocompare"],"isRedirectCmsPage":true}        }
     }
 </script>
-
-<div id="monkey_campaign" style="display:none;"
-     data-mage-init='{"campaigncatcher":{"checkCampaignUrl": "https://www.divinho.com.br/mailchimp/campaign/check/"}}'>
-</div></div></div></div></main><div class="page-bottom"><div class="container"><div class="category-view row align-items-center">
-
+</div></div></div></main><div class="page-bottom"><div class="container"><div class="category-view row align-items-center">
 <div class="category-image-wrapper col-lg ">
     <div class="category-image">
-                    <img src="https://images.divinho.com.br/swissup/attributepages/h/e/herdade_do_esporao.jpg" alt="Herdade do Esporão" title="Herdade do Esporão">
+                    <img src="https://images.divinho.com.br/catalog/category/Vinho_do_Porto_6.jpg" alt="Vinho&#x20;do&#x20;Porto" title="Vinho&#x20;do&#x20;Porto">
             </div>
-</div><div class="category-description-wrapper col-lg-8"><div class="category-description">
-<div class="category__title">Herdade do Esporão</div>
-<div class="category-description-text">
-    <p><p>Não é exagero dizer que a Herdade do Esporão é a vinícola que colocou a região do Alentejo no mapa-múndi do vinho moderno.</p>
-<p>Localizada na pequena cidade de Reguengos de Monsaraz, possui nada menos que 700 hectares de vinhas, olivais e outras culturas. Para as proporções portuguesas, isso significa um mar de vinhedos, com uma coleção de quarenta castas! A</p>
-<p>Herdade do Esporão destaca-se também pela estrutura arrojada de vinificação.</p>
-<p>À frente da produção de seus vinhos, de várias gamas e categorias, está o enólogo australiano David Baverstock, que figura como uma celebridade do vinho português.</p>
-<p>A origem da Herdade do Esporão é antiga – a propriedade existe desde a Idade Média! Mas somente nas últimas décadas do século XX é que se voltou, seriamente, para a produção de vinhos, ao ser adquirida, em 1973, por José Roquette.</p>
-<p>Em 1985, foi realizada a primeira colheita que deu origem à marca Esporão. De lá pra cá, as coisas só melhoraram.</p>
-<p>Atualmente, os vinhos tintos, brancos e rosés da Herdade do Esporão são cobiçados em nada menos que cinquenta países do mundo!</p>
-<p>Vale mencionar que a propriedade abriga verdadeiros monumentos: a Torre do Esporão, o Arco do Esporão e a Ermida de Nossa Senhora dos Remédios. Ou seja, é um tesouro de vinhos e história!</p>
-<p></p></p>
 </div>
 
-</div></div></div></div></div><footer class="site-footer d-flex flex-column">
+
+<div class="category-description-wrapper col-lg-8"><div class="category-description">            <div class="category__title">
+            <span>Vinho&#x20;do&#x20;Porto</span>
+        </div>
+        <div class="category-description-text">
+        <p>A maior variedade de Vinhos do Porto das melhores e mais famosas marcas do mundo, como Graham’s, Dow’s e Warre’s, que fazem parte do portfólio da Symington Family Estates. Experimente a nossa seleção especial de Vinhos do Porto exclusivos.</p>
+<h2>Principais dúvidas sobre Vinhos do Porto</h2>    </div>
+        <div id="faq" class="accordion-faq">
+                                        <div class="accordion-item" id="faq-heading1">
+                    <h5 class="accordion-header collapsed" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                        O Que é Vinho do Porto?                    </h5>
+                    <div id="faqCollapse1" class="collapse" aria-labelledby="faqCollapse1" data-parent="#faq">
+                        <p><p>O Vinho do Porto é um vinho licoroso, também conhecido como vinho fortificado, produzido dentro da região vitivinícola do Douro, em Portugal.</p>
+<p>Um verdadeiro ícone portiguês, o Vinho do Porto é rótulo que conta com alto teor alcoólico e nível de açúcar residual, sendo uma ótima opção de aperitivo, antes das refeições.</p></p>
+                    </div>
+                </div>
+                                                            <div class="accordion-item" id="faq-heading2">
+                    <h5 class="accordion-header collapsed" data-toggle="collapse" data-target="#faqCollapse2" aria-expanded="true" aria-controls="faqCollapse2">
+                        Como se produz o Vinho do Porto?                    </h5>
+                    <div id="faqCollapse2" class="collapse" aria-labelledby="faqCollapse2" data-parent="#faq">
+                        <p><p>O processo de produção que dá origem ao Vinho do Porto é conhecido como fortificação, onde é adicionada aguardente vínica durante a fermentação, aumentando o teor alcoólico e o nível de açúcar residual.</p>
+<p>Tinta Roriz, Touriga Nacional, Touriga Franca, Tinta Cão e Tinta Barroca são as principais uvas utilizadas na elaboração do Vinho do Porto.</p></p>
+                    </div>
+                </div>
+                                                            <div class="accordion-item" id="faq-heading3">
+                    <h5 class="accordion-header collapsed" data-toggle="collapse" data-target="#faqCollapse3" aria-expanded="true" aria-controls="faqCollapse3">
+                        Quais são os tipos de Vinho do Porto?                    </h5>
+                    <div id="faqCollapse3" class="collapse" aria-labelledby="faqCollapse3" data-parent="#faq">
+                        <p><p>Os principais tipos de Vinho do Porto são Ruby e Tawny, podendo ser classificados também como Reserva, Vintage, LBV (Late Bottled Vintage), Colheita e Single Quinta.</p>
+<p>Existe, também, uma versão de Vinho do Porto elaborado com uvas brancas, o Porto Branco.</p></p>
+                    </div>
+                </div>
+                                                            <div class="accordion-item" id="faq-heading4">
+                    <h5 class="accordion-header collapsed" data-toggle="collapse" data-target="#faqCollapse4" aria-expanded="true" aria-controls="faqCollapse4">
+                        O que combina com o Vinho do Porto?                    </h5>
+                    <div id="faqCollapse4" class="collapse" aria-labelledby="faqCollapse4" data-parent="#faq">
+                        <p><p>O Vinho do Porto é ótimo como aperitivo, antes das refeições, mas também pode acompanhar uma grande variedade de pratos.</p>
+<p>O Porto Ruby, por exemplo, por ser um vinho mais jovem, combina bem com sobremesas à base de frutas vermelhas e queijos azuis.</p>
+<p>Já o Porto Tawny é um ótimo companheiro para nozes, frutas secas e sobremesas à base de chocolate amargo.</p></p>
+                    </div>
+                </div>
+                                                            <div class="accordion-item" id="faq-heading5">
+                    <h5 class="accordion-header collapsed" data-toggle="collapse" data-target="#faqCollapse5" aria-expanded="true" aria-controls="faqCollapse5">
+                        Qual a taça para Vinho do Porto?                    </h5>
+                    <div id="faqCollapse5" class="collapse" aria-labelledby="faqCollapse5" data-parent="#faq">
+                        <p><p>A recomendação é servir o Vinho do Porto em taça menores, com bojo estreito e borda mais fechada.</p>
+<p>Esse tipo de taça direciona o vinho diretamente para a ponta da língua, que capta os sabores doces.</p></p>
+                    </div>
+                </div>
+                                                    </div>
+    
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "O Que \u00e9 Vinho do Porto?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O Vinho do Porto \u00e9 um vinho licoroso, tamb\u00e9m conhecido como vinho fortificado, produzido dentro da regi\u00e3o vitivin\u00edcola do Douro, em Portugal.\r\nUm verdadeiro \u00edcone portigu\u00eas, o Vinho do Porto \u00e9 r\u00f3tulo que conta com alto teor alco\u00f3lico e n\u00edvel de a\u00e7\u00facar residual, sendo uma \u00f3tima op\u00e7\u00e3o de aperitivo, antes das refei\u00e7\u00f5es."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Como se produz o Vinho do Porto?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O processo de produ\u00e7\u00e3o que d\u00e1 origem ao Vinho do Porto \u00e9 conhecido como fortifica\u00e7\u00e3o, onde \u00e9 adicionada aguardente v\u00ednica durante a fermenta\u00e7\u00e3o, aumentando o teor alco\u00f3lico e o n\u00edvel de a\u00e7\u00facar residual.\r\nTinta Roriz, Touriga Nacional, Touriga Franca, Tinta C\u00e3o e Tinta Barroca s\u00e3o as principais uvas utilizadas na elabora\u00e7\u00e3o do Vinho do Porto."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Quais s\u00e3o os tipos de Vinho do Porto?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Os principais tipos de Vinho do Porto s\u00e3o Ruby e Tawny, podendo ser classificados tamb\u00e9m como Reserva, Vintage, LBV (Late Bottled Vintage), Colheita e Single Quinta.\r\nExiste, tamb\u00e9m, uma vers\u00e3o de Vinho do Porto elaborado com uvas brancas, o Porto Branco."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "O que combina com o Vinho do Porto?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O Vinho do Porto \u00e9 \u00f3timo como aperitivo, antes das refei\u00e7\u00f5es, mas tamb\u00e9m pode acompanhar uma grande variedade de pratos.\r\nO Porto Ruby, por exemplo, por ser um vinho mais jovem, combina bem com sobremesas \u00e0 base de frutas vermelhas e queijos azuis.\r\nJ\u00e1 o Porto Tawny \u00e9 um \u00f3timo companheiro para nozes, frutas secas e sobremesas \u00e0 base de chocolate amargo."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Qual a ta\u00e7a para Vinho do Porto?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A recomenda\u00e7\u00e3o \u00e9 servir o Vinho do Porto em ta\u00e7a menores, com bojo estreito e borda mais fechada.\r\nEsse tipo de ta\u00e7a direciona o vinho diretamente para a ponta da l\u00edngua, que capta os sabores doces."
+            }
+        }
+    ]
+}</script></div></div></div></div></div><footer class="site-footer d-flex flex-column">
 
 
 
@@ -5715,7 +6180,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                     </div>
                 <div class="wbcom-fields">
                     <div class="wbcom-fields-contents">
-                        <input name="form_key" type="hidden" value="wigqc8tnogweelJ4">
+                        <input name="form_key" type="hidden" value="1YtrDieuetIrQZdr">
                         <input type="text" placeholder="Nome" name="name" required style="background-color: #fff !important;">
                         <input type="email" placeholder="E-mail" name="email" required style="background-color: #fff !important;">
                         <input type="hidden" name="message" value="Olá, gostaria de fazer um pedido.">
@@ -5744,6 +6209,8 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     </script>
 
 
+<!-- BEGIN GTAG CATEGORY TAG -->
+<!-- END GTAG CATEGORY TAG -->
     <script>
         require(['jquery','weltpixel_persistentLayer', 'weltpixel_gtm', 'Magento_Customer/js/customer-data'],
             function ($, wpPersDl, wpgtm, customerData) {
@@ -5767,5 +6234,5 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 wpgtm.trackPromotion(wpGtmOptions);
             });
     </script>
-    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-15ce119d71e6a8d24c8","applicationID":"798446581","transactionName":"blMGbUdSWRFQBhBcC1cZJVpBWlgMHhUFUgFmVQVaXVY=","queueTime":0,"applicationTime":413,"atts":"QhQFGw9ISh8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-15ce119d71e6a8d24c8","applicationID":"798446581","transactionName":"blMGbUdSWRFQBhBcC1cZJVpBWlgMHhUFUgFmVQVaXVY=","queueTime":0,"applicationTime":71,"atts":"QhQFGw9ISh8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>

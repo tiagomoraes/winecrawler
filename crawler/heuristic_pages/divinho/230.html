@@ -1,7 +1,7 @@
 
 <!doctype html>
 <html lang=pt-br>      
-    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product: http://ogp.me/ns/product#">
+    <head >
         <script>
     var BASE_URL = 'https://www.divinho.com.br/';
     var require = {
@@ -9,14 +9,15 @@
     };
 </script>
         <meta charset="utf-8"/><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-15ce119d71e6a8d24c8",applicationID:"798446581"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1211.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
-<meta name="title" content="Vinhos de Israel com os Melhores Preços | DiVinho"/>
-<meta name="keywords" content="Vinhos de Israel"/>
+<meta name="title" content="Vinhos Pontuados com Melhores Preços | DiVinho "/>
+<meta name="description" content="Compre Vinhos Pontuados com os Melhores Preços! Seleção de rótulos de vinícolas premiadas. Em até 3x s/ juros e entregas para todo Brasil."/>
 <meta name="robots" content="INDEX,FOLLOW"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta name="format-detection" content="telephone=no"/>
-<title>Vinhos de Israel com os Melhores Preços | DiVinho</title>
+<title>Vinhos Pontuados com Melhores Preços | DiVinho </title>
 <link  rel="stylesheet" type="text/css"  media="all" href="https://static.divinho.com.br/static/version1636382917/_cache/merged/c3f0846f21e00493666c1bb1e46fe5c8.min.css" />
 <script  type="text/javascript"  src="https://static.divinho.com.br/static/version1636382917/_cache/merged/38cbaaf652093663e521d41aea6fcd0d.min.js"></script>
+<link  rel="canonical" href="https://www.divinho.com.br/vinhos-pontuados" />
 <link  rel="icon" type="image/x-icon" href="https://images.divinho.com.br/favicon/default/favicon.ico" />
 <link  rel="shortcut icon" type="image/x-icon" href="https://images.divinho.com.br/favicon/default/favicon.ico" />
             <!-- Google Tag Manager -->
@@ -33,7 +34,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         };
 
         window.dataLayer = window.dataLayer || [];
-                var dlObjects = [{"google_tag_params":{"ecomm_pagetype":"category","ecomm_category":"Pa\u00edses\/Israel"},"ecommerce":{"currencyCode":"BRL","impressions":[{"name":"Vinho Kosher Mount Hermon White 2020","id":"1245","price":"126.00","brand":"Golan Heights Winery","category":"Pa\u00edses\/Israel","list":"Pa\u00edses\/Israel","position":1},{"name":"Vinho Kosher Mount Hermon Red 2020","id":"532","price":"126.00","brand":"Golan Heights Winery","category":"Pa\u00edses\/Israel","list":"Pa\u00edses\/Israel","position":2}]},"event":"impression","eventCategory":"Ecommerce","eventAction":"Impression","eventLabel":"category Pa\u00edses\/Israel"}];
+                var dlObjects = [{"google_tag_params":{"ecomm_pagetype":"other"}}];
         for (var i in dlObjects) {
             window.dataLayer.push(dlObjects[i]);
         }
@@ -52,32 +53,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- BEGIN GTAG GLOBAL TAG -->
 <!-- END GTAG GLOBAL TAG -->
 <script type="text/javascript" src="https://chimpstatic.com/mcjs-connected/js/users/1255cf89de1ff1692e3832377/54a041db81224b7f42e4ef954.js" defer></script>
-
-<!-- This site is optimized with the Yoast SEO for Magento plugin 2.0.0 - https://yoast.com/magento/plugins/seo/ -->
-    <link rel="canonical" href="https://www.divinho.com.br/pais/israel?price=99.9-149.9" />
-
-    <!-- YoastSEO OpenGraph -->
-    <meta property="og:url" content="https://www.divinho.com.br/pais/israel?price=99.9-149.9"/>
-    <meta property="og:locale" content="pt_BR" />
-    <meta property="og:type" content="product.group"/>
-    <meta property="og:site_name" content="F R MOREIRA COMÉRCIO E DISTRIBUIÇÃO DE ALIMENTOS E BEBIDAS" />
-    <meta property="og:title" content="Vinhos de Israel com os Melhores Preços | DiVinho"/>
-    <meta property="og:description" content="Compre Vinhos de Israel com os Melhores Preços! Seleção de rótulos de vinícolas premiadas. Em até 3x s/ juros e entregas para todo Brasil.
-"/>
-            <meta property="og:image" content="https://images.divinho.com.br/catalog/category/Vinhos_Israel_1_2.jpg"/>
-                        
-    <!-- YoastSEO Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-            <meta name="twitter:title" content="Vinhos de Israel com os Melhores Preços | DiVinho"/>
-    <meta name="twitter:description" content="Compre Vinhos de Israel com os Melhores Preços! Seleção de rótulos de vinícolas premiadas. Em até 3x s/ juros e entregas para todo Brasil.
-"/>
-            <meta name="twitter:image" content="https://images.divinho.com.br/catalog/category/Vinhos_Israel_1_2.jpg"/>
-    
-
     </head>
     <body data-container="body"
           data-mage-init='{"loaderAjax": {}, "loader": { "icon": "https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/loader-2.gif"}}'
-        class="page-with-filter page-products categorypath-pais-israel category-israel page-has-faq catalog-category-view page-layout-2columns-left">
+        class="page-products pontuados-index-index page-layout-2columns-left">
         <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MM4CCWJ"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -210,7 +189,7 @@ require([
 
 </script>
 <li class="nav-item authorization-link" data-label="ou">
-    <a class="nav-link" href="https://www.divinho.com.br/customer/account/login/referer/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvcGFpcy9pc3JhZWw_cHJpY2U9OTkuOS0xNDkuOQ%2C%2C/">
+    <a class="nav-link" href="https://www.divinho.com.br/customer/account/login/referer/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9tYW51ZmFjdHVyZXI9NjI0OSZub3RhPTk2LTEwMA%2C%2C/">
         Entrar    </a>
 </li>
 
@@ -257,7 +236,7 @@ require([
             </div>
                     </div>
         <script>
-        window.checkout = {"shoppingCartUrl":"https:\/\/www.divinho.com.br\/checkout\/cart\/","checkoutUrl":"https:\/\/www.divinho.com.br\/checkout\/","updateItemQtyUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/www.divinho.com.br\/","minicartMaxItemsVisible":5,"websiteId":"1","maxItemsToDisplay":10,"storeId":"1","customerLoginUrl":"https:\/\/www.divinho.com.br\/customer\/account\/login\/referer\/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvcGFpcy9pc3JhZWw_cHJpY2U9OTkuOS0xNDkuOQ%2C%2C\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.divinho.com.br\/captcha\/refresh\/","isRequired":false,"timestamp":1636433055}}};
+        window.checkout = {"shoppingCartUrl":"https:\/\/www.divinho.com.br\/checkout\/cart\/","checkoutUrl":"https:\/\/www.divinho.com.br\/checkout\/","updateItemQtyUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/www.divinho.com.br\/","minicartMaxItemsVisible":5,"websiteId":"1","maxItemsToDisplay":10,"storeId":"1","customerLoginUrl":"https:\/\/www.divinho.com.br\/customer\/account\/login\/referer\/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9tYW51ZmFjdHVyZXI9NjI0OSZub3RhPTk2LTEwMA%2C%2C\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.divinho.com.br\/captcha\/refresh\/","isRequired":false,"timestamp":1636511009}}};
     </script>
     <script type="text/x-magento-init">
     {
@@ -271,9 +250,9 @@ require([
 </div>
 
 <div class="collapse d-lg-block" id="navbarSearch">
-        <form id="search-form6189fc9f166a1" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
+        <form id="search-form618b2d21e9bcf" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
                 <input data-mage-init='{"quickSearch":{
-                                        "formSelector":"#search-form6189fc9f166a1",
+                                        "formSelector":"#search-form618b2d21e9bcf",
                                         "url":"https://www.divinho.com.br/search/ajax/suggest/",
                                         "destinationSelector":"#search_autocomplete",
                                         "responseFieldElements":"ul li",
@@ -348,9 +327,9 @@ require([
 
 </div></div><div class="col-lg position-static col-nav"><div class="d-lg-none">
 <div class="collapse d-lg-block" id="navbarSearch">
-        <form id="search-form6189fc9f17c28" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
+        <form id="search-form618b2d21eb14c" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
                 <input data-mage-init='{"quickSearch":{
-                                        "formSelector":"#search-form6189fc9f17c28",
+                                        "formSelector":"#search-form618b2d21eb14c",
                                         "url":"https://www.divinho.com.br/search/ajax/suggest/",
                                         "destinationSelector":"#search_autocomplete",
                                         "responseFieldElements":"ul li",
@@ -392,11 +371,11 @@ require([
                                                                     <div class="mx-megamenu__sidebar mx-megamenu__sidebar--left">
                                         <div class="widget widget-categories-list block" data-collapse="1">
     <div class="megamenu__links">
-                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#vinhos6189f247cdd14" aria-expanded="true" aria-controls="vinhos6189f247cdd14">
+                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#vinhos618b0a68a8e72" aria-expanded="true" aria-controls="vinhos618b0a68a8e72">
             <i class="icon icon-vinhos"></i>
             <span>Tipo</span>
         </div>
-                <div id="vinhos6189f247cdd14" class="block-content catalog-category collapse-sm collapse">
+                <div id="vinhos618b0a68a8e72" class="block-content catalog-category collapse-sm collapse">
             <ul>
                                 <li class="category-item">
                     <a href="https://www.divinho.com.br/vinhos/tinto">
@@ -464,11 +443,11 @@ require([
 </div>
 <div class="widget widget-list-range">
     <div class="megamenu__links">
-        <div class="megamenu__title collapsed" data-toggle="collapse" data-target="#price-range6189f247d2432" aria-expanded="true" aria-controls="price-range6189f247d2432">
+        <div class="megamenu__title collapsed" data-toggle="collapse" data-target="#price-range618b0a68bd448" aria-expanded="true" aria-controls="price-range618b0a68bd448">
             <i class="icon icon icon-dollar-tag"></i>
             <span>Valor</span>
         </div>
-        <ul id="price-range6189f247d2432" class="block-content collapse-sm collapse">
+        <ul id="price-range618b0a68bd448" class="block-content collapse-sm collapse">
             <li><a href="https://www.divinho.com.br/vinhos?price=-59.9">Até R$59,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=59.9-99.9">R$59,90 a R$99,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=99.9-149.9">R$99,90 a R$149,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=149.9-249.9">R$149,90 a R$249,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=249.91-500">R$249,91 a R$500,00</a></li><li><a href="https://www.divinho.com.br/vinhos?price=500-">Acima de R$500,00</a></li>        </ul>
     </div>
 </div>
@@ -486,12 +465,12 @@ require([
     class="widget widget-list_mode widget-list_mode--uva">
     <div class="megamenu__links">
         <div class="block-title megamenu__title collapsed"
-            data-toggle="collapse" data-target="#uva6189f247b8902" aria-expanded="true"
-            aria-controls="uva6189f247b8902">
+            data-toggle="collapse" data-target="#uva618b0a682f5fe" aria-expanded="true"
+            aria-controls="uva618b0a682f5fe">
             <i class="icon icon-uva"></i>
             <span>Uvas</span>
         </div>
-        <div id="uva6189f247b8902"
+        <div id="uva618b0a682f5fe"
             class="block-content catalog-category collapse-sm collapse">
             <ul>
                 
@@ -541,11 +520,11 @@ require([
 </div>
  <div class="widget widget-categories-list block" data-collapse="1">
     <div class="megamenu__links">
-                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#pais6189f247c33b5" aria-expanded="true" aria-controls="pais6189f247c33b5">
+                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#pais618b0a68878c3" aria-expanded="true" aria-controls="pais618b0a68878c3">
             <i class="icon icon-pais"></i>
             <span>Pa&iacute;ses</span>
         </div>
-                <div id="pais6189f247c33b5" class="block-content catalog-category collapse-sm collapse">
+                <div id="pais618b0a68878c3" class="block-content catalog-category collapse-sm collapse">
             <ul>
                                 <li class="category-item">
                     <a href="https://www.divinho.com.br/pais/austria">
@@ -3542,11 +3521,11 @@ require([
                             </div>
                 <div class="megamenu__product-image">
             <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">
-                <img src="https://images.divinho.com.br/catalog/product/cache/fa01b5f6b2a94beaaa3488ed5c6cafe6/c/a/casanova_di_neri_rosso_di_montalcino.png" alt="Vinho Casanova di Neri Rosso di Montalcino 2019" title="Vinho Casanova di Neri Rosso di Montalcino 2019">
+                <img src="https://images.divinho.com.br/catalog/product/cache/fa01b5f6b2a94beaaa3488ed5c6cafe6/c/a/casanova_di_neri_rosso_di_montalcino.png" alt="Vinho Casanova di Neri Rosso di Montalcino 2018" title="Vinho Casanova di Neri Rosso di Montalcino 2018">
             </a>
         </div>
         <div class="megamenu__product-name text-center mt-2">
-            <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">Vinho Casanova di Neri Rosso di Montalcino 2019</a>
+            <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">Vinho Casanova di Neri Rosso di Montalcino 2018</a>
             <div class="text-primary price">
                 R$366,00            </div>
         </div>
@@ -3856,12 +3835,12 @@ require([
     class="widget widget-list_mode widget-list_mode--criticos">
     <div class="megamenu__links">
         <div class="block-title megamenu__title"
-             data-target="#criticos6189f249ba2f8" aria-expanded="true"
-            aria-controls="criticos6189f249ba2f8">
+             data-target="#criticos618b0a6f8879c" aria-expanded="true"
+            aria-controls="criticos618b0a6f8879c">
             <i class="icon icon-criticos"></i>
             <span>Críticos</span>
         </div>
-        <div id="criticos6189f249ba2f8"
+        <div id="criticos618b0a6f8879c"
             class="block-content catalog-category">
             <ul>
                                 <li>
@@ -4163,12 +4142,12 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     class="widget widget-list_mode widget-list_mode--vinicolas">
     <div class="megamenu__links">
         <div class="block-title megamenu__title"
-             data-target="#vinicolas6189f249cb53f" aria-expanded="true"
-            aria-controls="vinicolas6189f249cb53f">
+             data-target="#vinicolas618b0a6fd10d5" aria-expanded="true"
+            aria-controls="vinicolas618b0a6fd10d5">
             <i class="icon icon-vinicolas"></i>
             <span>Vinícolas</span>
         </div>
-        <div id="vinicolas6189f249cb53f"
+        <div id="vinicolas618b0a6fd10d5"
             class="block-content catalog-category">
             <ul>
                 
@@ -4279,25 +4258,25 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         <div class="row">
             <nav class="breadcrumbs" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                                        <li class="breadcrumb-item  home">
-                                                <a href="https://www.divinho.com.br/"
-                            title="Ir para a página inicial">
+                                        <li class="breadcrumb-item  Home">
+                                                <a href="/"
+                            title="Início">
                             Início                        </a>
                                             </li>
-                                        <li class="breadcrumb-item  category490">
-                                                <a href="https://www.divinho.com.br/pais"
-                            title="">
-                            Países                        </a>
-                                            </li>
-                                        <li class="breadcrumb-item active category521">
-                                                Israel                                            </li>
+                                        <li class="breadcrumb-item active Vinhos Pontuados">
+                                                Vinhos Pontuados                                            </li>
                                     </ol>
             </nav>
         </div>
     </div>
 </section>
-<main id="site-content" class="site-content pb-4"><a id="contentarea" tabindex="-1"></a>
-<div class="container"><div class="page messages"><div data-placeholder="messages"></div>
+<main id="site-content" class="site-content"><a id="contentarea" tabindex="-1"></a>
+<div class="container"><div class="page-title-wrapper">
+    <h1 class="page-title&#x20;page-title__pink&#x20;mb-4"
+                >
+        <span class="base" data-ui-id="page-title-wrapper" >Vinhos Pontuados</span>    </h1>
+    </div>
+<div class="page messages"><div data-placeholder="messages"></div>
 <div data-bind="scope: 'messages'">
     <div data-bind="foreach: { data: cookieMessages, as: 'message' }" class="messages">
         <div role="alert" data-bind="attr: {
@@ -4329,13 +4308,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             }
     }
 </script>
-</div><div class="custom-title-wrapper"><div class="custom-title"><div class="page-title-wrapper">
-    <h1 class="page-title page-title__pink mb-4">
-    <span>Israel</span>
-            </h1>
-</div>
-
-</div></div><div class="row"><div class="hidden-xs col-sm-3"><div class="sidebar-filters border">
+</div><div class="row"><div class="hidden-xs col-sm-3"><div class="sidebar-filters border">
     <div class="panel panel-default filter">
         <div class="panel-heading filter-title d-none">
             <strong>Filtrar por</strong>
@@ -4345,68 +4318,42 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     <h4 class="block-subtitle filter-current-subtitle"
             role="heading"
             aria-level="2"
-            data-count="1">Comprar por</h4>
+            data-count="2">Comprar por</h4>
     <ul class="items mb-0">
                     <li class="item">
-                                    <a class="action remove" href="https://www.divinho.com.br/pais/israel"
-                       title="Remover Preço R$99,90 - R$149,89">
+                                    <a class="action remove" href="https://www.divinho.com.br/vinhos-pontuados?nota=96-100"
+                       title="Remover Produtor Luis Felipe Edwards Winery">
                         <span class="far fa-times-circle mr-3"></span>
                     </a>
-                                <span class="filter-label">Preço</span>
-                <span class="filter-value label label-default">R$99,90 - R$149,89</span>
+                                <span class="filter-label">Produtor</span>
+                <span class="filter-value label label-default">Luis Felipe Edwards Winery</span>
+            </li>
+                    <li class="item">
+                                    <a class="action remove" href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6249"
+                       title="Remover Pontuação 96-100">
+                        <span class="far fa-times-circle mr-3"></span>
+                    </a>
+                                <span class="filter-label">Pontuação</span>
+                <span class="filter-value label label-default">96-100</span>
             </li>
             </ul>
 </div>
                             <div class="block-actions filter-actions mb-4">
-                    <a href="https://www.divinho.com.br/pais/israel" class="action clear filter-clear">
+                    <a href="https://www.divinho.com.br/vinhos-pontuados" class="action clear filter-clear">
                         Limpar Tudo                    </a>
                 </div>
                                                                         <h4 role="heading" aria-level="2" class="block-subtitle filter-subtitle mb-3">
                         Opções de Compra                    </h4>
                     <dl class="filter-options" id="narrow-by-list">
-                                                                                                                                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">País</dt>
+                                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">Preço</dt>
                         <dd class="filter-options-content">
 <ul class="items">
         
         
         <li class="item">
-                            <a href="https://www.divinho.com.br/pais/israel?pais=6223&amp;price=99.9-149.9">
-                    Israel                                            <span>
-                            (2)
-                        </span>
-                                    </a>
-                    </li>
-        
-
-        
-            </ol>
-</dd>
-                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">Produtor</dt>
-                        <dd class="filter-options-content">
-<ul class="items">
-        
-        
-        <li class="item">
-                            <a href="https://www.divinho.com.br/pais/israel?manufacturer=5767&amp;price=99.9-149.9">
-                    Golan Heights Winery                                            <span>
-                            (2)
-                        </span>
-                                    </a>
-                    </li>
-        
-
-        
-            </ol>
-</dd>
-                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">Uva</dt>
-                        <dd class="filter-options-content">
-<ul class="items">
-        
-        
-        <li class="item">
-                            <a href="https://www.divinho.com.br/pais/israel?price=99.9-149.9&amp;uva=5436">
-                    Cabernet Franc                                            <span>
-                            (1)
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6249&amp;nota=96-100&amp;price=-59.9">
+                    Até <span class="price">R$59,90</span>                                            <span>
+                            (4)
                         </span>
                                     </a>
                     </li>
@@ -4416,7 +4363,41 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             
         
         <li class="item">
-                            <a href="https://www.divinho.com.br/pais/israel?price=99.9-149.9&amp;uva=5431">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6249&amp;nota=96-100&amp;price=59.9-99.9">
+                    <span class="price">R$59,90</span> a <span class="price">R$99,90</span>                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            </ol>
+</dd>
+                                                                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">País</dt>
+                        <dd class="filter-options-content">
+<ul class="items">
+        
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6249&amp;nota=96-100&amp;pais=6218">
+                    Chile                                            <span>
+                            (5)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            </ol>
+</dd>
+                                                                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">Uva</dt>
+                        <dd class="filter-options-content">
+<ul class="items">
+        
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6249&amp;nota=96-100&amp;uva=5431">
                     Cabernet Sauvignon                                            <span>
                             (1)
                         </span>
@@ -4428,7 +4409,19 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             
         
         <li class="item">
-                            <a href="https://www.divinho.com.br/pais/israel?price=99.9-149.9&amp;uva=5432">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6249&amp;nota=96-100&amp;uva=5442">
+                    Carménère                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6249&amp;nota=96-100&amp;uva=5432">
                     Malbec                                            <span>
                             (1)
                         </span>
@@ -4440,7 +4433,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             
         
         <li class="item">
-                            <a href="https://www.divinho.com.br/pais/israel?price=99.9-149.9&amp;uva=5433">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6249&amp;nota=96-100&amp;uva=5433">
                     Merlot                                            <span>
                             (1)
                         </span>
@@ -4452,44 +4445,8 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             
         
         <li class="item">
-                            <a href="https://www.divinho.com.br/pais/israel?price=99.9-149.9&amp;uva=6182">
-                    Moscatel                                            <span>
-                            (1)
-                        </span>
-                                    </a>
-                    </li>
-        
-
-        
-            
-        
-        <li class="item">
-                            <a href="https://www.divinho.com.br/pais/israel?price=99.9-149.9&amp;uva=5441">
-                    Petit Verdot                                            <span>
-                            (1)
-                        </span>
-                                    </a>
-                    </li>
-        
-
-        
-            
-        
-        <li class="item">
-                            <a href="https://www.divinho.com.br/pais/israel?price=99.9-149.9&amp;uva=5444">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6249&amp;nota=96-100&amp;uva=5444">
                     Sauvignon Blanc                                            <span>
-                            (1)
-                        </span>
-                                    </a>
-                    </li>
-        
-
-        
-            
-        
-        <li class="item">
-                            <a href="https://www.divinho.com.br/pais/israel?price=99.9-149.9&amp;uva=5465">
-                    Viognier                                            <span>
                             (1)
                         </span>
                                     </a>
@@ -4505,9 +4462,9 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         
         
         <li class="item">
-                            <a href="https://www.divinho.com.br/pais/israel?price=99.9-149.9&amp;tipo=6082">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6249&amp;nota=96-100&amp;tipo=6082">
                     Tinto                                            <span>
-                            (1)
+                            (3)
                         </span>
                                     </a>
                     </li>
@@ -4517,7 +4474,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             
         
         <li class="item">
-                            <a href="https://www.divinho.com.br/pais/israel?price=99.9-149.9&amp;tipo=6083">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6249&amp;nota=96-100&amp;tipo=6083">
                     Branco                                            <span>
                             (1)
                         </span>
@@ -4526,29 +4483,12 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         
 
         
-            </ol>
-</dd>
-                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">Pontuação</dt>
-                        <dd class="filter-options-content">
-<ul class="items">
-        
-        
-        <li class="item">
-                            <a href="https://www.divinho.com.br/pais/israel?nota=90-95&amp;price=99.9-149.9">
-                    90 à 95 pontos                                            <span>
-                            (2)
-                        </span>
-                                    </a>
-                    </li>
-        
-
-        
             
         
         <li class="item">
-                            <a href="https://www.divinho.com.br/pais/israel?nota=96-100&amp;price=99.9-149.9">
-                    96 à 100 pontos                                            <span>
-                            (2)
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6249&amp;nota=96-100&amp;tipo=6084">
+                    Rosé                                            <span>
+                            (1)
                         </span>
                                     </a>
                     </li>
@@ -4557,10 +4497,10 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         
             </ol>
 </dd>
-                                                            </dl>
+                                                                                                            </dl>
                     </div>
     </div>
-</div></div><div class="col-xs-12 col-sm-9"><input name="form_key" type="hidden" value="XScr3MMm2lZ8lIfI" /><script type="text/x-magento-init">
+</div></div><div class="col-xs-12 col-sm-9"><input name="form_key" type="hidden" value="yi3svG3vDbwATSpW" /><script type="text/x-magento-init">
     {
         "*": {
             "Magento_Customer/js/section-config": {
@@ -4604,358 +4544,38 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 <script type="text/x-magento-init">
     {
         "body": {
-            "pageCache": {"url":"https:\/\/www.divinho.com.br\/page_cache\/block\/render\/id\/521\/?price=99.9-149.9","handles":["default","catalog_category_view","catalog_category_view_type_layered","catalog_category_view_id_521","gabrielqs_themesettings_footer_1","gabrielqs_themesettings_header_1","gabrielqs_themesettings_product_list_item_1","gabrielqs_themesettings_customization","mpseo_remove_schema"],"originalRequest":{"route":"catalog","controller":"category","action":"view","uri":"\/pais\/israel?price=99.9-149.9"},"versionCookieName":"private_content_version"}        }
+            "pageCache": {"url":"https:\/\/www.divinho.com.br\/page_cache\/block\/render\/?manufacturer=6249&nota=96-100","handles":["default","pontuados_index_index","gabrielqs_themesettings_footer_1","gabrielqs_themesettings_header_1","gabrielqs_themesettings_customization","mpseo_remove_schema"],"originalRequest":{"route":"pontuados","controller":"index","action":"index","uri":"\/vinhos-pontuados?manufacturer=6249&nota=96-100"},"versionCookieName":"private_content_version"}        }
     }
 </script>
 
 <div id="monkey_campaign" style="display:none;"
      data-mage-init='{"campaigncatcher":{"checkCampaignUrl": "https://www.divinho.com.br/mailchimp/campaign/check/"}}'>
-</div>        <div class="toolbar toolbar-products d-sm-flex border-bottom pt-3 pb-3 mb-3 pt-md-0 align-items-end"
-         data-mage-init='{"productListToolbarForm":{"mode":"product_list_mode","direction":"product_list_dir","order":"product_list_order","limit":"product_list_limit","modeDefault":"grid","directionDefault":"asc","orderDefault":"position","limitDefault":"12","url":"https:\/\/www.divinho.com.br\/pais\/israel?price=99.9-149.9","formKey":"XScr3MMm2lZ8lIfI","post":false}}'>
-
-         <div class="toolbar-amount mb-2 mb-md-0" id="toolbar-amount">
-            <span class="toolbar-number font-weight-bold">2</span> itens    </div>
-
-        
-        
-                    <div class="toolbar-sorter sorter form-inline ml-md-auto small">
-    <label class="sorter-label mr-2 d-none d-md-flex" for="sorter">Ordenar por</label>
-    <select id="sorter" data-role="sorter" class="sorter-options custom-select">
-                    <option value="position"
-                                    selected="selected"
-                                >
-                Posição            </option>
-                    <option value="name"
-                                >
-                Nome do produto            </option>
-                    <option value="price"
-                                >
-                Preço            </option>
-                    <option value="vinificac_o"
-                                >
-                Vinificação            </option>
-                    <option value="temperatura_de_servico"
-                                >
-                Temperatura de serviço            </option>
-                    <option value="regi_o"
-                                >
-                Região            </option>
-            </select>
-            <a title="Definir Direção Decrescente" href="#" class="action sorter-action sort-asc btn btn-default btn-sm" data-role="direction-switcher" data-value="desc">
-            <span class="glyphicon glyphicon-arrow-down"></span>
-        </a>
-    </div>
-                                <div class="modes d-none d-md-block">
-                          <!--   <strong class="modes-label" id="modes-label"></strong> -->
-            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group mr-2" role="group" aria-label="First group">
-                                                                                                                                                <a href="#" title="Grade"
-                                class="modes-mode active mode-grid btn btn-primary"
-                                data-value="grid">
-                                                            <span class="fas fa-th"></span>
-                                                                                </a>
-                                                                                                                                                                    <a class="modes-mode mode-list btn btn-primary"
-                           title="Lista"
-                           href="#"
-                           data-role="mode-switcher"
-                           data-value="list"
-                           id="mode-list"
-                           aria-labelledby="modes-label mode-list">
-                                                            <span class="fas fa-list"></span>
-                                                                                </a>
-                                                    </div>
-            </div>
-            </div>
-            </div>
-<div
-    class="products wrapper grid products-grid">
-        <div class="products list items product-items row">
-                        
-        <div class="col-md-4 mb-3">
-            <div class="product box-product"
-                data-product-id="1245">
-                
-                
-                
-    <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/il.png" alt="Israel" title="Israel">
-    </div>
-
-                
-
-
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Kosher Mount Hermon White 2020&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Pa\u00edses\/Israel&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Kosher Mount Hermon White 2020&quot;,&quot;id&quot;:&quot;1245&quot;,&quot;price&quot;:&quot;126.00&quot;,&quot;category&quot;:&quot;Recomenda\u00e7\u00e3o&quot;,&quot;position&quot;:0,&quot;brand&quot;:&quot;Golan Heights Winery&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-kosher-mount-hermon-white' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-kosher-mount-hermon-white"
-                    tabindex="-1">
-                    <div class="product__photo">
-                        
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho_kosher_mount_hermon_white_2019.png"
-    width=""
-    height=""
-    alt="Garrafa de Vinho Kosher Mount Hermon White 2020" /></span>                    </div>
-                </a>
-                                <div class="product__content">
-                    <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Kosher Mount Hermon White 2020&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Pa\u00edses\/Israel&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Kosher Mount Hermon White 2020&quot;,&quot;id&quot;:&quot;1245&quot;,&quot;price&quot;:&quot;126.00&quot;,&quot;category&quot;:&quot;Recomenda\u00e7\u00e3o&quot;,&quot;position&quot;:0,&quot;brand&quot;:&quot;Golan Heights Winery&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-kosher-mount-hermon-white' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/vinho-kosher-mount-hermon-white">
-                            Vinho Kosher Mount Hermon White 2020                        </a>
-                    </h2>
-
-                    
-<div class="product__pais">
-    <span>Israel</span>
+</div><div class="p-3 mb-2 bg-info text-white message info empty">
+    <div>Não encontramos produtos correspondentes a seleção.</div>
 </div>
-                    
-                    <form data-role="tocart-form" data-product-sku="1884"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvcGFpcy9pc3JhZWw_cHJpY2U9OTkuOS0xNDkuOQ%2C%2C/product/1245/" method="post">
-                        <input type="hidden" name="product"
-                            value="1245">
-                                                <input type="hidden"
-                            name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZjR0ZwY3k5cGMzSmhaV3dfY0hKcFkyVTlPVGt1T1MweE5Ea3VPUSUyQyUyQy9wcm9kdWN0LzEyNDUv">
-                        <input name="form_key" type="hidden" value="XScr3MMm2lZ8lIfI" />                        <div class="product__buy">
-                            <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1245" data-price-box="product-id-1245">
-   <div class="price__regular"><br></div>
-    <div class="price__sale">
-        
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-1245"                data-price-amount="126"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$126,00</span></span>
-        </span>
-    </div>
-
-</div>                            </div>
-                            <div class="product__quantity">
-                                <div class="custom-number">
-                                    <input type="number" name="qty"
-                                        id="qty1245" maxlength="12" min="1"
-                                        minlenght="1" value="1" title="Qtd"
-                                        class="qty"
-                                        data-validate="null" />
-                                    <div class="custom-number-button custom-number-button--up">+</div>
-                                    <div class="custom-number-button custom-number-button--down">-</div>
-                                    <button class="action tocart btn btn--input" type="submit"><i
-                                            class="fas fa-shopping-cart"></i></button>
-                                </div>
-                                <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1245,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvcGFpcy9pc3JhZWw_cHJpY2U9OTkuOS0xNDkuOQ,,"}}'
-                                    class="action towishlist" data-action="add-to-wishlist"><i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="actions-primary">
-                                                        <button type="submit" title="Adicionar ao Carrinho"
-                                class="action tocart primary btn btn--product">
-                                <span>Adicionar ao Carrinho</span>
-                            </button>
-                        </div>
-                    </form>
-                                    </div>
-            </div>
-        </div>
-                                
-        <div class="col-md-4 mb-3">
-            <div class="product box-product"
-                data-product-id="532">
-                
-                
-                
-    <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/il.png" alt="Israel" title="Israel">
-    </div>
-
-                
-
-
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Kosher Mount Hermon Red 2020&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Pa\u00edses\/Israel&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Kosher Mount Hermon Red 2020&quot;,&quot;id&quot;:&quot;532&quot;,&quot;price&quot;:&quot;126.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Israel&quot;,&quot;position&quot;:1,&quot;brand&quot;:&quot;Golan Heights Winery&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-kosher-mount-hermon-red' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-kosher-mount-hermon-red"
-                    tabindex="-1">
-                    <div class="product__photo">
-                        
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/k/o/kosher_mount_hermon_red.png"
-    width=""
-    height=""
-    alt="Garrafa de Vinho Kosher Mount Hermon Red 2020" /></span>                    </div>
-                </a>
-                                <div class="product__content">
-                    <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Kosher Mount Hermon Red 2020&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Pa\u00edses\/Israel&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Kosher Mount Hermon Red 2020&quot;,&quot;id&quot;:&quot;532&quot;,&quot;price&quot;:&quot;126.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Israel&quot;,&quot;position&quot;:1,&quot;brand&quot;:&quot;Golan Heights Winery&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-kosher-mount-hermon-red' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/vinho-kosher-mount-hermon-red">
-                            Vinho Kosher Mount Hermon Red 2020                        </a>
-                    </h2>
-
-                    
-<div class="product__pais">
-    <span>Israel</span>
-</div>
-                    
-                    <form data-role="tocart-form" data-product-sku="4571"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvcGFpcy9pc3JhZWw_cHJpY2U9OTkuOS0xNDkuOQ%2C%2C/product/532/" method="post">
-                        <input type="hidden" name="product"
-                            value="532">
-                                                <input type="hidden"
-                            name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZjR0ZwY3k5cGMzSmhaV3dfY0hKcFkyVTlPVGt1T1MweE5Ea3VPUSUyQyUyQy9wcm9kdWN0LzUzMi8,">
-                        <input name="form_key" type="hidden" value="XScr3MMm2lZ8lIfI" />                        <div class="product__buy">
-                            <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="532" data-price-box="product-id-532">
-   <div class="price__regular"><br></div>
-    <div class="price__sale">
-        
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-532"                data-price-amount="126"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$126,00</span></span>
-        </span>
-    </div>
-
-</div>                            </div>
-                            <div class="product__quantity">
-                                <div class="custom-number">
-                                    <input type="number" name="qty"
-                                        id="qty532" maxlength="12" min="1"
-                                        minlenght="1" value="1" title="Qtd"
-                                        class="qty"
-                                        data-validate="null" />
-                                    <div class="custom-number-button custom-number-button--up">+</div>
-                                    <div class="custom-number-button custom-number-button--down">-</div>
-                                    <button class="action tocart btn btn--input" type="submit"><i
-                                            class="fas fa-shopping-cart"></i></button>
-                                </div>
-                                <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":532,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvcGFpcy9pc3JhZWw_cHJpY2U9OTkuOS0xNDkuOQ,,"}}'
-                                    class="action towishlist" data-action="add-to-wishlist"><i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="actions-primary">
-                                                        <button type="submit" title="Adicionar ao Carrinho"
-                                class="action tocart primary btn btn--product">
-                                <span>Adicionar ao Carrinho</span>
-                            </button>
-                        </div>
-                    </form>
-                                    </div>
-            </div>
-        </div>
-                            </div>
-</div>
-
-    
-        
-        
-    
-    
-<script type="text/x-magento-init">
-    {
-  "[data-role=tocart-form], .form.map.checkout": {
-    "catalogAddToCart": {}
-  },
-  "*": {
-    "Magento_Ui/js/core/app": {
-      "components": {
-        "wishlist": {
-          "component": "Magento_Wishlist/js/view/wishlist"
-        }
-      }
-    }
-  }
-}
-        </script>
-<script type="text/x-magento-init">
-    {
-        "body": {
-            "requireCookie": {"noCookieUrl":"https:\/\/www.divinho.com.br\/cookie\/index\/noCookies\/","triggers":[".action.tocompare"],"isRedirectCmsPage":true}        }
-    }
-</script>
 </div></div></div></main><div class="page-bottom"><div class="container"><div class="category-view row align-items-center">
 <div class="category-image-wrapper col-lg ">
     <div class="category-image">
-                    <img src="https://images.divinho.com.br/catalog/category/Vinhos_Israel_1_2.jpg" alt="Israel" title="Israel">
+                    <img src="https://images.divinho.com.br/catalog/category/Vinhos_Pontuados_3.jpg" alt="Vinhos&#x20;Pontuados" title="Vinhos&#x20;Pontuados">
             </div>
 </div>
 
 
 <div class="category-description-wrapper col-lg-8"><div class="category-description">            <div class="category__title">
-            <span>Israel</span>
+            <span>Vinhos&#x20;Pontuados</span>
         </div>
         <div class="category-description-text">
-        <p><span style="font-weight: 400;">A maior variedade de Vinhos Israelenses das melhores e mais famosas marcas do mundo. Nossos Vinhos de Israel são Kosher, sendo adequados para o consumo dos judeus. Aprecie a nossa seleção especial de Vinhos Israelenses exclusivos.</span></p>
-<p> </p>
-<h2><strong>Principais dúvidas sobre os Vinhos de Israel</strong></h2>    </div>
-        <div id="faq" class="accordion-faq">
-                                        <div class="accordion-item" id="faq-heading1">
-                    <h5 class="accordion-header collapsed" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
-                        Quais são os melhores Vinhos Israelenses?                    </h5>
-                    <div id="faqCollapse1" class="collapse" aria-labelledby="faqCollapse1" data-parent="#faq">
-                        <p><p>Israel é o maior produtor de Vinhos Kosher do mundo. Mas atenção, nem todos os Vinhos Israelenses são kosher, por isso é importante atentar-se ao rótulo.</p>
-<p>E o que são os Vinhos Kosher? São rótulos produzidos de acordo com as Leis Dietéticas Judaicas (Cashrut).</p>
-<p>Kosher, ou kasher, significa apropriado, adequado e legítimo. Ou seja, os Vinhos Kosher são rótulos adequados para o consumo dos judeus.</p>
-<p><strong>Regiões de Israel:</strong></p>
-<ul>
-<li aria-level="1"><a href="https://www.divinho.com.br/pais/israel/galilee">Galilee</a></li>
-</ul></p>
-                    </div>
-                </div>
-                                                            <div class="accordion-item" id="faq-heading2">
-                    <h5 class="accordion-header collapsed" data-toggle="collapse" data-target="#faqCollapse2" aria-expanded="true" aria-controls="faqCollapse2">
-                        Quais são os principais Vinhos Israelenses?                    </h5>
-                    <div id="faqCollapse2" class="collapse" aria-labelledby="faqCollapse2" data-parent="#faq">
-                        <p><p>A maioria esmagadora dos Vinhos Israelenses são Kosher, rótulos produzidos de acordo com as Leis Dietéticas Judaicas (Cashrut) e adequados para o consumo dos Judeus.</p>
-<p>Entre os vinhos tintos de Israel destacam-se os elaborados com as uvas Cabernet Sauvignon, Merlot, Syrah e Pinot Noir.</p>
-<p>Já, os melhores Vinhos Israelenses brancos são elaborados com as uvas Chardonnay e Sauvignon Blanc.</p></p>
-                    </div>
-                </div>
-                                                            <div class="accordion-item" id="faq-heading3">
-                    <h5 class="accordion-header collapsed" data-toggle="collapse" data-target="#faqCollapse3" aria-expanded="true" aria-controls="faqCollapse3">
-                        Quais são as melhores vinícolas de Israel?                    </h5>
-                    <div id="faqCollapse3" class="collapse" aria-labelledby="faqCollapse3" data-parent="#faq">
-                        <p><p>Golan Heights Winery é a vinícola líder na produção de vinhos de qualidade em Israel.</p>
-<p>Produzindo Vinhos Kosher desde 1983, na região vitivinícola de Galilee, Golan Heights Winery foi eleita, em 2012, como a Vinícola do Ano do Novo Mundo pela revista Wine Enthusiast.</p></p>
-                    </div>
-                </div>
-                                                    </div>
-    
-<script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-        {
-            "@type": "Question",
-            "name": "Quais s\u00e3o os melhores Vinhos Israelenses?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Israel \u00e9 o maior produtor de Vinhos Kosher do mundo. Mas aten\u00e7\u00e3o, nem todos os Vinhos Israelenses s\u00e3o kosher, por isso \u00e9 importante atentar-se ao r\u00f3tulo.\r\nE o que s\u00e3o os Vinhos Kosher? S\u00e3o r\u00f3tulos produzidos de acordo com as Leis Diet\u00e9ticas Judaicas (Cashrut).\r\nKosher, ou kasher, significa apropriado, adequado e leg\u00edtimo. Ou seja, os Vinhos Kosher s\u00e3o r\u00f3tulos adequados para o consumo dos judeus.\r\nRegi\u00f5es de Israel:\r\n\r\nGalilee\r\n"
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Quais s\u00e3o os principais Vinhos Israelenses?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "A maioria esmagadora dos Vinhos Israelenses s\u00e3o Kosher, r\u00f3tulos produzidos de acordo com as Leis Diet\u00e9ticas Judaicas (Cashrut) e adequados para o consumo dos Judeus.\r\nEntre os vinhos tintos de Israel destacam-se os elaborados com as uvas Cabernet Sauvignon, Merlot, Syrah e Pinot Noir.\r\nJ\u00e1, os melhores Vinhos Israelenses brancos s\u00e3o elaborados com as uvas Chardonnay e Sauvignon Blanc."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Quais s\u00e3o as melhores vin\u00edcolas de Israel?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Golan Heights Winery \u00e9 a vin\u00edcola l\u00edder na produ\u00e7\u00e3o de vinhos de qualidade em Israel.\r\nProduzindo Vinhos Kosher desde 1983, na regi\u00e3o vitivin\u00edcola de Galilee, Golan Heights Winery foi eleita, em 2012, como a Vin\u00edcola do Ano do Novo Mundo pela revista Wine Enthusiast."
-            }
-        }
-    ]
-}</script></div></div></div></div></div><footer class="site-footer d-flex flex-column">
+        <p><span style="font-weight: 400;">Os Vinhos Pontuados são rótulos que se destacam por sua alta qualidade, conquistando ótimas pontuações da crítica especializada!</span></p>
+<p><span style="font-weight: 400;">Os sistemas de avaliações costumam basear-se em uma escala de 100 pontos.</span></p>
+<p><span style="font-weight: 400;">Vinhos de 80 a 89 pontos são classificados como muito bons e de 90 a 95 pontos como excelentes.</span></p>
+<p><span style="font-weight: 400;">Já os rótulos que conquistam entre 96 e 100 são realmente excepcionais, figurando entre os melhores vinhos do mundo!</span></p>
+<p><span style="font-weight: 400;">Robert Parker, James Suckling e Tim Atkin formam a tríade de críticos mais renomados do mundo. </span></p>
+<p><span style="font-weight: 400;">Antonio Galloni e Luca Maroni são outros dois cítricos importantes, sendo que Maroni destaca-se entre seus companheiros pelo seu sistema único de pontuação, que vai somente até 99 pontos.</span></p>
+<p><span style="font-weight: 400;">Na América Latina, o Guia Descorchados é a referência mais importante em Vinhos Pontuados.</span></p>
+<p><span style="font-weight: 400;">Já, nos Estados Unidos, as publicações mais expressivas são a Wine Enthusiast e a Wine Spectator.</span></p>
+<p><span style="font-weight: 400;">Isso, sem deixar de mencionar a revista inglesa Decanter, conhecida como "Bíblia do Vinho” e a plataforma digital Cellar Tracker, entre outros.</span></p>
+<p><span style="font-weight: 400;">A DiVinho oferece a melhor seleção de Vinhos Pontuados para você!</span></p>    </div>
+</div></div></div></div></div><footer class="site-footer d-flex flex-column">
 
 
 
@@ -5147,7 +4767,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                     </div>
                 <div class="wbcom-fields">
                     <div class="wbcom-fields-contents">
-                        <input name="form_key" type="hidden" value="XScr3MMm2lZ8lIfI">
+                        <input name="form_key" type="hidden" value="yi3svG3vDbwATSpW">
                         <input type="text" placeholder="Nome" name="name" required style="background-color: #fff !important;">
                         <input type="email" placeholder="E-mail" name="email" required style="background-color: #fff !important;">
                         <input type="hidden" name="message" value="Olá, gostaria de fazer um pedido.">
@@ -5176,8 +4796,6 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     </script>
 
 
-<!-- BEGIN GTAG CATEGORY TAG -->
-<!-- END GTAG CATEGORY TAG -->
     <script>
         require(['jquery','weltpixel_persistentLayer', 'weltpixel_gtm', 'Magento_Customer/js/customer-data'],
             function ($, wpPersDl, wpgtm, customerData) {
@@ -5201,5 +4819,5 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 wpgtm.trackPromotion(wpGtmOptions);
             });
     </script>
-    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-15ce119d71e6a8d24c8","applicationID":"798446581","transactionName":"blMGbUdSWRFQBhBcC1cZJVpBWlgMHhUFUgFmVQVaXVY=","queueTime":0,"applicationTime":81,"atts":"QhQFGw9ISh8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-15ce119d71e6a8d24c8","applicationID":"798446581","transactionName":"blMGbUdSWRFQBhBcC1cZJVpBWlgMHhUFUgFmVQVaXVY=","queueTime":0,"applicationTime":65,"atts":"QhQFGw9ISh8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>

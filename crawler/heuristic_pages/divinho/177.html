@@ -1,7 +1,7 @@
 
 <!doctype html>
 <html lang=pt-br>      
-    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product: http://ogp.me/ns/product#">
+    <head >
         <script>
     var BASE_URL = 'https://www.divinho.com.br/';
     var require = {
@@ -9,14 +9,15 @@
     };
 </script>
         <meta charset="utf-8"/><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-15ce119d71e6a8d24c8",applicationID:"798446581"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1211.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
-<meta name="title" content="Champagne Online com os Melhores Preços | DiVinho"/>
-<meta name="keywords" content="champagne"/>
+<meta name="title" content="Vinhos Pontuados com Melhores Preços | DiVinho "/>
+<meta name="description" content="Compre Vinhos Pontuados com os Melhores Preços! Seleção de rótulos de vinícolas premiadas. Em até 3x s/ juros e entregas para todo Brasil."/>
 <meta name="robots" content="INDEX,FOLLOW"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta name="format-detection" content="telephone=no"/>
-<title>Champagne Online com os Melhores Preços | DiVinho</title>
+<title>Vinhos Pontuados com Melhores Preços | DiVinho </title>
 <link  rel="stylesheet" type="text/css"  media="all" href="https://static.divinho.com.br/static/version1636382917/_cache/merged/c3f0846f21e00493666c1bb1e46fe5c8.min.css" />
 <script  type="text/javascript"  src="https://static.divinho.com.br/static/version1636382917/_cache/merged/38cbaaf652093663e521d41aea6fcd0d.min.js"></script>
+<link  rel="canonical" href="https://www.divinho.com.br/vinhos-pontuados" />
 <link  rel="icon" type="image/x-icon" href="https://images.divinho.com.br/favicon/default/favicon.ico" />
 <link  rel="shortcut icon" type="image/x-icon" href="https://images.divinho.com.br/favicon/default/favicon.ico" />
             <!-- Google Tag Manager -->
@@ -33,7 +34,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         };
 
         window.dataLayer = window.dataLayer || [];
-                var dlObjects = [{"google_tag_params":{"ecomm_pagetype":"category","ecomm_category":"Vinhos\/Champagne"},"ecommerce":{"currencyCode":"BRL","impressions":[{"name":"Champagne Laurent-Perrier La Cuv\u00e9e Brut","id":"1210","price":"635.00","brand":"Laurent-Perrier","category":"Vinhos\/Champagne","list":"Vinhos\/Champagne","position":1},{"name":"Champagne Perrier-Jou\u00ebt Blason Ros\u00e9","id":"1206","price":"536.00","brand":"Perrier-Jou\u00ebt","category":"Vinhos\/Champagne","list":"Vinhos\/Champagne","position":2},{"name":"Champagne Barons de Rothschild Brut","id":"1085","price":"836.00","brand":"Domaines Barons de Rothschild (Lafite)","category":"Vinhos\/Champagne","list":"Vinhos\/Champagne","position":3},{"name":" Champagne Cristal Ros\u00e9 2012","id":"757","price":"6733.00","brand":"Maison Louis Roederer","category":"Vinhos\/Champagne","list":"Vinhos\/Champagne","position":4},{"name":"Champagne Taittinger Prestige Ros\u00e9 Brut","id":"754","price":"690.00","brand":"Champagne Taittinger","category":"Vinhos\/Champagne","list":"Vinhos\/Champagne","position":5},{"name":"Champagne Louis Roederer Brut Premier","id":"746","price":"972.00","brand":"Maison Louis Roederer","category":"Vinhos\/Champagne","list":"Vinhos\/Champagne","position":6},{"name":"Champagne Veuve Clicquot Ponsardin Brut","id":"735","price":"459.00","brand":"Veuve Clicquot","category":"Vinhos\/Champagne","list":"Vinhos\/Champagne","position":7},{"name":"Champagne Mo\u00ebt & Chandon Brut Imp\u00e9rial","id":"734","price":"398.00","brand":"Mo\u00ebt & Chandon","category":"Vinhos\/Champagne","list":"Vinhos\/Champagne","position":8},{"name":"Champagne Taittinger R\u00e9serve Brut","id":"733","price":"439.00","brand":"Champagne Taittinger","category":"Vinhos\/Champagne","list":"Vinhos\/Champagne","position":9},{"name":"Champagne Drappier Carte d\u2019Or Brut","id":"479","price":"528.00","brand":"Champagne Drappier","category":"Vinhos\/Champagne","list":"Vinhos\/Champagne","position":10},{"name":"Champagne Bollinger Special Cuv\u00e9e","id":"192","price":"912.87","brand":"Bollinger","category":"Vinhos\/Champagne","list":"Vinhos\/Champagne","position":11},{"name":"Champagne Pol Roger Extra Cuv\u00e9e de Reserve Brut","id":"191","price":"855.78","brand":"Champagne Pol Roger","category":"Vinhos\/Champagne","list":"Vinhos\/Champagne","position":12}]},"event":"impression","eventCategory":"Ecommerce","eventAction":"Impression","eventLabel":"category Vinhos\/Champagne"}];
+                var dlObjects = [{"google_tag_params":{"ecomm_pagetype":"other"}}];
         for (var i in dlObjects) {
             window.dataLayer.push(dlObjects[i]);
         }
@@ -52,30 +53,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- BEGIN GTAG GLOBAL TAG -->
 <!-- END GTAG GLOBAL TAG -->
 <script type="text/javascript" src="https://chimpstatic.com/mcjs-connected/js/users/1255cf89de1ff1692e3832377/54a041db81224b7f42e4ef954.js" defer></script>
-
-<!-- This site is optimized with the Yoast SEO for Magento plugin 2.0.0 - https://yoast.com/magento/plugins/seo/ -->
-    <link rel="canonical" href="https://www.divinho.com.br/vinhos/champagne" />
-
-    <!-- YoastSEO OpenGraph -->
-    <meta property="og:url" content="https://www.divinho.com.br/vinhos/champagne"/>
-    <meta property="og:locale" content="pt_BR" />
-    <meta property="og:type" content="product.group"/>
-    <meta property="og:site_name" content="F R MOREIRA COMÉRCIO E DISTRIBUIÇÃO DE ALIMENTOS E BEBIDAS" />
-    <meta property="og:title" content=" Champagne Online com os Melhores Preços | DiVinho"/>
-    <meta property="og:description" content="Compre Champagne Online com o melhor preço! Seleção de rótulos de vinícolas premiadas. Em até 3x s/ juros e entregas para todo Brasil."/>
-            <meta property="og:image" content="https://images.divinho.com.br/catalog/category/Champagne_3_1.jpg"/>
-                        
-    <!-- YoastSEO Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-            <meta name="twitter:title" content=" Champagne Online com os Melhores Preços | DiVinho"/>
-    <meta name="twitter:description" content="Compre Champagne Online com o melhor preço! Seleção de rótulos de vinícolas premiadas. Em até 3x s/ juros e entregas para todo Brasil."/>
-            <meta name="twitter:image" content="https://images.divinho.com.br/catalog/category/Champagne_3_1.jpg"/>
-    
-
     </head>
     <body data-container="body"
           data-mage-init='{"loaderAjax": {}, "loader": { "icon": "https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/loader-2.gif"}}'
-        class="page-with-filter page-products categorypath-vinhos-champagne category-champagne page-has-faq catalog-category-view page-layout-2columns-left">
+        class="page-products pontuados-index-index page-layout-2columns-left">
         <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MM4CCWJ"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -208,7 +189,7 @@ require([
 
 </script>
 <li class="nav-item authorization-link" data-label="ou">
-    <a class="nav-link" href="https://www.divinho.com.br/customer/account/login/referer/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ%2C%2C/">
+    <a class="nav-link" href="https://www.divinho.com.br/customer/account/login/referer/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9tYW51ZmFjdHVyZXI9NTg4NyZub3RhPTk2LTEwMA%2C%2C/">
         Entrar    </a>
 </li>
 
@@ -255,7 +236,7 @@ require([
             </div>
                     </div>
         <script>
-        window.checkout = {"shoppingCartUrl":"https:\/\/www.divinho.com.br\/checkout\/cart\/","checkoutUrl":"https:\/\/www.divinho.com.br\/checkout\/","updateItemQtyUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/www.divinho.com.br\/","minicartMaxItemsVisible":5,"websiteId":"1","maxItemsToDisplay":10,"storeId":"1","customerLoginUrl":"https:\/\/www.divinho.com.br\/customer\/account\/login\/referer\/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ%2C%2C\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.divinho.com.br\/captcha\/refresh\/","isRequired":false,"timestamp":1636430876}}};
+        window.checkout = {"shoppingCartUrl":"https:\/\/www.divinho.com.br\/checkout\/cart\/","checkoutUrl":"https:\/\/www.divinho.com.br\/checkout\/","updateItemQtyUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/www.divinho.com.br\/","minicartMaxItemsVisible":5,"websiteId":"1","maxItemsToDisplay":10,"storeId":"1","customerLoginUrl":"https:\/\/www.divinho.com.br\/customer\/account\/login\/referer\/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9tYW51ZmFjdHVyZXI9NTg4NyZub3RhPTk2LTEwMA%2C%2C\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.divinho.com.br\/captcha\/refresh\/","isRequired":false,"timestamp":1636510894}}};
     </script>
     <script type="text/x-magento-init">
     {
@@ -269,9 +250,9 @@ require([
 </div>
 
 <div class="collapse d-lg-block" id="navbarSearch">
-        <form id="search-form6189f41cb27d2" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
+        <form id="search-form618b2cae6d81c" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
                 <input data-mage-init='{"quickSearch":{
-                                        "formSelector":"#search-form6189f41cb27d2",
+                                        "formSelector":"#search-form618b2cae6d81c",
                                         "url":"https://www.divinho.com.br/search/ajax/suggest/",
                                         "destinationSelector":"#search_autocomplete",
                                         "responseFieldElements":"ul li",
@@ -346,9 +327,9 @@ require([
 
 </div></div><div class="col-lg position-static col-nav"><div class="d-lg-none">
 <div class="collapse d-lg-block" id="navbarSearch">
-        <form id="search-form6189f41cb3fcf" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
+        <form id="search-form618b2cae6f7ec" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
                 <input data-mage-init='{"quickSearch":{
-                                        "formSelector":"#search-form6189f41cb3fcf",
+                                        "formSelector":"#search-form618b2cae6f7ec",
                                         "url":"https://www.divinho.com.br/search/ajax/suggest/",
                                         "destinationSelector":"#search_autocomplete",
                                         "responseFieldElements":"ul li",
@@ -390,11 +371,11 @@ require([
                                                                     <div class="mx-megamenu__sidebar mx-megamenu__sidebar--left">
                                         <div class="widget widget-categories-list block" data-collapse="1">
     <div class="megamenu__links">
-                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#vinhos6189f247cdd14" aria-expanded="true" aria-controls="vinhos6189f247cdd14">
+                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#vinhos618b0a68a8e72" aria-expanded="true" aria-controls="vinhos618b0a68a8e72">
             <i class="icon icon-vinhos"></i>
             <span>Tipo</span>
         </div>
-                <div id="vinhos6189f247cdd14" class="block-content catalog-category collapse-sm collapse">
+                <div id="vinhos618b0a68a8e72" class="block-content catalog-category collapse-sm collapse">
             <ul>
                                 <li class="category-item">
                     <a href="https://www.divinho.com.br/vinhos/tinto">
@@ -462,11 +443,11 @@ require([
 </div>
 <div class="widget widget-list-range">
     <div class="megamenu__links">
-        <div class="megamenu__title collapsed" data-toggle="collapse" data-target="#price-range6189f247d2432" aria-expanded="true" aria-controls="price-range6189f247d2432">
+        <div class="megamenu__title collapsed" data-toggle="collapse" data-target="#price-range618b0a68bd448" aria-expanded="true" aria-controls="price-range618b0a68bd448">
             <i class="icon icon icon-dollar-tag"></i>
             <span>Valor</span>
         </div>
-        <ul id="price-range6189f247d2432" class="block-content collapse-sm collapse">
+        <ul id="price-range618b0a68bd448" class="block-content collapse-sm collapse">
             <li><a href="https://www.divinho.com.br/vinhos?price=-59.9">Até R$59,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=59.9-99.9">R$59,90 a R$99,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=99.9-149.9">R$99,90 a R$149,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=149.9-249.9">R$149,90 a R$249,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=249.91-500">R$249,91 a R$500,00</a></li><li><a href="https://www.divinho.com.br/vinhos?price=500-">Acima de R$500,00</a></li>        </ul>
     </div>
 </div>
@@ -484,12 +465,12 @@ require([
     class="widget widget-list_mode widget-list_mode--uva">
     <div class="megamenu__links">
         <div class="block-title megamenu__title collapsed"
-            data-toggle="collapse" data-target="#uva6189f247b8902" aria-expanded="true"
-            aria-controls="uva6189f247b8902">
+            data-toggle="collapse" data-target="#uva618b0a682f5fe" aria-expanded="true"
+            aria-controls="uva618b0a682f5fe">
             <i class="icon icon-uva"></i>
             <span>Uvas</span>
         </div>
-        <div id="uva6189f247b8902"
+        <div id="uva618b0a682f5fe"
             class="block-content catalog-category collapse-sm collapse">
             <ul>
                 
@@ -539,11 +520,11 @@ require([
 </div>
  <div class="widget widget-categories-list block" data-collapse="1">
     <div class="megamenu__links">
-                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#pais6189f247c33b5" aria-expanded="true" aria-controls="pais6189f247c33b5">
+                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#pais618b0a68878c3" aria-expanded="true" aria-controls="pais618b0a68878c3">
             <i class="icon icon-pais"></i>
             <span>Pa&iacute;ses</span>
         </div>
-                <div id="pais6189f247c33b5" class="block-content catalog-category collapse-sm collapse">
+                <div id="pais618b0a68878c3" class="block-content catalog-category collapse-sm collapse">
             <ul>
                                 <li class="category-item">
                     <a href="https://www.divinho.com.br/pais/austria">
@@ -3540,11 +3521,11 @@ require([
                             </div>
                 <div class="megamenu__product-image">
             <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">
-                <img src="https://images.divinho.com.br/catalog/product/cache/fa01b5f6b2a94beaaa3488ed5c6cafe6/c/a/casanova_di_neri_rosso_di_montalcino.png" alt="Vinho Casanova di Neri Rosso di Montalcino 2019" title="Vinho Casanova di Neri Rosso di Montalcino 2019">
+                <img src="https://images.divinho.com.br/catalog/product/cache/fa01b5f6b2a94beaaa3488ed5c6cafe6/c/a/casanova_di_neri_rosso_di_montalcino.png" alt="Vinho Casanova di Neri Rosso di Montalcino 2018" title="Vinho Casanova di Neri Rosso di Montalcino 2018">
             </a>
         </div>
         <div class="megamenu__product-name text-center mt-2">
-            <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">Vinho Casanova di Neri Rosso di Montalcino 2019</a>
+            <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">Vinho Casanova di Neri Rosso di Montalcino 2018</a>
             <div class="text-primary price">
                 R$366,00            </div>
         </div>
@@ -3854,12 +3835,12 @@ require([
     class="widget widget-list_mode widget-list_mode--criticos">
     <div class="megamenu__links">
         <div class="block-title megamenu__title"
-             data-target="#criticos6189f249ba2f8" aria-expanded="true"
-            aria-controls="criticos6189f249ba2f8">
+             data-target="#criticos618b0a6f8879c" aria-expanded="true"
+            aria-controls="criticos618b0a6f8879c">
             <i class="icon icon-criticos"></i>
             <span>Críticos</span>
         </div>
-        <div id="criticos6189f249ba2f8"
+        <div id="criticos618b0a6f8879c"
             class="block-content catalog-category">
             <ul>
                                 <li>
@@ -4161,12 +4142,12 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     class="widget widget-list_mode widget-list_mode--vinicolas">
     <div class="megamenu__links">
         <div class="block-title megamenu__title"
-             data-target="#vinicolas6189f249cb53f" aria-expanded="true"
-            aria-controls="vinicolas6189f249cb53f">
+             data-target="#vinicolas618b0a6fd10d5" aria-expanded="true"
+            aria-controls="vinicolas618b0a6fd10d5">
             <i class="icon icon-vinicolas"></i>
             <span>Vinícolas</span>
         </div>
-        <div id="vinicolas6189f249cb53f"
+        <div id="vinicolas618b0a6fd10d5"
             class="block-content catalog-category">
             <ul>
                 
@@ -4277,25 +4258,25 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         <div class="row">
             <nav class="breadcrumbs" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                                        <li class="breadcrumb-item  home">
-                                                <a href="https://www.divinho.com.br/"
-                            title="Ir para a página inicial">
+                                        <li class="breadcrumb-item  Home">
+                                                <a href="/"
+                            title="Início">
                             Início                        </a>
                                             </li>
-                                        <li class="breadcrumb-item  category614">
-                                                <a href="https://www.divinho.com.br/vinhos"
-                            title="">
-                            Vinhos                        </a>
-                                            </li>
-                                        <li class="breadcrumb-item active category555">
-                                                Champagne                                            </li>
+                                        <li class="breadcrumb-item active Vinhos Pontuados">
+                                                Vinhos Pontuados                                            </li>
                                     </ol>
             </nav>
         </div>
     </div>
 </section>
-<main id="site-content" class="site-content pb-4"><a id="contentarea" tabindex="-1"></a>
-<div class="container"><div class="page messages"><div data-placeholder="messages"></div>
+<main id="site-content" class="site-content"><a id="contentarea" tabindex="-1"></a>
+<div class="container"><div class="page-title-wrapper">
+    <h1 class="page-title&#x20;page-title__pink&#x20;mb-4"
+                >
+        <span class="base" data-ui-id="page-title-wrapper" >Vinhos Pontuados</span>    </h1>
+    </div>
+<div class="page messages"><div data-placeholder="messages"></div>
 <div data-bind="scope: 'messages'">
     <div data-bind="foreach: { data: cookieMessages, as: 'message' }" class="messages">
         <div role="alert" data-bind="attr: {
@@ -4327,21 +4308,41 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             }
     }
 </script>
-</div><div class="custom-title-wrapper"><div class="custom-title"><div class="page-title-wrapper">
-    <h1 class="page-title page-title__pink mb-4">
-    <span>Champagne</span>
-            </h1>
-</div>
-    <div class="category-bottom-description mb-3">
-        <p>A maior variedade de Champagnes das melhores e mais famosas marcas do mundo. Nossos Champagnes são refinados e sofisticados, sendo ideais para quem tem bom gosto. Experimente a nossa seleção dos melhores Champagnes!</p>    </div>
-
-</div></div><div class="row"><div class="hidden-xs col-sm-3"><div class="sidebar-filters border">
+</div><div class="row"><div class="hidden-xs col-sm-3"><div class="sidebar-filters border">
     <div class="panel panel-default filter">
         <div class="panel-heading filter-title d-none">
             <strong>Filtrar por</strong>
         </div>
         <div class="panel-body filter-content">
-                                                                                    <h4 role="heading" aria-level="2" class="block-subtitle filter-subtitle mb-3">
+            <div class="filter-current">
+    <h4 class="block-subtitle filter-current-subtitle"
+            role="heading"
+            aria-level="2"
+            data-count="2">Comprar por</h4>
+    <ul class="items mb-0">
+                    <li class="item">
+                                    <a class="action remove" href="https://www.divinho.com.br/vinhos-pontuados?nota=96-100"
+                       title="Remover Produtor Léon Perdigal">
+                        <span class="far fa-times-circle mr-3"></span>
+                    </a>
+                                <span class="filter-label">Produtor</span>
+                <span class="filter-value label label-default">Léon Perdigal</span>
+            </li>
+                    <li class="item">
+                                    <a class="action remove" href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5887"
+                       title="Remover Pontuação 96-100">
+                        <span class="far fa-times-circle mr-3"></span>
+                    </a>
+                                <span class="filter-label">Pontuação</span>
+                <span class="filter-value label label-default">96-100</span>
+            </li>
+            </ul>
+</div>
+                            <div class="block-actions filter-actions mb-4">
+                    <a href="https://www.divinho.com.br/vinhos-pontuados" class="action clear filter-clear">
+                        Limpar Tudo                    </a>
+                </div>
+                                                                        <h4 role="heading" aria-level="2" class="block-subtitle filter-subtitle mb-3">
                         Opções de Compra                    </h4>
                     <dl class="filter-options" id="narrow-by-list">
                                                                                                             <dt role="heading" aria-level="3" class="h4 filter-options-title">Preço</dt>
@@ -4350,9 +4351,9 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         
         
         <li class="item">
-                            <a href="https://www.divinho.com.br/vinhos/champagne?price=249.91-500">
-                    <span class="price">R$249,90</span> a <span class="price">R$500,00</span>                                            <span>
-                            (3)
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5887&amp;nota=96-100&amp;price=149.9-249.9">
+                    <span class="price">R$149,90</span> a <span class="price">R$249,90</span>                                            <span>
+                            (1)
                         </span>
                                     </a>
                     </li>
@@ -4362,9 +4363,9 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             
         
         <li class="item">
-                            <a href="https://www.divinho.com.br/vinhos/champagne?price=500-">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5887&amp;nota=96-100&amp;price=500-">
                     Acima de <span class="price">R$500,00</span>                                            <span>
-                            (9)
+                            (1)
                         </span>
                                     </a>
                     </li>
@@ -4379,9 +4380,9 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         
         
         <li class="item">
-                            <a href="https://www.divinho.com.br/vinhos/champagne?pais=6221">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5887&amp;nota=96-100&amp;pais=6221">
                     França                                            <span>
-                            (12)
+                            (2)
                         </span>
                                     </a>
                     </li>
@@ -4390,14 +4391,14 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         
             </ol>
 </dd>
-                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">Produtor</dt>
+                                                                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">Uva</dt>
                         <dd class="filter-options-content">
 <ul class="items">
         
         
         <li class="item">
-                            <a href="https://www.divinho.com.br/vinhos/champagne?manufacturer=6079">
-                    Bollinger                                            <span>
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5887&amp;nota=96-100&amp;uva=6187">
+                    Carignan                                            <span>
                             (1)
                         </span>
                                     </a>
@@ -4408,32 +4409,8 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             
         
         <li class="item">
-                            <a href="https://www.divinho.com.br/vinhos/champagne?manufacturer=5794">
-                    Champagne Drappier                                            <span>
-                            (1)
-                        </span>
-                                    </a>
-                    </li>
-        
-
-        
-            
-        
-        <li class="item">
-                            <a href="https://www.divinho.com.br/vinhos/champagne?manufacturer=6080">
-                    Champagne Pol Roger                                            <span>
-                            (1)
-                        </span>
-                                    </a>
-                    </li>
-        
-
-        
-            
-        
-        <li class="item">
-                            <a href="https://www.divinho.com.br/vinhos/champagne?manufacturer=6018">
-                    Champagne Taittinger                                            <span>
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5887&amp;nota=96-100&amp;uva=5445">
+                    Cinsault                                            <span>
                             (2)
                         </span>
                                     </a>
@@ -4444,32 +4421,8 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             
         
         <li class="item">
-                            <a href="https://www.divinho.com.br/vinhos/champagne?manufacturer=5860">
-                    Domaines Barons de Rothschild (Lafite)                                            <span>
-                            (1)
-                        </span>
-                                    </a>
-                    </li>
-        
-
-        
-            
-        
-        <li class="item">
-                            <a href="https://www.divinho.com.br/vinhos/champagne?manufacturer=6264">
-                    Laurent-Perrier                                            <span>
-                            (1)
-                        </span>
-                                    </a>
-                    </li>
-        
-
-        
-            
-        
-        <li class="item">
-                            <a href="https://www.divinho.com.br/vinhos/champagne?manufacturer=5770">
-                    Maison Louis Roederer                                            <span>
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5887&amp;nota=96-100&amp;uva=5439">
+                    Grenache                                            <span>
                             (2)
                         </span>
                                     </a>
@@ -4480,9 +4433,9 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             
         
         <li class="item">
-                            <a href="https://www.divinho.com.br/vinhos/champagne?manufacturer=6011">
-                    Moët & Chandon                                            <span>
-                            (1)
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5887&amp;nota=96-100&amp;uva=5480">
+                    Mourvèdre                                            <span>
+                            (2)
                         </span>
                                     </a>
                     </li>
@@ -4492,62 +4445,9 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             
         
         <li class="item">
-                            <a href="https://www.divinho.com.br/vinhos/champagne?manufacturer=6263">
-                    Perrier-Jouët                                            <span>
-                            (1)
-                        </span>
-                                    </a>
-                    </li>
-        
-
-        
-            
-        
-        <li class="item">
-                            <a href="https://www.divinho.com.br/vinhos/champagne?manufacturer=6012">
-                    Veuve Clicquot                                            <span>
-                            (1)
-                        </span>
-                                    </a>
-                    </li>
-        
-
-        
-            </ol>
-</dd>
-                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">Uva</dt>
-                        <dd class="filter-options-content">
-<ul class="items">
-        
-        
-        <li class="item">
-                            <a href="https://www.divinho.com.br/vinhos/champagne?uva=5434">
-                    Chardonnay                                            <span>
-                            (12)
-                        </span>
-                                    </a>
-                    </li>
-        
-
-        
-            
-        
-        <li class="item">
-                            <a href="https://www.divinho.com.br/vinhos/champagne?uva=5457">
-                    Pinot Meunier                                            <span>
-                            (10)
-                        </span>
-                                    </a>
-                    </li>
-        
-
-        
-            
-        
-        <li class="item">
-                            <a href="https://www.divinho.com.br/vinhos/champagne?uva=5437">
-                    Pinot Noir                                            <span>
-                            (12)
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5887&amp;nota=96-100&amp;uva=5435">
+                    Syrah                                            <span>
+                            (2)
                         </span>
                                     </a>
                     </li>
@@ -4562,21 +4462,9 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         
         
         <li class="item">
-                            <a href="https://www.divinho.com.br/vinhos/champagne?tipo=6085">
-                    Espumante                                            <span>
-                            (1)
-                        </span>
-                                    </a>
-                    </li>
-        
-
-        
-            
-        
-        <li class="item">
-                            <a href="https://www.divinho.com.br/vinhos/champagne?tipo=6088">
-                    Champagne                                            <span>
-                            (11)
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5887&amp;nota=96-100&amp;tipo=6082">
+                    Tinto                                            <span>
+                            (2)
                         </span>
                                     </a>
                     </li>
@@ -4585,39 +4473,10 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         
             </ol>
 </dd>
-                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">Pontuação</dt>
-                        <dd class="filter-options-content">
-<ul class="items">
-        
-        
-        <li class="item">
-                            <a href="https://www.divinho.com.br/vinhos/champagne?nota=90-95">
-                    90 à 95 pontos                                            <span>
-                            (12)
-                        </span>
-                                    </a>
-                    </li>
-        
-
-        
-            
-        
-        <li class="item">
-                            <a href="https://www.divinho.com.br/vinhos/champagne?nota=96-100">
-                    96 à 100 pontos                                            <span>
-                            (12)
-                        </span>
-                                    </a>
-                    </li>
-        
-
-        
-            </ol>
-</dd>
-                                                            </dl>
+                                                                                                            </dl>
                     </div>
     </div>
-</div></div><div class="col-xs-12 col-sm-9"><input name="form_key" type="hidden" value="XRWAa00CvNNmL9VH" /><script type="text/x-magento-init">
+</div></div><div class="col-xs-12 col-sm-9"><input name="form_key" type="hidden" value="weZHO3sfg95EHgvK" /><script type="text/x-magento-init">
     {
         "*": {
             "Magento_Customer/js/section-config": {
@@ -4661,1361 +4520,38 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 <script type="text/x-magento-init">
     {
         "body": {
-            "pageCache": {"url":"https:\/\/www.divinho.com.br\/page_cache\/block\/render\/id\/555\/","handles":["default","catalog_category_view","catalog_category_view_type_layered","catalog_category_view_type_layered_without_children","catalog_category_view_id_555","gabrielqs_themesettings_footer_1","gabrielqs_themesettings_header_1","gabrielqs_themesettings_product_list_item_1","gabrielqs_themesettings_customization","mpseo_remove_schema"],"originalRequest":{"route":"catalog","controller":"category","action":"view","uri":"\/vinhos\/champagne"},"versionCookieName":"private_content_version"}        }
+            "pageCache": {"url":"https:\/\/www.divinho.com.br\/page_cache\/block\/render\/?manufacturer=5887&nota=96-100","handles":["default","pontuados_index_index","gabrielqs_themesettings_footer_1","gabrielqs_themesettings_header_1","gabrielqs_themesettings_customization","mpseo_remove_schema"],"originalRequest":{"route":"pontuados","controller":"index","action":"index","uri":"\/vinhos-pontuados?manufacturer=5887&nota=96-100"},"versionCookieName":"private_content_version"}        }
     }
 </script>
 
 <div id="monkey_campaign" style="display:none;"
      data-mage-init='{"campaigncatcher":{"checkCampaignUrl": "https://www.divinho.com.br/mailchimp/campaign/check/"}}'>
-</div>        <div class="toolbar toolbar-products d-sm-flex border-bottom pt-3 pb-3 mb-3 pt-md-0 align-items-end"
-         data-mage-init='{"productListToolbarForm":{"mode":"product_list_mode","direction":"product_list_dir","order":"product_list_order","limit":"product_list_limit","modeDefault":"grid","directionDefault":"asc","orderDefault":"position","limitDefault":"12","url":"https:\/\/www.divinho.com.br\/vinhos\/champagne","formKey":"XRWAa00CvNNmL9VH","post":false}}'>
-
-         <div class="toolbar-amount mb-2 mb-md-0" id="toolbar-amount">
-            <span class="toolbar-number font-weight-bold">12</span> itens    </div>
-
-        
-        
-                    <div class="toolbar-sorter sorter form-inline ml-md-auto small">
-    <label class="sorter-label mr-2 d-none d-md-flex" for="sorter">Ordenar por</label>
-    <select id="sorter" data-role="sorter" class="sorter-options custom-select">
-                    <option value="position"
-                                    selected="selected"
-                                >
-                Posição            </option>
-                    <option value="name"
-                                >
-                Nome do produto            </option>
-                    <option value="price"
-                                >
-                Preço            </option>
-                    <option value="vinificac_o"
-                                >
-                Vinificação            </option>
-                    <option value="temperatura_de_servico"
-                                >
-                Temperatura de serviço            </option>
-                    <option value="regi_o"
-                                >
-                Região            </option>
-            </select>
-            <a title="Definir Direção Decrescente" href="#" class="action sorter-action sort-asc btn btn-default btn-sm" data-role="direction-switcher" data-value="desc">
-            <span class="glyphicon glyphicon-arrow-down"></span>
-        </a>
-    </div>
-                                <div class="modes d-none d-md-block">
-                          <!--   <strong class="modes-label" id="modes-label"></strong> -->
-            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group mr-2" role="group" aria-label="First group">
-                                                                                                                                                <a href="#" title="Grade"
-                                class="modes-mode active mode-grid btn btn-primary"
-                                data-value="grid">
-                                                            <span class="fas fa-th"></span>
-                                                                                </a>
-                                                                                                                                                                    <a class="modes-mode mode-list btn btn-primary"
-                           title="Lista"
-                           href="#"
-                           data-role="mode-switcher"
-                           data-value="list"
-                           id="mode-list"
-                           aria-labelledby="modes-label mode-list">
-                                                            <span class="fas fa-list"></span>
-                                                                                </a>
-                                                    </div>
-            </div>
-            </div>
-            </div>
-<div
-    class="products wrapper grid products-grid">
-        <div class="products list items product-items row">
-                        
-        <div class="col-md-4 mb-3">
-            <div class="product box-product"
-                data-product-id="1210">
-                
-                
-                
-    <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/fr.png" alt="França" title="França">
-    </div>
-
-                
-
-        <div class="product__pontuacao">
-                                            <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Enthusiast">WE</div>
-                    <div class="pontos">91</div>
-                </div>
-                    </div>
-
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Champagne Laurent-Perrier La Cuv\u00e9e Brut&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Champagne&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Champagne Laurent-Perrier La Cuv\u00e9e Brut&quot;,&quot;id&quot;:&quot;1210&quot;,&quot;price&quot;:&quot;635.00&quot;,&quot;category&quot;:&quot;Recomenda\u00e7\u00e3o&quot;,&quot;position&quot;:0,&quot;brand&quot;:&quot;Laurent-Perrier&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/champagne-laurent-perrier-la-cuvee-brut' }});"                    class="product__link" href="https://www.divinho.com.br/champagne-laurent-perrier-la-cuvee-brut"
-                    tabindex="-1">
-                    <div class="product__photo">
-                        
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/c/h/champagne_laurent-perrier_la_cuv_e_brut.png"
-    width=""
-    height=""
-    alt="Garrafa de Champagne Laurent-Perrier La Cuvée Brut" /></span>                    </div>
-                </a>
-                                <div class="product__content">
-                    <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Champagne Laurent-Perrier La Cuv\u00e9e Brut&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Champagne&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Champagne Laurent-Perrier La Cuv\u00e9e Brut&quot;,&quot;id&quot;:&quot;1210&quot;,&quot;price&quot;:&quot;635.00&quot;,&quot;category&quot;:&quot;Recomenda\u00e7\u00e3o&quot;,&quot;position&quot;:0,&quot;brand&quot;:&quot;Laurent-Perrier&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/champagne-laurent-perrier-la-cuvee-brut' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/champagne-laurent-perrier-la-cuvee-brut">
-                            Champagne Laurent-Perrier La Cuvée Brut                        </a>
-                    </h2>
-
-                    
-<div class="product__pais">
-    <span>França</span>
+</div><div class="p-3 mb-2 bg-info text-white message info empty">
+    <div>Não encontramos produtos correspondentes a seleção.</div>
 </div>
-                    
-                    <form data-role="tocart-form" data-product-sku="1868"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ%2C%2C/product/1210/" method="post">
-                        <input type="hidden" name="product"
-                            value="1210">
-                                                <input type="hidden"
-                            name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekwyTm9ZVzF3WVdkdVpRJTJDJTJDL3Byb2R1Y3QvMTIxMC8,">
-                        <input name="form_key" type="hidden" value="XRWAa00CvNNmL9VH" />                        <div class="product__buy">
-                            <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1210" data-price-box="product-id-1210">
-   <div class="price__regular"><br></div>
-    <div class="price__sale">
-        
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-1210"                data-price-amount="635"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$635,00</span></span>
-        </span>
-    </div>
-
-</div>                            </div>
-                            <div class="product__quantity">
-                                <div class="custom-number">
-                                    <input type="number" name="qty"
-                                        id="qty1210" maxlength="12" min="1"
-                                        minlenght="1" value="1" title="Qtd"
-                                        class="qty"
-                                        data-validate="null" />
-                                    <div class="custom-number-button custom-number-button--up">+</div>
-                                    <div class="custom-number-button custom-number-button--down">-</div>
-                                    <button class="action tocart btn btn--input" type="submit"><i
-                                            class="fas fa-shopping-cart"></i></button>
-                                </div>
-                                <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1210,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ,,"}}'
-                                    class="action towishlist" data-action="add-to-wishlist"><i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="actions-primary">
-                                                        <button type="submit" title="Adicionar ao Carrinho"
-                                class="action tocart primary btn btn--product">
-                                <span>Adicionar ao Carrinho</span>
-                            </button>
-                        </div>
-                    </form>
-                                    </div>
-            </div>
-        </div>
-                                
-        <div class="col-md-4 mb-3">
-            <div class="product box-product"
-                data-product-id="1206">
-                
-                
-                
-    <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/fr.png" alt="França" title="França">
-    </div>
-
-                
-
-        <div class="product__pontuacao">
-                                            <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Spectator">WS</div>
-                    <div class="pontos">91</div>
-                </div>
-                    </div>
-
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Champagne Perrier-Jou\u00ebt Blason Ros\u00e9&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Champagne&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Champagne Perrier-Jou\u00ebt Blason Ros\u00e9&quot;,&quot;id&quot;:&quot;1206&quot;,&quot;price&quot;:&quot;536.00&quot;,&quot;category&quot;:&quot;Recomenda\u00e7\u00e3o&quot;,&quot;position&quot;:1,&quot;brand&quot;:&quot;Perrier-Jou\u00ebt&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/champagne-perrier-jouet-blason-rose' }});"                    class="product__link" href="https://www.divinho.com.br/champagne-perrier-jouet-blason-rose"
-                    tabindex="-1">
-                    <div class="product__photo">
-                        
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/c/h/champagne_perrier-jou_t_blason_ros_.png"
-    width=""
-    height=""
-    alt="Garrafa de Champagne Perrier-Jouët Blason Rosé" /></span>                    </div>
-                </a>
-                                <div class="product__content">
-                    <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Champagne Perrier-Jou\u00ebt Blason Ros\u00e9&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Champagne&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Champagne Perrier-Jou\u00ebt Blason Ros\u00e9&quot;,&quot;id&quot;:&quot;1206&quot;,&quot;price&quot;:&quot;536.00&quot;,&quot;category&quot;:&quot;Recomenda\u00e7\u00e3o&quot;,&quot;position&quot;:1,&quot;brand&quot;:&quot;Perrier-Jou\u00ebt&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/champagne-perrier-jouet-blason-rose' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/champagne-perrier-jouet-blason-rose">
-                            Champagne Perrier-Jouët Blason Rosé                        </a>
-                    </h2>
-
-                    
-<div class="product__pais">
-    <span>França</span>
-</div>
-                    
-                    <form data-role="tocart-form" data-product-sku="1865"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ%2C%2C/product/1206/" method="post">
-                        <input type="hidden" name="product"
-                            value="1206">
-                                                <input type="hidden"
-                            name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekwyTm9ZVzF3WVdkdVpRJTJDJTJDL3Byb2R1Y3QvMTIwNi8,">
-                        <input name="form_key" type="hidden" value="XRWAa00CvNNmL9VH" />                        <div class="product__buy">
-                            <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1206" data-price-box="product-id-1206">
-   <div class="price__regular"><br></div>
-    <div class="price__sale">
-        
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-1206"                data-price-amount="536"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$536,00</span></span>
-        </span>
-    </div>
-
-</div>                            </div>
-                            <div class="product__quantity">
-                                <div class="custom-number">
-                                    <input type="number" name="qty"
-                                        id="qty1206" maxlength="12" min="1"
-                                        minlenght="1" value="1" title="Qtd"
-                                        class="qty"
-                                        data-validate="null" />
-                                    <div class="custom-number-button custom-number-button--up">+</div>
-                                    <div class="custom-number-button custom-number-button--down">-</div>
-                                    <button class="action tocart btn btn--input" type="submit"><i
-                                            class="fas fa-shopping-cart"></i></button>
-                                </div>
-                                <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1206,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ,,"}}'
-                                    class="action towishlist" data-action="add-to-wishlist"><i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="actions-primary">
-                                                        <button type="submit" title="Adicionar ao Carrinho"
-                                class="action tocart primary btn btn--product">
-                                <span>Adicionar ao Carrinho</span>
-                            </button>
-                        </div>
-                    </form>
-                                    </div>
-            </div>
-        </div>
-                                
-        <div class="col-md-4 mb-3">
-            <div class="product box-product"
-                data-product-id="1085">
-                
-                
-                
-    <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/fr.png" alt="França" title="França">
-    </div>
-
-                
-
-
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Champagne Barons de Rothschild Brut&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Champagne&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Champagne Barons de Rothschild Brut&quot;,&quot;id&quot;:&quot;1085&quot;,&quot;price&quot;:&quot;836.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Fran\u00e7a&quot;,&quot;position&quot;:2,&quot;brand&quot;:&quot;Domaines Barons de Rothschild (Lafite)&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/champagne-barons-de-rothschild-brut' }});"                    class="product__link" href="https://www.divinho.com.br/champagne-barons-de-rothschild-brut"
-                    tabindex="-1">
-                    <div class="product__photo">
-                        
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/c/h/champagne_barons_de_rothschild_brut.png"
-    width=""
-    height=""
-    alt="Garrafa de Champagne Barons de Rothschild Brut" /></span>                    </div>
-                </a>
-                                <div class="product__content">
-                    <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Champagne Barons de Rothschild Brut&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Champagne&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Champagne Barons de Rothschild Brut&quot;,&quot;id&quot;:&quot;1085&quot;,&quot;price&quot;:&quot;836.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Fran\u00e7a&quot;,&quot;position&quot;:2,&quot;brand&quot;:&quot;Domaines Barons de Rothschild (Lafite)&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/champagne-barons-de-rothschild-brut' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/champagne-barons-de-rothschild-brut">
-                            Champagne Barons de Rothschild Brut                        </a>
-                    </h2>
-
-                    
-<div class="product__pais">
-    <span>França</span>
-</div>
-                    
-                    <form data-role="tocart-form" data-product-sku="15658"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ%2C%2C/product/1085/" method="post">
-                        <input type="hidden" name="product"
-                            value="1085">
-                                                <input type="hidden"
-                            name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekwyTm9ZVzF3WVdkdVpRJTJDJTJDL3Byb2R1Y3QvMTA4NS8,">
-                        <input name="form_key" type="hidden" value="XRWAa00CvNNmL9VH" />                        <div class="product__buy">
-                            <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1085" data-price-box="product-id-1085">
-   <div class="price__regular"><br></div>
-    <div class="price__sale">
-        
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-1085"                data-price-amount="836"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$836,00</span></span>
-        </span>
-    </div>
-
-</div>                            </div>
-                            <div class="product__quantity">
-                                <div class="custom-number">
-                                    <input type="number" name="qty"
-                                        id="qty1085" maxlength="12" min="1"
-                                        minlenght="1" value="1" title="Qtd"
-                                        class="qty"
-                                        data-validate="null" />
-                                    <div class="custom-number-button custom-number-button--up">+</div>
-                                    <div class="custom-number-button custom-number-button--down">-</div>
-                                    <button class="action tocart btn btn--input" type="submit"><i
-                                            class="fas fa-shopping-cart"></i></button>
-                                </div>
-                                <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1085,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ,,"}}'
-                                    class="action towishlist" data-action="add-to-wishlist"><i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="actions-primary">
-                                                        <button type="submit" title="Adicionar ao Carrinho"
-                                class="action tocart primary btn btn--product">
-                                <span>Adicionar ao Carrinho</span>
-                            </button>
-                        </div>
-                    </form>
-                                    </div>
-            </div>
-        </div>
-                                
-        <div class="col-md-4 mb-3">
-            <div class="product box-product"
-                data-product-id="757">
-                
-                
-                
-    <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/fr.png" alt="França" title="França">
-    </div>
-
-                
-
-        <div class="product__pontuacao">
-                                            <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Robert Parker">RP</div>
-                    <div class="pontos">97</div>
-                </div>
-                    </div>
-
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot; Champagne Cristal Ros\u00e9 2012&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Champagne&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot; Champagne Cristal Ros\u00e9 2012&quot;,&quot;id&quot;:&quot;757&quot;,&quot;price&quot;:&quot;6733.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Fran\u00e7a&quot;,&quot;position&quot;:3,&quot;brand&quot;:&quot;Maison Louis Roederer&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/champagne-cristal-rose' }});"                    class="product__link" href="https://www.divinho.com.br/champagne-cristal-rose"
-                    tabindex="-1">
-                    <div class="product__photo">
-                        
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/l/o/louis_roederer_cristal_ros_.png"
-    width=""
-    height=""
-    alt="Garrafa de Champagne Cristal Rosé 2012" /></span>                    </div>
-                </a>
-                                <div class="product__content">
-                    <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot; Champagne Cristal Ros\u00e9 2012&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Champagne&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot; Champagne Cristal Ros\u00e9 2012&quot;,&quot;id&quot;:&quot;757&quot;,&quot;price&quot;:&quot;6733.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Fran\u00e7a&quot;,&quot;position&quot;:3,&quot;brand&quot;:&quot;Maison Louis Roederer&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/champagne-cristal-rose' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/champagne-cristal-rose">
-                             Champagne Cristal Rosé 2012                        </a>
-                    </h2>
-
-                    
-<div class="product__pais">
-    <span>França</span>
-</div>
-                    
-                    <form data-role="tocart-form" data-product-sku="802"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ%2C%2C/product/757/" method="post">
-                        <input type="hidden" name="product"
-                            value="757">
-                                                <input type="hidden"
-                            name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekwyTm9ZVzF3WVdkdVpRJTJDJTJDL3Byb2R1Y3QvNzU3Lw,,">
-                        <input name="form_key" type="hidden" value="XRWAa00CvNNmL9VH" />                        <div class="product__buy">
-                            <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="757" data-price-box="product-id-757">
-   <div class="price__regular"><br></div>
-    <div class="price__sale">
-        
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-757"                data-price-amount="6733"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$6.733,00</span></span>
-        </span>
-    </div>
-
-</div>                            </div>
-                            <div class="product__quantity">
-                                <div class="custom-number">
-                                    <input type="number" name="qty"
-                                        id="qty757" maxlength="12" min="1"
-                                        minlenght="1" value="1" title="Qtd"
-                                        class="qty"
-                                        data-validate="null" />
-                                    <div class="custom-number-button custom-number-button--up">+</div>
-                                    <div class="custom-number-button custom-number-button--down">-</div>
-                                    <button class="action tocart btn btn--input" type="submit"><i
-                                            class="fas fa-shopping-cart"></i></button>
-                                </div>
-                                <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":757,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ,,"}}'
-                                    class="action towishlist" data-action="add-to-wishlist"><i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="actions-primary">
-                                                        <button type="submit" title="Adicionar ao Carrinho"
-                                class="action tocart primary btn btn--product">
-                                <span>Adicionar ao Carrinho</span>
-                            </button>
-                        </div>
-                    </form>
-                                    </div>
-            </div>
-        </div>
-                                
-        <div class="col-md-4 mb-3">
-            <div class="product box-product"
-                data-product-id="754">
-                
-                
-                
-    <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/fr.png" alt="França" title="França">
-    </div>
-
-                
-
-        <div class="product__pontuacao">
-                                            <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Spectator">WS</div>
-                    <div class="pontos">92</div>
-                </div>
-                    </div>
-
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Champagne Taittinger Prestige Ros\u00e9 Brut&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Champagne&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Champagne Taittinger Prestige Ros\u00e9 Brut&quot;,&quot;id&quot;:&quot;754&quot;,&quot;price&quot;:&quot;690.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Fran\u00e7a&quot;,&quot;position&quot;:4,&quot;brand&quot;:&quot;Champagne Taittinger&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/champagne-taittinger-prestige-rose-brut' }});"                    class="product__link" href="https://www.divinho.com.br/champagne-taittinger-prestige-rose-brut"
-                    tabindex="-1">
-                    <div class="product__photo">
-                        
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/c/h/champagne_taittinger_prestige_ros_brut.png"
-    width=""
-    height=""
-    alt="Garrafa de Champagne Taittinger Prestige Rosé Brut" /></span>                    </div>
-                </a>
-                                <div class="product__content">
-                    <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Champagne Taittinger Prestige Ros\u00e9 Brut&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Champagne&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Champagne Taittinger Prestige Ros\u00e9 Brut&quot;,&quot;id&quot;:&quot;754&quot;,&quot;price&quot;:&quot;690.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Fran\u00e7a&quot;,&quot;position&quot;:4,&quot;brand&quot;:&quot;Champagne Taittinger&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/champagne-taittinger-prestige-rose-brut' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/champagne-taittinger-prestige-rose-brut">
-                            Champagne Taittinger Prestige Rosé Brut                        </a>
-                    </h2>
-
-                    
-<div class="product__pais">
-    <span>França</span>
-</div>
-                    
-                    <form data-role="tocart-form" data-product-sku="805"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ%2C%2C/product/754/" method="post">
-                        <input type="hidden" name="product"
-                            value="754">
-                                                <input type="hidden"
-                            name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekwyTm9ZVzF3WVdkdVpRJTJDJTJDL3Byb2R1Y3QvNzU0Lw,,">
-                        <input name="form_key" type="hidden" value="XRWAa00CvNNmL9VH" />                        <div class="product__buy">
-                            <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="754" data-price-box="product-id-754">
-   <div class="price__regular"><br></div>
-    <div class="price__sale">
-        
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-754"                data-price-amount="690"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$690,00</span></span>
-        </span>
-    </div>
-
-</div>                            </div>
-                            <div class="product__quantity">
-                                <div class="custom-number">
-                                    <input type="number" name="qty"
-                                        id="qty754" maxlength="12" min="1"
-                                        minlenght="1" value="1" title="Qtd"
-                                        class="qty"
-                                        data-validate="null" />
-                                    <div class="custom-number-button custom-number-button--up">+</div>
-                                    <div class="custom-number-button custom-number-button--down">-</div>
-                                    <button class="action tocart btn btn--input" type="submit"><i
-                                            class="fas fa-shopping-cart"></i></button>
-                                </div>
-                                <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":754,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ,,"}}'
-                                    class="action towishlist" data-action="add-to-wishlist"><i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="actions-primary">
-                                                        <button type="submit" title="Adicionar ao Carrinho"
-                                class="action tocart primary btn btn--product">
-                                <span>Adicionar ao Carrinho</span>
-                            </button>
-                        </div>
-                    </form>
-                                    </div>
-            </div>
-        </div>
-                                
-        <div class="col-md-4 mb-3">
-            <div class="product box-product"
-                data-product-id="746">
-                
-                
-                
-    <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/fr.png" alt="França" title="França">
-    </div>
-
-                
-
-        <div class="product__pontuacao">
-                                            <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Spectator">WS</div>
-                    <div class="pontos">92</div>
-                </div>
-                    </div>
-
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Champagne Louis Roederer Brut Premier&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Champagne&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Champagne Louis Roederer Brut Premier&quot;,&quot;id&quot;:&quot;746&quot;,&quot;price&quot;:&quot;972.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Fran\u00e7a&quot;,&quot;position&quot;:5,&quot;brand&quot;:&quot;Maison Louis Roederer&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/champagne-louis-roederer-brut-premier' }});"                    class="product__link" href="https://www.divinho.com.br/champagne-louis-roederer-brut-premier"
-                    tabindex="-1">
-                    <div class="product__photo">
-                        
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/l/o/louis_roederer_brut_premier.png"
-    width=""
-    height=""
-    alt="Garrafa de Champagne Louis Roederer Brut Premier" /></span>                    </div>
-                </a>
-                                <div class="product__content">
-                    <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Champagne Louis Roederer Brut Premier&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Champagne&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Champagne Louis Roederer Brut Premier&quot;,&quot;id&quot;:&quot;746&quot;,&quot;price&quot;:&quot;972.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Fran\u00e7a&quot;,&quot;position&quot;:5,&quot;brand&quot;:&quot;Maison Louis Roederer&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/champagne-louis-roederer-brut-premier' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/champagne-louis-roederer-brut-premier">
-                            Champagne Louis Roederer Brut Premier                        </a>
-                    </h2>
-
-                    
-<div class="product__pais">
-    <span>França</span>
-</div>
-                    
-                    <form data-role="tocart-form" data-product-sku="1129"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ%2C%2C/product/746/" method="post">
-                        <input type="hidden" name="product"
-                            value="746">
-                                                <input type="hidden"
-                            name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekwyTm9ZVzF3WVdkdVpRJTJDJTJDL3Byb2R1Y3QvNzQ2Lw,,">
-                        <input name="form_key" type="hidden" value="XRWAa00CvNNmL9VH" />                        <div class="product__buy">
-                            <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="746" data-price-box="product-id-746">
-   <div class="price__regular"><br></div>
-    <div class="price__sale">
-        
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-746"                data-price-amount="972"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$972,00</span></span>
-        </span>
-    </div>
-
-</div>                            </div>
-                            <div class="product__quantity">
-                                <div class="custom-number">
-                                    <input type="number" name="qty"
-                                        id="qty746" maxlength="12" min="1"
-                                        minlenght="1" value="1" title="Qtd"
-                                        class="qty"
-                                        data-validate="null" />
-                                    <div class="custom-number-button custom-number-button--up">+</div>
-                                    <div class="custom-number-button custom-number-button--down">-</div>
-                                    <button class="action tocart btn btn--input" type="submit"><i
-                                            class="fas fa-shopping-cart"></i></button>
-                                </div>
-                                <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":746,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ,,"}}'
-                                    class="action towishlist" data-action="add-to-wishlist"><i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="actions-primary">
-                                                        <button type="submit" title="Adicionar ao Carrinho"
-                                class="action tocart primary btn btn--product">
-                                <span>Adicionar ao Carrinho</span>
-                            </button>
-                        </div>
-                    </form>
-                                    </div>
-            </div>
-        </div>
-                                
-        <div class="col-md-4 mb-3">
-            <div class="product box-product"
-                data-product-id="735">
-                
-                
-                
-    <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/fr.png" alt="França" title="França">
-    </div>
-
-                
-
-
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Champagne Veuve Clicquot Ponsardin Brut&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Champagne&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Champagne Veuve Clicquot Ponsardin Brut&quot;,&quot;id&quot;:&quot;735&quot;,&quot;price&quot;:&quot;459.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Fran\u00e7a&quot;,&quot;position&quot;:6,&quot;brand&quot;:&quot;Veuve Clicquot&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/champagne-veuve-clicquot-ponsardin-brut' }});"                    class="product__link" href="https://www.divinho.com.br/champagne-veuve-clicquot-ponsardin-brut"
-                    tabindex="-1">
-                    <div class="product__photo">
-                        
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/c/h/champagne_veuve_clicquot_ponsardin_brut.png"
-    width=""
-    height=""
-    alt="Garrafa de Champagne Veuve Clicquot Ponsardin Brut" /></span>                    </div>
-                </a>
-                                <div class="product__content">
-                    <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Champagne Veuve Clicquot Ponsardin Brut&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Champagne&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Champagne Veuve Clicquot Ponsardin Brut&quot;,&quot;id&quot;:&quot;735&quot;,&quot;price&quot;:&quot;459.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Fran\u00e7a&quot;,&quot;position&quot;:6,&quot;brand&quot;:&quot;Veuve Clicquot&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/champagne-veuve-clicquot-ponsardin-brut' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/champagne-veuve-clicquot-ponsardin-brut">
-                            Champagne Veuve Clicquot Ponsardin Brut                        </a>
-                    </h2>
-
-                    
-<div class="product__pais">
-    <span>França</span>
-</div>
-                    
-                    <form data-role="tocart-form" data-product-sku="1155"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ%2C%2C/product/735/" method="post">
-                        <input type="hidden" name="product"
-                            value="735">
-                                                <input type="hidden"
-                            name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekwyTm9ZVzF3WVdkdVpRJTJDJTJDL3Byb2R1Y3QvNzM1Lw,,">
-                        <input name="form_key" type="hidden" value="XRWAa00CvNNmL9VH" />                        <div class="product__buy">
-                            <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="735" data-price-box="product-id-735">
-   <div class="price__regular"><br></div>
-    <div class="price__sale">
-        
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-735"                data-price-amount="459"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$459,00</span></span>
-        </span>
-    </div>
-
-</div>                            </div>
-                            <div class="product__quantity">
-                                <div class="custom-number">
-                                    <input type="number" name="qty"
-                                        id="qty735" maxlength="12" min="1"
-                                        minlenght="1" value="1" title="Qtd"
-                                        class="qty"
-                                        data-validate="null" />
-                                    <div class="custom-number-button custom-number-button--up">+</div>
-                                    <div class="custom-number-button custom-number-button--down">-</div>
-                                    <button class="action tocart btn btn--input" type="submit"><i
-                                            class="fas fa-shopping-cart"></i></button>
-                                </div>
-                                <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":735,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ,,"}}'
-                                    class="action towishlist" data-action="add-to-wishlist"><i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="actions-primary">
-                                                        <button type="submit" title="Adicionar ao Carrinho"
-                                class="action tocart primary btn btn--product">
-                                <span>Adicionar ao Carrinho</span>
-                            </button>
-                        </div>
-                    </form>
-                                    </div>
-            </div>
-        </div>
-                                
-        <div class="col-md-4 mb-3">
-            <div class="product box-product"
-                data-product-id="734">
-                
-                    <div class="product__discount">
-        <span>-12%</span>
-    </div>
-
-                
-    <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/fr.png" alt="França" title="França">
-    </div>
-
-                
-
-
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Champagne Mo\u00ebt &amp; Chandon Brut Imp\u00e9rial&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Champagne&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Champagne Mo\u00ebt &amp; Chandon Brut Imp\u00e9rial&quot;,&quot;id&quot;:&quot;734&quot;,&quot;price&quot;:&quot;398.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Fran\u00e7a&quot;,&quot;position&quot;:7,&quot;brand&quot;:&quot;Mo\u00ebt &amp; Chandon&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/champagne-moet-e-chandon-brut-imperial' }});"                    class="product__link" href="https://www.divinho.com.br/champagne-moet-e-chandon-brut-imperial"
-                    tabindex="-1">
-                    <div class="product__photo">
-                        
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/c/h/champagne_mo_t_chandon_brut_imp_rial.png"
-    width=""
-    height=""
-    alt="Garrafa de Champagne Moët Chandon Brut Impérial" /></span>                    </div>
-                </a>
-                                <div class="product__content">
-                    <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Champagne Mo\u00ebt &amp; Chandon Brut Imp\u00e9rial&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Champagne&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Champagne Mo\u00ebt &amp; Chandon Brut Imp\u00e9rial&quot;,&quot;id&quot;:&quot;734&quot;,&quot;price&quot;:&quot;398.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Fran\u00e7a&quot;,&quot;position&quot;:7,&quot;brand&quot;:&quot;Mo\u00ebt &amp; Chandon&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/champagne-moet-e-chandon-brut-imperial' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/champagne-moet-e-chandon-brut-imperial">
-                            Champagne Moët &amp; Chandon Brut Impérial                        </a>
-                    </h2>
-
-                    
-<div class="product__pais">
-    <span>França</span>
-</div>
-                    
-                    <form data-role="tocart-form" data-product-sku="1159"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ%2C%2C/product/734/" method="post">
-                        <input type="hidden" name="product"
-                            value="734">
-                                                <input type="hidden"
-                            name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekwyTm9ZVzF3WVdkdVpRJTJDJTJDL3Byb2R1Y3QvNzM0Lw,,">
-                        <input name="form_key" type="hidden" value="XRWAa00CvNNmL9VH" />                        <div class="product__buy">
-                            <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="734" data-price-box="product-id-734">
-    <div class="price__regular">
-        De        <span class="old-price">
-            
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="old-price-734"                data-price-amount="453"
-        data-price-type="oldPrice"
-        class="price-wrapper "
-    ><span class="price">R$453,00</span></span>
-        </span>
-        </span>
-        Por    </div>
-    <div class="price__sale">
-        <span class="special-price">
-            
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-734"                data-price-amount="398"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$398,00</span></span>
-        </span>
-        </span>
-    </div>
-
-</div>                            </div>
-                            <div class="product__quantity">
-                                <div class="custom-number">
-                                    <input type="number" name="qty"
-                                        id="qty734" maxlength="12" min="1"
-                                        minlenght="1" value="1" title="Qtd"
-                                        class="qty"
-                                        data-validate="null" />
-                                    <div class="custom-number-button custom-number-button--up">+</div>
-                                    <div class="custom-number-button custom-number-button--down">-</div>
-                                    <button class="action tocart btn btn--input" type="submit"><i
-                                            class="fas fa-shopping-cart"></i></button>
-                                </div>
-                                <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":734,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ,,"}}'
-                                    class="action towishlist" data-action="add-to-wishlist"><i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="actions-primary">
-                                                        <button type="submit" title="Adicionar ao Carrinho"
-                                class="action tocart primary btn btn--product">
-                                <span>Adicionar ao Carrinho</span>
-                            </button>
-                        </div>
-                    </form>
-                                    </div>
-            </div>
-        </div>
-                                
-        <div class="col-md-4 mb-3">
-            <div class="product box-product"
-                data-product-id="733">
-                
-                    <div class="product__discount">
-        <span>-12%</span>
-    </div>
-
-                
-    <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/fr.png" alt="França" title="França">
-    </div>
-
-                
-
-        <div class="product__pontuacao">
-                                            <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Tim Atkin">TA</div>
-                    <div class="pontos">92</div>
-                </div>
-                    </div>
-
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Champagne Taittinger R\u00e9serve Brut&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Champagne&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Champagne Taittinger R\u00e9serve Brut&quot;,&quot;id&quot;:&quot;733&quot;,&quot;price&quot;:&quot;439.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Fran\u00e7a&quot;,&quot;position&quot;:8,&quot;brand&quot;:&quot;Champagne Taittinger&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/champagne-taittinger-reserve-brut' }});"                    class="product__link" href="https://www.divinho.com.br/champagne-taittinger-reserve-brut"
-                    tabindex="-1">
-                    <div class="product__photo">
-                        
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/c/h/champagne_taittinger_r_serve_brut.png"
-    width=""
-    height=""
-    alt="Garrafa de Champagne Taittinger Réserve Brut" /></span>                    </div>
-                </a>
-                                <div class="product__content">
-                    <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Champagne Taittinger R\u00e9serve Brut&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Champagne&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Champagne Taittinger R\u00e9serve Brut&quot;,&quot;id&quot;:&quot;733&quot;,&quot;price&quot;:&quot;439.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Fran\u00e7a&quot;,&quot;position&quot;:8,&quot;brand&quot;:&quot;Champagne Taittinger&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/champagne-taittinger-reserve-brut' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/champagne-taittinger-reserve-brut">
-                            Champagne Taittinger Réserve Brut                        </a>
-                    </h2>
-
-                    
-<div class="product__pais">
-    <span>França</span>
-</div>
-                    
-                    <form data-role="tocart-form" data-product-sku="1169"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ%2C%2C/product/733/" method="post">
-                        <input type="hidden" name="product"
-                            value="733">
-                                                <input type="hidden"
-                            name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekwyTm9ZVzF3WVdkdVpRJTJDJTJDL3Byb2R1Y3QvNzMzLw,,">
-                        <input name="form_key" type="hidden" value="XRWAa00CvNNmL9VH" />                        <div class="product__buy">
-                            <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="733" data-price-box="product-id-733">
-    <div class="price__regular">
-        De        <span class="old-price">
-            
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="old-price-733"                data-price-amount="499"
-        data-price-type="oldPrice"
-        class="price-wrapper "
-    ><span class="price">R$499,00</span></span>
-        </span>
-        </span>
-        Por    </div>
-    <div class="price__sale">
-        <span class="special-price">
-            
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-733"                data-price-amount="439"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$439,00</span></span>
-        </span>
-        </span>
-    </div>
-
-</div>                            </div>
-                            <div class="product__quantity">
-                                <div class="custom-number">
-                                    <input type="number" name="qty"
-                                        id="qty733" maxlength="12" min="1"
-                                        minlenght="1" value="1" title="Qtd"
-                                        class="qty"
-                                        data-validate="null" />
-                                    <div class="custom-number-button custom-number-button--up">+</div>
-                                    <div class="custom-number-button custom-number-button--down">-</div>
-                                    <button class="action tocart btn btn--input" type="submit"><i
-                                            class="fas fa-shopping-cart"></i></button>
-                                </div>
-                                <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":733,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ,,"}}'
-                                    class="action towishlist" data-action="add-to-wishlist"><i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="actions-primary">
-                                                        <button type="submit" title="Adicionar ao Carrinho"
-                                class="action tocart primary btn btn--product">
-                                <span>Adicionar ao Carrinho</span>
-                            </button>
-                        </div>
-                    </form>
-                                    </div>
-            </div>
-        </div>
-                                
-        <div class="col-md-4 mb-3">
-            <div class="product box-product"
-                data-product-id="479">
-                
-                
-                
-    <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/fr.png" alt="França" title="França">
-    </div>
-
-                
-
-        <div class="product__pontuacao">
-                                            <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Spectator">WS</div>
-                    <div class="pontos">92</div>
-                </div>
-                    </div>
-
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Champagne Drappier Carte d\u2019Or Brut&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Champagne&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Champagne Drappier Carte d\u2019Or Brut&quot;,&quot;id&quot;:&quot;479&quot;,&quot;price&quot;:&quot;528.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Fran\u00e7a&quot;,&quot;position&quot;:9,&quot;brand&quot;:&quot;Champagne Drappier&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/champagne-drappier-carte-dor-brut' }});"                    class="product__link" href="https://www.divinho.com.br/champagne-drappier-carte-dor-brut"
-                    tabindex="-1">
-                    <div class="product__photo">
-                        
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/c/h/champagne_drappier_carte_d_or_brut.png"
-    width=""
-    height=""
-    alt="Garrafa de Champagne Drappier Carte d’Or Brut
-" /></span>                    </div>
-                </a>
-                                <div class="product__content">
-                    <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Champagne Drappier Carte d\u2019Or Brut&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Champagne&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Champagne Drappier Carte d\u2019Or Brut&quot;,&quot;id&quot;:&quot;479&quot;,&quot;price&quot;:&quot;528.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Fran\u00e7a&quot;,&quot;position&quot;:9,&quot;brand&quot;:&quot;Champagne Drappier&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/champagne-drappier-carte-dor-brut' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/champagne-drappier-carte-dor-brut">
-                            Champagne Drappier Carte d’Or Brut                        </a>
-                    </h2>
-
-                    
-<div class="product__pais">
-    <span>França</span>
-</div>
-                    
-                    <form data-role="tocart-form" data-product-sku="6113"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ%2C%2C/product/479/" method="post">
-                        <input type="hidden" name="product"
-                            value="479">
-                                                <input type="hidden"
-                            name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekwyTm9ZVzF3WVdkdVpRJTJDJTJDL3Byb2R1Y3QvNDc5Lw,,">
-                        <input name="form_key" type="hidden" value="XRWAa00CvNNmL9VH" />                        <div class="product__buy">
-                            <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="479" data-price-box="product-id-479">
-   <div class="price__regular"><br></div>
-    <div class="price__sale">
-        
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-479"                data-price-amount="528"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$528,00</span></span>
-        </span>
-    </div>
-
-</div>                            </div>
-                            <div class="product__quantity">
-                                <div class="custom-number">
-                                    <input type="number" name="qty"
-                                        id="qty479" maxlength="12" min="1"
-                                        minlenght="1" value="1" title="Qtd"
-                                        class="qty"
-                                        data-validate="null" />
-                                    <div class="custom-number-button custom-number-button--up">+</div>
-                                    <div class="custom-number-button custom-number-button--down">-</div>
-                                    <button class="action tocart btn btn--input" type="submit"><i
-                                            class="fas fa-shopping-cart"></i></button>
-                                </div>
-                                <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":479,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ,,"}}'
-                                    class="action towishlist" data-action="add-to-wishlist"><i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="actions-primary">
-                                                        <button type="submit" title="Adicionar ao Carrinho"
-                                class="action tocart primary btn btn--product">
-                                <span>Adicionar ao Carrinho</span>
-                            </button>
-                        </div>
-                    </form>
-                                    </div>
-            </div>
-        </div>
-                                
-        <div class="col-md-4 mb-3">
-            <div class="product box-product"
-                data-product-id="192">
-                
-                
-                
-    <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/fr.png" alt="França" title="França">
-    </div>
-
-                
-
-        <div class="product__pontuacao">
-                                            <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Enthusiast">WE</div>
-                    <div class="pontos">94</div>
-                </div>
-                                            <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Spectator">WS</div>
-                    <div class="pontos">93</div>
-                </div>
-                    </div>
-
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Champagne Bollinger Special Cuv\u00e9e&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Champagne&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Champagne Bollinger Special Cuv\u00e9e&quot;,&quot;id&quot;:&quot;192&quot;,&quot;price&quot;:&quot;912.87&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Fran\u00e7a&quot;,&quot;position&quot;:10,&quot;brand&quot;:&quot;Bollinger&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/champagne-bollinger-special-cuvee' }});"                    class="product__link" href="https://www.divinho.com.br/champagne-bollinger-special-cuvee"
-                    tabindex="-1">
-                    <div class="product__photo">
-                        
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/b/o/bollinger_special_cuv_e_nm.png"
-    width=""
-    height=""
-    alt="Garrafa de Champagne Bollinger Special Cuvée NM" /></span>                    </div>
-                </a>
-                                <div class="product__content">
-                    <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Champagne Bollinger Special Cuv\u00e9e&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Champagne&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Champagne Bollinger Special Cuv\u00e9e&quot;,&quot;id&quot;:&quot;192&quot;,&quot;price&quot;:&quot;912.87&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Fran\u00e7a&quot;,&quot;position&quot;:10,&quot;brand&quot;:&quot;Bollinger&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/champagne-bollinger-special-cuvee' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/champagne-bollinger-special-cuvee">
-                            Champagne Bollinger Special Cuvée                        </a>
-                    </h2>
-
-                    
-<div class="product__pais">
-    <span>França</span>
-</div>
-                    
-                    <form data-role="tocart-form" data-product-sku="14053"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ%2C%2C/product/192/" method="post">
-                        <input type="hidden" name="product"
-                            value="192">
-                                                <input type="hidden"
-                            name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekwyTm9ZVzF3WVdkdVpRJTJDJTJDL3Byb2R1Y3QvMTkyLw,,">
-                        <input name="form_key" type="hidden" value="XRWAa00CvNNmL9VH" />                        <div class="product__buy">
-                            <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="192" data-price-box="product-id-192">
-   <div class="price__regular"><br></div>
-    <div class="price__sale">
-        
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-192"                data-price-amount="912.87"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$912,87</span></span>
-        </span>
-    </div>
-
-</div>                            </div>
-                            <div class="product__quantity">
-                                <div class="custom-number">
-                                    <input type="number" name="qty"
-                                        id="qty192" maxlength="12" min="1"
-                                        minlenght="1" value="1" title="Qtd"
-                                        class="qty"
-                                        data-validate="null" />
-                                    <div class="custom-number-button custom-number-button--up">+</div>
-                                    <div class="custom-number-button custom-number-button--down">-</div>
-                                    <button class="action tocart btn btn--input" type="submit"><i
-                                            class="fas fa-shopping-cart"></i></button>
-                                </div>
-                                <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":192,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ,,"}}'
-                                    class="action towishlist" data-action="add-to-wishlist"><i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="actions-primary">
-                                                        <button type="submit" title="Adicionar ao Carrinho"
-                                class="action tocart primary btn btn--product">
-                                <span>Adicionar ao Carrinho</span>
-                            </button>
-                        </div>
-                    </form>
-                                    </div>
-            </div>
-        </div>
-                                
-        <div class="col-md-4 mb-3">
-            <div class="product box-product"
-                data-product-id="191">
-                
-                
-                
-    <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/fr.png" alt="França" title="França">
-    </div>
-
-                
-
-        <div class="product__pontuacao">
-                                            <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Spectator">WS</div>
-                    <div class="pontos">92</div>
-                </div>
-                                            <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Robert Parker">RP</div>
-                    <div class="pontos">90</div>
-                </div>
-                    </div>
-
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Champagne Pol Roger Extra Cuv\u00e9e de Reserve Brut&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Champagne&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Champagne Pol Roger Extra Cuv\u00e9e de Reserve Brut&quot;,&quot;id&quot;:&quot;191&quot;,&quot;price&quot;:&quot;855.78&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Fran\u00e7a&quot;,&quot;position&quot;:11,&quot;brand&quot;:&quot;Champagne Pol Roger&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/champagne-pol-roger-extra-cuvee-de-reserve-brut' }});"                    class="product__link" href="https://www.divinho.com.br/champagne-pol-roger-extra-cuvee-de-reserve-brut"
-                    tabindex="-1">
-                    <div class="product__photo">
-                        
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/c/h/champagne_pol_roger_brut_extra_cuv_e_de_reserve.png"
-    width=""
-    height=""
-    alt="Garrafa de Champagne Pol Roger Extra Cuvée de Reserve" /></span>                    </div>
-                </a>
-                                <div class="product__content">
-                    <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Champagne Pol Roger Extra Cuv\u00e9e de Reserve Brut&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinhos\/Champagne&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Champagne Pol Roger Extra Cuv\u00e9e de Reserve Brut&quot;,&quot;id&quot;:&quot;191&quot;,&quot;price&quot;:&quot;855.78&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Fran\u00e7a&quot;,&quot;position&quot;:11,&quot;brand&quot;:&quot;Champagne Pol Roger&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/champagne-pol-roger-extra-cuvee-de-reserve-brut' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/champagne-pol-roger-extra-cuvee-de-reserve-brut">
-                            Champagne Pol Roger Extra Cuvée de Reserve Brut                        </a>
-                    </h2>
-
-                    
-<div class="product__pais">
-    <span>França</span>
-</div>
-                    
-                    <form data-role="tocart-form" data-product-sku="14058"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ%2C%2C/product/191/" method="post">
-                        <input type="hidden" name="product"
-                            value="191">
-                                                <input type="hidden"
-                            name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekwyTm9ZVzF3WVdkdVpRJTJDJTJDL3Byb2R1Y3QvMTkxLw,,">
-                        <input name="form_key" type="hidden" value="XRWAa00CvNNmL9VH" />                        <div class="product__buy">
-                            <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="191" data-price-box="product-id-191">
-   <div class="price__regular"><br></div>
-    <div class="price__sale">
-        
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-191"                data-price-amount="855.78"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$855,78</span></span>
-        </span>
-    </div>
-
-</div>                            </div>
-                            <div class="product__quantity">
-                                <div class="custom-number">
-                                    <input type="number" name="qty"
-                                        id="qty191" maxlength="12" min="1"
-                                        minlenght="1" value="1" title="Qtd"
-                                        class="qty"
-                                        data-validate="null" />
-                                    <div class="custom-number-button custom-number-button--up">+</div>
-                                    <div class="custom-number-button custom-number-button--down">-</div>
-                                    <button class="action tocart btn btn--input" type="submit"><i
-                                            class="fas fa-shopping-cart"></i></button>
-                                </div>
-                                <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":191,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zL2NoYW1wYWduZQ,,"}}'
-                                    class="action towishlist" data-action="add-to-wishlist"><i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="actions-primary">
-                                                        <button type="submit" title="Adicionar ao Carrinho"
-                                class="action tocart primary btn btn--product">
-                                <span>Adicionar ao Carrinho</span>
-                            </button>
-                        </div>
-                    </form>
-                                    </div>
-            </div>
-        </div>
-                            </div>
-</div>
-
-    
-        
-        
-    
-    
-<script type="text/x-magento-init">
-    {
-  "[data-role=tocart-form], .form.map.checkout": {
-    "catalogAddToCart": {}
-  },
-  "*": {
-    "Magento_Ui/js/core/app": {
-      "components": {
-        "wishlist": {
-          "component": "Magento_Wishlist/js/view/wishlist"
-        }
-      }
-    }
-  }
-}
-        </script>
-<script type="text/x-magento-init">
-    {
-        "body": {
-            "requireCookie": {"noCookieUrl":"https:\/\/www.divinho.com.br\/cookie\/index\/noCookies\/","triggers":[".action.tocompare"],"isRedirectCmsPage":true}        }
-    }
-</script>
 </div></div></div></main><div class="page-bottom"><div class="container"><div class="category-view row align-items-center">
 <div class="category-image-wrapper col-lg ">
     <div class="category-image">
-                    <img src="https://images.divinho.com.br/catalog/category/Champagne_3_1.jpg" alt="Champagne" title="Champagne">
+                    <img src="https://images.divinho.com.br/catalog/category/Vinhos_Pontuados_3.jpg" alt="Vinhos&#x20;Pontuados" title="Vinhos&#x20;Pontuados">
             </div>
 </div>
 
 
 <div class="category-description-wrapper col-lg-8"><div class="category-description">            <div class="category__title">
-            <span>Champagne</span>
+            <span>Vinhos&#x20;Pontuados</span>
         </div>
         <div class="category-description-text">
-        <h2>Principais dúvidas sobre Champagne</h2>    </div>
-        <div id="faq" class="accordion-faq">
-                                        <div class="accordion-item" id="faq-heading1">
-                    <h5 class="accordion-header collapsed" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
-                        Qual é a diferença de Champagne e Espumante?                    </h5>
-                    <div id="faqCollapse1" class="collapse" aria-labelledby="faqCollapse1" data-parent="#faq">
-                        <p><p>Todo Champagne é um espumante, mas nem todo espumante é um Champagne.</p>
-<p>&nbsp;</p>
-<p>Champagne é o termo usado para denominar um vinho espumante produzido na A.O.C. (Apelação de Origem Controlada) de Champagne, na França.</p>
-<p>&nbsp;</p>
-<p>O nome Champagne só pode ser utilizado em vinhos espumantes originários da região de Champagne, elaborados com uvas cultivadas e colhidas dentro da A.O.C. e produzido segundo o Método Champenoise, onde a segunda fermentação ocorre dentro da garrafa.&nbsp;</p></p>
-                    </div>
-                </div>
-                                                            <div class="accordion-item" id="faq-heading2">
-                    <h5 class="accordion-header collapsed" data-toggle="collapse" data-target="#faqCollapse2" aria-expanded="true" aria-controls="faqCollapse2">
-                        Como é feito o Champagne?                    </h5>
-                    <div id="faqCollapse2" class="collapse" aria-labelledby="faqCollapse2" data-parent="#faq">
-                        <p><p>O Champagne é produzido segundo o Método Champenoise, também conhecido como Método Tradicional ou Método Clássico.</p>
-<p>&nbsp;</p>
-<p>No Método Champenoise a segunda fermentação, que dá origem à perlage, as famosas borbulhas do Champagne, acontece dentro da garrafa.</p>
-<p>&nbsp;</p>
-<p>As uvas mais utilizadas na elaboração do Champagne são as variedades Chardonnay, Pinot Noir e Pinot Meunier.</p></p>
-                    </div>
-                </div>
-                                                            <div class="accordion-item" id="faq-heading3">
-                    <h5 class="accordion-header collapsed" data-toggle="collapse" data-target="#faqCollapse3" aria-expanded="true" aria-controls="faqCollapse3">
-                        O que harmoniza com Champagne?                    </h5>
-                    <div id="faqCollapse3" class="collapse" aria-labelledby="faqCollapse3" data-parent="#faq">
-                        <p><p>O Champagne é um rótulo ideal para celebrações e ocasiões especiais, sendo ótimo sozinho, ou acompanhado de petiscos e aperitivos.</p>
-<p>&nbsp;</p>
-<p>Na hora de harmonizar com a comida, a indicação é combinar o Champagne com saladas, carnes brancas, peixes, frutos do mar e sobremesas à base de frutas.</p>
-<p>&nbsp;</p>
-<p>Champagne com caviar então, é uma combinação maravilhosa!</p></p>
-                    </div>
-                </div>
-                                                            <div class="accordion-item" id="faq-heading4">
-                    <h5 class="accordion-header collapsed" data-toggle="collapse" data-target="#faqCollapse4" aria-expanded="true" aria-controls="faqCollapse4">
-                        Qual é a melhor marca de Champagne?                    </h5>
-                    <div id="faqCollapse4" class="collapse" aria-labelledby="faqCollapse4" data-parent="#faq">
-                        <p><p>Entre os principais produtores de Champagne destacam-se as marcas Moët &amp; Chandon, Veuve Clicquot e Bollinger, algumas das mais tradicionais e renomadas casas de Champagne!</p></p>
-                    </div>
-                </div>
-                                                    </div>
-    
-<script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-        {
-            "@type": "Question",
-            "name": "Qual \u00e9 a diferen\u00e7a de Champagne e Espumante?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Todo Champagne \u00e9 um espumante, mas nem todo espumante \u00e9 um Champagne.\r\n&nbsp;\r\nChampagne \u00e9 o termo usado para denominar um vinho espumante produzido na A.O.C. (Apela\u00e7\u00e3o de Origem Controlada) de Champagne, na Fran\u00e7a.\r\n&nbsp;\r\nO nome Champagne s\u00f3 pode ser utilizado em vinhos espumantes origin\u00e1rios da regi\u00e3o de Champagne, elaborados com uvas cultivadas e colhidas dentro da A.O.C. e produzido segundo o M\u00e9todo Champenoise, onde a segunda fermenta\u00e7\u00e3o ocorre dentro da garrafa.&nbsp;"
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Como \u00e9 feito o Champagne?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "O Champagne \u00e9 produzido segundo o M\u00e9todo Champenoise, tamb\u00e9m conhecido como M\u00e9todo Tradicional ou M\u00e9todo Cl\u00e1ssico.\r\n&nbsp;\r\nNo M\u00e9todo Champenoise a segunda fermenta\u00e7\u00e3o, que d\u00e1 origem \u00e0 perlage, as famosas borbulhas do Champagne, acontece dentro da garrafa.\r\n&nbsp;\r\nAs uvas mais utilizadas na elabora\u00e7\u00e3o do Champagne s\u00e3o as variedades Chardonnay, Pinot Noir e Pinot Meunier."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "O que harmoniza com Champagne?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "O Champagne \u00e9 um r\u00f3tulo ideal para celebra\u00e7\u00f5es e ocasi\u00f5es especiais, sendo \u00f3timo sozinho, ou acompanhado de petiscos e aperitivos.\r\n&nbsp;\r\nNa hora de harmonizar com a comida, a indica\u00e7\u00e3o \u00e9 combinar o Champagne com saladas, carnes brancas, peixes, frutos do mar e sobremesas \u00e0 base de frutas.\r\n&nbsp;\r\nChampagne com caviar ent\u00e3o, \u00e9 uma combina\u00e7\u00e3o maravilhosa!"
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Qual \u00e9 a melhor marca de Champagne?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Entre os principais produtores de Champagne destacam-se as marcas Mo\u00ebt &amp; Chandon, Veuve Clicquot e Bollinger, algumas das mais tradicionais e renomadas casas de Champagne!"
-            }
-        }
-    ]
-}</script></div></div></div></div></div><footer class="site-footer d-flex flex-column">
+        <p><span style="font-weight: 400;">Os Vinhos Pontuados são rótulos que se destacam por sua alta qualidade, conquistando ótimas pontuações da crítica especializada!</span></p>
+<p><span style="font-weight: 400;">Os sistemas de avaliações costumam basear-se em uma escala de 100 pontos.</span></p>
+<p><span style="font-weight: 400;">Vinhos de 80 a 89 pontos são classificados como muito bons e de 90 a 95 pontos como excelentes.</span></p>
+<p><span style="font-weight: 400;">Já os rótulos que conquistam entre 96 e 100 são realmente excepcionais, figurando entre os melhores vinhos do mundo!</span></p>
+<p><span style="font-weight: 400;">Robert Parker, James Suckling e Tim Atkin formam a tríade de críticos mais renomados do mundo. </span></p>
+<p><span style="font-weight: 400;">Antonio Galloni e Luca Maroni são outros dois cítricos importantes, sendo que Maroni destaca-se entre seus companheiros pelo seu sistema único de pontuação, que vai somente até 99 pontos.</span></p>
+<p><span style="font-weight: 400;">Na América Latina, o Guia Descorchados é a referência mais importante em Vinhos Pontuados.</span></p>
+<p><span style="font-weight: 400;">Já, nos Estados Unidos, as publicações mais expressivas são a Wine Enthusiast e a Wine Spectator.</span></p>
+<p><span style="font-weight: 400;">Isso, sem deixar de mencionar a revista inglesa Decanter, conhecida como "Bíblia do Vinho” e a plataforma digital Cellar Tracker, entre outros.</span></p>
+<p><span style="font-weight: 400;">A DiVinho oferece a melhor seleção de Vinhos Pontuados para você!</span></p>    </div>
+</div></div></div></div></div><footer class="site-footer d-flex flex-column">
 
 
 
@@ -6207,7 +4743,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                     </div>
                 <div class="wbcom-fields">
                     <div class="wbcom-fields-contents">
-                        <input name="form_key" type="hidden" value="XRWAa00CvNNmL9VH">
+                        <input name="form_key" type="hidden" value="weZHO3sfg95EHgvK">
                         <input type="text" placeholder="Nome" name="name" required style="background-color: #fff !important;">
                         <input type="email" placeholder="E-mail" name="email" required style="background-color: #fff !important;">
                         <input type="hidden" name="message" value="Olá, gostaria de fazer um pedido.">
@@ -6236,8 +4772,6 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     </script>
 
 
-<!-- BEGIN GTAG CATEGORY TAG -->
-<!-- END GTAG CATEGORY TAG -->
     <script>
         require(['jquery','weltpixel_persistentLayer', 'weltpixel_gtm', 'Magento_Customer/js/customer-data'],
             function ($, wpPersDl, wpgtm, customerData) {
@@ -6261,5 +4795,5 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 wpgtm.trackPromotion(wpGtmOptions);
             });
     </script>
-    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-15ce119d71e6a8d24c8","applicationID":"798446581","transactionName":"blMGbUdSWRFQBhBcC1cZJVpBWlgMHhUFUgFmVQVaXVY=","queueTime":0,"applicationTime":82,"atts":"QhQFGw9ISh8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-15ce119d71e6a8d24c8","applicationID":"798446581","transactionName":"blMGbUdSWRFQBhBcC1cZJVpBWlgMHhUFUgFmVQVaXVY=","queueTime":0,"applicationTime":67,"atts":"QhQFGw9ISh8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>

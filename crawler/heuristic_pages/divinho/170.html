@@ -1,7 +1,7 @@
 
 <!doctype html>
 <html lang=pt-br>      
-    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product: http://ogp.me/ns/product#">
+    <head >
         <script>
     var BASE_URL = 'https://www.divinho.com.br/';
     var require = {
@@ -9,39 +9,18 @@
     };
 </script>
         <meta charset="utf-8"/><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-15ce119d71e6a8d24c8",applicationID:"798446581"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1211.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
-<meta name="title" content="Vinho Luis Pato Vinhas Velhas 2017 - DiVinho "/>
-<meta name="description" content="Compre Vinho Luis Pato Vinhas Velhas 2017 com o melhor preço do mercado. Pagamento em até 3x s/ juros e entregas para todo Brasil."/>
-<meta name="keywords" content="Vinho Tinto Luis Pato Vinhas Velhas 2017"/>
+<meta name="title" content="Vinhos Pontuados com Melhores Preços | DiVinho "/>
+<meta name="description" content="Compre Vinhos Pontuados com os Melhores Preços! Seleção de rótulos de vinícolas premiadas. Em até 3x s/ juros e entregas para todo Brasil."/>
 <meta name="robots" content="INDEX,FOLLOW"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta name="format-detection" content="telephone=no"/>
-<title>Vinho Luis Pato Vinhas Velhas 2017 - DiVinho</title>
-<link  rel="stylesheet" type="text/css"  media="all" href="https://static.divinho.com.br/static/version1636382917/_cache/merged/5d41a869337cd62abea0146ce00be5f9.min.css" />
+<title>Vinhos Pontuados com Melhores Preços | DiVinho </title>
+<link  rel="stylesheet" type="text/css"  media="all" href="https://static.divinho.com.br/static/version1636382917/_cache/merged/c3f0846f21e00493666c1bb1e46fe5c8.min.css" />
 <script  type="text/javascript"  src="https://static.divinho.com.br/static/version1636382917/_cache/merged/38cbaaf652093663e521d41aea6fcd0d.min.js"></script>
+<link  rel="canonical" href="https://www.divinho.com.br/vinhos-pontuados" />
 <link  rel="icon" type="image/x-icon" href="https://images.divinho.com.br/favicon/default/favicon.ico" />
 <link  rel="shortcut icon" type="image/x-icon" href="https://images.divinho.com.br/favicon/default/favicon.ico" />
-<!-- Product Structured Data by Mageplaza SEO--><script type="application/ld+json">{
-    "@context": "http:\/\/schema.org\/",
-    "@type": "Product",
-    "name": "Vinho Luis Pato Vinhas Velhas 2017",
-    "description": "O Vinho\u00a0Luis Pato Vinhas Velhas \u00e9 uma verdadeira obra-prima do en\u00f3logo Luis Pato, um dos mais celebrados produtores portugueses. Elaborado com a uva Baga, oriunda de vinhas velhas, com idade m\u00e9dia de quarenta anos, em vinhedos na renomada regi\u00e3o vitivin\u00edcola da Bairrada. De colora\u00e7\u00e3o rubi intensa e profunda, revela aromas de especiarias e notas de madeira. Um Vinho Tinto potente, elegante e que mant\u00e9m seu car\u00e1ter frutado. Esse \u00e9 um r\u00f3tulo com um excelente potencial de guarda, podendo envelhecer por mais de quinze anos na garrafa.\u00a0",
-    "sku": "6536",
-    "url": "https:\/\/www.divinho.com.br\/vinho-luis-pato-vinhas-velhas-2017",
-    "image": "https:\/\/www.divinho.com.br\/pub\/media\/catalog\/product\/t\/i\/tinto_luis_pato_vinhas_velhas.png",
-    "offers": {
-        "@type": "Offer",
-        "priceCurrency": "BRL",
-        "price": 427.6,
-        "itemOffered": 96,
-        "availability": "http:\/\/schema.org\/InStock",
-        "url": "https:\/\/www.divinho.com.br\/vinho-luis-pato-vinhas-velhas-2017"
-    },
-    "gtin8": "Vinho Luis Pato Vinhas Velhas 2017",
-    "brand": {
-        "@type": "Thing",
-        "name": "Luis Pato"
-    }
-}</script>            <!-- Google Tag Manager -->
+            <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -55,7 +34,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         };
 
         window.dataLayer = window.dataLayer || [];
-                var dlObjects = [{"google_tag_params":{"ecomm_pagetype":"product","ecomm_prodid":"470","ecomm_totalvalue":"427.60","ecomm_category":"Pa\u00edses\/Portugal"},"ecommerce":{"detail":{"products":[{"name":"Vinho Luis Pato Vinhas Velhas 2017","id":"470","price":"427.60","brand":"Luis Pato","category":"Pa\u00edses\/Portugal"}]},"currencyCode":"BRL","impressions":[{"name":"Vinho Luis Pato Quinta do Ribeirinho P\u00e9 Franco 2013","id":"461","price":"2620.43","brand":"Luis Pato","category":"Pa\u00edses\/Portugal","list":"Related Products From Vinho Luis Pato Vinhas Velhas 2017","position":1},{"name":"Vinho Luis Pato Vinhas Velhas Branco 2019","id":"469","price":"227.79","brand":"Luis Pato","category":"Pa\u00edses\/Portugal","list":"Related Products From Vinho Luis Pato Vinhas Velhas 2017","position":2},{"name":"Espumante Luis Pato Baga Rosado","id":"471","price":"176.41","brand":"Luis Pato","category":"Vinhos\/Espumante","list":"Related Products From Vinho Luis Pato Vinhas Velhas 2017","position":3},{"name":"Vinho Luis Pato Maria Gomes 2019","id":"473","price":"134.17","brand":"Luis Pato","category":"Pa\u00edses\/Portugal","list":"Related Products From Vinho Luis Pato Vinhas Velhas 2017","position":4}]},"event":"impression","eventCategory":"Ecommerce","eventAction":"Impression","eventLabel":"product Vinho Luis Pato Maria Gomes 2019"}];
+                var dlObjects = [{"google_tag_params":{"ecomm_pagetype":"other"}}];
         for (var i in dlObjects) {
             window.dataLayer.push(dlObjects[i]);
         }
@@ -74,30 +53,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- BEGIN GTAG GLOBAL TAG -->
 <!-- END GTAG GLOBAL TAG -->
 <script type="text/javascript" src="https://chimpstatic.com/mcjs-connected/js/users/1255cf89de1ff1692e3832377/54a041db81224b7f42e4ef954.js" defer></script>
-
-<!-- This site is optimized with the Yoast SEO for Magento plugin 2.0.0 - https://yoast.com/magento/plugins/seo/ -->
-    <link rel="canonical" href="https://www.divinho.com.br/vinho-luis-pato-vinhas-velhas-2017" />
-
-    <!-- YoastSEO OpenGraph -->
-    <meta property="og:url" content="https://www.divinho.com.br/vinho-luis-pato-vinhas-velhas-2017"/>
-    <meta property="og:locale" content="pt_BR" />
-    <meta property="og:type" content="product"/>
-    <meta property="og:site_name" content="F R MOREIRA COMÉRCIO E DISTRIBUIÇÃO DE ALIMENTOS E BEBIDAS" />
-    <meta property="og:title" content="Vinho Luis Pato Vinhas Velhas 2017 - DiVinho "/>
-    <meta property="og:description" content="Compre Vinho Luis Pato Vinhas Velhas 2017 com o melhor preço do mercado. Pagamento em até 3x s/ juros e entregas para todo Brasil."/>
-            <meta property="og:image" content="https://images.divinho.com.br/catalog/product/cache/b7d320e39333d0f7a197a4ddb51399f4/t/i/tinto_luis_pato_vinhas_velhas.png"/>
-                        
-    <!-- YoastSEO Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-            <meta name="twitter:title" content="Vinho Luis Pato Vinhas Velhas 2017 - DiVinho "/>
-    <meta name="twitter:description" content="Compre Vinho Luis Pato Vinhas Velhas 2017 com o melhor preço do mercado. Pagamento em até 3x s/ juros e entregas para todo Brasil."/>
-            <meta name="twitter:image" content="https://images.divinho.com.br/catalog/product/cache/b7d320e39333d0f7a197a4ddb51399f4/t/i/tinto_luis_pato_vinhas_velhas.png"/>
-    
-
     </head>
     <body data-container="body"
           data-mage-init='{"loaderAjax": {}, "loader": { "icon": "https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/loader-2.gif"}}'
-        class="catalog-product-view product-vinho-luis-pato-vinhas-velhas-2017 page-layout-1column">
+        class="page-products pontuados-index-index page-layout-2columns-left">
         <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MM4CCWJ"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -230,7 +189,7 @@ require([
 
 </script>
 <li class="nav-item authorization-link" data-label="ou">
-    <a class="nav-link" href="https://www.divinho.com.br/customer/account/login/referer/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXZpbmhhcy12ZWxoYXMtMjAxNw%2C%2C/">
+    <a class="nav-link" href="https://www.divinho.com.br/customer/account/login/referer/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9tYW51ZmFjdHVyZXI9NTc2OCZub3RhPTk2LTEwMA%2C%2C/">
         Entrar    </a>
 </li>
 
@@ -277,7 +236,7 @@ require([
             </div>
                     </div>
         <script>
-        window.checkout = {"shoppingCartUrl":"https:\/\/www.divinho.com.br\/checkout\/cart\/","checkoutUrl":"https:\/\/www.divinho.com.br\/checkout\/","updateItemQtyUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/www.divinho.com.br\/","minicartMaxItemsVisible":5,"websiteId":"1","maxItemsToDisplay":10,"storeId":"1","customerLoginUrl":"https:\/\/www.divinho.com.br\/customer\/account\/login\/referer\/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXZpbmhhcy12ZWxoYXMtMjAxNw%2C%2C\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.divinho.com.br\/captcha\/refresh\/","isRequired":false,"timestamp":1636431062}}};
+        window.checkout = {"shoppingCartUrl":"https:\/\/www.divinho.com.br\/checkout\/cart\/","checkoutUrl":"https:\/\/www.divinho.com.br\/checkout\/","updateItemQtyUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/www.divinho.com.br\/","minicartMaxItemsVisible":5,"websiteId":"1","maxItemsToDisplay":10,"storeId":"1","customerLoginUrl":"https:\/\/www.divinho.com.br\/customer\/account\/login\/referer\/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9tYW51ZmFjdHVyZXI9NTc2OCZub3RhPTk2LTEwMA%2C%2C\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.divinho.com.br\/captcha\/refresh\/","isRequired":false,"timestamp":1636510800}}};
     </script>
     <script type="text/x-magento-init">
     {
@@ -291,9 +250,9 @@ require([
 </div>
 
 <div class="collapse d-lg-block" id="navbarSearch">
-        <form id="search-form6189f4d650f3f" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
+        <form id="search-form618b2c5008191" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
                 <input data-mage-init='{"quickSearch":{
-                                        "formSelector":"#search-form6189f4d650f3f",
+                                        "formSelector":"#search-form618b2c5008191",
                                         "url":"https://www.divinho.com.br/search/ajax/suggest/",
                                         "destinationSelector":"#search_autocomplete",
                                         "responseFieldElements":"ul li",
@@ -368,9 +327,9 @@ require([
 
 </div></div><div class="col-lg position-static col-nav"><div class="d-lg-none">
 <div class="collapse d-lg-block" id="navbarSearch">
-        <form id="search-form6189f4d652a04" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
+        <form id="search-form618b2c5009726" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
                 <input data-mage-init='{"quickSearch":{
-                                        "formSelector":"#search-form6189f4d652a04",
+                                        "formSelector":"#search-form618b2c5009726",
                                         "url":"https://www.divinho.com.br/search/ajax/suggest/",
                                         "destinationSelector":"#search_autocomplete",
                                         "responseFieldElements":"ul li",
@@ -412,11 +371,11 @@ require([
                                                                     <div class="mx-megamenu__sidebar mx-megamenu__sidebar--left">
                                         <div class="widget widget-categories-list block" data-collapse="1">
     <div class="megamenu__links">
-                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#vinhos6189f247cdd14" aria-expanded="true" aria-controls="vinhos6189f247cdd14">
+                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#vinhos618b0a68a8e72" aria-expanded="true" aria-controls="vinhos618b0a68a8e72">
             <i class="icon icon-vinhos"></i>
             <span>Tipo</span>
         </div>
-                <div id="vinhos6189f247cdd14" class="block-content catalog-category collapse-sm collapse">
+                <div id="vinhos618b0a68a8e72" class="block-content catalog-category collapse-sm collapse">
             <ul>
                                 <li class="category-item">
                     <a href="https://www.divinho.com.br/vinhos/tinto">
@@ -484,11 +443,11 @@ require([
 </div>
 <div class="widget widget-list-range">
     <div class="megamenu__links">
-        <div class="megamenu__title collapsed" data-toggle="collapse" data-target="#price-range6189f247d2432" aria-expanded="true" aria-controls="price-range6189f247d2432">
+        <div class="megamenu__title collapsed" data-toggle="collapse" data-target="#price-range618b0a68bd448" aria-expanded="true" aria-controls="price-range618b0a68bd448">
             <i class="icon icon icon-dollar-tag"></i>
             <span>Valor</span>
         </div>
-        <ul id="price-range6189f247d2432" class="block-content collapse-sm collapse">
+        <ul id="price-range618b0a68bd448" class="block-content collapse-sm collapse">
             <li><a href="https://www.divinho.com.br/vinhos?price=-59.9">Até R$59,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=59.9-99.9">R$59,90 a R$99,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=99.9-149.9">R$99,90 a R$149,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=149.9-249.9">R$149,90 a R$249,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=249.91-500">R$249,91 a R$500,00</a></li><li><a href="https://www.divinho.com.br/vinhos?price=500-">Acima de R$500,00</a></li>        </ul>
     </div>
 </div>
@@ -506,12 +465,12 @@ require([
     class="widget widget-list_mode widget-list_mode--uva">
     <div class="megamenu__links">
         <div class="block-title megamenu__title collapsed"
-            data-toggle="collapse" data-target="#uva6189f247b8902" aria-expanded="true"
-            aria-controls="uva6189f247b8902">
+            data-toggle="collapse" data-target="#uva618b0a682f5fe" aria-expanded="true"
+            aria-controls="uva618b0a682f5fe">
             <i class="icon icon-uva"></i>
             <span>Uvas</span>
         </div>
-        <div id="uva6189f247b8902"
+        <div id="uva618b0a682f5fe"
             class="block-content catalog-category collapse-sm collapse">
             <ul>
                 
@@ -561,11 +520,11 @@ require([
 </div>
  <div class="widget widget-categories-list block" data-collapse="1">
     <div class="megamenu__links">
-                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#pais6189f247c33b5" aria-expanded="true" aria-controls="pais6189f247c33b5">
+                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#pais618b0a68878c3" aria-expanded="true" aria-controls="pais618b0a68878c3">
             <i class="icon icon-pais"></i>
             <span>Pa&iacute;ses</span>
         </div>
-                <div id="pais6189f247c33b5" class="block-content catalog-category collapse-sm collapse">
+                <div id="pais618b0a68878c3" class="block-content catalog-category collapse-sm collapse">
             <ul>
                                 <li class="category-item">
                     <a href="https://www.divinho.com.br/pais/austria">
@@ -3562,11 +3521,11 @@ require([
                             </div>
                 <div class="megamenu__product-image">
             <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">
-                <img src="https://images.divinho.com.br/catalog/product/cache/fa01b5f6b2a94beaaa3488ed5c6cafe6/c/a/casanova_di_neri_rosso_di_montalcino.png" alt="Vinho Casanova di Neri Rosso di Montalcino 2019" title="Vinho Casanova di Neri Rosso di Montalcino 2019">
+                <img src="https://images.divinho.com.br/catalog/product/cache/fa01b5f6b2a94beaaa3488ed5c6cafe6/c/a/casanova_di_neri_rosso_di_montalcino.png" alt="Vinho Casanova di Neri Rosso di Montalcino 2018" title="Vinho Casanova di Neri Rosso di Montalcino 2018">
             </a>
         </div>
         <div class="megamenu__product-name text-center mt-2">
-            <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">Vinho Casanova di Neri Rosso di Montalcino 2019</a>
+            <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">Vinho Casanova di Neri Rosso di Montalcino 2018</a>
             <div class="text-primary price">
                 R$366,00            </div>
         </div>
@@ -3876,12 +3835,12 @@ require([
     class="widget widget-list_mode widget-list_mode--criticos">
     <div class="megamenu__links">
         <div class="block-title megamenu__title"
-             data-target="#criticos6189f249ba2f8" aria-expanded="true"
-            aria-controls="criticos6189f249ba2f8">
+             data-target="#criticos618b0a6f8879c" aria-expanded="true"
+            aria-controls="criticos618b0a6f8879c">
             <i class="icon icon-criticos"></i>
             <span>Críticos</span>
         </div>
-        <div id="criticos6189f249ba2f8"
+        <div id="criticos618b0a6f8879c"
             class="block-content catalog-category">
             <ul>
                                 <li>
@@ -4183,12 +4142,12 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     class="widget widget-list_mode widget-list_mode--vinicolas">
     <div class="megamenu__links">
         <div class="block-title megamenu__title"
-             data-target="#vinicolas6189f249cb53f" aria-expanded="true"
-            aria-controls="vinicolas6189f249cb53f">
+             data-target="#vinicolas618b0a6fd10d5" aria-expanded="true"
+            aria-controls="vinicolas618b0a6fd10d5">
             <i class="icon icon-vinicolas"></i>
             <span>Vinícolas</span>
         </div>
-        <div id="vinicolas6189f249cb53f"
+        <div id="vinicolas618b0a6fd10d5"
             class="block-content catalog-category">
             <ul>
                 
@@ -4293,51 +4252,32 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 </div>
                                     </div>
     </ul>
-</div></div><div class="col-lg-auto headerphones"><a href="https://wa.me/5511943491044?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20pedido."><i class="fab fa-whatsapp"></i> (11) 94349-1044</a><a href="tel:551127294004"><i class="fas fa-phone"></i> (11) 2729-4004</a></div></div></div></nav></header><main id="site-content" class="site-content"><nav class="breadcrumbs__section breadcrumbs__section--single-product"><div class="container"><div class="d-flex">
-
-<nav class="breadcrumbs breadcrumbs--single-product" aria-label="breadcrumb"></nav>
-
-<script type="text/x-magento-init">
-    {
-        ".breadcrumbs": {
-            "breadcrumbs": {"categoryUrlSuffix":"","useCategoryPathInUrl":0,"product":"Vinho Luis Pato Vinhas Velhas 2017"}        }
-    }
-</script><div class="redes-sociais align-self-end ml-auto mr-4 mb-3 d-none d-md-block">
-    <!-- WhatsApp -->
-    <ul>
-        <li>
-            <a target="_blank"
-                href="https://api.whatsapp.com/send?text=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-luis-pato-vinhas-velhas-2017">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-        </li>
-        <li>
-            <!-- Facebook -->
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-luis-pato-vinhas-velhas-2017&t=Vinho+Luis+Pato+Vinhas+Velhas+2017"
-                onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false'
-                title="Share on facebook">
-                <i class="fab fa-facebook"></i>
-
-            </a>
-        </li>
-        <!-- TWITTER -->
-        <li>
-            <a href="http://twitter.com/home/?status=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-luis-pato-vinhas-velhas-2017(Vinho+Luis+Pato+Vinhas+Velhas+2017)"
-                onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false'
-                title="Share on Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-        </li>
-        <li>
-            <!-- Pinterest -->
-            <a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-luis-pato-vinhas-velhas-2017&media= &description=Vinho+Luis+Pato+Vinhas+Velhas+2017"
-                onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false'
-                title="Pin it">
-                <i class="fab fa-pinterest"></i>
-            </a>
-        </li>
-    </ul>
-</div></div><div data-bind="scope: 'messages'">
+</div></div><div class="col-lg-auto headerphones"><a href="https://wa.me/5511943491044?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20pedido."><i class="fab fa-whatsapp"></i> (11) 94349-1044</a><a href="tel:551127294004"><i class="fas fa-phone"></i> (11) 2729-4004</a></div></div></div></nav></header>
+<section class="breadcrumbs__section">
+    <div class="container">
+        <div class="row">
+            <nav class="breadcrumbs" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                                        <li class="breadcrumb-item  Home">
+                                                <a href="/"
+                            title="Início">
+                            Início                        </a>
+                                            </li>
+                                        <li class="breadcrumb-item active Vinhos Pontuados">
+                                                Vinhos Pontuados                                            </li>
+                                    </ol>
+            </nav>
+        </div>
+    </div>
+</section>
+<main id="site-content" class="site-content"><a id="contentarea" tabindex="-1"></a>
+<div class="container"><div class="page-title-wrapper">
+    <h1 class="page-title&#x20;page-title__pink&#x20;mb-4"
+                >
+        <span class="base" data-ui-id="page-title-wrapper" >Vinhos Pontuados</span>    </h1>
+    </div>
+<div class="page messages"><div data-placeholder="messages"></div>
+<div data-bind="scope: 'messages'">
     <div data-bind="foreach: { data: cookieMessages, as: 'message' }" class="messages">
         <div role="alert" data-bind="attr: {
             class: 'alert alert-' + message.type + ' ' + message.type,
@@ -4368,9 +4308,115 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             }
     }
 </script>
-</div></nav><a id="contentarea" tabindex="-1"></a>
-<div class="container"><div class="page messages"><div data-placeholder="messages"></div>
-</div><div class="columns"><div class="column main"><input name="form_key" type="hidden" value="YlrBWkUJPpVwL8hS" /><script type="text/x-magento-init">
+</div><div class="row"><div class="hidden-xs col-sm-3"><div class="sidebar-filters border">
+    <div class="panel panel-default filter">
+        <div class="panel-heading filter-title d-none">
+            <strong>Filtrar por</strong>
+        </div>
+        <div class="panel-body filter-content">
+            <div class="filter-current">
+    <h4 class="block-subtitle filter-current-subtitle"
+            role="heading"
+            aria-level="2"
+            data-count="2">Comprar por</h4>
+    <ul class="items mb-0">
+                    <li class="item">
+                                    <a class="action remove" href="https://www.divinho.com.br/vinhos-pontuados?nota=96-100"
+                       title="Remover Produtor Biondi Santi">
+                        <span class="far fa-times-circle mr-3"></span>
+                    </a>
+                                <span class="filter-label">Produtor</span>
+                <span class="filter-value label label-default">Biondi Santi</span>
+            </li>
+                    <li class="item">
+                                    <a class="action remove" href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5768"
+                       title="Remover Pontuação 96-100">
+                        <span class="far fa-times-circle mr-3"></span>
+                    </a>
+                                <span class="filter-label">Pontuação</span>
+                <span class="filter-value label label-default">96-100</span>
+            </li>
+            </ul>
+</div>
+                            <div class="block-actions filter-actions mb-4">
+                    <a href="https://www.divinho.com.br/vinhos-pontuados" class="action clear filter-clear">
+                        Limpar Tudo                    </a>
+                </div>
+                                                                        <h4 role="heading" aria-level="2" class="block-subtitle filter-subtitle mb-3">
+                        Opções de Compra                    </h4>
+                    <dl class="filter-options" id="narrow-by-list">
+                                                                                                                                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">País</dt>
+                        <dd class="filter-options-content">
+<ul class="items">
+        
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5768&amp;nota=96-100&amp;pais=6224">
+                    Itália                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            </ol>
+</dd>
+                                                                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">Uva</dt>
+                        <dd class="filter-options-content">
+<ul class="items">
+        
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5768&amp;nota=96-100&amp;uva=5438">
+                    Sangiovese                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            </ol>
+</dd>
+                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">Tipo</dt>
+                        <dd class="filter-options-content">
+<ul class="items">
+        
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5768&amp;nota=96-100&amp;tipo=6082">
+                    Tinto                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            </ol>
+</dd>
+                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">Pontuação</dt>
+                        <dd class="filter-options-content">
+<ul class="items">
+        
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5768&amp;nota=96-100">
+                    96 à 100 pontos                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            </ol>
+</dd>
+                                                            </dl>
+                    </div>
+    </div>
+</div></div><div class="col-xs-12 col-sm-9"><input name="form_key" type="hidden" value="CPbMA6K2PszW12zL" /><script type="text/x-magento-init">
     {
         "*": {
             "Magento_Customer/js/section-config": {
@@ -4414,865 +4460,181 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 <script type="text/x-magento-init">
     {
         "body": {
-            "pageCache": {"url":"https:\/\/www.divinho.com.br\/page_cache\/block\/render\/id\/470\/","handles":["default","catalog_product_view","catalog_product_view_type_simple","catalog_product_view_id_470","catalog_product_view_sku_6536","gabrielqs_themesettings_footer_1","gabrielqs_themesettings_header_1","gabrielqs_themesettings_customization","mpseo_remove_schema"],"originalRequest":{"route":"catalog","controller":"product","action":"view","uri":"\/vinho-luis-pato-vinhas-velhas-2017"},"versionCookieName":"private_content_version"}        }
+            "pageCache": {"url":"https:\/\/www.divinho.com.br\/page_cache\/block\/render\/?manufacturer=5768&nota=96-100","handles":["default","pontuados_index_index","gabrielqs_themesettings_footer_1","gabrielqs_themesettings_header_1","gabrielqs_themesettings_customization","mpseo_remove_schema"],"originalRequest":{"route":"pontuados","controller":"index","action":"index","uri":"\/vinhos-pontuados?manufacturer=5768&nota=96-100"},"versionCookieName":"private_content_version"}        }
     }
 </script>
 
 <div id="monkey_campaign" style="display:none;"
      data-mage-init='{"campaigncatcher":{"checkCampaignUrl": "https://www.divinho.com.br/mailchimp/campaign/check/"}}'>
-</div><div class="single-product mt-5 mt-md-0"><div class="single-product__title"><div class="row align-items-center"><div class="col-4 col-lg-3 align-self-start">
+</div>    <div class="toolbar toolbar-products d-sm-flex border-bottom pt-3 pb-3 mb-3 pt-md-0 align-items-end"
+         data-mage-init='{"productListToolbarForm":{"mode":"product_list_mode","direction":"product_list_dir","order":"product_list_order","limit":"product_list_limit","modeDefault":"grid","directionDefault":"asc","orderDefault":"position","limitDefault":"12","url":"https:\/\/www.divinho.com.br\/vinhos-pontuados?manufacturer=5768&nota=96-100","formKey":"CPbMA6K2PszW12zL","post":false}}'>
 
-<div class="single-product__photo">
-    <img
-        alt="main product photo"
-        src="https://images.divinho.com.br/catalog/product/cache/b7d320e39333d0f7a197a4ddb51399f4/t/i/tinto_luis_pato_vinhas_velhas.png"
-    />
-</div>
+         <div class="toolbar-amount mb-2 mb-md-0" id="toolbar-amount">
+            <span class="toolbar-number font-weight-bold">1</span> artigo    </div>
 
-</div><div class="col-8 col-lg-9 p-md-0 pl-0"><div class="row no-gutters align-items-center"><div class="col-lg"><div class="page-title-wrapper">
-    <h1 class="page-title&#x20;product"
-                >
-        <span class="base" data-ui-id="page-title-wrapper" itemprop="name">Vinho Luis Pato Vinhas Velhas 2017</span>    </h1>
-    </div>
-</div><div class="col-lg-5 d-flex align-items-center justify-content-around flex-lg-nowrap flex-wrap-reverse">
-
-
-
-
-    <div class="text-lg-center d-flex d-lg-block align-items-center mb-3 mb-lg-0">
-        <div class="product__bandeira">
-            <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal">
-                        <div class="product__tipo product__tipo--tinto d-none d-md-block" data-toggle="tooltip"
-                data-placement="right" title="" data-original-title="Tinto"></div>
-                    </div>
-        <div class="text-center ml-3 d-block d-md-none">
-            <a href="#" data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":470,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXZpbmhhcy12ZWxoYXMtMjAxNw,,"}}' class="action towishlist wishlist" data-action="add-to-wishlist">
-            <i class="far fa-heart mr-2"></i>  
-                <span>
-                    Lista de Desejos                </span>
-            </a>    
-        </div>
-    </div>
-
-
-<script type="text/x-magento-init">
-{
-    "*": {
-        "Magento_Ui/js/core/app": {
-            "components": {
-                "wishlist": {
-                    "component": "Magento_Wishlist/js/view/wishlist"
-                }
-            }
-        }
-    }
-}
-</script>
-</div></div></div></div></div><div class="d-flex flex-wrap mt-3"><div class="offset-lg-3 col-lg-6 order-1 order-md-0"><div class="product__content mr-lg-3">
-
-<hr class="border-primary d-md-none">
-
-<div class="product__content__title d-lg-none">Sobre o Vinho</div>
-
-<div class="product-attribute overview">
-            <span class="value" itemprop="description">
-            <p>O <strong>Vinho Luis Pato Vinhas Velhas </strong>é uma verdadeira obra-prima do enólogo <strong>Luis Pato</strong>, um dos mais celebrados produtores portugueses. Elaborado com a uva <strong>Baga</strong>, oriunda de vinhas velhas, com idade média de quarenta anos, em vinhedos na renomada região vitivinícola da <strong>Bairrada</strong>. De coloração rubi intensa e profunda, revela aromas de especiarias e notas de madeira. Um <strong>Vinho Tinto </strong>potente, elegante e que mantém seu caráter frutado. Esse é um rótulo com um excelente potencial de guarda, podendo envelhecer por mais de quinze anos na garrafa. </p>        </span>
-</div>
-<div class="product__attributes additional-attributes-wrapper table-wrapper">
-    <ul class="attributes data additional-attribute" id="product-attribute-specs-table">
-                        <li class="attribute pais">
-            <div class="attribute__item">
-                <div class="label">País</div>
-                <div class="data" data-code="country_of_manufacture"
-                    data-th="Pa&#xED;s">
-                                                    <a href="https://www.divinho.com.br/pais/portugal">
-                                                                                         <span>Portugal</span>
-                                                                                        </a>
-                                                                                                </div>
-            </div>
-        </li>
-                        <li class="attribute regi-o">
-            <div class="attribute__item">
-                <div class="label">Região</div>
-                <div class="data" data-code="regi_o"
-                    data-th="Regi&#xE3;o">
-                                                    <a href="https://www.divinho.com.br/pais/portugal/bairrada">
-                                                                                         <span>Bairrada</span>
-                                                                                        </a>
-                                                                                                </div>
-            </div>
-        </li>
-                        <li class="attribute produtor">
-            <div class="attribute__item">
-                <div class="label">Produtor</div>
-                <div class="data" data-code="manufacturer"
-                    data-th="Produtor">
-                                                    <a href="https://www.divinho.com.br/vinicolas/luis-pato/">
-                                                                                         <span>Luis Pato</span>
-                                                                                        </a>
-                                                                                                </div>
-            </div>
-        </li>
-                        <li class="attribute uva">
-            <div class="attribute__item">
-                <div class="label">Uva</div>
-                <div class="data" data-code="uva"
-                    data-th="Uva">
-                                                    <a href="https://www.divinho.com.br/uva/baga/">
-                                                                                         <span>Baga</span>
-                                                                                        </a>
-                                                                                                </div>
-            </div>
-        </li>
-                        <li class="attribute tipo">
-            <div class="attribute__item">
-                <div class="label">Tipo</div>
-                <div class="data" data-code="tipo"
-                    data-th="Tipo">
-                                                    <a href="https://www.divinho.com.br/vinhos/tinto">
-                                                                                         <span>Tinto</span>
-                                                                                        </a>
-                                                                                                </div>
-            </div>
-        </li>
-                        <li class="attribute teor-alcoolico">
-            <div class="attribute__item">
-                <div class="label">Teor Alcoólico</div>
-                <div class="data" data-code="teor_alcoolico"
-                    data-th="Teor&#x20;Alco&#xF3;lico">
-                    13%                </div>
-            </div>
-        </li>
-                        <li class="attribute tamanho-da-garrafa">
-            <div class="attribute__item">
-                <div class="label">Tamanho da garrafa</div>
-                <div class="data" data-code="tamanho_da_garrafa"
-                    data-th="Tamanho&#x20;da&#x20;garrafa">
-                                                                                 <span>750ml</span>
-                                                                                                                            </div>
-            </div>
-        </li>
-                        <li class="attribute temperatura-de-servico">
-            <div class="attribute__item">
-                <div class="label">Temperatura de serviço</div>
-                <div class="data" data-code="temperatura_de_servico"
-                    data-th="Temperatura&#x20;de&#x20;servi&#xE7;o">
-                                                                                 <span>18 a 20°C</span>
-                                                                                                                            </div>
-            </div>
-        </li>
-                        <li class="attribute harmonizac-o">
-            <div class="attribute__item">
-                <div class="label">Harmonização</div>
-                <div class="data" data-code="harmonizacao"
-                    data-th="Harmoniza&#xE7;&#xE3;o">
-                                                                                 <i class="icon-carnes-vermelhas" data-toggle="tooltip" data-placement="top" title="Carnes&#x20;vermelhas"></i>
-                                                                                                                                                                         <i class="icon-porco" data-toggle="tooltip" data-placement="top" title="Porco"></i>
-                                                                                                                                                                         <i class="icon-cordeiro" data-toggle="tooltip" data-placement="top" title="Cordeiro"></i>
-                                                                                                                            </div>
-            </div>
-        </li>
-            </ul>
-</div>
-    <div class="d-none d-md-block">
-        <a href="#"
-           class="wishlist action towishlist btn btn-xl btn-outline-primary py-3 "
-           data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":470,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXZpbmhhcy12ZWxoYXMtMjAxNw,,"}}'
-           data-action="add-to-wishlist">
-            <i class="far fa-heart mr-3" aria-hidden="true"></i>
-            <span>Lista de Desejos</span>
+        
+        
+                    <div class="toolbar-sorter sorter form-inline ml-md-auto small">
+    <label class="sorter-label mr-2 d-none d-md-flex" for="sorter">Ordenar por</label>
+    <select id="sorter" data-role="sorter" class="sorter-options custom-select">
+                    <option value="position"
+                                    selected="selected"
+                                >
+                Posição            </option>
+                    <option value="name"
+                                >
+                Nome do produto            </option>
+                    <option value="price"
+                                >
+                Preço            </option>
+                    <option value="vinificac_o"
+                                >
+                Vinificação            </option>
+                    <option value="temperatura_de_servico"
+                                >
+                Temperatura de serviço            </option>
+                    <option value="regi_o"
+                                >
+                Região            </option>
+            </select>
+            <a title="Definir Direção Decrescente" href="#" class="action sorter-action sort-asc btn btn-default btn-sm" data-role="direction-switcher" data-value="desc">
+            <span class="glyphicon glyphicon-arrow-down"></span>
         </a>
     </div>
-<script type="text/x-magento-init">
-    {
-        "body": {
-            "addToWishlist": {"productType":"simple"}        }
-    }
-</script>
-</div></div><div class="col-lg-3 p-md-0"><div class="single-product__actions"><div class="product-info-main"><div class="product-info-price"><div class="d-flex align-items-center justify-content-between"><div class="price-box price-final_price" data-role="priceBox" data-product-id="470" data-price-box="product-id-470">
-   <div class="price__regular"><br></div>
-    <div class="price__sale">
-        
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-470"                data-price-amount="427.6"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$427,60</span></span>
-        </span>
-    </div>
-
-</div></div>                <div class="installment">
-            Em até <span>3x de R$142,53 s/ juros</span>        </div>
-    </div>
-
-<div class="product-add-form">
-    <form data-product-sku="6536"
-          action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXZpbmhhcy12ZWxoYXMtMjAxNw%2C%2C/product/470/" method="post"
-          id="product_addtocart_form">
-        <input type="hidden" name="product" value="470" />
-        <input type="hidden" name="selected_configurable_option" value="" />
-        <input type="hidden" name="related_product" id="related-products-field" value="" />
-        <input type="hidden" name="item"  value="470" />
-        <input name="form_key" type="hidden" value="YlrBWkUJPpVwL8hS" />                            <div class="box-tocart">
-    <div class="fieldset">
-                <div class="form-row align-items-center mt-2">
-            <div class="form-group col-3">
-                <label for="qty"><span>Qtd</span></label>
-                <div class="single-product__quantity">
-                    <div class="custom-number custom-number--product">
-                    <input type="number" name="qty" id="qty" min="1" step="1" maxlength="12"
-                            value="1"
-                            title="Qtd" class="form-control input-text qty"
-                            data-validate="{&quot;required-number&quot;:true,&quot;validate-item-quantity&quot;:{&quot;minAllowed&quot;:1,&quot;maxAllowed&quot;:10000}}" />
-                            <div class="custom-number-button custom-number-button--up"><i class="fas fa-chevron-up"></i>
-                        </div>
-                            <div class="custom-number-button custom-number-button--down"><i class="fas fa-chevron-down"></i>
-                        </div>
-                    </div>
-                </div>
+                                <div class="modes d-none d-md-block">
+                          <!--   <strong class="modes-label" id="modes-label"></strong> -->
+            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group mr-2" role="group" aria-label="First group">
+                                                                                                                                                <a href="#" title="Grade"
+                                class="modes-mode active mode-grid btn btn-primary"
+                                data-value="grid">
+                                                            <span class="fas fa-th"></span>
+                                                                                </a>
+                                                                                                                                                                    <a class="modes-mode mode-list btn btn-primary"
+                           title="Lista"
+                           href="#"
+                           data-role="mode-switcher"
+                           data-value="list"
+                           id="mode-list"
+                           aria-labelledby="modes-label mode-list">
+                                                            <span class="fas fa-list"></span>
+                                                                                </a>
+                                                    </div>
             </div>
-            <!-- <div class="form-group offset-1 col-8 d-none">
-                <label for="cupom">CÓD. Promocional</label>
-                <input placeholder="Digite aqui seu código" class="form-control" id="cupom">
-            </div> -->
-          <!--   <div class="col text-center">
-                                <div class="stock available">
-                    <span>Em estoque</span>
-                </div>
-                            </div> -->
-        </div>
-
-                <div class="form-group actions">
-            <button type="submit" title="Comprar"
-                class="btn btn--product action primary tocart" id="product-addtocart-button">
-                <i class="fas fa-shopping-cart mr-2"></i>
-                <span>Comprar</span>
-            </button>
-            
-<div id="instant-purchase" data-bind="scope:'instant-purchase'">
-    <!-- ko template: getTemplate() --><!-- /ko -->
-</div>
-<script type="text/x-magento-init">
-    {
-        "#instant-purchase": {
-            "Magento_Ui/js/core/app": {"components":{"instant-purchase":{"component":"Magento_InstantPurchase\/js\/view\/instant-purchase","config":{"template":"Magento_InstantPurchase\/instant-purchase","buttonText":"Instant Purchase","purchaseUrl":"https:\/\/www.divinho.com.br\/instantpurchase\/button\/placeOrder\/"}}}}        }
-    }
-</script>
-        </div>
-    </div>
-</div>
-<script type="text/x-magento-init">
-    {
-        "#product_addtocart_form": {
-            "Magento_Catalog/product/view/validation": {
-                "radioCheckboxClosest": ".nested"
-            }
-        }
-    }
-</script>
-<script type="text/x-magento-init">
-    {
-        "#product_addtocart_form": {
-            "catalogAddToCart": {
-                "bindSubmit": true,
-                "addToCartButtonTextDefault": "Comprar"
-            }
-        }
-    }
-</script>
-        
-                    </form>
-</div>
-
-<script>
-    require([
-        'jquery',
-        'priceBox'
-    ], function($){
-        var dataPriceBoxSelector = '[data-role=priceBox]',
-            dataProductIdSelector = '[data-product-id=470]',
-            priceBoxes = $(dataPriceBoxSelector + dataProductIdSelector);
-
-        priceBoxes = priceBoxes.filter(function(index, elem){
-            return !$(elem).find('.price-from').length;
-        });
-        priceBoxes.priceBox({'priceConfig': {"productId":"470","priceFormat":{"pattern":"R$%s","precision":2,"requiredPrecision":2,"decimalSymbol":",","groupSymbol":".","groupLength":3,"integerRequired":false}}});
-    });
-</script>
-<div class="opt2flow-shipping-estimate"><div class="cart-after__title text-uppercase">
-    <i class="fas fa-2x fa-shipping-fast text-primary mr-2 align-middle"></i>
-    <strong>Consultar Valor do Frete</strong>
-</div>
-<div class="fieldset">
-    <div class="field postcode">
-        <div class="control d-flex align-items-center ">
-            <input type="text" minlength="8" maxlength="8" oninput="this.value=this.value.replace(/[^0-9]/g,'');" name="opt2flow-postcode" id="opt2flow-postcode" maxlength="9" title="CEP" class="input-text opt2flow-postcode mask-cep mr-2" placeholder="digite o CEP" style="height: 38px;">
-            <button name="btn-estimate-shipping" id="btn-estimate-shipping" type="button" title="ok" class="action btn btn-primary tocart">ok</button>
-        </div>
-    </div>
-    <input type="hidden" name="opt2flow_product_id" id="opt2flow_product_id" value="470">
-</div>
-<div id="shipping-estimate-results"></div>
-<script>
-    require ([
-            'jquery'
-        ],
-        function ($) {
-            $(window).on("load", function () {
-                require([
-                    'opt2flowproductshipping'
-                ]);
-            });
-        });
-</script>
-</div></div><div class="alert price alert-secondary small font-weight-bold p-2 my-3 price">
-    <a href="https://www.divinho.com.br/productalert/add/price/product_id/470/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXZpbmhhcy12ZWxoYXMtMjAxNw%2C%2C/"
-       title="Receber&#x20;notifica&#xE7;&#xF5;es&#x20;de&#x20;baixa&#x20;de&#x20;pre&#xE7;o" class="action alert-product">
-        <i class="fas fa-exclamation-circle mr-1"></i>
-        Receber notificações de baixa de preço    </a>
-</div>
-</div></div></div><div class="row"><div class="col-lg">
-
-<div class="single-product__accordion mt-md-5" id="accordion">
-            <div class="attribute-item" data-attribute="vinifcacao">
-            <h2 class="attribute__header">
-                Vinificação            </h2>
-            <div class="attribute__content">
-                <p>O Luis Pato Vinhas Velhas 2017 é produzido com a uva Baga, oriunda de vinhas velhas, com idade média de quarenta anos, em vinhedos da região vitivinícola da Bairrada, em Portugal.</p>            </div>
-        </div>
-                <div class="attribute-item" data-attribute="sobre_a_vinicola">
-            <h2 class="attribute__header">
-                Sobre a vinícola            </h2>
-            <div class="attribute__content">
-                Luis Pato é um dos maiores embaixadores do vinho português no mundo. Sua fama de "revolucionário da Bairrada" é mais do que justa, pois desde o seu primeiro vinho lançado, em 1980, até hoje, ele não deixou de inovar e apresentar novos e deliciosos aromas e sabores da Bairrada. Luis Pato pertence a uma família com longa tradição na elaboração de vinhos. Desde o século XVIII, a família Pato produz vinhos na Quinta do Ribeirinho. Seu pai, João Pato, é considerado uma figura histórica por ter sido o primeiro produtor a engarrafar vinhos na região, depois da sua demarcação, na década de 1970. Luis Pato está impregnado do espírito inconformista do pai, construindo uma trajetória marcada por novidades: em 1985, introduziu barricas novas de carvalho francês na maturação dos vinhos; em 1988, plantou a cepa Baga em pé franco, ou seja, sem enxerto, e produziu o primeiro Vinhas Velhas de Portugal; em 1995, lançou vinhos de vinhedo único, como Vinha Pan, Vinha Barrosa e Quinta do Ribeirinho Pé Franco. Sua genialidade atravessou o século e, em 2005, Luis Pato criou, junto com sua filha Filipa, o FLP, usando o método da crio-extração. Entre outras de suas façanhas recentes que vale a pena citar, estão o lançamento de seus primeiros vinhos naturais doces (branco, rosado e tinto) da linha Abafado Molecular e a produção do primeiro tinto de uva branca – o Fernão Pires, que tem no corte 94% de Maria Gomes e 6% de película de Baga. Para tantas invenções, Luis Pato conta com 60 hectares de vinhedos com Baga, Touriga Nacional e Tinto Cão, entre as uvas tintas, e Maria Gomes, Cerceal da Bairrada, Bical e Sercialinho, entre as brancas. Com uma adega bem equipada e muita energia criativa, Luis Pato deve continuar a surpreender os amantes de vinho em todo o mundo.            </div>
-        </div>
-        </div><div class="d-md-none product-info__mobile"><hr class="border-primary my-4">
-<div class="product-add-form">
-    <form data-product-sku="6536"
-          action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXZpbmhhcy12ZWxoYXMtMjAxNw%2C%2C/product/470/" method="post"
-          id="product_addtocart_form">
-        <input type="hidden" name="product" value="470" />
-        <input type="hidden" name="selected_configurable_option" value="" />
-        <input type="hidden" name="related_product" id="related-products-field" value="" />
-        <input type="hidden" name="item"  value="470" />
-        <input name="form_key" type="hidden" value="YlrBWkUJPpVwL8hS" />                            <div class="box-tocart">
-    <div class="fieldset">
-                <div class="form-row align-items-center mt-2">
-            <div class="form-group col-3">
-                <label for="qty"><span>Qtd</span></label>
-                <div class="single-product__quantity">
-                    <div class="custom-number custom-number--product">
-                    <input type="number" name="qty" id="qty" min="1" step="1" maxlength="12"
-                            value="1"
-                            title="Qtd" class="form-control input-text qty"
-                            data-validate="{&quot;required-number&quot;:true,&quot;validate-item-quantity&quot;:{&quot;minAllowed&quot;:1,&quot;maxAllowed&quot;:10000}}" />
-                            <div class="custom-number-button custom-number-button--up"><i class="fas fa-chevron-up"></i>
-                        </div>
-                            <div class="custom-number-button custom-number-button--down"><i class="fas fa-chevron-down"></i>
-                        </div>
-                    </div>
-                </div>
             </div>
-            <!-- <div class="form-group offset-1 col-8 d-none">
-                <label for="cupom">CÓD. Promocional</label>
-                <input placeholder="Digite aqui seu código" class="form-control" id="cupom">
-            </div> -->
-          <!--   <div class="col text-center">
-                                <div class="stock available">
-                    <span>Em estoque</span>
-                </div>
-                            </div> -->
-        </div>
-
-                <div class="form-group actions">
-            <button type="submit" title="Comprar"
-                class="btn btn--product action primary tocart" id="product-addtocart-button">
-                <i class="fas fa-shopping-cart mr-2"></i>
-                <span>Comprar</span>
-            </button>
-                    </div>
-    </div>
-</div>
-<script type="text/x-magento-init">
-    {
-        "#product_addtocart_form": {
-            "Magento_Catalog/product/view/validation": {
-                "radioCheckboxClosest": ".nested"
-            }
-        }
-    }
-</script>
-<script type="text/x-magento-init">
-    {
-        "#product_addtocart_form": {
-            "catalogAddToCart": {
-                "bindSubmit": true,
-                "addToCartButtonTextDefault": "Comprar"
-            }
-        }
-    }
-</script>
-        
-                    </form>
-</div>
-
-<script>
-    require([
-        'jquery',
-        'priceBox'
-    ], function($){
-        var dataPriceBoxSelector = '[data-role=priceBox]',
-            dataProductIdSelector = '[data-product-id=470]',
-            priceBoxes = $(dataPriceBoxSelector + dataProductIdSelector);
-
-        priceBoxes = priceBoxes.filter(function(index, elem){
-            return !$(elem).find('.price-from').length;
-        });
-        priceBoxes.priceBox({'priceConfig': {"productId":"470","priceFormat":{"pattern":"R$%s","precision":2,"requiredPrecision":2,"decimalSymbol":",","groupSymbol":".","groupLength":3,"integerRequired":false}}});
-    });
-</script>
-</div></div></div></div><script type="text/x-magento-init">
-    {
-        "body": {
-            "requireCookie": {"noCookieUrl":"https:\/\/www.divinho.com.br\/cookie\/index\/noCookies\/","triggers":[".action.towishlist"],"isRedirectCmsPage":true}        }
-    }
-</script>
-<script type="text/x-magento-init">
-    {
-        "*": {
-                "Magento_Catalog/js/product/view/provider": {
-                    "data": {"items":{"470":{"add_to_cart_button":{"post_data":"{\"action\":\"https:\\\/\\\/www.divinho.com.br\\\/checkout\\\/cart\\\/add\\\/uenc\\\/%25uenc%25\\\/product\\\/470\\\/\",\"data\":{\"product\":\"470\",\"uenc\":\"%uenc%\"}}","url":"https:\/\/www.divinho.com.br\/checkout\/cart\/add\/uenc\/%25uenc%25\/product\/470\/","required_options":false},"add_to_compare_button":{"post_data":null,"url":"{\"action\":\"https:\\\/\\\/www.divinho.com.br\\\/catalog\\\/product_compare\\\/add\\\/\",\"data\":{\"product\":\"470\",\"uenc\":\"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXZpbmhhcy12ZWxoYXMtMjAxNw,,\"}}","required_options":null},"price_info":{"final_price":427.6,"max_price":427.6,"max_regular_price":427.6,"minimal_regular_price":427.6,"special_price":null,"minimal_price":427.6,"regular_price":427.6,"formatted_prices":{"final_price":"<span class=\"price\">R$427,60<\/span>","max_price":"<span class=\"price\">R$427,60<\/span>","minimal_price":"<span class=\"price\">R$427,60<\/span>","max_regular_price":"<span class=\"price\">R$427,60<\/span>","minimal_regular_price":null,"special_price":null,"regular_price":"<span class=\"price\">R$427,60<\/span>"},"extension_attributes":{"msrp":{"msrp_price":"<span class=\"price\">R$0,00<\/span>","is_applicable":"","is_shown_price_on_gesture":"","msrp_message":"","explanation_message":"Our price is lower than the manufacturer&#039;s &quot;minimum advertised price.&quot; As a result, we cannot show you the price in catalog or the product page. <br><br> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart."},"tax_adjustments":{"final_price":427.6,"max_price":427.6,"max_regular_price":427.6,"minimal_regular_price":427.6,"special_price":427.6,"minimal_price":427.6,"regular_price":427.6,"formatted_prices":{"final_price":"<span class=\"price\">R$427,60<\/span>","max_price":"<span class=\"price\">R$427,60<\/span>","minimal_price":"<span class=\"price\">R$427,60<\/span>","max_regular_price":"<span class=\"price\">R$427,60<\/span>","minimal_regular_price":null,"special_price":"<span class=\"price\">R$427,60<\/span>","regular_price":"<span class=\"price\">R$427,60<\/span>"}},"weee_attributes":[],"weee_adjustment":"<span class=\"price\">R$427,60<\/span>"}},"images":[{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/c0ffc0f3780617b20732f12bef036575\/t\/i\/tinto_luis_pato_vinhas_velhas.png","code":"recently_viewed_products_grid_content_widget","height":300,"width":240,"label":"Garrafa de Vinho Tinto Luis Pato Vinhas Velhas 2017","resized_width":240,"resized_height":300},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/d9e3e7d2d318c89cdaa08d93d9a8221e\/t\/i\/tinto_luis_pato_vinhas_velhas.png","code":"recently_viewed_products_list_content_widget","height":340,"width":270,"label":"Garrafa de Vinho Tinto Luis Pato Vinhas Velhas 2017","resized_width":270,"resized_height":340},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/fba4d41374f3b4a4b2553ba145032f1f\/t\/i\/tinto_luis_pato_vinhas_velhas.png","code":"recently_viewed_products_images_names_widget","height":90,"width":75,"label":"Garrafa de Vinho Tinto Luis Pato Vinhas Velhas 2017","resized_width":75,"resized_height":90},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/c0ffc0f3780617b20732f12bef036575\/t\/i\/tinto_luis_pato_vinhas_velhas.png","code":"recently_compared_products_grid_content_widget","height":300,"width":240,"label":"Garrafa de Vinho Tinto Luis Pato Vinhas Velhas 2017","resized_width":240,"resized_height":300},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/d9e3e7d2d318c89cdaa08d93d9a8221e\/t\/i\/tinto_luis_pato_vinhas_velhas.png","code":"recently_compared_products_list_content_widget","height":340,"width":270,"label":"Garrafa de Vinho Tinto Luis Pato Vinhas Velhas 2017","resized_width":270,"resized_height":340},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/fba4d41374f3b4a4b2553ba145032f1f\/t\/i\/tinto_luis_pato_vinhas_velhas.png","code":"recently_compared_products_images_names_widget","height":90,"width":75,"label":"Garrafa de Vinho Tinto Luis Pato Vinhas Velhas 2017","resized_width":75,"resized_height":90}],"url":"https:\/\/www.divinho.com.br\/vinho-luis-pato-vinhas-velhas-2017","id":470,"name":"Vinho Luis Pato Vinhas Velhas 2017","type":"simple","is_salable":"1","store_id":1,"currency_code":"BRL","extension_attributes":{"review_html":"<div class=\"product-reviews-summary short empty\">\n    <div class=\"reviews-actions\">\n        <a class=\"action add\" href=\"https:\/\/www.divinho.com.br\/vinho-luis-pato-vinhas-velhas-2017#review-form\">\n            Seja o primeiro a avaliar este produto        <\/a>\n    <\/div>\n<\/div>\n","wishlist_button":{"post_data":null,"url":"{\"action\":\"https:\\\/\\\/www.divinho.com.br\\\/wishlist\\\/index\\\/add\\\/\",\"data\":{\"product\":470,\"uenc\":\"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXZpbmhhcy12ZWxoYXMtMjAxNw,,\"}}","required_options":null}}}},"store":"1","currency":"BRL"}            }
-        }
-    }
-</script>
-
-
-
-<div class="block related"
-    data-mage-init='{"relatedProducts":{"relatedCheckbox":".related.checkbox"}}'
-    data-limit="0" data-shuffle="0">
-                        <div class="block-title title page-title__pink linha my-4">
-                <span id="block-related-heading" role="heading"
-                    aria-level="2">Produtos Relacionados</span>
             </div>
-            <div class="block-content content" aria-labelledby="block-related-heading">
-                                <div class="block-actions d-none">
-                    Verifique itens para adicionar ao carrinho ou                    <button type="button" class="action select btn btn-primary"
-                        data-role="select-all"><span>selecionar tudo</span></button>
-                </div>
-                                <div class="products wrapper grid products-grid products-related">
-                    <div class="products row list items product-items">
-                                                                                                                                                                                                
+<div
+    class="products wrapper grid products-grid">
+        <div class="products list items product-items row">
                         
-                                                <div class="col-md-3 mb-2 product product-item item" style="display: none;">
-                                                            <div class="box-product product-item-info related-available"
-                                    data-product-id="461">
-                                    <!-- related_products_list-->
-                                    
-                                    
+        <div class="col-md-4 mb-3">
+            <div class="product box-product"
+                data-product-id="948">
+                
+                
+                
     <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/it.png" alt="Itália" title="Itália">
     </div>
 
-                                    
+                
 
         <div class="product__pontuacao">
                                             <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Enthusiast">WE</div>
+                    <div class="pontos">98</div>
+                </div>
+                                            <div class="pontuacao">
                     <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Robert Parker">RP</div>
-                    <div class="pontos">92</div>
+                    <div class="pontos">96</div>
                 </div>
                     </div>
 
-                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Luis Pato Quinta do Ribeirinho P\u00e9 Franco 2013&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Luis Pato Vinhas Velhas 2017 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Luis Pato Quinta do Ribeirinho P\u00e9 Franco 2013&quot;,&quot;id&quot;:&quot;461&quot;,&quot;price&quot;:&quot;2620.43&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:0,&quot;brand&quot;:&quot;Luis Pato&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-luis-pato-quinta-do-ribeirinho-pe-franco' }});" href="https://www.divinho.com.br/vinho-luis-pato-quinta-do-ribeirinho-pe-franco"
-                                        class="product photo product-item-photo">
-                                        <div class="product__photo">
-                                            
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/l/u/luis_pato_quinta_do_ribeirinho_p_franco.png"
-    width=""
-    height=""
-    alt="Garrafa de Vinho Luis Pato Quinta do Ribeirinho Pé Franco 2013" /></span>                                        </div>
-                                    </a>
-
-                                    <div class="product__content">
-                                        <a class="product-item-link"
-                                            title="Vinho&#x20;Luis&#x20;Pato&#x20;Quinta&#x20;do&#x20;Ribeirinho&#x20;P&#xE9;&#x20;Franco&#x20;2013"
-                                            href="https://www.divinho.com.br/vinho-luis-pato-quinta-do-ribeirinho-pe-franco">
-                                            <h4 class="product__title">Vinho Luis Pato Quinta do Ribeirinho Pé Franco 2013</h4>
-                                        </a>
-
-                                        
-<div class="product__pais">
-    <span>Portugal</span>
-</div>
-
-                                                                                    <form data-role="tocart-form"
-                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXZpbmhhcy12ZWxoYXMtMjAxNw%2C%2C/product/461/"
-                                                method="post">
-                                                <input type="hidden" name="product"
-                                                    value="461">
-                                                <input type="hidden"
-                                                    name="uenc"
-                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXZpbmhhcy12ZWxoYXMtMjAxNw,,">
-                                                                                                <input name="form_key" type="hidden" value="YlrBWkUJPpVwL8hS" />                                                <div class="product__buy">
-                                                    <div class="product__price">
-                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="461" data-price-box="product-id-461">
-   <div class="price__regular"><br></div>
-    <div class="price__sale">
-        
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-461"                data-price-amount="2620.43"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$2.620,43</span></span>
-        </span>
-    </div>
-
-</div>                                                    </div>
-                                                    <div class="product__quantity">
-                                                        <div class="custom-number">
-                                                            <input type="number" name="qty"
-                                                                id="qty461"
-                                                                maxlength="12" min="1" minlenght="1" value="1"
-                                                                title="Qtd"
-                                                                class="qty"
-                                                                data-validate="null" />
-                                                            <div class="custom-number-button custom-number-button--up">+
-                                                            </div>
-                                                            <div class="custom-number-button custom-number-button--down">-
-                                                            </div><button class="action tocart btn btn--input"
-                                                                type="submit"><i class="fas fa-shopping-cart"></i></button>
-                                                        </div>
-                                                                                                                    <a href="#"
-                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":461,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXZpbmhhcy12ZWxoYXMtMjAxNw,,"}}'
-                                                                class="action towishlist product__wishlist"
-                                                                data-action="add-to-wishlist"
-                                                                title="Adicionar&#x20;&#xE0;&#x20;lista&#x20;de&#x20;desejos">
-                                                                <i class="far fa-heart"></i>
-                                                            </a>
-                                                                                                            </div>
-                                                </div>
-                                                <div class="actions-primary">
-                                                                    <div class="installment">
-            Em até <span>3x de R$873,48 s/ juros</span>        </div>
-                                                        <button type="submit"
-                                                        title="Adicionar ao Carrinho"
-                                                        class="action tocart primary btn btn--product">
-                                                        <span>Adicionar ao Carrinho</span>
-                                                    </button>
-                                                </div>
-                                            </form>
-                                                                            </div>
-                                </div>
-                            </div>
-                                                                                                                                                                            
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Biondi Santi Brunello di Montalcino Annata 2013&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Biondi Santi Brunello di Montalcino Annata 2013&quot;,&quot;id&quot;:&quot;948&quot;,&quot;price&quot;:&quot;2794.56&quot;,&quot;category&quot;:&quot;Pa\u00edses\/It\u00e1lia&quot;,&quot;position&quot;:0,&quot;brand&quot;:&quot;Biondi Santi&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-biondi-santi-brunello-di-montalcino-annata' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-biondi-santi-brunello-di-montalcino-annata"
+                    tabindex="-1">
+                    <div class="product__photo">
                         
-                                                <div class="col-md-3 mb-2 product product-item item" style="display: none;">
-                                                            <div class="box-product product-item-info related-available"
-                                    data-product-id="469">
-                                    <!-- related_products_list-->
-                                    
-                                    
-    <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
-    </div>
 
-                                    
-
-
-                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Luis Pato Vinhas Velhas Branco 2019&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Luis Pato Vinhas Velhas 2017 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Luis Pato Vinhas Velhas Branco 2019&quot;,&quot;id&quot;:&quot;469&quot;,&quot;price&quot;:&quot;227.79&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:1,&quot;brand&quot;:&quot;Luis Pato&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-luis-pato-vinhas-velhas-branco' }});" href="https://www.divinho.com.br/vinho-luis-pato-vinhas-velhas-branco"
-                                        class="product photo product-item-photo">
-                                        <div class="product__photo">
-                                            
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/b/r/branco_luis_pato_vinhas_velhas.png"
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/b/i/biondi_santi_brunello_di_montalcino_annata_2.png"
     width=""
     height=""
-    alt="Garrafa de Vinho Branco Luis Pato Vinhas Velhas 2019" /></span>                                        </div>
-                                    </a>
+    alt="Garrafa de Vinho Biondi Santi Brunello di Montalcino Annata 2013" /></span>                    </div>
+                </a>
+                                <div class="product__content">
+                    <h2 class="product__title">
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Biondi Santi Brunello di Montalcino Annata 2013&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Biondi Santi Brunello di Montalcino Annata 2013&quot;,&quot;id&quot;:&quot;948&quot;,&quot;price&quot;:&quot;2794.56&quot;,&quot;category&quot;:&quot;Pa\u00edses\/It\u00e1lia&quot;,&quot;position&quot;:0,&quot;brand&quot;:&quot;Biondi Santi&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-biondi-santi-brunello-di-montalcino-annata' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-biondi-santi-brunello-di-montalcino-annata">
+                            Vinho Biondi Santi Brunello di Montalcino Annata 2013                        </a>
+                    </h2>
 
-                                    <div class="product__content">
-                                        <a class="product-item-link"
-                                            title="Vinho&#x20;Luis&#x20;Pato&#x20;Vinhas&#x20;Velhas&#x20;Branco&#x20;2019"
-                                            href="https://www.divinho.com.br/vinho-luis-pato-vinhas-velhas-branco">
-                                            <h4 class="product__title">Vinho Luis Pato Vinhas Velhas Branco 2019</h4>
-                                        </a>
-
-                                        
+                    
 <div class="product__pais">
-    <span>Portugal</span>
+    <span>Itália</span>
 </div>
-
-                                                                                    <form data-role="tocart-form"
-                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXZpbmhhcy12ZWxoYXMtMjAxNw%2C%2C/product/469/"
-                                                method="post">
-                                                <input type="hidden" name="product"
-                                                    value="469">
+                    
+                    <form data-role="tocart-form" data-product-sku="288"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9tYW51ZmFjdHVyZXI9NTc2OCZub3RhPTk2LTEwMA%2C%2C/product/948/" method="post">
+                        <input type="hidden" name="product"
+                            value="948">
                                                 <input type="hidden"
-                                                    name="uenc"
-                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXZpbmhhcy12ZWxoYXMtMjAxNw,,">
-                                                                                                <input name="form_key" type="hidden" value="YlrBWkUJPpVwL8hS" />                                                <div class="product__buy">
-                                                    <div class="product__price">
-                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="469" data-price-box="product-id-469">
+                            name="uenc"
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekxYQnZiblIxWVdSdmN6OXRZVzUxWm1GamRIVnlaWEk5TlRjMk9DWnViM1JoUFRrMkxURXdNQSUyQyUyQy9wcm9kdWN0Lzk0OC8,">
+                        <input name="form_key" type="hidden" value="CPbMA6K2PszW12zL" />                        <div class="product__buy">
+                            <div class="product__price">
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="948" data-price-box="product-id-948">
    <div class="price__regular"><br></div>
     <div class="price__sale">
         
 
 <span class="price-container price-final_price&#x20;tax&#x20;weee"
         >
-        <span  id="product-price-469"                data-price-amount="227.79"
+        <span  id="product-price-948"                data-price-amount="2794.56"
         data-price-type="finalPrice"
         class="price-wrapper "
-    ><span class="price">R$227,79</span></span>
+    ><span class="price">R$2.794,56</span></span>
         </span>
     </div>
 
-</div>                                                    </div>
-                                                    <div class="product__quantity">
-                                                        <div class="custom-number">
-                                                            <input type="number" name="qty"
-                                                                id="qty469"
-                                                                maxlength="12" min="1" minlenght="1" value="1"
-                                                                title="Qtd"
-                                                                class="qty"
-                                                                data-validate="null" />
-                                                            <div class="custom-number-button custom-number-button--up">+
-                                                            </div>
-                                                            <div class="custom-number-button custom-number-button--down">-
-                                                            </div><button class="action tocart btn btn--input"
-                                                                type="submit"><i class="fas fa-shopping-cart"></i></button>
-                                                        </div>
-                                                                                                                    <a href="#"
-                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":469,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXZpbmhhcy12ZWxoYXMtMjAxNw,,"}}'
-                                                                class="action towishlist product__wishlist"
-                                                                data-action="add-to-wishlist"
-                                                                title="Adicionar&#x20;&#xE0;&#x20;lista&#x20;de&#x20;desejos">
-                                                                <i class="far fa-heart"></i>
-                                                            </a>
-                                                                                                            </div>
-                                                </div>
-                                                <div class="actions-primary">
-                                                                    <div class="installment">
-            Em até <span>3x de R$75,93 s/ juros</span>        </div>
-                                                        <button type="submit"
-                                                        title="Adicionar ao Carrinho"
-                                                        class="action tocart primary btn btn--product">
-                                                        <span>Adicionar ao Carrinho</span>
-                                                    </button>
-                                                </div>
-                                            </form>
-                                                                            </div>
+</div>                            </div>
+                            <div class="product__quantity">
+                                <div class="custom-number">
+                                    <input type="number" name="qty"
+                                        id="qty948" maxlength="12" min="1"
+                                        minlenght="1" value="1" title="Qtd"
+                                        class="qty"
+                                        data-validate="null" />
+                                    <div class="custom-number-button custom-number-button--up">+</div>
+                                    <div class="custom-number-button custom-number-button--down">-</div>
+                                    <button class="action tocart btn btn--input" type="submit"><i
+                                            class="fas fa-shopping-cart"></i></button>
                                 </div>
+                                <a href="#" class="product__wishlist"
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":948,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9tYW51ZmFjdHVyZXI9NTc2OCZub3RhPTk2LTEwMA,,"}}'
+                                    class="action towishlist" data-action="add-to-wishlist"><i
+                                        class="far fa-heart"></i></a>
                             </div>
-                                                                                                                                                                            
-                        
-                                                <div class="col-md-3 mb-2 product product-item item" style="display: none;">
-                                                            <div class="box-product product-item-info related-available"
-                                    data-product-id="471">
-                                    <!-- related_products_list-->
-                                    
-                                    
-    <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
-    </div>
+                        </div>
 
-                                    
-
-
-                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Espumante Luis Pato Baga Rosado&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Luis Pato Vinhas Velhas 2017 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Espumante Luis Pato Baga Rosado&quot;,&quot;id&quot;:&quot;471&quot;,&quot;price&quot;:&quot;176.41&quot;,&quot;category&quot;:&quot;Vinhos\/Espumante&quot;,&quot;position&quot;:2,&quot;brand&quot;:&quot;Luis Pato&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/espumante-luis-pato-baga-rosado' }});" href="https://www.divinho.com.br/espumante-luis-pato-baga-rosado"
-                                        class="product photo product-item-photo">
-                                        <div class="product__photo">
-                                            
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/l/u/luis_pato_casta_baga_rosado_bruto.png"
-    width=""
-    height=""
-    alt="Garrafa de Espumante Luis Pato Casta Baga Rosado Bruto" /></span>                                        </div>
-                                    </a>
-
-                                    <div class="product__content">
-                                        <a class="product-item-link"
-                                            title="Espumante&#x20;Luis&#x20;Pato&#x20;Baga&#x20;Rosado"
-                                            href="https://www.divinho.com.br/espumante-luis-pato-baga-rosado">
-                                            <h4 class="product__title">Espumante Luis Pato Baga Rosado</h4>
-                                        </a>
-
-                                        
-<div class="product__pais">
-    <span>Portugal</span>
-</div>
-
-                                                                                    <form data-role="tocart-form"
-                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXZpbmhhcy12ZWxoYXMtMjAxNw%2C%2C/product/471/"
-                                                method="post">
-                                                <input type="hidden" name="product"
-                                                    value="471">
-                                                <input type="hidden"
-                                                    name="uenc"
-                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXZpbmhhcy12ZWxoYXMtMjAxNw,,">
-                                                                                                <input name="form_key" type="hidden" value="YlrBWkUJPpVwL8hS" />                                                <div class="product__buy">
-                                                    <div class="product__price">
-                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="471" data-price-box="product-id-471">
-   <div class="price__regular"><br></div>
-    <div class="price__sale">
-        
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-471"                data-price-amount="176.41"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$176,41</span></span>
-        </span>
-    </div>
-
-</div>                                                    </div>
-                                                    <div class="product__quantity">
-                                                        <div class="custom-number">
-                                                            <input type="number" name="qty"
-                                                                id="qty471"
-                                                                maxlength="12" min="1" minlenght="1" value="1"
-                                                                title="Qtd"
-                                                                class="qty"
-                                                                data-validate="null" />
-                                                            <div class="custom-number-button custom-number-button--up">+
-                                                            </div>
-                                                            <div class="custom-number-button custom-number-button--down">-
-                                                            </div><button class="action tocart btn btn--input"
-                                                                type="submit"><i class="fas fa-shopping-cart"></i></button>
-                                                        </div>
-                                                                                                                    <a href="#"
-                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":471,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXZpbmhhcy12ZWxoYXMtMjAxNw,,"}}'
-                                                                class="action towishlist product__wishlist"
-                                                                data-action="add-to-wishlist"
-                                                                title="Adicionar&#x20;&#xE0;&#x20;lista&#x20;de&#x20;desejos">
-                                                                <i class="far fa-heart"></i>
-                                                            </a>
-                                                                                                            </div>
-                                                </div>
-                                                <div class="actions-primary">
-                                                                    <div class="installment">
-            Em até <span>3x de R$58,80 s/ juros</span>        </div>
-                                                        <button type="submit"
-                                                        title="Adicionar ao Carrinho"
-                                                        class="action tocart primary btn btn--product">
-                                                        <span>Adicionar ao Carrinho</span>
-                                                    </button>
-                                                </div>
-                                            </form>
-                                                                            </div>
-                                </div>
-                            </div>
-                                                                                                                                                                            
-                        
-                                                <div class="col-md-3 mb-2 product product-item item" style="display: none;">
-                                                            <div class="box-product product-item-info related-available"
-                                    data-product-id="473">
-                                    <!-- related_products_list-->
-                                    
-                                    
-    <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
-    </div>
-
-                                    
-
-
-                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Luis Pato Maria Gomes 2019&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Luis Pato Vinhas Velhas 2017 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Luis Pato Maria Gomes 2019&quot;,&quot;id&quot;:&quot;473&quot;,&quot;price&quot;:&quot;134.17&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:3,&quot;brand&quot;:&quot;Luis Pato&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-luis-pato-maria-gomes' }});" href="https://www.divinho.com.br/vinho-luis-pato-maria-gomes"
-                                        class="product photo product-item-photo">
-                                        <div class="product__photo">
-                                            
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/b/r/branco_luis_pato_maria_gomes_2018.png"
-    width=""
-    height=""
-    alt="Garrafa de Vinho Branco Luis Pato Maria Gomes 2019" /></span>                                        </div>
-                                    </a>
-
-                                    <div class="product__content">
-                                        <a class="product-item-link"
-                                            title="Vinho&#x20;Luis&#x20;Pato&#x20;Maria&#x20;Gomes&#x20;2019"
-                                            href="https://www.divinho.com.br/vinho-luis-pato-maria-gomes">
-                                            <h4 class="product__title">Vinho Luis Pato Maria Gomes 2019</h4>
-                                        </a>
-
-                                        
-<div class="product__pais">
-    <span>Portugal</span>
-</div>
-
-                                                                                    <form data-role="tocart-form"
-                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXZpbmhhcy12ZWxoYXMtMjAxNw%2C%2C/product/473/"
-                                                method="post">
-                                                <input type="hidden" name="product"
-                                                    value="473">
-                                                <input type="hidden"
-                                                    name="uenc"
-                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXZpbmhhcy12ZWxoYXMtMjAxNw,,">
-                                                                                                <input name="form_key" type="hidden" value="YlrBWkUJPpVwL8hS" />                                                <div class="product__buy">
-                                                    <div class="product__price">
-                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="473" data-price-box="product-id-473">
-   <div class="price__regular"><br></div>
-    <div class="price__sale">
-        
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-473"                data-price-amount="134.17"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$134,17</span></span>
-        </span>
-    </div>
-
-</div>                                                    </div>
-                                                    <div class="product__quantity">
-                                                        <div class="custom-number">
-                                                            <input type="number" name="qty"
-                                                                id="qty473"
-                                                                maxlength="12" min="1" minlenght="1" value="1"
-                                                                title="Qtd"
-                                                                class="qty"
-                                                                data-validate="null" />
-                                                            <div class="custom-number-button custom-number-button--up">+
-                                                            </div>
-                                                            <div class="custom-number-button custom-number-button--down">-
-                                                            </div><button class="action tocart btn btn--input"
-                                                                type="submit"><i class="fas fa-shopping-cart"></i></button>
-                                                        </div>
-                                                                                                                    <a href="#"
-                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":473,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXZpbmhhcy12ZWxoYXMtMjAxNw,,"}}'
-                                                                class="action towishlist product__wishlist"
-                                                                data-action="add-to-wishlist"
-                                                                title="Adicionar&#x20;&#xE0;&#x20;lista&#x20;de&#x20;desejos">
-                                                                <i class="far fa-heart"></i>
-                                                            </a>
-                                                                                                            </div>
-                                                </div>
-                                                <div class="actions-primary">
-                                                                    <div class="installment">
-            Em até <span>3x de R$44,72 s/ juros</span>        </div>
-                                                        <button type="submit"
-                                                        title="Adicionar ao Carrinho"
-                                                        class="action tocart primary btn btn--product">
-                                                        <span>Adicionar ao Carrinho</span>
-                                                    </button>
-                                                </div>
-                                            </form>
-                                                                            </div>
-                                </div>
-                            </div>
-                                                    </div>
-                    </div>
-                </div>
+                        <div class="actions-primary">
+                                                        <button type="submit" title="Adicionar ao Carrinho"
+                                class="action tocart primary btn btn--product">
+                                <span>Adicionar ao Carrinho</span>
+                            </button>
+                        </div>
+                    </form>
+                                    </div>
             </div>
+        </div>
+                            </div>
+</div>
 
-                        <script type="text/x-magento-init">
-                {
+    
+        
+        
+    
+    
+<script type="text/x-magento-init">
+    {
   "[data-role=tocart-form], .form.map.checkout": {
     "catalogAddToCart": {}
   },
@@ -5286,9 +4648,30 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     }
   }
 }
-</script>
-            
-            </div></div></div></main><footer class="site-footer d-flex flex-column">
+        </script>
+</div></div></div></main><div class="page-bottom"><div class="container"><div class="category-view row align-items-center">
+<div class="category-image-wrapper col-lg ">
+    <div class="category-image">
+                    <img src="https://images.divinho.com.br/catalog/category/Vinhos_Pontuados_3.jpg" alt="Vinhos&#x20;Pontuados" title="Vinhos&#x20;Pontuados">
+            </div>
+</div>
+
+
+<div class="category-description-wrapper col-lg-8"><div class="category-description">            <div class="category__title">
+            <span>Vinhos&#x20;Pontuados</span>
+        </div>
+        <div class="category-description-text">
+        <p><span style="font-weight: 400;">Os Vinhos Pontuados são rótulos que se destacam por sua alta qualidade, conquistando ótimas pontuações da crítica especializada!</span></p>
+<p><span style="font-weight: 400;">Os sistemas de avaliações costumam basear-se em uma escala de 100 pontos.</span></p>
+<p><span style="font-weight: 400;">Vinhos de 80 a 89 pontos são classificados como muito bons e de 90 a 95 pontos como excelentes.</span></p>
+<p><span style="font-weight: 400;">Já os rótulos que conquistam entre 96 e 100 são realmente excepcionais, figurando entre os melhores vinhos do mundo!</span></p>
+<p><span style="font-weight: 400;">Robert Parker, James Suckling e Tim Atkin formam a tríade de críticos mais renomados do mundo. </span></p>
+<p><span style="font-weight: 400;">Antonio Galloni e Luca Maroni são outros dois cítricos importantes, sendo que Maroni destaca-se entre seus companheiros pelo seu sistema único de pontuação, que vai somente até 99 pontos.</span></p>
+<p><span style="font-weight: 400;">Na América Latina, o Guia Descorchados é a referência mais importante em Vinhos Pontuados.</span></p>
+<p><span style="font-weight: 400;">Já, nos Estados Unidos, as publicações mais expressivas são a Wine Enthusiast e a Wine Spectator.</span></p>
+<p><span style="font-weight: 400;">Isso, sem deixar de mencionar a revista inglesa Decanter, conhecida como "Bíblia do Vinho” e a plataforma digital Cellar Tracker, entre outros.</span></p>
+<p><span style="font-weight: 400;">A DiVinho oferece a melhor seleção de Vinhos Pontuados para você!</span></p>    </div>
+</div></div></div></div></div><footer class="site-footer d-flex flex-column">
 
 
 
@@ -5480,7 +4863,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                     </div>
                 <div class="wbcom-fields">
                     <div class="wbcom-fields-contents">
-                        <input name="form_key" type="hidden" value="YlrBWkUJPpVwL8hS">
+                        <input name="form_key" type="hidden" value="CPbMA6K2PszW12zL">
                         <input type="text" placeholder="Nome" name="name" required style="background-color: #fff !important;">
                         <input type="email" placeholder="E-mail" name="email" required style="background-color: #fff !important;">
                         <input type="hidden" name="message" value="Olá, gostaria de fazer um pedido.">
@@ -5509,8 +4892,6 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     </script>
 
 
-<!-- BEGIN GTAG PRODUCT TAG -->
-<!-- END GTAG PRODUCT TAG -->
     <script>
         require(['jquery','weltpixel_persistentLayer', 'weltpixel_gtm', 'Magento_Customer/js/customer-data'],
             function ($, wpPersDl, wpgtm, customerData) {
@@ -5534,5 +4915,5 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 wpgtm.trackPromotion(wpGtmOptions);
             });
     </script>
-    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-15ce119d71e6a8d24c8","applicationID":"798446581","transactionName":"blMGbUdSWRFQBhBcC1cZJVpBWlgMHhUFUgFmVQVaXVY=","queueTime":0,"applicationTime":76,"atts":"QhQFGw9ISh8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-15ce119d71e6a8d24c8","applicationID":"798446581","transactionName":"blMGbUdSWRFQBhBcC1cZJVpBWlgMHhUFUgFmVQVaXVY=","queueTime":0,"applicationTime":84,"atts":"QhQFGw9ISh8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>

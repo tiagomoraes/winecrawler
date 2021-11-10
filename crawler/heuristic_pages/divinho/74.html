@@ -1,7 +1,7 @@
 
 <!doctype html>
 <html lang=pt-br>      
-    <head >
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product: http://ogp.me/ns/product#">
         <script>
     var BASE_URL = 'https://www.divinho.com.br/';
     var require = {
@@ -9,16 +9,38 @@
     };
 </script>
         <meta charset="utf-8"/><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-15ce119d71e6a8d24c8",applicationID:"798446581"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1211.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
-<meta name="title" content="Uvas"/>
+<meta name="title" content="Vinho Alamos Malbec 2019 - DiVinho"/>
+<meta name="description" content="Compre Vinho Alamos Malbec 2019 com o melhor preço do mercado. Pagamento em até 3x s/ juros e entregas para todo Brasil."/>
 <meta name="robots" content="INDEX,FOLLOW"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta name="format-detection" content="telephone=no"/>
-<title>Uvas</title>
-<link  rel="stylesheet" type="text/css"  media="all" href="https://static.divinho.com.br/static/version1636382917/_cache/merged/c3f0846f21e00493666c1bb1e46fe5c8.min.css" />
+<title>Vinho Alamos Malbec 2019 - DiVinho</title>
+<link  rel="stylesheet" type="text/css"  media="all" href="https://static.divinho.com.br/static/version1636382917/_cache/merged/5d41a869337cd62abea0146ce00be5f9.min.css" />
 <script  type="text/javascript"  src="https://static.divinho.com.br/static/version1636382917/_cache/merged/38cbaaf652093663e521d41aea6fcd0d.min.js"></script>
 <link  rel="icon" type="image/x-icon" href="https://images.divinho.com.br/favicon/default/favicon.ico" />
 <link  rel="shortcut icon" type="image/x-icon" href="https://images.divinho.com.br/favicon/default/favicon.ico" />
-            <!-- Google Tag Manager -->
+<!-- Product Structured Data by Mageplaza SEO--><script type="application/ld+json">{
+    "@context": "http:\/\/schema.org\/",
+    "@type": "Product",
+    "name": "Vinho Alamos Malbec 2019",
+    "description": "O Vinho Alamos Malbec \u00e9 um r\u00f3tulo de excepcional qualidade em sua faixa de pre\u00e7o! Produzido pela Alamos Wines, que pertence a renomada fam\u00edlia Catena Zapata, em Mendoza. De colora\u00e7\u00e3o rubi intensa, apresenta um bouquet arom\u00e1tico complexo, com aromas de cereja negra, amora, notas de especiarias e um toque de baunilha. Um Vinho Tinto de grande estrutura, com taninos firmes e um final longo e persistente.\u00a0",
+    "sku": "440",
+    "url": "https:\/\/www.divinho.com.br\/vinho-alamos-malbec",
+    "image": "https:\/\/www.divinho.com.br\/pub\/media\/catalog\/product\/a\/l\/alamos_malbec.png",
+    "offers": {
+        "@type": "Offer",
+        "priceCurrency": "BRL",
+        "price": 113.61,
+        "itemOffered": 1868,
+        "availability": "http:\/\/schema.org\/InStock",
+        "url": "https:\/\/www.divinho.com.br\/vinho-alamos-malbec"
+    },
+    "gtin8": "Vinho Alamos Malbec 2019",
+    "brand": {
+        "@type": "Thing",
+        "name": "Alamos Wines"
+    }
+}</script>            <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -32,7 +54,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         };
 
         window.dataLayer = window.dataLayer || [];
-                var dlObjects = [{"google_tag_params":{"ecomm_pagetype":"category","ecomm_category":""}}];
+                var dlObjects = [{"google_tag_params":{"ecomm_pagetype":"product","ecomm_prodid":"906","ecomm_totalvalue":"113.61","ecomm_category":"Vinhos\/Vinho Tinto"},"ecommerce":{"detail":{"products":[{"name":"Vinho Alamos Malbec 2019","id":"906","price":"113.61","brand":"Alamos Wines","category":"Vinhos\/Vinho Tinto"}]},"currencyCode":"BRL","impressions":[{"name":"Vinho Alamos Cabernet Sauvignon 2018","id":"488","price":"107.04","brand":"Alamos Wines","category":"Pa\u00edses\/Argentina","list":"Related Products From Vinho Alamos Malbec 2019","position":1},{"name":"Vinho Alamos Chardonnay 2018","id":"700","price":"111.33","brand":"Alamos Wines","category":"Pa\u00edses\/Argentina","list":"Related Products From Vinho Alamos Malbec 2019","position":2},{"name":"Vinho Alamos Malbec Ros\u00e9 2020","id":"825","price":"111.33","brand":"Alamos Wines","category":"Pa\u00edses\/Argentina","list":"Related Products From Vinho Alamos Malbec 2019","position":3},{"name":"Vinho Alamos Bonarda 2019","id":"907","price":"111.33","brand":"Alamos Wines","category":"Vinhos\/Vinho Tinto","list":"Related Products From Vinho Alamos Malbec 2019","position":4}]},"event":"impression","eventCategory":"Ecommerce","eventAction":"Impression","eventLabel":"product Vinho Alamos Bonarda 2019"}];
         for (var i in dlObjects) {
             window.dataLayer.push(dlObjects[i]);
         }
@@ -51,10 +73,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- BEGIN GTAG GLOBAL TAG -->
 <!-- END GTAG GLOBAL TAG -->
 <script type="text/javascript" src="https://chimpstatic.com/mcjs-connected/js/users/1255cf89de1ff1692e3832377/54a041db81224b7f42e4ef954.js" defer></script>
+
+<!-- This site is optimized with the Yoast SEO for Magento plugin 2.0.0 - https://yoast.com/magento/plugins/seo/ -->
+    <link rel="canonical" href="https://www.divinho.com.br/vinho-alamos-malbec" />
+
+    <!-- YoastSEO OpenGraph -->
+    <meta property="og:url" content="https://www.divinho.com.br/vinho-alamos-malbec"/>
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="product"/>
+    <meta property="og:site_name" content="F R MOREIRA COMÉRCIO E DISTRIBUIÇÃO DE ALIMENTOS E BEBIDAS" />
+    <meta property="og:title" content="Vinho Alamos Malbec 2019 - DiVinho"/>
+    <meta property="og:description" content="Compre Vinho Alamos Malbec 2019 com o melhor preço do mercado. Pagamento em até 3x s/ juros e entregas para todo Brasil."/>
+            <meta property="og:image" content="https://images.divinho.com.br/catalog/product/cache/b7d320e39333d0f7a197a4ddb51399f4/a/l/alamos_malbec.png"/>
+                        
+    <!-- YoastSEO Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Vinho Alamos Malbec 2019 - DiVinho"/>
+    <meta name="twitter:description" content="Compre Vinho Alamos Malbec 2019 com o melhor preço do mercado. Pagamento em até 3x s/ juros e entregas para todo Brasil."/>
+            <meta name="twitter:image" content="https://images.divinho.com.br/catalog/product/cache/b7d320e39333d0f7a197a4ddb51399f4/a/l/alamos_malbec.png"/>
+    
+
     </head>
     <body data-container="body"
           data-mage-init='{"loaderAjax": {}, "loader": { "icon": "https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/loader-2.gif"}}'
-        class="attributepages-page-view page-layout-1column">
+        class="catalog-product-view product-vinho-alamos-malbec page-layout-1column">
         <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MM4CCWJ"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -187,7 +229,7 @@ require([
 
 </script>
 <li class="nav-item authorization-link" data-label="ou">
-    <a class="nav-link" href="https://www.divinho.com.br/customer/account/login/referer/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdXZh/">
+    <a class="nav-link" href="https://www.divinho.com.br/customer/account/login/referer/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tYWxhbW9zLW1hbGJlYw%2C%2C/">
         Entrar    </a>
 </li>
 
@@ -234,7 +276,7 @@ require([
             </div>
                     </div>
         <script>
-        window.checkout = {"shoppingCartUrl":"https:\/\/www.divinho.com.br\/checkout\/cart\/","checkoutUrl":"https:\/\/www.divinho.com.br\/checkout\/","updateItemQtyUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/www.divinho.com.br\/","minicartMaxItemsVisible":5,"websiteId":"1","maxItemsToDisplay":10,"storeId":"1","customerLoginUrl":"https:\/\/www.divinho.com.br\/customer\/account\/login\/referer\/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdXZh\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.divinho.com.br\/captcha\/refresh\/","isRequired":false,"timestamp":1636430624}}};
+        window.checkout = {"shoppingCartUrl":"https:\/\/www.divinho.com.br\/checkout\/cart\/","checkoutUrl":"https:\/\/www.divinho.com.br\/checkout\/","updateItemQtyUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/www.divinho.com.br\/","minicartMaxItemsVisible":5,"websiteId":"1","maxItemsToDisplay":10,"storeId":"1","customerLoginUrl":"https:\/\/www.divinho.com.br\/customer\/account\/login\/referer\/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tYWxhbW9zLW1hbGJlYw%2C%2C\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.divinho.com.br\/captcha\/refresh\/","isRequired":false,"timestamp":1636504668}}};
     </script>
     <script type="text/x-magento-init">
     {
@@ -248,9 +290,9 @@ require([
 </div>
 
 <div class="collapse d-lg-block" id="navbarSearch">
-        <form id="search-form6189f320667ed" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
+        <form id="search-form618b145c2914a" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
                 <input data-mage-init='{"quickSearch":{
-                                        "formSelector":"#search-form6189f320667ed",
+                                        "formSelector":"#search-form618b145c2914a",
                                         "url":"https://www.divinho.com.br/search/ajax/suggest/",
                                         "destinationSelector":"#search_autocomplete",
                                         "responseFieldElements":"ul li",
@@ -325,9 +367,9 @@ require([
 
 </div></div><div class="col-lg position-static col-nav"><div class="d-lg-none">
 <div class="collapse d-lg-block" id="navbarSearch">
-        <form id="search-form6189f3206824a" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
+        <form id="search-form618b145c2a69f" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
                 <input data-mage-init='{"quickSearch":{
-                                        "formSelector":"#search-form6189f3206824a",
+                                        "formSelector":"#search-form618b145c2a69f",
                                         "url":"https://www.divinho.com.br/search/ajax/suggest/",
                                         "destinationSelector":"#search_autocomplete",
                                         "responseFieldElements":"ul li",
@@ -369,11 +411,11 @@ require([
                                                                     <div class="mx-megamenu__sidebar mx-megamenu__sidebar--left">
                                         <div class="widget widget-categories-list block" data-collapse="1">
     <div class="megamenu__links">
-                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#vinhos6189f247cdd14" aria-expanded="true" aria-controls="vinhos6189f247cdd14">
+                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#vinhos618b0a68a8e72" aria-expanded="true" aria-controls="vinhos618b0a68a8e72">
             <i class="icon icon-vinhos"></i>
             <span>Tipo</span>
         </div>
-                <div id="vinhos6189f247cdd14" class="block-content catalog-category collapse-sm collapse">
+                <div id="vinhos618b0a68a8e72" class="block-content catalog-category collapse-sm collapse">
             <ul>
                                 <li class="category-item">
                     <a href="https://www.divinho.com.br/vinhos/tinto">
@@ -441,11 +483,11 @@ require([
 </div>
 <div class="widget widget-list-range">
     <div class="megamenu__links">
-        <div class="megamenu__title collapsed" data-toggle="collapse" data-target="#price-range6189f247d2432" aria-expanded="true" aria-controls="price-range6189f247d2432">
+        <div class="megamenu__title collapsed" data-toggle="collapse" data-target="#price-range618b0a68bd448" aria-expanded="true" aria-controls="price-range618b0a68bd448">
             <i class="icon icon icon-dollar-tag"></i>
             <span>Valor</span>
         </div>
-        <ul id="price-range6189f247d2432" class="block-content collapse-sm collapse">
+        <ul id="price-range618b0a68bd448" class="block-content collapse-sm collapse">
             <li><a href="https://www.divinho.com.br/vinhos?price=-59.9">Até R$59,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=59.9-99.9">R$59,90 a R$99,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=99.9-149.9">R$99,90 a R$149,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=149.9-249.9">R$149,90 a R$249,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=249.91-500">R$249,91 a R$500,00</a></li><li><a href="https://www.divinho.com.br/vinhos?price=500-">Acima de R$500,00</a></li>        </ul>
     </div>
 </div>
@@ -463,12 +505,12 @@ require([
     class="widget widget-list_mode widget-list_mode--uva">
     <div class="megamenu__links">
         <div class="block-title megamenu__title collapsed"
-            data-toggle="collapse" data-target="#uva6189f247b8902" aria-expanded="true"
-            aria-controls="uva6189f247b8902">
+            data-toggle="collapse" data-target="#uva618b0a682f5fe" aria-expanded="true"
+            aria-controls="uva618b0a682f5fe">
             <i class="icon icon-uva"></i>
             <span>Uvas</span>
         </div>
-        <div id="uva6189f247b8902"
+        <div id="uva618b0a682f5fe"
             class="block-content catalog-category collapse-sm collapse">
             <ul>
                 
@@ -518,11 +560,11 @@ require([
 </div>
  <div class="widget widget-categories-list block" data-collapse="1">
     <div class="megamenu__links">
-                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#pais6189f247c33b5" aria-expanded="true" aria-controls="pais6189f247c33b5">
+                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#pais618b0a68878c3" aria-expanded="true" aria-controls="pais618b0a68878c3">
             <i class="icon icon-pais"></i>
             <span>Pa&iacute;ses</span>
         </div>
-                <div id="pais6189f247c33b5" class="block-content catalog-category collapse-sm collapse">
+                <div id="pais618b0a68878c3" class="block-content catalog-category collapse-sm collapse">
             <ul>
                                 <li class="category-item">
                     <a href="https://www.divinho.com.br/pais/austria">
@@ -3519,11 +3561,11 @@ require([
                             </div>
                 <div class="megamenu__product-image">
             <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">
-                <img src="https://images.divinho.com.br/catalog/product/cache/fa01b5f6b2a94beaaa3488ed5c6cafe6/c/a/casanova_di_neri_rosso_di_montalcino.png" alt="Vinho Casanova di Neri Rosso di Montalcino 2019" title="Vinho Casanova di Neri Rosso di Montalcino 2019">
+                <img src="https://images.divinho.com.br/catalog/product/cache/fa01b5f6b2a94beaaa3488ed5c6cafe6/c/a/casanova_di_neri_rosso_di_montalcino.png" alt="Vinho Casanova di Neri Rosso di Montalcino 2018" title="Vinho Casanova di Neri Rosso di Montalcino 2018">
             </a>
         </div>
         <div class="megamenu__product-name text-center mt-2">
-            <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">Vinho Casanova di Neri Rosso di Montalcino 2019</a>
+            <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">Vinho Casanova di Neri Rosso di Montalcino 2018</a>
             <div class="text-primary price">
                 R$366,00            </div>
         </div>
@@ -3833,12 +3875,12 @@ require([
     class="widget widget-list_mode widget-list_mode--criticos">
     <div class="megamenu__links">
         <div class="block-title megamenu__title"
-             data-target="#criticos6189f249ba2f8" aria-expanded="true"
-            aria-controls="criticos6189f249ba2f8">
+             data-target="#criticos618b0a6f8879c" aria-expanded="true"
+            aria-controls="criticos618b0a6f8879c">
             <i class="icon icon-criticos"></i>
             <span>Críticos</span>
         </div>
-        <div id="criticos6189f249ba2f8"
+        <div id="criticos618b0a6f8879c"
             class="block-content catalog-category">
             <ul>
                                 <li>
@@ -4140,12 +4182,12 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     class="widget widget-list_mode widget-list_mode--vinicolas">
     <div class="megamenu__links">
         <div class="block-title megamenu__title"
-             data-target="#vinicolas6189f249cb53f" aria-expanded="true"
-            aria-controls="vinicolas6189f249cb53f">
+             data-target="#vinicolas618b0a6fd10d5" aria-expanded="true"
+            aria-controls="vinicolas618b0a6fd10d5">
             <i class="icon icon-vinicolas"></i>
             <span>Vinícolas</span>
         </div>
-        <div id="vinicolas6189f249cb53f"
+        <div id="vinicolas618b0a6fd10d5"
             class="block-content catalog-category">
             <ul>
                 
@@ -4250,32 +4292,51 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 </div>
                                     </div>
     </ul>
-</div></div><div class="col-lg-auto headerphones"><a href="https://wa.me/5511943491044?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20pedido."><i class="fab fa-whatsapp"></i> (11) 94349-1044</a><a href="tel:551127294004"><i class="fas fa-phone"></i> (11) 2729-4004</a></div></div></div></nav></header>
-<section class="breadcrumbs__section">
-    <div class="container">
-        <div class="row">
-            <nav class="breadcrumbs" aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                                        <li class="breadcrumb-item  home">
-                                                <a href="https://www.divinho.com.br/"
-                            title="Ir para a página inicial">
-                            Início                        </a>
-                                            </li>
-                                        <li class="breadcrumb-item active current_page">
-                                                Uvas                                            </li>
-                                    </ol>
-            </nav>
-        </div>
-    </div>
-</section>
-<main id="site-content" class="site-content"><a id="contentarea" tabindex="-1"></a>
-<div class="container"><div class="page-title-wrapper">
-    <h1 class="page-title"
-                >
-        <span class="base" data-ui-id="page-title-wrapper" >Uvas</span>    </h1>
-    </div>
-<div class="page messages"><div data-placeholder="messages"></div>
-<div data-bind="scope: 'messages'">
+</div></div><div class="col-lg-auto headerphones"><a href="https://wa.me/5511943491044?text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20pedido."><i class="fab fa-whatsapp"></i> (11) 94349-1044</a><a href="tel:551127294004"><i class="fas fa-phone"></i> (11) 2729-4004</a></div></div></div></nav></header><main id="site-content" class="site-content"><nav class="breadcrumbs__section breadcrumbs__section--single-product"><div class="container"><div class="d-flex">
+
+<nav class="breadcrumbs breadcrumbs--single-product" aria-label="breadcrumb"></nav>
+
+<script type="text/x-magento-init">
+    {
+        ".breadcrumbs": {
+            "breadcrumbs": {"categoryUrlSuffix":"","useCategoryPathInUrl":0,"product":"Vinho Alamos Malbec 2019"}        }
+    }
+</script><div class="redes-sociais align-self-end ml-auto mr-4 mb-3 d-none d-md-block">
+    <!-- WhatsApp -->
+    <ul>
+        <li>
+            <a target="_blank"
+                href="https://api.whatsapp.com/send?text=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-alamos-malbec">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </li>
+        <li>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-alamos-malbec&t=Vinho+Alamos+Malbec+2019"
+                onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false'
+                title="Share on facebook">
+                <i class="fab fa-facebook"></i>
+
+            </a>
+        </li>
+        <!-- TWITTER -->
+        <li>
+            <a href="http://twitter.com/home/?status=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-alamos-malbec(Vinho+Alamos+Malbec+2019)"
+                onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false'
+                title="Share on Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+        <li>
+            <!-- Pinterest -->
+            <a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-alamos-malbec&media= &description=Vinho+Alamos+Malbec+2019"
+                onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false'
+                title="Pin it">
+                <i class="fab fa-pinterest"></i>
+            </a>
+        </li>
+    </ul>
+</div></div><div data-bind="scope: 'messages'">
     <div data-bind="foreach: { data: cookieMessages, as: 'message' }" class="messages">
         <div role="alert" data-bind="attr: {
             class: 'alert alert-' + message.type + ' ' + message.type,
@@ -4306,7 +4367,9 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             }
     }
 </script>
-</div><div class="columns"><div class="column main"><input name="form_key" type="hidden" value="Vf7XnkPGge8yn6k7" /><script type="text/x-magento-init">
+</div></nav><a id="contentarea" tabindex="-1"></a>
+<div class="container"><div class="page messages"><div data-placeholder="messages"></div>
+</div><div class="columns"><div class="column main"><input name="form_key" type="hidden" value="Qt6z5C5M1BjHvYUc" /><script type="text/x-magento-init">
     {
         "*": {
             "Magento_Customer/js/section-config": {
@@ -4350,906 +4413,910 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 <script type="text/x-magento-init">
     {
         "body": {
-            "pageCache": {"url":"https:\/\/www.divinho.com.br\/page_cache\/block\/render\/id\/427\/","handles":["default","attributepages_page_view","ATTRIBUTEPAGES_PAGE_427","attributepages_page_view_id_427","attributepages_attribute_page","gabrielqs_themesettings_footer_1","gabrielqs_themesettings_header_1","gabrielqs_themesettings_customization","mpseo_remove_schema"],"originalRequest":{"route":"attributepages","controller":"page","action":"view","uri":"\/uva\/"},"versionCookieName":"private_content_version"}        }
+            "pageCache": {"url":"https:\/\/www.divinho.com.br\/page_cache\/block\/render\/id\/906\/","handles":["default","catalog_product_view","catalog_product_view_type_simple","catalog_product_view_id_906","catalog_product_view_sku_440","gabrielqs_themesettings_footer_1","gabrielqs_themesettings_header_1","gabrielqs_themesettings_customization","mpseo_remove_schema"],"originalRequest":{"route":"catalog","controller":"product","action":"view","uri":"\/vinho-alamos-malbec"},"versionCookieName":"private_content_version"}        }
     }
 </script>
 
 <div id="monkey_campaign" style="display:none;"
      data-mage-init='{"campaigncatcher":{"checkCampaignUrl": "https://www.divinho.com.br/mailchimp/campaign/check/"}}'>
-</div>
-            <div class="attributepages-grid-wrapper attributepages-options attributepages-options-grouped">
-    
-        <ul class="list-attributepages-otions-grouped">
-    
-                                
-            
-            <li class="attributepages-options-group options-group-a">
-            <div class="attributepages-options-group-title">
-                                <a class="attributepages-options-anchor" href="#a" name="a">
-                    <span>&para;</span>
-                </a>
-                a            </div>
-        
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/alfrocheiro/" title="Alfrocheiro" class="attributepages-title">
-                        Alfrocheiro                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/alicante-bouschet/" title="Alicante Bouschet" class="attributepages-title">
-                        Alicante Bouschet                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/alvarinho/" title="Alvarinho" class="attributepages-title">
-                        Alvarinho                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/ancellotta/" title="Ancellotta" class="attributepages-title">
-                        Ancellotta                    </a>
-                            </li>
-                </ul>
-                                    
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/antao-vaz/" title="Antão Vaz" class="attributepages-title">
-                        Antão Vaz                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/arinto/" title="Arinto" class="attributepages-title">
-                        Arinto                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/arneis/" title="Arneis" class="attributepages-title">
-                        Arneis                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/avesso/" title="Avesso" class="attributepages-title">
-                        Avesso                    </a>
-                            </li>
-                </ul>
-                                    
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/azal/" title="Azal" class="attributepages-title">
-                        Azal                    </a>
-                            </li>
-                                                            </ul>
-            
-                        </li>
-            
-            <li class="attributepages-options-group options-group-b">
-            <div class="attributepages-options-group-title">
-                                <a class="attributepages-options-anchor" href="#b" name="b">
-                    <span>&para;</span>
-                </a>
-                b            </div>
-        
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/baga/" title="Baga" class="attributepages-title">
-                        Baga                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/barbera/" title="Barbera" class="attributepages-title">
-                        Barbera                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/bical/" title="Bical" class="attributepages-title">
-                        Bical                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/bonarda/" title="Bonarda" class="attributepages-title">
-                        Bonarda                    </a>
-                            </li>
-                </ul>
-                                    
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/borracal/" title="Borraçal" class="attributepages-title">
-                        Borraçal                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/bourboulenc/" title="Bourboulenc" class="attributepages-title">
-                        Bourboulenc                    </a>
-                            </li>
-                                                            </ul>
-            
-                        </li>
-            
-            <li class="attributepages-options-group options-group-c">
-            <div class="attributepages-options-group-title">
-                                <a class="attributepages-options-anchor" href="#c" name="c">
-                    <span>&para;</span>
-                </a>
-                c            </div>
-        
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/cabernet-franc/" title="Cabernet Franc" class="attributepages-title">
-                        Cabernet Franc                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/cabernet-sauvignon/" title="Cabernet Sauvignon" class="attributepages-title">
-                        Cabernet Sauvignon                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/camarate/" title="Camarate" class="attributepages-title">
-                        Camarate                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/canaiolo/" title="Canaiolo" class="attributepages-title">
-                        Canaiolo                    </a>
-                            </li>
-                </ul>
-                                    
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/carignan/" title="Carignan" class="attributepages-title">
-                        Carignan                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/carmenere/" title="Carménère" class="attributepages-title">
-                        Carménère                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/castelao/" title="Castelão" class="attributepages-title">
-                        Castelão                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/catarratto/" title="Catarratto" class="attributepages-title">
-                        Catarratto                    </a>
-                            </li>
-                </ul>
-                                    
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/cerceal/" title="Cerceal" class="attributepages-title">
-                        Cerceal                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/chardonnay/" title="Chardonnay" class="attributepages-title">
-                        Chardonnay                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/chasan/" title="Chasan" class="attributepages-title">
-                        Chasan                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/chenin-blanc/" title="Chenin Blanc" class="attributepages-title">
-                        Chenin Blanc                    </a>
-                            </li>
-                </ul>
-                                    
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/ciliegiolo/" title="Ciliegiolo" class="attributepages-title">
-                        Ciliegiolo                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/cinsault/" title="Cinsault" class="attributepages-title">
-                        Cinsault                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/clairette/" title="Clairette" class="attributepages-title">
-                        Clairette                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/codega/" title="Códega" class="attributepages-title">
-                        Códega                    </a>
-                            </li>
-                </ul>
-                                    
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/colombard/" title="Colombard" class="attributepages-title">
-                        Colombard                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/corvina/" title="Corvina" class="attributepages-title">
-                        Corvina                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/corvinone/" title="Corvinone" class="attributepages-title">
-                        Corvinone                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/counoise/" title="Counoise" class="attributepages-title">
-                        Counoise                    </a>
-                            </li>
-                </ul>
-                                                
-                        </li>
-            
-            <li class="attributepages-options-group options-group-d">
-            <div class="attributepages-options-group-title">
-                                <a class="attributepages-options-anchor" href="#d" name="d">
-                    <span>&para;</span>
-                </a>
-                d            </div>
-        
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/dolcetto/" title="Dolcetto" class="attributepages-title">
-                        Dolcetto                    </a>
-                            </li>
-                                                            </ul>
-            
-                        </li>
-            
-            <li class="attributepages-options-group options-group-e">
-            <div class="attributepages-options-group-title">
-                                <a class="attributepages-options-anchor" href="#e" name="e">
-                    <span>&para;</span>
-                </a>
-                e            </div>
-        
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/espadeiro/" title="Espadeiro" class="attributepages-title">
-                        Espadeiro                    </a>
-                            </li>
-                                                            </ul>
-            
-                        </li>
-            
-            <li class="attributepages-options-group options-group-f">
-            <div class="attributepages-options-group-title">
-                                <a class="attributepages-options-anchor" href="#f" name="f">
-                    <span>&para;</span>
-                </a>
-                f            </div>
-        
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/fernao-pires/" title="Fernão Pires" class="attributepages-title">
-                        Fernão Pires                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/fiano/" title="Fiano" class="attributepages-title">
-                        Fiano                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/frappato/" title="Frappato" class="attributepages-title">
-                        Frappato                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/furmint/" title="Furmint" class="attributepages-title">
-                        Furmint                    </a>
-                            </li>
-                </ul>
-                                                
-                        </li>
-            
-            <li class="attributepages-options-group options-group-g">
-            <div class="attributepages-options-group-title">
-                                <a class="attributepages-options-anchor" href="#g" name="g">
-                    <span>&para;</span>
-                </a>
-                g            </div>
-        
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/gamay/" title="Gamay" class="attributepages-title">
-                        Gamay                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/garganega/" title="Garganega" class="attributepages-title">
-                        Garganega                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/gewurztraminer/" title="Gewürztraminer" class="attributepages-title">
-                        Gewürztraminer                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/glera/" title="Glera" class="attributepages-title">
-                        Glera                    </a>
-                            </li>
-                </ul>
-                                    
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/gouveio/" title="Gouveio" class="attributepages-title">
-                        Gouveio                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/graciano/" title="Graciano" class="attributepages-title">
-                        Graciano                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/grenache/" title="Grenache" class="attributepages-title">
-                        Grenache                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/grenache-blanc/" title="Grenache Blanc" class="attributepages-title">
-                        Grenache Blanc                    </a>
-                            </li>
-                </ul>
-                                    
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/grenache-gris/" title="Grenache Gris" class="attributepages-title">
-                        Grenache Gris                    </a>
-                            </li>
-                                                            </ul>
-            
-                        </li>
-            
-            <li class="attributepages-options-group options-group-h">
-            <div class="attributepages-options-group-title">
-                                <a class="attributepages-options-anchor" href="#h" name="h">
-                    <span>&para;</span>
-                </a>
-                h            </div>
-        
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/harslevelu/" title="Hárslevelü" class="attributepages-title">
-                        Hárslevelü                    </a>
-                            </li>
-                                                            </ul>
-            
-                        </li>
-            
-            <li class="attributepages-options-group options-group-i">
-            <div class="attributepages-options-group-title">
-                                <a class="attributepages-options-anchor" href="#i" name="i">
-                    <span>&para;</span>
-                </a>
-                i            </div>
-        
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/inzolia/" title="Inzolia" class="attributepages-title">
-                        Inzolia                    </a>
-                            </li>
-                                                            </ul>
-            
-                        </li>
-            
-            <li class="attributepages-options-group options-group-l">
-            <div class="attributepages-options-group-title">
-                                <a class="attributepages-options-anchor" href="#l" name="l">
-                    <span>&para;</span>
-                </a>
-                l            </div>
-        
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/loin-de-loeil/" title="Loin de l&#039;Oeil" class="attributepages-title">
-                        Loin de l&#039;Oeil                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/loureiro/" title="Loureiro" class="attributepages-title">
-                        Loureiro                    </a>
-                            </li>
-                                                            </ul>
-            
-                        </li>
-            
-            <li class="attributepages-options-group options-group-m">
-            <div class="attributepages-options-group-title">
-                                <a class="attributepages-options-anchor" href="#m" name="m">
-                    <span>&para;</span>
-                </a>
-                m            </div>
-        
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/macabeo/" title="Macabeo" class="attributepages-title">
-                        Macabeo                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/malbec/" title="Malbec" class="attributepages-title">
-                        Malbec                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/malvasia-fina/" title="Malvasia Fina" class="attributepages-title">
-                        Malvasia Fina                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/malvasia-nera/" title="Malvasia Nera" class="attributepages-title">
-                        Malvasia Nera                    </a>
-                            </li>
-                </ul>
-                                    
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/marsanne/" title="Marsanne" class="attributepages-title">
-                        Marsanne                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/marselan/" title="Marselan" class="attributepages-title">
-                        Marselan                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/mauzac/" title="Mauzac" class="attributepages-title">
-                        Mauzac                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/melon-de-bourgogne/" title="Melon de Bourgogne" class="attributepages-title">
-                        Melon de Bourgogne                    </a>
-                            </li>
-                </ul>
-                                    
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/mencia/" title="Mencía" class="attributepages-title">
-                        Mencía                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/merlot/" title="Merlot" class="attributepages-title">
-                        Merlot                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/molinara/" title="Molinara" class="attributepages-title">
-                        Molinara                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/monica/" title="Monica" class="attributepages-title">
-                        Monica                    </a>
-                            </li>
-                </ul>
-                                    
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/montepulciano/" title="Montepulciano" class="attributepages-title">
-                        Montepulciano                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/moreto/" title="Moreto" class="attributepages-title">
-                        Moreto                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/moscatel/" title="Moscatel" class="attributepages-title">
-                        Moscatel                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/mourvedre/" title="Mourvèdre" class="attributepages-title">
-                        Mourvèdre                    </a>
-                            </li>
-                </ul>
-                                    
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/muscardin/" title="Muscardin" class="attributepages-title">
-                        Muscardin                    </a>
-                            </li>
-                                                            </ul>
-            
-                        </li>
-            
-            <li class="attributepages-options-group options-group-n">
-            <div class="attributepages-options-group-title">
-                                <a class="attributepages-options-anchor" href="#n" name="n">
-                    <span>&para;</span>
-                </a>
-                n            </div>
-        
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/nebbiolo/" title="Nebbiolo" class="attributepages-title">
-                        Nebbiolo                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/negrette/" title="Négrette" class="attributepages-title">
-                        Négrette                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/negroamaro/" title="Negroamaro" class="attributepages-title">
-                        Negroamaro                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/nerello-mascalese/" title="Nerello Mascalese" class="attributepages-title">
-                        Nerello Mascalese                    </a>
-                            </li>
-                </ul>
-                                    
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/nero-d-avola/" title="Nero d&#039;Avola" class="attributepages-title">
-                        Nero d&#039;Avola                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/nero-di-troia/" title="Nero di Troia" class="attributepages-title">
-                        Nero di Troia                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/nielluccio/" title="Nielluccio" class="attributepages-title">
-                        Nielluccio                    </a>
-                            </li>
-                                                            </ul>
-            
-                        </li>
-            
-            <li class="attributepages-options-group options-group-p">
-            <div class="attributepages-options-group-title">
-                                <a class="attributepages-options-anchor" href="#p" name="p">
-                    <span>&para;</span>
-                </a>
-                p            </div>
-        
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/parellada/" title="Parellada" class="attributepages-title">
-                        Parellada                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/pecorino/" title="Pecorino" class="attributepages-title">
-                        Pecorino                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/perricone/" title="Perricone" class="attributepages-title">
-                        Perricone                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/perrum/" title="Perrum" class="attributepages-title">
-                        Perrum                    </a>
-                            </li>
-                </ul>
-                                    
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/petit-syrah/" title="Petit Syrah" class="attributepages-title">
-                        Petit Syrah                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/petit-verdot/" title="Petit Verdot" class="attributepages-title">
-                        Petit Verdot                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/picardan/" title="Picardan" class="attributepages-title">
-                        Picardan                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/picpoul-blanc/" title="Picpoul Blanc" class="attributepages-title">
-                        Picpoul Blanc                    </a>
-                            </li>
-                </ul>
-                                    
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/pinot-blanc/" title="Pinot Blanc" class="attributepages-title">
-                        Pinot Blanc                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/pinot-grigio/" title="Pinot Grigio" class="attributepages-title">
-                        Pinot Grigio                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/pinot-meunier/" title="Pinot Meunier" class="attributepages-title">
-                        Pinot Meunier                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/pinot-noir/" title="Pinot Noir" class="attributepages-title">
-                        Pinot Noir                    </a>
-                            </li>
-                </ul>
-                                    
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/pinotage/" title="Pinotage" class="attributepages-title">
-                        Pinotage                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/primitivo/" title="Primitivo" class="attributepages-title">
-                        Primitivo                    </a>
-                            </li>
-                                                            </ul>
-            
-                        </li>
-            
-            <li class="attributepages-options-group options-group-r">
-            <div class="attributepages-options-group-title">
-                                <a class="attributepages-options-anchor" href="#r" name="r">
-                    <span>&para;</span>
-                </a>
-                r            </div>
-        
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/rabigato/" title="Rabigato" class="attributepages-title">
-                        Rabigato                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/raboso/" title="Raboso" class="attributepages-title">
-                        Raboso                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/refosco/" title="Refosco" class="attributepages-title">
-                        Refosco                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/riesling/" title="Riesling" class="attributepages-title">
-                        Riesling                    </a>
-                            </li>
-                </ul>
-                                    
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/riesling-italica/" title="Riesling Itálica" class="attributepages-title">
-                        Riesling Itálica                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/rondinella/" title="Rondinella" class="attributepages-title">
-                        Rondinella                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/roussanne/" title="Roussanne" class="attributepages-title">
-                        Roussanne                    </a>
-                            </li>
-                                                            </ul>
-            
-                        </li>
-            
-            <li class="attributepages-options-group options-group-s">
-            <div class="attributepages-options-group-title">
-                                <a class="attributepages-options-anchor" href="#s" name="s">
-                    <span>&para;</span>
-                </a>
-                s            </div>
-        
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/sangiovese/" title="Sangiovese" class="attributepages-title">
-                        Sangiovese                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/sauvignon-blanc/" title="Sauvignon Blanc" class="attributepages-title">
-                        Sauvignon Blanc                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/sauvignon-gris/" title="Sauvignon Gris" class="attributepages-title">
-                        Sauvignon Gris                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/semillon/" title="Sémillon" class="attributepages-title">
-                        Sémillon                    </a>
-                            </li>
-                </ul>
-                                    
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/sercialinho/" title="Sercialinho" class="attributepages-title">
-                        Sercialinho                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/sousao/" title="Sousão" class="attributepages-title">
-                        Sousão                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/syrah/" title="Syrah" class="attributepages-title">
-                        Syrah                    </a>
-                            </li>
-                                                            </ul>
-            
-                        </li>
-            
-            <li class="attributepages-options-group options-group-t">
-            <div class="attributepages-options-group-title">
-                                <a class="attributepages-options-anchor" href="#t" name="t">
-                    <span>&para;</span>
-                </a>
-                t            </div>
-        
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/tannat/" title="Tannat" class="attributepages-title">
-                        Tannat                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/tempranillo/" title="Tempranillo" class="attributepages-title">
-                        Tempranillo                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/teroldego/" title="Teroldego" class="attributepages-title">
-                        Teroldego                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/terret-noir/" title="Terret Noir" class="attributepages-title">
-                        Terret Noir                    </a>
-                            </li>
-                </ul>
-                                    
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/tibouren/" title="Tibouren" class="attributepages-title">
-                        Tibouren                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/tinta-barroca/" title="Tinta Barroca" class="attributepages-title">
-                        Tinta Barroca                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/tinto-cao/" title="Tinto Cão" class="attributepages-title">
-                        Tinto Cão                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/torrontes/" title="Torrontés" class="attributepages-title">
-                        Torrontés                    </a>
-                            </li>
-                </ul>
-                                    
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/touriga-franca/" title="Touriga Franca" class="attributepages-title">
-                        Touriga Franca                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/touriga-nacional/" title="Touriga Nacional" class="attributepages-title">
-                        Touriga Nacional                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/trajadura/" title="Trajadura" class="attributepages-title">
-                        Trajadura                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/trebbiano/" title="Trebbiano" class="attributepages-title">
-                        Trebbiano                    </a>
-                            </li>
-                </ul>
-                                    
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/trepat/" title="Trepat" class="attributepages-title">
-                        Trepat                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/trincadeira/" title="Trincadeira" class="attributepages-title">
-                        Trincadeira                    </a>
-                            </li>
-                                                            </ul>
-            
-                        </li>
-            
-            <li class="attributepages-options-group options-group-v">
-            <div class="attributepages-options-group-title">
-                                <a class="attributepages-options-anchor" href="#v" name="v">
-                    <span>&para;</span>
-                </a>
-                v            </div>
-        
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/vaccarese/" title="Vaccarèse" class="attributepages-title">
-                        Vaccarèse                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/verdejo/" title="Verdejo" class="attributepages-title">
-                        Verdejo                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/verduzzo/" title="Verduzzo" class="attributepages-title">
-                        Verduzzo                    </a>
-                            </li>
-                                    
-                    <li class="item last">
-                                    <a href="https://www.divinho.com.br/uva/vermentino/" title="Vermentino" class="attributepages-title">
-                        Vermentino                    </a>
-                            </li>
-                </ul>
-                                    
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/viognier/" title="Viognier" class="attributepages-title">
-                        Viognier                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/viosinho/" title="Viosinho" class="attributepages-title">
-                        Viosinho                    </a>
-                            </li>
-                                    
-                    <li class="item">
-                                    <a href="https://www.divinho.com.br/uva/vital/" title="Vital" class="attributepages-title">
-                        Vital                    </a>
-                            </li>
-                                                            </ul>
-            
-                        </li>
-            
-            <li class="attributepages-options-group options-group-x">
-            <div class="attributepages-options-group-title">
-                                <a class="attributepages-options-anchor" href="#x" name="x">
-                    <span>&para;</span>
-                </a>
-                x            </div>
-        
-                <ul class="attributepages-grid attributepages-cols-4 mode-link">
-                    <li class="item first">
-                                    <a href="https://www.divinho.com.br/uva/xarel-lo/" title="Xarel-lo" class="attributepages-title">
-                        Xarel-lo                    </a>
-                            </li>
-                </ul>
-                    
-        </ul>
-    </div>
-    
+</div><div class="single-product mt-5 mt-md-0"><div class="single-product__title"><div class="row align-items-center"><div class="col-4 col-lg-3 align-self-start">
 
-</div></div></div></main><footer class="site-footer d-flex flex-column">
+<div class="single-product__photo">
+    <img
+        alt="main product photo"
+        src="https://images.divinho.com.br/catalog/product/cache/b7d320e39333d0f7a197a4ddb51399f4/a/l/alamos_malbec.png"
+    />
+</div>
+
+</div><div class="col-8 col-lg-9 p-md-0 pl-0"><div class="row no-gutters align-items-center"><div class="col-lg"><div class="page-title-wrapper">
+    <h1 class="page-title&#x20;product"
+                >
+        <span class="base" data-ui-id="page-title-wrapper" itemprop="name">Vinho Alamos Malbec 2019</span>    </h1>
+    </div>
+</div><div class="col-lg-5 d-flex align-items-center justify-content-around flex-lg-nowrap flex-wrap-reverse">
+
+
+
+        <div class="product__pontuacao">
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="James Suckling">JS</div>
+                    <div class="pontos">91</div>
+                </div>
+                    </div>
+
+    <div class="text-lg-center d-flex d-lg-block align-items-center mb-3 mb-lg-0">
+        <div class="product__bandeira">
+            <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/ar.png" alt="Argentina">
+                        <div class="product__tipo product__tipo--tinto d-none d-md-block" data-toggle="tooltip"
+                data-placement="right" title="" data-original-title="Tinto"></div>
+                    </div>
+        <div class="text-center ml-3 d-block d-md-none">
+            <a href="#" data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":906,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tYWxhbW9zLW1hbGJlYw,,"}}' class="action towishlist wishlist" data-action="add-to-wishlist">
+            <i class="far fa-heart mr-2"></i>  
+                <span>
+                    Lista de Desejos                </span>
+            </a>    
+        </div>
+    </div>
+
+
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "wishlist": {
+                    "component": "Magento_Wishlist/js/view/wishlist"
+                }
+            }
+        }
+    }
+}
+</script>
+</div></div></div></div></div><div class="d-flex flex-wrap mt-3"><div class="offset-lg-3 col-lg-6 order-1 order-md-0"><div class="product__content mr-lg-3">
+
+<hr class="border-primary d-md-none">
+
+<div class="product__content__title d-lg-none">Sobre o Vinho</div>
+
+<div class="product-attribute overview">
+            <span class="value" itemprop="description">
+            <p>O <strong>Vinho Alamos Malbec </strong>é um rótulo de excepcional qualidade em sua faixa de preço! Produzido pela <strong>Alamos Wines</strong>, que pertence a renomada família <strong>Catena Zapata</strong>, em <strong>Mendoza</strong>. De coloração rubi intensa, apresenta um bouquet aromático complexo, com aromas de cereja negra, amora, notas de especiarias e um toque de baunilha. Um <strong>Vinho Tinto</strong> de grande estrutura, com taninos firmes e um final longo e persistente. </p>        </span>
+</div>
+<div class="product__attributes additional-attributes-wrapper table-wrapper">
+    <ul class="attributes data additional-attribute" id="product-attribute-specs-table">
+                        <li class="attribute avaliacoes">
+            <div class="attribute__item">
+                <div class="label">Avaliações</div>
+                <div class="data" data-code="opt2flow_avaliacoes"
+                    data-th="Avalia&#xE7;&#xF5;es">
+                                                    <a href="https://www.divinho.com.br/criticos/james-suckling/">
+                                                                                         <span>91 pontos James Suckling</span>
+                                                                                        </a>
+                                                                                                </div>
+            </div>
+        </li>
+                        <li class="attribute pais">
+            <div class="attribute__item">
+                <div class="label">País</div>
+                <div class="data" data-code="country_of_manufacture"
+                    data-th="Pa&#xED;s">
+                                                    <a href="https://www.divinho.com.br/pais/argentina">
+                                                                                         <span>Argentina</span>
+                                                                                        </a>
+                                                                                                </div>
+            </div>
+        </li>
+                        <li class="attribute regi-o">
+            <div class="attribute__item">
+                <div class="label">Região</div>
+                <div class="data" data-code="regi_o"
+                    data-th="Regi&#xE3;o">
+                                                    <a href="https://www.divinho.com.br/pais/argentina/mendoza">
+                                                                                         <span>Mendoza</span>
+                                                                                        </a>
+                                                                                                </div>
+            </div>
+        </li>
+                        <li class="attribute produtor">
+            <div class="attribute__item">
+                <div class="label">Produtor</div>
+                <div class="data" data-code="manufacturer"
+                    data-th="Produtor">
+                                                    <a href="https://www.divinho.com.br/vinicolas/alamos-wines/">
+                                                                                         <span>Alamos Wines</span>
+                                                                                        </a>
+                                                                                                </div>
+            </div>
+        </li>
+                        <li class="attribute uva">
+            <div class="attribute__item">
+                <div class="label">Uva</div>
+                <div class="data" data-code="uva"
+                    data-th="Uva">
+                                                    <a href="https://www.divinho.com.br/uva/malbec/">
+                                                                                         <span>Malbec</span>
+                                                                                        </a>
+                                                                                                </div>
+            </div>
+        </li>
+                        <li class="attribute tipo">
+            <div class="attribute__item">
+                <div class="label">Tipo</div>
+                <div class="data" data-code="tipo"
+                    data-th="Tipo">
+                                                    <a href="https://www.divinho.com.br/vinhos/tinto">
+                                                                                         <span>Tinto</span>
+                                                                                        </a>
+                                                                                                </div>
+            </div>
+        </li>
+                        <li class="attribute teor-alcoolico">
+            <div class="attribute__item">
+                <div class="label">Teor Alcoólico</div>
+                <div class="data" data-code="teor_alcoolico"
+                    data-th="Teor&#x20;Alco&#xF3;lico">
+                    13,5%                </div>
+            </div>
+        </li>
+                        <li class="attribute tamanho-da-garrafa">
+            <div class="attribute__item">
+                <div class="label">Tamanho da garrafa</div>
+                <div class="data" data-code="tamanho_da_garrafa"
+                    data-th="Tamanho&#x20;da&#x20;garrafa">
+                                                                                 <span>750ml</span>
+                                                                                                                            </div>
+            </div>
+        </li>
+                        <li class="attribute temperatura-de-servico">
+            <div class="attribute__item">
+                <div class="label">Temperatura de serviço</div>
+                <div class="data" data-code="temperatura_de_servico"
+                    data-th="Temperatura&#x20;de&#x20;servi&#xE7;o">
+                                                                                 <span>16 a 18°C</span>
+                                                                                                                            </div>
+            </div>
+        </li>
+                        <li class="attribute harmonizac-o">
+            <div class="attribute__item">
+                <div class="label">Harmonização</div>
+                <div class="data" data-code="harmonizacao"
+                    data-th="Harmoniza&#xE7;&#xE3;o">
+                                                                                 <i class="icon-carnes-vermelhas" data-toggle="tooltip" data-placement="top" title="Carnes&#x20;vermelhas"></i>
+                                                                                                                                                                         <i class="icon-pizza" data-toggle="tooltip" data-placement="top" title="Pizza"></i>
+                                                                                                                                                                         <i class="icon-churrasco" data-toggle="tooltip" data-placement="top" title="Churrasco"></i>
+                                                                                                                            </div>
+            </div>
+        </li>
+            </ul>
+</div>
+    <div class="d-none d-md-block">
+        <a href="#"
+           class="wishlist action towishlist btn btn-xl btn-outline-primary py-3 "
+           data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":906,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tYWxhbW9zLW1hbGJlYw,,"}}'
+           data-action="add-to-wishlist">
+            <i class="far fa-heart mr-3" aria-hidden="true"></i>
+            <span>Lista de Desejos</span>
+        </a>
+    </div>
+<script type="text/x-magento-init">
+    {
+        "body": {
+            "addToWishlist": {"productType":"simple"}        }
+    }
+</script>
+</div></div><div class="col-lg-3 p-md-0"><div class="single-product__actions"><div class="product-info-main"><div class="product-info-price"><div class="d-flex align-items-center justify-content-between"><div class="price-box price-final_price" data-role="priceBox" data-product-id="906" data-price-box="product-id-906">
+   <div class="price__regular"><br></div>
+    <div class="price__sale">
+        
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-906"                data-price-amount="113.61"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$113,61</span></span>
+        </span>
+    </div>
+
+</div></div>                <div class="installment">
+            Em até <span>3x de R$37,87 s/ juros</span>        </div>
+    </div>
+
+<div class="product-add-form">
+    <form data-product-sku="440"
+          action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tYWxhbW9zLW1hbGJlYw%2C%2C/product/906/" method="post"
+          id="product_addtocart_form">
+        <input type="hidden" name="product" value="906" />
+        <input type="hidden" name="selected_configurable_option" value="" />
+        <input type="hidden" name="related_product" id="related-products-field" value="" />
+        <input type="hidden" name="item"  value="906" />
+        <input name="form_key" type="hidden" value="Qt6z5C5M1BjHvYUc" />                            <div class="box-tocart">
+    <div class="fieldset">
+                <div class="form-row align-items-center mt-2">
+            <div class="form-group col-3">
+                <label for="qty"><span>Qtd</span></label>
+                <div class="single-product__quantity">
+                    <div class="custom-number custom-number--product">
+                    <input type="number" name="qty" id="qty" min="1" step="1" maxlength="12"
+                            value="1"
+                            title="Qtd" class="form-control input-text qty"
+                            data-validate="{&quot;required-number&quot;:true,&quot;validate-item-quantity&quot;:{&quot;minAllowed&quot;:1,&quot;maxAllowed&quot;:10000}}" />
+                            <div class="custom-number-button custom-number-button--up"><i class="fas fa-chevron-up"></i>
+                        </div>
+                            <div class="custom-number-button custom-number-button--down"><i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="form-group offset-1 col-8 d-none">
+                <label for="cupom">CÓD. Promocional</label>
+                <input placeholder="Digite aqui seu código" class="form-control" id="cupom">
+            </div> -->
+          <!--   <div class="col text-center">
+                                <div class="stock available">
+                    <span>Em estoque</span>
+                </div>
+                            </div> -->
+        </div>
+
+                <div class="form-group actions">
+            <button type="submit" title="Comprar"
+                class="btn btn--product action primary tocart" id="product-addtocart-button">
+                <i class="fas fa-shopping-cart mr-2"></i>
+                <span>Comprar</span>
+            </button>
+            
+<div id="instant-purchase" data-bind="scope:'instant-purchase'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+    {
+        "#instant-purchase": {
+            "Magento_Ui/js/core/app": {"components":{"instant-purchase":{"component":"Magento_InstantPurchase\/js\/view\/instant-purchase","config":{"template":"Magento_InstantPurchase\/instant-purchase","buttonText":"Instant Purchase","purchaseUrl":"https:\/\/www.divinho.com.br\/instantpurchase\/button\/placeOrder\/"}}}}        }
+    }
+</script>
+        </div>
+    </div>
+</div>
+<script type="text/x-magento-init">
+    {
+        "#product_addtocart_form": {
+            "Magento_Catalog/product/view/validation": {
+                "radioCheckboxClosest": ".nested"
+            }
+        }
+    }
+</script>
+<script type="text/x-magento-init">
+    {
+        "#product_addtocart_form": {
+            "catalogAddToCart": {
+                "bindSubmit": true,
+                "addToCartButtonTextDefault": "Comprar"
+            }
+        }
+    }
+</script>
+        
+                    </form>
+</div>
+
+<script>
+    require([
+        'jquery',
+        'priceBox'
+    ], function($){
+        var dataPriceBoxSelector = '[data-role=priceBox]',
+            dataProductIdSelector = '[data-product-id=906]',
+            priceBoxes = $(dataPriceBoxSelector + dataProductIdSelector);
+
+        priceBoxes = priceBoxes.filter(function(index, elem){
+            return !$(elem).find('.price-from').length;
+        });
+        priceBoxes.priceBox({'priceConfig': {"productId":"906","priceFormat":{"pattern":"R$%s","precision":2,"requiredPrecision":2,"decimalSymbol":",","groupSymbol":".","groupLength":3,"integerRequired":false}}});
+    });
+</script>
+<div class="opt2flow-shipping-estimate"><div class="cart-after__title text-uppercase">
+    <i class="fas fa-2x fa-shipping-fast text-primary mr-2 align-middle"></i>
+    <strong>Consultar Valor do Frete</strong>
+</div>
+<div class="fieldset">
+    <div class="field postcode">
+        <div class="control d-flex align-items-center ">
+            <input type="text" minlength="8" maxlength="8" oninput="this.value=this.value.replace(/[^0-9]/g,'');" name="opt2flow-postcode" id="opt2flow-postcode" maxlength="9" title="CEP" class="input-text opt2flow-postcode mask-cep mr-2" placeholder="digite o CEP" style="height: 38px;">
+            <button name="btn-estimate-shipping" id="btn-estimate-shipping" type="button" title="ok" class="action btn btn-primary tocart">ok</button>
+        </div>
+    </div>
+    <input type="hidden" name="opt2flow_product_id" id="opt2flow_product_id" value="906">
+</div>
+<div id="shipping-estimate-results"></div>
+<script>
+    require ([
+            'jquery'
+        ],
+        function ($) {
+            $(window).on("load", function () {
+                require([
+                    'opt2flowproductshipping'
+                ]);
+            });
+        });
+</script>
+</div></div><div class="alert price alert-secondary small font-weight-bold p-2 my-3 price">
+    <a href="https://www.divinho.com.br/productalert/add/price/product_id/906/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tYWxhbW9zLW1hbGJlYw%2C%2C/"
+       title="Receber&#x20;notifica&#xE7;&#xF5;es&#x20;de&#x20;baixa&#x20;de&#x20;pre&#xE7;o" class="action alert-product">
+        <i class="fas fa-exclamation-circle mr-1"></i>
+        Receber notificações de baixa de preço    </a>
+</div>
+</div></div></div><div class="row"><div class="col-lg">
+
+<div class="single-product__accordion mt-md-5" id="accordion">
+            <div class="attribute-item" data-attribute="vinifcacao">
+            <h2 class="attribute__header">
+                Vinificação            </h2>
+            <div class="attribute__content">
+                <p>O Alamos Malbec 2019 é produzido com a uva Malbec, oriunda de vinhedos cultivados entre 1000 e 5000 metros de altitude na região vitivinícola de Mendoza, Argentina. As uvas são colhidas e selecionadas manualmente, passando pelos processos de desengace e maceração pré-fermentativa. A fermentação ocorre sob temperatura controlada de 29ºC por um período de uma semana com remontagem. O vinho envelhece em barris de carvalho francês e americano por um período de oito meses.</p>            </div>
+        </div>
+                <div class="attribute-item" data-attribute="sobre_a_vinicola">
+            <h2 class="attribute__header">
+                Sobre a vinícola            </h2>
+            <div class="attribute__content">
+                Localizada em Vistaflores, Mendoza, Alamos Wines pertence à família Catena Zapata, que figura como o melhor e mais reverenciado produtor da Argentina na opinião da imprensa especializada, da qual recebe sempre as melhores notas e prêmios. Alamos Wines foi fundada em 1993 com o objetivo de produzir vinhos argentinos saborosos e aromáticos a partir de castas típicas e internacionais, ao alcance da maioria das pessoas graças ao seu preço convidativo. O nome Alamos faz referência às árvores que protegem os vinhedos dos ventos do Pacífico. À frente da enologia da Alamos Wines está a talentosa enóloga Lucía Vaieretti, que vem de uma família com uma tradição em viticultura em Mendoza de mais de quarenta anos.            </div>
+        </div>
+        </div><div class="d-md-none product-info__mobile"><hr class="border-primary my-4">
+<div class="product-add-form">
+    <form data-product-sku="440"
+          action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tYWxhbW9zLW1hbGJlYw%2C%2C/product/906/" method="post"
+          id="product_addtocart_form">
+        <input type="hidden" name="product" value="906" />
+        <input type="hidden" name="selected_configurable_option" value="" />
+        <input type="hidden" name="related_product" id="related-products-field" value="" />
+        <input type="hidden" name="item"  value="906" />
+        <input name="form_key" type="hidden" value="Qt6z5C5M1BjHvYUc" />                            <div class="box-tocart">
+    <div class="fieldset">
+                <div class="form-row align-items-center mt-2">
+            <div class="form-group col-3">
+                <label for="qty"><span>Qtd</span></label>
+                <div class="single-product__quantity">
+                    <div class="custom-number custom-number--product">
+                    <input type="number" name="qty" id="qty" min="1" step="1" maxlength="12"
+                            value="1"
+                            title="Qtd" class="form-control input-text qty"
+                            data-validate="{&quot;required-number&quot;:true,&quot;validate-item-quantity&quot;:{&quot;minAllowed&quot;:1,&quot;maxAllowed&quot;:10000}}" />
+                            <div class="custom-number-button custom-number-button--up"><i class="fas fa-chevron-up"></i>
+                        </div>
+                            <div class="custom-number-button custom-number-button--down"><i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="form-group offset-1 col-8 d-none">
+                <label for="cupom">CÓD. Promocional</label>
+                <input placeholder="Digite aqui seu código" class="form-control" id="cupom">
+            </div> -->
+          <!--   <div class="col text-center">
+                                <div class="stock available">
+                    <span>Em estoque</span>
+                </div>
+                            </div> -->
+        </div>
+
+                <div class="form-group actions">
+            <button type="submit" title="Comprar"
+                class="btn btn--product action primary tocart" id="product-addtocart-button">
+                <i class="fas fa-shopping-cart mr-2"></i>
+                <span>Comprar</span>
+            </button>
+                    </div>
+    </div>
+</div>
+<script type="text/x-magento-init">
+    {
+        "#product_addtocart_form": {
+            "Magento_Catalog/product/view/validation": {
+                "radioCheckboxClosest": ".nested"
+            }
+        }
+    }
+</script>
+<script type="text/x-magento-init">
+    {
+        "#product_addtocart_form": {
+            "catalogAddToCart": {
+                "bindSubmit": true,
+                "addToCartButtonTextDefault": "Comprar"
+            }
+        }
+    }
+</script>
+        
+                    </form>
+</div>
+
+<script>
+    require([
+        'jquery',
+        'priceBox'
+    ], function($){
+        var dataPriceBoxSelector = '[data-role=priceBox]',
+            dataProductIdSelector = '[data-product-id=906]',
+            priceBoxes = $(dataPriceBoxSelector + dataProductIdSelector);
+
+        priceBoxes = priceBoxes.filter(function(index, elem){
+            return !$(elem).find('.price-from').length;
+        });
+        priceBoxes.priceBox({'priceConfig': {"productId":"906","priceFormat":{"pattern":"R$%s","precision":2,"requiredPrecision":2,"decimalSymbol":",","groupSymbol":".","groupLength":3,"integerRequired":false}}});
+    });
+</script>
+</div></div></div></div><script type="text/x-magento-init">
+    {
+        "body": {
+            "requireCookie": {"noCookieUrl":"https:\/\/www.divinho.com.br\/cookie\/index\/noCookies\/","triggers":[".action.towishlist"],"isRedirectCmsPage":true}        }
+    }
+</script>
+<script type="text/x-magento-init">
+    {
+        "*": {
+                "Magento_Catalog/js/product/view/provider": {
+                    "data": {"items":{"906":{"add_to_cart_button":{"post_data":"{\"action\":\"https:\\\/\\\/www.divinho.com.br\\\/checkout\\\/cart\\\/add\\\/uenc\\\/%25uenc%25\\\/product\\\/906\\\/\",\"data\":{\"product\":\"906\",\"uenc\":\"%uenc%\"}}","url":"https:\/\/www.divinho.com.br\/checkout\/cart\/add\/uenc\/%25uenc%25\/product\/906\/","required_options":false},"add_to_compare_button":{"post_data":null,"url":"{\"action\":\"https:\\\/\\\/www.divinho.com.br\\\/catalog\\\/product_compare\\\/add\\\/\",\"data\":{\"product\":\"906\",\"uenc\":\"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tYWxhbW9zLW1hbGJlYw,,\"}}","required_options":null},"price_info":{"final_price":113.61,"max_price":113.61,"max_regular_price":113.61,"minimal_regular_price":113.61,"special_price":null,"minimal_price":113.61,"regular_price":113.61,"formatted_prices":{"final_price":"<span class=\"price\">R$113,61<\/span>","max_price":"<span class=\"price\">R$113,61<\/span>","minimal_price":"<span class=\"price\">R$113,61<\/span>","max_regular_price":"<span class=\"price\">R$113,61<\/span>","minimal_regular_price":null,"special_price":null,"regular_price":"<span class=\"price\">R$113,61<\/span>"},"extension_attributes":{"msrp":{"msrp_price":"<span class=\"price\">R$0,00<\/span>","is_applicable":"","is_shown_price_on_gesture":"","msrp_message":"","explanation_message":"Our price is lower than the manufacturer&#039;s &quot;minimum advertised price.&quot; As a result, we cannot show you the price in catalog or the product page. <br><br> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart."},"tax_adjustments":{"final_price":113.61,"max_price":113.61,"max_regular_price":113.61,"minimal_regular_price":113.61,"special_price":113.61,"minimal_price":113.61,"regular_price":113.61,"formatted_prices":{"final_price":"<span class=\"price\">R$113,61<\/span>","max_price":"<span class=\"price\">R$113,61<\/span>","minimal_price":"<span class=\"price\">R$113,61<\/span>","max_regular_price":"<span class=\"price\">R$113,61<\/span>","minimal_regular_price":null,"special_price":"<span class=\"price\">R$113,61<\/span>","regular_price":"<span class=\"price\">R$113,61<\/span>"}},"weee_attributes":[],"weee_adjustment":"<span class=\"price\">R$113,61<\/span>"}},"images":[{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/c0ffc0f3780617b20732f12bef036575\/a\/l\/alamos_malbec.png","code":"recently_viewed_products_grid_content_widget","height":300,"width":240,"label":"Garrafa de Vinho Alamos Malbec 2019","resized_width":240,"resized_height":300},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/d9e3e7d2d318c89cdaa08d93d9a8221e\/a\/l\/alamos_malbec.png","code":"recently_viewed_products_list_content_widget","height":340,"width":270,"label":"Garrafa de Vinho Alamos Malbec 2019","resized_width":270,"resized_height":340},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/fba4d41374f3b4a4b2553ba145032f1f\/a\/l\/alamos_malbec.png","code":"recently_viewed_products_images_names_widget","height":90,"width":75,"label":"Garrafa de Vinho Alamos Malbec 2019","resized_width":75,"resized_height":90},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/c0ffc0f3780617b20732f12bef036575\/a\/l\/alamos_malbec.png","code":"recently_compared_products_grid_content_widget","height":300,"width":240,"label":"Garrafa de Vinho Alamos Malbec 2019","resized_width":240,"resized_height":300},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/d9e3e7d2d318c89cdaa08d93d9a8221e\/a\/l\/alamos_malbec.png","code":"recently_compared_products_list_content_widget","height":340,"width":270,"label":"Garrafa de Vinho Alamos Malbec 2019","resized_width":270,"resized_height":340},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/fba4d41374f3b4a4b2553ba145032f1f\/a\/l\/alamos_malbec.png","code":"recently_compared_products_images_names_widget","height":90,"width":75,"label":"Garrafa de Vinho Alamos Malbec 2019","resized_width":75,"resized_height":90}],"url":"https:\/\/www.divinho.com.br\/vinho-alamos-malbec","id":906,"name":"Vinho Alamos Malbec 2019","type":"simple","is_salable":"1","store_id":1,"currency_code":"BRL","extension_attributes":{"review_html":"<div class=\"product-reviews-summary short empty\">\n    <div class=\"reviews-actions\">\n        <a class=\"action add\" href=\"https:\/\/www.divinho.com.br\/vinho-alamos-malbec#review-form\">\n            Seja o primeiro a avaliar este produto        <\/a>\n    <\/div>\n<\/div>\n","wishlist_button":{"post_data":null,"url":"{\"action\":\"https:\\\/\\\/www.divinho.com.br\\\/wishlist\\\/index\\\/add\\\/\",\"data\":{\"product\":906,\"uenc\":\"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tYWxhbW9zLW1hbGJlYw,,\"}}","required_options":null}}}},"store":"1","currency":"BRL"}            }
+        }
+    }
+</script>
+
+
+
+<div class="block related"
+    data-mage-init='{"relatedProducts":{"relatedCheckbox":".related.checkbox"}}'
+    data-limit="0" data-shuffle="0">
+                        <div class="block-title title page-title__pink linha my-4">
+                <span id="block-related-heading" role="heading"
+                    aria-level="2">Produtos Relacionados</span>
+            </div>
+            <div class="block-content content" aria-labelledby="block-related-heading">
+                                <div class="block-actions d-none">
+                    Verifique itens para adicionar ao carrinho ou                    <button type="button" class="action select btn btn-primary"
+                        data-role="select-all"><span>selecionar tudo</span></button>
+                </div>
+                                <div class="products wrapper grid products-grid products-related">
+                    <div class="products row list items product-items">
+                                                                                                                                                                                                
+                        
+                                                <div class="col-md-3 mb-2 product product-item item" style="display: none;">
+                                                            <div class="box-product product-item-info related-available"
+                                    data-product-id="488">
+                                    <!-- related_products_list-->
+                                    
+                                    
+    <div class="product__bandeira">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/ar.png" alt="Argentina" title="Argentina">
+    </div>
+
+                                    
+
+        <div class="product__pontuacao">
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="James Suckling">JS</div>
+                    <div class="pontos">91</div>
+                </div>
+                    </div>
+
+                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Alamos Cabernet Sauvignon 2018&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Alamos Malbec 2019 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Alamos Cabernet Sauvignon 2018&quot;,&quot;id&quot;:&quot;488&quot;,&quot;price&quot;:&quot;107.04&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Argentina&quot;,&quot;position&quot;:0,&quot;brand&quot;:&quot;Alamos Wines&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-alamos-cabernet-sauvignon' }});" href="https://www.divinho.com.br/vinho-alamos-cabernet-sauvignon"
+                                        class="product photo product-item-photo">
+                                        <div class="product__photo">
+                                            
+
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho_alamos_cabernet_sauvignon_2018.png"
+    width=""
+    height=""
+    alt="Garrafa de Vinho Alamos Cabernet Sauvignon 2018" /></span>                                        </div>
+                                    </a>
+
+                                    <div class="product__content">
+                                        <a class="product-item-link"
+                                            title="Vinho&#x20;Alamos&#x20;Cabernet&#x20;Sauvignon&#x20;2018"
+                                            href="https://www.divinho.com.br/vinho-alamos-cabernet-sauvignon">
+                                            <h4 class="product__title">Vinho Alamos Cabernet Sauvignon 2018</h4>
+                                        </a>
+
+                                        
+<div class="product__pais">
+    <span>Argentina</span>
+</div>
+
+                                                                                    <form data-role="tocart-form"
+                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tYWxhbW9zLW1hbGJlYw%2C%2C/product/488/"
+                                                method="post">
+                                                <input type="hidden" name="product"
+                                                    value="488">
+                                                <input type="hidden"
+                                                    name="uenc"
+                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tYWxhbW9zLW1hbGJlYw,,">
+                                                                                                <input name="form_key" type="hidden" value="Qt6z5C5M1BjHvYUc" />                                                <div class="product__buy">
+                                                    <div class="product__price">
+                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="488" data-price-box="product-id-488">
+   <div class="price__regular"><br></div>
+    <div class="price__sale">
+        
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-488"                data-price-amount="107.04"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$107,04</span></span>
+        </span>
+    </div>
+
+</div>                                                    </div>
+                                                    <div class="product__quantity">
+                                                        <div class="custom-number">
+                                                            <input type="number" name="qty"
+                                                                id="qty488"
+                                                                maxlength="12" min="1" minlenght="1" value="1"
+                                                                title="Qtd"
+                                                                class="qty"
+                                                                data-validate="null" />
+                                                            <div class="custom-number-button custom-number-button--up">+
+                                                            </div>
+                                                            <div class="custom-number-button custom-number-button--down">-
+                                                            </div><button class="action tocart btn btn--input"
+                                                                type="submit"><i class="fas fa-shopping-cart"></i></button>
+                                                        </div>
+                                                                                                                    <a href="#"
+                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":488,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tYWxhbW9zLW1hbGJlYw,,"}}'
+                                                                class="action towishlist product__wishlist"
+                                                                data-action="add-to-wishlist"
+                                                                title="Adicionar&#x20;&#xE0;&#x20;lista&#x20;de&#x20;desejos">
+                                                                <i class="far fa-heart"></i>
+                                                            </a>
+                                                                                                            </div>
+                                                </div>
+                                                <div class="actions-primary">
+                                                                    <div class="installment">
+            Em até <span>3x de R$35,68 s/ juros</span>        </div>
+                                                        <button type="submit"
+                                                        title="Adicionar ao Carrinho"
+                                                        class="action tocart primary btn btn--product">
+                                                        <span>Adicionar ao Carrinho</span>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                                                                                                                                            
+                        
+                                                <div class="col-md-3 mb-2 product product-item item" style="display: none;">
+                                                            <div class="box-product product-item-info related-available"
+                                    data-product-id="700">
+                                    <!-- related_products_list-->
+                                    
+                                    
+    <div class="product__bandeira">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/ar.png" alt="Argentina" title="Argentina">
+    </div>
+
+                                    
+
+        <div class="product__pontuacao">
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="James Suckling">JS</div>
+                    <div class="pontos">90</div>
+                </div>
+                    </div>
+
+                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Alamos Chardonnay 2018&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Alamos Malbec 2019 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Alamos Chardonnay 2018&quot;,&quot;id&quot;:&quot;700&quot;,&quot;price&quot;:&quot;111.33&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Argentina&quot;,&quot;position&quot;:1,&quot;brand&quot;:&quot;Alamos Wines&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-alamos-chardonnay' }});" href="https://www.divinho.com.br/vinho-alamos-chardonnay"
+                                        class="product photo product-item-photo">
+                                        <div class="product__photo">
+                                            
+
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho_alamos_chardonnay_2018.png"
+    width=""
+    height=""
+    alt="Garrafa de Vinho Alamos Chardonnay 2018" /></span>                                        </div>
+                                    </a>
+
+                                    <div class="product__content">
+                                        <a class="product-item-link"
+                                            title="Vinho&#x20;Alamos&#x20;Chardonnay&#x20;2018"
+                                            href="https://www.divinho.com.br/vinho-alamos-chardonnay">
+                                            <h4 class="product__title">Vinho Alamos Chardonnay 2018</h4>
+                                        </a>
+
+                                        
+<div class="product__pais">
+    <span>Argentina</span>
+</div>
+
+                                                                                    <form data-role="tocart-form"
+                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tYWxhbW9zLW1hbGJlYw%2C%2C/product/700/"
+                                                method="post">
+                                                <input type="hidden" name="product"
+                                                    value="700">
+                                                <input type="hidden"
+                                                    name="uenc"
+                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tYWxhbW9zLW1hbGJlYw,,">
+                                                                                                <input name="form_key" type="hidden" value="Qt6z5C5M1BjHvYUc" />                                                <div class="product__buy">
+                                                    <div class="product__price">
+                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="700" data-price-box="product-id-700">
+   <div class="price__regular"><br></div>
+    <div class="price__sale">
+        
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-700"                data-price-amount="111.33"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$111,33</span></span>
+        </span>
+    </div>
+
+</div>                                                    </div>
+                                                    <div class="product__quantity">
+                                                        <div class="custom-number">
+                                                            <input type="number" name="qty"
+                                                                id="qty700"
+                                                                maxlength="12" min="1" minlenght="1" value="1"
+                                                                title="Qtd"
+                                                                class="qty"
+                                                                data-validate="null" />
+                                                            <div class="custom-number-button custom-number-button--up">+
+                                                            </div>
+                                                            <div class="custom-number-button custom-number-button--down">-
+                                                            </div><button class="action tocart btn btn--input"
+                                                                type="submit"><i class="fas fa-shopping-cart"></i></button>
+                                                        </div>
+                                                                                                                    <a href="#"
+                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":700,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tYWxhbW9zLW1hbGJlYw,,"}}'
+                                                                class="action towishlist product__wishlist"
+                                                                data-action="add-to-wishlist"
+                                                                title="Adicionar&#x20;&#xE0;&#x20;lista&#x20;de&#x20;desejos">
+                                                                <i class="far fa-heart"></i>
+                                                            </a>
+                                                                                                            </div>
+                                                </div>
+                                                <div class="actions-primary">
+                                                                    <div class="installment">
+            Em até <span>3x de R$37,11 s/ juros</span>        </div>
+                                                        <button type="submit"
+                                                        title="Adicionar ao Carrinho"
+                                                        class="action tocart primary btn btn--product">
+                                                        <span>Adicionar ao Carrinho</span>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                                                                                                                                            
+                        
+                                                <div class="col-md-3 mb-2 product product-item item" style="display: none;">
+                                                            <div class="box-product product-item-info related-available"
+                                    data-product-id="825">
+                                    <!-- related_products_list-->
+                                    
+                                    
+    <div class="product__bandeira">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/ar.png" alt="Argentina" title="Argentina">
+    </div>
+
+                                    
+
+
+                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Alamos Malbec Ros\u00e9 2020&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Alamos Malbec 2019 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Alamos Malbec Ros\u00e9 2020&quot;,&quot;id&quot;:&quot;825&quot;,&quot;price&quot;:&quot;111.33&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Argentina&quot;,&quot;position&quot;:2,&quot;brand&quot;:&quot;Alamos Wines&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-alamos-malbec-rose' }});" href="https://www.divinho.com.br/vinho-alamos-malbec-rose"
+                                        class="product photo product-item-photo">
+                                        <div class="product__photo">
+                                            
+
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho_alamos_malbec_ros_2019.png"
+    width=""
+    height=""
+    alt="Garrafa de Vinho Alamos Malbec Rosé 2020" /></span>                                        </div>
+                                    </a>
+
+                                    <div class="product__content">
+                                        <a class="product-item-link"
+                                            title="Vinho&#x20;Alamos&#x20;Malbec&#x20;Ros&#xE9;&#x20;2020"
+                                            href="https://www.divinho.com.br/vinho-alamos-malbec-rose">
+                                            <h4 class="product__title">Vinho Alamos Malbec Rosé 2020</h4>
+                                        </a>
+
+                                        
+<div class="product__pais">
+    <span>Argentina</span>
+</div>
+
+                                                                                    <form data-role="tocart-form"
+                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tYWxhbW9zLW1hbGJlYw%2C%2C/product/825/"
+                                                method="post">
+                                                <input type="hidden" name="product"
+                                                    value="825">
+                                                <input type="hidden"
+                                                    name="uenc"
+                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tYWxhbW9zLW1hbGJlYw,,">
+                                                                                                <input name="form_key" type="hidden" value="Qt6z5C5M1BjHvYUc" />                                                <div class="product__buy">
+                                                    <div class="product__price">
+                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="825" data-price-box="product-id-825">
+   <div class="price__regular"><br></div>
+    <div class="price__sale">
+        
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-825"                data-price-amount="111.33"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$111,33</span></span>
+        </span>
+    </div>
+
+</div>                                                    </div>
+                                                    <div class="product__quantity">
+                                                        <div class="custom-number">
+                                                            <input type="number" name="qty"
+                                                                id="qty825"
+                                                                maxlength="12" min="1" minlenght="1" value="1"
+                                                                title="Qtd"
+                                                                class="qty"
+                                                                data-validate="null" />
+                                                            <div class="custom-number-button custom-number-button--up">+
+                                                            </div>
+                                                            <div class="custom-number-button custom-number-button--down">-
+                                                            </div><button class="action tocart btn btn--input"
+                                                                type="submit"><i class="fas fa-shopping-cart"></i></button>
+                                                        </div>
+                                                                                                                    <a href="#"
+                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":825,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tYWxhbW9zLW1hbGJlYw,,"}}'
+                                                                class="action towishlist product__wishlist"
+                                                                data-action="add-to-wishlist"
+                                                                title="Adicionar&#x20;&#xE0;&#x20;lista&#x20;de&#x20;desejos">
+                                                                <i class="far fa-heart"></i>
+                                                            </a>
+                                                                                                            </div>
+                                                </div>
+                                                <div class="actions-primary">
+                                                                    <div class="installment">
+            Em até <span>3x de R$37,11 s/ juros</span>        </div>
+                                                        <button type="submit"
+                                                        title="Adicionar ao Carrinho"
+                                                        class="action tocart primary btn btn--product">
+                                                        <span>Adicionar ao Carrinho</span>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                                                                                                                                            
+                        
+                                                <div class="col-md-3 mb-2 product product-item item" style="display: none;">
+                                                            <div class="box-product product-item-info related-available"
+                                    data-product-id="907">
+                                    <!-- related_products_list-->
+                                    
+                                    
+    <div class="product__bandeira">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/ar.png" alt="Argentina" title="Argentina">
+    </div>
+
+                                    
+
+        <div class="product__pontuacao">
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="James Suckling">JS</div>
+                    <div class="pontos">90</div>
+                </div>
+                    </div>
+
+                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Alamos Bonarda 2019&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Alamos Malbec 2019 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Alamos Bonarda 2019&quot;,&quot;id&quot;:&quot;907&quot;,&quot;price&quot;:&quot;111.33&quot;,&quot;category&quot;:&quot;Vinhos\/Vinho Tinto&quot;,&quot;position&quot;:3,&quot;brand&quot;:&quot;Alamos Wines&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-alamos-bonarda' }});" href="https://www.divinho.com.br/vinho-alamos-bonarda"
+                                        class="product photo product-item-photo">
+                                        <div class="product__photo">
+                                            
+
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/a/l/alamos_bonarda.png"
+    width=""
+    height=""
+    alt="Garrafa de Vinho Alamos Bonarda 2019" /></span>                                        </div>
+                                    </a>
+
+                                    <div class="product__content">
+                                        <a class="product-item-link"
+                                            title="Vinho&#x20;Alamos&#x20;Bonarda&#x20;2019"
+                                            href="https://www.divinho.com.br/vinho-alamos-bonarda">
+                                            <h4 class="product__title">Vinho Alamos Bonarda 2019</h4>
+                                        </a>
+
+                                        
+<div class="product__pais">
+    <span>Argentina</span>
+</div>
+
+                                                                                    <form data-role="tocart-form"
+                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tYWxhbW9zLW1hbGJlYw%2C%2C/product/907/"
+                                                method="post">
+                                                <input type="hidden" name="product"
+                                                    value="907">
+                                                <input type="hidden"
+                                                    name="uenc"
+                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tYWxhbW9zLW1hbGJlYw,,">
+                                                                                                <input name="form_key" type="hidden" value="Qt6z5C5M1BjHvYUc" />                                                <div class="product__buy">
+                                                    <div class="product__price">
+                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="907" data-price-box="product-id-907">
+   <div class="price__regular"><br></div>
+    <div class="price__sale">
+        
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-907"                data-price-amount="111.33"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$111,33</span></span>
+        </span>
+    </div>
+
+</div>                                                    </div>
+                                                    <div class="product__quantity">
+                                                        <div class="custom-number">
+                                                            <input type="number" name="qty"
+                                                                id="qty907"
+                                                                maxlength="12" min="1" minlenght="1" value="1"
+                                                                title="Qtd"
+                                                                class="qty"
+                                                                data-validate="null" />
+                                                            <div class="custom-number-button custom-number-button--up">+
+                                                            </div>
+                                                            <div class="custom-number-button custom-number-button--down">-
+                                                            </div><button class="action tocart btn btn--input"
+                                                                type="submit"><i class="fas fa-shopping-cart"></i></button>
+                                                        </div>
+                                                                                                                    <a href="#"
+                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":907,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tYWxhbW9zLW1hbGJlYw,,"}}'
+                                                                class="action towishlist product__wishlist"
+                                                                data-action="add-to-wishlist"
+                                                                title="Adicionar&#x20;&#xE0;&#x20;lista&#x20;de&#x20;desejos">
+                                                                <i class="far fa-heart"></i>
+                                                            </a>
+                                                                                                            </div>
+                                                </div>
+                                                <div class="actions-primary">
+                                                                    <div class="installment">
+            Em até <span>3x de R$37,11 s/ juros</span>        </div>
+                                                        <button type="submit"
+                                                        title="Adicionar ao Carrinho"
+                                                        class="action tocart primary btn btn--product">
+                                                        <span>Adicionar ao Carrinho</span>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+
+                        <script type="text/x-magento-init">
+                {
+  "[data-role=tocart-form], .form.map.checkout": {
+    "catalogAddToCart": {}
+  },
+  "*": {
+    "Magento_Ui/js/core/app": {
+      "components": {
+        "wishlist": {
+          "component": "Magento_Wishlist/js/view/wishlist"
+        }
+      }
+    }
+  }
+}
+</script>
+            
+            </div></div></div></main><footer class="site-footer d-flex flex-column">
 
 
 
@@ -5441,7 +5508,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                     </div>
                 <div class="wbcom-fields">
                     <div class="wbcom-fields-contents">
-                        <input name="form_key" type="hidden" value="Vf7XnkPGge8yn6k7">
+                        <input name="form_key" type="hidden" value="Qt6z5C5M1BjHvYUc">
                         <input type="text" placeholder="Nome" name="name" required style="background-color: #fff !important;">
                         <input type="email" placeholder="E-mail" name="email" required style="background-color: #fff !important;">
                         <input type="hidden" name="message" value="Olá, gostaria de fazer um pedido.">
@@ -5470,6 +5537,8 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     </script>
 
 
+<!-- BEGIN GTAG PRODUCT TAG -->
+<!-- END GTAG PRODUCT TAG -->
     <script>
         require(['jquery','weltpixel_persistentLayer', 'weltpixel_gtm', 'Magento_Customer/js/customer-data'],
             function ($, wpPersDl, wpgtm, customerData) {

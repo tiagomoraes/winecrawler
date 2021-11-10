@@ -9,13 +9,13 @@
     };
 </script>
         <meta charset="utf-8"/><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-15ce119d71e6a8d24c8",applicationID:"798446581"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1211.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
-<meta name="title" content="Vinho Les Charmes de Kirwan 2015 - DiVinho"/>
-<meta name="description" content="Compre Vinho Les Charmes de Kirwan 2015 com o melhor preço do mercado. Pagamento em até 3x s/ juros e entregas para todo Brasil."/>
-<meta name="keywords" content="Vinho Les Charmes de Kirwan 2015"/>
+<meta name="title" content="Vinho Luis Pato Quinta do Ribeirinho Pé Franco 2013 - DiVinho"/>
+<meta name="description" content="Compre Vinho Luis Pato Quinta do Ribeirinho Pé Franco 2013 com o melhor preço do mercado. Em até 3x s/ juros e entregas para todo Brasil."/>
+<meta name="keywords" content="Vinho Luis Pato Quinta do Ribeirinho Pé Franco 2013"/>
 <meta name="robots" content="INDEX,FOLLOW"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta name="format-detection" content="telephone=no"/>
-<title>Vinho Les Charmes de Kirwan 2015 - DiVinho</title>
+<title>Vinho Luis Pato Quinta do Ribeirinho Pé Franco 2013 - DiVinho</title>
 <link  rel="stylesheet" type="text/css"  media="all" href="https://static.divinho.com.br/static/version1636382917/_cache/merged/5d41a869337cd62abea0146ce00be5f9.min.css" />
 <script  type="text/javascript"  src="https://static.divinho.com.br/static/version1636382917/_cache/merged/38cbaaf652093663e521d41aea6fcd0d.min.js"></script>
 <link  rel="icon" type="image/x-icon" href="https://images.divinho.com.br/favicon/default/favicon.ico" />
@@ -23,23 +23,23 @@
 <!-- Product Structured Data by Mageplaza SEO--><script type="application/ld+json">{
     "@context": "http:\/\/schema.org\/",
     "@type": "Product",
-    "name": "Vinho Les Charmes de Kirwan 2015",
-    "description": "O Vinho\u00a0Les Charmes de Kirwan \u00e9 o segundo vinho do renomado Ch\u00e2teau Kirwan, de Bordeaux. De colora\u00e7\u00e3o rubi intensa, quase negra, revela aromas de amora, cereja e groselha, notas de especiarias e um toque de carvalho. Um Vinho Tinto com grande estrutura t\u00e2nica e volume em boca. Esse \u00e9 um r\u00f3tulo que pode ser apreciado agora, mas que apresenta um grande potencial de guarda, aumentando em complexidade com o passar dos anos na garrafa.\u00a0",
-    "sku": "14478",
-    "url": "https:\/\/www.divinho.com.br\/vinho-les-charmes-de-kirwan",
-    "image": "https:\/\/www.divinho.com.br\/pub\/media\/catalog\/product\/l\/e\/les_charmes_de_kirwan.png",
+    "name": "Vinho Luis Pato Quinta do Ribeirinho P\u00e9 Franco 2013",
+    "description": "O Vinho Luis Pato Quinta do Ribeirinho P\u00e9 Franco nasceu do sonho do renomado produtor portugu\u00eas Luis Pato de elaborar um vinho a partir de vinhas cultivadas em p\u00e9 franco, como era a tradi\u00e7\u00e3o antes do ataque da praga Filoxera. Para tanto, ele plantou, em 1988, vinhas em p\u00e9 franco da uva Baga, na propriedade Quinta do Ribeirinho, dentro da regi\u00e3o vitivin\u00edcola da Bairrada, em Portugal. O resultado \u00e9 um vinho de colora\u00e7\u00e3o rubi intensa, revelando, no nariz, aromas de frutas vermelhas maduras, como ameixa e framboesa, al\u00e9m de notas herb\u00e1ceas, como de eucaliptos. Um Vinho Tinto elegante e encorpado. Em boca, conta com taninos maduros, acidez vibrante e um final persistente. Esse \u00e9 um r\u00f3tulo que goza de um excelente potencial de guarda, podendo envelhecer na garrafa por d\u00e9cadas!",
+    "sku": "6611",
+    "url": "https:\/\/www.divinho.com.br\/vinho-luis-pato-quinta-do-ribeirinho-pe-franco",
+    "image": "https:\/\/www.divinho.com.br\/pub\/media\/catalog\/product\/l\/u\/luis_pato_quinta_do_ribeirinho_p_franco.png",
     "offers": {
         "@type": "Offer",
         "priceCurrency": "BRL",
-        "price": 739.32,
-        "itemOffered": 98,
+        "price": 2620.43,
+        "itemOffered": 100,
         "availability": "http:\/\/schema.org\/InStock",
-        "url": "https:\/\/www.divinho.com.br\/vinho-les-charmes-de-kirwan"
+        "url": "https:\/\/www.divinho.com.br\/vinho-luis-pato-quinta-do-ribeirinho-pe-franco"
     },
-    "gtin8": "Vinho Les Charmes de Kirwan 2015",
+    "gtin8": "Vinho Luis Pato Quinta do Ribeirinho P\u00e9 Franco 2013",
     "brand": {
         "@type": "Thing",
-        "name": "Ch\u00e2teau Kirwan"
+        "name": "Luis Pato"
     }
 }</script>            <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -55,7 +55,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         };
 
         window.dataLayer = window.dataLayer || [];
-                var dlObjects = [{"google_tag_params":{"ecomm_pagetype":"product","ecomm_prodid":"177","ecomm_totalvalue":"739.32","ecomm_category":"Pa\u00edses\/Fran\u00e7a"},"ecommerce":{"detail":{"products":[{"name":"Vinho Les Charmes de Kirwan 2015","id":"177","price":"739.32","brand":"Ch\u00e2teau Kirwan","category":"Pa\u00edses\/Fran\u00e7a"}]},"currencyCode":"BRL","impressions":[{"name":"Vinho Ch\u00e2teau Kirwan Grand Cru Class\u00e9 2011","id":"217","price":"1412.98","brand":"Ch\u00e2teau Kirwan","category":"Vinhos\/Vinho Tinto","list":"Related Products From Vinho Les Charmes de Kirwan 2015","position":1},{"name":"Vinho Valdivieso Single Vineyard Cabernet Franc 2015","id":"179","price":"238.00","brand":"Vi\u00f1a Valdivieso","category":"Pa\u00edses\/Chile","list":"Related Products From Vinho Les Charmes de Kirwan 2015","position":2},{"name":"Vinho Valdivieso Single Vineyard Cabernet Sauvignon 2015","id":"180","price":"238.00","brand":"Vi\u00f1a Valdivieso","category":"Pa\u00edses\/Chile","list":"Related Products From Vinho Les Charmes de Kirwan 2015","position":3},{"name":"Vinho Sophenia Altosur Cabernet Sauvignon 2018","id":"183","price":"99.90","brand":"Finca Sophenia","category":"Pa\u00edses\/Argentina","list":"Related Products From Vinho Les Charmes de Kirwan 2015","position":4}]},"event":"impression","eventCategory":"Ecommerce","eventAction":"Impression","eventLabel":"product Vinho Sophenia Altosur Cabernet Sauvignon 2018"}];
+                var dlObjects = [{"google_tag_params":{"ecomm_pagetype":"product","ecomm_prodid":"461","ecomm_totalvalue":"2620.43","ecomm_category":"Pa\u00edses\/Portugal"},"ecommerce":{"detail":{"products":[{"name":"Vinho Luis Pato Quinta do Ribeirinho P\u00e9 Franco 2013","id":"461","price":"2620.43","brand":"Luis Pato","category":"Pa\u00edses\/Portugal"}]},"currencyCode":"BRL","impressions":[{"name":"Vinho Luis Pato Vinhas Velhas Branco 2019","id":"469","price":"227.79","brand":"Luis Pato","category":"Pa\u00edses\/Portugal","list":"Related Products From Vinho Luis Pato Quinta do Ribeirinho P\u00e9 Franco 2013","position":1},{"name":"Vinho Luis Pato Vinhas Velhas 2017","id":"470","price":"427.60","brand":"Luis Pato","category":"Pa\u00edses\/Portugal","list":"Related Products From Vinho Luis Pato Quinta do Ribeirinho P\u00e9 Franco 2013","position":2},{"name":"Espumante Luis Pato Baga Rosado","id":"471","price":"176.41","brand":"Luis Pato","category":"Vinhos\/Espumante","list":"Related Products From Vinho Luis Pato Quinta do Ribeirinho P\u00e9 Franco 2013","position":3},{"name":"Vinho Luis Pato Maria Gomes 2019","id":"473","price":"134.17","brand":"Luis Pato","category":"Pa\u00edses\/Portugal","list":"Related Products From Vinho Luis Pato Quinta do Ribeirinho P\u00e9 Franco 2013","position":4}]},"event":"impression","eventCategory":"Ecommerce","eventAction":"Impression","eventLabel":"product Vinho Luis Pato Maria Gomes 2019"}];
         for (var i in dlObjects) {
             window.dataLayer.push(dlObjects[i]);
         }
@@ -76,28 +76,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="text/javascript" src="https://chimpstatic.com/mcjs-connected/js/users/1255cf89de1ff1692e3832377/54a041db81224b7f42e4ef954.js" defer></script>
 
 <!-- This site is optimized with the Yoast SEO for Magento plugin 2.0.0 - https://yoast.com/magento/plugins/seo/ -->
-    <link rel="canonical" href="https://www.divinho.com.br/vinho-les-charmes-de-kirwan" />
+    <link rel="canonical" href="https://www.divinho.com.br/vinho-luis-pato-quinta-do-ribeirinho-pe-franco" />
 
     <!-- YoastSEO OpenGraph -->
-    <meta property="og:url" content="https://www.divinho.com.br/vinho-les-charmes-de-kirwan"/>
+    <meta property="og:url" content="https://www.divinho.com.br/vinho-luis-pato-quinta-do-ribeirinho-pe-franco"/>
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:type" content="product"/>
     <meta property="og:site_name" content="F R MOREIRA COMÉRCIO E DISTRIBUIÇÃO DE ALIMENTOS E BEBIDAS" />
-    <meta property="og:title" content="Vinho Les Charmes de Kirwan 2015 - DiVinho"/>
-    <meta property="og:description" content="Compre Vinho Les Charmes de Kirwan 2015 com o melhor preço do mercado. Pagamento em até 3x s/ juros e entregas para todo Brasil."/>
-            <meta property="og:image" content="https://images.divinho.com.br/catalog/product/cache/b7d320e39333d0f7a197a4ddb51399f4/l/e/les_charmes_de_kirwan.png"/>
+    <meta property="og:title" content="Vinho Luis Pato Quinta do Ribeirinho Pé Franco 2013 - DiVinho"/>
+    <meta property="og:description" content="Compre Vinho Luis Pato Quinta do Ribeirinho Pé Franco 2013 com o melhor preço do mercado. Em até 3x s/ juros e entregas para todo Brasil."/>
+            <meta property="og:image" content="https://images.divinho.com.br/catalog/product/cache/b7d320e39333d0f7a197a4ddb51399f4/l/u/luis_pato_quinta_do_ribeirinho_p_franco.png"/>
                         
     <!-- YoastSEO Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-            <meta name="twitter:title" content="Vinho Les Charmes de Kirwan 2015 - DiVinho"/>
-    <meta name="twitter:description" content="Compre Vinho Les Charmes de Kirwan 2015 com o melhor preço do mercado. Pagamento em até 3x s/ juros e entregas para todo Brasil."/>
-            <meta name="twitter:image" content="https://images.divinho.com.br/catalog/product/cache/b7d320e39333d0f7a197a4ddb51399f4/l/e/les_charmes_de_kirwan.png"/>
+            <meta name="twitter:title" content="Vinho Luis Pato Quinta do Ribeirinho Pé Franco 2013 - DiVinho"/>
+    <meta name="twitter:description" content="Compre Vinho Luis Pato Quinta do Ribeirinho Pé Franco 2013 com o melhor preço do mercado. Em até 3x s/ juros e entregas para todo Brasil."/>
+            <meta name="twitter:image" content="https://images.divinho.com.br/catalog/product/cache/b7d320e39333d0f7a197a4ddb51399f4/l/u/luis_pato_quinta_do_ribeirinho_p_franco.png"/>
     
 
     </head>
     <body data-container="body"
           data-mage-init='{"loaderAjax": {}, "loader": { "icon": "https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/loader-2.gif"}}'
-        class="catalog-product-view product-vinho-les-charmes-de-kirwan page-layout-1column">
+        class="catalog-product-view product-vinho-luis-pato-quinta-do-ribeirinho-pe-franco page-layout-1column">
         <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MM4CCWJ"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -230,7 +230,7 @@ require([
 
 </script>
 <li class="nav-item authorization-link" data-label="ou">
-    <a class="nav-link" href="https://www.divinho.com.br/customer/account/login/referer/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbGVzLWNoYXJtZXMtZGUta2lyd2Fu/">
+    <a class="nav-link" href="https://www.divinho.com.br/customer/account/login/referer/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXF1aW50YS1kby1yaWJlaXJpbmhvLXBlLWZyYW5jbw%2C%2C/">
         Entrar    </a>
 </li>
 
@@ -277,7 +277,7 @@ require([
             </div>
                     </div>
         <script>
-        window.checkout = {"shoppingCartUrl":"https:\/\/www.divinho.com.br\/checkout\/cart\/","checkoutUrl":"https:\/\/www.divinho.com.br\/checkout\/","updateItemQtyUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/www.divinho.com.br\/","minicartMaxItemsVisible":5,"websiteId":"1","maxItemsToDisplay":10,"storeId":"1","customerLoginUrl":"https:\/\/www.divinho.com.br\/customer\/account\/login\/referer\/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbGVzLWNoYXJtZXMtZGUta2lyd2Fu\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.divinho.com.br\/captcha\/refresh\/","isRequired":false,"timestamp":1636430991}}};
+        window.checkout = {"shoppingCartUrl":"https:\/\/www.divinho.com.br\/checkout\/cart\/","checkoutUrl":"https:\/\/www.divinho.com.br\/checkout\/","updateItemQtyUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/www.divinho.com.br\/","minicartMaxItemsVisible":5,"websiteId":"1","maxItemsToDisplay":10,"storeId":"1","customerLoginUrl":"https:\/\/www.divinho.com.br\/customer\/account\/login\/referer\/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXF1aW50YS1kby1yaWJlaXJpbmhvLXBlLWZyYW5jbw%2C%2C\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.divinho.com.br\/captcha\/refresh\/","isRequired":false,"timestamp":1636510597}}};
     </script>
     <script type="text/x-magento-init">
     {
@@ -291,9 +291,9 @@ require([
 </div>
 
 <div class="collapse d-lg-block" id="navbarSearch">
-        <form id="search-form6189f48f7f6dd" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
+        <form id="search-form618b2b850cfdc" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
                 <input data-mage-init='{"quickSearch":{
-                                        "formSelector":"#search-form6189f48f7f6dd",
+                                        "formSelector":"#search-form618b2b850cfdc",
                                         "url":"https://www.divinho.com.br/search/ajax/suggest/",
                                         "destinationSelector":"#search_autocomplete",
                                         "responseFieldElements":"ul li",
@@ -368,9 +368,9 @@ require([
 
 </div></div><div class="col-lg position-static col-nav"><div class="d-lg-none">
 <div class="collapse d-lg-block" id="navbarSearch">
-        <form id="search-form6189f48f80e7d" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
+        <form id="search-form618b2b850e7d4" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
                 <input data-mage-init='{"quickSearch":{
-                                        "formSelector":"#search-form6189f48f80e7d",
+                                        "formSelector":"#search-form618b2b850e7d4",
                                         "url":"https://www.divinho.com.br/search/ajax/suggest/",
                                         "destinationSelector":"#search_autocomplete",
                                         "responseFieldElements":"ul li",
@@ -412,11 +412,11 @@ require([
                                                                     <div class="mx-megamenu__sidebar mx-megamenu__sidebar--left">
                                         <div class="widget widget-categories-list block" data-collapse="1">
     <div class="megamenu__links">
-                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#vinhos6189f247cdd14" aria-expanded="true" aria-controls="vinhos6189f247cdd14">
+                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#vinhos618b0a68a8e72" aria-expanded="true" aria-controls="vinhos618b0a68a8e72">
             <i class="icon icon-vinhos"></i>
             <span>Tipo</span>
         </div>
-                <div id="vinhos6189f247cdd14" class="block-content catalog-category collapse-sm collapse">
+                <div id="vinhos618b0a68a8e72" class="block-content catalog-category collapse-sm collapse">
             <ul>
                                 <li class="category-item">
                     <a href="https://www.divinho.com.br/vinhos/tinto">
@@ -484,11 +484,11 @@ require([
 </div>
 <div class="widget widget-list-range">
     <div class="megamenu__links">
-        <div class="megamenu__title collapsed" data-toggle="collapse" data-target="#price-range6189f247d2432" aria-expanded="true" aria-controls="price-range6189f247d2432">
+        <div class="megamenu__title collapsed" data-toggle="collapse" data-target="#price-range618b0a68bd448" aria-expanded="true" aria-controls="price-range618b0a68bd448">
             <i class="icon icon icon-dollar-tag"></i>
             <span>Valor</span>
         </div>
-        <ul id="price-range6189f247d2432" class="block-content collapse-sm collapse">
+        <ul id="price-range618b0a68bd448" class="block-content collapse-sm collapse">
             <li><a href="https://www.divinho.com.br/vinhos?price=-59.9">Até R$59,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=59.9-99.9">R$59,90 a R$99,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=99.9-149.9">R$99,90 a R$149,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=149.9-249.9">R$149,90 a R$249,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=249.91-500">R$249,91 a R$500,00</a></li><li><a href="https://www.divinho.com.br/vinhos?price=500-">Acima de R$500,00</a></li>        </ul>
     </div>
 </div>
@@ -506,12 +506,12 @@ require([
     class="widget widget-list_mode widget-list_mode--uva">
     <div class="megamenu__links">
         <div class="block-title megamenu__title collapsed"
-            data-toggle="collapse" data-target="#uva6189f247b8902" aria-expanded="true"
-            aria-controls="uva6189f247b8902">
+            data-toggle="collapse" data-target="#uva618b0a682f5fe" aria-expanded="true"
+            aria-controls="uva618b0a682f5fe">
             <i class="icon icon-uva"></i>
             <span>Uvas</span>
         </div>
-        <div id="uva6189f247b8902"
+        <div id="uva618b0a682f5fe"
             class="block-content catalog-category collapse-sm collapse">
             <ul>
                 
@@ -561,11 +561,11 @@ require([
 </div>
  <div class="widget widget-categories-list block" data-collapse="1">
     <div class="megamenu__links">
-                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#pais6189f247c33b5" aria-expanded="true" aria-controls="pais6189f247c33b5">
+                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#pais618b0a68878c3" aria-expanded="true" aria-controls="pais618b0a68878c3">
             <i class="icon icon-pais"></i>
             <span>Pa&iacute;ses</span>
         </div>
-                <div id="pais6189f247c33b5" class="block-content catalog-category collapse-sm collapse">
+                <div id="pais618b0a68878c3" class="block-content catalog-category collapse-sm collapse">
             <ul>
                                 <li class="category-item">
                     <a href="https://www.divinho.com.br/pais/austria">
@@ -3562,11 +3562,11 @@ require([
                             </div>
                 <div class="megamenu__product-image">
             <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">
-                <img src="https://images.divinho.com.br/catalog/product/cache/fa01b5f6b2a94beaaa3488ed5c6cafe6/c/a/casanova_di_neri_rosso_di_montalcino.png" alt="Vinho Casanova di Neri Rosso di Montalcino 2019" title="Vinho Casanova di Neri Rosso di Montalcino 2019">
+                <img src="https://images.divinho.com.br/catalog/product/cache/fa01b5f6b2a94beaaa3488ed5c6cafe6/c/a/casanova_di_neri_rosso_di_montalcino.png" alt="Vinho Casanova di Neri Rosso di Montalcino 2018" title="Vinho Casanova di Neri Rosso di Montalcino 2018">
             </a>
         </div>
         <div class="megamenu__product-name text-center mt-2">
-            <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">Vinho Casanova di Neri Rosso di Montalcino 2019</a>
+            <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">Vinho Casanova di Neri Rosso di Montalcino 2018</a>
             <div class="text-primary price">
                 R$366,00            </div>
         </div>
@@ -3876,12 +3876,12 @@ require([
     class="widget widget-list_mode widget-list_mode--criticos">
     <div class="megamenu__links">
         <div class="block-title megamenu__title"
-             data-target="#criticos6189f249ba2f8" aria-expanded="true"
-            aria-controls="criticos6189f249ba2f8">
+             data-target="#criticos618b0a6f8879c" aria-expanded="true"
+            aria-controls="criticos618b0a6f8879c">
             <i class="icon icon-criticos"></i>
             <span>Críticos</span>
         </div>
-        <div id="criticos6189f249ba2f8"
+        <div id="criticos618b0a6f8879c"
             class="block-content catalog-category">
             <ul>
                                 <li>
@@ -4183,12 +4183,12 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     class="widget widget-list_mode widget-list_mode--vinicolas">
     <div class="megamenu__links">
         <div class="block-title megamenu__title"
-             data-target="#vinicolas6189f249cb53f" aria-expanded="true"
-            aria-controls="vinicolas6189f249cb53f">
+             data-target="#vinicolas618b0a6fd10d5" aria-expanded="true"
+            aria-controls="vinicolas618b0a6fd10d5">
             <i class="icon icon-vinicolas"></i>
             <span>Vinícolas</span>
         </div>
-        <div id="vinicolas6189f249cb53f"
+        <div id="vinicolas618b0a6fd10d5"
             class="block-content catalog-category">
             <ul>
                 
@@ -4300,20 +4300,20 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 <script type="text/x-magento-init">
     {
         ".breadcrumbs": {
-            "breadcrumbs": {"categoryUrlSuffix":"","useCategoryPathInUrl":0,"product":"Vinho Les Charmes de Kirwan 2015"}        }
+            "breadcrumbs": {"categoryUrlSuffix":"","useCategoryPathInUrl":0,"product":"Vinho Luis Pato Quinta do Ribeirinho P\u00e9 Franco 2013"}        }
     }
 </script><div class="redes-sociais align-self-end ml-auto mr-4 mb-3 d-none d-md-block">
     <!-- WhatsApp -->
     <ul>
         <li>
             <a target="_blank"
-                href="https://api.whatsapp.com/send?text=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-les-charmes-de-kirwan">
+                href="https://api.whatsapp.com/send?text=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-luis-pato-quinta-do-ribeirinho-pe-franco">
                 <i class="fab fa-whatsapp"></i>
             </a>
         </li>
         <li>
             <!-- Facebook -->
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-les-charmes-de-kirwan&t=Vinho+Les+Charmes+de+Kirwan+2015"
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-luis-pato-quinta-do-ribeirinho-pe-franco&t=Vinho+Luis+Pato+Quinta+do+Ribeirinho+P%C3%A9+Franco+2013"
                 onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false'
                 title="Share on facebook">
                 <i class="fab fa-facebook"></i>
@@ -4322,7 +4322,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         </li>
         <!-- TWITTER -->
         <li>
-            <a href="http://twitter.com/home/?status=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-les-charmes-de-kirwan(Vinho+Les+Charmes+de+Kirwan+2015)"
+            <a href="http://twitter.com/home/?status=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-luis-pato-quinta-do-ribeirinho-pe-franco(Vinho+Luis+Pato+Quinta+do+Ribeirinho+P%C3%A9+Franco+2013)"
                 onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false'
                 title="Share on Twitter">
                 <i class="fab fa-twitter"></i>
@@ -4330,7 +4330,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         </li>
         <li>
             <!-- Pinterest -->
-            <a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-les-charmes-de-kirwan&media= &description=Vinho+Les+Charmes+de+Kirwan+2015"
+            <a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-luis-pato-quinta-do-ribeirinho-pe-franco&media= &description=Vinho+Luis+Pato+Quinta+do+Ribeirinho+P%C3%A9+Franco+2013"
                 onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false'
                 title="Pin it">
                 <i class="fab fa-pinterest"></i>
@@ -4370,7 +4370,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 </script>
 </div></nav><a id="contentarea" tabindex="-1"></a>
 <div class="container"><div class="page messages"><div data-placeholder="messages"></div>
-</div><div class="columns"><div class="column main"><input name="form_key" type="hidden" value="DOzCsLLKuJTIygmR" /><script type="text/x-magento-init">
+</div><div class="columns"><div class="column main"><input name="form_key" type="hidden" value="4Bsb6J9DZ5hpXqGE" /><script type="text/x-magento-init">
     {
         "*": {
             "Magento_Customer/js/section-config": {
@@ -4414,7 +4414,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 <script type="text/x-magento-init">
     {
         "body": {
-            "pageCache": {"url":"https:\/\/www.divinho.com.br\/page_cache\/block\/render\/id\/177\/","handles":["default","catalog_product_view","catalog_product_view_type_simple","catalog_product_view_id_177","catalog_product_view_sku_14478","gabrielqs_themesettings_footer_1","gabrielqs_themesettings_header_1","gabrielqs_themesettings_customization","mpseo_remove_schema"],"originalRequest":{"route":"catalog","controller":"product","action":"view","uri":"\/vinho-les-charmes-de-kirwan"},"versionCookieName":"private_content_version"}        }
+            "pageCache": {"url":"https:\/\/www.divinho.com.br\/page_cache\/block\/render\/id\/461\/","handles":["default","catalog_product_view","catalog_product_view_type_simple","catalog_product_view_id_461","catalog_product_view_sku_6611","gabrielqs_themesettings_footer_1","gabrielqs_themesettings_header_1","gabrielqs_themesettings_customization","mpseo_remove_schema"],"originalRequest":{"route":"catalog","controller":"product","action":"view","uri":"\/vinho-luis-pato-quinta-do-ribeirinho-pe-franco"},"versionCookieName":"private_content_version"}        }
     }
 </script>
 
@@ -4425,14 +4425,14 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 <div class="single-product__photo">
     <img
         alt="main product photo"
-        src="https://images.divinho.com.br/catalog/product/cache/b7d320e39333d0f7a197a4ddb51399f4/l/e/les_charmes_de_kirwan.png"
+        src="https://images.divinho.com.br/catalog/product/cache/b7d320e39333d0f7a197a4ddb51399f4/l/u/luis_pato_quinta_do_ribeirinho_p_franco.png"
     />
 </div>
 
 </div><div class="col-8 col-lg-9 p-md-0 pl-0"><div class="row no-gutters align-items-center"><div class="col-lg"><div class="page-title-wrapper">
     <h1 class="page-title&#x20;product"
                 >
-        <span class="base" data-ui-id="page-title-wrapper" itemprop="name">Vinho Les Charmes de Kirwan 2015</span>    </h1>
+        <span class="base" data-ui-id="page-title-wrapper" itemprop="name">Vinho Luis Pato Quinta do Ribeirinho Pé Franco 2013</span>    </h1>
     </div>
 </div><div class="col-lg-5 d-flex align-items-center justify-content-around flex-lg-nowrap flex-wrap-reverse">
 
@@ -4440,19 +4440,19 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 
         <div class="product__pontuacao">
                                             <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="James Suckling">JS</div>
-                    <div class="pontos">90</div>
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Robert Parker">RP</div>
+                    <div class="pontos">92</div>
                 </div>
                     </div>
 
     <div class="text-lg-center d-flex d-lg-block align-items-center mb-3 mb-lg-0">
         <div class="product__bandeira">
-            <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/fr.png" alt="França">
+            <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal">
                         <div class="product__tipo product__tipo--tinto d-none d-md-block" data-toggle="tooltip"
                 data-placement="right" title="" data-original-title="Tinto"></div>
                     </div>
         <div class="text-center ml-3 d-block d-md-none">
-            <a href="#" data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":177,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbGVzLWNoYXJtZXMtZGUta2lyd2Fu"}}' class="action towishlist wishlist" data-action="add-to-wishlist">
+            <a href="#" data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":461,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXF1aW50YS1kby1yaWJlaXJpbmhvLXBlLWZyYW5jbw,,"}}' class="action towishlist wishlist" data-action="add-to-wishlist">
             <i class="far fa-heart mr-2"></i>  
                 <span>
                     Lista de Desejos                </span>
@@ -4482,7 +4482,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 
 <div class="product-attribute overview">
             <span class="value" itemprop="description">
-            <p>O <strong>Vinho Les Charmes de Kirwan </strong>é o segundo vinho do renomado <strong>Château Kirwan</strong>, de <strong>Bordeaux</strong>. De coloração rubi intensa, quase negra, revela aromas de amora, cereja e groselha, notas de especiarias e um toque de carvalho. Um <strong>Vinho Tinto</strong> com grande estrutura tânica e volume em boca. Esse é um rótulo que pode ser apreciado agora, mas que apresenta um grande potencial de guarda, aumentando em complexidade com o passar dos anos na garrafa. </p>        </span>
+            <p><span style="font-weight: 400;">O </span><strong>Vinho Luis Pato Quinta do Ribeirinho Pé Franco</strong><span style="font-weight: 400;"> nasceu do sonho do renomado produtor português </span><strong>Luis Pato</strong><span style="font-weight: 400;"> de elaborar um vinho a partir de vinhas cultivadas em pé franco, como era a tradição antes do ataque da praga Filoxera. Para tanto, ele plantou, em 1988, vinhas em pé franco da uva </span><strong>Baga,</strong><span style="font-weight: 400;"> na propriedade </span><strong>Quinta do Ribeirinho</strong><span style="font-weight: 400;">, dentro da região vitivinícola da </span><strong>Bairrada</strong><span style="font-weight: 400;">, em </span><strong>Portugal</strong><span style="font-weight: 400;">. O resultado é um vinho de coloração rubi intensa, revelando, no nariz, aromas de frutas vermelhas maduras, como ameixa e framboesa, além de notas herbáceas, como de eucaliptos. Um </span><strong>Vinho Tinto</strong><span style="font-weight: 400;"> elegante e encorpado. Em boca, conta com taninos maduros, acidez vibrante e um final persistente. Esse é um rótulo que goza de um excelente potencial de guarda, podendo envelhecer na garrafa por décadas! </span></p>        </span>
 </div>
 <div class="product__attributes additional-attributes-wrapper table-wrapper">
     <ul class="attributes data additional-attribute" id="product-attribute-specs-table">
@@ -4491,8 +4491,8 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 <div class="label">Avaliações</div>
                 <div class="data" data-code="opt2flow_avaliacoes"
                     data-th="Avalia&#xE7;&#xF5;es">
-                                                    <a href="https://www.divinho.com.br/criticos/james-suckling/">
-                                                                                         <span>90 pontos James Suckling</span>
+                                                    <a href="https://www.divinho.com.br/criticos/robert-parker/">
+                                                                                         <span>92 pontos Robert Parker</span>
                                                                                         </a>
                                                                                                 </div>
             </div>
@@ -4502,8 +4502,8 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 <div class="label">País</div>
                 <div class="data" data-code="country_of_manufacture"
                     data-th="Pa&#xED;s">
-                                                    <a href="https://www.divinho.com.br/pais/franca">
-                                                                                         <span>França</span>
+                                                    <a href="https://www.divinho.com.br/pais/portugal">
+                                                                                         <span>Portugal</span>
                                                                                         </a>
                                                                                                 </div>
             </div>
@@ -4513,8 +4513,8 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 <div class="label">Região</div>
                 <div class="data" data-code="regi_o"
                     data-th="Regi&#xE3;o">
-                                                    <a href="https://www.divinho.com.br/pais/franca/bordeaux">
-                                                                                         <span>Bordeaux</span>
+                                                    <a href="https://www.divinho.com.br/pais/portugal/bairrada">
+                                                                                         <span>Bairrada</span>
                                                                                         </a>
                                                                                                 </div>
             </div>
@@ -4524,28 +4524,19 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 <div class="label">Produtor</div>
                 <div class="data" data-code="manufacturer"
                     data-th="Produtor">
-                                                    <a href="https://www.divinho.com.br/vinicolas/chateau-kirwan/">
-                                                                                         <span>Château Kirwan</span>
+                                                    <a href="https://www.divinho.com.br/vinicolas/luis-pato/">
+                                                                                         <span>Luis Pato</span>
                                                                                         </a>
                                                                                                 </div>
             </div>
         </li>
-                        <li class="attribute uvas">
+                        <li class="attribute uva">
             <div class="attribute__item">
-                <div class="label">Uvas</div>
+                <div class="label">Uva</div>
                 <div class="data" data-code="uva"
-                    data-th="Uvas">
-                                                    <a href="https://www.divinho.com.br/uva/cabernet-franc/">
-                                                                                         <span>Cabernet Franc</span>
-                                                                                        </a>
-                                                                                                                <a href="https://www.divinho.com.br/uva/cabernet-sauvignon/">
-                                                                                         <span>Cabernet Sauvignon</span>
-                                                                                        </a>
-                                                                                                                <a href="https://www.divinho.com.br/uva/merlot/">
-                                                                                         <span>Merlot</span>
-                                                                                        </a>
-                                                                                                                <a href="https://www.divinho.com.br/uva/petit-verdot/">
-                                                                                         <span>Petit Verdot</span>
+                    data-th="Uva">
+                                                    <a href="https://www.divinho.com.br/uva/baga/">
+                                                                                         <span>Baga</span>
                                                                                         </a>
                                                                                                 </div>
             </div>
@@ -4566,7 +4557,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 <div class="label">Teor Alcoólico</div>
                 <div class="data" data-code="teor_alcoolico"
                     data-th="Teor&#x20;Alco&#xF3;lico">
-                    13,5%                </div>
+                    13%                </div>
             </div>
         </li>
                         <li class="attribute tamanho-da-garrafa">
@@ -4583,7 +4574,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 <div class="label">Temperatura de serviço</div>
                 <div class="data" data-code="temperatura_de_servico"
                     data-th="Temperatura&#x20;de&#x20;servi&#xE7;o">
-                                                                                 <span>15 a 17°C</span>
+                                                                                 <span>16 a 18°C</span>
                                                                                                                             </div>
             </div>
         </li>
@@ -4602,7 +4593,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     <div class="d-none d-md-block">
         <a href="#"
            class="wishlist action towishlist btn btn-xl btn-outline-primary py-3 "
-           data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":177,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbGVzLWNoYXJtZXMtZGUta2lyd2Fu"}}'
+           data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":461,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXF1aW50YS1kby1yaWJlaXJpbmhvLXBlLWZyYW5jbw,,"}}'
            data-action="add-to-wishlist">
             <i class="far fa-heart mr-3" aria-hidden="true"></i>
             <span>Lista de Desejos</span>
@@ -4614,33 +4605,33 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             "addToWishlist": {"productType":"simple"}        }
     }
 </script>
-</div></div><div class="col-lg-3 p-md-0"><div class="single-product__actions"><div class="product-info-main"><div class="product-info-price"><div class="d-flex align-items-center justify-content-between"><div class="price-box price-final_price" data-role="priceBox" data-product-id="177" data-price-box="product-id-177">
+</div></div><div class="col-lg-3 p-md-0"><div class="single-product__actions"><div class="product-info-main"><div class="product-info-price"><div class="d-flex align-items-center justify-content-between"><div class="price-box price-final_price" data-role="priceBox" data-product-id="461" data-price-box="product-id-461">
    <div class="price__regular"><br></div>
     <div class="price__sale">
         
 
 <span class="price-container price-final_price&#x20;tax&#x20;weee"
         >
-        <span  id="product-price-177"                data-price-amount="739.32"
+        <span  id="product-price-461"                data-price-amount="2620.43"
         data-price-type="finalPrice"
         class="price-wrapper "
-    ><span class="price">R$739,32</span></span>
+    ><span class="price">R$2.620,43</span></span>
         </span>
     </div>
 
 </div></div>                <div class="installment">
-            Em até <span>3x de R$246,44 s/ juros</span>        </div>
+            Em até <span>3x de R$873,48 s/ juros</span>        </div>
     </div>
 
 <div class="product-add-form">
-    <form data-product-sku="14478"
-          action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbGVzLWNoYXJtZXMtZGUta2lyd2Fu/product/177/" method="post"
+    <form data-product-sku="6611"
+          action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXF1aW50YS1kby1yaWJlaXJpbmhvLXBlLWZyYW5jbw%2C%2C/product/461/" method="post"
           id="product_addtocart_form">
-        <input type="hidden" name="product" value="177" />
+        <input type="hidden" name="product" value="461" />
         <input type="hidden" name="selected_configurable_option" value="" />
         <input type="hidden" name="related_product" id="related-products-field" value="" />
-        <input type="hidden" name="item"  value="177" />
-        <input name="form_key" type="hidden" value="DOzCsLLKuJTIygmR" />                            <div class="box-tocart">
+        <input type="hidden" name="item"  value="461" />
+        <input name="form_key" type="hidden" value="4Bsb6J9DZ5hpXqGE" />                            <div class="box-tocart">
     <div class="fieldset">
                 <div class="form-row align-items-center mt-2">
             <div class="form-group col-3">
@@ -4717,13 +4708,13 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         'priceBox'
     ], function($){
         var dataPriceBoxSelector = '[data-role=priceBox]',
-            dataProductIdSelector = '[data-product-id=177]',
+            dataProductIdSelector = '[data-product-id=461]',
             priceBoxes = $(dataPriceBoxSelector + dataProductIdSelector);
 
         priceBoxes = priceBoxes.filter(function(index, elem){
             return !$(elem).find('.price-from').length;
         });
-        priceBoxes.priceBox({'priceConfig': {"productId":"177","priceFormat":{"pattern":"R$%s","precision":2,"requiredPrecision":2,"decimalSymbol":",","groupSymbol":".","groupLength":3,"integerRequired":false}}});
+        priceBoxes.priceBox({'priceConfig': {"productId":"461","priceFormat":{"pattern":"R$%s","precision":2,"requiredPrecision":2,"decimalSymbol":",","groupSymbol":".","groupLength":3,"integerRequired":false}}});
     });
 </script>
 <div class="opt2flow-shipping-estimate"><div class="cart-after__title text-uppercase">
@@ -4737,7 +4728,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             <button name="btn-estimate-shipping" id="btn-estimate-shipping" type="button" title="ok" class="action btn btn-primary tocart">ok</button>
         </div>
     </div>
-    <input type="hidden" name="opt2flow_product_id" id="opt2flow_product_id" value="177">
+    <input type="hidden" name="opt2flow_product_id" id="opt2flow_product_id" value="461">
 </div>
 <div id="shipping-estimate-results"></div>
 <script>
@@ -4753,7 +4744,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         });
 </script>
 </div></div><div class="alert price alert-secondary small font-weight-bold p-2 my-3 price">
-    <a href="https://www.divinho.com.br/productalert/add/price/product_id/177/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbGVzLWNoYXJtZXMtZGUta2lyd2Fu/"
+    <a href="https://www.divinho.com.br/productalert/add/price/product_id/461/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXF1aW50YS1kby1yaWJlaXJpbmhvLXBlLWZyYW5jbw%2C%2C/"
        title="Receber&#x20;notifica&#xE7;&#xF5;es&#x20;de&#x20;baixa&#x20;de&#x20;pre&#xE7;o" class="action alert-product">
         <i class="fas fa-exclamation-circle mr-1"></i>
         Receber notificações de baixa de preço    </a>
@@ -4765,24 +4756,24 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             <h2 class="attribute__header">
                 Vinificação            </h2>
             <div class="attribute__content">
-                <p>O Les Charmes de Kirwan 2015 é produzido com um blend das uvas Cabernet Sauvignon, Merlot, Cabernet Franc e Petit Verdot, oriundas de vinhedos em Bordeaux, na França. As uvas são colhidas e selecionadas manualmente. A vinificação é realizada em tanques de concreto sob temperatura controlada. O vinho envelhece em barris de carvalho francês, sendo 15% novos, por um período de dezesseis meses.</p>            </div>
+                <p><span style="font-weight: 400;">O Luis Pato Quinta do Ribeirinho Pé Franco 2013 é produzido com a uva Baga, oriunda de vinhas com trinta anos de idade média, plantadas em pé franco na Quinta do Ribeirinho, dentro da região vitivinícola da Bairrada, em Portugal. O vinho envelhece em barris de carvalho francês. </span></p>            </div>
         </div>
                 <div class="attribute-item" data-attribute="sobre_a_vinicola">
             <h2 class="attribute__header">
                 Sobre a vinícola            </h2>
             <div class="attribute__content">
-                Château Kirwan é um dos mais renomados Châteaux de Bordeaux, um Troisième Cru Classé segundo a famosa Classificação de Vinhos de Bordeaux de 1855. Kirwan é um nome puramente irlandês e que faz parte da tradição irlandesa em Bordeaux, quando várias famílias irlandesas estabeleceram-se na região durante o século XVIII. Mark Kirwan casou-se com a filha de Sir John Collingwood, proprietário do Domaine la Salle, que foi renomeado como Château Kirwan. No ano de 1925, após a Primeira Guerra Mundial, a propriedade é adquirida pela família Schÿler, negociantes de vinhos por quase duzentos anos, desde 1739. Os vinhedos do Château Kirwan gozam de uma localização privilegiada, bem ao centro do Plateau de Cantenac, dentro da Apelação Margaux. Além de seu Grand Vin, Château Kirwan, lançou em 1993 seu segundo vinho, Les Charmes de Kirwan, que é feito exatamente como o Château Kirwan, apenas diferenciando-se na seleção de uvas.            </div>
+                Luis Pato é um dos maiores embaixadores do vinho português no mundo. Sua fama de "revolucionário da Bairrada" é mais do que justa, pois desde o seu primeiro vinho lançado, em 1980, até hoje, ele não deixou de inovar e apresentar novos e deliciosos aromas e sabores da Bairrada. Luis Pato pertence a uma família com longa tradição na elaboração de vinhos. Desde o século XVIII, a família Pato produz vinhos na Quinta do Ribeirinho. Seu pai, João Pato, é considerado uma figura histórica por ter sido o primeiro produtor a engarrafar vinhos na região, depois da sua demarcação, na década de 1970. Luis Pato está impregnado do espírito inconformista do pai, construindo uma trajetória marcada por novidades: em 1985, introduziu barricas novas de carvalho francês na maturação dos vinhos; em 1988, plantou a cepa Baga em pé franco, ou seja, sem enxerto, e produziu o primeiro Vinhas Velhas de Portugal; em 1995, lançou vinhos de vinhedo único, como Vinha Pan, Vinha Barrosa e Quinta do Ribeirinho Pé Franco. Sua genialidade atravessou o século e, em 2005, Luis Pato criou, junto com sua filha Filipa, o FLP, usando o método da crio-extração. Entre outras de suas façanhas recentes que vale a pena citar, estão o lançamento de seus primeiros vinhos naturais doces (branco, rosado e tinto) da linha Abafado Molecular e a produção do primeiro tinto de uva branca – o Fernão Pires, que tem no corte 94% de Maria Gomes e 6% de película de Baga. Para tantas invenções, Luis Pato conta com 60 hectares de vinhedos com Baga, Touriga Nacional e Tinto Cão, entre as uvas tintas, e Maria Gomes, Cerceal da Bairrada, Bical e Sercialinho, entre as brancas. Com uma adega bem equipada e muita energia criativa, Luis Pato deve continuar a surpreender os amantes de vinho em todo o mundo.            </div>
         </div>
         </div><div class="d-md-none product-info__mobile"><hr class="border-primary my-4">
 <div class="product-add-form">
-    <form data-product-sku="14478"
-          action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbGVzLWNoYXJtZXMtZGUta2lyd2Fu/product/177/" method="post"
+    <form data-product-sku="6611"
+          action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXF1aW50YS1kby1yaWJlaXJpbmhvLXBlLWZyYW5jbw%2C%2C/product/461/" method="post"
           id="product_addtocart_form">
-        <input type="hidden" name="product" value="177" />
+        <input type="hidden" name="product" value="461" />
         <input type="hidden" name="selected_configurable_option" value="" />
         <input type="hidden" name="related_product" id="related-products-field" value="" />
-        <input type="hidden" name="item"  value="177" />
-        <input name="form_key" type="hidden" value="DOzCsLLKuJTIygmR" />                            <div class="box-tocart">
+        <input type="hidden" name="item"  value="461" />
+        <input name="form_key" type="hidden" value="4Bsb6J9DZ5hpXqGE" />                            <div class="box-tocart">
     <div class="fieldset">
                 <div class="form-row align-items-center mt-2">
             <div class="form-group col-3">
@@ -4849,13 +4840,13 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         'priceBox'
     ], function($){
         var dataPriceBoxSelector = '[data-role=priceBox]',
-            dataProductIdSelector = '[data-product-id=177]',
+            dataProductIdSelector = '[data-product-id=461]',
             priceBoxes = $(dataPriceBoxSelector + dataProductIdSelector);
 
         priceBoxes = priceBoxes.filter(function(index, elem){
             return !$(elem).find('.price-from').length;
         });
-        priceBoxes.priceBox({'priceConfig': {"productId":"177","priceFormat":{"pattern":"R$%s","precision":2,"requiredPrecision":2,"decimalSymbol":",","groupSymbol":".","groupLength":3,"integerRequired":false}}});
+        priceBoxes.priceBox({'priceConfig': {"productId":"461","priceFormat":{"pattern":"R$%s","precision":2,"requiredPrecision":2,"decimalSymbol":",","groupSymbol":".","groupLength":3,"integerRequired":false}}});
     });
 </script>
 </div></div></div></div><script type="text/x-magento-init">
@@ -4868,7 +4859,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     {
         "*": {
                 "Magento_Catalog/js/product/view/provider": {
-                    "data": {"items":{"177":{"add_to_cart_button":{"post_data":"{\"action\":\"https:\\\/\\\/www.divinho.com.br\\\/checkout\\\/cart\\\/add\\\/uenc\\\/%25uenc%25\\\/product\\\/177\\\/\",\"data\":{\"product\":\"177\",\"uenc\":\"%uenc%\"}}","url":"https:\/\/www.divinho.com.br\/checkout\/cart\/add\/uenc\/%25uenc%25\/product\/177\/","required_options":false},"add_to_compare_button":{"post_data":null,"url":"{\"action\":\"https:\\\/\\\/www.divinho.com.br\\\/catalog\\\/product_compare\\\/add\\\/\",\"data\":{\"product\":\"177\",\"uenc\":\"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbGVzLWNoYXJtZXMtZGUta2lyd2Fu\"}}","required_options":null},"price_info":{"final_price":739.32,"max_price":739.32,"max_regular_price":739.32,"minimal_regular_price":739.32,"special_price":null,"minimal_price":739.32,"regular_price":739.32,"formatted_prices":{"final_price":"<span class=\"price\">R$739,32<\/span>","max_price":"<span class=\"price\">R$739,32<\/span>","minimal_price":"<span class=\"price\">R$739,32<\/span>","max_regular_price":"<span class=\"price\">R$739,32<\/span>","minimal_regular_price":null,"special_price":null,"regular_price":"<span class=\"price\">R$739,32<\/span>"},"extension_attributes":{"msrp":{"msrp_price":"<span class=\"price\">R$0,00<\/span>","is_applicable":"","is_shown_price_on_gesture":"","msrp_message":"","explanation_message":"Our price is lower than the manufacturer&#039;s &quot;minimum advertised price.&quot; As a result, we cannot show you the price in catalog or the product page. <br><br> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart."},"tax_adjustments":{"final_price":739.32,"max_price":739.32,"max_regular_price":739.32,"minimal_regular_price":739.32,"special_price":739.32,"minimal_price":739.32,"regular_price":739.32,"formatted_prices":{"final_price":"<span class=\"price\">R$739,32<\/span>","max_price":"<span class=\"price\">R$739,32<\/span>","minimal_price":"<span class=\"price\">R$739,32<\/span>","max_regular_price":"<span class=\"price\">R$739,32<\/span>","minimal_regular_price":null,"special_price":"<span class=\"price\">R$739,32<\/span>","regular_price":"<span class=\"price\">R$739,32<\/span>"}},"weee_attributes":[],"weee_adjustment":"<span class=\"price\">R$739,32<\/span>"}},"images":[{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/c0ffc0f3780617b20732f12bef036575\/l\/e\/les_charmes_de_kirwan.png","code":"recently_viewed_products_grid_content_widget","height":300,"width":240,"label":"Garrafa de Vinho Les Charmes de Kirwan 2015","resized_width":240,"resized_height":300},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/d9e3e7d2d318c89cdaa08d93d9a8221e\/l\/e\/les_charmes_de_kirwan.png","code":"recently_viewed_products_list_content_widget","height":340,"width":270,"label":"Garrafa de Vinho Les Charmes de Kirwan 2015","resized_width":270,"resized_height":340},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/fba4d41374f3b4a4b2553ba145032f1f\/l\/e\/les_charmes_de_kirwan.png","code":"recently_viewed_products_images_names_widget","height":90,"width":75,"label":"Garrafa de Vinho Les Charmes de Kirwan 2015","resized_width":75,"resized_height":90},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/c0ffc0f3780617b20732f12bef036575\/l\/e\/les_charmes_de_kirwan.png","code":"recently_compared_products_grid_content_widget","height":300,"width":240,"label":"Garrafa de Vinho Les Charmes de Kirwan 2015","resized_width":240,"resized_height":300},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/d9e3e7d2d318c89cdaa08d93d9a8221e\/l\/e\/les_charmes_de_kirwan.png","code":"recently_compared_products_list_content_widget","height":340,"width":270,"label":"Garrafa de Vinho Les Charmes de Kirwan 2015","resized_width":270,"resized_height":340},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/fba4d41374f3b4a4b2553ba145032f1f\/l\/e\/les_charmes_de_kirwan.png","code":"recently_compared_products_images_names_widget","height":90,"width":75,"label":"Garrafa de Vinho Les Charmes de Kirwan 2015","resized_width":75,"resized_height":90}],"url":"https:\/\/www.divinho.com.br\/vinho-les-charmes-de-kirwan","id":177,"name":"Vinho Les Charmes de Kirwan 2015","type":"simple","is_salable":"1","store_id":1,"currency_code":"BRL","extension_attributes":{"review_html":"<div class=\"product-reviews-summary short empty\">\n    <div class=\"reviews-actions\">\n        <a class=\"action add\" href=\"https:\/\/www.divinho.com.br\/vinho-les-charmes-de-kirwan#review-form\">\n            Seja o primeiro a avaliar este produto        <\/a>\n    <\/div>\n<\/div>\n","wishlist_button":{"post_data":null,"url":"{\"action\":\"https:\\\/\\\/www.divinho.com.br\\\/wishlist\\\/index\\\/add\\\/\",\"data\":{\"product\":177,\"uenc\":\"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbGVzLWNoYXJtZXMtZGUta2lyd2Fu\"}}","required_options":null}}}},"store":"1","currency":"BRL"}            }
+                    "data": {"items":{"461":{"add_to_cart_button":{"post_data":"{\"action\":\"https:\\\/\\\/www.divinho.com.br\\\/checkout\\\/cart\\\/add\\\/uenc\\\/%25uenc%25\\\/product\\\/461\\\/\",\"data\":{\"product\":\"461\",\"uenc\":\"%uenc%\"}}","url":"https:\/\/www.divinho.com.br\/checkout\/cart\/add\/uenc\/%25uenc%25\/product\/461\/","required_options":false},"add_to_compare_button":{"post_data":null,"url":"{\"action\":\"https:\\\/\\\/www.divinho.com.br\\\/catalog\\\/product_compare\\\/add\\\/\",\"data\":{\"product\":\"461\",\"uenc\":\"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXF1aW50YS1kby1yaWJlaXJpbmhvLXBlLWZyYW5jbw,,\"}}","required_options":null},"price_info":{"final_price":2620.43,"max_price":2620.43,"max_regular_price":2620.43,"minimal_regular_price":2620.43,"special_price":null,"minimal_price":2620.43,"regular_price":2620.43,"formatted_prices":{"final_price":"<span class=\"price\">R$2.620,43<\/span>","max_price":"<span class=\"price\">R$2.620,43<\/span>","minimal_price":"<span class=\"price\">R$2.620,43<\/span>","max_regular_price":"<span class=\"price\">R$2.620,43<\/span>","minimal_regular_price":null,"special_price":null,"regular_price":"<span class=\"price\">R$2.620,43<\/span>"},"extension_attributes":{"msrp":{"msrp_price":"<span class=\"price\">R$0,00<\/span>","is_applicable":"","is_shown_price_on_gesture":"","msrp_message":"","explanation_message":"Our price is lower than the manufacturer&#039;s &quot;minimum advertised price.&quot; As a result, we cannot show you the price in catalog or the product page. <br><br> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart."},"tax_adjustments":{"final_price":2620.43,"max_price":2620.43,"max_regular_price":2620.43,"minimal_regular_price":2620.43,"special_price":2620.43,"minimal_price":2620.43,"regular_price":2620.43,"formatted_prices":{"final_price":"<span class=\"price\">R$2.620,43<\/span>","max_price":"<span class=\"price\">R$2.620,43<\/span>","minimal_price":"<span class=\"price\">R$2.620,43<\/span>","max_regular_price":"<span class=\"price\">R$2.620,43<\/span>","minimal_regular_price":null,"special_price":"<span class=\"price\">R$2.620,43<\/span>","regular_price":"<span class=\"price\">R$2.620,43<\/span>"}},"weee_attributes":[],"weee_adjustment":"<span class=\"price\">R$2.620,43<\/span>"}},"images":[{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/c0ffc0f3780617b20732f12bef036575\/l\/u\/luis_pato_quinta_do_ribeirinho_p_franco.png","code":"recently_viewed_products_grid_content_widget","height":300,"width":240,"label":"Garrafa de Vinho Luis Pato Quinta do Ribeirinho P\u00e9 Franco 2013","resized_width":240,"resized_height":300},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/d9e3e7d2d318c89cdaa08d93d9a8221e\/l\/u\/luis_pato_quinta_do_ribeirinho_p_franco.png","code":"recently_viewed_products_list_content_widget","height":340,"width":270,"label":"Garrafa de Vinho Luis Pato Quinta do Ribeirinho P\u00e9 Franco 2013","resized_width":270,"resized_height":340},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/fba4d41374f3b4a4b2553ba145032f1f\/l\/u\/luis_pato_quinta_do_ribeirinho_p_franco.png","code":"recently_viewed_products_images_names_widget","height":90,"width":75,"label":"Garrafa de Vinho Luis Pato Quinta do Ribeirinho P\u00e9 Franco 2013","resized_width":75,"resized_height":90},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/c0ffc0f3780617b20732f12bef036575\/l\/u\/luis_pato_quinta_do_ribeirinho_p_franco.png","code":"recently_compared_products_grid_content_widget","height":300,"width":240,"label":"Garrafa de Vinho Luis Pato Quinta do Ribeirinho P\u00e9 Franco 2013","resized_width":240,"resized_height":300},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/d9e3e7d2d318c89cdaa08d93d9a8221e\/l\/u\/luis_pato_quinta_do_ribeirinho_p_franco.png","code":"recently_compared_products_list_content_widget","height":340,"width":270,"label":"Garrafa de Vinho Luis Pato Quinta do Ribeirinho P\u00e9 Franco 2013","resized_width":270,"resized_height":340},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/fba4d41374f3b4a4b2553ba145032f1f\/l\/u\/luis_pato_quinta_do_ribeirinho_p_franco.png","code":"recently_compared_products_images_names_widget","height":90,"width":75,"label":"Garrafa de Vinho Luis Pato Quinta do Ribeirinho P\u00e9 Franco 2013","resized_width":75,"resized_height":90}],"url":"https:\/\/www.divinho.com.br\/vinho-luis-pato-quinta-do-ribeirinho-pe-franco","id":461,"name":"Vinho Luis Pato Quinta do Ribeirinho P\u00e9 Franco 2013","type":"simple","is_salable":"1","store_id":1,"currency_code":"BRL","extension_attributes":{"review_html":"<div class=\"product-reviews-summary short empty\">\n    <div class=\"reviews-actions\">\n        <a class=\"action add\" href=\"https:\/\/www.divinho.com.br\/vinho-luis-pato-quinta-do-ribeirinho-pe-franco#review-form\">\n            Seja o primeiro a avaliar este produto        <\/a>\n    <\/div>\n<\/div>\n","wishlist_button":{"post_data":null,"url":"{\"action\":\"https:\\\/\\\/www.divinho.com.br\\\/wishlist\\\/index\\\/add\\\/\",\"data\":{\"product\":461,\"uenc\":\"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXF1aW50YS1kby1yaWJlaXJpbmhvLXBlLWZyYW5jbw,,\"}}","required_options":null}}}},"store":"1","currency":"BRL"}            }
         }
     }
 </script>
@@ -4893,71 +4884,61 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                         
                                                 <div class="col-md-3 mb-2 product product-item item" style="display: none;">
                                                             <div class="box-product product-item-info related-available"
-                                    data-product-id="217">
+                                    data-product-id="469">
                                     <!-- related_products_list-->
                                     
                                     
     <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/fr.png" alt="França" title="França">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
     </div>
 
                                     
 
-        <div class="product__pontuacao">
-                                            <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Enthusiast">WE</div>
-                    <div class="pontos">92</div>
-                </div>
-                                            <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Tim Atkin">TA</div>
-                    <div class="pontos">92</div>
-                </div>
-                    </div>
 
-                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Ch\u00e2teau Kirwan Grand Cru Class\u00e9 2011&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Les Charmes de Kirwan 2015 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Ch\u00e2teau Kirwan Grand Cru Class\u00e9 2011&quot;,&quot;id&quot;:&quot;217&quot;,&quot;price&quot;:&quot;1412.98&quot;,&quot;category&quot;:&quot;Vinhos\/Vinho Tinto&quot;,&quot;position&quot;:0,&quot;brand&quot;:&quot;Ch\u00e2teau Kirwan&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-chateau-kirwan-grand-cru-classe' }});" href="https://www.divinho.com.br/vinho-chateau-kirwan-grand-cru-classe"
+                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Luis Pato Vinhas Velhas Branco 2019&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Luis Pato Quinta do Ribeirinho P\u00e9 Franco 2013 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Luis Pato Vinhas Velhas Branco 2019&quot;,&quot;id&quot;:&quot;469&quot;,&quot;price&quot;:&quot;227.79&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:0,&quot;brand&quot;:&quot;Luis Pato&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-luis-pato-vinhas-velhas-branco' }});" href="https://www.divinho.com.br/vinho-luis-pato-vinhas-velhas-branco"
                                         class="product photo product-item-photo">
                                         <div class="product__photo">
                                             
 
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/c/h/ch_teau_kirwan_grand_cru_class_.png"
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/b/r/branco_luis_pato_vinhas_velhas.png"
     width=""
     height=""
-    alt="Garrafa de Vinho Château Kirwan Grand Cru Classé 2011" /></span>                                        </div>
+    alt="Garrafa de Vinho Branco Luis Pato Vinhas Velhas 2019" /></span>                                        </div>
                                     </a>
 
                                     <div class="product__content">
                                         <a class="product-item-link"
-                                            title="Vinho&#x20;Ch&#xE2;teau&#x20;Kirwan&#x20;Grand&#x20;Cru&#x20;Class&#xE9;&#x20;2011"
-                                            href="https://www.divinho.com.br/vinho-chateau-kirwan-grand-cru-classe">
-                                            <h4 class="product__title">Vinho Château Kirwan Grand Cru Classé 2011</h4>
+                                            title="Vinho&#x20;Luis&#x20;Pato&#x20;Vinhas&#x20;Velhas&#x20;Branco&#x20;2019"
+                                            href="https://www.divinho.com.br/vinho-luis-pato-vinhas-velhas-branco">
+                                            <h4 class="product__title">Vinho Luis Pato Vinhas Velhas Branco 2019</h4>
                                         </a>
 
                                         
 <div class="product__pais">
-    <span>França</span>
+    <span>Portugal</span>
 </div>
 
                                                                                     <form data-role="tocart-form"
-                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbGVzLWNoYXJtZXMtZGUta2lyd2Fu/product/217/"
+                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXF1aW50YS1kby1yaWJlaXJpbmhvLXBlLWZyYW5jbw%2C%2C/product/469/"
                                                 method="post">
                                                 <input type="hidden" name="product"
-                                                    value="217">
+                                                    value="469">
                                                 <input type="hidden"
                                                     name="uenc"
-                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbGVzLWNoYXJtZXMtZGUta2lyd2Fu">
-                                                                                                <input name="form_key" type="hidden" value="DOzCsLLKuJTIygmR" />                                                <div class="product__buy">
+                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXF1aW50YS1kby1yaWJlaXJpbmhvLXBlLWZyYW5jbw,,">
+                                                                                                <input name="form_key" type="hidden" value="4Bsb6J9DZ5hpXqGE" />                                                <div class="product__buy">
                                                     <div class="product__price">
-                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="217" data-price-box="product-id-217">
+                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="469" data-price-box="product-id-469">
    <div class="price__regular"><br></div>
     <div class="price__sale">
         
 
 <span class="price-container price-final_price&#x20;tax&#x20;weee"
         >
-        <span  id="product-price-217"                data-price-amount="1412.98"
+        <span  id="product-price-469"                data-price-amount="227.79"
         data-price-type="finalPrice"
         class="price-wrapper "
-    ><span class="price">R$1.412,98</span></span>
+    ><span class="price">R$227,79</span></span>
         </span>
     </div>
 
@@ -4965,7 +4946,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                     <div class="product__quantity">
                                                         <div class="custom-number">
                                                             <input type="number" name="qty"
-                                                                id="qty217"
+                                                                id="qty469"
                                                                 maxlength="12" min="1" minlenght="1" value="1"
                                                                 title="Qtd"
                                                                 class="qty"
@@ -4977,7 +4958,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                                 type="submit"><i class="fas fa-shopping-cart"></i></button>
                                                         </div>
                                                                                                                     <a href="#"
-                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":217,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbGVzLWNoYXJtZXMtZGUta2lyd2Fu"}}'
+                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":469,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXF1aW50YS1kby1yaWJlaXJpbmhvLXBlLWZyYW5jbw,,"}}'
                                                                 class="action towishlist product__wishlist"
                                                                 data-action="add-to-wishlist"
                                                                 title="Adicionar&#x20;&#xE0;&#x20;lista&#x20;de&#x20;desejos">
@@ -4987,7 +4968,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                 </div>
                                                 <div class="actions-primary">
                                                                     <div class="installment">
-            Em até <span>3x de R$470,99 s/ juros</span>        </div>
+            Em até <span>3x de R$75,93 s/ juros</span>        </div>
                                                         <button type="submit"
                                                         title="Adicionar ao Carrinho"
                                                         class="action tocart primary btn btn--product">
@@ -5002,67 +4983,61 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                         
                                                 <div class="col-md-3 mb-2 product product-item item" style="display: none;">
                                                             <div class="box-product product-item-info related-available"
-                                    data-product-id="179">
+                                    data-product-id="470">
                                     <!-- related_products_list-->
                                     
                                     
     <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/cl.png" alt="Chile" title="Chile">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
     </div>
 
                                     
 
-        <div class="product__pontuacao">
-                                            <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Guia Descorchados">GD</div>
-                    <div class="pontos">94</div>
-                </div>
-                    </div>
 
-                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Valdivieso Single Vineyard Cabernet Franc 2015&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Les Charmes de Kirwan 2015 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Valdivieso Single Vineyard Cabernet Franc 2015&quot;,&quot;id&quot;:&quot;179&quot;,&quot;price&quot;:&quot;238.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Chile&quot;,&quot;position&quot;:1,&quot;brand&quot;:&quot;Vi\u00f1a Valdivieso&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-valdivieso-single-vineyard-cabernet-franc-2015' }});" href="https://www.divinho.com.br/vinho-valdivieso-single-vineyard-cabernet-franc-2015"
+                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Luis Pato Vinhas Velhas 2017&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Luis Pato Quinta do Ribeirinho P\u00e9 Franco 2013 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Luis Pato Vinhas Velhas 2017&quot;,&quot;id&quot;:&quot;470&quot;,&quot;price&quot;:&quot;427.60&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:1,&quot;brand&quot;:&quot;Luis Pato&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-luis-pato-vinhas-velhas-2017' }});" href="https://www.divinho.com.br/vinho-luis-pato-vinhas-velhas-2017"
                                         class="product photo product-item-photo">
                                         <div class="product__photo">
                                             
 
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho_tinto_valdivieso_single_vineyard_cabernet_franc_2015.png"
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/t/i/tinto_luis_pato_vinhas_velhas.png"
     width=""
     height=""
-    alt="Garrafa de Vinho Tinto Valdivieso Single Vineyard Cabernet Franc 2015" /></span>                                        </div>
+    alt="Garrafa de Vinho Tinto Luis Pato Vinhas Velhas 2017" /></span>                                        </div>
                                     </a>
 
                                     <div class="product__content">
                                         <a class="product-item-link"
-                                            title="Vinho&#x20;Valdivieso&#x20;Single&#x20;Vineyard&#x20;Cabernet&#x20;Franc&#x20;2015"
-                                            href="https://www.divinho.com.br/vinho-valdivieso-single-vineyard-cabernet-franc-2015">
-                                            <h4 class="product__title">Vinho Valdivieso Single Vineyard Cabernet Franc 2015</h4>
+                                            title="Vinho&#x20;Luis&#x20;Pato&#x20;Vinhas&#x20;Velhas&#x20;2017"
+                                            href="https://www.divinho.com.br/vinho-luis-pato-vinhas-velhas-2017">
+                                            <h4 class="product__title">Vinho Luis Pato Vinhas Velhas 2017</h4>
                                         </a>
 
                                         
 <div class="product__pais">
-    <span>Chile</span>
+    <span>Portugal</span>
 </div>
 
                                                                                     <form data-role="tocart-form"
-                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbGVzLWNoYXJtZXMtZGUta2lyd2Fu/product/179/"
+                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXF1aW50YS1kby1yaWJlaXJpbmhvLXBlLWZyYW5jbw%2C%2C/product/470/"
                                                 method="post">
                                                 <input type="hidden" name="product"
-                                                    value="179">
+                                                    value="470">
                                                 <input type="hidden"
                                                     name="uenc"
-                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbGVzLWNoYXJtZXMtZGUta2lyd2Fu">
-                                                                                                <input name="form_key" type="hidden" value="DOzCsLLKuJTIygmR" />                                                <div class="product__buy">
+                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXF1aW50YS1kby1yaWJlaXJpbmhvLXBlLWZyYW5jbw,,">
+                                                                                                <input name="form_key" type="hidden" value="4Bsb6J9DZ5hpXqGE" />                                                <div class="product__buy">
                                                     <div class="product__price">
-                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="179" data-price-box="product-id-179">
+                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="470" data-price-box="product-id-470">
    <div class="price__regular"><br></div>
     <div class="price__sale">
         
 
 <span class="price-container price-final_price&#x20;tax&#x20;weee"
         >
-        <span  id="product-price-179"                data-price-amount="238"
+        <span  id="product-price-470"                data-price-amount="427.6"
         data-price-type="finalPrice"
         class="price-wrapper "
-    ><span class="price">R$238,00</span></span>
+    ><span class="price">R$427,60</span></span>
         </span>
     </div>
 
@@ -5070,7 +5045,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                     <div class="product__quantity">
                                                         <div class="custom-number">
                                                             <input type="number" name="qty"
-                                                                id="qty179"
+                                                                id="qty470"
                                                                 maxlength="12" min="1" minlenght="1" value="1"
                                                                 title="Qtd"
                                                                 class="qty"
@@ -5082,7 +5057,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                                 type="submit"><i class="fas fa-shopping-cart"></i></button>
                                                         </div>
                                                                                                                     <a href="#"
-                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":179,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbGVzLWNoYXJtZXMtZGUta2lyd2Fu"}}'
+                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":470,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXF1aW50YS1kby1yaWJlaXJpbmhvLXBlLWZyYW5jbw,,"}}'
                                                                 class="action towishlist product__wishlist"
                                                                 data-action="add-to-wishlist"
                                                                 title="Adicionar&#x20;&#xE0;&#x20;lista&#x20;de&#x20;desejos">
@@ -5092,7 +5067,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                 </div>
                                                 <div class="actions-primary">
                                                                     <div class="installment">
-            Em até <span>3x de R$79,33 s/ juros</span>        </div>
+            Em até <span>3x de R$142,53 s/ juros</span>        </div>
                                                         <button type="submit"
                                                         title="Adicionar ao Carrinho"
                                                         class="action tocart primary btn btn--product">
@@ -5107,67 +5082,61 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                         
                                                 <div class="col-md-3 mb-2 product product-item item" style="display: none;">
                                                             <div class="box-product product-item-info related-available"
-                                    data-product-id="180">
+                                    data-product-id="471">
                                     <!-- related_products_list-->
                                     
                                     
     <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/cl.png" alt="Chile" title="Chile">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
     </div>
 
                                     
 
-        <div class="product__pontuacao">
-                                            <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Tim Atkin">TA</div>
-                    <div class="pontos">91</div>
-                </div>
-                    </div>
 
-                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Valdivieso Single Vineyard Cabernet Sauvignon 2015&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Les Charmes de Kirwan 2015 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Valdivieso Single Vineyard Cabernet Sauvignon 2015&quot;,&quot;id&quot;:&quot;180&quot;,&quot;price&quot;:&quot;238.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Chile&quot;,&quot;position&quot;:2,&quot;brand&quot;:&quot;Vi\u00f1a Valdivieso&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-valdivieso-single-vineyard-cabernet-sauvignon' }});" href="https://www.divinho.com.br/vinho-valdivieso-single-vineyard-cabernet-sauvignon"
+                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Espumante Luis Pato Baga Rosado&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Luis Pato Quinta do Ribeirinho P\u00e9 Franco 2013 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Espumante Luis Pato Baga Rosado&quot;,&quot;id&quot;:&quot;471&quot;,&quot;price&quot;:&quot;176.41&quot;,&quot;category&quot;:&quot;Vinhos\/Espumante&quot;,&quot;position&quot;:2,&quot;brand&quot;:&quot;Luis Pato&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/espumante-luis-pato-baga-rosado' }});" href="https://www.divinho.com.br/espumante-luis-pato-baga-rosado"
                                         class="product photo product-item-photo">
                                         <div class="product__photo">
                                             
 
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho_tinto_valdivieso_single_vineyard_cabernet_sauvignon_2015.png"
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/l/u/luis_pato_casta_baga_rosado_bruto.png"
     width=""
     height=""
-    alt="Garrafa de Vinho Tinto Valdivieso Single Vineyard Cabernet Sauvignon 2015" /></span>                                        </div>
+    alt="Garrafa de Espumante Luis Pato Casta Baga Rosado Bruto" /></span>                                        </div>
                                     </a>
 
                                     <div class="product__content">
                                         <a class="product-item-link"
-                                            title="Vinho&#x20;Valdivieso&#x20;Single&#x20;Vineyard&#x20;Cabernet&#x20;Sauvignon&#x20;2015"
-                                            href="https://www.divinho.com.br/vinho-valdivieso-single-vineyard-cabernet-sauvignon">
-                                            <h4 class="product__title">Vinho Valdivieso Single Vineyard Cabernet Sauvignon 2015</h4>
+                                            title="Espumante&#x20;Luis&#x20;Pato&#x20;Baga&#x20;Rosado"
+                                            href="https://www.divinho.com.br/espumante-luis-pato-baga-rosado">
+                                            <h4 class="product__title">Espumante Luis Pato Baga Rosado</h4>
                                         </a>
 
                                         
 <div class="product__pais">
-    <span>Chile</span>
+    <span>Portugal</span>
 </div>
 
                                                                                     <form data-role="tocart-form"
-                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbGVzLWNoYXJtZXMtZGUta2lyd2Fu/product/180/"
+                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXF1aW50YS1kby1yaWJlaXJpbmhvLXBlLWZyYW5jbw%2C%2C/product/471/"
                                                 method="post">
                                                 <input type="hidden" name="product"
-                                                    value="180">
+                                                    value="471">
                                                 <input type="hidden"
                                                     name="uenc"
-                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbGVzLWNoYXJtZXMtZGUta2lyd2Fu">
-                                                                                                <input name="form_key" type="hidden" value="DOzCsLLKuJTIygmR" />                                                <div class="product__buy">
+                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXF1aW50YS1kby1yaWJlaXJpbmhvLXBlLWZyYW5jbw,,">
+                                                                                                <input name="form_key" type="hidden" value="4Bsb6J9DZ5hpXqGE" />                                                <div class="product__buy">
                                                     <div class="product__price">
-                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="180" data-price-box="product-id-180">
+                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="471" data-price-box="product-id-471">
    <div class="price__regular"><br></div>
     <div class="price__sale">
         
 
 <span class="price-container price-final_price&#x20;tax&#x20;weee"
         >
-        <span  id="product-price-180"                data-price-amount="238"
+        <span  id="product-price-471"                data-price-amount="176.41"
         data-price-type="finalPrice"
         class="price-wrapper "
-    ><span class="price">R$238,00</span></span>
+    ><span class="price">R$176,41</span></span>
         </span>
     </div>
 
@@ -5175,7 +5144,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                     <div class="product__quantity">
                                                         <div class="custom-number">
                                                             <input type="number" name="qty"
-                                                                id="qty180"
+                                                                id="qty471"
                                                                 maxlength="12" min="1" minlenght="1" value="1"
                                                                 title="Qtd"
                                                                 class="qty"
@@ -5187,7 +5156,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                                 type="submit"><i class="fas fa-shopping-cart"></i></button>
                                                         </div>
                                                                                                                     <a href="#"
-                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":180,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbGVzLWNoYXJtZXMtZGUta2lyd2Fu"}}'
+                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":471,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXF1aW50YS1kby1yaWJlaXJpbmhvLXBlLWZyYW5jbw,,"}}'
                                                                 class="action towishlist product__wishlist"
                                                                 data-action="add-to-wishlist"
                                                                 title="Adicionar&#x20;&#xE0;&#x20;lista&#x20;de&#x20;desejos">
@@ -5197,7 +5166,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                 </div>
                                                 <div class="actions-primary">
                                                                     <div class="installment">
-            Em até <span>3x de R$79,33 s/ juros</span>        </div>
+            Em até <span>3x de R$58,80 s/ juros</span>        </div>
                                                         <button type="submit"
                                                         title="Adicionar ao Carrinho"
                                                         class="action tocart primary btn btn--product">
@@ -5212,84 +5181,61 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                         
                                                 <div class="col-md-3 mb-2 product product-item item" style="display: none;">
                                                             <div class="box-product product-item-info related-available"
-                                    data-product-id="183">
+                                    data-product-id="473">
                                     <!-- related_products_list-->
-                                        <div class="product__discount">
-        <span>-6%</span>
-    </div>
-
+                                    
                                     
     <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/ar.png" alt="Argentina" title="Argentina">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
     </div>
 
                                     
 
-        <div class="product__pontuacao">
-                                            <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="James Suckling">JS</div>
-                    <div class="pontos">90</div>
-                </div>
-                    </div>
 
-                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Sophenia Altosur Cabernet Sauvignon 2018&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Les Charmes de Kirwan 2015 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Sophenia Altosur Cabernet Sauvignon 2018&quot;,&quot;id&quot;:&quot;183&quot;,&quot;price&quot;:&quot;99.90&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Argentina&quot;,&quot;position&quot;:3,&quot;brand&quot;:&quot;Finca Sophenia&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-sophenia-altosur-cabernet-sauvignon' }});" href="https://www.divinho.com.br/vinho-sophenia-altosur-cabernet-sauvignon"
+                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Luis Pato Maria Gomes 2019&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Luis Pato Quinta do Ribeirinho P\u00e9 Franco 2013 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Luis Pato Maria Gomes 2019&quot;,&quot;id&quot;:&quot;473&quot;,&quot;price&quot;:&quot;134.17&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:3,&quot;brand&quot;:&quot;Luis Pato&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-luis-pato-maria-gomes' }});" href="https://www.divinho.com.br/vinho-luis-pato-maria-gomes"
                                         class="product photo product-item-photo">
                                         <div class="product__photo">
                                             
 
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/s/o/sophenia_altosur_reserve_cabernet_sauvignon_1.png"
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/b/r/branco_luis_pato_maria_gomes_2018.png"
     width=""
     height=""
-    alt="Garrafa de Vinho Tinto Sophenia Altosur Reserve Cabernet Sauvignon 2018" /></span>                                        </div>
+    alt="Garrafa de Vinho Branco Luis Pato Maria Gomes 2019" /></span>                                        </div>
                                     </a>
 
                                     <div class="product__content">
                                         <a class="product-item-link"
-                                            title="Vinho&#x20;Sophenia&#x20;Altosur&#x20;Cabernet&#x20;Sauvignon&#x20;2018"
-                                            href="https://www.divinho.com.br/vinho-sophenia-altosur-cabernet-sauvignon">
-                                            <h4 class="product__title">Vinho Sophenia Altosur Cabernet Sauvignon 2018</h4>
+                                            title="Vinho&#x20;Luis&#x20;Pato&#x20;Maria&#x20;Gomes&#x20;2019"
+                                            href="https://www.divinho.com.br/vinho-luis-pato-maria-gomes">
+                                            <h4 class="product__title">Vinho Luis Pato Maria Gomes 2019</h4>
                                         </a>
 
                                         
 <div class="product__pais">
-    <span>Argentina</span>
+    <span>Portugal</span>
 </div>
 
                                                                                     <form data-role="tocart-form"
-                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbGVzLWNoYXJtZXMtZGUta2lyd2Fu/product/183/"
+                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXF1aW50YS1kby1yaWJlaXJpbmhvLXBlLWZyYW5jbw%2C%2C/product/473/"
                                                 method="post">
                                                 <input type="hidden" name="product"
-                                                    value="183">
+                                                    value="473">
                                                 <input type="hidden"
                                                     name="uenc"
-                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbGVzLWNoYXJtZXMtZGUta2lyd2Fu">
-                                                                                                <input name="form_key" type="hidden" value="DOzCsLLKuJTIygmR" />                                                <div class="product__buy">
+                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXF1aW50YS1kby1yaWJlaXJpbmhvLXBlLWZyYW5jbw,,">
+                                                                                                <input name="form_key" type="hidden" value="4Bsb6J9DZ5hpXqGE" />                                                <div class="product__buy">
                                                     <div class="product__price">
-                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="183" data-price-box="product-id-183">
-    <div class="price__regular">
-        De        <span class="old-price">
-            
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="old-price-183"                data-price-amount="106"
-        data-price-type="oldPrice"
-        class="price-wrapper "
-    ><span class="price">R$106,00</span></span>
-        </span>
-        </span>
-        Por    </div>
+                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="473" data-price-box="product-id-473">
+   <div class="price__regular"><br></div>
     <div class="price__sale">
-        <span class="special-price">
-            
+        
 
 <span class="price-container price-final_price&#x20;tax&#x20;weee"
         >
-        <span  id="product-price-183"                data-price-amount="99.9"
+        <span  id="product-price-473"                data-price-amount="134.17"
         data-price-type="finalPrice"
         class="price-wrapper "
-    ><span class="price">R$99,90</span></span>
-        </span>
+    ><span class="price">R$134,17</span></span>
         </span>
     </div>
 
@@ -5297,7 +5243,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                     <div class="product__quantity">
                                                         <div class="custom-number">
                                                             <input type="number" name="qty"
-                                                                id="qty183"
+                                                                id="qty473"
                                                                 maxlength="12" min="1" minlenght="1" value="1"
                                                                 title="Qtd"
                                                                 class="qty"
@@ -5309,7 +5255,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                                 type="submit"><i class="fas fa-shopping-cart"></i></button>
                                                         </div>
                                                                                                                     <a href="#"
-                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":183,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbGVzLWNoYXJtZXMtZGUta2lyd2Fu"}}'
+                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":473,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tbHVpcy1wYXRvLXF1aW50YS1kby1yaWJlaXJpbmhvLXBlLWZyYW5jbw,,"}}'
                                                                 class="action towishlist product__wishlist"
                                                                 data-action="add-to-wishlist"
                                                                 title="Adicionar&#x20;&#xE0;&#x20;lista&#x20;de&#x20;desejos">
@@ -5319,7 +5265,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                 </div>
                                                 <div class="actions-primary">
                                                                     <div class="installment">
-            Em até <span>3x de R$33,30 s/ juros</span>        </div>
+            Em até <span>3x de R$44,72 s/ juros</span>        </div>
                                                         <button type="submit"
                                                         title="Adicionar ao Carrinho"
                                                         class="action tocart primary btn btn--product">
@@ -5544,7 +5490,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                     </div>
                 <div class="wbcom-fields">
                     <div class="wbcom-fields-contents">
-                        <input name="form_key" type="hidden" value="DOzCsLLKuJTIygmR">
+                        <input name="form_key" type="hidden" value="4Bsb6J9DZ5hpXqGE">
                         <input type="text" placeholder="Nome" name="name" required style="background-color: #fff !important;">
                         <input type="email" placeholder="E-mail" name="email" required style="background-color: #fff !important;">
                         <input type="hidden" name="message" value="Olá, gostaria de fazer um pedido.">
@@ -5598,5 +5544,5 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 wpgtm.trackPromotion(wpGtmOptions);
             });
     </script>
-    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-15ce119d71e6a8d24c8","applicationID":"798446581","transactionName":"blMGbUdSWRFQBhBcC1cZJVpBWlgMHhUFUgFmVQVaXVY=","queueTime":0,"applicationTime":77,"atts":"QhQFGw9ISh8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-15ce119d71e6a8d24c8","applicationID":"798446581","transactionName":"blMGbUdSWRFQBhBcC1cZJVpBWlgMHhUFUgFmVQVaXVY=","queueTime":0,"applicationTime":71,"atts":"QhQFGw9ISh8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>

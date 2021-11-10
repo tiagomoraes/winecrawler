@@ -1,7 +1,7 @@
 
 <!doctype html>
 <html lang=pt-br>      
-    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product: http://ogp.me/ns/product#">
+    <head >
         <script>
     var BASE_URL = 'https://www.divinho.com.br/';
     var require = {
@@ -9,13 +9,15 @@
     };
 </script>
         <meta charset="utf-8"/><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-15ce119d71e6a8d24c8",applicationID:"798446581"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1211.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
-<meta name="title" content="Recomendação"/>
+<meta name="title" content="Vinhos Pontuados com Melhores Preços | DiVinho "/>
+<meta name="description" content="Compre Vinhos Pontuados com os Melhores Preços! Seleção de rótulos de vinícolas premiadas. Em até 3x s/ juros e entregas para todo Brasil."/>
 <meta name="robots" content="INDEX,FOLLOW"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta name="format-detection" content="telephone=no"/>
-<title>Recomendação</title>
+<title>Vinhos Pontuados com Melhores Preços | DiVinho </title>
 <link  rel="stylesheet" type="text/css"  media="all" href="https://static.divinho.com.br/static/version1636382917/_cache/merged/c3f0846f21e00493666c1bb1e46fe5c8.min.css" />
 <script  type="text/javascript"  src="https://static.divinho.com.br/static/version1636382917/_cache/merged/38cbaaf652093663e521d41aea6fcd0d.min.js"></script>
+<link  rel="canonical" href="https://www.divinho.com.br/vinhos-pontuados" />
 <link  rel="icon" type="image/x-icon" href="https://images.divinho.com.br/favicon/default/favicon.ico" />
 <link  rel="shortcut icon" type="image/x-icon" href="https://images.divinho.com.br/favicon/default/favicon.ico" />
             <!-- Google Tag Manager -->
@@ -32,7 +34,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         };
 
         window.dataLayer = window.dataLayer || [];
-                var dlObjects = [{"google_tag_params":{"ecomm_pagetype":"category","ecomm_category":"Recomenda\u00e7\u00e3o"},"ecommerce":{"currencyCode":"BRL","impressions":[{"name":"Vinho do Porto Taylor\u2019s Tawny 10 Anos","id":"1118","price":"458.00","brand":"Taylor\u2019s","category":"Recomenda\u00e7\u00e3o","list":"Recomenda\u00e7\u00e3o","position":1},{"name":"Vinho do Porto Taylor\u2019s Fine Tawny","id":"1117","price":"125.00","brand":"Taylor\u2019s","category":"Recomenda\u00e7\u00e3o","list":"Recomenda\u00e7\u00e3o","position":2},{"name":"Vinho do Porto Taylor\u2019s Fine Ruby","id":"1116","price":"125.00","brand":"Taylor\u2019s","category":"Recomenda\u00e7\u00e3o","list":"Recomenda\u00e7\u00e3o","position":3}]},"event":"impression","eventCategory":"Ecommerce","eventAction":"Impression","eventLabel":"category Recomenda\u00e7\u00e3o"}];
+                var dlObjects = [{"google_tag_params":{"ecomm_pagetype":"other"}}];
         for (var i in dlObjects) {
             window.dataLayer.push(dlObjects[i]);
         }
@@ -51,28 +53,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- BEGIN GTAG GLOBAL TAG -->
 <!-- END GTAG GLOBAL TAG -->
 <script type="text/javascript" src="https://chimpstatic.com/mcjs-connected/js/users/1255cf89de1ff1692e3832377/54a041db81224b7f42e4ef954.js" defer></script>
-
-<!-- This site is optimized with the Yoast SEO for Magento plugin 2.0.0 - https://yoast.com/magento/plugins/seo/ -->
-    <link rel="canonical" href="https://www.divinho.com.br/recomendac-o?tipo=6086" />
-
-    <!-- YoastSEO OpenGraph -->
-    <meta property="og:url" content="https://www.divinho.com.br/recomendac-o?tipo=6086"/>
-    <meta property="og:locale" content="pt_BR" />
-    <meta property="og:type" content="product.group"/>
-    <meta property="og:site_name" content="F R MOREIRA COMÉRCIO E DISTRIBUIÇÃO DE ALIMENTOS E BEBIDAS" />
-    <meta property="og:title" content="Recomendação"/>
-    <meta property="og:description" content=""/>
-        
-    <!-- YoastSEO Twitter Card -->
-    <meta name="twitter:card" content="summary">
-            <meta name="twitter:title" content="Recomendação"/>
-    <meta name="twitter:description" content=""/>
-    
-
     </head>
     <body data-container="body"
           data-mage-init='{"loaderAjax": {}, "loader": { "icon": "https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/loader-2.gif"}}'
-        class="page-with-filter page-products categorypath-pais-recomendac-o category-recomendac-o catalog-category-view page-layout-2columns-left">
+        class="page-products pontuados-index-index page-layout-2columns-left">
         <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MM4CCWJ"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -205,7 +189,7 @@ require([
 
 </script>
 <li class="nav-item authorization-link" data-label="ou">
-    <a class="nav-link" href="https://www.divinho.com.br/customer/account/login/referer/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvcmVjb21lbmRhYy1vP3RpcG89NjA4Ng%2C%2C/">
+    <a class="nav-link" href="https://www.divinho.com.br/customer/account/login/referer/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2/">
         Entrar    </a>
 </li>
 
@@ -252,7 +236,7 @@ require([
             </div>
                     </div>
         <script>
-        window.checkout = {"shoppingCartUrl":"https:\/\/www.divinho.com.br\/checkout\/cart\/","checkoutUrl":"https:\/\/www.divinho.com.br\/checkout\/","updateItemQtyUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/www.divinho.com.br\/","minicartMaxItemsVisible":5,"websiteId":"1","maxItemsToDisplay":10,"storeId":"1","customerLoginUrl":"https:\/\/www.divinho.com.br\/customer\/account\/login\/referer\/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvcmVjb21lbmRhYy1vP3RpcG89NjA4Ng%2C%2C\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.divinho.com.br\/captcha\/refresh\/","isRequired":false,"timestamp":1636434720}}};
+        window.checkout = {"shoppingCartUrl":"https:\/\/www.divinho.com.br\/checkout\/cart\/","checkoutUrl":"https:\/\/www.divinho.com.br\/checkout\/","updateItemQtyUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/www.divinho.com.br\/","minicartMaxItemsVisible":5,"websiteId":"1","maxItemsToDisplay":10,"storeId":"1","customerLoginUrl":"https:\/\/www.divinho.com.br\/customer\/account\/login\/referer\/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.divinho.com.br\/captcha\/refresh\/","isRequired":false,"timestamp":1636512891}}};
     </script>
     <script type="text/x-magento-init">
     {
@@ -266,9 +250,9 @@ require([
 </div>
 
 <div class="collapse d-lg-block" id="navbarSearch">
-        <form id="search-form618a03209d358" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
+        <form id="search-form618b347b789e0" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
                 <input data-mage-init='{"quickSearch":{
-                                        "formSelector":"#search-form618a03209d358",
+                                        "formSelector":"#search-form618b347b789e0",
                                         "url":"https://www.divinho.com.br/search/ajax/suggest/",
                                         "destinationSelector":"#search_autocomplete",
                                         "responseFieldElements":"ul li",
@@ -343,9 +327,9 @@ require([
 
 </div></div><div class="col-lg position-static col-nav"><div class="d-lg-none">
 <div class="collapse d-lg-block" id="navbarSearch">
-        <form id="search-form618a03209e962" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
+        <form id="search-form618b347b7ac22" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
                 <input data-mage-init='{"quickSearch":{
-                                        "formSelector":"#search-form618a03209e962",
+                                        "formSelector":"#search-form618b347b7ac22",
                                         "url":"https://www.divinho.com.br/search/ajax/suggest/",
                                         "destinationSelector":"#search_autocomplete",
                                         "responseFieldElements":"ul li",
@@ -387,11 +371,11 @@ require([
                                                                     <div class="mx-megamenu__sidebar mx-megamenu__sidebar--left">
                                         <div class="widget widget-categories-list block" data-collapse="1">
     <div class="megamenu__links">
-                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#vinhos6189f247cdd14" aria-expanded="true" aria-controls="vinhos6189f247cdd14">
+                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#vinhos618b0a68a8e72" aria-expanded="true" aria-controls="vinhos618b0a68a8e72">
             <i class="icon icon-vinhos"></i>
             <span>Tipo</span>
         </div>
-                <div id="vinhos6189f247cdd14" class="block-content catalog-category collapse-sm collapse">
+                <div id="vinhos618b0a68a8e72" class="block-content catalog-category collapse-sm collapse">
             <ul>
                                 <li class="category-item">
                     <a href="https://www.divinho.com.br/vinhos/tinto">
@@ -459,11 +443,11 @@ require([
 </div>
 <div class="widget widget-list-range">
     <div class="megamenu__links">
-        <div class="megamenu__title collapsed" data-toggle="collapse" data-target="#price-range6189f247d2432" aria-expanded="true" aria-controls="price-range6189f247d2432">
+        <div class="megamenu__title collapsed" data-toggle="collapse" data-target="#price-range618b0a68bd448" aria-expanded="true" aria-controls="price-range618b0a68bd448">
             <i class="icon icon icon-dollar-tag"></i>
             <span>Valor</span>
         </div>
-        <ul id="price-range6189f247d2432" class="block-content collapse-sm collapse">
+        <ul id="price-range618b0a68bd448" class="block-content collapse-sm collapse">
             <li><a href="https://www.divinho.com.br/vinhos?price=-59.9">Até R$59,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=59.9-99.9">R$59,90 a R$99,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=99.9-149.9">R$99,90 a R$149,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=149.9-249.9">R$149,90 a R$249,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=249.91-500">R$249,91 a R$500,00</a></li><li><a href="https://www.divinho.com.br/vinhos?price=500-">Acima de R$500,00</a></li>        </ul>
     </div>
 </div>
@@ -481,12 +465,12 @@ require([
     class="widget widget-list_mode widget-list_mode--uva">
     <div class="megamenu__links">
         <div class="block-title megamenu__title collapsed"
-            data-toggle="collapse" data-target="#uva6189f247b8902" aria-expanded="true"
-            aria-controls="uva6189f247b8902">
+            data-toggle="collapse" data-target="#uva618b0a682f5fe" aria-expanded="true"
+            aria-controls="uva618b0a682f5fe">
             <i class="icon icon-uva"></i>
             <span>Uvas</span>
         </div>
-        <div id="uva6189f247b8902"
+        <div id="uva618b0a682f5fe"
             class="block-content catalog-category collapse-sm collapse">
             <ul>
                 
@@ -536,11 +520,11 @@ require([
 </div>
  <div class="widget widget-categories-list block" data-collapse="1">
     <div class="megamenu__links">
-                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#pais6189f247c33b5" aria-expanded="true" aria-controls="pais6189f247c33b5">
+                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#pais618b0a68878c3" aria-expanded="true" aria-controls="pais618b0a68878c3">
             <i class="icon icon-pais"></i>
             <span>Pa&iacute;ses</span>
         </div>
-                <div id="pais6189f247c33b5" class="block-content catalog-category collapse-sm collapse">
+                <div id="pais618b0a68878c3" class="block-content catalog-category collapse-sm collapse">
             <ul>
                                 <li class="category-item">
                     <a href="https://www.divinho.com.br/pais/austria">
@@ -3537,11 +3521,11 @@ require([
                             </div>
                 <div class="megamenu__product-image">
             <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">
-                <img src="https://images.divinho.com.br/catalog/product/cache/fa01b5f6b2a94beaaa3488ed5c6cafe6/c/a/casanova_di_neri_rosso_di_montalcino.png" alt="Vinho Casanova di Neri Rosso di Montalcino 2019" title="Vinho Casanova di Neri Rosso di Montalcino 2019">
+                <img src="https://images.divinho.com.br/catalog/product/cache/fa01b5f6b2a94beaaa3488ed5c6cafe6/c/a/casanova_di_neri_rosso_di_montalcino.png" alt="Vinho Casanova di Neri Rosso di Montalcino 2018" title="Vinho Casanova di Neri Rosso di Montalcino 2018">
             </a>
         </div>
         <div class="megamenu__product-name text-center mt-2">
-            <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">Vinho Casanova di Neri Rosso di Montalcino 2019</a>
+            <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">Vinho Casanova di Neri Rosso di Montalcino 2018</a>
             <div class="text-primary price">
                 R$366,00            </div>
         </div>
@@ -3851,12 +3835,12 @@ require([
     class="widget widget-list_mode widget-list_mode--criticos">
     <div class="megamenu__links">
         <div class="block-title megamenu__title"
-             data-target="#criticos6189f249ba2f8" aria-expanded="true"
-            aria-controls="criticos6189f249ba2f8">
+             data-target="#criticos618b0a6f8879c" aria-expanded="true"
+            aria-controls="criticos618b0a6f8879c">
             <i class="icon icon-criticos"></i>
             <span>Críticos</span>
         </div>
-        <div id="criticos6189f249ba2f8"
+        <div id="criticos618b0a6f8879c"
             class="block-content catalog-category">
             <ul>
                                 <li>
@@ -4158,12 +4142,12 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     class="widget widget-list_mode widget-list_mode--vinicolas">
     <div class="megamenu__links">
         <div class="block-title megamenu__title"
-             data-target="#vinicolas6189f249cb53f" aria-expanded="true"
-            aria-controls="vinicolas6189f249cb53f">
+             data-target="#vinicolas618b0a6fd10d5" aria-expanded="true"
+            aria-controls="vinicolas618b0a6fd10d5">
             <i class="icon icon-vinicolas"></i>
             <span>Vinícolas</span>
         </div>
-        <div id="vinicolas6189f249cb53f"
+        <div id="vinicolas618b0a6fd10d5"
             class="block-content catalog-category">
             <ul>
                 
@@ -4274,20 +4258,25 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         <div class="row">
             <nav class="breadcrumbs" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                                        <li class="breadcrumb-item  home">
-                                                <a href="https://www.divinho.com.br/"
-                            title="Ir para a página inicial">
+                                        <li class="breadcrumb-item  Home">
+                                                <a href="/"
+                            title="Início">
                             Início                        </a>
                                             </li>
-                                        <li class="breadcrumb-item active category489">
-                                                Recomendação                                            </li>
+                                        <li class="breadcrumb-item active Vinhos Pontuados">
+                                                Vinhos Pontuados                                            </li>
                                     </ol>
             </nav>
         </div>
     </div>
 </section>
-<main id="site-content" class="site-content pb-4"><a id="contentarea" tabindex="-1"></a>
-<div class="container"><div class="page messages"><div data-placeholder="messages"></div>
+<main id="site-content" class="site-content"><a id="contentarea" tabindex="-1"></a>
+<div class="container"><div class="page-title-wrapper">
+    <h1 class="page-title&#x20;page-title__pink&#x20;mb-4"
+                >
+        <span class="base" data-ui-id="page-title-wrapper" >Vinhos Pontuados</span>    </h1>
+    </div>
+<div class="page messages"><div data-placeholder="messages"></div>
 <div data-bind="scope: 'messages'">
     <div data-bind="foreach: { data: cookieMessages, as: 'message' }" class="messages">
         <div role="alert" data-bind="attr: {
@@ -4319,13 +4308,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             }
     }
 </script>
-</div><div class="custom-title-wrapper"><div class="custom-title"><div class="page-title-wrapper">
-    <h1 class="page-title page-title__pink mb-4">
-    <span>Recomenda&#xE7;&#xE3;o</span>
-            </h1>
-</div>
-
-</div></div><div class="row"><div class="hidden-xs col-sm-3"><div class="sidebar-filters border">
+</div><div class="row"><div class="hidden-xs col-sm-3"><div class="sidebar-filters border">
     <div class="panel panel-default filter">
         <div class="panel-heading filter-title d-none">
             <strong>Filtrar por</strong>
@@ -4335,33 +4318,118 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     <h4 class="block-subtitle filter-current-subtitle"
             role="heading"
             aria-level="2"
-            data-count="1">Comprar por</h4>
+            data-count="2">Comprar por</h4>
     <ul class="items mb-0">
                     <li class="item">
-                                    <a class="action remove" href="https://www.divinho.com.br/recomendac-o"
-                       title="Remover Tipo Porto">
+                                    <a class="action remove" href="https://www.divinho.com.br/vinhos-pontuados?nota=90-95"
+                       title="Remover Uva Cabernet Franc">
                         <span class="far fa-times-circle mr-3"></span>
                     </a>
-                                <span class="filter-label">Tipo</span>
-                <span class="filter-value label label-default">Porto</span>
+                                <span class="filter-label">Uva</span>
+                <span class="filter-value label label-default">Cabernet Franc</span>
+            </li>
+                    <li class="item">
+                                    <a class="action remove" href="https://www.divinho.com.br/vinhos-pontuados?uva=5436"
+                       title="Remover Pontuação 90-95">
+                        <span class="far fa-times-circle mr-3"></span>
+                    </a>
+                                <span class="filter-label">Pontuação</span>
+                <span class="filter-value label label-default">90-95</span>
             </li>
             </ul>
 </div>
                             <div class="block-actions filter-actions mb-4">
-                    <a href="https://www.divinho.com.br/recomendac-o" class="action clear filter-clear">
+                    <a href="https://www.divinho.com.br/vinhos-pontuados" class="action clear filter-clear">
                         Limpar Tudo                    </a>
                 </div>
                                                                         <h4 role="heading" aria-level="2" class="block-subtitle filter-subtitle mb-3">
                         Opções de Compra                    </h4>
                     <dl class="filter-options" id="narrow-by-list">
-                                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">Preço</dt>
+                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">Categoria</dt>
                         <dd class="filter-options-content">
 <ul class="items">
         
         
         <li class="item">
-                            <a href="https://www.divinho.com.br/recomendac-o?price=99.9-149.9&amp;tipo=6086">
-                    <span class="price">R$99,90</span> a <span class="price">R$149,90</span>                                            <span>
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?cat=489&amp;nota=90-95&amp;uva=5436">
+                    Recomendação                                            <span>
+                            (22)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?cat=493&amp;nota=90-95&amp;uva=5436">
+                    Promoção de Vinhos                                            <span>
+                            (15)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?cat=496&amp;nota=90-95&amp;uva=5436">
+                    Lançamento                                            <span>
+                            (18)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?cat=511&amp;nota=90-95&amp;uva=5436">
+                    Kits                                            <span>
+                            (3)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?cat=721&amp;nota=90-95&amp;uva=5436">
+                    Vinhos até 35% OFF                                            <span>
+                            (11)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?cat=712&amp;nota=90-95&amp;uva=5436">
+                    Compre e ganhe                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            </ol>
+</dd>
+                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">Preço</dt>
+                        <dd class="filter-options-content">
+<ul class="items">
+        
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?nota=90-95&amp;price=59.9-99.9&amp;uva=5436">
+                    <span class="price">R$59,90</span> a <span class="price">R$99,90</span>                                            <span>
                             (2)
                         </span>
                                     </a>
@@ -4372,9 +4440,45 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             
         
         <li class="item">
-                            <a href="https://www.divinho.com.br/recomendac-o?price=249.91-500&amp;tipo=6086">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?nota=90-95&amp;price=99.9-149.9&amp;uva=5436">
+                    <span class="price">R$99,90</span> a <span class="price">R$149,90</span>                                            <span>
+                            (6)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?nota=90-95&amp;price=149.9-249.9&amp;uva=5436">
+                    <span class="price">R$149,90</span> a <span class="price">R$249,90</span>                                            <span>
+                            (15)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?nota=90-95&amp;price=249.91-500&amp;uva=5436">
                     <span class="price">R$249,90</span> a <span class="price">R$500,00</span>                                            <span>
-                            (1)
+                            (13)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?nota=90-95&amp;price=500-&amp;uva=5436">
+                    Acima de <span class="price">R$500,00</span>                                            <span>
+                            (33)
                         </span>
                                     </a>
                     </li>
@@ -4389,9 +4493,105 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         
         
         <li class="item">
-                            <a href="https://www.divinho.com.br/recomendac-o?pais=6225&amp;tipo=6086">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?nota=90-95&amp;pais=6215&amp;uva=5436">
+                    Argentina                                            <span>
+                            (14)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?nota=90-95&amp;pais=6217&amp;uva=5436">
+                    Brasil                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?nota=90-95&amp;pais=6218&amp;uva=5436">
+                    Chile                                            <span>
+                            (25)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?nota=90-95&amp;pais=6220&amp;uva=5436">
+                    Estados Unidos                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?nota=90-95&amp;pais=6221&amp;uva=5436">
+                    França                                            <span>
+                            (19)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?nota=90-95&amp;pais=6223&amp;uva=5436">
+                    Israel                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?nota=90-95&amp;pais=6224&amp;uva=5436">
+                    Itália                                            <span>
+                            (5)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?nota=90-95&amp;pais=6225&amp;uva=5436">
                     Portugal                                            <span>
-                            (3)
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?nota=90-95&amp;pais=6226&amp;uva=5436">
+                    Uruguai                                            <span>
+                            (4)
                         </span>
                                     </a>
                     </li>
@@ -4406,9 +4606,646 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         
         
         <li class="item">
-                            <a href="https://www.divinho.com.br/recomendac-o?manufacturer=6235&amp;tipo=6086">
-                    Taylor’s                                            <span>
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5765&amp;nota=90-95&amp;uva=5436">
+                    Achaval Ferrer                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5930&amp;nota=90-95&amp;uva=5436">
+                    Agripunica                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5854&amp;nota=90-95&amp;uva=5436">
+                    Almaviva                                            <span>
+                            (2)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5788&amp;nota=90-95&amp;uva=5436">
+                    Amalaya                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5893&amp;nota=90-95&amp;uva=5436">
+                    Andes Plateau                                            <span>
                             (3)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5723&amp;nota=90-95&amp;uva=5436">
+                    Antinori                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5911&amp;nota=90-95&amp;uva=5436">
+                    Arboleda                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5725&amp;nota=90-95&amp;uva=5436">
+                    Bodega Aleanna                                            <span>
+                            (6)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5726&amp;nota=90-95&amp;uva=5436">
+                    Bodega Garzón                                            <span>
+                            (4)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5784&amp;nota=90-95&amp;uva=5436">
+                    Bouchon Family Wines                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+                <div class="collapse" id="see-more618b347b9a5e5">
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5720&amp;nota=90-95&amp;uva=5436">
+                    Catena Zapata                                            <span>
+                            (2)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5905&amp;nota=90-95&amp;uva=5436">
+                    Château Bauvallon                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6007&amp;nota=90-95&amp;uva=5436">
+                    Château Beychevelle                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6006&amp;nota=90-95&amp;uva=5436">
+                    Château Branaire-Ducru                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5967&amp;nota=90-95&amp;uva=5436">
+                    Château Cos d’Estournel                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6233&amp;nota=90-95&amp;uva=5436">
+                    Château du Tertre                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6070&amp;nota=90-95&amp;uva=5436">
+                    Château Grand-Puy-Lacoste                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6280&amp;nota=90-95&amp;uva=5436">
+                    Château Haut-Brion                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5889&amp;nota=90-95&amp;uva=5436">
+                    Château Kirwan                                            <span>
+                            (2)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6071&amp;nota=90-95&amp;uva=5436">
+                    Château La Croix Cantenac                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6132&amp;nota=90-95&amp;uva=5436">
+                    Château Léoville Las Cases                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6067&amp;nota=90-95&amp;uva=5436">
+                    Château Léoville Poyferré                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6276&amp;nota=90-95&amp;uva=5436">
+                    Château Margaux                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6066&amp;nota=90-95&amp;uva=5436">
+                    Château Pichon Longueville Comtesse de Lalande                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5940&amp;nota=90-95&amp;uva=5436">
+                    Château Puycarpin                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6064&amp;nota=90-95&amp;uva=5436">
+                    Clos Quebrada de Macul                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5776&amp;nota=90-95&amp;uva=5436">
+                    De Martino                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5843&amp;nota=90-95&amp;uva=5436">
+                    Domaine Clarence Dillon                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5860&amp;nota=90-95&amp;uva=5436">
+                    Domaines Barons de Rothschild (Lafite)                                            <span>
+                            (3)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6238&amp;nota=90-95&amp;uva=5436">
+                    Emiliana Organic Vineyards                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5781&amp;nota=90-95&amp;uva=5436">
+                    Fabre Montmayou                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5785&amp;nota=90-95&amp;uva=5436">
+                    Gaja                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5767&amp;nota=90-95&amp;uva=5436">
+                    Golan Heights Winery                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6237&amp;nota=90-95&amp;uva=5436">
+                    Mosquita Muerta Wines                                            <span>
+                            (2)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5764&amp;nota=90-95&amp;uva=5436">
+                    Odfjell Vineyards                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6161&amp;nota=90-95&amp;uva=5436">
+                    Opus One Winery                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5886&amp;nota=90-95&amp;uva=5436">
+                    Ornellaia                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5899&amp;nota=90-95&amp;uva=5436">
+                    Pedra Cancela                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5888&amp;nota=90-95&amp;uva=5436">
+                    Riglos Wines                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5792&amp;nota=90-95&amp;uva=5436">
+                    Tenuta San Guido                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5732&amp;nota=90-95&amp;uva=5436">
+                    Viña Carmen                                            <span>
+                            (3)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5815&amp;nota=90-95&amp;uva=5436">
+                    Viña Concha y Toro                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6063&amp;nota=90-95&amp;uva=5436">
+                    Viña El Principal                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5751&amp;nota=90-95&amp;uva=5436">
+                    Viña Errazuriz                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5722&amp;nota=90-95&amp;uva=5436">
+                    Viña Montes                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5733&amp;nota=90-95&amp;uva=5436">
+                    Viña Pérez Cruz                                            <span>
+                            (2)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6053&amp;nota=90-95&amp;uva=5436">
+                    Viña San Pedro                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6135&amp;nota=90-95&amp;uva=5436">
+                    Viña Santa Rita                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5729&amp;nota=90-95&amp;uva=5436">
+                    Viña Valdivieso                                            <span>
+                            (3)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=6308&amp;nota=90-95&amp;uva=5436">
+                    Viña Vik                                            <span>
+                            (3)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                            
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?manufacturer=5834&amp;nota=90-95&amp;uva=5436">
+                    Vinícola Guaspari                                            <span>
+                            (1)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+                                </div>
+
+            <li class="item">
+                <a href="#see-more618b347b9a5e5" class="see-more" data-toggle="collapse" aria-expanded="false" aria-controls="see-more">
+                    Ver mais
+                </a>
+            </li>
+                    
+            </ol>
+</dd>
+                                                                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">Tipo</dt>
+                        <dd class="filter-options-content">
+<ul class="items">
+        
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?nota=90-95&amp;tipo=6082&amp;uva=5436">
+                    Tinto                                            <span>
+                            (67)
+                        </span>
+                                    </a>
+                    </li>
+        
+
+        
+            
+        
+        <li class="item">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?nota=90-95&amp;tipo=6084&amp;uva=5436">
+                    Rosé                                            <span>
+                            (2)
                         </span>
                                     </a>
                     </li>
@@ -4417,80 +5254,15 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         
             </ol>
 </dd>
-                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">Uva</dt>
+                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">Pontuação</dt>
                         <dd class="filter-options-content">
 <ul class="items">
         
         
         <li class="item">
-                            <a href="https://www.divinho.com.br/recomendac-o?tipo=6086&amp;uva=5443">
-                    Tempranillo                                            <span>
-                            (3)
-                        </span>
-                                    </a>
-                    </li>
-        
-
-        
-            
-        
-        <li class="item">
-                            <a href="https://www.divinho.com.br/recomendac-o?tipo=6086&amp;uva=5450">
-                    Tinta Barroca                                            <span>
-                            (3)
-                        </span>
-                                    </a>
-                    </li>
-        
-
-        
-            
-        
-        <li class="item">
-                            <a href="https://www.divinho.com.br/recomendac-o?tipo=6086&amp;uva=5461">
-                    Tinto Cão                                            <span>
-                            (3)
-                        </span>
-                                    </a>
-                    </li>
-        
-
-        
-            
-        
-        <li class="item">
-                            <a href="https://www.divinho.com.br/recomendac-o?tipo=6086&amp;uva=5446">
-                    Touriga Franca                                            <span>
-                            (3)
-                        </span>
-                                    </a>
-                    </li>
-        
-
-        
-            
-        
-        <li class="item">
-                            <a href="https://www.divinho.com.br/recomendac-o?tipo=6086&amp;uva=5440">
-                    Touriga Nacional                                            <span>
-                            (3)
-                        </span>
-                                    </a>
-                    </li>
-        
-
-        
-            </ol>
-</dd>
-                                                                                                                                            <dt role="heading" aria-level="3" class="h4 filter-options-title">Pontuação</dt>
-                        <dd class="filter-options-content">
-<ul class="items">
-        
-        
-        <li class="item">
-                            <a href="https://www.divinho.com.br/recomendac-o?nota=90-95&amp;tipo=6086">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?nota=90-95&amp;uva=5436">
                     90 à 95 pontos                                            <span>
-                            (3)
+                            (12)
                         </span>
                                     </a>
                     </li>
@@ -4500,9 +5272,9 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             
         
         <li class="item">
-                            <a href="https://www.divinho.com.br/recomendac-o?nota=96-100&amp;tipo=6086">
+                            <a href="https://www.divinho.com.br/vinhos-pontuados?nota=96-100&amp;uva=5436">
                     96 à 100 pontos                                            <span>
-                            (3)
+                            (1)
                         </span>
                                     </a>
                     </li>
@@ -4514,7 +5286,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                             </dl>
                     </div>
     </div>
-</div></div><div class="col-xs-12 col-sm-9"><input name="form_key" type="hidden" value="7CAgdajGsgGpLMCJ" /><script type="text/x-magento-init">
+</div></div><div class="col-xs-12 col-sm-9"><input name="form_key" type="hidden" value="X2jc9IC6ecFGpMc6" /><script type="text/x-magento-init">
     {
         "*": {
             "Magento_Customer/js/section-config": {
@@ -4558,17 +5330,17 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 <script type="text/x-magento-init">
     {
         "body": {
-            "pageCache": {"url":"https:\/\/www.divinho.com.br\/page_cache\/block\/render\/id\/489\/?tipo=6086","handles":["default","catalog_category_view","catalog_category_view_type_layered","catalog_category_view_type_layered_without_children","catalog_category_view_id_489","gabrielqs_themesettings_footer_1","gabrielqs_themesettings_header_1","gabrielqs_themesettings_product_list_item_1","gabrielqs_themesettings_customization","mpseo_remove_schema"],"originalRequest":{"route":"catalog","controller":"category","action":"view","uri":"\/recomendac-o?tipo=6086"},"versionCookieName":"private_content_version"}        }
+            "pageCache": {"url":"https:\/\/www.divinho.com.br\/page_cache\/block\/render\/?nota=90-95&uva=5436","handles":["default","pontuados_index_index","gabrielqs_themesettings_footer_1","gabrielqs_themesettings_header_1","gabrielqs_themesettings_customization","mpseo_remove_schema"],"originalRequest":{"route":"pontuados","controller":"index","action":"index","uri":"\/vinhos-pontuados?nota=90-95&uva=5436"},"versionCookieName":"private_content_version"}        }
     }
 </script>
 
 <div id="monkey_campaign" style="display:none;"
      data-mage-init='{"campaigncatcher":{"checkCampaignUrl": "https://www.divinho.com.br/mailchimp/campaign/check/"}}'>
-</div>        <div class="toolbar toolbar-products d-sm-flex border-bottom pt-3 pb-3 mb-3 pt-md-0 align-items-end"
-         data-mage-init='{"productListToolbarForm":{"mode":"product_list_mode","direction":"product_list_dir","order":"product_list_order","limit":"product_list_limit","modeDefault":"grid","directionDefault":"asc","orderDefault":"position","limitDefault":"12","url":"https:\/\/www.divinho.com.br\/recomendac-o?tipo=6086","formKey":"7CAgdajGsgGpLMCJ","post":false}}'>
+</div>    <div class="toolbar toolbar-products d-sm-flex border-bottom pt-3 pb-3 mb-3 pt-md-0 align-items-end"
+         data-mage-init='{"productListToolbarForm":{"mode":"product_list_mode","direction":"product_list_dir","order":"product_list_order","limit":"product_list_limit","modeDefault":"grid","directionDefault":"asc","orderDefault":"position","limitDefault":"12","url":"https:\/\/www.divinho.com.br\/vinhos-pontuados?nota=90-95&uva=5436","formKey":"X2jc9IC6ecFGpMc6","post":false}}'>
 
          <div class="toolbar-amount mb-2 mb-md-0" id="toolbar-amount">
-            <span class="toolbar-number font-weight-bold">3</span> itens    </div>
+            Itens <span class="toolbar-number font-weight-bold">1</span>-<span class="toolbar-number font-weight-bold">12</span> de <span class="toolbar-number font-weight-bold">32</span>    </div>
 
         
         
@@ -4627,69 +5399,751 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                         
         <div class="col-md-4 mb-3">
             <div class="product box-product"
-                data-product-id="1118">
+                data-product-id="1277">
                 
                 
                 
     <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/cl.png" alt="Chile" title="Chile">
     </div>
 
                 
 
         <div class="product__pontuacao">
                                             <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Spectator">WS</div>
-                    <div class="pontos">90</div>
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Tim Atkin">TA</div>
+                    <div class="pontos">93</div>
                 </div>
+                    </div>
+
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Milla Cala 2017&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Milla Cala 2017&quot;,&quot;id&quot;:&quot;1277&quot;,&quot;price&quot;:&quot;298.00&quot;,&quot;category&quot;:&quot;Recomenda\u00e7\u00e3o&quot;,&quot;position&quot;:0,&quot;brand&quot;:&quot;Vi\u00f1a Vik&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-milla-cala-2017' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-milla-cala-2017"
+                    tabindex="-1">
+                    <div class="product__photo">
+                        
+
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho_milla_calla_2019.png"
+    width=""
+    height=""
+    alt="Garrafa de Vinho Milla Calla 2017" /></span>                    </div>
+                </a>
+                                <div class="product__content">
+                    <h2 class="product__title">
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Milla Cala 2017&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Milla Cala 2017&quot;,&quot;id&quot;:&quot;1277&quot;,&quot;price&quot;:&quot;298.00&quot;,&quot;category&quot;:&quot;Recomenda\u00e7\u00e3o&quot;,&quot;position&quot;:0,&quot;brand&quot;:&quot;Vi\u00f1a Vik&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-milla-cala-2017' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-milla-cala-2017">
+                            Vinho Milla Cala 2017                        </a>
+                    </h2>
+
+                    
+<div class="product__pais">
+    <span>Chile</span>
+</div>
+                    
+                    <form data-role="tocart-form" data-product-sku="2036"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2/product/1277/" method="post">
+                        <input type="hidden" name="product"
+                            value="1277">
+                                                <input type="hidden"
+                            name="uenc"
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekxYQnZiblIxWVdSdmN6OXViM1JoUFRrd0xUazFKblYyWVQwMU5ETTIvcHJvZHVjdC8xMjc3Lw,,">
+                        <input name="form_key" type="hidden" value="X2jc9IC6ecFGpMc6" />                        <div class="product__buy">
+                            <div class="product__price">
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1277" data-price-box="product-id-1277">
+   <div class="price__regular"><br></div>
+    <div class="price__sale">
+        
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-1277"                data-price-amount="298"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$298,00</span></span>
+        </span>
+    </div>
+
+</div>                            </div>
+                            <div class="product__quantity">
+                                <div class="custom-number">
+                                    <input type="number" name="qty"
+                                        id="qty1277" maxlength="12" min="1"
+                                        minlenght="1" value="1" title="Qtd"
+                                        class="qty"
+                                        data-validate="null" />
+                                    <div class="custom-number-button custom-number-button--up">+</div>
+                                    <div class="custom-number-button custom-number-button--down">-</div>
+                                    <button class="action tocart btn btn--input" type="submit"><i
+                                            class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <a href="#" class="product__wishlist"
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1277,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2"}}'
+                                    class="action towishlist" data-action="add-to-wishlist"><i
+                                        class="far fa-heart"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="actions-primary">
+                                                        <button type="submit" title="Adicionar ao Carrinho"
+                                class="action tocart primary btn btn--product">
+                                <span>Adicionar ao Carrinho</span>
+                            </button>
+                        </div>
+                    </form>
+                                    </div>
+            </div>
+        </div>
+                                
+        <div class="col-md-4 mb-3">
+            <div class="product box-product"
+                data-product-id="1276">
+                
+                
+                
+    <div class="product__bandeira">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/cl.png" alt="Chile" title="Chile">
+    </div>
+
+                
+
+        <div class="product__pontuacao">
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Guia Descorchados">GD</div>
+                    <div class="pontos">93</div>
+                </div>
+                    </div>
+
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho La Piu Belle Ros\u00e9 2020&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho La Piu Belle Ros\u00e9 2020&quot;,&quot;id&quot;:&quot;1276&quot;,&quot;price&quot;:&quot;209.00&quot;,&quot;category&quot;:&quot;Lan\u00e7amento&quot;,&quot;position&quot;:1,&quot;brand&quot;:&quot;Vi\u00f1a Vik&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-la-piu-belle-rose-2020' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-la-piu-belle-rose-2020"
+                    tabindex="-1">
+                    <div class="product__photo">
+                        
+
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho_la_piu_belle_ros_2020.png"
+    width=""
+    height=""
+    alt="Garrafa de Vinho La Piu Belle Rosé 2020" /></span>                    </div>
+                </a>
+                                <div class="product__content">
+                    <h2 class="product__title">
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho La Piu Belle Ros\u00e9 2020&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho La Piu Belle Ros\u00e9 2020&quot;,&quot;id&quot;:&quot;1276&quot;,&quot;price&quot;:&quot;209.00&quot;,&quot;category&quot;:&quot;Lan\u00e7amento&quot;,&quot;position&quot;:1,&quot;brand&quot;:&quot;Vi\u00f1a Vik&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-la-piu-belle-rose-2020' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-la-piu-belle-rose-2020">
+                            Vinho La Piu Belle Rosé 2020                        </a>
+                    </h2>
+
+                    
+<div class="product__pais">
+    <span>Chile</span>
+</div>
+                    
+                    <form data-role="tocart-form" data-product-sku="2030"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2/product/1276/" method="post">
+                        <input type="hidden" name="product"
+                            value="1276">
+                                                <input type="hidden"
+                            name="uenc"
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekxYQnZiblIxWVdSdmN6OXViM1JoUFRrd0xUazFKblYyWVQwMU5ETTIvcHJvZHVjdC8xMjc2Lw,,">
+                        <input name="form_key" type="hidden" value="X2jc9IC6ecFGpMc6" />                        <div class="product__buy">
+                            <div class="product__price">
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1276" data-price-box="product-id-1276">
+   <div class="price__regular"><br></div>
+    <div class="price__sale">
+        
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-1276"                data-price-amount="209"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$209,00</span></span>
+        </span>
+    </div>
+
+</div>                            </div>
+                            <div class="product__quantity">
+                                <div class="custom-number">
+                                    <input type="number" name="qty"
+                                        id="qty1276" maxlength="12" min="1"
+                                        minlenght="1" value="1" title="Qtd"
+                                        class="qty"
+                                        data-validate="null" />
+                                    <div class="custom-number-button custom-number-button--up">+</div>
+                                    <div class="custom-number-button custom-number-button--down">-</div>
+                                    <button class="action tocart btn btn--input" type="submit"><i
+                                            class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <a href="#" class="product__wishlist"
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1276,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2"}}'
+                                    class="action towishlist" data-action="add-to-wishlist"><i
+                                        class="far fa-heart"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="actions-primary">
+                                                        <button type="submit" title="Adicionar ao Carrinho"
+                                class="action tocart primary btn btn--product">
+                                <span>Adicionar ao Carrinho</span>
+                            </button>
+                        </div>
+                    </form>
+                                    </div>
+            </div>
+        </div>
+                                
+        <div class="col-md-4 mb-3">
+            <div class="product box-product"
+                data-product-id="1274">
+                
+                
+                
+    <div class="product__bandeira">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/cl.png" alt="Chile" title="Chile">
+    </div>
+
+                
+
+        <div class="product__pontuacao">
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Tim Atkin">TA</div>
+                    <div class="pontos">95</div>
+                </div>
+                    </div>
+
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Vik 2013&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Vik 2013&quot;,&quot;id&quot;:&quot;1274&quot;,&quot;price&quot;:&quot;1139.00&quot;,&quot;category&quot;:&quot;Recomenda\u00e7\u00e3o&quot;,&quot;position&quot;:2,&quot;brand&quot;:&quot;Vi\u00f1a Vik&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-vik-2013' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-vik-2013"
+                    tabindex="-1">
+                    <div class="product__photo">
+                        
+
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho_vik_2013.png"
+    width=""
+    height=""
+    alt="Garrafa de Vinho Vik 2013" /></span>                    </div>
+                </a>
+                                <div class="product__content">
+                    <h2 class="product__title">
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Vik 2013&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Vik 2013&quot;,&quot;id&quot;:&quot;1274&quot;,&quot;price&quot;:&quot;1139.00&quot;,&quot;category&quot;:&quot;Recomenda\u00e7\u00e3o&quot;,&quot;position&quot;:2,&quot;brand&quot;:&quot;Vi\u00f1a Vik&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-vik-2013' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-vik-2013">
+                            Vinho Vik 2013                        </a>
+                    </h2>
+
+                    
+<div class="product__pais">
+    <span>Chile</span>
+</div>
+                    
+                    <form data-role="tocart-form" data-product-sku="2037"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2/product/1274/" method="post">
+                        <input type="hidden" name="product"
+                            value="1274">
+                                                <input type="hidden"
+                            name="uenc"
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekxYQnZiblIxWVdSdmN6OXViM1JoUFRrd0xUazFKblYyWVQwMU5ETTIvcHJvZHVjdC8xMjc0Lw,,">
+                        <input name="form_key" type="hidden" value="X2jc9IC6ecFGpMc6" />                        <div class="product__buy">
+                            <div class="product__price">
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1274" data-price-box="product-id-1274">
+   <div class="price__regular"><br></div>
+    <div class="price__sale">
+        
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-1274"                data-price-amount="1139"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$1.139,00</span></span>
+        </span>
+    </div>
+
+</div>                            </div>
+                            <div class="product__quantity">
+                                <div class="custom-number">
+                                    <input type="number" name="qty"
+                                        id="qty1274" maxlength="12" min="1"
+                                        minlenght="1" value="1" title="Qtd"
+                                        class="qty"
+                                        data-validate="null" />
+                                    <div class="custom-number-button custom-number-button--up">+</div>
+                                    <div class="custom-number-button custom-number-button--down">-</div>
+                                    <button class="action tocart btn btn--input" type="submit"><i
+                                            class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <a href="#" class="product__wishlist"
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1274,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2"}}'
+                                    class="action towishlist" data-action="add-to-wishlist"><i
+                                        class="far fa-heart"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="actions-primary">
+                                                        <button type="submit" title="Adicionar ao Carrinho"
+                                class="action tocart primary btn btn--product">
+                                <span>Adicionar ao Carrinho</span>
+                            </button>
+                        </div>
+                    </form>
+                                    </div>
+            </div>
+        </div>
+                                
+        <div class="col-md-4 mb-3">
+            <div class="product box-product"
+                data-product-id="1122">
+                
+                
+                
+    <div class="product__bandeira">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/cl.png" alt="Chile" title="Chile">
+    </div>
+
+                
+
+        <div class="product__pontuacao">
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Guia Descorchados">GD</div>
+                    <div class="pontos">95</div>
+                </div>
+                    </div>
+
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Org\u00e2nico Coyam 2018&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Org\u00e2nico Coyam 2018&quot;,&quot;id&quot;:&quot;1122&quot;,&quot;price&quot;:&quot;269.90&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:3,&quot;brand&quot;:&quot;Emiliana Organic Vineyards&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-organico-emiliana-coyam-2018' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-organico-emiliana-coyam-2018"
+                    tabindex="-1">
+                    <div class="product__photo">
+                        
+
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/c/o/coyam_emiliana.png"
+    width=""
+    height=""
+    alt="Garrafa de Vinho Orgânico Emiliana Coyam 2018" /></span>                    </div>
+                </a>
+                                <div class="product__content">
+                    <h2 class="product__title">
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Org\u00e2nico Coyam 2018&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Org\u00e2nico Coyam 2018&quot;,&quot;id&quot;:&quot;1122&quot;,&quot;price&quot;:&quot;269.90&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:3,&quot;brand&quot;:&quot;Emiliana Organic Vineyards&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-organico-emiliana-coyam-2018' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-organico-emiliana-coyam-2018">
+                            Vinho Orgânico Coyam 2018                        </a>
+                    </h2>
+
+                    
+<div class="product__pais">
+    <span>Chile</span>
+</div>
+                    
+                    <form data-role="tocart-form" data-product-sku="1528"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2/product/1122/" method="post">
+                        <input type="hidden" name="product"
+                            value="1122">
+                                                <input type="hidden"
+                            name="uenc"
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekxYQnZiblIxWVdSdmN6OXViM1JoUFRrd0xUazFKblYyWVQwMU5ETTIvcHJvZHVjdC8xMTIyLw,,">
+                        <input name="form_key" type="hidden" value="X2jc9IC6ecFGpMc6" />                        <div class="product__buy">
+                            <div class="product__price">
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1122" data-price-box="product-id-1122">
+   <div class="price__regular"><br></div>
+    <div class="price__sale">
+        
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-1122"                data-price-amount="269.9"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$269,90</span></span>
+        </span>
+    </div>
+
+</div>                            </div>
+                            <div class="product__quantity">
+                                <div class="custom-number">
+                                    <input type="number" name="qty"
+                                        id="qty1122" maxlength="12" min="1"
+                                        minlenght="1" value="1" title="Qtd"
+                                        class="qty"
+                                        data-validate="null" />
+                                    <div class="custom-number-button custom-number-button--up">+</div>
+                                    <div class="custom-number-button custom-number-button--down">-</div>
+                                    <button class="action tocart btn btn--input" type="submit"><i
+                                            class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <a href="#" class="product__wishlist"
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1122,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2"}}'
+                                    class="action towishlist" data-action="add-to-wishlist"><i
+                                        class="far fa-heart"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="actions-primary">
+                                                        <button type="submit" title="Adicionar ao Carrinho"
+                                class="action tocart primary btn btn--product">
+                                <span>Adicionar ao Carrinho</span>
+                            </button>
+                        </div>
+                    </form>
+                                    </div>
+            </div>
+        </div>
+                                
+        <div class="col-md-4 mb-3">
+            <div class="product box-product"
+                data-product-id="1119">
+                
+                
+                
+    <div class="product__bandeira">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/ar.png" alt="Argentina" title="Argentina">
+    </div>
+
+                
+
+        <div class="product__pontuacao">
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Guia Descorchados">GD</div>
+                    <div class="pontos">94</div>
+                </div>
+                    </div>
+
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Sapo de Otro Pozo 2018&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Sapo de Otro Pozo 2018&quot;,&quot;id&quot;:&quot;1119&quot;,&quot;price&quot;:&quot;168.00&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:4,&quot;brand&quot;:&quot;Mosquita Muerta Wines&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-sapo-de-otro-pozo' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-sapo-de-otro-pozo"
+                    tabindex="-1">
+                    <div class="product__photo">
+                        
+
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/s/a/sapo_de_otro_pozo.png"
+    width=""
+    height=""
+    alt="Vinho Sapo de Otro Pozo 2018" /></span>                    </div>
+                </a>
+                                <div class="product__content">
+                    <h2 class="product__title">
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Sapo de Otro Pozo 2018&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Sapo de Otro Pozo 2018&quot;,&quot;id&quot;:&quot;1119&quot;,&quot;price&quot;:&quot;168.00&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:4,&quot;brand&quot;:&quot;Mosquita Muerta Wines&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-sapo-de-otro-pozo' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-sapo-de-otro-pozo">
+                            Vinho Sapo de Otro Pozo 2018                        </a>
+                    </h2>
+
+                    
+<div class="product__pais">
+    <span>Argentina</span>
+</div>
+                    
+                    <form data-role="tocart-form" data-product-sku="1524"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2/product/1119/" method="post">
+                        <input type="hidden" name="product"
+                            value="1119">
+                                                <input type="hidden"
+                            name="uenc"
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekxYQnZiblIxWVdSdmN6OXViM1JoUFRrd0xUazFKblYyWVQwMU5ETTIvcHJvZHVjdC8xMTE5Lw,,">
+                        <input name="form_key" type="hidden" value="X2jc9IC6ecFGpMc6" />                        <div class="product__buy">
+                            <div class="product__price">
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1119" data-price-box="product-id-1119">
+   <div class="price__regular"><br></div>
+    <div class="price__sale">
+        
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-1119"                data-price-amount="168"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$168,00</span></span>
+        </span>
+    </div>
+
+</div>                            </div>
+                            <div class="product__quantity">
+                                <div class="custom-number">
+                                    <input type="number" name="qty"
+                                        id="qty1119" maxlength="12" min="1"
+                                        minlenght="1" value="1" title="Qtd"
+                                        class="qty"
+                                        data-validate="null" />
+                                    <div class="custom-number-button custom-number-button--up">+</div>
+                                    <div class="custom-number-button custom-number-button--down">-</div>
+                                    <button class="action tocart btn btn--input" type="submit"><i
+                                            class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <a href="#" class="product__wishlist"
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1119,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2"}}'
+                                    class="action towishlist" data-action="add-to-wishlist"><i
+                                        class="far fa-heart"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="actions-primary">
+                                                        <button type="submit" title="Adicionar ao Carrinho"
+                                class="action tocart primary btn btn--product">
+                                <span>Adicionar ao Carrinho</span>
+                            </button>
+                        </div>
+                    </form>
+                                    </div>
+            </div>
+        </div>
+                                
+        <div class="col-md-4 mb-3">
+            <div class="product box-product"
+                data-product-id="1115">
+                
+                
+                
+    <div class="product__bandeira">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/fr.png" alt="França" title="França">
+    </div>
+
+                
+
+        <div class="product__pontuacao">
                                             <div class="pontuacao">
                     <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Enthusiast">WE</div>
+                    <div class="pontos">92</div>
+                </div>
+                    </div>
+
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Ch\u00e2teau du Tertre Margaux Grand Cru Class\u00e9 2008&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Ch\u00e2teau du Tertre Margaux Grand Cru Class\u00e9 2008&quot;,&quot;id&quot;:&quot;1115&quot;,&quot;price&quot;:&quot;998.00&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:5,&quot;brand&quot;:&quot;Ch\u00e2teau du Tertre&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-chateau-du-tertre-margaux-grand-cru-classe' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-chateau-du-tertre-margaux-grand-cru-classe"
+                    tabindex="-1">
+                    <div class="product__photo">
+                        
+
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/c/h/ch_teau_du_tertre.png"
+    width=""
+    height=""
+    alt="Garrafa de Vinho Château du Tertre Margaux Grand Cru Classé 2008" /></span>                    </div>
+                </a>
+                                <div class="product__content">
+                    <h2 class="product__title">
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Ch\u00e2teau du Tertre Margaux Grand Cru Class\u00e9 2008&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Ch\u00e2teau du Tertre Margaux Grand Cru Class\u00e9 2008&quot;,&quot;id&quot;:&quot;1115&quot;,&quot;price&quot;:&quot;998.00&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:5,&quot;brand&quot;:&quot;Ch\u00e2teau du Tertre&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-chateau-du-tertre-margaux-grand-cru-classe' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-chateau-du-tertre-margaux-grand-cru-classe">
+                            Vinho Château du Tertre Margaux Grand Cru Classé 2008                        </a>
+                    </h2>
+
+                    
+<div class="product__pais">
+    <span>França</span>
+</div>
+                    
+                    <form data-role="tocart-form" data-product-sku="1520"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2/product/1115/" method="post">
+                        <input type="hidden" name="product"
+                            value="1115">
+                                                <input type="hidden"
+                            name="uenc"
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekxYQnZiblIxWVdSdmN6OXViM1JoUFRrd0xUazFKblYyWVQwMU5ETTIvcHJvZHVjdC8xMTE1Lw,,">
+                        <input name="form_key" type="hidden" value="X2jc9IC6ecFGpMc6" />                        <div class="product__buy">
+                            <div class="product__price">
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1115" data-price-box="product-id-1115">
+   <div class="price__regular"><br></div>
+    <div class="price__sale">
+        
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-1115"                data-price-amount="998"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$998,00</span></span>
+        </span>
+    </div>
+
+</div>                            </div>
+                            <div class="product__quantity">
+                                <div class="custom-number">
+                                    <input type="number" name="qty"
+                                        id="qty1115" maxlength="12" min="1"
+                                        minlenght="1" value="1" title="Qtd"
+                                        class="qty"
+                                        data-validate="null" />
+                                    <div class="custom-number-button custom-number-button--up">+</div>
+                                    <div class="custom-number-button custom-number-button--down">-</div>
+                                    <button class="action tocart btn btn--input" type="submit"><i
+                                            class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <a href="#" class="product__wishlist"
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1115,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2"}}'
+                                    class="action towishlist" data-action="add-to-wishlist"><i
+                                        class="far fa-heart"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="actions-primary">
+                                                        <button type="submit" title="Adicionar ao Carrinho"
+                                class="action tocart primary btn btn--product">
+                                <span>Adicionar ao Carrinho</span>
+                            </button>
+                        </div>
+                    </form>
+                                    </div>
+            </div>
+        </div>
+                                
+        <div class="col-md-4 mb-3">
+            <div class="product box-product"
+                data-product-id="1078">
+                
+                
+                
+    <div class="product__bandeira">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/us.png" alt="Estados Unidos" title="Estados Unidos">
+    </div>
+
+                
+
+        <div class="product__pontuacao">
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Robert Parker">RP</div>
+                    <div class="pontos">95</div>
+                </div>
+                    </div>
+
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Opus One 2017&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Opus One 2017&quot;,&quot;id&quot;:&quot;1078&quot;,&quot;price&quot;:&quot;5708.43&quot;,&quot;category&quot;:&quot;Vinhos\/Vinho Tinto&quot;,&quot;position&quot;:6,&quot;brand&quot;:&quot;Opus One Winery&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-opus-one-2017' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-opus-one-2017"
+                    tabindex="-1">
+                    <div class="product__photo">
+                        
+
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho-tinto-opus-one_2.png"
+    width=""
+    height=""
+    alt="Garrafa de Vinho Opus One 2017" /></span>                    </div>
+                </a>
+                                <div class="product__content">
+                    <h2 class="product__title">
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Opus One 2017&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Opus One 2017&quot;,&quot;id&quot;:&quot;1078&quot;,&quot;price&quot;:&quot;5708.43&quot;,&quot;category&quot;:&quot;Vinhos\/Vinho Tinto&quot;,&quot;position&quot;:6,&quot;brand&quot;:&quot;Opus One Winery&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-opus-one-2017' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-opus-one-2017">
+                            Vinho Opus One 2017                        </a>
+                    </h2>
+
+                    
+<div class="product__pais">
+    <span>Estados Unidos</span>
+</div>
+                    
+                    <form data-role="tocart-form" data-product-sku="15790"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2/product/1078/" method="post">
+                        <input type="hidden" name="product"
+                            value="1078">
+                                                <input type="hidden"
+                            name="uenc"
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekxYQnZiblIxWVdSdmN6OXViM1JoUFRrd0xUazFKblYyWVQwMU5ETTIvcHJvZHVjdC8xMDc4Lw,,">
+                        <input name="form_key" type="hidden" value="X2jc9IC6ecFGpMc6" />                        <div class="product__buy">
+                            <div class="product__price">
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1078" data-price-box="product-id-1078">
+   <div class="price__regular"><br></div>
+    <div class="price__sale">
+        
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-1078"                data-price-amount="5708.43"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$5.708,43</span></span>
+        </span>
+    </div>
+
+</div>                            </div>
+                            <div class="product__quantity">
+                                <div class="custom-number">
+                                    <input type="number" name="qty"
+                                        id="qty1078" maxlength="12" min="1"
+                                        minlenght="1" value="1" title="Qtd"
+                                        class="qty"
+                                        data-validate="null" />
+                                    <div class="custom-number-button custom-number-button--up">+</div>
+                                    <div class="custom-number-button custom-number-button--down">-</div>
+                                    <button class="action tocart btn btn--input" type="submit"><i
+                                            class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <a href="#" class="product__wishlist"
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1078,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2"}}'
+                                    class="action towishlist" data-action="add-to-wishlist"><i
+                                        class="far fa-heart"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="actions-primary">
+                                                        <button type="submit" title="Adicionar ao Carrinho"
+                                class="action tocart primary btn btn--product">
+                                <span>Adicionar ao Carrinho</span>
+                            </button>
+                        </div>
+                    </form>
+                                    </div>
+            </div>
+        </div>
+                                
+        <div class="col-md-4 mb-3">
+            <div class="product box-product"
+                data-product-id="1020">
+                
+                    <div class="product__discount">
+        <span>-17%</span>
+    </div>
+
+                
+    <div class="product__bandeira">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/cl.png" alt="Chile" title="Chile">
+    </div>
+
+                
+
+        <div class="product__pontuacao">
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="James Suckling">JS</div>
+                    <div class="pontos">92</div>
+                </div>
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Robert Parker">RP</div>
                     <div class="pontos">90</div>
                 </div>
                     </div>
 
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Taylor\u2019s Tawny 10 Anos&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Recomenda\u00e7\u00e3o&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Taylor\u2019s Tawny 10 Anos&quot;,&quot;id&quot;:&quot;1118&quot;,&quot;price&quot;:&quot;458.00&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:0,&quot;brand&quot;:&quot;Taylor\u2019s&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-taylor-s-tawny-10-anos' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-do-porto-taylor-s-tawny-10-anos"
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Arboleda Cabernet Sauvignon 2016&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Arboleda Cabernet Sauvignon 2016&quot;,&quot;id&quot;:&quot;1020&quot;,&quot;price&quot;:&quot;198.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Chile&quot;,&quot;position&quot;:7,&quot;brand&quot;:&quot;Arboleda&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-arboleda-cabernet-sauvignon' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-arboleda-cabernet-sauvignon"
                     tabindex="-1">
                     <div class="product__photo">
                         
 
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/p/o/porto_taylo_s_tawny_10_anos.png"
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/a/r/arboleda_cabernet_sauvignon.png"
     width=""
     height=""
-    alt="Garrafa de Vinho do Porto Taylor’s Tawny 10 Anos" /></span>                    </div>
+    alt="Garrafa de Vinho Arboleda Cabernet Sauvignon 2016" /></span>                    </div>
                 </a>
                                 <div class="product__content">
                     <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Taylor\u2019s Tawny 10 Anos&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Recomenda\u00e7\u00e3o&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Taylor\u2019s Tawny 10 Anos&quot;,&quot;id&quot;:&quot;1118&quot;,&quot;price&quot;:&quot;458.00&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:0,&quot;brand&quot;:&quot;Taylor\u2019s&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-taylor-s-tawny-10-anos' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/vinho-do-porto-taylor-s-tawny-10-anos">
-                            Vinho do Porto Taylor’s Tawny 10 Anos                        </a>
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Arboleda Cabernet Sauvignon 2016&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Arboleda Cabernet Sauvignon 2016&quot;,&quot;id&quot;:&quot;1020&quot;,&quot;price&quot;:&quot;198.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Chile&quot;,&quot;position&quot;:7,&quot;brand&quot;:&quot;Arboleda&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-arboleda-cabernet-sauvignon' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-arboleda-cabernet-sauvignon">
+                            Vinho Arboleda Cabernet Sauvignon 2016                        </a>
                     </h2>
 
                     
 <div class="product__pais">
-    <span>Portugal</span>
+    <span>Chile</span>
 </div>
                     
-                    <form data-role="tocart-form" data-product-sku="1523"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvcmVjb21lbmRhYy1vP3RpcG89NjA4Ng%2C%2C/product/1118/" method="post">
+                    <form data-role="tocart-form" data-product-sku="73"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2/product/1020/" method="post">
                         <input type="hidden" name="product"
-                            value="1118">
+                            value="1020">
                                                 <input type="hidden"
                             name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZjbVZqYjIxbGJtUmhZeTF2UDNScGNHODlOakE0TmclMkMlMkMvcHJvZHVjdC8xMTE4Lw,,">
-                        <input name="form_key" type="hidden" value="7CAgdajGsgGpLMCJ" />                        <div class="product__buy">
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekxYQnZiblIxWVdSdmN6OXViM1JoUFRrd0xUazFKblYyWVQwMU5ETTIvcHJvZHVjdC8xMDIwLw,,">
+                        <input name="form_key" type="hidden" value="X2jc9IC6ecFGpMc6" />                        <div class="product__buy">
                             <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1118" data-price-box="product-id-1118">
-   <div class="price__regular"><br></div>
-    <div class="price__sale">
-        
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1020" data-price-box="product-id-1020">
+    <div class="price__regular">
+        De        <span class="old-price">
+            
 
 <span class="price-container price-final_price&#x20;tax&#x20;weee"
         >
-        <span  id="product-price-1118"                data-price-amount="458"
+        <span  id="old-price-1020"                data-price-amount="238"
+        data-price-type="oldPrice"
+        class="price-wrapper "
+    ><span class="price">R$238,00</span></span>
+        </span>
+        </span>
+        Por    </div>
+    <div class="price__sale">
+        <span class="special-price">
+            
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-1020"                data-price-amount="198"
         data-price-type="finalPrice"
         class="price-wrapper "
-    ><span class="price">R$458,00</span></span>
+    ><span class="price">R$198,00</span></span>
+        </span>
         </span>
     </div>
 
@@ -4697,7 +6151,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                             <div class="product__quantity">
                                 <div class="custom-number">
                                     <input type="number" name="qty"
-                                        id="qty1118" maxlength="12" min="1"
+                                        id="qty1020" maxlength="12" min="1"
                                         minlenght="1" value="1" title="Qtd"
                                         class="qty"
                                         data-validate="null" />
@@ -4707,7 +6161,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                             class="fas fa-shopping-cart"></i></button>
                                 </div>
                                 <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1118,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvcmVjb21lbmRhYy1vP3RpcG89NjA4Ng,,"}}'
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1020,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2"}}'
                                     class="action towishlist" data-action="add-to-wishlist"><i
                                         class="far fa-heart"></i></a>
                             </div>
@@ -4726,59 +6180,65 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                 
         <div class="col-md-4 mb-3">
             <div class="product box-product"
-                data-product-id="1117">
+                data-product-id="966">
                 
                 
                 
     <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/it.png" alt="Itália" title="Itália">
     </div>
 
                 
 
+        <div class="product__pontuacao">
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Robert Parker">RP</div>
+                    <div class="pontos">95</div>
+                </div>
+                    </div>
 
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Taylor\u2019s Fine Tawny&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Recomenda\u00e7\u00e3o&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Taylor\u2019s Fine Tawny&quot;,&quot;id&quot;:&quot;1117&quot;,&quot;price&quot;:&quot;125.00&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:1,&quot;brand&quot;:&quot;Taylor\u2019s&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-taylors-fine-tawny' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-do-porto-taylors-fine-tawny"
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Gaja Ca\u2019Marcanda Magari 2015&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Gaja Ca\u2019Marcanda Magari 2015&quot;,&quot;id&quot;:&quot;966&quot;,&quot;price&quot;:&quot;1136.09&quot;,&quot;category&quot;:&quot;Vinhos\/Vinho Tinto&quot;,&quot;position&quot;:8,&quot;brand&quot;:&quot;Gaja&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-gaja-camarcanda-magari' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-gaja-camarcanda-magari"
                     tabindex="-1">
                     <div class="product__photo">
                         
 
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/p/o/porto_taylors_fine_tawny.png"
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/g/a/gaja_camarcanda_magari.png"
     width=""
     height=""
-    alt="Garrafa de Vinho do Porto Taylor’s Fine Tawny" /></span>                    </div>
+    alt="Garrafa de Vinho Gaja Ca’Marcanda Magari 2015" /></span>                    </div>
                 </a>
                                 <div class="product__content">
                     <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Taylor\u2019s Fine Tawny&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Recomenda\u00e7\u00e3o&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Taylor\u2019s Fine Tawny&quot;,&quot;id&quot;:&quot;1117&quot;,&quot;price&quot;:&quot;125.00&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:1,&quot;brand&quot;:&quot;Taylor\u2019s&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-taylors-fine-tawny' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/vinho-do-porto-taylors-fine-tawny">
-                            Vinho do Porto Taylor’s Fine Tawny                        </a>
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Gaja Ca\u2019Marcanda Magari 2015&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Gaja Ca\u2019Marcanda Magari 2015&quot;,&quot;id&quot;:&quot;966&quot;,&quot;price&quot;:&quot;1136.09&quot;,&quot;category&quot;:&quot;Vinhos\/Vinho Tinto&quot;,&quot;position&quot;:8,&quot;brand&quot;:&quot;Gaja&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-gaja-camarcanda-magari' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-gaja-camarcanda-magari">
+                            Vinho Gaja Ca’Marcanda Magari 2015                        </a>
                     </h2>
 
                     
 <div class="product__pais">
-    <span>Portugal</span>
+    <span>Itália</span>
 </div>
                     
-                    <form data-role="tocart-form" data-product-sku="1522"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvcmVjb21lbmRhYy1vP3RpcG89NjA4Ng%2C%2C/product/1117/" method="post">
+                    <form data-role="tocart-form" data-product-sku="258"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2/product/966/" method="post">
                         <input type="hidden" name="product"
-                            value="1117">
+                            value="966">
                                                 <input type="hidden"
                             name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZjbVZqYjIxbGJtUmhZeTF2UDNScGNHODlOakE0TmclMkMlMkMvcHJvZHVjdC8xMTE3Lw,,">
-                        <input name="form_key" type="hidden" value="7CAgdajGsgGpLMCJ" />                        <div class="product__buy">
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekxYQnZiblIxWVdSdmN6OXViM1JoUFRrd0xUazFKblYyWVQwMU5ETTIvcHJvZHVjdC85NjYv">
+                        <input name="form_key" type="hidden" value="X2jc9IC6ecFGpMc6" />                        <div class="product__buy">
                             <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1117" data-price-box="product-id-1117">
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="966" data-price-box="product-id-966">
    <div class="price__regular"><br></div>
     <div class="price__sale">
         
 
 <span class="price-container price-final_price&#x20;tax&#x20;weee"
         >
-        <span  id="product-price-1117"                data-price-amount="125"
+        <span  id="product-price-966"                data-price-amount="1136.09"
         data-price-type="finalPrice"
         class="price-wrapper "
-    ><span class="price">R$125,00</span></span>
+    ><span class="price">R$1.136,09</span></span>
         </span>
     </div>
 
@@ -4786,7 +6246,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                             <div class="product__quantity">
                                 <div class="custom-number">
                                     <input type="number" name="qty"
-                                        id="qty1117" maxlength="12" min="1"
+                                        id="qty966" maxlength="12" min="1"
                                         minlenght="1" value="1" title="Qtd"
                                         class="qty"
                                         data-validate="null" />
@@ -4796,7 +6256,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                             class="fas fa-shopping-cart"></i></button>
                                 </div>
                                 <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1117,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvcmVjb21lbmRhYy1vP3RpcG89NjA4Ng,,"}}'
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":966,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2"}}'
                                     class="action towishlist" data-action="add-to-wishlist"><i
                                         class="far fa-heart"></i></a>
                             </div>
@@ -4815,59 +6275,82 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                 
         <div class="col-md-4 mb-3">
             <div class="product box-product"
-                data-product-id="1116">
+                data-product-id="908">
                 
-                
+                    <div class="product__discount">
+        <span>-14%</span>
+    </div>
+
                 
     <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/ar.png" alt="Argentina" title="Argentina">
     </div>
 
                 
 
+        <div class="product__pontuacao">
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Tim Atkin">TA</div>
+                    <div class="pontos">94</div>
+                </div>
+                    </div>
 
-                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Taylor\u2019s Fine Ruby&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Recomenda\u00e7\u00e3o&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Taylor\u2019s Fine Ruby&quot;,&quot;id&quot;:&quot;1116&quot;,&quot;price&quot;:&quot;125.00&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:2,&quot;brand&quot;:&quot;Taylor\u2019s&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-taylors-fine-ruby' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-do-porto-taylors-fine-ruby"
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Achaval Ferrer Quimera 2016&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Achaval Ferrer Quimera 2016&quot;,&quot;id&quot;:&quot;908&quot;,&quot;price&quot;:&quot;349.90&quot;,&quot;category&quot;:&quot;Vinhos\/Vinho Tinto&quot;,&quot;position&quot;:9,&quot;brand&quot;:&quot;Achaval Ferrer&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-achaval-ferrer-quimera' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-achaval-ferrer-quimera"
                     tabindex="-1">
                     <div class="product__photo">
                         
 
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/p/o/porto_taylors_fine_ruby.png"
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho_tinto_achaval_ferrer_quimera_2015.png"
     width=""
     height=""
-    alt="Garrafa de Vinho do Porto Taylor’s Fine Ruby" /></span>                    </div>
+    alt="Garrafa de Vinho Achaval Ferrer Quimera 2016" /></span>                    </div>
                 </a>
                                 <div class="product__content">
                     <h2 class="product__title">
-                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Taylor\u2019s Fine Ruby&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Recomenda\u00e7\u00e3o&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Taylor\u2019s Fine Ruby&quot;,&quot;id&quot;:&quot;1116&quot;,&quot;price&quot;:&quot;125.00&quot;,&quot;category&quot;:&quot;&quot;,&quot;position&quot;:2,&quot;brand&quot;:&quot;Taylor\u2019s&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-taylors-fine-ruby' }});"                            class="product__link"
-                            href="https://www.divinho.com.br/vinho-do-porto-taylors-fine-ruby">
-                            Vinho do Porto Taylor’s Fine Ruby                        </a>
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Achaval Ferrer Quimera 2016&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Achaval Ferrer Quimera 2016&quot;,&quot;id&quot;:&quot;908&quot;,&quot;price&quot;:&quot;349.90&quot;,&quot;category&quot;:&quot;Vinhos\/Vinho Tinto&quot;,&quot;position&quot;:9,&quot;brand&quot;:&quot;Achaval Ferrer&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-achaval-ferrer-quimera' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-achaval-ferrer-quimera">
+                            Vinho Achaval Ferrer Quimera 2016                        </a>
                     </h2>
 
                     
 <div class="product__pais">
-    <span>Portugal</span>
+    <span>Argentina</span>
 </div>
                     
-                    <form data-role="tocart-form" data-product-sku="1521"
-                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvcmVjb21lbmRhYy1vP3RpcG89NjA4Ng%2C%2C/product/1116/" method="post">
+                    <form data-role="tocart-form" data-product-sku="438"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2/product/908/" method="post">
                         <input type="hidden" name="product"
-                            value="1116">
+                            value="908">
                                                 <input type="hidden"
                             name="uenc"
-                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZjbVZqYjIxbGJtUmhZeTF2UDNScGNHODlOakE0TmclMkMlMkMvcHJvZHVjdC8xMTE2Lw,,">
-                        <input name="form_key" type="hidden" value="7CAgdajGsgGpLMCJ" />                        <div class="product__buy">
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekxYQnZiblIxWVdSdmN6OXViM1JoUFRrd0xUazFKblYyWVQwMU5ETTIvcHJvZHVjdC85MDgv">
+                        <input name="form_key" type="hidden" value="X2jc9IC6ecFGpMc6" />                        <div class="product__buy">
                             <div class="product__price">
-                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="1116" data-price-box="product-id-1116">
-   <div class="price__regular"><br></div>
-    <div class="price__sale">
-        
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="908" data-price-box="product-id-908">
+    <div class="price__regular">
+        De        <span class="old-price">
+            
 
 <span class="price-container price-final_price&#x20;tax&#x20;weee"
         >
-        <span  id="product-price-1116"                data-price-amount="125"
+        <span  id="old-price-908"                data-price-amount="409"
+        data-price-type="oldPrice"
+        class="price-wrapper "
+    ><span class="price">R$409,00</span></span>
+        </span>
+        </span>
+        Por    </div>
+    <div class="price__sale">
+        <span class="special-price">
+            
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-908"                data-price-amount="349.9"
         data-price-type="finalPrice"
         class="price-wrapper "
-    ><span class="price">R$125,00</span></span>
+    ><span class="price">R$349,90</span></span>
+        </span>
         </span>
     </div>
 
@@ -4875,7 +6358,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                             <div class="product__quantity">
                                 <div class="custom-number">
                                     <input type="number" name="qty"
-                                        id="qty1116" maxlength="12" min="1"
+                                        id="qty908" maxlength="12" min="1"
                                         minlenght="1" value="1" title="Qtd"
                                         class="qty"
                                         data-validate="null" />
@@ -4885,7 +6368,197 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                             class="fas fa-shopping-cart"></i></button>
                                 </div>
                                 <a href="#" class="product__wishlist"
-                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":1116,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvcmVjb21lbmRhYy1vP3RpcG89NjA4Ng,,"}}'
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":908,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2"}}'
+                                    class="action towishlist" data-action="add-to-wishlist"><i
+                                        class="far fa-heart"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="actions-primary">
+                                                        <button type="submit" title="Adicionar ao Carrinho"
+                                class="action tocart primary btn btn--product">
+                                <span>Adicionar ao Carrinho</span>
+                            </button>
+                        </div>
+                    </form>
+                                    </div>
+            </div>
+        </div>
+                                
+        <div class="col-md-4 mb-3">
+            <div class="product box-product"
+                data-product-id="899">
+                
+                
+                
+    <div class="product__bandeira">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/ar.png" alt="Argentina" title="Argentina">
+    </div>
+
+                
+
+        <div class="product__pontuacao">
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Tim Atkin">TA</div>
+                    <div class="pontos">93</div>
+                </div>
+                    </div>
+
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Catena Alta Cabernet Sauvignon 2017&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Catena Alta Cabernet Sauvignon 2017&quot;,&quot;id&quot;:&quot;899&quot;,&quot;price&quot;:&quot;431.03&quot;,&quot;category&quot;:&quot;Vinhos\/Vinho Tinto&quot;,&quot;position&quot;:10,&quot;brand&quot;:&quot;Catena Zapata&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-catena-alta-cabernet-sauvignon' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-catena-alta-cabernet-sauvignon"
+                    tabindex="-1">
+                    <div class="product__photo">
+                        
+
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/c/a/catena_alta_cabernet_sauvignon.png"
+    width=""
+    height=""
+    alt="Garrafa de Vinho Catena Alta Cabernet Sauvignon 2017" /></span>                    </div>
+                </a>
+                                <div class="product__content">
+                    <h2 class="product__title">
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Catena Alta Cabernet Sauvignon 2017&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Catena Alta Cabernet Sauvignon 2017&quot;,&quot;id&quot;:&quot;899&quot;,&quot;price&quot;:&quot;431.03&quot;,&quot;category&quot;:&quot;Vinhos\/Vinho Tinto&quot;,&quot;position&quot;:10,&quot;brand&quot;:&quot;Catena Zapata&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-catena-alta-cabernet-sauvignon' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-catena-alta-cabernet-sauvignon">
+                            Vinho Catena Alta Cabernet Sauvignon 2017                        </a>
+                    </h2>
+
+                    
+<div class="product__pais">
+    <span>Argentina</span>
+</div>
+                    
+                    <form data-role="tocart-form" data-product-sku="447"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2/product/899/" method="post">
+                        <input type="hidden" name="product"
+                            value="899">
+                                                <input type="hidden"
+                            name="uenc"
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekxYQnZiblIxWVdSdmN6OXViM1JoUFRrd0xUazFKblYyWVQwMU5ETTIvcHJvZHVjdC84OTkv">
+                        <input name="form_key" type="hidden" value="X2jc9IC6ecFGpMc6" />                        <div class="product__buy">
+                            <div class="product__price">
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="899" data-price-box="product-id-899">
+   <div class="price__regular"><br></div>
+    <div class="price__sale">
+        
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-899"                data-price-amount="431.03"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$431,03</span></span>
+        </span>
+    </div>
+
+</div>                            </div>
+                            <div class="product__quantity">
+                                <div class="custom-number">
+                                    <input type="number" name="qty"
+                                        id="qty899" maxlength="12" min="1"
+                                        minlenght="1" value="1" title="Qtd"
+                                        class="qty"
+                                        data-validate="null" />
+                                    <div class="custom-number-button custom-number-button--up">+</div>
+                                    <div class="custom-number-button custom-number-button--down">-</div>
+                                    <button class="action tocart btn btn--input" type="submit"><i
+                                            class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <a href="#" class="product__wishlist"
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":899,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2"}}'
+                                    class="action towishlist" data-action="add-to-wishlist"><i
+                                        class="far fa-heart"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="actions-primary">
+                                                        <button type="submit" title="Adicionar ao Carrinho"
+                                class="action tocart primary btn btn--product">
+                                <span>Adicionar ao Carrinho</span>
+                            </button>
+                        </div>
+                    </form>
+                                    </div>
+            </div>
+        </div>
+                                
+        <div class="col-md-4 mb-3">
+            <div class="product box-product"
+                data-product-id="887">
+                
+                
+                
+    <div class="product__bandeira">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/ar.png" alt="Argentina" title="Argentina">
+    </div>
+
+                
+
+        <div class="product__pontuacao">
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Tim Atkin">TA</div>
+                    <div class="pontos">92</div>
+                </div>
+                    </div>
+
+                <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho El Enemigo Bonarda 2017&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho El Enemigo Bonarda 2017&quot;,&quot;id&quot;:&quot;887&quot;,&quot;price&quot;:&quot;273.46&quot;,&quot;category&quot;:&quot;Vinhos\/Vinho Tinto&quot;,&quot;position&quot;:11,&quot;brand&quot;:&quot;Bodega Aleanna&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-el-enemigo-bonarda' }});"                    class="product__link" href="https://www.divinho.com.br/vinho-el-enemigo-bonarda"
+                    tabindex="-1">
+                    <div class="product__photo">
+                        
+
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/e/l/el_enemigo_bonarda.png"
+    width=""
+    height=""
+    alt="Garrafa de Vinho Tinto El Enemigo Bonarda 2017" /></span>                    </div>
+                </a>
+                                <div class="product__content">
+                    <h2 class="product__title">
+                        <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho El Enemigo Bonarda 2017&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho El Enemigo Bonarda 2017&quot;,&quot;id&quot;:&quot;887&quot;,&quot;price&quot;:&quot;273.46&quot;,&quot;category&quot;:&quot;Vinhos\/Vinho Tinto&quot;,&quot;position&quot;:11,&quot;brand&quot;:&quot;Bodega Aleanna&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-el-enemigo-bonarda' }});"                            class="product__link"
+                            href="https://www.divinho.com.br/vinho-el-enemigo-bonarda">
+                            Vinho El Enemigo Bonarda 2017                        </a>
+                    </h2>
+
+                    
+<div class="product__pais">
+    <span>Argentina</span>
+</div>
+                    
+                    <form data-role="tocart-form" data-product-sku="461"
+                        action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2/product/887/" method="post">
+                        <input type="hidden" name="product"
+                            value="887">
+                                                <input type="hidden"
+                            name="uenc"
+                            value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvY2hlY2tvdXQvY2FydC9hZGQvdWVuYy9hSFIwY0hNNkx5OTNkM2N1WkdsMmFXNW9ieTVqYjIwdVluSXZkbWx1YUc5ekxYQnZiblIxWVdSdmN6OXViM1JoUFRrd0xUazFKblYyWVQwMU5ETTIvcHJvZHVjdC84ODcv">
+                        <input name="form_key" type="hidden" value="X2jc9IC6ecFGpMc6" />                        <div class="product__buy">
+                            <div class="product__price">
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="887" data-price-box="product-id-887">
+   <div class="price__regular"><br></div>
+    <div class="price__sale">
+        
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-887"                data-price-amount="273.46"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$273,46</span></span>
+        </span>
+    </div>
+
+</div>                            </div>
+                            <div class="product__quantity">
+                                <div class="custom-number">
+                                    <input type="number" name="qty"
+                                        id="qty887" maxlength="12" min="1"
+                                        minlenght="1" value="1" title="Qtd"
+                                        class="qty"
+                                        data-validate="null" />
+                                    <div class="custom-number-button custom-number-button--up">+</div>
+                                    <div class="custom-number-button custom-number-button--down">-</div>
+                                    <button class="action tocart btn btn--input" type="submit"><i
+                                            class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <a href="#" class="product__wishlist"
+                                    data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":887,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG9zLXBvbnR1YWRvcz9ub3RhPTkwLTk1JnV2YT01NDM2"}}'
                                     class="action towishlist" data-action="add-to-wishlist"><i
                                         class="far fa-heart"></i></a>
                             </div>
@@ -4906,6 +6579,35 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 
     
         
+                <nav class="pages nav-pagination" aria-label="Page navigation">
+            <ul class="items pages-items pagination justify-content-center" aria-labelledby="paging-label" style="margin: 0;">
+            
+            
+            
+                                                <li class="page-item item current active">
+                        <span class="page-link">1 <span class="sr-only">(current)</span></span>
+                    </li>
+                                                                <li class="page-item item">
+                        <a href="https://www.divinho.com.br/vinhos-pontuados?nota=90-95&amp;p=2&amp;uva=5436" class="page page-link">
+                            2                        </a>
+                    </li>
+                                                                <li class="page-item item">
+                        <a href="https://www.divinho.com.br/vinhos-pontuados?nota=90-95&amp;p=3&amp;uva=5436" class="page page-link">
+                            3                        </a>
+                    </li>
+                            
+            
+            
+                            <li class="page-item item pages-item-next">
+                                        <a class="page-link action  next"
+                       href="https://www.divinho.com.br/vinhos-pontuados?nota=90-95&amp;p=2&amp;uva=5436"
+                       title="Próximo"
+                       aria-label="Próximo">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                        </ul>
+        </nav>
         
     
     
@@ -4925,21 +6627,28 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
   }
 }
         </script>
-<script type="text/x-magento-init">
-    {
-        "body": {
-            "requireCookie": {"noCookieUrl":"https:\/\/www.divinho.com.br\/cookie\/index\/noCookies\/","triggers":[".action.tocompare"],"isRedirectCmsPage":true}        }
-    }
-</script>
 </div></div></div></main><div class="page-bottom"><div class="container"><div class="category-view row align-items-center">
-<div class="category-image-wrapper col-lg  category-no-image">
-    <div class="category-image category-image-default">
-                    <div class="btn btn-outline-primary">Recomenda&#xE7;&#xE3;o</div>
+<div class="category-image-wrapper col-lg ">
+    <div class="category-image">
+                    <img src="https://images.divinho.com.br/catalog/category/Vinhos_Pontuados_3.jpg" alt="Vinhos&#x20;Pontuados" title="Vinhos&#x20;Pontuados">
             </div>
 </div>
 
 
-<div class="category-description-wrapper col-lg-8"><div class="category-description">
+<div class="category-description-wrapper col-lg-8"><div class="category-description">            <div class="category__title">
+            <span>Vinhos&#x20;Pontuados</span>
+        </div>
+        <div class="category-description-text">
+        <p><span style="font-weight: 400;">Os Vinhos Pontuados são rótulos que se destacam por sua alta qualidade, conquistando ótimas pontuações da crítica especializada!</span></p>
+<p><span style="font-weight: 400;">Os sistemas de avaliações costumam basear-se em uma escala de 100 pontos.</span></p>
+<p><span style="font-weight: 400;">Vinhos de 80 a 89 pontos são classificados como muito bons e de 90 a 95 pontos como excelentes.</span></p>
+<p><span style="font-weight: 400;">Já os rótulos que conquistam entre 96 e 100 são realmente excepcionais, figurando entre os melhores vinhos do mundo!</span></p>
+<p><span style="font-weight: 400;">Robert Parker, James Suckling e Tim Atkin formam a tríade de críticos mais renomados do mundo. </span></p>
+<p><span style="font-weight: 400;">Antonio Galloni e Luca Maroni são outros dois cítricos importantes, sendo que Maroni destaca-se entre seus companheiros pelo seu sistema único de pontuação, que vai somente até 99 pontos.</span></p>
+<p><span style="font-weight: 400;">Na América Latina, o Guia Descorchados é a referência mais importante em Vinhos Pontuados.</span></p>
+<p><span style="font-weight: 400;">Já, nos Estados Unidos, as publicações mais expressivas são a Wine Enthusiast e a Wine Spectator.</span></p>
+<p><span style="font-weight: 400;">Isso, sem deixar de mencionar a revista inglesa Decanter, conhecida como "Bíblia do Vinho” e a plataforma digital Cellar Tracker, entre outros.</span></p>
+<p><span style="font-weight: 400;">A DiVinho oferece a melhor seleção de Vinhos Pontuados para você!</span></p>    </div>
 </div></div></div></div></div><footer class="site-footer d-flex flex-column">
 
 
@@ -5132,7 +6841,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                     </div>
                 <div class="wbcom-fields">
                     <div class="wbcom-fields-contents">
-                        <input name="form_key" type="hidden" value="7CAgdajGsgGpLMCJ">
+                        <input name="form_key" type="hidden" value="X2jc9IC6ecFGpMc6">
                         <input type="text" placeholder="Nome" name="name" required style="background-color: #fff !important;">
                         <input type="email" placeholder="E-mail" name="email" required style="background-color: #fff !important;">
                         <input type="hidden" name="message" value="Olá, gostaria de fazer um pedido.">
@@ -5161,8 +6870,6 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     </script>
 
 
-<!-- BEGIN GTAG CATEGORY TAG -->
-<!-- END GTAG CATEGORY TAG -->
     <script>
         require(['jquery','weltpixel_persistentLayer', 'weltpixel_gtm', 'Magento_Customer/js/customer-data'],
             function ($, wpPersDl, wpgtm, customerData) {
@@ -5186,5 +6893,5 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 wpgtm.trackPromotion(wpGtmOptions);
             });
     </script>
-    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-15ce119d71e6a8d24c8","applicationID":"798446581","transactionName":"blMGbUdSWRFQBhBcC1cZJVpBWlgMHhUFUgFmVQVaXVY=","queueTime":0,"applicationTime":95,"atts":"QhQFGw9ISh8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-15ce119d71e6a8d24c8","applicationID":"798446581","transactionName":"blMGbUdSWRFQBhBcC1cZJVpBWlgMHhUFUgFmVQVaXVY=","queueTime":0,"applicationTime":70,"atts":"QhQFGw9ISh8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>

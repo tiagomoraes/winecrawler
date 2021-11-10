@@ -20,6 +20,8 @@ seeds=[('divinho', 'https://www.divinho.com.br'),
 ('vivavinho', 'https://www.vivavinho.com.br'),
 ('wine', 'https://www.wine.com.br')]
 
+seeds=[('viavini', 'https://www.viavini.com.br')]
+
 def process_url(url, root):
     if (url.startswith('/')):
         return f'{root}{url}'
@@ -100,7 +102,7 @@ def bfs_crawl(seed):
 
             new_urls = save_and_get_page_urls(current, seed, robots, count)
             edge.extend(new_urls)
-            sleep(0.01)
+            sleep(0.1)
 
             print(f'Entered {current}')
     
@@ -112,35 +114,46 @@ The baisc heuristic used here, prioritizes the wanted
 terms and discards non wanted terms on the text or href
 '''
 
-WANTED_TERMS = ['vinho', 'produto', 'product', 'tinto', 'branco', 
-'espumante', 'rose', 'rosado', 'cabernet', 'malbec', 'shiraz', 'primitivo', 'merlot', 
-'garnacha', 'pinot', 'carmenere', 'brut', 'mosacatel', 'tempranillo', 'reserva',
-'chardonnay', 'riesling', 'seco']
+WANTED_PATHS = ['/p/', '/produto', '/product', '/prod', 
+'/item', '/vinho']
 
-NOT_WANTED_TERMS = ['kits?', 'saca', 'ta(ç|c)a', 'contato', 'sobre', 'cart', 
-'carrinho', 'termo', 'pol(í|i)tica', 'acess(ó|o)rios', 'blog', 'central']
+WANTED_TERMS = ['tinto', 'branco', 'espumante', 'rose', 
+'rosado', 'cabernet', 'malbec', 'shiraz', 'primitivo', 
+'merlot', 'garnacha', 'pinot', 'carmenere', 'brut', 
+'mosacatel', 'tempranillo', 'reserva','chardonnay', 
+'riesling', 'seco', 'ver', 'mais']
+
+NOT_WANTED_PATHS = ['/kits?', '/carrinho', '/cart', 
+'/sacola', '/add/']
+
+NOT_WANTED_TERMS = ['kits?', 'saca', 'ta(ç|c)a', 
+'contato', 'sobre', 'carrinho', 'termo', 'sacola',
+'pol(í|i)tica', 'acess(ó|o)rios', 'blog', 'central']
 
 def classify_anchor(anchor):
-    for term in NOT_WANTED_TERMS:
-        if anchor.text and re.match(f'.*{term}.*', anchor.text.lower()):
-            return -1
+    weight = 0
 
+    for term in WANTED_PATHS:
         if anchor['href'] and re.match(f'.*{term}.*', anchor['href'].lower()):
-            return -1
-
+            weight = weight + 20
+    
     for term in WANTED_TERMS:
         if anchor.text and re.match(f'.*{term}.*', anchor.text.lower()):
-            return 1
-        
+            weight = weight + 10
+
+    for term in NOT_WANTED_PATHS:
         if anchor['href'] and re.match(f'.*{term}.*', anchor['href'].lower()):
-            return 1
+            weight = weight - 20
+
+    for term in NOT_WANTED_TERMS:
+        if anchor.text and re.match(f'.*{term}.*', anchor.text.lower()):
+            weight = weight - 10
         
-    return 0
+    return weight
 
 
 def save_and_get_page_urls_with_heuristic(start, seed, robots, count):
-    urls = [set(), set()]
-    urls[0].add(start)
+    urls = set()
 
     # Check headers if response is html text
     try:
@@ -174,35 +187,32 @@ def save_and_get_page_urls_with_heuristic(start, seed, robots, count):
 
         # Check if url is usable
         if (check_url(processed, seed[1], robots)):
-            if classification == 1:
-                urls[0].add(processed)
-            elif classification == 0:
-                urls[1].add(processed)
+            urls.add((processed, classification))
 
     return urls
 
+# take second element for sort
+def takeSecond(elem):
+    return elem[1]
 
 def heuristic_crawl(seed):
     robots = Robots.fetch(f'{seed[1]}/robots.txt')
 
     visited = set()
-    edge = [[seed[1]], []]
+    edge = [(seed[1], 0)]
     count = 0
 
-    while ((len(edge[0]) > 0 or len(edge[1]) > 0) and len(visited) < 1000):
-        if (len(edge[0]) > 0):
-            current = edge[0].pop(0)
-        else:
-            current = edge[1].pop(0)
+    while (len(edge) > 0 and len(visited) < 1000):
+        edge.sort(key=takeSecond, reverse=True)
+        current = edge.pop(0)
 
-        if (not current in visited):
-            visited.add(current)
+        if (not current[0] in visited):
+            visited.add(current[0])
             count += 1
 
-            new_urls = save_and_get_page_urls_with_heuristic(current, seed, robots, count)
-            edge[0].extend(new_urls[0])
-            edge[1].extend(new_urls[1])
-            sleep(0.01)
+            new_urls = save_and_get_page_urls_with_heuristic(current[0], seed, robots, count)
+            edge.extend(new_urls)
+            sleep(0.1)
 
             print(f'Entered {current}')
     
@@ -210,8 +220,8 @@ def heuristic_crawl(seed):
 
 
 def main():
-    pool = Pool(1)
-    pool.map(bfs_crawl, seeds)
+    pool = Pool(10)
+    pool.map(heuristic_crawl, seeds)
     pool.close()
     pool.join()
 

@@ -9,14 +9,13 @@
     };
 </script>
         <meta charset="utf-8"/><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-15ce119d71e6a8d24c8",applicationID:"798446581"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1211.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
-<meta name="title" content="Vinho Gran Enemigo Single Vineyard Gualtallary 2014 - DiVinho"/>
-<meta name="description" content="Compre Vinho Gran Enemigo Single Vineyard Gualtallary 2014 com o melhor preço do
-mercado. Pagamento em até 3x s/ juros e entregas para todo Brasil."/>
-<meta name="keywords" content="Vinho Gran Enemigo Single Vineyard Gualtallary 2014"/>
+<meta name="title" content="Vinho do Porto Dow&#039;s Vintage 2016 - DiVinho "/>
+<meta name="description" content="Compre Vinho do Porto Dow&#039;s Vintage 2016 com o melhor preço do mercado. Pagamento em até 3x s/ juros e entregas para todo Brasil. "/>
+<meta name="keywords" content="Vinho do Porto Dow&#039;s Vintage 2016"/>
 <meta name="robots" content="INDEX,FOLLOW"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta name="format-detection" content="telephone=no"/>
-<title>Vinho Gran Enemigo Single Vineyard Gualtallary 2014 - DiVinho</title>
+<title>Vinho do Porto Dow&#039;s Vintage 2016 - DiVinho</title>
 <link  rel="stylesheet" type="text/css"  media="all" href="https://static.divinho.com.br/static/version1636382917/_cache/merged/5d41a869337cd62abea0146ce00be5f9.min.css" />
 <script  type="text/javascript"  src="https://static.divinho.com.br/static/version1636382917/_cache/merged/38cbaaf652093663e521d41aea6fcd0d.min.js"></script>
 <link  rel="icon" type="image/x-icon" href="https://images.divinho.com.br/favicon/default/favicon.ico" />
@@ -24,23 +23,23 @@ mercado. Pagamento em até 3x s/ juros e entregas para todo Brasil."/>
 <!-- Product Structured Data by Mageplaza SEO--><script type="application/ld+json">{
     "@context": "http:\/\/schema.org\/",
     "@type": "Product",
-    "name": "Vinho Gran Enemigo Single Vineyard Gualtallary 2014",
-    "description": "O Vinho Gran Enemigo Single Vineyard Gualtallary \u00e9 o vinho \u00edcone da Bodega Aleanna, o projeto de Alejandro Vigil, en\u00f3logo-chefe da vin\u00edcola Catena Zapata, com Adrianna Catena,\u00a0filha mais nova de Nicol\u00e1s Catena.\u00a0Produzido com um corte das uvas Cabernet Franc e Malbec, cultivadas a 1.470 metros de altitude em um Single Vineyard em Gualtallary, na regi\u00e3o vitivin\u00edcola de Mendoza. De colora\u00e7\u00e3o rubi intensa, revela um bouquet arom\u00e1tico complexo, onde destacam-se aromas de frutas negras e vermelhas maduras, notas de especiarias, como pimenta-preta, nuances de chocolate e baunilha, al\u00e9m de um toque de eucalipto. Em boca, apresenta grande estrutura, taninos refinados e um final longo e persistente. Esse \u00e9 um r\u00f3tulo que pode ser apreciado agora, mas que apresenta um excelente potencial de guarda, podendo envelhecer por mais de um d\u00e9cada. \u00a0",
-    "sku": "9382",
-    "url": "https:\/\/www.divinho.com.br\/vinho-gran-enemigo-single-vineyard-gualtallary",
-    "image": "https:\/\/www.divinho.com.br\/pub\/media\/catalog\/product\/g\/r\/gran_enemigo_single_vineyard_gualtallary_2.png",
+    "name": "Vinho do Porto Dow's Vintage 2016",
+    "description": "O Vinho do Porto Dow\u2019s Vintage \u00e9 assinado pela Dow\u2019s, uma das mais tradicionais casas de Vinhos do Porto e que hoje faz parte do grupo Symington Family Estates. Elaborado com um corte das uvas Touriga Nacional, Sous\u00e3o e Touriga Franca, oriundas de vinhedos na\u00a0regi\u00e3o vitivin\u00edcola do Douro, em Portugal. De colora\u00e7\u00e3o p\u00farpura, quase preta. No nariz, revela um bouquet arom\u00e1tico intenso, onde destacam-se aromas de frutas negras maduras, como ameixa e amora, notas florais, como de violeta, nuances de especiarias doces, como canela, al\u00e9m de toques de folhas de ch\u00e1. Esse \u00e9 um r\u00f3tulo que apresenta um\u00a0excepcional potencial de guarda, podendo envelhecer na garrafa por muitas d\u00e9cadas!\u00a0",
+    "sku": "7639",
+    "url": "https:\/\/www.divinho.com.br\/vinho-do-porto-dows-vintage-2016",
+    "image": "https:\/\/www.divinho.com.br\/pub\/media\/catalog\/product\/d\/o\/dows_vintage_2016_.png",
     "offers": {
         "@type": "Offer",
         "priceCurrency": "BRL",
-        "price": 827.81,
-        "itemOffered": 100,
+        "price": 1998,
+        "itemOffered": 3,
         "availability": "http:\/\/schema.org\/InStock",
-        "url": "https:\/\/www.divinho.com.br\/vinho-gran-enemigo-single-vineyard-gualtallary"
+        "url": "https:\/\/www.divinho.com.br\/vinho-do-porto-dows-vintage-2016"
     },
-    "gtin8": "Vinho Gran Enemigo Single Vineyard Gualtallary 2014",
+    "gtin8": "Vinho do Porto Dow's Vintage 2016",
     "brand": {
         "@type": "Thing",
-        "name": "Bodega Aleanna"
+        "name": "Symington Family Estates"
     }
 }</script>            <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -56,7 +55,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         };
 
         window.dataLayer = window.dataLayer || [];
-                var dlObjects = [{"google_tag_params":{"ecomm_pagetype":"product","ecomm_prodid":"378","ecomm_totalvalue":"827.81","ecomm_category":"Recomenda\u00e7\u00e3o"},"ecommerce":{"detail":{"products":[{"name":"Vinho Gran Enemigo Single Vineyard Gualtallary 2014","id":"378","price":"827.81","brand":"Bodega Aleanna","category":"Recomenda\u00e7\u00e3o"}]},"currencyCode":"BRL","impressions":[{"name":"Vinho El Enemigo S\u00e9millon 2017","id":"200","price":"259.76","brand":"Bodega Aleanna","category":"Pa\u00edses\/Argentina","list":"Related Products From Vinho Gran Enemigo Single Vineyard Gualtallary 2014","position":1},{"name":"Vinho Gran Enemigo Single Vineyard Agrelo 2015","id":"211","price":"798.69","brand":"Bodega Aleanna","category":"Pa\u00edses\/Argentina","list":"Related Products From Vinho Gran Enemigo Single Vineyard Gualtallary 2014","position":2},{"name":"Vinho Gran Enemigo Single Vineyard Chacayes 2014","id":"212","price":"796.41","brand":"Bodega Aleanna","category":"Pa\u00edses\/Argentina","list":"Related Products From Vinho Gran Enemigo Single Vineyard Gualtallary 2014","position":3},{"name":"Vinho Gran Enemigo 2017","id":"427","price":"773.57","brand":"Bodega Aleanna","category":"Recomenda\u00e7\u00e3o","list":"Related Products From Vinho Gran Enemigo Single Vineyard Gualtallary 2014","position":4}]},"event":"impression","eventCategory":"Ecommerce","eventAction":"Impression","eventLabel":"product Vinho Gran Enemigo 2017"}];
+                var dlObjects = [{"google_tag_params":{"ecomm_pagetype":"product","ecomm_prodid":"418","ecomm_totalvalue":"1998.00","ecomm_category":"Pa\u00edses\/Portugal"},"ecommerce":{"detail":{"products":[{"name":"Vinho do Porto Dow's Vintage 2016","id":"418","price":"1998.00","brand":"Symington Family Estates","category":"Pa\u00edses\/Portugal"}]},"currencyCode":"BRL","impressions":[{"name":"Vinho Chryseia 2016","id":"275","price":"1310.22","brand":"Symington Family Estates","category":"Vinhos\/Vinho Tinto","list":"Related Products From Vinho do Porto Dow's Vintage 2016","position":1},{"name":"Vinho do Porto Dow's 30 Anos","id":"618","price":"1637.00","brand":"Symington Family Estates","category":"Pa\u00edses\/Portugal","list":"Related Products From Vinho do Porto Dow's Vintage 2016","position":2},{"name":"Vinho do Porto Dow's 20 Anos","id":"619","price":"852.00","brand":"Symington Family Estates","category":"Pa\u00edses\/Portugal","list":"Related Products From Vinho do Porto Dow's Vintage 2016","position":3},{"name":"Vinho do Porto Dow's 10 Anos","id":"620","price":"417.00","brand":"Symington Family Estates","category":"Pa\u00edses\/Portugal","list":"Related Products From Vinho do Porto Dow's Vintage 2016","position":4}]},"event":"impression","eventCategory":"Ecommerce","eventAction":"Impression","eventLabel":"product Vinho do Porto Dow's 10 Anos"}];
         for (var i in dlObjects) {
             window.dataLayer.push(dlObjects[i]);
         }
@@ -77,30 +76,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="text/javascript" src="https://chimpstatic.com/mcjs-connected/js/users/1255cf89de1ff1692e3832377/54a041db81224b7f42e4ef954.js" defer></script>
 
 <!-- This site is optimized with the Yoast SEO for Magento plugin 2.0.0 - https://yoast.com/magento/plugins/seo/ -->
-    <link rel="canonical" href="https://www.divinho.com.br/vinho-gran-enemigo-single-vineyard-gualtallary" />
+    <link rel="canonical" href="https://www.divinho.com.br/vinho-do-porto-dows-vintage-2016" />
 
     <!-- YoastSEO OpenGraph -->
-    <meta property="og:url" content="https://www.divinho.com.br/vinho-gran-enemigo-single-vineyard-gualtallary"/>
+    <meta property="og:url" content="https://www.divinho.com.br/vinho-do-porto-dows-vintage-2016"/>
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:type" content="product"/>
     <meta property="og:site_name" content="F R MOREIRA COMÉRCIO E DISTRIBUIÇÃO DE ALIMENTOS E BEBIDAS" />
-    <meta property="og:title" content="Vinho Gran Enemigo Single Vineyard Gualtallary 2014 - DiVinho"/>
-    <meta property="og:description" content="Compre Vinho Gran Enemigo Single Vineyard Gualtallary 2014 com o melhor preço do
-mercado. Pagamento em até 3x s/ juros e entregas para todo Brasil."/>
-            <meta property="og:image" content="https://images.divinho.com.br/catalog/product/cache/b7d320e39333d0f7a197a4ddb51399f4/g/r/gran_enemigo_single_vineyard_gualtallary_2.png"/>
+    <meta property="og:title" content="Vinho do Porto Dow's Vintage 2016 - DiVinho "/>
+    <meta property="og:description" content="Compre Vinho do Porto Dow's Vintage 2016 com o melhor preço do mercado. Pagamento em até 3x s/ juros e entregas para todo Brasil. "/>
+            <meta property="og:image" content="https://images.divinho.com.br/catalog/product/cache/b7d320e39333d0f7a197a4ddb51399f4/d/o/dows_vintage_2016_.png"/>
                         
     <!-- YoastSEO Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-            <meta name="twitter:title" content="Vinho Gran Enemigo Single Vineyard Gualtallary 2014 - DiVinho"/>
-    <meta name="twitter:description" content="Compre Vinho Gran Enemigo Single Vineyard Gualtallary 2014 com o melhor preço do
-mercado. Pagamento em até 3x s/ juros e entregas para todo Brasil."/>
-            <meta name="twitter:image" content="https://images.divinho.com.br/catalog/product/cache/b7d320e39333d0f7a197a4ddb51399f4/g/r/gran_enemigo_single_vineyard_gualtallary_2.png"/>
+            <meta name="twitter:title" content="Vinho do Porto Dow's Vintage 2016 - DiVinho "/>
+    <meta name="twitter:description" content="Compre Vinho do Porto Dow's Vintage 2016 com o melhor preço do mercado. Pagamento em até 3x s/ juros e entregas para todo Brasil. "/>
+            <meta name="twitter:image" content="https://images.divinho.com.br/catalog/product/cache/b7d320e39333d0f7a197a4ddb51399f4/d/o/dows_vintage_2016_.png"/>
     
 
     </head>
     <body data-container="body"
           data-mage-init='{"loaderAjax": {}, "loader": { "icon": "https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/loader-2.gif"}}'
-        class="catalog-product-view product-vinho-gran-enemigo-single-vineyard-gualtallary page-layout-1column">
+        class="catalog-product-view product-vinho-do-porto-dows-vintage-2016 page-layout-1column">
         <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MM4CCWJ"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -233,7 +230,7 @@ require([
 
 </script>
 <li class="nav-item authorization-link" data-label="ou">
-    <a class="nav-link" href="https://www.divinho.com.br/customer/account/login/referer/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZ3Jhbi1lbmVtaWdvLXNpbmdsZS12aW5leWFyZC1ndWFsdGFsbGFyeQ%2C%2C/">
+    <a class="nav-link" href="https://www.divinho.com.br/customer/account/login/referer/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZG8tcG9ydG8tZG93cy12aW50YWdlLTIwMTY%2C/">
         Entrar    </a>
 </li>
 
@@ -280,7 +277,7 @@ require([
             </div>
                     </div>
         <script>
-        window.checkout = {"shoppingCartUrl":"https:\/\/www.divinho.com.br\/checkout\/cart\/","checkoutUrl":"https:\/\/www.divinho.com.br\/checkout\/","updateItemQtyUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/www.divinho.com.br\/","minicartMaxItemsVisible":5,"websiteId":"1","maxItemsToDisplay":10,"storeId":"1","customerLoginUrl":"https:\/\/www.divinho.com.br\/customer\/account\/login\/referer\/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZ3Jhbi1lbmVtaWdvLXNpbmdsZS12aW5leWFyZC1ndWFsdGFsbGFyeQ%2C%2C\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.divinho.com.br\/captcha\/refresh\/","isRequired":false,"timestamp":1636430681}}};
+        window.checkout = {"shoppingCartUrl":"https:\/\/www.divinho.com.br\/checkout\/cart\/","checkoutUrl":"https:\/\/www.divinho.com.br\/checkout\/","updateItemQtyUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/www.divinho.com.br\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/www.divinho.com.br\/","minicartMaxItemsVisible":5,"websiteId":"1","maxItemsToDisplay":10,"storeId":"1","customerLoginUrl":"https:\/\/www.divinho.com.br\/customer\/account\/login\/referer\/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZG8tcG9ydG8tZG93cy12aW50YWdlLTIwMTY%2C\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.divinho.com.br\/captcha\/refresh\/","isRequired":false,"timestamp":1636510681}}};
     </script>
     <script type="text/x-magento-init">
     {
@@ -294,9 +291,9 @@ require([
 </div>
 
 <div class="collapse d-lg-block" id="navbarSearch">
-        <form id="search-form6189f359e0549" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
+        <form id="search-form618b2bd99f80b" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
                 <input data-mage-init='{"quickSearch":{
-                                        "formSelector":"#search-form6189f359e0549",
+                                        "formSelector":"#search-form618b2bd99f80b",
                                         "url":"https://www.divinho.com.br/search/ajax/suggest/",
                                         "destinationSelector":"#search_autocomplete",
                                         "responseFieldElements":"ul li",
@@ -371,9 +368,9 @@ require([
 
 </div></div><div class="col-lg position-static col-nav"><div class="d-lg-none">
 <div class="collapse d-lg-block" id="navbarSearch">
-        <form id="search-form6189f359e1cec" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
+        <form id="search-form618b2bd9a12e9" class="search-form d-lg-block" action="https://www.divinho.com.br/catalogsearch/result/" method="get">
                 <input data-mage-init='{"quickSearch":{
-                                        "formSelector":"#search-form6189f359e1cec",
+                                        "formSelector":"#search-form618b2bd9a12e9",
                                         "url":"https://www.divinho.com.br/search/ajax/suggest/",
                                         "destinationSelector":"#search_autocomplete",
                                         "responseFieldElements":"ul li",
@@ -415,11 +412,11 @@ require([
                                                                     <div class="mx-megamenu__sidebar mx-megamenu__sidebar--left">
                                         <div class="widget widget-categories-list block" data-collapse="1">
     <div class="megamenu__links">
-                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#vinhos6189f247cdd14" aria-expanded="true" aria-controls="vinhos6189f247cdd14">
+                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#vinhos618b0a68a8e72" aria-expanded="true" aria-controls="vinhos618b0a68a8e72">
             <i class="icon icon-vinhos"></i>
             <span>Tipo</span>
         </div>
-                <div id="vinhos6189f247cdd14" class="block-content catalog-category collapse-sm collapse">
+                <div id="vinhos618b0a68a8e72" class="block-content catalog-category collapse-sm collapse">
             <ul>
                                 <li class="category-item">
                     <a href="https://www.divinho.com.br/vinhos/tinto">
@@ -487,11 +484,11 @@ require([
 </div>
 <div class="widget widget-list-range">
     <div class="megamenu__links">
-        <div class="megamenu__title collapsed" data-toggle="collapse" data-target="#price-range6189f247d2432" aria-expanded="true" aria-controls="price-range6189f247d2432">
+        <div class="megamenu__title collapsed" data-toggle="collapse" data-target="#price-range618b0a68bd448" aria-expanded="true" aria-controls="price-range618b0a68bd448">
             <i class="icon icon icon-dollar-tag"></i>
             <span>Valor</span>
         </div>
-        <ul id="price-range6189f247d2432" class="block-content collapse-sm collapse">
+        <ul id="price-range618b0a68bd448" class="block-content collapse-sm collapse">
             <li><a href="https://www.divinho.com.br/vinhos?price=-59.9">Até R$59,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=59.9-99.9">R$59,90 a R$99,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=99.9-149.9">R$99,90 a R$149,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=149.9-249.9">R$149,90 a R$249,90</a></li><li><a href="https://www.divinho.com.br/vinhos?price=249.91-500">R$249,91 a R$500,00</a></li><li><a href="https://www.divinho.com.br/vinhos?price=500-">Acima de R$500,00</a></li>        </ul>
     </div>
 </div>
@@ -509,12 +506,12 @@ require([
     class="widget widget-list_mode widget-list_mode--uva">
     <div class="megamenu__links">
         <div class="block-title megamenu__title collapsed"
-            data-toggle="collapse" data-target="#uva6189f247b8902" aria-expanded="true"
-            aria-controls="uva6189f247b8902">
+            data-toggle="collapse" data-target="#uva618b0a682f5fe" aria-expanded="true"
+            aria-controls="uva618b0a682f5fe">
             <i class="icon icon-uva"></i>
             <span>Uvas</span>
         </div>
-        <div id="uva6189f247b8902"
+        <div id="uva618b0a682f5fe"
             class="block-content catalog-category collapse-sm collapse">
             <ul>
                 
@@ -564,11 +561,11 @@ require([
 </div>
  <div class="widget widget-categories-list block" data-collapse="1">
     <div class="megamenu__links">
-                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#pais6189f247c33b5" aria-expanded="true" aria-controls="pais6189f247c33b5">
+                <div class="block-title megamenu__title collapsed" data-toggle="collapse" data-target="#pais618b0a68878c3" aria-expanded="true" aria-controls="pais618b0a68878c3">
             <i class="icon icon-pais"></i>
             <span>Pa&iacute;ses</span>
         </div>
-                <div id="pais6189f247c33b5" class="block-content catalog-category collapse-sm collapse">
+                <div id="pais618b0a68878c3" class="block-content catalog-category collapse-sm collapse">
             <ul>
                                 <li class="category-item">
                     <a href="https://www.divinho.com.br/pais/austria">
@@ -3565,11 +3562,11 @@ require([
                             </div>
                 <div class="megamenu__product-image">
             <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">
-                <img src="https://images.divinho.com.br/catalog/product/cache/fa01b5f6b2a94beaaa3488ed5c6cafe6/c/a/casanova_di_neri_rosso_di_montalcino.png" alt="Vinho Casanova di Neri Rosso di Montalcino 2019" title="Vinho Casanova di Neri Rosso di Montalcino 2019">
+                <img src="https://images.divinho.com.br/catalog/product/cache/fa01b5f6b2a94beaaa3488ed5c6cafe6/c/a/casanova_di_neri_rosso_di_montalcino.png" alt="Vinho Casanova di Neri Rosso di Montalcino 2018" title="Vinho Casanova di Neri Rosso di Montalcino 2018">
             </a>
         </div>
         <div class="megamenu__product-name text-center mt-2">
-            <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">Vinho Casanova di Neri Rosso di Montalcino 2019</a>
+            <a href="https://www.divinho.com.br/vinho-casanova-di-neri-rosso-di-montalcino">Vinho Casanova di Neri Rosso di Montalcino 2018</a>
             <div class="text-primary price">
                 R$366,00            </div>
         </div>
@@ -3879,12 +3876,12 @@ require([
     class="widget widget-list_mode widget-list_mode--criticos">
     <div class="megamenu__links">
         <div class="block-title megamenu__title"
-             data-target="#criticos6189f249ba2f8" aria-expanded="true"
-            aria-controls="criticos6189f249ba2f8">
+             data-target="#criticos618b0a6f8879c" aria-expanded="true"
+            aria-controls="criticos618b0a6f8879c">
             <i class="icon icon-criticos"></i>
             <span>Críticos</span>
         </div>
-        <div id="criticos6189f249ba2f8"
+        <div id="criticos618b0a6f8879c"
             class="block-content catalog-category">
             <ul>
                                 <li>
@@ -4186,12 +4183,12 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     class="widget widget-list_mode widget-list_mode--vinicolas">
     <div class="megamenu__links">
         <div class="block-title megamenu__title"
-             data-target="#vinicolas6189f249cb53f" aria-expanded="true"
-            aria-controls="vinicolas6189f249cb53f">
+             data-target="#vinicolas618b0a6fd10d5" aria-expanded="true"
+            aria-controls="vinicolas618b0a6fd10d5">
             <i class="icon icon-vinicolas"></i>
             <span>Vinícolas</span>
         </div>
-        <div id="vinicolas6189f249cb53f"
+        <div id="vinicolas618b0a6fd10d5"
             class="block-content catalog-category">
             <ul>
                 
@@ -4303,20 +4300,20 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 <script type="text/x-magento-init">
     {
         ".breadcrumbs": {
-            "breadcrumbs": {"categoryUrlSuffix":"","useCategoryPathInUrl":0,"product":"Vinho Gran Enemigo Single Vineyard Gualtallary 2014"}        }
+            "breadcrumbs": {"categoryUrlSuffix":"","useCategoryPathInUrl":0,"product":"Vinho do Porto Dow&#039;s Vintage 2016"}        }
     }
 </script><div class="redes-sociais align-self-end ml-auto mr-4 mb-3 d-none d-md-block">
     <!-- WhatsApp -->
     <ul>
         <li>
             <a target="_blank"
-                href="https://api.whatsapp.com/send?text=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-gran-enemigo-single-vineyard-gualtallary">
+                href="https://api.whatsapp.com/send?text=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-do-porto-dows-vintage-2016">
                 <i class="fab fa-whatsapp"></i>
             </a>
         </li>
         <li>
             <!-- Facebook -->
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-gran-enemigo-single-vineyard-gualtallary&t=Vinho+Gran+Enemigo+Single+Vineyard+Gualtallary+2014"
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-do-porto-dows-vintage-2016&t=Vinho+do+Porto+Dow%27s+Vintage+2016"
                 onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false'
                 title="Share on facebook">
                 <i class="fab fa-facebook"></i>
@@ -4325,7 +4322,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         </li>
         <!-- TWITTER -->
         <li>
-            <a href="http://twitter.com/home/?status=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-gran-enemigo-single-vineyard-gualtallary(Vinho+Gran+Enemigo+Single+Vineyard+Gualtallary+2014)"
+            <a href="http://twitter.com/home/?status=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-do-porto-dows-vintage-2016(Vinho+do+Porto+Dow%27s+Vintage+2016)"
                 onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false'
                 title="Share on Twitter">
                 <i class="fab fa-twitter"></i>
@@ -4333,7 +4330,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         </li>
         <li>
             <!-- Pinterest -->
-            <a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-gran-enemigo-single-vineyard-gualtallary&media= &description=Vinho+Gran+Enemigo+Single+Vineyard+Gualtallary+2014"
+            <a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.divinho.com.br%2Fvinho-do-porto-dows-vintage-2016&media= &description=Vinho+do+Porto+Dow%27s+Vintage+2016"
                 onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false'
                 title="Pin it">
                 <i class="fab fa-pinterest"></i>
@@ -4373,7 +4370,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 </script>
 </div></nav><a id="contentarea" tabindex="-1"></a>
 <div class="container"><div class="page messages"><div data-placeholder="messages"></div>
-</div><div class="columns"><div class="column main"><input name="form_key" type="hidden" value="w3kfAODKqEqx8o1c" /><script type="text/x-magento-init">
+</div><div class="columns"><div class="column main"><input name="form_key" type="hidden" value="qe2Dc77WLTpLDVpV" /><script type="text/x-magento-init">
     {
         "*": {
             "Magento_Customer/js/section-config": {
@@ -4417,7 +4414,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 <script type="text/x-magento-init">
     {
         "body": {
-            "pageCache": {"url":"https:\/\/www.divinho.com.br\/page_cache\/block\/render\/id\/378\/","handles":["default","catalog_product_view","catalog_product_view_type_simple","catalog_product_view_id_378","catalog_product_view_sku_9382","gabrielqs_themesettings_footer_1","gabrielqs_themesettings_header_1","gabrielqs_themesettings_customization","mpseo_remove_schema"],"originalRequest":{"route":"catalog","controller":"product","action":"view","uri":"\/vinho-gran-enemigo-single-vineyard-gualtallary"},"versionCookieName":"private_content_version"}        }
+            "pageCache": {"url":"https:\/\/www.divinho.com.br\/page_cache\/block\/render\/id\/418\/","handles":["default","catalog_product_view","catalog_product_view_type_simple","catalog_product_view_id_418","catalog_product_view_sku_7639","gabrielqs_themesettings_footer_1","gabrielqs_themesettings_header_1","gabrielqs_themesettings_customization","mpseo_remove_schema"],"originalRequest":{"route":"catalog","controller":"product","action":"view","uri":"\/vinho-do-porto-dows-vintage-2016"},"versionCookieName":"private_content_version"}        }
     }
 </script>
 
@@ -4428,14 +4425,14 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 <div class="single-product__photo">
     <img
         alt="main product photo"
-        src="https://images.divinho.com.br/catalog/product/cache/b7d320e39333d0f7a197a4ddb51399f4/g/r/gran_enemigo_single_vineyard_gualtallary_2.png"
+        src="https://images.divinho.com.br/catalog/product/cache/b7d320e39333d0f7a197a4ddb51399f4/d/o/dows_vintage_2016_.png"
     />
 </div>
 
 </div><div class="col-8 col-lg-9 p-md-0 pl-0"><div class="row no-gutters align-items-center"><div class="col-lg"><div class="page-title-wrapper">
     <h1 class="page-title&#x20;product"
                 >
-        <span class="base" data-ui-id="page-title-wrapper" itemprop="name">Vinho Gran Enemigo Single Vineyard Gualtallary 2014</span>    </h1>
+        <span class="base" data-ui-id="page-title-wrapper" itemprop="name">Vinho do Porto Dow&#039;s Vintage 2016</span>    </h1>
     </div>
 </div><div class="col-lg-5 d-flex align-items-center justify-content-around flex-lg-nowrap flex-wrap-reverse">
 
@@ -4443,19 +4440,23 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 
         <div class="product__pontuacao">
                                             <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Robert Parker">RP</div>
-                    <div class="pontos">96</div>
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Spectator">WS</div>
+                    <div class="pontos">98</div>
+                </div>
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Enthusiast">WE</div>
+                    <div class="pontos">97</div>
                 </div>
                     </div>
 
     <div class="text-lg-center d-flex d-lg-block align-items-center mb-3 mb-lg-0">
         <div class="product__bandeira">
-            <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/ar.png" alt="Argentina">
-                        <div class="product__tipo product__tipo--tinto d-none d-md-block" data-toggle="tooltip"
-                data-placement="right" title="" data-original-title="Tinto"></div>
+            <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal">
+                        <div class="product__tipo product__tipo--porto d-none d-md-block" data-toggle="tooltip"
+                data-placement="right" title="" data-original-title="Porto"></div>
                     </div>
         <div class="text-center ml-3 d-block d-md-none">
-            <a href="#" data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":378,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZ3Jhbi1lbmVtaWdvLXNpbmdsZS12aW5leWFyZC1ndWFsdGFsbGFyeQ,,"}}' class="action towishlist wishlist" data-action="add-to-wishlist">
+            <a href="#" data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":418,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZG8tcG9ydG8tZG93cy12aW50YWdlLTIwMTY,"}}' class="action towishlist wishlist" data-action="add-to-wishlist">
             <i class="far fa-heart mr-2"></i>  
                 <span>
                     Lista de Desejos                </span>
@@ -4485,7 +4486,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
 
 <div class="product-attribute overview">
             <span class="value" itemprop="description">
-            <p>O<strong> Vinho Gran Enemigo Single Vineyard Gualtallary </strong>é o vinho ícone da <strong>Bodega Aleanna</strong>, o projeto de <strong>Alejandro Vigil</strong>, enólogo-chefe da vinícola Catena Zapata, com <strong>Adrianna Catena, </strong>filha mais nova de Nicolás Catena. Produzido com um corte das uvas <strong>Cabernet Franc</strong> e<strong> Malbec</strong>, cultivadas a 1.470 metros de altitude em um Single Vineyard em <strong>Gualtallary</strong>, na região vitivinícola de <strong>Mendoza</strong>. De coloração rubi intensa, revela um bouquet aromático complexo, onde destacam-se aromas de frutas negras e vermelhas maduras, notas de especiarias, como pimenta-preta, nuances de chocolate e baunilha, além de um toque de eucalipto. Em boca, apresenta grande estrutura, taninos refinados e um final longo e persistente. Esse é um rótulo que pode ser apreciado agora, mas que apresenta um excelente potencial de guarda, podendo envelhecer por mais de um década.  </p>        </span>
+            <p>O <strong>Vinho do Porto Dow’s Vintage</strong> é assinado pela <strong>Dow’s</strong>, uma das mais tradicionais casas de <strong>Vinhos do Porto</strong> e que hoje faz parte do grupo <strong>Symington Family Estates.</strong> Elaborado com um corte das uvas <strong>Touriga Nacional, Sousão</strong> e <strong>Touriga Franca</strong>, oriundas de vinhedos na região vitivinícola do <strong>Douro</strong>, em <strong>Portugal</strong>. De coloração púrpura, quase preta. No nariz, revela um bouquet aromático intenso, onde destacam-se aromas de frutas negras maduras, como ameixa e amora, notas florais, como de violeta, nuances de especiarias doces, como canela, além de toques de folhas de chá. Esse é um rótulo que apresenta um excepcional potencial de guarda, podendo envelhecer na garrafa por muitas décadas! </p>        </span>
 </div>
 <div class="product__attributes additional-attributes-wrapper table-wrapper">
     <ul class="attributes data additional-attribute" id="product-attribute-specs-table">
@@ -4494,8 +4495,11 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 <div class="label">Avaliações</div>
                 <div class="data" data-code="opt2flow_avaliacoes"
                     data-th="Avalia&#xE7;&#xF5;es">
-                                                    <a href="https://www.divinho.com.br/criticos/robert-parker/">
-                                                                                         <span>96 pontos Robert Parker</span>
+                                                    <a href="https://www.divinho.com.br/criticos/wine-spectator/">
+                                                                                         <span>98 pontos Wine Spectator</span>
+                                                                                        </a>
+                                                                                                                <a href="https://www.divinho.com.br/criticos/wine-enthusiast/">
+                                                                                         <span>97 pontos Wine Enthusiast</span>
                                                                                         </a>
                                                                                                 </div>
             </div>
@@ -4505,8 +4509,8 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 <div class="label">País</div>
                 <div class="data" data-code="country_of_manufacture"
                     data-th="Pa&#xED;s">
-                                                    <a href="https://www.divinho.com.br/pais/argentina">
-                                                                                         <span>Argentina</span>
+                                                    <a href="https://www.divinho.com.br/pais/portugal">
+                                                                                         <span>Portugal</span>
                                                                                         </a>
                                                                                                 </div>
             </div>
@@ -4516,8 +4520,8 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 <div class="label">Região</div>
                 <div class="data" data-code="regi_o"
                     data-th="Regi&#xE3;o">
-                                                    <a href="https://www.divinho.com.br/pais/argentina/mendoza">
-                                                                                         <span>Mendoza</span>
+                                                    <a href="https://www.divinho.com.br/pais/portugal/douro">
+                                                                                         <span>Douro</span>
                                                                                         </a>
                                                                                                 </div>
             </div>
@@ -4527,8 +4531,8 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 <div class="label">Produtor</div>
                 <div class="data" data-code="manufacturer"
                     data-th="Produtor">
-                                                    <a href="https://www.divinho.com.br/vinicolas/bodega-aleanna/">
-                                                                                         <span>Bodega Aleanna</span>
+                                                    <a href="https://www.divinho.com.br/vinicolas/symington-family-estates/">
+                                                                                         <span>Symington Family Estates</span>
                                                                                         </a>
                                                                                                 </div>
             </div>
@@ -4538,11 +4542,14 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 <div class="label">Uvas</div>
                 <div class="data" data-code="uva"
                     data-th="Uvas">
-                                                    <a href="https://www.divinho.com.br/uva/cabernet-franc/">
-                                                                                         <span>Cabernet Franc</span>
+                                                    <a href="https://www.divinho.com.br/uva/sousao/">
+                                                                                         <span>Sousão</span>
                                                                                         </a>
-                                                                                                                <a href="https://www.divinho.com.br/uva/malbec/">
-                                                                                         <span>Malbec</span>
+                                                                                                                <a href="https://www.divinho.com.br/uva/touriga-franca/">
+                                                                                         <span>Touriga Franca</span>
+                                                                                        </a>
+                                                                                                                <a href="https://www.divinho.com.br/uva/touriga-nacional/">
+                                                                                         <span>Touriga Nacional</span>
                                                                                         </a>
                                                                                                 </div>
             </div>
@@ -4552,8 +4559,8 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 <div class="label">Tipo</div>
                 <div class="data" data-code="tipo"
                     data-th="Tipo">
-                                                    <a href="https://www.divinho.com.br/vinhos/tinto">
-                                                                                         <span>Tinto</span>
+                                                    <a href="https://www.divinho.com.br/vinhos/porto">
+                                                                                         <span>Porto</span>
                                                                                         </a>
                                                                                                 </div>
             </div>
@@ -4563,7 +4570,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 <div class="label">Teor Alcoólico</div>
                 <div class="data" data-code="teor_alcoolico"
                     data-th="Teor&#x20;Alco&#xF3;lico">
-                    13,9%                </div>
+                    20%                </div>
             </div>
         </li>
                         <li class="attribute tamanho-da-garrafa">
@@ -4580,7 +4587,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 <div class="label">Temperatura de serviço</div>
                 <div class="data" data-code="temperatura_de_servico"
                     data-th="Temperatura&#x20;de&#x20;servi&#xE7;o">
-                                                                                 <span>18° a 20° C</span>
+                                                                                 <span>16 a 18°C</span>
                                                                                                                             </div>
             </div>
         </li>
@@ -4589,8 +4596,8 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 <div class="label">Harmonização</div>
                 <div class="data" data-code="harmonizacao"
                     data-th="Harmoniza&#xE7;&#xE3;o">
-                                                                                 <i class="icon-carnes-vermelhas" data-toggle="tooltip" data-placement="top" title="Carnes&#x20;vermelhas"></i>
-                                                                                                                                                                         <i class="icon-carnes-de-caca" data-toggle="tooltip" data-placement="top" title="Carnes&#x20;de&#x20;ca&#xE7;a"></i>
+                                                                                 <i class="icon-queijos" data-toggle="tooltip" data-placement="top" title="Queijos"></i>
+                                                                                                                                                                         <i class="icon-chocolate" data-toggle="tooltip" data-placement="top" title="Chocolate"></i>
                                                                                                                             </div>
             </div>
         </li>
@@ -4599,7 +4606,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     <div class="d-none d-md-block">
         <a href="#"
            class="wishlist action towishlist btn btn-xl btn-outline-primary py-3 "
-           data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":378,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZ3Jhbi1lbmVtaWdvLXNpbmdsZS12aW5leWFyZC1ndWFsdGFsbGFyeQ,,"}}'
+           data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":418,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZG8tcG9ydG8tZG93cy12aW50YWdlLTIwMTY,"}}'
            data-action="add-to-wishlist">
             <i class="far fa-heart mr-3" aria-hidden="true"></i>
             <span>Lista de Desejos</span>
@@ -4611,33 +4618,33 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             "addToWishlist": {"productType":"simple"}        }
     }
 </script>
-</div></div><div class="col-lg-3 p-md-0"><div class="single-product__actions"><div class="product-info-main"><div class="product-info-price"><div class="d-flex align-items-center justify-content-between"><div class="price-box price-final_price" data-role="priceBox" data-product-id="378" data-price-box="product-id-378">
+</div></div><div class="col-lg-3 p-md-0"><div class="single-product__actions"><div class="product-info-main"><div class="product-info-price"><div class="d-flex align-items-center justify-content-between"><div class="price-box price-final_price" data-role="priceBox" data-product-id="418" data-price-box="product-id-418">
    <div class="price__regular"><br></div>
     <div class="price__sale">
         
 
 <span class="price-container price-final_price&#x20;tax&#x20;weee"
         >
-        <span  id="product-price-378"                data-price-amount="827.81"
+        <span  id="product-price-418"                data-price-amount="1998"
         data-price-type="finalPrice"
         class="price-wrapper "
-    ><span class="price">R$827,81</span></span>
+    ><span class="price">R$1.998,00</span></span>
         </span>
     </div>
 
 </div></div>                <div class="installment">
-            Em até <span>3x de R$275,94 s/ juros</span>        </div>
+            Em até <span>3x de R$666,00 s/ juros</span>        </div>
     </div>
 
 <div class="product-add-form">
-    <form data-product-sku="9382"
-          action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZ3Jhbi1lbmVtaWdvLXNpbmdsZS12aW5leWFyZC1ndWFsdGFsbGFyeQ%2C%2C/product/378/" method="post"
+    <form data-product-sku="7639"
+          action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZG8tcG9ydG8tZG93cy12aW50YWdlLTIwMTY%2C/product/418/" method="post"
           id="product_addtocart_form">
-        <input type="hidden" name="product" value="378" />
+        <input type="hidden" name="product" value="418" />
         <input type="hidden" name="selected_configurable_option" value="" />
         <input type="hidden" name="related_product" id="related-products-field" value="" />
-        <input type="hidden" name="item"  value="378" />
-        <input name="form_key" type="hidden" value="w3kfAODKqEqx8o1c" />                            <div class="box-tocart">
+        <input type="hidden" name="item"  value="418" />
+        <input name="form_key" type="hidden" value="qe2Dc77WLTpLDVpV" />                            <div class="box-tocart">
     <div class="fieldset">
                 <div class="form-row align-items-center mt-2">
             <div class="form-group col-3">
@@ -4714,13 +4721,13 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         'priceBox'
     ], function($){
         var dataPriceBoxSelector = '[data-role=priceBox]',
-            dataProductIdSelector = '[data-product-id=378]',
+            dataProductIdSelector = '[data-product-id=418]',
             priceBoxes = $(dataPriceBoxSelector + dataProductIdSelector);
 
         priceBoxes = priceBoxes.filter(function(index, elem){
             return !$(elem).find('.price-from').length;
         });
-        priceBoxes.priceBox({'priceConfig': {"productId":"378","priceFormat":{"pattern":"R$%s","precision":2,"requiredPrecision":2,"decimalSymbol":",","groupSymbol":".","groupLength":3,"integerRequired":false}}});
+        priceBoxes.priceBox({'priceConfig': {"productId":"418","priceFormat":{"pattern":"R$%s","precision":2,"requiredPrecision":2,"decimalSymbol":",","groupSymbol":".","groupLength":3,"integerRequired":false}}});
     });
 </script>
 <div class="opt2flow-shipping-estimate"><div class="cart-after__title text-uppercase">
@@ -4734,7 +4741,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             <button name="btn-estimate-shipping" id="btn-estimate-shipping" type="button" title="ok" class="action btn btn-primary tocart">ok</button>
         </div>
     </div>
-    <input type="hidden" name="opt2flow_product_id" id="opt2flow_product_id" value="378">
+    <input type="hidden" name="opt2flow_product_id" id="opt2flow_product_id" value="418">
 </div>
 <div id="shipping-estimate-results"></div>
 <script>
@@ -4750,7 +4757,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         });
 </script>
 </div></div><div class="alert price alert-secondary small font-weight-bold p-2 my-3 price">
-    <a href="https://www.divinho.com.br/productalert/add/price/product_id/378/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZ3Jhbi1lbmVtaWdvLXNpbmdsZS12aW5leWFyZC1ndWFsdGFsbGFyeQ%2C%2C/"
+    <a href="https://www.divinho.com.br/productalert/add/price/product_id/418/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZG8tcG9ydG8tZG93cy12aW50YWdlLTIwMTY%2C/"
        title="Receber&#x20;notifica&#xE7;&#xF5;es&#x20;de&#x20;baixa&#x20;de&#x20;pre&#xE7;o" class="action alert-product">
         <i class="fas fa-exclamation-circle mr-1"></i>
         Receber notificações de baixa de preço    </a>
@@ -4762,24 +4769,24 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
             <h2 class="attribute__header">
                 Vinificação            </h2>
             <div class="attribute__content">
-                <p>O Gran Enemigo Single Vineyard Gualtallary 2014 é produzido com um corte das uvas Cabernet Franc (85%) e Malbec (15%), cultivadas a 1.470 metros de altitude, em Gualtallary, na região vitivinícola de Mendoza, Argentina. As uvas são colhidas em cinco etapas, durante um período de um mês e meio, para garantir o ponto ideal de maturação. A fermentação é realizada em barris de carvalho, sob temperatura controlada de 22°C. Segue-se um período de três dias de maceração à frio. A maceração dura um período de vinte três dias. O vinho envelhece em barris de carvalho Foudre, com cem anos de idade, por um período de quinze meses.</p>            </div>
+                <p>O Dow's Vintage 2016 é produzido com um corte das uvas Touriga Nacional, Sousão e Touriga Franca, oriundas de vinhedos da Quinta do Bomfim e da Quinta da Senhora da Ribeira, dentro da região vitivinícola do Douro, em Portugal. O vinho envelhece em barris de carvalho por um período de dezoito meses, não sendo filtrado nem refinado.</p>            </div>
         </div>
                 <div class="attribute-item" data-attribute="sobre_a_vinicola">
             <h2 class="attribute__header">
                 Sobre a vinícola            </h2>
             <div class="attribute__content">
-                Bodega Aleanna é o projeto pessoal de Alejandro Vigil, enólogo-chefe de Catena Zapata, em parceria com a historiadora Adrianna Catena, filha mais nova de Nicolás Catena. Os dois se definem como “românticos”, compartilham o respeito pelas tradições e a irreverência necessária para romper com o status quo e, em 2008, decidiram produzir vinhos juntos. Tendo à disposição uma ampla gama dos melhores vinhedos da região de Mendoza, pertencentes à família Catena, Alejandro Vigil selecionou parcelas específicas que pudessem dar origem a vinhos tintos e vinhos brancos com uma personalidade distinta dos talhados por ele em Catena Zapata e sem paridade em toda a Argentina. Os vinhos tintos mostram bastante nervo, taninos abundantes e um caráter deliciosamente selvagem. Os vinhos brancos também são cheios de caráter. Atualmente, Bodega Aleanna produz cerca de 160.000 garrafas por safra, tendo a uva Cabernet Franc como protagonista, mas também há ótimos exemplares de Bonarda e Chardonnay.            </div>
+                Symington Family Estates é o grupo vitivinícola detentor da maior área de vinhedos em Portugal, com mais de mil hectares na região do Douro, berço do Vinho do Porto. A família Symington, com raízes escocesas, inglesas e portuguesas, está ligada ao mundo do vinho desde meados do século XVII, há quatorze gerações, e, ao longo de 370 anos, construiu um verdadeiro império no Douro, com vinte e sete propriedades e uma dezena de adegas de vinificação.Seu portfólio reúne casas históricas do Vinho do Porto, como Graham’s, Cockburn’s, Dow’s e Warre’s, além dos vinhos da cobiçada Quinta do Vesúvio e do projeto Prats & Symington, que origina os vinhos tintos Chryseia, Post Scriptum e Prazo de Roriz em parceria com a família Prats de Bordeaux. A Symington é líder em Vinho do Porto de categorias especiais, como Reserva, LVB, Tawny com indicação de idade, Vintage e Colheita, e seus tintos e brancos também são considerados entre os melhores do mundo pelos críticos internacionais. Apesar da dimensão, a Symington Family Estates ganha seu mais reconhecimento pela alta qualidade de seus vinhos.            </div>
         </div>
         </div><div class="d-md-none product-info__mobile"><hr class="border-primary my-4">
 <div class="product-add-form">
-    <form data-product-sku="9382"
-          action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZ3Jhbi1lbmVtaWdvLXNpbmdsZS12aW5leWFyZC1ndWFsdGFsbGFyeQ%2C%2C/product/378/" method="post"
+    <form data-product-sku="7639"
+          action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZG8tcG9ydG8tZG93cy12aW50YWdlLTIwMTY%2C/product/418/" method="post"
           id="product_addtocart_form">
-        <input type="hidden" name="product" value="378" />
+        <input type="hidden" name="product" value="418" />
         <input type="hidden" name="selected_configurable_option" value="" />
         <input type="hidden" name="related_product" id="related-products-field" value="" />
-        <input type="hidden" name="item"  value="378" />
-        <input name="form_key" type="hidden" value="w3kfAODKqEqx8o1c" />                            <div class="box-tocart">
+        <input type="hidden" name="item"  value="418" />
+        <input name="form_key" type="hidden" value="qe2Dc77WLTpLDVpV" />                            <div class="box-tocart">
     <div class="fieldset">
                 <div class="form-row align-items-center mt-2">
             <div class="form-group col-3">
@@ -4846,13 +4853,13 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
         'priceBox'
     ], function($){
         var dataPriceBoxSelector = '[data-role=priceBox]',
-            dataProductIdSelector = '[data-product-id=378]',
+            dataProductIdSelector = '[data-product-id=418]',
             priceBoxes = $(dataPriceBoxSelector + dataProductIdSelector);
 
         priceBoxes = priceBoxes.filter(function(index, elem){
             return !$(elem).find('.price-from').length;
         });
-        priceBoxes.priceBox({'priceConfig': {"productId":"378","priceFormat":{"pattern":"R$%s","precision":2,"requiredPrecision":2,"decimalSymbol":",","groupSymbol":".","groupLength":3,"integerRequired":false}}});
+        priceBoxes.priceBox({'priceConfig': {"productId":"418","priceFormat":{"pattern":"R$%s","precision":2,"requiredPrecision":2,"decimalSymbol":",","groupSymbol":".","groupLength":3,"integerRequired":false}}});
     });
 </script>
 </div></div></div></div><script type="text/x-magento-init">
@@ -4865,7 +4872,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
     {
         "*": {
                 "Magento_Catalog/js/product/view/provider": {
-                    "data": {"items":{"378":{"add_to_cart_button":{"post_data":"{\"action\":\"https:\\\/\\\/www.divinho.com.br\\\/checkout\\\/cart\\\/add\\\/uenc\\\/%25uenc%25\\\/product\\\/378\\\/\",\"data\":{\"product\":\"378\",\"uenc\":\"%uenc%\"}}","url":"https:\/\/www.divinho.com.br\/checkout\/cart\/add\/uenc\/%25uenc%25\/product\/378\/","required_options":false},"add_to_compare_button":{"post_data":null,"url":"{\"action\":\"https:\\\/\\\/www.divinho.com.br\\\/catalog\\\/product_compare\\\/add\\\/\",\"data\":{\"product\":\"378\",\"uenc\":\"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZ3Jhbi1lbmVtaWdvLXNpbmdsZS12aW5leWFyZC1ndWFsdGFsbGFyeQ,,\"}}","required_options":null},"price_info":{"final_price":827.81,"max_price":827.81,"max_regular_price":827.81,"minimal_regular_price":827.81,"special_price":null,"minimal_price":827.81,"regular_price":827.81,"formatted_prices":{"final_price":"<span class=\"price\">R$827,81<\/span>","max_price":"<span class=\"price\">R$827,81<\/span>","minimal_price":"<span class=\"price\">R$827,81<\/span>","max_regular_price":"<span class=\"price\">R$827,81<\/span>","minimal_regular_price":null,"special_price":null,"regular_price":"<span class=\"price\">R$827,81<\/span>"},"extension_attributes":{"msrp":{"msrp_price":"<span class=\"price\">R$0,00<\/span>","is_applicable":"","is_shown_price_on_gesture":"","msrp_message":"","explanation_message":"Our price is lower than the manufacturer&#039;s &quot;minimum advertised price.&quot; As a result, we cannot show you the price in catalog or the product page. <br><br> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart."},"tax_adjustments":{"final_price":827.81,"max_price":827.81,"max_regular_price":827.81,"minimal_regular_price":827.81,"special_price":827.81,"minimal_price":827.81,"regular_price":827.81,"formatted_prices":{"final_price":"<span class=\"price\">R$827,81<\/span>","max_price":"<span class=\"price\">R$827,81<\/span>","minimal_price":"<span class=\"price\">R$827,81<\/span>","max_regular_price":"<span class=\"price\">R$827,81<\/span>","minimal_regular_price":null,"special_price":"<span class=\"price\">R$827,81<\/span>","regular_price":"<span class=\"price\">R$827,81<\/span>"}},"weee_attributes":[],"weee_adjustment":"<span class=\"price\">R$827,81<\/span>"}},"images":[{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/c0ffc0f3780617b20732f12bef036575\/g\/r\/gran_enemigo_single_vineyard_gualtallary_2.png","code":"recently_viewed_products_grid_content_widget","height":300,"width":240,"label":"Garrafa de Vinho Gran Enemigo Single Vineyard Gualtallary 2014","resized_width":240,"resized_height":300},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/d9e3e7d2d318c89cdaa08d93d9a8221e\/g\/r\/gran_enemigo_single_vineyard_gualtallary_2.png","code":"recently_viewed_products_list_content_widget","height":340,"width":270,"label":"Garrafa de Vinho Gran Enemigo Single Vineyard Gualtallary 2014","resized_width":270,"resized_height":340},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/fba4d41374f3b4a4b2553ba145032f1f\/g\/r\/gran_enemigo_single_vineyard_gualtallary_2.png","code":"recently_viewed_products_images_names_widget","height":90,"width":75,"label":"Garrafa de Vinho Gran Enemigo Single Vineyard Gualtallary 2014","resized_width":75,"resized_height":90},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/c0ffc0f3780617b20732f12bef036575\/g\/r\/gran_enemigo_single_vineyard_gualtallary_2.png","code":"recently_compared_products_grid_content_widget","height":300,"width":240,"label":"Garrafa de Vinho Gran Enemigo Single Vineyard Gualtallary 2014","resized_width":240,"resized_height":300},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/d9e3e7d2d318c89cdaa08d93d9a8221e\/g\/r\/gran_enemigo_single_vineyard_gualtallary_2.png","code":"recently_compared_products_list_content_widget","height":340,"width":270,"label":"Garrafa de Vinho Gran Enemigo Single Vineyard Gualtallary 2014","resized_width":270,"resized_height":340},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/fba4d41374f3b4a4b2553ba145032f1f\/g\/r\/gran_enemigo_single_vineyard_gualtallary_2.png","code":"recently_compared_products_images_names_widget","height":90,"width":75,"label":"Garrafa de Vinho Gran Enemigo Single Vineyard Gualtallary 2014","resized_width":75,"resized_height":90}],"url":"https:\/\/www.divinho.com.br\/vinho-gran-enemigo-single-vineyard-gualtallary","id":378,"name":"Vinho Gran Enemigo Single Vineyard Gualtallary 2014","type":"simple","is_salable":"1","store_id":1,"currency_code":"BRL","extension_attributes":{"review_html":"<div class=\"product-reviews-summary short empty\">\n    <div class=\"reviews-actions\">\n        <a class=\"action add\" href=\"https:\/\/www.divinho.com.br\/vinho-gran-enemigo-single-vineyard-gualtallary#review-form\">\n            Seja o primeiro a avaliar este produto        <\/a>\n    <\/div>\n<\/div>\n","wishlist_button":{"post_data":null,"url":"{\"action\":\"https:\\\/\\\/www.divinho.com.br\\\/wishlist\\\/index\\\/add\\\/\",\"data\":{\"product\":378,\"uenc\":\"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZ3Jhbi1lbmVtaWdvLXNpbmdsZS12aW5leWFyZC1ndWFsdGFsbGFyeQ,,\"}}","required_options":null}}}},"store":"1","currency":"BRL"}            }
+                    "data": {"items":{"418":{"add_to_cart_button":{"post_data":"{\"action\":\"https:\\\/\\\/www.divinho.com.br\\\/checkout\\\/cart\\\/add\\\/uenc\\\/%25uenc%25\\\/product\\\/418\\\/\",\"data\":{\"product\":\"418\",\"uenc\":\"%uenc%\"}}","url":"https:\/\/www.divinho.com.br\/checkout\/cart\/add\/uenc\/%25uenc%25\/product\/418\/","required_options":false},"add_to_compare_button":{"post_data":null,"url":"{\"action\":\"https:\\\/\\\/www.divinho.com.br\\\/catalog\\\/product_compare\\\/add\\\/\",\"data\":{\"product\":\"418\",\"uenc\":\"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZG8tcG9ydG8tZG93cy12aW50YWdlLTIwMTY,\"}}","required_options":null},"price_info":{"final_price":1998,"max_price":1998,"max_regular_price":1998,"minimal_regular_price":1998,"special_price":null,"minimal_price":1998,"regular_price":1998,"formatted_prices":{"final_price":"<span class=\"price\">R$1.998,00<\/span>","max_price":"<span class=\"price\">R$1.998,00<\/span>","minimal_price":"<span class=\"price\">R$1.998,00<\/span>","max_regular_price":"<span class=\"price\">R$1.998,00<\/span>","minimal_regular_price":null,"special_price":null,"regular_price":"<span class=\"price\">R$1.998,00<\/span>"},"extension_attributes":{"msrp":{"msrp_price":"<span class=\"price\">R$0,00<\/span>","is_applicable":"","is_shown_price_on_gesture":"","msrp_message":"","explanation_message":"Our price is lower than the manufacturer&#039;s &quot;minimum advertised price.&quot; As a result, we cannot show you the price in catalog or the product page. <br><br> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart."},"tax_adjustments":{"final_price":1998,"max_price":1998,"max_regular_price":1998,"minimal_regular_price":1998,"special_price":1998,"minimal_price":1998,"regular_price":1998,"formatted_prices":{"final_price":"<span class=\"price\">R$1.998,00<\/span>","max_price":"<span class=\"price\">R$1.998,00<\/span>","minimal_price":"<span class=\"price\">R$1.998,00<\/span>","max_regular_price":"<span class=\"price\">R$1.998,00<\/span>","minimal_regular_price":null,"special_price":"<span class=\"price\">R$1.998,00<\/span>","regular_price":"<span class=\"price\">R$1.998,00<\/span>"}},"weee_attributes":[],"weee_adjustment":"<span class=\"price\">R$1.998,00<\/span>"}},"images":[{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/c0ffc0f3780617b20732f12bef036575\/d\/o\/dows_vintage_2016_.png","code":"recently_viewed_products_grid_content_widget","height":300,"width":240,"label":"Garrafa de Vinho do Porto Dow's Vintage 2016","resized_width":240,"resized_height":300},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/d9e3e7d2d318c89cdaa08d93d9a8221e\/d\/o\/dows_vintage_2016_.png","code":"recently_viewed_products_list_content_widget","height":340,"width":270,"label":"Garrafa de Vinho do Porto Dow's Vintage 2016","resized_width":270,"resized_height":340},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/fba4d41374f3b4a4b2553ba145032f1f\/d\/o\/dows_vintage_2016_.png","code":"recently_viewed_products_images_names_widget","height":90,"width":75,"label":"Garrafa de Vinho do Porto Dow's Vintage 2016","resized_width":75,"resized_height":90},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/c0ffc0f3780617b20732f12bef036575\/d\/o\/dows_vintage_2016_.png","code":"recently_compared_products_grid_content_widget","height":300,"width":240,"label":"Garrafa de Vinho do Porto Dow's Vintage 2016","resized_width":240,"resized_height":300},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/d9e3e7d2d318c89cdaa08d93d9a8221e\/d\/o\/dows_vintage_2016_.png","code":"recently_compared_products_list_content_widget","height":340,"width":270,"label":"Garrafa de Vinho do Porto Dow's Vintage 2016","resized_width":270,"resized_height":340},{"url":"https:\/\/images.divinho.com.br\/catalog\/product\/cache\/fba4d41374f3b4a4b2553ba145032f1f\/d\/o\/dows_vintage_2016_.png","code":"recently_compared_products_images_names_widget","height":90,"width":75,"label":"Garrafa de Vinho do Porto Dow's Vintage 2016","resized_width":75,"resized_height":90}],"url":"https:\/\/www.divinho.com.br\/vinho-do-porto-dows-vintage-2016","id":418,"name":"Vinho do Porto Dow's Vintage 2016","type":"simple","is_salable":"1","store_id":1,"currency_code":"BRL","extension_attributes":{"review_html":"<div class=\"product-reviews-summary short empty\">\n    <div class=\"reviews-actions\">\n        <a class=\"action add\" href=\"https:\/\/www.divinho.com.br\/vinho-do-porto-dows-vintage-2016#review-form\">\n            Seja o primeiro a avaliar este produto        <\/a>\n    <\/div>\n<\/div>\n","wishlist_button":{"post_data":null,"url":"{\"action\":\"https:\\\/\\\/www.divinho.com.br\\\/wishlist\\\/index\\\/add\\\/\",\"data\":{\"product\":418,\"uenc\":\"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZG8tcG9ydG8tZG93cy12aW50YWdlLTIwMTY,\"}}","required_options":null}}}},"store":"1","currency":"BRL"}            }
         }
     }
 </script>
@@ -4890,71 +4897,67 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                         
                                                 <div class="col-md-3 mb-2 product product-item item" style="display: none;">
                                                             <div class="box-product product-item-info related-available"
-                                    data-product-id="200">
+                                    data-product-id="275">
                                     <!-- related_products_list-->
                                     
                                     
     <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/ar.png" alt="Argentina" title="Argentina">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
     </div>
 
                                     
 
         <div class="product__pontuacao">
                                             <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="James Suckling">JS</div>
-                    <div class="pontos">95</div>
-                </div>
-                                            <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Tim Atkin">TA</div>
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Spectator">WS</div>
                     <div class="pontos">95</div>
                 </div>
                     </div>
 
-                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho El Enemigo S\u00e9millon 2017&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Gran Enemigo Single Vineyard Gualtallary 2014 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho El Enemigo S\u00e9millon 2017&quot;,&quot;id&quot;:&quot;200&quot;,&quot;price&quot;:&quot;259.76&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Argentina&quot;,&quot;position&quot;:0,&quot;brand&quot;:&quot;Bodega Aleanna&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-el-enemigo-semillon' }});" href="https://www.divinho.com.br/vinho-el-enemigo-semillon"
+                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Chryseia 2016&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho do Porto Dow&#039;s Vintage 2016 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Chryseia 2016&quot;,&quot;id&quot;:&quot;275&quot;,&quot;price&quot;:&quot;1310.22&quot;,&quot;category&quot;:&quot;Vinhos\/Vinho Tinto&quot;,&quot;position&quot;:0,&quot;brand&quot;:&quot;Symington Family Estates&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-chryseia' }});" href="https://www.divinho.com.br/vinho-chryseia"
                                         class="product photo product-item-photo">
                                         <div class="product__photo">
                                             
 
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/e/l/el_enemigo_s_millon_2017.png"
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho_chryseia_1_1.png"
     width=""
     height=""
-    alt="Garrafa de Vinho Branco El Enemigo Sémillon 2017" /></span>                                        </div>
+    alt="Garrafa de Vinho Chryseia 2016" /></span>                                        </div>
                                     </a>
 
                                     <div class="product__content">
                                         <a class="product-item-link"
-                                            title="Vinho&#x20;El&#x20;Enemigo&#x20;S&#xE9;millon&#x20;2017"
-                                            href="https://www.divinho.com.br/vinho-el-enemigo-semillon">
-                                            <h4 class="product__title">Vinho El Enemigo Sémillon 2017</h4>
+                                            title="Vinho&#x20;Chryseia&#x20;2016"
+                                            href="https://www.divinho.com.br/vinho-chryseia">
+                                            <h4 class="product__title">Vinho Chryseia 2016</h4>
                                         </a>
 
                                         
 <div class="product__pais">
-    <span>Argentina</span>
+    <span>Portugal</span>
 </div>
 
                                                                                     <form data-role="tocart-form"
-                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZ3Jhbi1lbmVtaWdvLXNpbmdsZS12aW5leWFyZC1ndWFsdGFsbGFyeQ%2C%2C/product/200/"
+                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZG8tcG9ydG8tZG93cy12aW50YWdlLTIwMTY%2C/product/275/"
                                                 method="post">
                                                 <input type="hidden" name="product"
-                                                    value="200">
+                                                    value="275">
                                                 <input type="hidden"
                                                     name="uenc"
-                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZ3Jhbi1lbmVtaWdvLXNpbmdsZS12aW5leWFyZC1ndWFsdGFsbGFyeQ,,">
-                                                                                                <input name="form_key" type="hidden" value="w3kfAODKqEqx8o1c" />                                                <div class="product__buy">
+                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZG8tcG9ydG8tZG93cy12aW50YWdlLTIwMTY,">
+                                                                                                <input name="form_key" type="hidden" value="qe2Dc77WLTpLDVpV" />                                                <div class="product__buy">
                                                     <div class="product__price">
-                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="200" data-price-box="product-id-200">
+                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="275" data-price-box="product-id-275">
    <div class="price__regular"><br></div>
     <div class="price__sale">
         
 
 <span class="price-container price-final_price&#x20;tax&#x20;weee"
         >
-        <span  id="product-price-200"                data-price-amount="259.76"
+        <span  id="product-price-275"                data-price-amount="1310.22"
         data-price-type="finalPrice"
         class="price-wrapper "
-    ><span class="price">R$259,76</span></span>
+    ><span class="price">R$1.310,22</span></span>
         </span>
     </div>
 
@@ -4962,7 +4965,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                     <div class="product__quantity">
                                                         <div class="custom-number">
                                                             <input type="number" name="qty"
-                                                                id="qty200"
+                                                                id="qty275"
                                                                 maxlength="12" min="1" minlenght="1" value="1"
                                                                 title="Qtd"
                                                                 class="qty"
@@ -4974,7 +4977,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                                 type="submit"><i class="fas fa-shopping-cart"></i></button>
                                                         </div>
                                                                                                                     <a href="#"
-                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":200,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZ3Jhbi1lbmVtaWdvLXNpbmdsZS12aW5leWFyZC1ndWFsdGFsbGFyeQ,,"}}'
+                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":275,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZG8tcG9ydG8tZG93cy12aW50YWdlLTIwMTY,"}}'
                                                                 class="action towishlist product__wishlist"
                                                                 data-action="add-to-wishlist"
                                                                 title="Adicionar&#x20;&#xE0;&#x20;lista&#x20;de&#x20;desejos">
@@ -4984,7 +4987,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                 </div>
                                                 <div class="actions-primary">
                                                                     <div class="installment">
-            Em até <span>3x de R$86,59 s/ juros</span>        </div>
+            Em até <span>3x de R$436,74 s/ juros</span>        </div>
                                                         <button type="submit"
                                                         title="Adicionar ao Carrinho"
                                                         class="action tocart primary btn btn--product">
@@ -4999,277 +5002,67 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                         
                                                 <div class="col-md-3 mb-2 product product-item item" style="display: none;">
                                                             <div class="box-product product-item-info related-available"
-                                    data-product-id="211">
+                                    data-product-id="618">
                                     <!-- related_products_list-->
                                     
                                     
     <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/ar.png" alt="Argentina" title="Argentina">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
     </div>
 
                                     
 
         <div class="product__pontuacao">
                                             <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Robert Parker">RP</div>
-                    <div class="pontos">95</div>
-                </div>
-                    </div>
-
-                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Gran Enemigo Single Vineyard Agrelo 2015&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Gran Enemigo Single Vineyard Gualtallary 2014 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Gran Enemigo Single Vineyard Agrelo 2015&quot;,&quot;id&quot;:&quot;211&quot;,&quot;price&quot;:&quot;798.69&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Argentina&quot;,&quot;position&quot;:1,&quot;brand&quot;:&quot;Bodega Aleanna&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-gran-enemigo-single-vineyard-agrelo' }});" href="https://www.divinho.com.br/vinho-gran-enemigo-single-vineyard-agrelo"
-                                        class="product photo product-item-photo">
-                                        <div class="product__photo">
-                                            
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/g/r/gran_enemigo_agrelo_cabernet_franc.png"
-    width=""
-    height=""
-    alt="Garrafa de Vinho Gran Enemigo Agrelo Cabernet Franc 2015" /></span>                                        </div>
-                                    </a>
-
-                                    <div class="product__content">
-                                        <a class="product-item-link"
-                                            title="Vinho&#x20;Gran&#x20;Enemigo&#x20;Single&#x20;Vineyard&#x20;Agrelo&#x20;2015"
-                                            href="https://www.divinho.com.br/vinho-gran-enemigo-single-vineyard-agrelo">
-                                            <h4 class="product__title">Vinho Gran Enemigo Single Vineyard Agrelo 2015</h4>
-                                        </a>
-
-                                        
-<div class="product__pais">
-    <span>Argentina</span>
-</div>
-
-                                                                                    <form data-role="tocart-form"
-                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZ3Jhbi1lbmVtaWdvLXNpbmdsZS12aW5leWFyZC1ndWFsdGFsbGFyeQ%2C%2C/product/211/"
-                                                method="post">
-                                                <input type="hidden" name="product"
-                                                    value="211">
-                                                <input type="hidden"
-                                                    name="uenc"
-                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZ3Jhbi1lbmVtaWdvLXNpbmdsZS12aW5leWFyZC1ndWFsdGFsbGFyeQ,,">
-                                                                                                <input name="form_key" type="hidden" value="w3kfAODKqEqx8o1c" />                                                <div class="product__buy">
-                                                    <div class="product__price">
-                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="211" data-price-box="product-id-211">
-   <div class="price__regular"><br></div>
-    <div class="price__sale">
-        
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-211"                data-price-amount="798.69"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$798,69</span></span>
-        </span>
-    </div>
-
-</div>                                                    </div>
-                                                    <div class="product__quantity">
-                                                        <div class="custom-number">
-                                                            <input type="number" name="qty"
-                                                                id="qty211"
-                                                                maxlength="12" min="1" minlenght="1" value="1"
-                                                                title="Qtd"
-                                                                class="qty"
-                                                                data-validate="null" />
-                                                            <div class="custom-number-button custom-number-button--up">+
-                                                            </div>
-                                                            <div class="custom-number-button custom-number-button--down">-
-                                                            </div><button class="action tocart btn btn--input"
-                                                                type="submit"><i class="fas fa-shopping-cart"></i></button>
-                                                        </div>
-                                                                                                                    <a href="#"
-                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":211,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZ3Jhbi1lbmVtaWdvLXNpbmdsZS12aW5leWFyZC1ndWFsdGFsbGFyeQ,,"}}'
-                                                                class="action towishlist product__wishlist"
-                                                                data-action="add-to-wishlist"
-                                                                title="Adicionar&#x20;&#xE0;&#x20;lista&#x20;de&#x20;desejos">
-                                                                <i class="far fa-heart"></i>
-                                                            </a>
-                                                                                                            </div>
-                                                </div>
-                                                <div class="actions-primary">
-                                                                    <div class="installment">
-            Em até <span>3x de R$266,23 s/ juros</span>        </div>
-                                                        <button type="submit"
-                                                        title="Adicionar ao Carrinho"
-                                                        class="action tocart primary btn btn--product">
-                                                        <span>Adicionar ao Carrinho</span>
-                                                    </button>
-                                                </div>
-                                            </form>
-                                                                            </div>
-                                </div>
-                            </div>
-                                                                                                                                                                            
-                        
-                                                <div class="col-md-3 mb-2 product product-item item" style="display: none;">
-                                                            <div class="box-product product-item-info related-available"
-                                    data-product-id="212">
-                                    <!-- related_products_list-->
-                                    
-                                    
-    <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/ar.png" alt="Argentina" title="Argentina">
-    </div>
-
-                                    
-
-        <div class="product__pontuacao">
-                                            <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Robert Parker">RP</div>
-                    <div class="pontos">96</div>
-                </div>
-                    </div>
-
-                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Gran Enemigo Single Vineyard Chacayes 2014&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Gran Enemigo Single Vineyard Gualtallary 2014 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Gran Enemigo Single Vineyard Chacayes 2014&quot;,&quot;id&quot;:&quot;212&quot;,&quot;price&quot;:&quot;796.41&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Argentina&quot;,&quot;position&quot;:2,&quot;brand&quot;:&quot;Bodega Aleanna&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-gran-enemigo-single-vineyard-chacayes' }});" href="https://www.divinho.com.br/vinho-gran-enemigo-single-vineyard-chacayes"
-                                        class="product photo product-item-photo">
-                                        <div class="product__photo">
-                                            
-
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/g/r/gran_enemigo_chacayes_single_vineyard_.png"
-    width=""
-    height=""
-    alt="Garrafa de Vinho Gran Enemigo Chacayes Single Vineyard 2014" /></span>                                        </div>
-                                    </a>
-
-                                    <div class="product__content">
-                                        <a class="product-item-link"
-                                            title="Vinho&#x20;Gran&#x20;Enemigo&#x20;Single&#x20;Vineyard&#x20;Chacayes&#x20;2014"
-                                            href="https://www.divinho.com.br/vinho-gran-enemigo-single-vineyard-chacayes">
-                                            <h4 class="product__title">Vinho Gran Enemigo Single Vineyard Chacayes 2014</h4>
-                                        </a>
-
-                                        
-<div class="product__pais">
-    <span>Argentina</span>
-</div>
-
-                                                                                    <form data-role="tocart-form"
-                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZ3Jhbi1lbmVtaWdvLXNpbmdsZS12aW5leWFyZC1ndWFsdGFsbGFyeQ%2C%2C/product/212/"
-                                                method="post">
-                                                <input type="hidden" name="product"
-                                                    value="212">
-                                                <input type="hidden"
-                                                    name="uenc"
-                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZ3Jhbi1lbmVtaWdvLXNpbmdsZS12aW5leWFyZC1ndWFsdGFsbGFyeQ,,">
-                                                                                                <input name="form_key" type="hidden" value="w3kfAODKqEqx8o1c" />                                                <div class="product__buy">
-                                                    <div class="product__price">
-                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="212" data-price-box="product-id-212">
-   <div class="price__regular"><br></div>
-    <div class="price__sale">
-        
-
-<span class="price-container price-final_price&#x20;tax&#x20;weee"
-        >
-        <span  id="product-price-212"                data-price-amount="796.41"
-        data-price-type="finalPrice"
-        class="price-wrapper "
-    ><span class="price">R$796,41</span></span>
-        </span>
-    </div>
-
-</div>                                                    </div>
-                                                    <div class="product__quantity">
-                                                        <div class="custom-number">
-                                                            <input type="number" name="qty"
-                                                                id="qty212"
-                                                                maxlength="12" min="1" minlenght="1" value="1"
-                                                                title="Qtd"
-                                                                class="qty"
-                                                                data-validate="null" />
-                                                            <div class="custom-number-button custom-number-button--up">+
-                                                            </div>
-                                                            <div class="custom-number-button custom-number-button--down">-
-                                                            </div><button class="action tocart btn btn--input"
-                                                                type="submit"><i class="fas fa-shopping-cart"></i></button>
-                                                        </div>
-                                                                                                                    <a href="#"
-                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":212,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZ3Jhbi1lbmVtaWdvLXNpbmdsZS12aW5leWFyZC1ndWFsdGFsbGFyeQ,,"}}'
-                                                                class="action towishlist product__wishlist"
-                                                                data-action="add-to-wishlist"
-                                                                title="Adicionar&#x20;&#xE0;&#x20;lista&#x20;de&#x20;desejos">
-                                                                <i class="far fa-heart"></i>
-                                                            </a>
-                                                                                                            </div>
-                                                </div>
-                                                <div class="actions-primary">
-                                                                    <div class="installment">
-            Em até <span>3x de R$265,47 s/ juros</span>        </div>
-                                                        <button type="submit"
-                                                        title="Adicionar ao Carrinho"
-                                                        class="action tocart primary btn btn--product">
-                                                        <span>Adicionar ao Carrinho</span>
-                                                    </button>
-                                                </div>
-                                            </form>
-                                                                            </div>
-                                </div>
-                            </div>
-                                                                                                                                                                            
-                        
-                                                <div class="col-md-3 mb-2 product product-item item" style="display: none;">
-                                                            <div class="box-product product-item-info related-available"
-                                    data-product-id="427">
-                                    <!-- related_products_list-->
-                                    
-                                    
-    <div class="product__bandeira">
-        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/ar.png" alt="Argentina" title="Argentina">
-    </div>
-
-                                    
-
-        <div class="product__pontuacao">
-                                            <div class="pontuacao">
-                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Decanter">De</div>
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Enthusiast">WE</div>
                     <div class="pontos">94</div>
                 </div>
                     </div>
 
-                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho Gran Enemigo 2017&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho Gran Enemigo Single Vineyard Gualtallary 2014 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho Gran Enemigo 2017&quot;,&quot;id&quot;:&quot;427&quot;,&quot;price&quot;:&quot;773.57&quot;,&quot;category&quot;:&quot;Recomenda\u00e7\u00e3o&quot;,&quot;position&quot;:3,&quot;brand&quot;:&quot;Bodega Aleanna&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-gran-enemigo' }});" href="https://www.divinho.com.br/vinho-gran-enemigo"
+                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Dow&#039;s 30 Anos&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho do Porto Dow&#039;s Vintage 2016 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Dow&#039;s 30 Anos&quot;,&quot;id&quot;:&quot;618&quot;,&quot;price&quot;:&quot;1637.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:1,&quot;brand&quot;:&quot;Symington Family Estates&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-dows-30-anos' }});" href="https://www.divinho.com.br/vinho-do-porto-dows-30-anos"
                                         class="product photo product-item-photo">
                                         <div class="product__photo">
                                             
 
-<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/g/r/gran_enemigo.png"
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/v/i/vinho-do-porto-dows-30-anos_3.png"
     width=""
     height=""
-    alt="Garrafa de Vinho Gran Enemigo 2017" /></span>                                        </div>
+    alt="Garrafa de Vinho do Porto Dow&#039;s 30 Anos" /></span>                                        </div>
                                     </a>
 
                                     <div class="product__content">
                                         <a class="product-item-link"
-                                            title="Vinho&#x20;Gran&#x20;Enemigo&#x20;2017"
-                                            href="https://www.divinho.com.br/vinho-gran-enemigo">
-                                            <h4 class="product__title">Vinho Gran Enemigo 2017</h4>
+                                            title="Vinho&#x20;do&#x20;Porto&#x20;Dow&#x27;s&#x20;30&#x20;Anos"
+                                            href="https://www.divinho.com.br/vinho-do-porto-dows-30-anos">
+                                            <h4 class="product__title">Vinho do Porto Dow&#039;s 30 Anos</h4>
                                         </a>
 
                                         
 <div class="product__pais">
-    <span>Argentina</span>
+    <span>Portugal</span>
 </div>
 
                                                                                     <form data-role="tocart-form"
-                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZ3Jhbi1lbmVtaWdvLXNpbmdsZS12aW5leWFyZC1ndWFsdGFsbGFyeQ%2C%2C/product/427/"
+                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZG8tcG9ydG8tZG93cy12aW50YWdlLTIwMTY%2C/product/618/"
                                                 method="post">
                                                 <input type="hidden" name="product"
-                                                    value="427">
+                                                    value="618">
                                                 <input type="hidden"
                                                     name="uenc"
-                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZ3Jhbi1lbmVtaWdvLXNpbmdsZS12aW5leWFyZC1ndWFsdGFsbGFyeQ,,">
-                                                                                                <input name="form_key" type="hidden" value="w3kfAODKqEqx8o1c" />                                                <div class="product__buy">
+                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZG8tcG9ydG8tZG93cy12aW50YWdlLTIwMTY,">
+                                                                                                <input name="form_key" type="hidden" value="qe2Dc77WLTpLDVpV" />                                                <div class="product__buy">
                                                     <div class="product__price">
-                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="427" data-price-box="product-id-427">
+                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="618" data-price-box="product-id-618">
    <div class="price__regular"><br></div>
     <div class="price__sale">
         
 
 <span class="price-container price-final_price&#x20;tax&#x20;weee"
         >
-        <span  id="product-price-427"                data-price-amount="773.57"
+        <span  id="product-price-618"                data-price-amount="1637"
         data-price-type="finalPrice"
         class="price-wrapper "
-    ><span class="price">R$773,57</span></span>
+    ><span class="price">R$1.637,00</span></span>
         </span>
     </div>
 
@@ -5277,7 +5070,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                     <div class="product__quantity">
                                                         <div class="custom-number">
                                                             <input type="number" name="qty"
-                                                                id="qty427"
+                                                                id="qty618"
                                                                 maxlength="12" min="1" minlenght="1" value="1"
                                                                 title="Qtd"
                                                                 class="qty"
@@ -5289,7 +5082,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                                 type="submit"><i class="fas fa-shopping-cart"></i></button>
                                                         </div>
                                                                                                                     <a href="#"
-                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":427,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZ3Jhbi1lbmVtaWdvLXNpbmdsZS12aW5leWFyZC1ndWFsdGFsbGFyeQ,,"}}'
+                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":618,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZG8tcG9ydG8tZG93cy12aW50YWdlLTIwMTY,"}}'
                                                                 class="action towishlist product__wishlist"
                                                                 data-action="add-to-wishlist"
                                                                 title="Adicionar&#x20;&#xE0;&#x20;lista&#x20;de&#x20;desejos">
@@ -5299,7 +5092,217 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                                 </div>
                                                 <div class="actions-primary">
                                                                     <div class="installment">
-            Em até <span>3x de R$257,86 s/ juros</span>        </div>
+            Em até <span>3x de R$545,67 s/ juros</span>        </div>
+                                                        <button type="submit"
+                                                        title="Adicionar ao Carrinho"
+                                                        class="action tocart primary btn btn--product">
+                                                        <span>Adicionar ao Carrinho</span>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                                                                                                                                            
+                        
+                                                <div class="col-md-3 mb-2 product product-item item" style="display: none;">
+                                                            <div class="box-product product-item-info related-available"
+                                    data-product-id="619">
+                                    <!-- related_products_list-->
+                                    
+                                    
+    <div class="product__bandeira">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
+    </div>
+
+                                    
+
+        <div class="product__pontuacao">
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Enthusiast">WE</div>
+                    <div class="pontos">90</div>
+                </div>
+                    </div>
+
+                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Dow&#039;s 20 Anos&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho do Porto Dow&#039;s Vintage 2016 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Dow&#039;s 20 Anos&quot;,&quot;id&quot;:&quot;619&quot;,&quot;price&quot;:&quot;852.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:2,&quot;brand&quot;:&quot;Symington Family Estates&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-dows-20-anos' }});" href="https://www.divinho.com.br/vinho-do-porto-dows-20-anos"
+                                        class="product photo product-item-photo">
+                                        <div class="product__photo">
+                                            
+
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/d/o/dows_20_anos.png"
+    width=""
+    height=""
+    alt="Garrafa de Vinho do Porto Dow&#039;s 20 Anos" /></span>                                        </div>
+                                    </a>
+
+                                    <div class="product__content">
+                                        <a class="product-item-link"
+                                            title="Vinho&#x20;do&#x20;Porto&#x20;Dow&#x27;s&#x20;20&#x20;Anos"
+                                            href="https://www.divinho.com.br/vinho-do-porto-dows-20-anos">
+                                            <h4 class="product__title">Vinho do Porto Dow&#039;s 20 Anos</h4>
+                                        </a>
+
+                                        
+<div class="product__pais">
+    <span>Portugal</span>
+</div>
+
+                                                                                    <form data-role="tocart-form"
+                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZG8tcG9ydG8tZG93cy12aW50YWdlLTIwMTY%2C/product/619/"
+                                                method="post">
+                                                <input type="hidden" name="product"
+                                                    value="619">
+                                                <input type="hidden"
+                                                    name="uenc"
+                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZG8tcG9ydG8tZG93cy12aW50YWdlLTIwMTY,">
+                                                                                                <input name="form_key" type="hidden" value="qe2Dc77WLTpLDVpV" />                                                <div class="product__buy">
+                                                    <div class="product__price">
+                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="619" data-price-box="product-id-619">
+   <div class="price__regular"><br></div>
+    <div class="price__sale">
+        
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-619"                data-price-amount="852"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$852,00</span></span>
+        </span>
+    </div>
+
+</div>                                                    </div>
+                                                    <div class="product__quantity">
+                                                        <div class="custom-number">
+                                                            <input type="number" name="qty"
+                                                                id="qty619"
+                                                                maxlength="12" min="1" minlenght="1" value="1"
+                                                                title="Qtd"
+                                                                class="qty"
+                                                                data-validate="null" />
+                                                            <div class="custom-number-button custom-number-button--up">+
+                                                            </div>
+                                                            <div class="custom-number-button custom-number-button--down">-
+                                                            </div><button class="action tocart btn btn--input"
+                                                                type="submit"><i class="fas fa-shopping-cart"></i></button>
+                                                        </div>
+                                                                                                                    <a href="#"
+                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":619,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZG8tcG9ydG8tZG93cy12aW50YWdlLTIwMTY,"}}'
+                                                                class="action towishlist product__wishlist"
+                                                                data-action="add-to-wishlist"
+                                                                title="Adicionar&#x20;&#xE0;&#x20;lista&#x20;de&#x20;desejos">
+                                                                <i class="far fa-heart"></i>
+                                                            </a>
+                                                                                                            </div>
+                                                </div>
+                                                <div class="actions-primary">
+                                                                    <div class="installment">
+            Em até <span>3x de R$284,00 s/ juros</span>        </div>
+                                                        <button type="submit"
+                                                        title="Adicionar ao Carrinho"
+                                                        class="action tocart primary btn btn--product">
+                                                        <span>Adicionar ao Carrinho</span>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                                                                                                                                            
+                        
+                                                <div class="col-md-3 mb-2 product product-item item" style="display: none;">
+                                                            <div class="box-product product-item-info related-available"
+                                    data-product-id="620">
+                                    <!-- related_products_list-->
+                                    
+                                    
+    <div class="product__bandeira">
+        <img src="https://static.divinho.com.br/static/version1636382917/frontend/Opt2Flow/Divinho/pt_BR/images/bandeiras/pt.png" alt="Portugal" title="Portugal">
+    </div>
+
+                                    
+
+        <div class="product__pontuacao">
+                                            <div class="pontuacao">
+                    <div class="critico text-uppercase"  data-toggle="tooltip" data-placement="right" title="" data-original-title="Wine Spectator">WS</div>
+                    <div class="pontos">90</div>
+                </div>
+                    </div>
+
+                                    <a onclick="window.dataLayer.push({&quot;event&quot;:&quot;productClick&quot;,&quot;eventLabel&quot;:&quot;Vinho do Porto Dow&#039;s 10 Anos&quot;,&quot;ecommerce&quot;:{&quot;click&quot;:{&quot;actionField&quot;:{&quot;list&quot;:&quot;Vinho do Porto Dow&#039;s Vintage 2016 Produtos Relacionados&quot;},&quot;products&quot;:[{&quot;name&quot;:&quot;Vinho do Porto Dow&#039;s 10 Anos&quot;,&quot;id&quot;:&quot;620&quot;,&quot;price&quot;:&quot;417.00&quot;,&quot;category&quot;:&quot;Pa\u00edses\/Portugal&quot;,&quot;position&quot;:3,&quot;brand&quot;:&quot;Symington Family Estates&quot;}]}}, 'eventCallback': function() { document.location = 'https://www.divinho.com.br/vinho-do-porto-dows-10-anos' }});" href="https://www.divinho.com.br/vinho-do-porto-dows-10-anos"
+                                        class="product photo product-item-photo">
+                                        <div class="product__photo">
+                                            
+
+<img class="product-image-photo"     src="https://images.divinho.com.br/catalog/product/cache/086f37222cd96c7513b68edd261f5551/d/o/dows_10_anos.png"
+    width=""
+    height=""
+    alt="Garrafa de Vinho do Porto Dow&#039;s 10 Anos" /></span>                                        </div>
+                                    </a>
+
+                                    <div class="product__content">
+                                        <a class="product-item-link"
+                                            title="Vinho&#x20;do&#x20;Porto&#x20;Dow&#x27;s&#x20;10&#x20;Anos"
+                                            href="https://www.divinho.com.br/vinho-do-porto-dows-10-anos">
+                                            <h4 class="product__title">Vinho do Porto Dow&#039;s 10 Anos</h4>
+                                        </a>
+
+                                        
+<div class="product__pais">
+    <span>Portugal</span>
+</div>
+
+                                                                                    <form data-role="tocart-form"
+                                                action="https://www.divinho.com.br/checkout/cart/add/uenc/aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZG8tcG9ydG8tZG93cy12aW50YWdlLTIwMTY%2C/product/620/"
+                                                method="post">
+                                                <input type="hidden" name="product"
+                                                    value="620">
+                                                <input type="hidden"
+                                                    name="uenc"
+                                                    value="aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZG8tcG9ydG8tZG93cy12aW50YWdlLTIwMTY,">
+                                                                                                <input name="form_key" type="hidden" value="qe2Dc77WLTpLDVpV" />                                                <div class="product__buy">
+                                                    <div class="product__price">
+                                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="620" data-price-box="product-id-620">
+   <div class="price__regular"><br></div>
+    <div class="price__sale">
+        
+
+<span class="price-container price-final_price&#x20;tax&#x20;weee"
+        >
+        <span  id="product-price-620"                data-price-amount="417"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+    ><span class="price">R$417,00</span></span>
+        </span>
+    </div>
+
+</div>                                                    </div>
+                                                    <div class="product__quantity">
+                                                        <div class="custom-number">
+                                                            <input type="number" name="qty"
+                                                                id="qty620"
+                                                                maxlength="12" min="1" minlenght="1" value="1"
+                                                                title="Qtd"
+                                                                class="qty"
+                                                                data-validate="null" />
+                                                            <div class="custom-number-button custom-number-button--up">+
+                                                            </div>
+                                                            <div class="custom-number-button custom-number-button--down">-
+                                                            </div><button class="action tocart btn btn--input"
+                                                                type="submit"><i class="fas fa-shopping-cart"></i></button>
+                                                        </div>
+                                                                                                                    <a href="#"
+                                                                data-post='{"action":"https:\/\/www.divinho.com.br\/wishlist\/index\/add\/","data":{"product":620,"uenc":"aHR0cHM6Ly93d3cuZGl2aW5oby5jb20uYnIvdmluaG8tZG8tcG9ydG8tZG93cy12aW50YWdlLTIwMTY,"}}'
+                                                                class="action towishlist product__wishlist"
+                                                                data-action="add-to-wishlist"
+                                                                title="Adicionar&#x20;&#xE0;&#x20;lista&#x20;de&#x20;desejos">
+                                                                <i class="far fa-heart"></i>
+                                                            </a>
+                                                                                                            </div>
+                                                </div>
+                                                <div class="actions-primary">
+                                                                    <div class="installment">
+            Em até <span>3x de R$139,00 s/ juros</span>        </div>
                                                         <button type="submit"
                                                         title="Adicionar ao Carrinho"
                                                         class="action tocart primary btn btn--product">
@@ -5524,7 +5527,7 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                                     </div>
                 <div class="wbcom-fields">
                     <div class="wbcom-fields-contents">
-                        <input name="form_key" type="hidden" value="w3kfAODKqEqx8o1c">
+                        <input name="form_key" type="hidden" value="qe2Dc77WLTpLDVpV">
                         <input type="text" placeholder="Nome" name="name" required style="background-color: #fff !important;">
                         <input type="email" placeholder="E-mail" name="email" required style="background-color: #fff !important;">
                         <input type="hidden" name="message" value="Olá, gostaria de fazer um pedido.">
@@ -5578,5 +5581,5 @@ Para a Wine Spectator, trata-se do líder de qualidade na Argentina e, para Robe
                 wpgtm.trackPromotion(wpGtmOptions);
             });
     </script>
-    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-15ce119d71e6a8d24c8","applicationID":"798446581","transactionName":"blMGbUdSWRFQBhBcC1cZJVpBWlgMHhUFUgFmVQVaXVY=","queueTime":0,"applicationTime":74,"atts":"QhQFGw9ISh8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-15ce119d71e6a8d24c8","applicationID":"798446581","transactionName":"blMGbUdSWRFQBhBcC1cZJVpBWlgMHhUFUgFmVQVaXVY=","queueTime":0,"applicationTime":145,"atts":"QhQFGw9ISh8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>
