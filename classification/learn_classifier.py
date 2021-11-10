@@ -5,7 +5,7 @@ from classification.feature_extractors import MostFrequentWordsExtractor, DocFre
 from classification.helpers.corpus_loader import load_documents, load_corpus
 from classification.helpers.document import DocumentClass
 from classification.helpers.utils import ClassifierType
-from classification.mlp import DocumentClassifier
+from classification.generic_classifier import DocumentClassifier
 
 
 def classify_crawler_samples(clf: DocumentClassifier, folder: str):
