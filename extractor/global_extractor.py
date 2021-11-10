@@ -88,8 +88,7 @@ def global_extract(big_soup):
         })
 
 def main():
-    # 'divinho', 'divvino', 'evino', 'grandcru', 'mistral', 'superadega', 'viavini',
-    domains = ['adegamais', 'vivavinho', 'wine']
+    domains = ['adegamais', 'divinho', 'divvino', 'evino', 'grandcru', 'mistral', 'superadega', 'viavini',  'vivavinho', 'wine']
     for domain in domains:
         extract(domain, 'global', global_extract)
 
