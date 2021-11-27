@@ -1,6 +1,6 @@
 import re
 import ssl
-from extractor import extract
+from extractor import extract, extract_positive_samples, extract_classifier_results
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -10,7 +10,7 @@ def mistral_extract(soup):
         name = None
         name_marker = soup.find('h1', attrs={'class': 'name-wine-product-new'})
         if (name_marker):
-            name = name_marker.text
+            name = str(name_marker.text).replace('\n', '').strip()
 
         wine_type = None
         wine_type_marker = soup.find('p', text=re.compile('.*Tipo.*', re.DOTALL))
@@ -64,7 +64,10 @@ def mistral_extract(soup):
 
 
 def main():
-    extract('mistral', 'specific', mistral_extract)
+    # extract('mistral', 'specific', mistral_extract)
+    # pages = [12, 19, 85, 137, 205, 244, 418, 440, 456, 861]
+    # extract_positive_samples('mistral', pages, mistral_extract)
+    extract_classifier_results('mistral', mistral_extract)
 
 
 if __name__ == '__main__':

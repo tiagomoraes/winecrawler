@@ -1,6 +1,6 @@
 import re
 import ssl
-from extractor import extract
+from extractor import extract, extract_positive_samples, extract_classifier_results
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -15,9 +15,9 @@ def viavini_extract(big_soup):
             name = name_marker.text
 
         wine_type = None
-        wine_type_marker = soup.find('h6', text=re.compile('.*Tipo.*', re.DOTALL))
+        wine_type_marker = big_soup.find('span', attrs={'class': 'tipo-Vinho'})
         if wine_type_marker:
-            wine_type = wine_type_marker.findNext('p').text
+            wine_type = str(wine_type_marker.next).replace(' | ', '')
 
         grape = None
         grape_marker = soup.find('h6', text=re.compile('.*Uva.*', re.DOTALL))
@@ -68,7 +68,11 @@ def viavini_extract(big_soup):
 
 
 def main():
-    extract('viavini', 'specific', viavini_extract)
+    # extract('viavini', 'specific', viavini_extract)
+    # pages = [49, 69, 91, 99, 100, 102, 104, 117, 503, 525]
+    # extract_positive_samples('viavini', pages, viavini_extract)
+
+    extract_classifier_results('viavini', viavini_extract)
 
 
 if __name__ == '__main__':

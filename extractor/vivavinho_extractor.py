@@ -1,6 +1,6 @@
 import re
 import ssl
-from extractor import extract
+from extractor import extract, extract_positive_samples, extract_classifier_results
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -63,7 +63,11 @@ def vivavinho_extract(soup):
 
 
 def main():
-    extract('vivavinho', 'specific', vivavinho_extract)
+    # extract('vivavinho', 'specific', vivavinho_extract)
+    # pages = [61, 160, 166, 167, 177, 252, 255, 331, 349, 738]
+    # extract_positive_samples('vivavinho', pages, vivavinho_extract)
+
+    extract_classifier_results('vivavinho', vivavinho_extract)
 
 
 if __name__ == '__main__':

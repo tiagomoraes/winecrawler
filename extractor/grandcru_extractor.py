@@ -1,6 +1,6 @@
 import re
 import ssl
-from extractor import extract
+from extractor import extract, extract_positive_samples, extract_classifier_results
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -64,7 +64,10 @@ def grandcru_extract(soup):
 
 
 def main():
-    extract('grandcru', 'specific', grandcru_extract)
+    # extract('grandcru', 'specific', grandcru_extract)
+    # pages = [86, 127, 168, 216, 281, 432, 542, 687, 800, 898]
+    # extract_positive_samples('grandcru', pages, grandcru_extract)
+    extract_classifier_results('grandcru', grandcru_extract)
 
 
 if __name__ == '__main__':

@@ -1,6 +1,6 @@
 import re
 import ssl
-from extractor import extract
+from extractor import extract, extract_positive_samples, extract_classifier_results
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -63,7 +63,10 @@ def evino_extract(soup):
 
 
 def main():
-    extract('evino', 'specific', evino_extract)
+    # extract('evino', 'specific', evino_extract)
+    # pages = [10, 200, 300, 385, 387, 434, 530, 667, 869, 906]
+    # extract_positive_samples('evino', pages, evino_extract)
+    extract_classifier_results('evino', evino_extract)
 
 
 if __name__ == '__main__':

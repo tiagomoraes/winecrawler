@@ -1,6 +1,6 @@
 import re
 import ssl
-from extractor import extract
+from extractor import extract, extract_positive_samples, extract_classifier_results
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -63,7 +63,10 @@ def superadega_extract(soup):
 
 
 def main():
-    extract('superadega', 'specific', superadega_extract)
+    # extract('superadega', 'specific', superadega_extract)
+    # pages = [13, 114, 128, 137, 160, 164, 165, 170, 351, 508]
+    # extract_positive_samples('superadega', pages, superadega_extract)
+    extract_classifier_results('superadega', superadega_extract)
 
 
 if __name__ == '__main__':

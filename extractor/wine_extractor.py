@@ -1,7 +1,7 @@
 import re
 import ssl
 
-from extractor import extract
+from extractor import extract, extract_positive_samples, extract_classifier_results
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -65,7 +65,11 @@ def wine_extract(soup):
 
 
 def main():
-    extract('wine', 'specific', wine_extract)
+    # extract('wine', 'specific', wine_extract)
+    # pages = [101, 124, 131, 140, 239, 255, 260, 310, 672, 746]
+    # extract_positive_samples('wine', pages, wine_extract)
+
+    extract_classifier_results('wine', wine_extract)
 
 
 if __name__ == '__main__':

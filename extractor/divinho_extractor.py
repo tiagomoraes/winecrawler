@@ -1,5 +1,5 @@
 import ssl
-from extractor import extract
+from extractor import extract, extract_positive_samples, extract_classifier_results
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -63,7 +63,11 @@ def divinho_extract(soup):
 
 
 def main():
-    extract('divinho', 'specific', divinho_extract)
+    # extract('divinho', 'specific', divinho_extract)
+    extract_classifier_results('divinho', divinho_extract)
+
+    # pages = [10, 11, 29, 70, 102, 103, 116, 123, 189, 231]
+    # extract_positive_samples('divinho', pages, divinho_extract)
 
 
 if __name__ == '__main__':

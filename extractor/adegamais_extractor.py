@@ -1,6 +1,6 @@
 import re
 import ssl
-from extractor import extract
+from extractor import extract, extract_positive_samples, extract_classifier_results
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -10,7 +10,7 @@ def adegamais_extract(soup):
         name = None
         name_marker = soup.find('h1', attrs={'class': 'product-title'})
         if (name_marker):
-            name = name_marker.text
+            name = str(name_marker.text).replace('\n', '').replace('\t', '')
 
         wine_type = None
         wine_type_marker = soup.find('strong', text=re.compile('.*Tipo.*', re.DOTALL))
@@ -64,7 +64,10 @@ def adegamais_extract(soup):
 
 
 def main():
-    extract('adegamais', 'specific', adegamais_extract)
+    # extract('adegamais', 'specific', adegamais_extract)
+    extract_classifier_results('adegamais', adegamais_extract)
+    # pages = [3, 5, 10, 105, 200, 300, 370, 400, 420, 750]
+    # extract_positive_samples('adegamais', pages, adegamais_extract)
 
 
 if __name__ == '__main__':
