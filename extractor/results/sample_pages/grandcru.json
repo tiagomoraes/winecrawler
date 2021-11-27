@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Quadrifolia Douro Branco 2019 750 mL",
+    "wine_type": "Branco",
+    "grape": "50% Moscatel,  25% Rabigato, 15% C\u00f3dega  e 10%  Malvasia Fina ",
+    "country": "Portugal",
+    "classification": null,
+    "alcohol_content": "12.5%",
+    "year": "2019"
+  },
+  {
+    "name": "Zuccardi Q Malbec 2019 750 mL",
+    "wine_type": "Tinto",
+    "grape": "100% Malbec",
+    "country": "Argentina",
+    "classification": null,
+    "alcohol_content": "14%",
+    "year": "2019"
+  },
+  {
+    "name": "Churchills Estate Douro Branco 2018 750 mL",
+    "wine_type": "Branco",
+    "grape": "70% Rabigato, 30% Viosinho",
+    "country": "Portugal",
+    "classification": null,
+    "alcohol_content": "13%",
+    "year": "2018"
+  },
+  {
+    "name": "Quadrifolia Douro Tinto 2019 750 mL",
+    "wine_type": "Tinto",
+    "grape": "Blend de v\u00e1rias castas, maioritariamente Touriga Franca e Tinta Roriz",
+    "country": "Portugal",
+    "classification": null,
+    "alcohol_content": "13.5%",
+    "year": "2019"
+  },
+  {
+    "name": "Vistamar Brisa Carmenere 2018 750 mL",
+    "wine_type": "Tinto",
+    "grape": "Carm\u00e9nere",
+    "country": "Chile",
+    "classification": null,
+    "alcohol_content": "13%",
+    "year": "2018"
+  },
+  {
+    "name": "Pulenta Estate IX Pinot Noir 2019 750 mL",
+    "wine_type": "Tinto",
+    "grape": "100% Pinot Noir",
+    "country": "Argentina",
+    "classification": null,
+    "alcohol_content": "15%",
+    "year": "2019"
+  },
+  {
+    "name": "Ricossa Barbera d\u00b4Asti DOCG 2019 750 mL",
+    "wine_type": "Tinto",
+    "grape": "Barbera",
+    "country": "It\u00e1lia",
+    "classification": null,
+    "alcohol_content": "13.5%",
+    "year": "2019"
+  },
+  {
+    "name": "Champagne Moet Chandon Imperial Brut 750ml",
+    "wine_type": "Espumante",
+    "grape": "Pinot Noir, Pinot Meunier e Chardonnay",
+    "country": "Fran\u00e7a",
+    "classification": null,
+    "alcohol_content": null,
+    "year": null
+  },
+  {
+    "name": "Cobos Cocodrilo Corte 2017 750 mL",
+    "wine_type": "Tinto",
+    "grape": "82% Cabernet Sauvignon, 9% Malbec, 5% Petit Verdot e 4% Merlot",
+    "country": "Argentina",
+    "classification": null,
+    "alcohol_content": "15%",
+    "year": "2017"
+  },
+  {
+    "name": "Delas Freres Muscat Pastourelle 2017 750 mL",
+    "wine_type": "Sobremesa",
+    "grape": "Moscatel",
+    "country": "Fran\u00e7a",
+    "classification": null,
+    "alcohol_content": "14%",
+    "year": "2017"
+  }
+]

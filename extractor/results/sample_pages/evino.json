@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Vi\u00f1ape\u00f1a Tempranillo ",
+    "wine_type": "Tinto",
+    "grape": "Tempranillo",
+    "country": "Espanha",
+    "classification": null,
+    "alcohol_content": "12,0%",
+    "year": null
+  },
+  {
+    "name": "Mazzei Fortior Vino Rosso 2019",
+    "wine_type": "Tinto",
+    "grape": "Nero d'Avola, Sangiovese, Merlot, Petit Verdot",
+    "country": "It\u00e1lia",
+    "classification": null,
+    "alcohol_content": "13,5%",
+    "year": "2019"
+  },
+  {
+    "name": "Mal Arreado White Blend 2020",
+    "wine_type": "Branco",
+    "grape": "Ugniblanc, Chenin Blanc, Pedro Xim\u00e9nez",
+    "country": "Argentina",
+    "classification": null,
+    "alcohol_content": "12,9%",
+    "year": "2020"
+  },
+  {
+    "name": "Marqu\u00e9s de Ardoza Blanco",
+    "wine_type": "Branco",
+    "grape": "V\u00e1rias uvas",
+    "country": "Espanha",
+    "classification": null,
+    "alcohol_content": "11,0%",
+    "year": null
+  },
+  {
+    "name": "Rocas Viejas White Blend 2021",
+    "wine_type": "Branco",
+    "grape": "V\u00e1rias uvas",
+    "country": "Argentina",
+    "classification": null,
+    "alcohol_content": "11,7%",
+    "year": "2021"
+  },
+  {
+    "name": "Gal\u00e0 Vino Rosso",
+    "wine_type": "Tinto",
+    "grape": "V\u00e1rias uvas",
+    "country": "It\u00e1lia",
+    "classification": null,
+    "alcohol_content": "12,0%",
+    "year": null
+  },
+  {
+    "name": "Anciano Gran Reserva 10 years Valdepe\u00f1as DOP 2009",
+    "wine_type": "Tinto",
+    "grape": "Tempranillo",
+    "country": "Espanha",
+    "classification": null,
+    "alcohol_content": "13%",
+    "year": "2009"
+  },
+  {
+    "name": "Alice in Grapeland Pale Ros\u00e9",
+    "wine_type": "Ros\u00e9",
+    "grape": "Bobal",
+    "country": "Espanha",
+    "classification": null,
+    "alcohol_content": "11,8%",
+    "year": null
+  },
+  {
+    "name": "Concha y Toro Exportacion Selecto Carm\u00e9n\u00e8re 2020",
+    "wine_type": "Tinto",
+    "grape": "Carm\u00e9n\u00e8re",
+    "country": "Chile",
+    "classification": null,
+    "alcohol_content": "12,5%",
+    "year": "2020"
+  },
+  {
+    "name": "Fauna Winemaker Selection Red Blend ",
+    "wine_type": "Tinto",
+    "grape": "V\u00e1rias uvas",
+    "country": "Chile",
+    "classification": null,
+    "alcohol_content": "12,5%",
+    "year": null
+  }
+]

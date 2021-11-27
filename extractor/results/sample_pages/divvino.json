@@ -1,0 +1,92 @@
+[
+  {
+    "name": "carta vieja chardonnay",
+    "wine_type": "Branco",
+    "grape": "Chardonnay",
+    "country": "Chile",
+    "classification": "Seco",
+    "alcohol_content": "13,50%",
+    "year": "2020"
+  },
+  {
+    "name": "ruta 90 chardonnay",
+    "wine_type": "Branco",
+    "grape": "Chardonnay",
+    "country": "Chile",
+    "classification": "Seco",
+    "alcohol_content": "13,00%",
+    "year": "2019"
+  },
+  {
+    "name": "phebus chardonnay",
+    "wine_type": "Branco",
+    "grape": "Chardonnay",
+    "country": "Argentina",
+    "classification": "Seco",
+    "alcohol_content": "13,03%",
+    "year": "2020"
+  },
+  {
+    "name": "monte da ravasqueira premium tinto",
+    "wine_type": "Tinto",
+    "grape": "Syrah",
+    "country": "Portugal",
+    "classification": "Seco",
+    "alcohol_content": "14,50%",
+    "year": "2014"
+  },
+  {
+    "name": "champagne mo\u00ebt & chandon brut imp\u00e9rial",
+    "wine_type": "Branco",
+    "grape": "Pinot Noir",
+    "country": "Fran\u00e7a",
+    "classification": "Brut",
+    "alcohol_content": "12,00%",
+    "year": null
+  },
+  {
+    "name": "vino tinto glorioso selecci\u00f3n especial crianza rioja d.o.ca",
+    "wine_type": "Tinto",
+    "grape": "Tempranillo",
+    "country": "Espanha",
+    "classification": null,
+    "alcohol_content": "13,60%",
+    "year": "2016"
+  },
+  {
+    "name": "salton classic tannat",
+    "wine_type": "Tinto",
+    "grape": "Tannat",
+    "country": "Brasil",
+    "classification": "Seco",
+    "alcohol_content": null,
+    "year": null
+  },
+  {
+    "name": "hoya de cade\u00f1as reserva tempranillo",
+    "wine_type": "Tinto",
+    "grape": "Tempranillo",
+    "country": "Espanha",
+    "classification": "Seco",
+    "alcohol_content": "12,50%",
+    "year": "2013"
+  },
+  {
+    "name": "vinho espanhol eguren ugarde mercedes eguren blend",
+    "wine_type": "Tinto",
+    "grape": "Tempranillo",
+    "country": "Espanha",
+    "classification": "Seco",
+    "alcohol_content": "14,00%",
+    "year": null
+  },
+  {
+    "name": "espumante cavalieri reali ros\u00e9 brut",
+    "wine_type": "Ros\u00e9",
+    "grape": "Sangiovese",
+    "country": "It\u00e1lia",
+    "classification": "Brut",
+    "alcohol_content": "11%",
+    "year": null
+  }
+]

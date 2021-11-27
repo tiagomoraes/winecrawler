@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Vinho Albia Ricasoli Rosato Toscano IGT",
+    "wine_type": "Vinho Ros\u00e9",
+    "grape": "Sangiovese, Merlot",
+    "country": "It\u00e1lia",
+    "classification": null,
+    "alcohol_content": "13,5\u00ba",
+    "year": "2020"
+  },
+  {
+    "name": "Vinho Albia Ricasoli Bianco Toscano IGT",
+    "wine_type": "Vinho Branco",
+    "grape": "Chardonnay, Malvasia Bianca",
+    "country": "It\u00e1lia",
+    "classification": null,
+    "alcohol_content": "12,0\u00ba",
+    "year": "2020"
+  },
+  {
+    "name": "Vinho La Vina de Ayer",
+    "wine_type": null,
+    "grape": "Grenache (Garnacha)",
+    "country": "Espanha",
+    "classification": null,
+    "alcohol_content": "14,7\u00ba",
+    "year": "2018"
+  },
+  {
+    "name": "Vinho Clos La Rose St Emilion Grand Cru ",
+    "wine_type": "Vinho Tinto",
+    "grape": "Merlot, Cabernet Franc",
+    "country": "Fran\u00e7a",
+    "classification": null,
+    "alcohol_content": "15,0\u00ba",
+    "year": "2015"
+  },
+  {
+    "name": "Champagne Lanson Black Label Brut",
+    "wine_type": null,
+    "grape": "Pinot Noir, Chardonnay, Pinot Meunier",
+    "country": "Fran\u00e7a",
+    "classification": null,
+    "alcohol_content": "12,5\u00ba",
+    "year": "N/V"
+  },
+  {
+    "name": "Vinho Polkadraai Pinotage",
+    "wine_type": null,
+    "grape": "Pinotage, Merlot",
+    "country": "\u00c1frica do Sul",
+    "classification": null,
+    "alcohol_content": "13,5\u00ba",
+    "year": "2019"
+  },
+  {
+    "name": "Vinho Chablis Calvet",
+    "wine_type": "Vinho Branco",
+    "grape": "Chardonnay",
+    "country": "Fran\u00e7a",
+    "classification": null,
+    "alcohol_content": "12,0\u00ba",
+    "year": "2019"
+  },
+  {
+    "name": "Vinho Casalferro Ricasoli",
+    "wine_type": null,
+    "grape": "Merlot",
+    "country": "It\u00e1lia",
+    "classification": null,
+    "alcohol_content": "14,5\u00ba",
+    "year": "2016"
+  },
+  {
+    "name": "Vinho Castello D Alba Vinhas Velhas",
+    "wine_type": null,
+    "grape": "Touriga Nacional",
+    "country": "Portugal",
+    "classification": null,
+    "alcohol_content": "14,0%",
+    "year": "2017"
+  },
+  {
+    "name": "Vinho Roero Arneis Bianco",
+    "wine_type": null,
+    "grape": "Roero Arneis",
+    "country": "It\u00e1lia",
+    "classification": null,
+    "alcohol_content": "12,5%",
+    "year": "2019"
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "name": "\n\tVinho Tinto Terrunyo Cabernet Sauvignon 2017",
+    "wine_type": "Tinto",
+    "grape": "Cabernet Sauvignon",
+    "country": "Chile",
+    "classification": "Seco",
+    "alcohol_content": "14,4%",
+    "year": "2017"
+  },
+  {
+    "name": "\n\tVinho Branco Casas del Toqui Barrel Series Reserva D.O. Cachapoal Valley Chardonnay 2020",
+    "wine_type": "Branco",
+    "grape": "Chardonnay",
+    "country": "Chile",
+    "classification": "Seco",
+    "alcohol_content": "13,8%",
+    "year": "2020"
+  },
+  {
+    "name": "\n\tVinho Tinto Don Melchor Cabernet Sauvignon 2017",
+    "wine_type": "Tinto",
+    "grape": "Cabernet Franc, Cabernet Sauvignon",
+    "country": "Chile",
+    "classification": "Seco",
+    "alcohol_content": "14,5%",
+    "year": "2017"
+  },
+  {
+    "name": "\n\tVinho Tinto Cartuxa \u00c9vora Colheita 2017",
+    "wine_type": "Tinto",
+    "grape": "Alfrocheiro, Alicante Bouschet, Aragonez, Trincadeira",
+    "country": "Portugal",
+    "classification": null,
+    "alcohol_content": "14,5%",
+    "year": "2017"
+  },
+  {
+    "name": "\n\tVinho Tinto Carmin De Peumo Carmenere 2017",
+    "wine_type": "Tinto",
+    "grape": "Carm\u00e9n\u00e8re",
+    "country": "Chile",
+    "classification": null,
+    "alcohol_content": "14,5%",
+    "year": "2017"
+  },
+  {
+    "name": "\n\tVinho Tinto Don Melchor Cabernet Sauvignon 2017",
+    "wine_type": "Tinto",
+    "grape": "Cabernet Franc, Cabernet Sauvignon",
+    "country": "Chile",
+    "classification": "Seco",
+    "alcohol_content": "14,5%",
+    "year": "2017"
+  },
+  {
+    "name": "\n\tVinho Tinto Herdade do Arrepiado Tradi\u00e7\u00e3o 2017",
+    "wine_type": "Tinto",
+    "grape": "Touriga Nacional",
+    "country": "Portugal",
+    "classification": "Seco",
+    "alcohol_content": "15%",
+    "year": "2017"
+  },
+  {
+    "name": "\n\tVinho Tinto Casa Perini Arbo Cabernet Sauvignon",
+    "wine_type": "Tinto",
+    "grape": "Cabernet Sauvignon",
+    "country": "Brasil",
+    "classification": "Seco",
+    "alcohol_content": "11,5%",
+    "year": null
+  },
+  {
+    "name": "\n\tVinho Espumante Casa Perini Extra Brut Black Edition",
+    "wine_type": "Espumante",
+    "grape": "Chardonnay",
+    "country": "Brasil",
+    "classification": "Extra Brut",
+    "alcohol_content": "12%",
+    "year": null
+  },
+  {
+    "name": "\n\tVinho Branco Cartuxa EA 2020",
+    "wine_type": "Branco",
+    "grape": "Ant\u00e3o Vaz, Arinto, Roupeiro",
+    "country": "Portugal",
+    "classification": "Seco",
+    "alcohol_content": "13%",
+    "year": "2020"
+  }
+]

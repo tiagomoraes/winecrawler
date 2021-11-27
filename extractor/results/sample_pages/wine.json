@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Romeo & Juliet Passione Sentimento I.G.T Veneto Rosso 2017",
+    "wine_type": null,
+    "grape": "Merlot (40.00%), Croatina (30.00%), Corvina (30.00%)",
+    "country": "It\u00e1lia - Veneto",
+    "classification": "Meio Seco/Demi-Sec",
+    "alcohol_content": "14.00% ABV",
+    "year": "2017"
+  },
+  {
+    "name": "Sagrado Reserva Tinto 2016",
+    "wine_type": null,
+    "grape": "Tinta Roriz (5.00%), Vinhas Velhas (45.00%), Touriga Nacional (25.00%), Touriga Franca (25.00%)",
+    "country": "Portugal - Douro",
+    "classification": "Seco",
+    "alcohol_content": "14.00% ABV",
+    "year": "Tinta Roriz (5.00%), Vinhas Velhas (45.00%), Touriga Nacional (25.00%), Touriga Franca (25.00%)"
+  },
+  {
+    "name": "Chono Valle de Itata Single Vineyard Chardonnay 2019",
+    "wine_type": null,
+    "grape": "Chardonnay (100.00%)",
+    "country": "Chile - Valle del Itata",
+    "classification": "Seco",
+    "alcohol_content": "14.50% ABV",
+    "year": "Chardonnay (100.00%)"
+  },
+  {
+    "name": "Estate Malbec 2017",
+    "wine_type": null,
+    "grape": "Malbec",
+    "country": "Argentina - Salta",
+    "classification": "Seco",
+    "alcohol_content": "14.50% ABV",
+    "year": "Malbec"
+  },
+  {
+    "name": "Partridge Reserva Malbec 2018 375 mL",
+    "wine_type": null,
+    "grape": "Malbec",
+    "country": "Argentina - Mendoza",
+    "classification": "Seco",
+    "alcohol_content": "13.50% ABV",
+    "year": "2018"
+  },
+  {
+    "name": "Espumante Fantinel One & Only Prosecco D.O.C. Brut 2019",
+    "wine_type": null,
+    "grape": "Glera (100.00%)",
+    "country": "It\u00e1lia - Friuli",
+    "classification": "Brut",
+    "alcohol_content": "12.00% ABV",
+    "year": "2019"
+  },
+  {
+    "name": "Espumante Tempus III Cava Brut",
+    "wine_type": null,
+    "grape": "Macabeo",
+    "country": "Espanha - Catalunya",
+    "classification": "Brut",
+    "alcohol_content": "11.50% ABV",
+    "year": null
+  },
+  {
+    "name": "P\u00eara Doce Reserva Regional Alentejano 2018",
+    "wine_type": null,
+    "grape": "Aragon\u00eas, Syrah",
+    "country": "Portugal - Alentejo",
+    "classification": "Meio Seco/Demi-Sec",
+    "alcohol_content": "13.50% ABV",
+    "year": "2018"
+  },
+  {
+    "name": "El Galayo D.O.P. Cebreros Garnacha 2018",
+    "wine_type": null,
+    "grape": "Garnacha ",
+    "country": null,
+    "classification": "Seco",
+    "alcohol_content": "14.00% ABV",
+    "year": "Garnacha "
+  },
+  {
+    "name": "Ballade Riesling 2020",
+    "wine_type": null,
+    "grape": "Riesling (100.00%)",
+    "country": "Brasil - Campanha Ga\u00facha",
+    "classification": "Seco",
+    "alcohol_content": "11.50% ABV",
+    "year": "2020"
+  }
+]

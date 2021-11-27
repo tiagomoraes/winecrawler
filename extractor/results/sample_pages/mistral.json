@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Saint Felicien Rose 2019                     \n",
+    "wine_type": "Rosado",
+    "grape": "Grenache (53%), Syrah (27%) e Malbec (20%)",
+    "country": "Argentina",
+    "classification": null,
+    "alcohol_content": null,
+    "year": "2019"
+  },
+  {
+    "name": "DV Catena Cabernet Malbec 2018                     \n",
+    "wine_type": "Tinto",
+    "grape": "Malbec (50%) e Cabernet Sauvignon (50%)",
+    "country": "Argentina",
+    "classification": null,
+    "alcohol_content": "13.5",
+    "year": "2018"
+  },
+  {
+    "name": "Carmen Insigne Carm\u00e9n\u00e8re 2018                      \n",
+    "wine_type": "Tinto",
+    "grape": "Carmenere (90%) e Cabernet Sauvignon (10%)",
+    "country": "Chile",
+    "classification": null,
+    "alcohol_content": "13",
+    "year": "2018"
+  },
+  {
+    "name": "Angelica Zapata Merlot 2016                     \n",
+    "wine_type": "Tinto",
+    "grape": "Merlot (100%)",
+    "country": "Argentina",
+    "classification": null,
+    "alcohol_content": "14",
+    "year": "2016"
+  },
+  {
+    "name": "Vallontano Reserva Tannat 2018                     \n",
+    "wine_type": "Tinto",
+    "grape": "Tannat (100%)",
+    "country": "Brasil",
+    "classification": null,
+    "alcohol_content": "13",
+    "year": "2018"
+  },
+  {
+    "name": null,
+    "wine_type": null,
+    "grape": null,
+    "country": null,
+    "classification": null,
+    "alcohol_content": null,
+    "year": null
+  },
+  {
+    "name": "Condado de Haza Crianza 2016                     \n",
+    "wine_type": "Tinto",
+    "grape": "Tempranillo (100%)",
+    "country": "Espanha",
+    "classification": null,
+    "alcohol_content": "14.5",
+    "year": "2016"
+  },
+  {
+    "name": "Santa Alvara Chardonnay 2018                     \n",
+    "wine_type": "Branco",
+    "grape": "Chardonnay (100%)",
+    "country": "Chile",
+    "classification": null,
+    "alcohol_content": "13.5",
+    "year": "2018"
+  },
+  {
+    "name": "Jeio Spumante Cuv\u00e9e Brut                    \n",
+    "wine_type": "Espumante",
+    "grape": "Corte do en\u00f3logo.",
+    "country": "It\u00e1lia",
+    "classification": null,
+    "alcohol_content": "12",
+    "year": null
+  },
+  {
+    "name": "Gotim Bru 2017                     \n",
+    "wine_type": "Tinto",
+    "grape": "Garnacha, tempranillo, syrah e cabernet",
+    "country": "Espanha",
+    "classification": null,
+    "alcohol_content": "14",
+    "year": "2017"
+  }
+]

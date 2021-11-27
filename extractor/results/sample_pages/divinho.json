@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Vinho Catena Cabernet Sauvignon 2018",
+    "wine_type": "Tinto",
+    "grape": "Cabernet Sauvignon",
+    "country": "Argentina",
+    "classification": null,
+    "alcohol_content": "13,5%",
+    "year": "2018"
+  },
+  {
+    "name": "Vinho Luigi Bosca Malbec DOC 2018",
+    "wine_type": "Tinto",
+    "grape": "Malbec",
+    "country": "Argentina",
+    "classification": null,
+    "alcohol_content": "14,4%",
+    "year": "2018"
+  },
+  {
+    "name": "Vinho Bouza Pan De Az\u00facar Tannat 2018",
+    "wine_type": "Tinto",
+    "grape": "Tannat",
+    "country": "Uruguai",
+    "classification": null,
+    "alcohol_content": "12.5%",
+    "year": "2018"
+  },
+  {
+    "name": "Vinho Cordero con Piel de Lobo Malbec 2021",
+    "wine_type": "Tinto",
+    "grape": "Malbec",
+    "country": "Argentina",
+    "classification": null,
+    "alcohol_content": "13,8%",
+    "year": "2021"
+  },
+  {
+    "name": "Vinho Amalaya Malbec 2019",
+    "wine_type": "Tinto",
+    "grape": "Malbec   Petit Verdot   Tannat",
+    "country": "Argentina",
+    "classification": null,
+    "alcohol_content": "14%",
+    "year": "2019"
+  },
+  {
+    "name": "Vinho Bodega Noem\u00eda A Lisa 2013",
+    "wine_type": "Tinto",
+    "grape": "Malbec   Merlot   Petit Verdot",
+    "country": "Argentina",
+    "classification": null,
+    "alcohol_content": "13,5%",
+    "year": "2013"
+  },
+  {
+    "name": "Vinho Coppo Barbera d'Asti Camp du Rouss 2017",
+    "wine_type": "Tinto",
+    "grape": "Barbera",
+    "country": "It\u00e1lia",
+    "classification": null,
+    "alcohol_content": "14%",
+    "year": "2017"
+  },
+  {
+    "name": "Vinho Catena Zapata Nicasia Vineyard Malbec 2016",
+    "wine_type": "Tinto",
+    "grape": "Cabernet Franc   Malbec",
+    "country": "Argentina",
+    "classification": null,
+    "alcohol_content": "14%",
+    "year": "2016"
+  },
+  {
+    "name": "Espumante Vallontano Moscatel",
+    "wine_type": "Espumante",
+    "grape": "Moscatel",
+    "country": "Brasil",
+    "classification": null,
+    "alcohol_content": "7,5%",
+    "year": null
+  },
+  {
+    "name": "Vinho IL Teo Primitivo di Manduria 2011",
+    "wine_type": "Tinto",
+    "grape": "Primitivo",
+    "country": "It\u00e1lia",
+    "classification": null,
+    "alcohol_content": "14%",
+    "year": "2011"
+  }
+]
