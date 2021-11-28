@@ -1,4 +1,7 @@
 import json
+import sys
+
+import numpy as np
 
 domains = [
     'adegamais',
@@ -19,7 +22,12 @@ def save_inverted_index(key_value, page_index):
     if inverted_index_map.get(key_value) is None:
         inverted_index_map.setdefault(key_value, [])
 
-    inverted_index_map[key_value].append(page_index)
+    index_sum = 0
+    for element in inverted_index_map.get(key_value):
+        index_sum += element
+
+    diff = int(page_index) - index_sum
+    inverted_index_map[key_value].append(diff)
 
 
 def save_page_info_inverted_index(page_info, page_index):
@@ -47,6 +55,10 @@ def create_inverted_index():
                     save_page_info_inverted_index(page_info, key)
 
     save_to_file('./inverted_index.json', inverted_index_map)
+    # print(sys.getsizeof(inverted_index_map))
+    # np.uint16 -> 73816
+    # str -> 73816
+    # int -> 73816
 
 
 if __name__ == '__main__':
