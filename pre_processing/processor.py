@@ -1,7 +1,7 @@
+import glob
 import json
-import sys
 
-import numpy as np
+from classification.helpers.corpus_loader import load_corpus_from
 
 domains = [
     'adegamais',
@@ -57,7 +57,7 @@ def save_to_file(path, data):
     results_file.write(json.dumps(data))
 
 
-def create_inverted_index():
+def create_inverted_index_from_extractors():
     for domain in domains:
         f = open('../extractor/results/logistic_classifier/{}.json'.format(domain))
 
@@ -67,13 +67,35 @@ def create_inverted_index():
                 if result[key] is not None:
                     page_info = result[key]
                     save_page_info_inverted_index(page_info, key)
-
-    save_to_file('./inverted_index_with_compression.json', inverted_index_map_with_compression)
-    save_to_file('./inverted_index_without_compression.json', inverted_index_map_without_compression)
     # print(sys.getsizeof(inverted_index_map))
     # np.uint16 -> 73816
     # str -> 73816
     # int -> 73816
+
+
+def create_inverted_index_from_words():
+    for index in range(10000):
+        try:
+            corpus = load_corpus_from('../extractor/pages/{}.html'.format(index)).drop_stop_words()
+            for token in corpus.vocabulary:
+                save_inverted_index_with_compression(token.lower(), index)
+                save_inverted_index_without_compression(token.lower(), index)
+        except:
+            pass
+
+
+def create_inverted_index():
+    create_inverted_index_from_extractors()
+    save_to_file('./inverted_index_with_compression_pairs.json', inverted_index_map_with_compression)
+    save_to_file('./inverted_index_without_compression_pairs.json', inverted_index_map_without_compression)
+
+    # reset inverted indexes
+    inverted_index_map_with_compression.clear()
+    inverted_index_map_without_compression.clear()
+
+    create_inverted_index_from_words()
+    save_to_file('./inverted_index_with_compression_words.json', inverted_index_map_with_compression)
+    save_to_file('./inverted_index_without_compression_words.json', inverted_index_map_without_compression)
 
 
 if __name__ == '__main__':

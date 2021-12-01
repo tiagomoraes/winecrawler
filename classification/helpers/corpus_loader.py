@@ -21,6 +21,15 @@ def load_corpus(instance_folder_path: str, non_instance_folder_path: str) -> Cor
     return Corpus(documents)
 
 
+def load_corpus_from(file_path):
+    documents = []
+    with open(file_path, 'r') as document:
+        doc = Document(document.read(), DocumentClass.INSTANCE)
+        documents.append(doc)
+
+    return Corpus(documents)
+
+
 def load_documents(folder_path: str) -> List[Document]:
     files = [file for file in listdir(folder_path) if isfile(join(folder_path, file))]
 
