@@ -31,14 +31,15 @@ def main():
     non_inst_dir = os.path.join(cd, 'samples/nonsamples_pages')
     corpus = load_corpus(inst_dir, non_inst_dir).drop_stop_words()
 
-    # print('\nFrequent words:')
-    # for token in corpus.vocabulary:
-    #     occurrences = corpus.vocabulary[token].get_all_docs()
-    #     frequencies = corpus.vocabulary[token].get_total_freq()
-    #     total_docs = len(corpus.documents)
-    #     if total_docs * .4 < len(occurrences):
-    #         print("{} = {}, {}, {}".format(token, occurrences, len(occurrences), frequencies))
+    print('\nFrequent words:')
+    for token in corpus.vocabulary:
+        occurrences = corpus.vocabulary[token].get_all_docs()
+        frequencies = corpus.vocabulary[token].get_total_freq()
+        total_docs = len(corpus.documents)
+        if total_docs * .4 < len(occurrences):
+            print("{} = {}, {}, {}".format(token, occurrences, len(occurrences), frequencies))
 
+    return
     most_frequent_words_selector = MostFrequentWordsExtractor(corpus)
     doc_frequency_diff_selector = DocFrequencyDifferenceExtractor(corpus)
     plain_frequency_diff_selector = PlainFrequencyDifferenceExtractor(corpus)

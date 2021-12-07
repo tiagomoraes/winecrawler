@@ -5,7 +5,7 @@ description = "Projeto da cadeira IF692 - Recuperação de Informação (2021.1)
 authors = ["Tiago Moraes <tiago3902@gmail.com>", "Edjan Michiles <esvm@cin.ufpe.br>", "Matheus Borba <mlbas@cin.ufpe.br>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "3.8"
 beautifulsoup4 = "^4.10.0"
 requests = "^2.26.0"
 tabulate = "^0.8.9"
@@ -16,6 +16,8 @@ scikit-learn = "^1.0.1"
 pandas = "^1.3.4"
 matplotlib = "^3.4.3"
 Unidecode = "^1.3.2"
+fastapi = "^0.70.0"
+pydantic = "^1.8.2"
 
 [tool.poetry.dev-dependencies]
 
