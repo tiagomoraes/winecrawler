@@ -27,7 +27,7 @@
     9,
     1782
   ],
-  "it\u00e1lia::country": [
+  "italia::country": [
     6,
     30,
     113,
@@ -103,30 +103,53 @@
     4,
     47,
     2,
-    3,
-    162,
+    2,
+    1,
+    17,
+    14,
+    7,
+    2,
+    115,
+    7,
     3,
     31,
-    7,
-    50,
-    17,
+    5,
+    2,
+    3,
+    47,
+    15,
+    2,
     4,
-    81,
-    8,
+    29,
+    52,
+    4,
+    4,
     3,
     11,
-    107,
-    41,
+    84,
+    5,
+    10,
+    8,
+    22,
+    3,
+    16,
     5,
     22,
-    43,
+    40,
+    3,
     3,
     1,
-    39,
-    20,
+    11,
+    24,
+    4,
+    12,
+    7,
     1,
-    13,
-    179,
+    1,
+    9,
+    4,
+    126,
+    53,
     9,
     8,
     3,
@@ -1673,7 +1696,7 @@
     2,
     1679
   ],
-  "vinho tinto tiago caba\u00e7o blog 2017::name": [
+  "vinho tinto tiago cabaco blog 2017::name": [
     25,
     475,
     1,
@@ -1929,13 +1952,13 @@
     8,
     2
   ],
-  "grenache noir, mourv\u00e8dre, syrah::grape": [
+  "grenache noir, mourvedre, syrah::grape": [
     30,
     505,
     8,
     2
   ],
-  "fran\u00e7a::country": [
+  "franca::country": [
     30,
     49,
     17,
@@ -1984,18 +2007,36 @@
     180,
     424,
     90,
-    559,
-    56,
-    165,
-    177,
+    261,
     21,
+    156,
+    65,
+    44,
+    12,
+    56,
+    7,
+    8,
+    108,
+    6,
+    36,
+    177,
+    4,
+    17,
+    1,
+    1,
+    6,
+    4,
+    1,
     1,
     7,
     4,
     2,
-    7,
-    7,
-    311,
+    1,
+    5,
+    6,
+    6,
+    16,
+    278,
     48,
     6,
     1,
@@ -2129,7 +2170,7 @@
     1216,
     374
   ],
-  "vinho tinto prunotto barbera d\u2019asti fiulot 2019::name": [
+  "vinho tinto prunotto barbera d'asti fiulot 2019::name": [
     36,
     548,
     6,
@@ -2292,13 +2333,13 @@
     1,
     6
   ],
-  "vinho rose cortes de cima chamin\u00e9 2018::name": [
+  "vinho rose cortes de cima chamine 2018::name": [
     66
   ],
   "aragonez, syrah::grape": [
     66
   ],
-  "ros\u00e9::wine_type": [
+  "rose::wine_type": [
     66,
     13,
     17,
@@ -2330,11 +2371,15 @@
     2,
     1,
     1,
-    3,
-    3,
+    1,
+    1,
+    1,
+    1,
+    2,
     3,
     23,
-    95,
+    32,
+    63,
     50,
     50,
     11,
@@ -2342,9 +2387,31 @@
     341,
     55,
     203,
-    1081,
-    389,
-    1579
+    707,
+    14,
+    285,
+    75,
+    99,
+    290,
+    1,
+    1,
+    3,
+    3,
+    1,
+    3,
+    1,
+    1,
+    4,
+    3,
+    1,
+    3,
+    2,
+    1,
+    1122,
+    48,
+    82,
+    103,
+    196
   ],
   "vinho rose sea sun rose by rose piscine::name": [
     79
@@ -2512,7 +2579,8 @@
     96
   ],
   "negrette::grape": [
-    96
+    96,
+    2072
   ],
   "vinho branco quinta da alorna reserva 2019::name": [
     112
@@ -3093,7 +3161,7 @@
     162,
     6283
   ],
-  "vinho tinto quinta de chocapalha vinha m\u00e3e 2015::name": [
+  "vinho tinto quinta de chocapalha vinha mae 2015::name": [
     164
   ],
   "tinta roriz, touriga nacional, syrah::grape": [
@@ -3102,7 +3170,7 @@
   "vinho tinto quinta do noval petit verdot 2017::name": [
     172
   ],
-  "vinho tinto cartuxa foral de \u00e9vora 2018::name": [
+  "vinho tinto cartuxa foral de evora 2018::name": [
     174
   ],
   "vinho tinto brunello di montalcino docg 2012::name": [
@@ -3118,7 +3186,7 @@
     157,
     346
   ],
-  "vinho tinto tiago caba\u00e7o blog alicante bouschet e syrah 2016::name": [
+  "vinho tinto tiago cabaco blog alicante bouschet e syrah 2016::name": [
     201
   ],
   "alicante bouschet, syrah::grape": [
@@ -3230,10 +3298,10 @@
   "vinho tinto cartuxa ea 2018::name": [
     239
   ],
-  "alicante bouschet, aragonez, castel\u00e3o, trincadeira, syrah::grape": [
+  "alicante bouschet, aragonez, castelao, trincadeira, syrah::grape": [
     239
   ],
-  "vinho espumante casa perini m\u00e9todo tradicional brut::name": [
+  "vinho espumante casa perini metodo tradicional brut::name": [
     245
   ],
   "chardonnay, pinot noir::grape": [
@@ -3416,7 +3484,7 @@
   "vinho espumante casa perini nature metodo tradicional::name": [
     365
   ],
-  "vinho tinto herdade do arrepiado tradi\u00e7\u00e3o 2017::name": [
+  "vinho tinto herdade do arrepiado tradicao 2017::name": [
     370
   ],
   "touriga nacional::grape": [
@@ -3549,10 +3617,10 @@
   "vinho espumante casa perini moscatel summer edition bon vivant::name": [
     422
   ],
-  "vinho ros\u00e9 cartuxa ea 2020::name": [
+  "vinho rose cartuxa ea 2020::name": [
     436
   ],
-  "castel\u00e3o, touriga nacional, syrah::grape": [
+  "castelao, touriga nacional, syrah::grape": [
     436
   ],
   "vinho tinto roquette e cazes 2017::name": [
@@ -3568,7 +3636,7 @@
   "vinho tinto valdivieso caballo loco sagrada familia 2016::name": [
     462
   ],
-  "cabernet franc, petit verdot, carm\u00e9n\u00e8re, syrah::grape": [
+  "cabernet franc, petit verdot, carmenere, syrah::grape": [
     462
   ],
   "vinho tinto angelica zapata cabernet franc 2016 catena::name": [
@@ -3708,28 +3776,28 @@
     2,
     2
   ],
-  "vinho branco espor\u00e3o monte velho 2019::name": [
+  "vinho branco esporao monte velho 2019::name": [
     602
   ],
-  "perrum, ant\u00e3o vaz, roupeiro::grape": [
+  "perrum, antao vaz, roupeiro::grape": [
     602
   ],
-  "vinho tinto espor\u00e3o p\u00e9 tinto 2019::name": [
+  "vinho tinto esporao pe tinto 2019::name": [
     608
   ],
   "trincadeira::grape": [
     608
   ],
-  "vinho tinto espor\u00e3o p\u00e9 tinto 2020::name": [
+  "vinho tinto esporao pe tinto 2020::name": [
     610
   ],
-  "moreto, castel\u00e3o, trincadeira::grape": [
+  "moreto, castelao, trincadeira::grape": [
     610
   ],
-  "vinho branco espor\u00e3o reserva 2019::name": [
+  "vinho branco esporao reserva 2019::name": [
     612
   ],
-  "ant\u00e3o vaz, arinto, roupeiro::grape": [
+  "antao vaz, arinto, roupeiro::grape": [
     612,
     10,
     115,
@@ -3739,13 +3807,13 @@
     1,
     1
   ],
-  "vinho ros\u00e9 espor\u00e3o assobio douro 2018::name": [
+  "vinho rose esporao assobio douro 2018::name": [
     616
   ],
-  "rufete, tinto c\u00e3o, tinta roriz, touriga nacional::grape": [
+  "rufete, tinto cao, tinta roriz, touriga nacional::grape": [
     616
   ],
-  "vinho tinto espor\u00e3o monte velho 2019::name": [
+  "vinho tinto esporao monte velho 2019::name": [
     621
   ],
   "aragonez, touriga nacional, trincadeira, syrah::grape": [
@@ -3754,10 +3822,10 @@
   "vinho branco esporao reserva 2018::name": [
     622
   ],
-  "vinho branco alandra espor\u00e3o 2020::name": [
+  "vinho branco alandra esporao 2020::name": [
     627
   ],
-  "perrum, ant\u00e3o vaz, arinto::grape": [
+  "perrum, antao vaz, arinto::grape": [
     627
   ],
   "vinho tinto terra a terra reserva 2014::name": [
@@ -3766,10 +3834,10 @@
     3,
     2
   ],
-  "vinho branco cartuxa \u00e9vora colheita 2019::name": [
+  "vinho branco cartuxa evora colheita 2019::name": [
     661
   ],
-  "ant\u00e3o vaz, arinto::grape": [
+  "antao vaz, arinto::grape": [
     661
   ],
   "vinho rose lidio carraro selo rose suave 2020::name": [
@@ -3794,7 +3862,7 @@
   "vinho tinto montes alpha special cuvee cabernet sauvignon 2015::name": [
     733
   ],
-  "cabernet sauvignon, carm\u00e9n\u00e8re, syrah::grape": [
+  "cabernet sauvignon, carmenere, syrah::grape": [
     733
   ],
   "vinho branco cartuxa ea 2020::name": [
@@ -3840,7 +3908,7 @@
   "vinho tinto antinori la braccesca achelo syrah antinori 2019::name": [
     818
   ],
-  "vinho tinto tiago caba\u00e7o .com premium 2019::name": [
+  "vinho tinto tiago cabaco .com premium 2019::name": [
     830
   ],
   "alicante bouschet, aragonez, touriga nacional, trincadeira::grape": [
@@ -3923,7 +3991,7 @@
   "vinho perez cruz liguai 2018::name": [
     1006
   ],
-  "cabernet sauvignon   carm\u00e9n\u00e8re   syrah::grape": [
+  "cabernet sauvignon   carmenere   syrah::grape": [
     1006
   ],
   "vinho oreno 2017::name": [
@@ -3932,13 +4000,13 @@
   "cabernet sauvignon   merlot   petit verdot::grape": [
     1009
   ],
-  "espumante cave amadeu r\u00fastico nature::name": [
+  "espumante cave amadeu rustico nature::name": [
     1021
   ],
   "chardonnay   pinot noir::grape": [
     1021
   ],
-  "espumante cava codorn\u00edu clasico brut::name": [
+  "espumante cava codorniu clasico brut::name": [
     1023
   ],
   "macabeo   parellada   xarel-lo::grape": [
@@ -3950,17 +4018,17 @@
   "vinho aalto 2018::name": [
     1052
   ],
-  "vinho luis ca\u00f1as crianza 2017::name": [
+  "vinho luis canas crianza 2017::name": [
     1071
   ],
   "grenache   tempranillo::grape": [
     1071,
     50
   ],
-  "vinho petit pittacum menc\u00eda 2018::name": [
+  "vinho petit pittacum mencia 2018::name": [
     1081
   ],
-  "menc\u00eda::grape": [
+  "mencia::grape": [
     1081
   ],
   "vinho el enemigo malbec 2017::name": [
@@ -3981,7 +4049,7 @@
   "vinho perez cruz reserva cabernet sauvignon 2018::name": [
     1118
   ],
-  "vinho vi\u00f1a ardanza reserva 2012::name": [
+  "vinho vina ardanza reserva 2012::name": [
     1121
   ],
   "vinho gran enemigo single vineyard gualtallary 2014::name": [
@@ -4021,10 +4089,10 @@
   "13,6%::alcohol_content": [
     1193
   ],
-  "vinho garz\u00f3n petit clos cabernet franc 2018::name": [
+  "vinho garzon petit clos cabernet franc 2018::name": [
     1288
   ],
-  "vinho garz\u00f3n estate pinot grigio de corte 2020::name": [
+  "vinho garzon estate pinot grigio de corte 2020::name": [
     1307
   ],
   "pinot grigio   sauvignon blanc::grape": [
@@ -4045,7 +4113,7 @@
   "vinho quinta de bons ventos branco 2019::name": [
     1341
   ],
-  "arinto   chardonnay   fern\u00e3o pires   viosinho   vital::grape": [
+  "arinto   chardonnay   fernao pires   viosinho   vital::grape": [
     1341
   ],
   "vinho castello banfi brunello di montalcino riserva poggio all'oro 2013::name": [
@@ -4116,7 +4184,7 @@
   "espumante de bortoli family selection brut::name": [
     2053
   ],
-  "austr\u00e1lia::country": [
+  "australia::country": [
     2053,
     344,
     43,
@@ -4134,7 +4202,7 @@
     5,
     156
   ],
-  "vinho uruguaio invitaci\u00f3n chardonnay::name": [
+  "vinho uruguaio invitacion chardonnay::name": [
     2055
   ],
   "12,00%::alcohol_content": [
@@ -4181,7 +4249,7 @@
     138,
     23
   ],
-  "miolo sele\u00e7\u00e3o chardonnay::name": [
+  "miolo selecao chardonnay::name": [
     2060
   ],
   "vinho chileno ravanal chardonnay::name": [
@@ -4302,7 +4370,7 @@
   "espumante chandon brut garrafa 375ml::name": [
     2074
   ],
-  "tarapac\u00e1 reserva chardonnay::name": [
+  "tarapaca reserva chardonnay::name": [
     2076
   ],
   "12,50%::alcohol_content": [
@@ -4342,7 +4410,7 @@
     25,
     72
   ],
-  "vinho franc\u00eas jean bouchard 1er cru les vaucopins chablis a.o.c.::name": [
+  "vinho frances jean bouchard 1er cru les vaucopins chablis a.o.c.::name": [
     2078
   ],
   "kit espumante tavino emilia-romagna i.g.t. dolce e demi-sec compre 6 e ganhe 2::name": [
@@ -4381,10 +4449,10 @@
   "20,50%::alcohol_content": [
     2081
   ],
-  "cartuxa \u00e9vora colheita::name": [
+  "cartuxa evora colheita::name": [
     2082
   ],
-  "aragon\u00eas::grape": [
+  "aragones::grape": [
     2082,
     205,
     27,
@@ -4407,7 +4475,7 @@
   "tarapaca etiqueta negra cabernet sauvignon::name": [
     2086
   ],
-  "champagne moutard grand cuv\u00e9e brut::name": [
+  "champagne moutard grand cuvee brut::name": [
     2089
   ],
   "pinot noir::grape": [
@@ -4463,7 +4531,7 @@
     1314,
     135
   ],
-  "ch\u00e2teau la coste::name": [
+  "chateau la coste::name": [
     2091
   ],
   "grenache::grape": [
@@ -4474,16 +4542,16 @@
     475,
     101
   ],
-  "champagne moutard p\u00e8re et fils extra brut::name": [
+  "champagne moutard pere et fils extra brut::name": [
     2092
   ],
-  "champagne moutard cuv\u00e9e prestige brut::name": [
+  "champagne moutard cuvee prestige brut::name": [
     2093
   ],
   "champagne ::wine_type": [
     2093
   ],
-  "vinho franc\u00eas jean bouchard chardonnay chablis a.o.c.::name": [
+  "vinho frances jean bouchard chardonnay chablis a.o.c.::name": [
     2094
   ],
   "champagne moutard cuvaison brut::name": [
@@ -4548,7 +4616,7 @@
   "barolo patres 2014::name": [
     2102
   ],
-  "quinta santa euf\u00eamia tawny porto 20 anos::name": [
+  "quinta santa eufemia tawny porto 20 anos::name": [
     2103
   ],
   "tinta da barca::grape": [
@@ -4561,7 +4629,7 @@
     108,
     2
   ],
-  "vieilles vignes ch\u00e2teauneuf-du-pape::name": [
+  "vieilles vignes chateauneuf-du-pape::name": [
     2105
   ],
   "ruhlmann vendange tardive::name": [
@@ -4577,10 +4645,10 @@
   "champagne veuve clicquot ponsardin demi-sec::name": [
     2110
   ],
-  "quinta santa euf\u00eamia porto vintage::name": [
+  "quinta santa eufemia porto vintage::name": [
     2111
   ],
-  "alian\u00e7a quinta dos quatro ventos reserva::name": [
+  "alianca quinta dos quatro ventos reserva::name": [
     2112
   ],
   "15,00%::alcohol_content": [
@@ -4591,10 +4659,10 @@
   "monte da ravasqueira premium tinto::name": [
     2113
   ],
-  "espor\u00e3o private selection::name": [
+  "esporao private selection::name": [
     2114
   ],
-  "s\u00e9millon::grape": [
+  "semillon::grape": [
     2114,
     50,
     8,
@@ -4605,7 +4673,7 @@
   "rhebokskloof black marble hill::name": [
     2115
   ],
-  "\u00e1frica do sul::country": [
+  "africa do sul::country": [
     2115,
     171,
     69,
@@ -4653,7 +4721,7 @@
   "matsu el recio magnum::name": [
     2120
   ],
-  "garz\u00f3n single vineyard tannat::name": [
+  "garzon single vineyard tannat::name": [
     2121
   ],
   "14,7%::alcohol_content": [
@@ -4663,7 +4731,7 @@
   "ruhlmann grand cru frankstein::name": [
     2122
   ],
-  "champagne mo\u00ebt & chandon brut imp\u00e9rial::name": [
+  "champagne moet & chandon brut imperial::name": [
     2124
   ],
   "monte zovo amarone della valpolicella reserva 2008::name": [
@@ -4689,28 +4757,25 @@
     17,
     395
   ],
-  "ch\u00e2teau la croix blanche::name": [
+  "chateau la croix blanche::name": [
     2164
   ],
-  "ros\u00e9 piscine::name": [
+  "rose piscine::name": [
     2168
   ],
-  "n\u00e8grette::grape": [
-    2168
-  ],
-  "vinho franc\u00eas jean bouchard grand cru corton-charlemagne a.o.c.::name": [
+  "vinho frances jean bouchard grand cru corton-charlemagne a.o.c.::name": [
     2171
   ],
-  "ch\u00e2teau nicot::name": [
+  "chateau nicot::name": [
     2172
   ],
-  "les galets luberon pierre & r\u00e9my gauthier::name": [
+  "les galets luberon pierre & remy gauthier::name": [
     2175
   ],
   "espumante blanc de blancs brut::name": [
     2176
   ],
-  "ch\u00e2teau palene::name": [
+  "chateau palene::name": [
     2178
   ],
   "jean bouchard gevrey-chambertin::name": [
@@ -4729,17 +4794,17 @@
     2213,
     210
   ],
-  "vinho portugu\u00eas p\u00eara-manca branco::name": [
+  "vinho portugues pera-manca branco::name": [
     2214
   ],
-  "ant\u00e3o vaz::grape": [
+  "antao vaz::grape": [
     2214,
     329
   ],
   "avignonesi nobile di montepulciano grandi annate::name": [
     2215
   ],
-  "eguren ugarte anastas\u00edo::name": [
+  "eguren ugarte anastasio::name": [
     2217
   ],
   "amiral de beychevelle saint-julien::name": [
@@ -4766,7 +4831,7 @@
   "espumante garibaldi chardonnay branco brut garrafa 750ml::name": [
     2228
   ],
-  "salton intenso ros\u00e9::name": [
+  "salton intenso rose::name": [
     2232
   ],
   "espumante garibaldi moscatel garrafa 750ml::name": [
@@ -4775,7 +4840,7 @@
   "villa francioni sauvignon blanc::name": [
     2234
   ],
-  "espumante garibaldi moscatel ros\u00e9 garrafa 750ml::name": [
+  "espumante garibaldi moscatel rose garrafa 750ml::name": [
     2235
   ],
   "moscato de hamburgo e moscato de alexandria::grape": [
@@ -4784,10 +4849,10 @@
   "espumante garibaldi brut vero garrafa 750ml::name": [
     2236
   ],
-  "espumante lidio carraro faces ros\u00e9 750ml::name": [
+  "espumante lidio carraro faces rose 750ml::name": [
     2238
   ],
-  "almad\u00e9n sauvignon blanc::name": [
+  "almaden sauvignon blanc::name": [
     2240
   ],
   "espumante garibaldi pinot noir garrafa 750ml::name": [
@@ -4811,17 +4876,17 @@
   "salton intenso pinot noir::name": [
     2250
   ],
-  "vinho portugu\u00eas mateus ros\u00e9 original::name": [
+  "vinho portugues mateus rose original::name": [
     2254
   ],
   "baga::grape": [
     2254,
     67
   ],
-  "vino tinto glorioso selecci\u00f3n especial crianza rioja d.o.ca::name": [
+  "vino tinto glorioso seleccion especial crianza rioja d.o.ca::name": [
     2255
   ],
-  "vinho espanhol luciente tempranillo ros\u00e9::name": [
+  "vinho espanhol luciente tempranillo rose::name": [
     2256
   ],
   "12,6%::alcohol_content": [
@@ -4852,7 +4917,19 @@
     339,
     1459,
     3,
-    109
+    6,
+    1,
+    2,
+    9,
+    5,
+    86,
+    97,
+    11,
+    356,
+    1591,
+    66,
+    43,
+    26
   ],
   "13,10%::alcohol_content": [
     2258
@@ -4863,7 +4940,7 @@
   "12,80%::alcohol_content": [
     2259
   ],
-  "vinho branco portugu\u00eas casal mendes vinho verde d.o.c.::name": [
+  "vinho branco portugues casal mendes vinho verde d.o.c.::name": [
     2260
   ],
   "azal::grape": [
@@ -4872,13 +4949,13 @@
   "rosa dell'olmo barolo d.o.c.g::name": [
     2261
   ],
-  "vinho espanhol hoya de cade\u00f1as crianza cabernet sauvignon::name": [
+  "vinho espanhol hoya de cadenas crianza cabernet sauvignon::name": [
     2262
   ],
   "vinho tinto argentino cruz del sur malbec::name": [
     2263
   ],
-  "tarapac\u00e1 gran reserva carmenere::name": [
+  "tarapaca gran reserva carmenere::name": [
     2265
   ],
   "vinorum premium malbec::name": [
@@ -4908,10 +4985,10 @@
   "ceppaiano chianti docg::name": [
     2279
   ],
-  "monte da ravasqueira vinha das rom\u00e3s::name": [
+  "monte da ravasqueira vinha das romas::name": [
     2280
   ],
-  "cuvelier colecci\u00f3n blend::name": [
+  "cuvelier coleccion blend::name": [
     2281
   ],
   "vinho italiano casalforno maremma rosso toscana d.o.c.::name": [
@@ -4920,11 +4997,11 @@
   "periquita reserva::name": [
     2283
   ],
-  "castel\u00e3o::grape": [
+  "castelao::grape": [
     2283,
     1147
   ],
-  "tarapac\u00e1 gran reserva cabernet sauvignon::name": [
+  "tarapaca gran reserva cabernet sauvignon::name": [
     2284
   ],
   "montgras antu carmenere::name": [
@@ -4933,7 +5010,7 @@
   "rhebokskloof shiraz::name": [
     2286
   ],
-  "monte da ravasqueira sele\u00e7\u00e3o do en\u00f3logo::name": [
+  "monte da ravasqueira selecao do enologo::name": [
     2287
   ],
   "montgras antu cabernet sauvignon::name": [
@@ -4970,16 +5047,16 @@
   "la hacienda tannat::name": [
     2297
   ],
-  "garz\u00f3n estate carbernet de corte::name": [
+  "garzon estate carbernet de corte::name": [
     2299
   ],
   "la hacienda reserva tannat::name": [
     2300
   ],
-  "vinho tinto uruguaio invitaci\u00f3n tannat::name": [
+  "vinho tinto uruguaio invitacion tannat::name": [
     2302
   ],
-  "garz\u00f3n estate tannat de corte::name": [
+  "garzon estate tannat de corte::name": [
     2303
   ],
   "somewhere else vineyards tannat::name": [
@@ -4994,43 +5071,43 @@
   "marichal reserve collection tannat::name": [
     2306
   ],
-  "invitaci\u00f3n reserva tannat::name": [
+  "invitacion reserva tannat::name": [
     2307
   ],
   "vinhas velhas tannat::name": [
     2308
   ],
-  "c\u00f3mplice reserva tannat::name": [
+  "complice reserva tannat::name": [
     2309
   ],
-  "invitaci\u00f3n merlot::name": [
+  "invitacion merlot::name": [
     2312
   ],
-  "vinho portugu\u00eas monte da ravasqueira mocho galego::name": [
+  "vinho portugues monte da ravasqueira mocho galego::name": [
     2314
   ],
-  "colimoro montepulciano d\u2019abruzzo doc::name": [
+  "colimoro montepulciano d'abruzzo doc::name": [
     2315
   ],
   "montepulciano::grape": [
     2315
   ],
-  "tarapac\u00e1 cosecha carmenere::name": [
+  "tarapaca cosecha carmenere::name": [
     2316
   ],
   "condado de eguren tempranillo::name": [
     2317
   ],
-  "vinho chileno la ronciere cantoalba classic carm\u00e9n\u00e8re::name": [
+  "vinho chileno la ronciere cantoalba classic carmenere::name": [
     2318
   ],
-  "alian\u00e7a bairrada reserva::name": [
+  "alianca bairrada reserva::name": [
     2321
   ],
   "fonte da serrana tinto::name": [
     2322
   ],
-  "vinho tinto uruguaio invitaci\u00f3n cabernet sauvignon::name": [
+  "vinho tinto uruguaio invitacion cabernet sauvignon::name": [
     2327
   ],
   "la espera malbec syrah::name": [
@@ -5074,7 +5151,7 @@
     2341,
     377
   ],
-  "vinho branco argetino cruz del sur chenin torront\u00e9s::name": [
+  "vinho branco argetino cruz del sur chenin torrontes::name": [
     2342
   ],
   "chenin::grape": [
@@ -5089,14 +5166,14 @@
   "santa ana classic torrontes::name": [
     2345
   ],
-  "torront\u00e9s::grape": [
+  "torrontes::grape": [
     2345,
     2457
   ],
   "phebus malbec::name": [
     2346
   ],
-  "santa ana tradici\u00f3n 2018::name": [
+  "santa ana tradicion 2018::name": [
     2348
   ],
   "vinho hill & dale sauvignon blanc::name": [
@@ -5131,7 +5208,7 @@
   "the wedge chenin blanc::name": [
     2364
   ],
-  "vinho hill & dale merlot ros\u00e9::name": [
+  "vinho hill & dale merlot rose::name": [
     2365
   ],
   "13,33%::alcohol_content": [
@@ -5173,13 +5250,13 @@
   "elli pinotage::name": [
     2376
   ],
-  "marqu\u00e9s de chiv\u00e9 crianza::name": [
+  "marques de chive crianza::name": [
     2382
   ],
   "montgras quatro::name": [
     2383
   ],
-  "vinho do porto quinta santa euf\u00eamia ruby::name": [
+  "vinho do porto quinta santa eufemia ruby::name": [
     2384
   ],
   "tinta barroca::grape": [
@@ -5195,10 +5272,10 @@
   "mourisco tinto::grape": [
     2386
   ],
-  "cabe\u00e7a de toiro reserva d.o.c::name": [
+  "cabeca de toiro reserva d.o.c::name": [
     2389
   ],
-  "vinho tinto portugu\u00eas cavalo bravo premium::name": [
+  "vinho tinto portugues cavalo bravo premium::name": [
     2391
   ],
   "de bortoli winemaker selection cabernet sauvignon::name": [
@@ -5213,7 +5290,7 @@
   "carta vieja cabernet sauvignon::name": [
     2401
   ],
-  "vinho tinto chileno tenta carm\u00e9nere::name": [
+  "vinho tinto chileno tenta carmenere::name": [
     2402
   ],
   "traversa cabernet sauvignon::name": [
@@ -5228,7 +5305,7 @@
   "vinho chileno la ronciere cantoalba classic cabernet sauvignon::name": [
     2408
   ],
-  "espumante chandon passion ros\u00e9 750ml::name": [
+  "espumante chandon passion rose 750ml::name": [
     2409
   ],
   "malvasia::grape": [
@@ -5244,13 +5321,13 @@
   "espumante tavino emilia-romagna i.g.t. brut::name": [
     2411
   ],
-  "espumante amiti\u00e9 moscatel branco 750ml::name": [
+  "espumante amitie moscatel branco 750ml::name": [
     2412
   ],
   "moscato branco::grape": [
     2412
   ],
-  "espumante salton s\u00e9ries brut ros\u00e9 750ml::name": [
+  "espumante salton series brut rose 750ml::name": [
     2414
   ],
   "ugni blanc::grape": [
@@ -5266,7 +5343,7 @@
   "vinho nebbiolo d alba garrafa 750ml::name": [
     2418
   ],
-  "espumante salton s\u00e9ries brut garrafa 750ml::name": [
+  "espumante salton series brut garrafa 750ml::name": [
     2419
   ],
   "espumante brasileiro salton prosecco garrafa 750ml::name": [
@@ -5275,7 +5352,7 @@
   "cava freixenet carta nevada::name": [
     2423
   ],
-  "cava freixenet cordon ros\u00e9 brut::name": [
+  "cava freixenet cordon rose brut::name": [
     2425
   ],
   "trepat::grape": [
@@ -5287,7 +5364,7 @@
   "espumante cavalieri reali demi-sec::name": [
     2429
   ],
-  "espumante italiana costa furra ros\u00e9 brut::name": [
+  "espumante italiana costa furra rose brut::name": [
     2432
   ],
   "trebbiano, garganega, lambrusco::grape": [
@@ -5311,10 +5388,10 @@
   "13,05%::alcohol_content": [
     2436
   ],
-  "ch\u00e2teau la coste premi\u00e8re cuv\u00e9e::name": [
+  "chateau la coste premiere cuvee::name": [
     2437
   ],
-  "casillero del diablo reserva ros\u00e9::name": [
+  "casillero del diablo reserva rose::name": [
     2439
   ],
   "de bortoli woodfired shiraz::name": [
@@ -5323,7 +5400,7 @@
   "14,80%::alcohol_content": [
     2440
   ],
-  "vinho portugu\u00eas bacalh\u00f4a jp azeit\u00e3o syrah ros\u00e9::name": [
+  "vinho portugues bacalhoa jp azeitao syrah rose::name": [
     2443
   ],
   "la junta calicata syrah::name": [
@@ -5333,7 +5410,7 @@
     2446,
     1
   ],
-  "vinho chileno montgras reserva carm\u00e9n\u00e8re::name": [
+  "vinho chileno montgras reserva carmenere::name": [
     2448
   ],
   "cantoalba carmenere::name": [
@@ -5363,7 +5440,7 @@
   "13,20%::alcohol_content": [
     2461
   ],
-  "vinho chileno mandala reserva carm\u00e9n\u00e8re::name": [
+  "vinho chileno mandala reserva carmenere::name": [
     2462
   ],
   "ravanal gran reserva cabernet sauvignon::name": [
@@ -5387,7 +5464,7 @@
   "vinho uruguaio traversa noble alianza cabernet sauvignon::name": [
     2470
   ],
-  "invitaci\u00f3n reserva cabernet sauvignon::name": [
+  "invitacion reserva cabernet sauvignon::name": [
     2472
   ],
   "la junta cabernet sauvignon::name": [
@@ -5402,10 +5479,10 @@
   "eguren ugarte cincuenta::name": [
     2480
   ],
-  "s\u00e9ptimo sentido tempranillo::name": [
+  "septimo sentido tempranillo::name": [
     2482
   ],
-  "s\u00e9ptimo sentido ros\u00e9::name": [
+  "septimo sentido rose::name": [
     2483
   ],
   "glorioso reserva d.o.ca::name": [
@@ -5417,7 +5494,7 @@
   "vinho espanhol eguren ugarde mercedes eguren blend::name": [
     2488
   ],
-  "reinares ros\u00e9::name": [
+  "reinares rose::name": [
     2489
   ],
   "faustino v reserva d.o.ca::name": [
@@ -5435,7 +5512,7 @@
   "cavalo bravo branco::name": [
     2538
   ],
-  "fern\u00e3o pires::grape": [
+  "fernao pires::grape": [
     2538,
     97
   ],
@@ -5445,19 +5522,19 @@
   "traversa sauvignon blanc::name": [
     2541
   ],
-  "tarapac\u00e1 cosecha sauvignon blanc::name": [
+  "tarapaca cosecha sauvignon blanc::name": [
     2542
   ],
   "fonte da serrana branco::name": [
     2543
   ],
-  "invitaci\u00f3n sauvignon blanc::name": [
+  "invitacion sauvignon blanc::name": [
     2544
   ],
   "mandala merlot::name": [
     2546
   ],
-  "ch\u00e2teau bel-air raillon c\u00f4tes de bourg::name": [
+  "chateau bel-air raillon cotes de bourg::name": [
     2549
   ],
   "santa helena reservado merlot::name": [
@@ -5469,7 +5546,7 @@
   "14,90%::alcohol_content": [
     2552
   ],
-  "tarapac\u00e1 cosecha merlot::name": [
+  "tarapaca cosecha merlot::name": [
     2553
   ],
   "carta vieja merlot::name": [
@@ -5505,7 +5582,7 @@
   "vinho uruguaio traversa noble alianza merlot::name": [
     2566
   ],
-  "espumante casa perini aquarela moscatel ros\u00e9::name": [
+  "espumante casa perini aquarela moscatel rose::name": [
     2568
   ],
   "moscatel hamburgo::grape": [
@@ -5514,62 +5591,34 @@
   "7,50%::alcohol_content": [
     2568
   ],
-  "vinho portugu\u00eas identidade ros\u00e9 vinho verde d.o.c.::name": [
+  "vinho portugues identidade rose vinho verde d.o.c.::name": [
     2570
   ],
   "espadeiro::grape": [
     2570
   ],
-  "casa valduga naturelle ros\u00e9::name": [
+  "casa valduga naturelle rose::name": [
     2571
   ],
-  "marqu\u00e9s del turia cosecha ros\u00e9::name": [
+  "marques del turia cosecha rose::name": [
     2572
   ],
   "bobal::grape": [
     2572
   ],
-  "cameleon ros\u00e9::name": [
+  "cameleon rose::name": [
     2573
   ],
-  "rose::wine_type": [
-    2573,
-    1,
-    2,
-    60,
-    1520,
-    14,
-    285,
-    174,
-    291,
-    1,
-    3,
-    3,
-    1,
-    3,
-    1,
-    1,
-    4,
-    3,
-    1,
-    3,
-    2,
-    1,
-    1122,
-    48,
-    82,
-    103
-  ],
-  "la hacienda ros\u00e9::name": [
+  "la hacienda rose::name": [
     2574
   ],
-  "espumante salton ros\u00e9::name": [
+  "espumante salton rose::name": [
     2575
   ],
-  "traversa ros\u00e9::name": [
+  "traversa rose::name": [
     2576
   ],
-  "espumante chiarli castelvetro ros\u00e9 de noir gran cuv\u00e9e brut::name": [
+  "espumante chiarli castelvetro rose de noir gran cuvee brut::name": [
     2578
   ],
   "grasparossa::grape": [
@@ -5584,13 +5633,13 @@
   "garnacha tintorera::grape": [
     2585
   ],
-  "alian\u00e7a d\u00e3o::name": [
+  "alianca dao::name": [
     2586
   ],
   "altisano rosso d'italia::name": [
     2587
   ],
-  "bacalh\u00f4a quatro ventos douro::name": [
+  "bacalhoa quatro ventos douro::name": [
     2588
   ],
   "famiglia bianchi gran corte::name": [
@@ -5620,7 +5669,7 @@
   "rosa dell'olmo barbera d'asti d.o.c.g::name": [
     2601
   ],
-  "espumante cavalieri reali ros\u00e9 brut::name": [
+  "espumante cavalieri reali rose brut::name": [
     2604
   ],
   "carrione bianco::name": [
@@ -5656,17 +5705,18 @@
   "lawson's dry hills pinot noir::name": [
     2617
   ],
-  "nova zel\u00e2ndia::country": [
+  "nova zelandia::country": [
     2617,
-    3273
+    1821,
+    1452
   ],
   "trapiche roble pinot noir::name": [
     2618
   ],
-  "vinho franc\u00eas jean bouchard pinot noir bourgogne a.o.c.::name": [
+  "vinho frances jean bouchard pinot noir bourgogne a.o.c.::name": [
     2619
   ],
-  "vinho franc\u00eas jean bouchard coteaux bourguignons a.o.c.::name": [
+  "vinho frances jean bouchard coteaux bourguignons a.o.c.::name": [
     2622
   ],
   "medalla real gran reserva pinot noir::name": [
@@ -5678,7 +5728,7 @@
   "espumante moutard grande reserve nature::name": [
     2628
   ],
-  "vinho portugu\u00eas s\u00e3o gon\u00e7alo vinho verde d.o.c::name": [
+  "vinho portugues sao goncalo vinho verde d.o.c::name": [
     2629
   ],
   "arinto::grape": [
@@ -5690,31 +5740,31 @@
   "cavalo bravo reserva tinto::name": [
     2630
   ],
-  "quinta santa euf\u00eamia douro touriga nacional::name": [
+  "quinta santa eufemia douro touriga nacional::name": [
     2632
   ],
-  "gr\u00e3o vasco branco d.o.c::name": [
+  "grao vasco branco d.o.c::name": [
     2633
   ],
   "encruzado::grape": [
     2633
   ],
-  "quinta santa euf\u00eamia douro branco::name": [
+  "quinta santa eufemia douro branco::name": [
     2634
   ],
   "moscatel galego branco::grape": [
     2634
   ],
-  "castelo do sulco sele\u00e7\u00e3o dos en\u00f3logos branco::name": [
+  "castelo do sulco selecao dos enologos branco::name": [
     2635
   ],
-  "castelo do sulco sele\u00e7\u00e3o dos en\u00f3logos ros\u00e9::name": [
+  "castelo do sulco selecao dos enologos rose::name": [
     2636
   ],
-  "jp azeit\u00e3o branco::name": [
+  "jp azeitao branco::name": [
     2637
   ],
-  "moscatel de set\u00fabal::grape": [
+  "moscatel de setubal::grape": [
     2637
   ],
   "vella velha tinto::name": [
@@ -5733,10 +5783,10 @@
   "lambrusco::grape": [
     2698
   ],
-  "frisante ponte vecchio moscato ros\u00e9::name": [
+  "frisante ponte vecchio moscato rose::name": [
     2699
   ],
-  "frisante salton lunae ros\u00e9 269ml::name": [
+  "frisante salton lunae rose 269ml::name": [
     2701
   ],
   "lorena::grape": [
@@ -5763,22 +5813,22 @@
   "viura::grape": [
     2708
   ],
-  "cava freixenet ice ros\u00e9 demi sec::name": [
+  "cava freixenet ice rose demi sec::name": [
     2710
   ],
-  "vicente gand\u00eda finca del mar crianza tempranillo::name": [
+  "vicente gandia finca del mar crianza tempranillo::name": [
     2711
   ],
-  "moisaco garnacha vi\u00f1as viejas::name": [
+  "moisaco garnacha vinas viejas::name": [
     2712
   ],
   "cava freixenet ice demi sec::name": [
     2714
   ],
-  "jerez aurora pedro xim\u00e9nez::name": [
+  "jerez aurora pedro ximenez::name": [
     2715
   ],
-  "pedro ximn\u00e9nez::grape": [
+  "pedro ximnenez::grape": [
     2715
   ],
   "eguren ugarte graciano::name": [
@@ -5787,7 +5837,7 @@
   "graciano::grape": [
     2716
   ],
-  "alian\u00e7a terra boa::name": [
+  "alianca terra boa::name": [
     2718
   ],
   "sansilvestro figli barbera d'asti::name": [
@@ -5811,7 +5861,7 @@
   "mandala chardonnay::name": [
     2728
   ],
-  "do\u00f1a paula estate chardonnay::name": [
+  "dona paula estate chardonnay::name": [
     2729,
     239
   ],
@@ -5848,13 +5898,13 @@
   "solares::name": [
     2744
   ],
-  "ch\u00e2teau la coste ros\u00e9 d'une nuit::name": [
+  "chateau la coste rose d'une nuit::name": [
     2749
   ],
-  "montgras ninqu\u00e9n::name": [
+  "montgras ninquen::name": [
     2750
   ],
-  "kit vinhos sele\u00e7\u00e3o premium::name": [
+  "kit vinhos selecao premium::name": [
     2752
   ],
   "marselan, tannat, merlot::grape": [
@@ -5872,13 +5922,13 @@
   "black stallion napa valley cabernet sauvignon::name": [
     2758
   ],
-  "garz\u00f3n single vineyard albari\u00f1o branco::name": [
+  "garzon single vineyard albarino branco::name": [
     2760
   ],
-  "albari\u00f1o::grape": [
+  "albarino::grape": [
     2760
   ],
-  "tarapac\u00e1 etiqueta azul gran reserva red blend::name": [
+  "tarapaca etiqueta azul gran reserva red blend::name": [
     2761
   ],
   "14,2%::alcohol_content": [
@@ -5890,7 +5940,7 @@
   "bric cenciurio barolo docg::name": [
     2764
   ],
-  "quinta da bacalh\u00f4a::name": [
+  "quinta da bacalhoa::name": [
     2765
   ],
   "monte zovo amarone della valpolicella 2015::name": [
@@ -5907,7 +5957,7 @@
   "kit luiz argenta jovem com 4 garrafas::name": [
     2769
   ],
-  "esprit de valandraud saint-\u00e9milion grand cru::name": [
+  "esprit de valandraud saint-emilion grand cru::name": [
     2770
   ],
   "17,5%::alcohol_content": [
@@ -5916,7 +5966,7 @@
   "cuvelier de los andes gran malbec::name": [
     2772
   ],
-  "champagne moutard r\u00e9serve brut::name": [
+  "champagne moutard reserve brut::name": [
     2774
   ],
   "champagne::wine_type": [
@@ -5928,7 +5978,7 @@
   "kit 10 vinhos por r$ 176,40::name": [
     2799
   ],
-  "vinho chileno de martino parcela #43 carm\u00e9n\u00e8re maipo d.o.::name": [
+  "vinho chileno de martino parcela #43 carmenere maipo d.o.::name": [
     2801
   ],
   "vinho chileno de martino parcela #37 cabernet sauvignon maipo d.o.::name": [
@@ -5940,22 +5990,22 @@
   "kit ruta 90 com 6 garrafas::name": [
     2806
   ],
-  "vinho uruguaio traversa noble alianza ros\u00e9::name": [
+  "vinho uruguaio traversa noble alianza rose::name": [
     2810
   ],
-  "cuv\u00e9e constance c\u00f4tes du roussillon villages::name": [
+  "cuvee constance cotes du roussillon villages::name": [
     2845
   ],
   "grenache noir::grape": [
     2845
   ],
-  "ch\u00e2teau gandoy perrinat bordeaux sup\u00e9rieur::name": [
+  "chateau gandoy perrinat bordeaux superieur::name": [
     2848
   ],
-  "vinho franc\u00eas bijou wines pink sands pays d'oc i.g.p.::name": [
+  "vinho frances bijou wines pink sands pays d'oc i.g.p.::name": [
     2850
   ],
-  "vinho franc\u00eas ch\u00e2teau d'orsan c\u00f4tes du rh\u00f4ne a.o.c.::name": [
+  "vinho frances chateau d'orsan cotes du rhone a.o.c.::name": [
     2853
   ],
   "13,09%::alcohol_content": [
@@ -5974,10 +6024,10 @@
   "le calleselle extra dry prosecco di treviso doc::name": [
     3149
   ],
-  "songe en mer vin ros\u00e9 2019::name": [
+  "songe en mer vin rose 2019::name": [
     3191
   ],
-  "v\u00e1rias uvas::grape": [
+  "varias uvas::grape": [
     3191,
     156,
     1,
@@ -5988,10 +6038,10 @@
     3191,
     704
   ],
-  "anciano gran reserva 10 years valdepe\u00f1as dop 2009::name": [
+  "anciano gran reserva 10 years valdepenas dop 2009::name": [
     3217
   ],
-  "conchego tempranillo ros\u00e9 bag in box 3l | vinho na caixa::name": [
+  "conchego tempranillo rose bag in box 3l | vinho na caixa::name": [
     3246
   ],
   "13,0%::alcohol_content": [
@@ -6009,7 +6059,7 @@
   "anciano reserva douro doc 2016::name": [
     3258
   ],
-  "tinta barroca, sous\u00e3o, tinto c\u00e3o, touriga nacional::grape": [
+  "tinta barroca, sousao, tinto cao, touriga nacional::grape": [
     3258
   ],
   "famiglia castellani pinot grigio 2020::name": [
@@ -6036,7 +6086,7 @@
   "domaine de la motte merlot 2019::name": [
     3427
   ],
-  "tinto de castel\u00e3o by ant\u00f3nio ma\u00e7anita 2018::name": [
+  "tinto de castelao by antonio macanita 2018::name": [
     3430
   ],
   "kit 3 casillero del diablo red blend 2019 | r$ 69,90 por garrafa::name": [
@@ -6070,25 +6120,25 @@
     799,
     437
   ],
-  "la grupa gran selecci\u00f3n malbec 2021::name": [
+  "la grupa gran seleccion malbec 2021::name": [
     3684
   ],
-  "xavier vignon arcane xix le soleil c\u00f4tes du rh\u00f4ne-villages aop 2015::name": [
+  "xavier vignon arcane xix le soleil cotes du rhone-villages aop 2015::name": [
     3851
   ],
-  "grenache, mourv\u00e8dre, syrah::grape": [
+  "grenache, mourvedre, syrah::grape": [
     3851
   ],
   "el molino malbec 2020::name": [
     3852
   ],
-  "fuentevi\u00f1a pinot noir::name": [
+  "fuentevina pinot noir::name": [
     3895
   ],
-  "vi\u00f1a de los andes malbec 2021::name": [
+  "vina de los andes malbec 2021::name": [
     3897
   ],
-  "domaine de la rectorie cuv\u00e9e th\u00e9r\u00e8se reig banyuls aoc 2017::name": [
+  "domaine de la rectorie cuvee therese reig banyuls aoc 2017::name": [
     3941
   ],
   "grenache, carignan::grape": [
@@ -6100,7 +6150,7 @@
   "fortificado::wine_type": [
     3941
   ],
-  "kit 3 mestre andr\u00e9 vinho tinto::name": [
+  "kit 3 mestre andre vinho tinto::name": [
     3957
   ],
   "powers viognier 2017 750 ml::name": [
@@ -6155,7 +6205,7 @@
     20,
     33
   ],
-  "blend de v\u00e1rias castas, maioritariamente touriga franca e tinta roriz::grape": [
+  "blend de varias castas, maioritariamente touriga franca e tinta roriz::grape": [
     4034,
     69,
     34,
@@ -6285,7 +6335,7 @@
     4058,
     459
   ],
-  "cabernet sauvignon, syrah, carm\u00e9n\u00e8re, cabernet franc, petit verdot, petite sirah::grape": [
+  "cabernet sauvignon, syrah, carmenere, cabernet franc, petit verdot, petite sirah::grape": [
     4058,
     459,
     329
@@ -6363,7 +6413,7 @@
   "niepoort douro conversa branco 2019 750 ml::name": [
     4085
   ],
-  "rabigato, c\u00f3dega do larinho, gouveio, dona branca, viosinho, bical e outras.::grape": [
+  "rabigato, codega do larinho, gouveio, dona branca, viosinho, bical e outras.::grape": [
     4085
   ],
   "12.4%::alcohol_content": [
@@ -6458,7 +6508,7 @@
     350,
     14
   ],
-  "adega guimar\u00e3es verde doc::name": [
+  "adega guimaraes verde doc::name": [
     4105,
     61,
     177,
@@ -6757,38 +6807,13 @@
   "terra mazzei 2018 750 ml::name": [
     4174
   ],
-  "nero d\u00b4avola, sangiovese, merlot e alicante::grape": [
+  "nero d'avola, sangiovese, merlot e alicante::grape": [
     4174
-  ],
-  "italia::country": [
-    4174,
-    18,
-    14,
-    7,
-    2,
-    115,
-    46,
-    5,
-    62,
-    35,
-    56,
-    102,
-    5,
-    10,
-    30,
-    3,
-    83,
-    18,
-    24,
-    16,
-    7,
-    11,
-    130
   ],
   "13.2%::alcohol_content": [
     4174
   ],
-  "ricossa barbera d\u00b4asti docg 2019 750 ml::name": [
+  "ricossa barbera d'asti docg 2019 750 ml::name": [
     4175,
     162,
     437
@@ -6807,7 +6832,7 @@
     133,
     151
   ],
-  "churchill\u00b4s meio queijo douro tinto 2019 750ml::name": [
+  "churchill's meio queijo douro tinto 2019 750ml::name": [
     4190,
     145,
     441
@@ -6846,26 +6871,6 @@
     4202,
     750
   ],
-  "franca::country": [
-    4202,
-    21,
-    156,
-    65,
-    44,
-    75,
-    8,
-    108,
-    6,
-    217,
-    19,
-    11,
-    12,
-    2,
-    6,
-    6,
-    6,
-    16
-  ],
   "quinta do mouro zagalos reserva 2014 750 ml::name": [
     4203,
     526
@@ -6886,7 +6891,7 @@
     4208,
     193
   ],
-  "touriga nacional, touriga franca, tinto c\u00e3o, tinta francisca, tinta amarela, sous\u00e3o, tinta roriz e outras::grape": [
+  "touriga nacional, touriga franca, tinto cao, tinta francisca, tinta amarela, sousao, tinta roriz e outras::grape": [
     4208,
     193,
     1
@@ -6940,7 +6945,7 @@
   "quinta do mouro zagalos reserva 2013 750 ml::name": [
     4221
   ],
-  "champagne billecart-salmon\u00e2 vintage 2006 750 ml::name": [
+  "champagne billecart-salmona vintage 2006 750 ml::name": [
     4223
   ],
   "65% pinot noir e 35% chardonnay::grape": [
@@ -7036,21 +7041,26 @@
   "mancura etnia carmenere 2020 750ml::name": [
     4258
   ],
-  "100% carm\u00e9n\u00e8re::grape": [
+  "100% carmenere::grape": [
     4258,
-    8,
+    7,
+    1,
     1,
     1,
     6,
     1,
     1,
-    7,
+    2,
+    2,
+    2,
+    1,
     1,
     1,
     81,
     178,
     90,
-    116,
+    106,
+    10,
     2,
     38,
     52,
@@ -7065,11 +7075,6 @@
   ],
   "mancura mito carmenere 2017 750 ml::name": [
     4265
-  ],
-  "100% carmenere::grape": [
-    4265,
-    15,
-    2
   ],
   "errazuriz 1870 carmenere reserva 2018 750 ml::name": [
     4266
@@ -7130,17 +7135,6 @@
     211,
     356
   ],
-  "carm\u00e9n\u00e8re::grape": [
-    4269,
-    1,
-    199,
-    11,
-    356,
-    1591,
-    66,
-    43,
-    26
-  ],
   "errazuriz aconcagua alto carmenere 2019 750 ml::name": [
     4270,
     199
@@ -7148,16 +7142,11 @@
   "errazuriz max carmenere reserva 2019 750ml::name": [
     4271
   ],
-  "95% carm\u00e9n\u00e8re, 5% syrah::grape": [
+  "95% carmenere, 5% syrah::grape": [
     4271
   ],
   "terrapura carmenere 2018 750 ml::name": [
     4272
-  ],
-  "carm\u00e9nere::grape": [
-    4272,
-    9,
-    5
   ],
   "leyda carmenere reserva 2019 750ml::name": [
     4274,
@@ -7174,10 +7163,6 @@
   "mancura etnia carmenere 2019 750 ml::name": [
     4278
   ],
-  "100% carm\u00e9nere::grape": [
-    4278,
-    462
-  ],
   "mancura guardian reserva carmenere 2018 750 ml::name": [
     4280
   ],
@@ -7187,7 +7172,7 @@
   "mancura guardian reserva carmenere 2019 750ml::name": [
     4282
   ],
-  "errazuriz estate series carm\u00e9n\u00e8re reserva 2019 750 ml::name": [
+  "errazuriz estate series carmenere reserva 2019 750 ml::name": [
     4283,
     559,
     144
@@ -7259,10 +7244,10 @@
   "gran viu seleccion 2016 750 ml::name": [
     4329
   ],
-  "garnacha, tempranillo e cari\u00f1ena::grape": [
+  "garnacha, tempranillo e carinena::grape": [
     4329
   ],
-  "ricossa dolcetto d\u00b4asti 2017 750ml::name": [
+  "ricossa dolcetto d'asti 2017 750ml::name": [
     4330,
     437
   ],
@@ -7388,7 +7373,7 @@
   "churchills ruby reserva 750 ml::name": [
     4397
   ],
-  "20% touriga nacional, 20% touriga franca, 20% tinta roriz, 20% tinto c\u00e3o, 20% tinta barroca.::grape": [
+  "20% touriga nacional, 20% touriga franca, 20% tinta roriz, 20% tinto cao, 20% tinta barroca.::grape": [
     4397,
     1,
     11
@@ -7405,20 +7390,20 @@
   "churchill's vintage 375 ml::name": [
     4404
   ],
-  "touriga nacional, tinta roriz, tinta c\u00e3o, tinta barroca, touriga franca::grape": [
+  "touriga nacional, tinta roriz, tinta cao, tinta barroca, touriga franca::grape": [
     4404
   ],
   "niepoort dry white 750 ml::name": [
     4406
   ],
-  "c\u00f3dega, rabigato, viosinho, arinto e gouveio::grape": [
+  "codega, rabigato, viosinho, arinto e gouveio::grape": [
     4406
   ],
   "churchills tawny 10 anos 500 ml::name": [
     4407,
     394
   ],
-  "touriga nacional, tinta roriz, tinta c\u00e3o, tinta barroca, touriga franca, tinta francisca::grape": [
+  "touriga nacional, tinta roriz, tinta cao, tinta barroca, touriga franca, tinta francisca::grape": [
     4407,
     394
   ],
@@ -7426,7 +7411,7 @@
     4408,
     400
   ],
-  "20% touriga nacional, 20% touriga franca, 20% tinta roriz, 20% tinto c\u00e3o, 20% tinta barroca::grape": [
+  "20% touriga nacional, 20% touriga franca, 20% tinta roriz, 20% tinto cao, 20% tinta barroca::grape": [
     4408,
     400
   ],
@@ -7440,9 +7425,6 @@
     4428
   ],
   "marlborough sun pinot noir 2017 750 ml::name": [
-    4438
-  ],
-  "nova zelandia::country": [
     4438
   ],
   "espumante terra serena valdobbiadene prosecco superiore docg::name": [
@@ -7516,7 +7498,7 @@
   "espumante gramona iii lustros gran reserva brut nature 750 ml::name": [
     4514
   ],
-  "75 % xarel\u00e2\u00b7lo, 25% macabeo::grape": [
+  "75 % xarela*lo, 25% macabeo::grape": [
     4514
   ],
   "cobos bramare cabernet sauvignon lujan de cuyo 2017 750ml::name": [
@@ -7538,7 +7520,7 @@
     4552,
     218
   ],
-  "100% nero d\u00b4avola::grape": [
+  "100% nero d'avola::grape": [
     4552,
     218,
     63
@@ -7649,7 +7631,7 @@
     4659,
     41
   ],
-  "errazuriz don maximiano founder\u2019s reserve 2017 750ml::name": [
+  "errazuriz don maximiano founder's reserve 2017 750ml::name": [
     4663,
     187
   ],
@@ -7660,7 +7642,7 @@
   "niepoort douro redoma tinto 2017 750 ml::name": [
     4664
   ],
-  "tinta amarela, touriga franca, rufete, tinta roriz, tinto c\u00e3o::grape": [
+  "tinta amarela, touriga franca, rufete, tinta roriz, tinto cao::grape": [
     4664
   ],
   "cobos bramare cabernet sauvignon lujan de cuyo 2016 750 ml::name": [
@@ -7699,7 +7681,7 @@
   "churchills douro grande reserva 2013 750 ml::name": [
     4689
   ],
-  "touriga nacional, touriga franca, tinta roriz, tinta francisca, tinta c\u00e3o::grape": [
+  "touriga nacional, touriga franca, tinta roriz, tinta francisca, tinta cao::grape": [
     4689
   ],
   "powers cabernet sauvignon 2017 750 ml::name": [
@@ -7726,7 +7708,7 @@
   "poggio al tesoro il seggio doc bolgheri 2017 750ml::name": [
     4700
   ],
-  "churchill\u00b4s estate touriga nacional 2014 750ml::name": [
+  "churchill's estate touriga nacional 2014 750ml::name": [
     4702
   ],
   "100% touriga nacional::grape": [
@@ -7881,7 +7863,7 @@
   "cobos cocodrilo red blend 2018 750ml::name": [
     4823
   ],
-  "san marzano sessant\u00b4anni primitivo di manduria 2016 750ml::name": [
+  "san marzano sessant'anni primitivo di manduria 2016 750ml::name": [
     4825
   ],
   "allegrini la grola rosso veronese igt 2016 750ml::name": [
@@ -7911,7 +7893,7 @@
   "kracher tba no 2 1998 375 ml::name": [
     4893
   ],
-  "\u00e1ustria::country": [
+  "austria::country": [
     4893,
     6
   ],
@@ -8007,13 +7989,13 @@
   "espumante gramona la cuvee brut 2016 750 ml::name": [
     4953
   ],
-  "50% xarel\u00e2\u00b7lo, 50% macabeo::grape": [
+  "50% xarela*lo, 50% macabeo::grape": [
     4953
   ],
   "espumante andre delorme cremant de bourgogne brut 750 ml::name": [
     4958
   ],
-  "pinot noir, chardonnay, gamay e aligot\u00e9::grape": [
+  "pinot noir, chardonnay, gamay e aligote::grape": [
     4958
   ],
   "espumante rivarose brut rose 750 ml::name": [
@@ -8025,7 +8007,7 @@
   "nocturno dulce natural 2021 750 ml::name": [
     4965
   ],
-  "100% torront\u00e9s::grape": [
+  "100% torrontes::grape": [
     4965
   ],
   "8.5%::alcohol_content": [
@@ -8147,7 +8129,7 @@
   "terre di san leonardo 2016::name": [
     5046
   ],
-  "cabernet sauvignon, merlot e carmen\u00e8re.::grape": [
+  "cabernet sauvignon, merlot e carmenere.::grape": [
     5046
   ],
   "porcupine ridge sauvignon blanc 2020::name": [
@@ -8157,7 +8139,7 @@
     5067,
     890
   ],
-  "mac\u00e1n 2014::name": [
+  "macan 2014::name": [
     5081
   ],
   "tempranillo (100%)::grape": [
@@ -8192,13 +8174,13 @@
     12,
     22
   ],
-  "carmen insigne carm\u00e9n\u00e8re 2018::name": [
+  "carmen insigne carmenere 2018::name": [
     5085
   ],
   "carmenere (90%) e cabernet sauvignon (10%)::grape": [
     5085
   ],
-  "franciacorta docg cuv\u00e9e prestige brut::name": [
+  "franciacorta docg cuvee prestige brut::name": [
     5098
   ],
   "chardonnay (75%), pinot bianco (10%) e pinot nero (15%)::grape": [
@@ -8229,7 +8211,7 @@
   "lapostolle grand selection cabernet sauvignon 2017::name": [
     5157
   ],
-  "cabernet sauvignon (85%) e carmen\u00e8re (15%)::grape": [
+  "cabernet sauvignon (85%) e carmenere (15%)::grape": [
     5157
   ],
   "angelica zapata chardonnay 2018::name": [
@@ -8253,7 +8235,7 @@
     2,
     494
   ],
-  "finca luz\u00f3n 2019::name": [
+  "finca luzon 2019::name": [
     5194
   ],
   "monastrell e syrah::grape": [
@@ -8338,7 +8320,7 @@
   "clos apalta 2015::name": [
     5235
   ],
-  "46% carmen\u00e8re, 30% cabernet sauvignon, 19% merlot e 5% cabernet franc.::grape": [
+  "46% carmenere, 30% cabernet sauvignon, 19% merlot e 5% cabernet franc.::grape": [
     5235
   ],
   "barco reale di carmignano 2016  - meia gfa.::name": [
@@ -8353,7 +8335,7 @@
   "pinot noir, chardonnay e pinot meunier::grape": [
     5258
   ],
-  "alma negra brut nature ros\u00e9::name": [
+  "alma negra brut nature rose::name": [
     5262
   ],
   "corte secreto::grape": [
@@ -8409,7 +8391,7 @@
     5286,
     551
   ],
-  "catena malbec ros\u00e9 2020::name": [
+  "catena malbec rose 2020::name": [
     5292
   ],
   "90% malbec, 5% syrah e 5% grenache::grape": [
@@ -8439,7 +8421,7 @@
     9,
     15
   ],
-  "vigna ser\u00e9 passitto igt 2003  - meia gfa.::name": [
+  "vigna sere passitto igt 2003  - meia gfa.::name": [
     5294
   ],
   "corvina (55%), croatina (20%), rondinella (15%) e oseleta (10%)::grape": [
@@ -8495,7 +8477,7 @@
   "heritage mont caume rose 2018::name": [
     5324
   ],
-  "grenache (30%), cinsault (50%) e mourv\u00e8dre (20%) ::grape": [
+  "grenache (30%), cinsault (50%) e mourvedre (20%) ::grape": [
     5324
   ],
   "chivite las fincas rosado ipg 3 riberas  2019::name": [
@@ -8504,22 +8486,22 @@
   "garnacha (70%) e tempranillo (30%).::grape": [
     5325
   ],
-  "the wolftrap ros\u00e9 2018::name": [
+  "the wolftrap rose 2018::name": [
     5326
   ],
   "syrah (66%), cinsault (20%) e grenache (14%)::grape": [
     5326
   ],
-  "marius ros\u00e9 2018::name": [
+  "marius rose 2018::name": [
     5327
   ],
   "grenache, syrah e cinsault::grape": [
     5327
   ],
-  "lapostolle le ros\u00e9 2019::name": [
+  "lapostolle le rose 2019::name": [
     5328
   ],
-  "cinsault (56%), syrah (25%), grenache (12%) e mourv\u00e8dre (7%)::grape": [
+  "cinsault (56%), syrah (25%), grenache (12%) e mourvedre (7%)::grape": [
     5328
   ],
   "regaleali le rose igt terre siciliane 2019::name": [
@@ -8546,7 +8528,7 @@
   "nerello mascalese (100%)::grape": [
     5334
   ],
-  "ros\u00e9 d'anjou 2018::name": [
+  "rose d'anjou 2018::name": [
     5339
   ],
   "grolleau (100%)::grape": [
@@ -8556,7 +8538,7 @@
     5339,
     453
   ],
-  "c\u00f4tes de provence ros\u00e9 2018::name": [
+  "cotes de provence rose 2018::name": [
     5342
   ],
   "grenache e cinsault::grape": [
@@ -8565,16 +8547,16 @@
   "alaja rosado 2019::name": [
     5343
   ],
-  "boya ros\u00e9 2019::name": [
+  "boya rose 2019::name": [
     5346
   ],
   "pinot noir (95%) e grenache (5%)::grape": [
     5346
   ],
-  "alamos malbec ros\u00e9 2020::name": [
+  "alamos malbec rose 2020::name": [
     5347
   ],
-  "posadas viejas tempranillo ros\u00e9 2019::name": [
+  "posadas viejas tempranillo rose 2019::name": [
     5350
   ],
   "grifone umbria igt 2017::name": [
@@ -8596,13 +8578,13 @@
   "vallontano espumante latoller brut::name": [
     5376
   ],
-  "champagne bollinger special cuv\u00e9e brut::name": [
+  "champagne bollinger special cuvee brut::name": [
     5381
   ],
-  "pinot noir (60% m\u00ednimo), chardonnay (25%) e pinot meunier (15%)::grape": [
+  "pinot noir (60% minimo), chardonnay (25%) e pinot meunier (15%)::grape": [
     5381
   ],
-  "valbue\u00f1a 5\u00ba ano 2014::name": [
+  "valbuena 5o ano 2014::name": [
     5399
   ],
   "tinto fino (tempranillo) (95%) e merlot (10%)::grape": [
@@ -8612,13 +8594,13 @@
   "matallana ribera del duero 2012::name": [
     5400
   ],
-  "tinto fino (nome dado \u00e0 tempranillo na regi\u00e3o de ribera del duero)::grape": [
+  "tinto fino (nome dado a tempranillo na regiao de ribera del duero)::grape": [
     5400
   ],
-  "vi\u00f1a pedrosa crianza 2017::name": [
+  "vina pedrosa crianza 2017::name": [
     5401
   ],
-  "vi\u00f1a pedrosa reserva 2016::name": [
+  "vina pedrosa reserva 2016::name": [
     5403
   ],
   "m2 de matallana ribera del duero 2008::name": [
@@ -8636,7 +8618,7 @@
   "diversas variedades uvas tintas regional.::grape": [
     5407
   ],
-  "vega sicilia \u00fanico reserva especial a\u00f1o 2017::name": [
+  "vega sicilia unico reserva especial ano 2017::name": [
     5412
   ],
   "tempranillo e cabernet sauvignon::grape": [
@@ -8651,10 +8633,10 @@
   "pesquera reserva 2015::name": [
     5416
   ],
-  "valbue\u00f1a 5\u00ba ano 2015::name": [
+  "valbuena 5o ano 2015::name": [
     5419
   ],
-  "vi\u00f1a pedrosa gran reserva 2006::name": [
+  "vina pedrosa gran reserva 2006::name": [
     5420
   ],
   "tempranillo (90%) e cabernet sauvignon (10%)::grape": [
@@ -8663,7 +8645,7 @@
   "matallana ribera del duero 2011::name": [
     5424
   ],
-  "tinto fino (nome dado \u00e0 tempranillo na regi\u00e3o de ribera del duero).::grape": [
+  "tinto fino (nome dado a tempranillo na regiao de ribera del duero).::grape": [
     5424
   ],
   "vega sicilia unico gran reserva 2008::name": [
@@ -8684,7 +8666,7 @@
   "santa alvara chardonnay 2018::name": [
     5440
   ],
-  "saint v\u00e9ran 2018::name": [
+  "saint veran 2018::name": [
     5442
   ],
   "meiomi chardonnay 2019::name": [
@@ -8693,7 +8675,7 @@
   "catena alta chardonnay 2018::name": [
     5452
   ],
-  "joseph drouhin m\u00e2con villages aoc 2019::name": [
+  "joseph drouhin macon villages aoc 2019::name": [
     5453
   ],
   "montes sparkling angel extra brut::name": [
@@ -8712,7 +8694,7 @@
   "ridge geyserville sonoma county 2018::name": [
     5463
   ],
-  "zinfandel (58%), carignan (22%), petite sirah (18%) e mataro-mourv\u00e8dro (2%)::grape": [
+  "zinfandel (58%), carignan (22%), petite sirah (18%) e mataro-mourvedro (2%)::grape": [
     5463
   ],
   "conundrum white 2019::name": [
@@ -8812,13 +8794,13 @@
     1,
     5
   ],
-  "hochheimer sp\u00e4tburgunder rotwein qba trocken 2013::name": [
+  "hochheimer spatburgunder rotwein qba trocken 2013::name": [
     5772
   ],
-  "sp\u00e4tburgunder (pinot noir 100%)::grape": [
+  "spatburgunder (pinot noir 100%)::grape": [
     5772
   ],
-  "hochheimer kirchenst\u00fcck riesling sp\u00e4tlese trocken 2015::name": [
+  "hochheimer kirchenstuck riesling spatlese trocken 2015::name": [
     5786
   ],
   "graacher himmelreich riesling spatlese 2010::name": [
@@ -8841,7 +8823,7 @@
     5789,
     4
   ],
-  "hochheimer domdechaney riesling sp\u00e4tlese 2014::name": [
+  "hochheimer domdechaney riesling spatlese 2014::name": [
     5790
   ],
   "9::alcohol_content": [
@@ -8850,7 +8832,7 @@
   "rheingau riesling qba tradition 2018::name": [
     5792
   ],
-  "zeltinger schlossberg riesling trocken b\u00f6mer 2018::name": [
+  "zeltinger schlossberg riesling trocken bomer 2018::name": [
     5793
   ],
   "graacher himmelreich riesling spatlese 2011::name": [
@@ -8862,9 +8844,10 @@
   "agiorgitiko (100%)::grape": [
     5806,
     1,
-    18
+    6,
+    12
   ],
-  "gr\u00e9cia::country": [
+  "grecia::country": [
     5806,
     1,
     2,
@@ -8898,10 +8881,7 @@
   "agiorgitiko (100%) ::grape": [
     5812
   ],
-  "14-18h agiorgitiko ros\u00e9 2018::name": [
-    5813
-  ],
-  "agiorg\u00edtiko (100%)::grape": [
+  "14-18h agiorgitiko rose 2018::name": [
     5813
   ],
   "naoussa boutari pdo 2016::name": [
@@ -8922,10 +8902,10 @@
   "agiorgitiko::grape": [
     5824
   ],
-  "n\u00f3tios red 2018::name": [
+  "notios red 2018::name": [
     5825
   ],
-  "assyrtiko by ga\u00eda wild ferment 2017::name": [
+  "assyrtiko by gaia wild ferment 2017::name": [
     5826
   ],
   "assyrtiko (100%)::grape": [
@@ -8950,10 +8930,10 @@
   "rio de los pajaros brut nature tannat 2017::name": [
     5842
   ],
-  "rio de los p\u00e1jaros torront\u00e9s reserva 2011::name": [
+  "rio de los pajaros torrontes reserva 2011::name": [
     5843
   ],
-  "torront\u00eas (100%)::grape": [
+  "torrontes (100%)::grape": [
     5843
   ],
   "axis mundi tannat 2011::name": [
@@ -8980,7 +8960,7 @@
   "el vinculo reserva 2008::name": [
     5858
   ],
-  "chivite colecci\u00f3n 125 reserva 2012::name": [
+  "chivite coleccion 125 reserva 2012::name": [
     5859
   ],
   "finca valpiedra reserva 2011::name": [
@@ -8998,29 +8978,29 @@
   "trasnocho 2006::name": [
     5868
   ],
-  "tempranillo (90%), graciano (5%), viura e malvas\u00eda (5%)::grape": [
+  "tempranillo (90%), graciano (5%), viura e malvasia (5%)::grape": [
     5868,
     95
   ],
-  "vi\u00f1a del olivo 2017::name": [
+  "vina del olivo 2017::name": [
     5869
   ],
   "(90%) tempranillo e 10% graciano::grape": [
     5869
   ],
-  "gran feudo edici\u00f3n seleccion especial 2007::name": [
+  "gran feudo edicion seleccion especial 2007::name": [
     5870
   ],
   "tempranillo (50%), cabernet sauvignon (30%) e merlot (20%)::grape": [
     5870
   ],
-  "altos de luz\u00f3n 2012::name": [
+  "altos de luzon 2012::name": [
     5872
   ],
   "50% monastrel, 25% cabernet sauvignon e 25% tempranillo::grape": [
     5872
   ],
-  "vi\u00f1a bujanda crianza 2017::name": [
+  "vina bujanda crianza 2017::name": [
     5874
   ],
   "lindes de remelluri de san vicente de la sonsierra 2015::name": [
@@ -9057,7 +9037,7 @@
     5909,
     22
   ],
-  "ch\u00e2teau de sainte gemme 2009::name": [
+  "chateau de sainte gemme 2009::name": [
     5910
   ],
   "cabernet sauvignon (60%), merlot (37%) e petit verdot (3%)::grape": [
@@ -9069,7 +9049,7 @@
   "cabernet sauvignon (55%), merlot (35%) e cabernet franc (15%) ::grape": [
     5914
   ],
-  "ch\u00e2teau poujeaux 2009::name": [
+  "chateau poujeaux 2009::name": [
     5916
   ],
   "cabernet sauvignon (50%), merlot (40%), cabernet franc (5%) e petit verdot (5%)::grape": [
@@ -9088,10 +9068,10 @@
     5922,
     1
   ],
-  "ch\u00e2teau tour de mirambeau la r\u00e9serve rouge 2015::name": [
+  "chateau tour de mirambeau la reserve rouge 2015::name": [
     5923
   ],
-  "ch\u00e2teau saint florin 2016::name": [
+  "chateau saint florin 2016::name": [
     5924
   ],
   "merlot e cabernet sauvignon::grape": [
@@ -9112,7 +9092,7 @@
   "montes alpha merlot 2018::name": [
     5931
   ],
-  "ch\u00e2teau platon 2018::name": [
+  "chateau platon 2018::name": [
     5932
   ],
   "cabernet sauvignon, merlot, petit verdot e cabernet franc::grape": [
@@ -9198,7 +9178,7 @@
   "cabernet sauvignon(70%) e alicante bouschet(30%).::grape": [
     5966
   ],
-  "quinta do vale me\u00e3o 2015::name": [
+  "quinta do vale meao 2015::name": [
     5976
   ],
   "touriga nacional, touriga franca, tinta barroca e tinta roriz.::grape": [
@@ -9230,7 +9210,7 @@
   "cornas renaissance 2013::name": [
     5991
   ],
-  "ch\u00e2teau potensac 2011::name": [
+  "chateau potensac 2011::name": [
     5994
   ],
   "cabernet sauvignon 33%, merlot 48% e cabernet franc 19%::grape": [
@@ -9245,7 +9225,7 @@
   "espumante almaden moscatel rose 750ml::name": [
     6009
   ],
-  "moscato it\u00e1lia, moscato de hamburgo::grape": [
+  "moscato italia, moscato de hamburgo::grape": [
     6009
   ],
   "7,5%*::alcohol_content": [
@@ -9307,7 +9287,7 @@
   "espumante casa perini ice rose 750mml::name": [
     6117
   ],
-  "assemblage (sele\u00e7\u00e3o de uvas finas)::grape": [
+  "assemblage (selecao de uvas finas)::grape": [
     6117
   ],
   "11%*::alcohol_content": [
@@ -9331,7 +9311,7 @@
   "espumante nero celebration brut 750ml::name": [
     6206
   ],
-  "chardonnay, pinot noir, riesling it\u00e1lico e prosecco::grape": [
+  "chardonnay, pinot noir, riesling italico e prosecco::grape": [
     6206
   ],
   "espumante perico juliette moscatel 750 ml::name": [
@@ -9340,7 +9320,7 @@
   "vinho sena 750ml::name": [
     6276
   ],
-  "cabernet sauvignon, carm\u00e9n\u00e8re, merlot::grape": [
+  "cabernet sauvignon, carmenere, merlot::grape": [
     6276
   ],
   "14,50%*::alcohol_content": [
@@ -9356,7 +9336,7 @@
     2,
     11
   ],
-  "vinho c\u00e9firo cool reserve cabernet sauvignon 750ml::name": [
+  "vinho cefiro cool reserve cabernet sauvignon 750ml::name": [
     6278
   ],
   "13,50%*::alcohol_content": [
@@ -9459,7 +9439,7 @@
   "vinho sanama reserva carmenere 750ml::name": [
     6493
   ],
-  "vinho casa valduga naturelle ros\u00e9 suave 750ml::name": [
+  "vinho casa valduga naturelle rose suave 750ml::name": [
     6498
   ],
   "espumante aurora prosecco brut 750 ml::name": [
@@ -9471,7 +9451,7 @@
   "vinho viento del mar cabernet sauvignon 750ml::name": [
     6513
   ],
-  "vinho cala n\u00ba 2::name": [
+  "vinho cala no 2::name": [
     6527
   ],
   "cabernet sauvignon, tempranillo::grape": [

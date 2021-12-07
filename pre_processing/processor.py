@@ -1,5 +1,5 @@
-import glob
 import json
+import unidecode
 
 from classification.helpers.corpus_loader import load_corpus_from
 
@@ -38,18 +38,28 @@ def save_inverted_index_without_compression(key_value, page_index):
     inverted_index_map_without_compression[key_value].append(int(page_index))
 
 
-def save_page_info_inverted_index(page_info, page_index):
-    save_inverted_index_with_compression('{}::name'.format(page_info['name'].lower()), page_index)
-    save_inverted_index_with_compression('{}::grape'.format(page_info['grape'].lower()), page_index)
-    save_inverted_index_with_compression('{}::country'.format(page_info['country'].lower()), page_index)
-    save_inverted_index_with_compression('{}::alcohol_content'.format(page_info['alcohol_content']), page_index)
-    save_inverted_index_with_compression('{}::wine_type'.format(page_info['wine_type'].lower()), page_index)
+def normalize_string(s: str) -> str:
+    return unidecode.unidecode(s.lower())
 
-    save_inverted_index_without_compression('{}::name'.format(page_info['name'].lower()), page_index)
-    save_inverted_index_without_compression('{}::grape'.format(page_info['grape'].lower()), page_index)
-    save_inverted_index_without_compression('{}::country'.format(page_info['country'].lower()), page_index)
-    save_inverted_index_without_compression('{}::alcohol_content'.format(page_info['alcohol_content']), page_index)
-    save_inverted_index_without_compression('{}::wine_type'.format(page_info['wine_type'].lower()), page_index)
+
+def save_page_info_inverted_index(page_info, page_index):
+    name = normalize_string(page_info['name'])
+    grape = normalize_string(page_info['grape'])
+    country = normalize_string(page_info['country'])
+    alcohol_content = page_info['alcohol_content']
+    wine_type = normalize_string(page_info['wine_type'])
+
+    save_inverted_index_with_compression('{}::name'.format(name), page_index)
+    save_inverted_index_with_compression('{}::grape'.format(grape), page_index)
+    save_inverted_index_with_compression('{}::country'.format(country), page_index)
+    save_inverted_index_with_compression('{}::alcohol_content'.format(alcohol_content), page_index)
+    save_inverted_index_with_compression('{}::wine_type'.format(wine_type), page_index)
+
+    save_inverted_index_without_compression('{}::name'.format(name), page_index)
+    save_inverted_index_without_compression('{}::grape'.format(grape), page_index)
+    save_inverted_index_without_compression('{}::country'.format(country), page_index)
+    save_inverted_index_without_compression('{}::alcohol_content'.format(alcohol_content), page_index)
+    save_inverted_index_without_compression('{}::wine_type'.format(wine_type), page_index)
 
 
 def save_to_file(path, data):
@@ -78,8 +88,8 @@ def create_inverted_index_from_words():
         try:
             corpus = load_corpus_from('../extractor/pages/{}.html'.format(index)).drop_stop_words()
             for token in corpus.vocabulary:
-                save_inverted_index_with_compression(token.lower(), index)
-                save_inverted_index_without_compression(token.lower(), index)
+                save_inverted_index_with_compression(normalize_string(token), index)
+                save_inverted_index_without_compression(normalize_string(token), index)
         except:
             pass
 
