@@ -1,6 +1,5 @@
 import json
 import unidecode
-
 from classification.helpers.corpus_loader import load_corpus_from
 
 domains = [
@@ -39,14 +38,44 @@ def save_inverted_index_without_compression(key_value, page_index):
 
 
 def normalize_string(s: str) -> str:
-    return unidecode.unidecode(s.lower())
+    return unidecode.unidecode(s.lower().strip())\
+        .replace('!', '')\
+        .replace('@', '')\
+        .replace('#', '')\
+        .replace('$', '') \
+        .replace('%', '') \
+        .replace('^', '')\
+        .replace('&', '')\
+        .replace('*', '')\
+        .replace('(', '')\
+        .replace(')', '')
+
+
+def get_alcohol_content_interval(alcohol_content: str) -> int:
+    terms = alcohol_content.split(',')
+    value = 0.0
+    if len(terms) > 1:
+        value = float(terms[0]) + float('0.'+terms[1][0])
+    else:
+        value = float(normalize_string(terms[0]))
+
+    if value < 5:
+        return 0
+
+    if value < 10:
+        return 1
+
+    if value < 15:
+        return 2
+
+    return 3
 
 
 def save_page_info_inverted_index(page_info, page_index):
     name = normalize_string(page_info['name'])
     grape = normalize_string(page_info['grape'])
     country = normalize_string(page_info['country'])
-    alcohol_content = page_info['alcohol_content']
+    alcohol_content = str(get_alcohol_content_interval(page_info['alcohol_content']))
     wine_type = normalize_string(page_info['wine_type'])
 
     save_inverted_index_with_compression('{}::name'.format(name), page_index)
