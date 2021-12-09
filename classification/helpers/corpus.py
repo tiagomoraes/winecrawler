@@ -1,7 +1,9 @@
+import json
 from typing import List
 
 from nltk.corpus import stopwords as nltk_stopwords
 import nltk
+from pydantic import BaseModel
 
 from classification.helpers.document import DocumentClass, Document
 
@@ -32,10 +34,14 @@ class CorpusTokenStats:
         return self.data[DocumentClass.INSTANCE.value]['docs'] + self.data[DocumentClass.NON_INSTANCE.value]['docs']
 
 
-class Corpus:
+class Corpus(BaseModel):
     def __init__(self, documents: List[Document]):
+        super(Corpus, self).__init__()
         self.documents = documents
         self.__build_corpus_vocabulary()
+
+    def to_json(self):
+        return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=4)
 
     def __build_corpus_vocabulary(self):
         self.vocabulary = {}
