@@ -106,21 +106,19 @@ def create_inverted_index_from_extractors():
                 if result[key] is not None:
                     page_info = result[key]
                     save_page_info_inverted_index(page_info, key)
-    # print(sys.getsizeof(inverted_index_map))
-    # np.uint16 -> 73816
-    # str -> 73816
-    # int -> 73816
 
 
 def create_inverted_index_from_words():
-    for index in range(10000):
-        try:
-            corpus = load_corpus_from('../extractor/pages/{}.html'.format(index)).drop_stop_words()
-            for token in corpus.vocabulary:
-                save_inverted_index_with_compression(normalize_string(token), index)
-                save_inverted_index_without_compression(normalize_string(token), index)
-        except:
-            pass
+    for domain in domains:
+        f = open('../extractor/results/logistic_classifier/{}.json'.format(domain))
+        data_results = json.load(f)
+        for result in data_results:
+            for key, value in result.items():
+                if value is not None:
+                    corpus = load_corpus_from('../extractor/pages/{}.html'.format(key)).drop_stop_words()
+                    for token in corpus.vocabulary:
+                        save_inverted_index_with_compression(normalize_string(token), key)
+                        save_inverted_index_without_compression(normalize_string(token), key)
 
 
 def create_inverted_index():
