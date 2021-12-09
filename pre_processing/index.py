@@ -141,9 +141,15 @@ def find_document_domain(doc_index: int) -> Optional[str]:
     return None
 
 
-def retrieve_docs_information(docs: List):
+def __paginate(list_: List, page_size: int, page: int):
+    from_ = (page - 1) * page_size
+    to = from_ + page_size
+    return list_[from_:to]
+
+
+def retrieve_docs_information(docs: List, page_size: int, page: int):
     result = {}
-    for doc in docs[:10]:
+    for doc in __paginate(docs, page_size, page):
         doc_page = find_document_domain(doc)
         if doc_page is None:
             return
