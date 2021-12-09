@@ -8,6 +8,8 @@ from typing import Dict, List, Optional
 import numpy as np
 from types import SimpleNamespace
 
+from pydantic import BaseModel
+
 from classification.helpers.corpus import Corpus
 from classification.helpers.corpus_loader import load_corpus_from
 from pre_processing.processor import get_alcohol_content_interval
@@ -19,6 +21,22 @@ class SearchField(str, Enum):
     COUNTRY = 'country'
     ALCOHOL_CONTENT = 'alcohol_content'
     WINE_TYPE = 'wine_type'
+
+
+class SingleDocInformation(BaseModel):
+    name: Optional[str]
+    wine_type: Optional[str]
+    grape: Optional[str]
+    country: Optional[str]
+    classification: Optional[str]
+    alcohol_content: Optional[str]
+    year: Optional[str]
+
+
+class SearchResponse(BaseModel):
+    total_number_of_docs: int
+    has_next_page: bool
+    docs_information: Dict[int, SingleDocInformation]
 
 
 TOTAL_DOCUMENTS = 3918
@@ -49,11 +67,11 @@ def get_most_frequent_value(page_index: int) -> int:
 
 
 def get_idf(total_positive_documents: int) -> float:
-    return np.log((1+TOTAL_DOCUMENTS) / (1+total_positive_documents))
+    return np.log((1 + TOTAL_DOCUMENTS) / (1 + total_positive_documents))
 
 
 def get_tf(frequency: int, most_frequent: int) -> float:
-    return 0.5 + (0.5 * frequency)/1+most_frequent
+    return 0.5 + (0.5 * frequency) / 1 + most_frequent
 
 
 def calculate_tf_idf(frequency: int, total_positive_documents: int, page_index: int) -> float:
@@ -117,21 +135,22 @@ def calculate_spearman_correlation(production_rank: List[int], new_rank: List[in
 def calculate_kendal_tau_correlation(production_rank: List[int], new_rank: List[int]):
     ordered_pair_docs_production_rank = set(itertools.combinations(production_rank, 2))
     ordered_pair_docs_new_rank = set(itertools.combinations(new_rank, 2))
-    number_of_documents = len(production_rank)
-    k = number_of_documents * (number_of_documents - 1)
+    k = len(production_rank)
 
-    ordered_pair_docs_production_rank.intersection(ordered_pair_docs_new_rank)
+    symmetric_difference_size = len(ordered_pair_docs_production_rank ^ ordered_pair_docs_new_rank)
 
-    correlation = 1 - (k - len(ordered_pair_docs_new_rank))/k
+    correlation = 1 - (2*symmetric_difference_size)/(k * (k - 1))
     return correlation
 
 
 def rank_documents(docs: Dict, use_td_idf: bool = False):
     if use_td_idf:
         positive_docs_len = len(dict(filter(lambda x: x[1] > 0, docs.items())).keys())
-        return list(dict(sorted(docs.items(), key=lambda x: calculate_tf_idf(x[1], positive_docs_len, x[0]), reverse=True)).keys())
+        result = sorted(docs.items(), key=lambda x: calculate_tf_idf(x[1], positive_docs_len, x[0]), reverse=True)
+    else:
+        result = sorted(docs.items(), key=lambda x: x[1], reverse=True)
 
-    return list(dict(sorted(docs.items(), key=lambda x: x[1], reverse=True)).keys())
+    return list(dict(result).keys())
 
 
 def find_document_domain(doc_index: int) -> Optional[str]:
@@ -145,6 +164,11 @@ def __paginate(list_: List, page_size: int, page: int):
     from_ = (page - 1) * page_size
     to = from_ + page_size
     return list_[from_:to]
+
+
+def has_next_page(list_length: int, page_size: int, page: int):
+    actual = page * page_size
+    return actual < list_length
 
 
 def retrieve_docs_information(docs: List, page_size: int, page: int):
@@ -175,14 +199,18 @@ def parse_logistic_classifier_results_to_dict():
                 indexed_file.write(json.dumps(result_dict))
 
 
-if __name__ == '__main__':
-    docs_ = get_documents_for_query('italia', SearchField.COUNTRY)
-    # docs_ = get_documents_for_query('vinho tinto', SearchField.NAME)
-    # docs_ = get_documents_for_query('syrah', SearchField.GRAPE)
-    # docs_ = get_documents_for_query('branco', SearchField.WINE_TYPE)
-    # docs_ = get_documents_for_query('16,5%', SearchField.ALCOHOL_CONTENT)
+def mocked_query_to_calculate_correlation_sample():
+    queries = [('italia', SearchField.COUNTRY), ('vinho tinto', SearchField.NAME), ('syrah', SearchField.GRAPE),
+               ('branco', SearchField.WINE_TYPE), ('16,5%', SearchField.ALCOHOL_CONTENT)]
+    for query in queries:
+        docs = get_documents_for_query(query[0], query[1])
+        normal_rank = rank_documents(docs)
+        tf_idf_rank = rank_documents(docs, True)
+        spearman_correlation = calculate_spearman_correlation(normal_rank, tf_idf_rank)
+        kendal_tau_correlation = calculate_kendal_tau_correlation(normal_rank, tf_idf_rank)
+        print(f"{query[0]}, {query[1]}, {spearman_correlation}, {kendal_tau_correlation}")
 
-    # docs_ordered = rank_documents(docs_)
-    # docs_information = retrieve_docs_information([5989, 7205])
-    # print(docs_information)
+
+if __name__ == '__main__':
+    mocked_query_to_calculate_correlation_sample()
 

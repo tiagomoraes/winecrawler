@@ -34,9 +34,8 @@ class CorpusTokenStats:
         return self.data[DocumentClass.INSTANCE.value]['docs'] + self.data[DocumentClass.NON_INSTANCE.value]['docs']
 
 
-class Corpus(BaseModel):
+class Corpus:
     def __init__(self, documents: List[Document]):
-        super(Corpus, self).__init__()
         self.documents = documents
         self.__build_corpus_vocabulary()
 
