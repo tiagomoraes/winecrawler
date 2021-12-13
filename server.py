@@ -1,6 +1,7 @@
 import uvicorn
 from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from starlette import status
 from typing import List, Tuple
 
@@ -36,9 +37,10 @@ def main():
     
     @main_app.get('/suggestions/', response_model=List[str], status_code=status.HTTP_200_OK, tags=['Wine'])
     def suggestions(query: str, field: SearchField):
-        ordered = get_highest_mutual_information(query, field)[:5]
+        ordered = get_highest_mutual_information(query, field)[:3]
         return list(map(lambda item: item[0].split('::')[0], ordered))
-        
+    
+    main_app.mount("/static", StaticFiles(directory="extractor/pages"), name="static")
 
     @main_app.on_event('startup')
     async def startup():
