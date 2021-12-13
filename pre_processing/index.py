@@ -48,7 +48,7 @@ documents_page = {
 
 
 def get_token_frequency(token: str, page_index: int) -> int:
-    corpus = load_corpus_from('../extractor/pages/{}.html'.format(page_index)).drop_stop_words()
+    corpus = load_corpus_from('./extractor/pages/{}.html'.format(page_index)).drop_stop_words()
     if token in corpus.vocabulary:
         return corpus.vocabulary[token].get_total_freq()
 
@@ -56,7 +56,7 @@ def get_token_frequency(token: str, page_index: int) -> int:
 
 
 def get_most_frequent_value(page_index: int) -> int:
-    corpus = load_corpus_from('../extractor/pages/{}.html'.format(page_index)).drop_stop_words()
+    corpus = load_corpus_from('./extractor/pages/{}.html'.format(page_index)).drop_stop_words()
     most_frequent_value = -1
     for word in corpus.vocabulary:
         word_frequency = corpus.vocabulary[word].get_total_freq()
@@ -78,14 +78,53 @@ def calculate_tf_idf(frequency: int, total_positive_documents: int, page_index: 
     most_frequent_occurrence = get_most_frequent_value(page_index)
     return get_tf(frequency, most_frequent_occurrence) * get_idf(total_positive_documents)
 
+def calculate_mutual_information(set_1: set, set_2: set, dict_size: int):
+    if dict_size == 0:
+        return 0
+
+    p_1 = len(set_1) / dict_size
+    p_2 = len(set_2) / dict_size
+    p_1_and_2 = len(set_1 & set_2) / dict_size
+
+    if p_1 == 0 or p_2 == 0:
+        return 0
+
+    if p_1_and_2 == 0:
+        return 0
+
+    return np.log2(p_1_and_2 / (p_1 * p_2))
+
+def get_highest_mutual_information(query: str, field: SearchField):
+    with open(f'./pre_processing/inverted_index_without_compression_pairs.json') as pairs_index:
+        inverted_index_pairs: Dict = json.load(pairs_index)
+        
+        has_query = set()
+        dict_size = len(inverted_index_pairs)
+
+        all_keys = []
+
+        # Finds the docs that have the query
+        for key in inverted_index_pairs.keys():
+            is_match = re.match(f'.*{query}.*::{field}', key)
+            if is_match:
+                has_query.update(inverted_index_pairs[key])
+    
+        # Finds all the mutual information
+        for key in inverted_index_pairs.keys():
+            is_match = re.match(f'.*::{field}', key)
+            if is_match:
+                mi = calculate_mutual_information(has_query, set(inverted_index_pairs[key]), dict_size)
+                all_keys.append((key, mi))
+        
+        return sorted(all_keys, key=lambda tup: tup[1], reverse=True)
+
+
 
 def get_documents_for_query(query: str, field: SearchField):
     docs = set()
     tokens = query.split(' ')
-    if field == SearchField.ALCOHOL_CONTENT:
-        query = get_alcohol_content_interval(query)
-
-    with open(f'../pre_processing/inverted_index_without_compression_pairs.json') as pairs_index:
+    
+    with open(f'./pre_processing/inverted_index_without_compression_pairs.json') as pairs_index:
         inverted_index_pairs: Dict = json.load(pairs_index)
         for key in inverted_index_pairs.keys():
             is_match = re.match(f'.*{query}.*::{field}', key)
@@ -100,7 +139,7 @@ def get_documents_for_query(query: str, field: SearchField):
 
     # if did not find pairs, search in words index
     if len(docs) == 0:
-        with open(f'../pre_processing/inverted_index_without_compression_words.json') as words_index:
+        with open(f'./pre_processing/inverted_index_without_compression_words.json') as words_index:
             inverted_index_words: Dict = json.load(words_index)
 
             for token in tokens:
@@ -177,7 +216,7 @@ def retrieve_docs_information(docs: List, page_size: int, page: int):
         doc_page = find_document_domain(doc)
         if doc_page is None:
             return
-        with open(f'../extractor/results/logistic_classifier/{doc_page}_indexed.txt', 'r') as file:
+        with open(f'./extractor/results/logistic_classifier/{doc_page}_indexed.txt', 'r') as file:
             indexes: Dict = json.load(file)
             wine_info = indexes.get(str(doc), None)
             if wine_info is not None:
@@ -186,7 +225,7 @@ def retrieve_docs_information(docs: List, page_size: int, page: int):
 
 
 def parse_logistic_classifier_results_to_dict():
-    dir_path = '../extractor/results/logistic_classifier/'
+    dir_path = './extractor/results/logistic_classifier/'
     files = [f for f in listdir(dir_path) if isfile(join(dir_path, f))]
     for file in files:
         with open(f'{dir_path}{file}', 'r') as curr_file:
